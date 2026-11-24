@@ -21,6 +21,9 @@ dev = [
 ligo = [
     "h5py>=3.10",
 ]
+gui = [
+    "streamlit>=1.35",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]
