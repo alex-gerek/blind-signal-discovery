@@ -1,0 +1,2312 @@
+{
+  "metadata": {
+    "experiment_name": "research_v01",
+    "config_path": "configs/research.toml",
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "sample_rate": 1024.0,
+    "duration": 4.0,
+    "snr_levels": [
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      16.0,
+      20.0,
+      25.0
+    ],
+    "known_families": [
+      "sinusoid",
+      "broadband_pulse",
+      "linear_chirp",
+      "intermittent_narrowband"
+    ],
+    "withheld_families": [
+      "sinusoidal_fm"
+    ],
+    "detector_config": {
+      "nperseg": 128,
+      "noverlap": 96,
+      "window": "hann",
+      "freq_median_kernel": 11,
+      "time_median_kernel": 15,
+      "bin_seed_threshold": 4.0,
+      "min_cluster_bins": 2
+    },
+    "runtime_seconds": 74.47
+  },
+  "calibration_summary": {
+    "target_fap": 0.01,
+    "n_calibration_per_seed": 600,
+    "calibration_noise_models": [
+      "gaussian_white",
+      "pink_colored",
+      "nonstationary"
+    ],
+    "total_tf_bins_per_sample": 7875,
+    "naive_per_bin_exp_threshold": 4.605170185988091,
+    "bonferroni_per_bin_exp_threshold": 13.576618649681926,
+    "threshold_mean": 62.624722977191965,
+    "threshold_std": 0.8394518101427724,
+    "threshold_min": 61.50228566992597,
+    "threshold_max": 63.52078469969613,
+    "min_resolvable_p_value": 0.0016638935108153079,
+    "per_seed_calibrations": [
+      {
+        "target_fap": 0.01,
+        "n_calibration_samples": 600,
+        "threshold": 61.50228566992597,
+        "calibration_noise_models": [
+          "gaussian_white",
+          "pink_colored",
+          "nonstationary"
+        ],
+        "total_tf_bins_per_sample": 7875,
+        "naive_per_bin_exp_threshold": 4.605170185988091,
+        "bonferroni_per_bin_exp_threshold": 13.576618649681926,
+        "empirical_calibration_fap": 0.008333333333333333,
+        "calibration_seed": 101,
+        "quantile_summary": {
+          "p50": 31.02995925026294,
+          "p90": 43.41764811889137,
+          "p95": 48.39024273746112,
+          "p99": 61.18926482927704,
+          "max": 82.88690933494347
+        },
+        "min_resolvable_p_value": 0.0016638935108153079,
+        "limitations": [
+          "Finite-sample tail resolution: with N_cal=600 and target_fap=0.010, only ~6.0 calibration samples lie in the upper tail; minimum resolvable empirical p-value is 0.00166.",
+          "Exchangeability assumption: experiment-level FAP control holds only when test noise follows the same distribution as the calibration noise mixture. Noise-model shifts (e.g., impulsive interference or unseen colored spectra) can inflate FAR.",
+          "Single-observation horizon: FAP is calibrated per individual observation window; scanning M independent observations without further correction yields an expected false-alarm count of M * target_fap."
+        ]
+      },
+      {
+        "target_fap": 0.01,
+        "n_calibration_samples": 600,
+        "threshold": 63.52078469969613,
+        "calibration_noise_models": [
+          "gaussian_white",
+          "pink_colored",
+          "nonstationary"
+        ],
+        "total_tf_bins_per_sample": 7875,
+        "naive_per_bin_exp_threshold": 4.605170185988091,
+        "bonferroni_per_bin_exp_threshold": 13.576618649681926,
+        "empirical_calibration_fap": 0.008333333333333333,
+        "calibration_seed": 202,
+        "quantile_summary": {
+          "p50": 30.629104274043264,
+          "p90": 43.1546504705581,
+          "p95": 49.238902477864585,
+          "p99": 63.415277679201964,
+          "max": 69.5483241967593
+        },
+        "min_resolvable_p_value": 0.0016638935108153079,
+        "limitations": [
+          "Finite-sample tail resolution: with N_cal=600 and target_fap=0.010, only ~6.0 calibration samples lie in the upper tail; minimum resolvable empirical p-value is 0.00166.",
+          "Exchangeability assumption: experiment-level FAP control holds only when test noise follows the same distribution as the calibration noise mixture. Noise-model shifts (e.g., impulsive interference or unseen colored spectra) can inflate FAR.",
+          "Single-observation horizon: FAP is calibrated per individual observation window; scanning M independent observations without further correction yields an expected false-alarm count of M * target_fap."
+        ]
+      },
+      {
+        "target_fap": 0.01,
+        "n_calibration_samples": 600,
+        "threshold": 62.85109856195379,
+        "calibration_noise_models": [
+          "gaussian_white",
+          "pink_colored",
+          "nonstationary"
+        ],
+        "total_tf_bins_per_sample": 7875,
+        "naive_per_bin_exp_threshold": 4.605170185988091,
+        "bonferroni_per_bin_exp_threshold": 13.576618649681926,
+        "empirical_calibration_fap": 0.008333333333333333,
+        "calibration_seed": 303,
+        "quantile_summary": {
+          "p50": 30.88121955353631,
+          "p90": 42.5685423369813,
+          "p95": 48.36754982995535,
+          "p99": 62.33524837792167,
+          "max": 72.0680949097836
+        },
+        "min_resolvable_p_value": 0.0016638935108153079,
+        "limitations": [
+          "Finite-sample tail resolution: with N_cal=600 and target_fap=0.010, only ~6.0 calibration samples lie in the upper tail; minimum resolvable empirical p-value is 0.00166.",
+          "Exchangeability assumption: experiment-level FAP control holds only when test noise follows the same distribution as the calibration noise mixture. Noise-model shifts (e.g., impulsive interference or unseen colored spectra) can inflate FAR.",
+          "Single-observation horizon: FAP is calibrated per individual observation window; scanning M independent observations without further correction yields an expected false-alarm count of M * target_fap."
+        ]
+      }
+    ],
+    "limitations": [
+      "Finite-sample tail resolution: with N_cal=600 and target_fap=0.010, only ~6.0 calibration samples lie in the upper tail; minimum resolvable empirical p-value is 0.00166.",
+      "Exchangeability assumption: experiment-level FAP control holds only when test noise follows the same distribution as the calibration noise mixture. Noise-model shifts (e.g., impulsive interference or unseen colored spectra) can inflate FAR.",
+      "Single-observation horizon: FAP is calibrated per individual observation window; scanning M independent observations without further correction yields an expected false-alarm count of M * target_fap."
+    ]
+  },
+  "per_seed_summary": [
+    {
+      "seed": 101,
+      "threshold": 61.50228566992597,
+      "noise_fp": 7,
+      "noise_n": 500,
+      "noise_far": 0.014,
+      "known_tp": 305,
+      "known_n": 512,
+      "known_recall": 0.595703125,
+      "withheld_tp": 60,
+      "withheld_n": 160,
+      "withheld_recall": 0.375
+    },
+    {
+      "seed": 202,
+      "threshold": 63.52078469969613,
+      "noise_fp": 1,
+      "noise_n": 500,
+      "noise_far": 0.002,
+      "known_tp": 301,
+      "known_n": 512,
+      "known_recall": 0.587890625,
+      "withheld_tp": 61,
+      "withheld_n": 160,
+      "withheld_recall": 0.38125
+    },
+    {
+      "seed": 303,
+      "threshold": 62.85109856195379,
+      "noise_fp": 4,
+      "noise_n": 500,
+      "noise_far": 0.008,
+      "known_tp": 308,
+      "known_n": 512,
+      "known_recall": 0.6015625,
+      "withheld_tp": 61,
+      "withheld_n": 160,
+      "withheld_recall": 0.38125
+    }
+  ],
+  "held_out_in_distribution": {
+    "n_total": 3036,
+    "n_signal": 1536,
+    "n_noise": 1500,
+    "tp": 914,
+    "fp": 12,
+    "tn": 1488,
+    "fn": 622,
+    "detection_probability": 0.5950520833333334,
+    "detection_wilson_95ci": [
+      0.5702956895094035,
+      0.6193342222762109
+    ],
+    "detection_clopper_pearson_95ci": [
+      0.5700152958243938,
+      0.6197247391915464
+    ],
+    "false_alarm_rate": 0.008,
+    "far_wilson_95ci": [
+      0.0045822256095402435,
+      0.013931334219118342
+    ],
+    "far_clopper_pearson_95ci": [
+      0.004140350842847094,
+      0.013932651519892625
+    ],
+    "precision": 0.9870410367170627,
+    "recall": 0.5950520833333334,
+    "f1": 0.7424857839155159,
+    "localization": {
+      "n_localized": 914,
+      "median_time_iou": 0.44640090757478607,
+      "median_freq_iou": 0.6666666666666666,
+      "median_time_center_error_s": 0.3385879501917035,
+      "median_freq_center_error_hz": 4.050299886800154,
+      "tf_overlap_rate": 0.9945295404814004
+    },
+    "statistically_credible": true,
+    "credibility_warnings": []
+  },
+  "held_out_noise_only": {
+    "n_total": 1500,
+    "n_signal": 0,
+    "n_noise": 1500,
+    "tp": 0,
+    "fp": 12,
+    "tn": 1488,
+    "fn": 0,
+    "detection_probability": null,
+    "detection_wilson_95ci": null,
+    "detection_clopper_pearson_95ci": null,
+    "false_alarm_rate": 0.008,
+    "far_wilson_95ci": [
+      0.0045822256095402435,
+      0.013931334219118342
+    ],
+    "far_clopper_pearson_95ci": [
+      0.004140350842847094,
+      0.013932651519892625
+    ],
+    "precision": 0.0,
+    "recall": null,
+    "f1": null,
+    "localization": {
+      "n_localized": 0,
+      "median_time_iou": null,
+      "median_freq_iou": null,
+      "median_time_center_error_s": null,
+      "median_freq_center_error_hz": null,
+      "tf_overlap_rate": null
+    },
+    "statistically_credible": true,
+    "credibility_warnings": []
+  },
+  "held_out_noise_by_model": {
+    "gaussian_white": {
+      "n_total": 501,
+      "n_signal": 0,
+      "n_noise": 501,
+      "tp": 0,
+      "fp": 3,
+      "tn": 498,
+      "fn": 0,
+      "detection_probability": null,
+      "detection_wilson_95ci": null,
+      "detection_clopper_pearson_95ci": null,
+      "false_alarm_rate": 0.005988023952095809,
+      "far_wilson_95ci": [
+        0.0020385151314762547,
+        0.01745564219007911
+      ],
+      "far_clopper_pearson_95ci": [
+        0.0012365809536478587,
+        0.017399076410167847
+      ],
+      "precision": 0.0,
+      "recall": null,
+      "f1": null,
+      "localization": {
+        "n_localized": 0,
+        "median_time_iou": null,
+        "median_freq_iou": null,
+        "median_time_center_error_s": null,
+        "median_freq_center_error_hz": null,
+        "tf_overlap_rate": null
+      },
+      "statistically_credible": true,
+      "credibility_warnings": []
+    },
+    "nonstationary": {
+      "n_total": 498,
+      "n_signal": 0,
+      "n_noise": 498,
+      "tp": 0,
+      "fp": 4,
+      "tn": 494,
+      "fn": 0,
+      "detection_probability": null,
+      "detection_wilson_95ci": null,
+      "detection_clopper_pearson_95ci": null,
+      "false_alarm_rate": 0.008032128514056224,
+      "far_wilson_95ci": [
+        0.0031278437609723302,
+        0.020468171698812605
+      ],
+      "far_clopper_pearson_95ci": [
+        0.002192695723581313,
+        0.02043686905985292
+      ],
+      "precision": 0.0,
+      "recall": null,
+      "f1": null,
+      "localization": {
+        "n_localized": 0,
+        "median_time_iou": null,
+        "median_freq_iou": null,
+        "median_time_center_error_s": null,
+        "median_freq_center_error_hz": null,
+        "tf_overlap_rate": null
+      },
+      "statistically_credible": true,
+      "credibility_warnings": []
+    },
+    "pink_colored": {
+      "n_total": 501,
+      "n_signal": 0,
+      "n_noise": 501,
+      "tp": 0,
+      "fp": 5,
+      "tn": 496,
+      "fn": 0,
+      "detection_probability": null,
+      "detection_wilson_95ci": null,
+      "detection_clopper_pearson_95ci": null,
+      "false_alarm_rate": 0.00998003992015968,
+      "far_wilson_95ci": [
+        0.0042701987689924975,
+        0.02314723808935838
+      ],
+      "far_clopper_pearson_95ci": [
+        0.0032482094574134484,
+        0.02313542647289286
+      ],
+      "precision": 0.0,
+      "recall": null,
+      "f1": null,
+      "localization": {
+        "n_localized": 0,
+        "median_time_iou": null,
+        "median_freq_iou": null,
+        "median_time_center_error_s": null,
+        "median_freq_center_error_hz": null,
+        "tf_overlap_rate": null
+      },
+      "statistically_credible": true,
+      "credibility_warnings": []
+    }
+  },
+  "held_out_signal_by_family": {
+    "broadband_pulse": {
+      "n_total": 384,
+      "n_signal": 384,
+      "n_noise": 0,
+      "tp": 300,
+      "fp": 0,
+      "tn": 0,
+      "fn": 84,
+      "detection_probability": 0.78125,
+      "detection_wilson_95ci": [
+        0.7372276610754047,
+        0.8197009371636519
+      ],
+      "detection_clopper_pearson_95ci": [
+        0.7365094805751484,
+        0.8215936539676505
+      ],
+      "false_alarm_rate": null,
+      "far_wilson_95ci": null,
+      "far_clopper_pearson_95ci": null,
+      "precision": 1.0,
+      "recall": 0.78125,
+      "f1": 0.8771929824561403,
+      "localization": {
+        "n_localized": 300,
+        "median_time_iou": 0.2752971285367044,
+        "median_freq_iou": 0.7718397529448493,
+        "median_time_center_error_s": 0.008488697537659462,
+        "median_freq_center_error_hz": 8.034113992012522,
+        "tf_overlap_rate": 0.9966666666666667
+      },
+      "statistically_credible": true,
+      "credibility_warnings": []
+    },
+    "intermittent_narrowband": {
+      "n_total": 360,
+      "n_signal": 360,
+      "n_noise": 0,
+      "tp": 208,
+      "fp": 0,
+      "tn": 0,
+      "fn": 152,
+      "detection_probability": 0.5777777777777777,
+      "detection_wilson_95ci": [
+        0.5261991445407666,
+        0.627714046609881
+      ],
+      "detection_clopper_pearson_95ci": [
+        0.5249031043437821,
+        0.6293625699719776
+      ],
+      "false_alarm_rate": null,
+      "far_wilson_95ci": null,
+      "far_clopper_pearson_95ci": null,
+      "precision": 1.0,
+      "recall": 0.5777777777777777,
+      "f1": 0.732394366197183,
+      "localization": {
+        "n_localized": 208,
+        "median_time_iou": 0.9415658337275697,
+        "median_freq_iou": 0.5,
+        "median_time_center_error_s": 0.8997793975745352,
+        "median_freq_center_error_hz": 2.131515085027729,
+        "tf_overlap_rate": 1.0
+      },
+      "statistically_credible": true,
+      "credibility_warnings": []
+    },
+    "linear_chirp": {
+      "n_total": 360,
+      "n_signal": 360,
+      "n_noise": 0,
+      "tp": 216,
+      "fp": 0,
+      "tn": 0,
+      "fn": 144,
+      "detection_probability": 0.6,
+      "detection_wilson_95ci": [
+        0.5485949303747126,
+        0.6492934582475487
+      ],
+      "detection_clopper_pearson_95ci": [
+        0.5473527381726304,
+        0.6509883861102047
+      ],
+      "false_alarm_rate": null,
+      "far_wilson_95ci": null,
+      "far_clopper_pearson_95ci": null,
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1": 0.7499999999999999,
+      "localization": {
+        "n_localized": 216,
+        "median_time_iou": 0.8717989807748106,
+        "median_freq_iou": 0.8540109639749406,
+        "median_time_center_error_s": 0.3756266954086056,
+        "median_freq_center_error_hz": 31.112293557098326,
+        "tf_overlap_rate": 0.9953703703703703
+      },
+      "statistically_credible": true,
+      "credibility_warnings": []
+    },
+    "sinusoid": {
+      "n_total": 432,
+      "n_signal": 432,
+      "n_noise": 0,
+      "tp": 190,
+      "fp": 0,
+      "tn": 0,
+      "fn": 242,
+      "detection_probability": 0.4398148148148148,
+      "detection_wilson_95ci": [
+        0.39374240707702424,
+        0.48694815379641276
+      ],
+      "detection_clopper_pearson_95ci": [
+        0.39240330251041244,
+        0.48805608103461146
+      ],
+      "false_alarm_rate": null,
+      "far_wilson_95ci": null,
+      "far_clopper_pearson_95ci": null,
+      "precision": 1.0,
+      "recall": 0.4398148148148148,
+      "f1": 0.6109324758842444,
+      "localization": {
+        "n_localized": 190,
+        "median_time_iou": 0.7267399267399267,
+        "median_freq_iou": 0.5,
+        "median_time_center_error_s": 0.96875,
+        "median_freq_center_error_hz": 2.0065778007489854,
+        "tf_overlap_rate": 0.9842105263157894
+      },
+      "statistically_credible": true,
+      "credibility_warnings": []
+    }
+  },
+  "held_out_withheld_family": {
+    "n_total": 480,
+    "n_signal": 480,
+    "n_noise": 0,
+    "tp": 182,
+    "fp": 0,
+    "tn": 0,
+    "fn": 298,
+    "detection_probability": 0.37916666666666665,
+    "detection_wilson_95ci": [
+      0.33688399538158126,
+      0.4233680502311776
+    ],
+    "detection_clopper_pearson_95ci": [
+      0.33558209905397585,
+      0.4242496763009613
+    ],
+    "false_alarm_rate": null,
+    "far_wilson_95ci": null,
+    "far_clopper_pearson_95ci": null,
+    "precision": 1.0,
+    "recall": 0.37916666666666665,
+    "f1": 0.5498489425981873,
+    "localization": {
+      "n_localized": 182,
+      "median_time_iou": 0.496581815850733,
+      "median_freq_iou": 0.8086488914273772,
+      "median_time_center_error_s": 0.3981937743364242,
+      "median_freq_center_error_hz": 53.057226805111185,
+      "tf_overlap_rate": 0.9615384615384616
+    },
+    "statistically_credible": true,
+    "credibility_warnings": []
+  },
+  "held_out_shifted_noise": {
+    "n_total": 450,
+    "n_signal": 0,
+    "n_noise": 450,
+    "tp": 0,
+    "fp": 16,
+    "tn": 434,
+    "fn": 0,
+    "detection_probability": null,
+    "detection_wilson_95ci": null,
+    "detection_clopper_pearson_95ci": null,
+    "false_alarm_rate": 0.035555555555555556,
+    "far_wilson_95ci": [
+      0.022002272067677756,
+      0.05697125078725944
+    ],
+    "far_clopper_pearson_95ci": [
+      0.020457111105278623,
+      0.057098907313435456
+    ],
+    "precision": 0.0,
+    "recall": null,
+    "f1": null,
+    "localization": {
+      "n_localized": 0,
+      "median_time_iou": null,
+      "median_freq_iou": null,
+      "median_time_center_error_s": null,
+      "median_freq_center_error_hz": null,
+      "tf_overlap_rate": null
+    },
+    "statistically_credible": false,
+    "credibility_warnings": [
+      "Empirical FAR (0.0356, 95% exact CI [0.0205, 0.0571]) significantly exceeds calibrated target FAP (0.0100); statistical significance estimates are NOT credible under this noise condition."
+    ]
+  },
+  "held_out_shifted_signal": {
+    "n_total": 480,
+    "n_signal": 480,
+    "n_noise": 0,
+    "tp": 292,
+    "fp": 0,
+    "tn": 0,
+    "fn": 188,
+    "detection_probability": 0.6083333333333333,
+    "detection_wilson_95ci": [
+      0.5639710862523226,
+      0.6509753556121003
+    ],
+    "detection_clopper_pearson_95ci": [
+      0.5630660473016699,
+      0.6522574309439239
+    ],
+    "false_alarm_rate": null,
+    "far_wilson_95ci": null,
+    "far_clopper_pearson_95ci": null,
+    "precision": 1.0,
+    "recall": 0.6083333333333333,
+    "f1": 0.7564766839378237,
+    "localization": {
+      "n_localized": 292,
+      "median_time_iou": 0.39770815212009414,
+      "median_freq_iou": 0.6666666666666666,
+      "median_time_center_error_s": 0.4325430020654094,
+      "median_freq_center_error_hz": 6.809447704644214,
+      "tf_overlap_rate": 0.9897260273972602
+    },
+    "statistically_credible": true,
+    "credibility_warnings": []
+  },
+  "family_snr_curves": {
+    "sinusoid": {
+      "4.0": {
+        "n_total": 54,
+        "n_signal": 54,
+        "n_noise": 0,
+        "tp": 0,
+        "fp": 0,
+        "tn": 0,
+        "fn": 54,
+        "detection_probability": 0.0,
+        "detection_wilson_95ci": [
+          0.0,
+          0.0664135880908964
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.0,
+          0.06603151424442182
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": null,
+        "recall": 0.0,
+        "f1": null,
+        "localization": {
+          "n_localized": 0,
+          "median_time_iou": null,
+          "median_freq_iou": null,
+          "median_time_center_error_s": null,
+          "median_freq_center_error_hz": null,
+          "tf_overlap_rate": null
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "6.0": {
+        "n_total": 54,
+        "n_signal": 54,
+        "n_noise": 0,
+        "tp": 4,
+        "fp": 0,
+        "tn": 0,
+        "fn": 50,
+        "detection_probability": 0.07407407407407407,
+        "detection_wilson_95ci": [
+          0.02918152776550481,
+          0.1755411583859995
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.0205509672980946,
+          0.17893342916607283
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.07407407407407407,
+        "f1": 0.13793103448275862,
+        "localization": {
+          "n_localized": 4,
+          "median_time_iou": 0.10158730158730159,
+          "median_freq_iou": 0.6594871872975951,
+          "median_time_center_error_s": 1.75,
+          "median_freq_center_error_hz": 3.8929677244840946,
+          "tf_overlap_rate": 0.75
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "8.0": {
+        "n_total": 54,
+        "n_signal": 54,
+        "n_noise": 0,
+        "tp": 11,
+        "fp": 0,
+        "tn": 0,
+        "fn": 43,
+        "detection_probability": 0.2037037037037037,
+        "detection_wilson_95ci": [
+          0.11774054087421393,
+          0.3290230668833543
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.10631925249021465,
+          0.33530491948924956
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.2037037037037037,
+        "f1": 0.3384615384615384,
+        "localization": {
+          "n_localized": 11,
+          "median_time_iou": 0.07814407814407814,
+          "median_freq_iou": 0.6666666666666666,
+          "median_time_center_error_s": 1.03076171875,
+          "median_freq_center_error_hz": 1.9954185658764914,
+          "tf_overlap_rate": 0.9090909090909091
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "10.0": {
+        "n_total": 54,
+        "n_signal": 54,
+        "n_noise": 0,
+        "tp": 18,
+        "fp": 0,
+        "tn": 0,
+        "fn": 36,
+        "detection_probability": 0.3333333333333333,
+        "detection_wilson_95ci": [
+          0.22241416537492575,
+          0.46639036398870637
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.2109199053585759,
+          0.4747449648327018
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "localization": {
+          "n_localized": 18,
+          "median_time_iou": 0.12112332112332112,
+          "median_freq_iou": 0.6666666666666666,
+          "median_time_center_error_s": 0.84375,
+          "median_freq_center_error_hz": 2.168893585500115,
+          "tf_overlap_rate": 0.9444444444444444
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "12.0": {
+        "n_total": 54,
+        "n_signal": 54,
+        "n_noise": 0,
+        "tp": 21,
+        "fp": 0,
+        "tn": 0,
+        "fn": 33,
+        "detection_probability": 0.3888888888888889,
+        "detection_wilson_95ci": [
+          0.27041933829116505,
+          0.5221170146179231
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.25919827223308073,
+          0.5312122486789042
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.3888888888888889,
+        "f1": 0.56,
+        "localization": {
+          "n_localized": 21,
+          "median_time_iou": 0.38290598290598293,
+          "median_freq_iou": 0.6666666666666666,
+          "median_time_center_error_s": 1.03173828125,
+          "median_freq_center_error_hz": 2.083134879369709,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "16.0": {
+        "n_total": 54,
+        "n_signal": 54,
+        "n_noise": 0,
+        "tp": 32,
+        "fp": 0,
+        "tn": 0,
+        "fn": 22,
+        "detection_probability": 0.5925925925925926,
+        "detection_wilson_95ci": [
+          0.4596684934349057,
+          0.7132178791408542
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.4503441243589754,
+          0.7243200629622442
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.5925925925925926,
+        "f1": 0.7441860465116279,
+        "localization": {
+          "n_localized": 32,
+          "median_time_iou": 0.47277167277167276,
+          "median_freq_iou": 0.5,
+          "median_time_center_error_s": 0.59423828125,
+          "median_freq_center_error_hz": 1.9436908541373157,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "20.0": {
+        "n_total": 54,
+        "n_signal": 54,
+        "n_noise": 0,
+        "tp": 50,
+        "fp": 0,
+        "tn": 0,
+        "fn": 4,
+        "detection_probability": 0.9259259259259259,
+        "detection_wilson_95ci": [
+          0.8244588416140005,
+          0.9708184722344951
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.8210665708339272,
+          0.9794490327019054
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.9259259259259259,
+        "f1": 0.9615384615384615,
+        "localization": {
+          "n_localized": 50,
+          "median_time_iou": 0.7814407814407814,
+          "median_freq_iou": 0.5,
+          "median_time_center_error_s": 0.84375,
+          "median_freq_center_error_hz": 1.8632092892174796,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "25.0": {
+        "n_total": 54,
+        "n_signal": 54,
+        "n_noise": 0,
+        "tp": 54,
+        "fp": 0,
+        "tn": 0,
+        "fn": 0,
+        "detection_probability": 1.0,
+        "detection_wilson_95ci": [
+          0.9335864119091037,
+          1.0
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.9339684857555782,
+          1.0
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "localization": {
+          "n_localized": 54,
+          "median_time_iou": 0.9142857142857143,
+          "median_freq_iou": 0.5,
+          "median_time_center_error_s": 1.046875,
+          "median_freq_center_error_hz": 1.9879303379834283,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      }
+    },
+    "broadband_pulse": {
+      "4.0": {
+        "n_total": 54,
+        "n_signal": 54,
+        "n_noise": 0,
+        "tp": 8,
+        "fp": 0,
+        "tn": 0,
+        "fn": 46,
+        "detection_probability": 0.14814814814814814,
+        "detection_wilson_95ci": [
+          0.07703063137605341,
+          0.26600115283605885
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.06619757716129679,
+          0.27119768856212295
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.14814814814814814,
+        "f1": 0.25806451612903225,
+        "localization": {
+          "n_localized": 8,
+          "median_time_iou": 0.2422816769427944,
+          "median_freq_iou": 0.43957774221021284,
+          "median_time_center_error_s": 0.010702834182468646,
+          "median_freq_center_error_hz": 21.585592607539937,
+          "tf_overlap_rate": 0.875
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "6.0": {
+        "n_total": 54,
+        "n_signal": 54,
+        "n_noise": 0,
+        "tp": 29,
+        "fp": 0,
+        "tn": 0,
+        "fn": 25,
+        "detection_probability": 0.5370370370370371,
+        "detection_wilson_95ci": [
+          0.40605356021011496,
+          0.6631009888201891
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.396094955720709,
+          0.6737753698957205
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.5370370370370371,
+        "f1": 0.6987951807228916,
+        "localization": {
+          "n_localized": 29,
+          "median_time_iou": 0.2978521940283798,
+          "median_freq_iou": 0.5298812154015421,
+          "median_time_center_error_s": 0.00771243270447286,
+          "median_freq_center_error_hz": 9.270006959583128,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "8.0": {
+        "n_total": 51,
+        "n_signal": 51,
+        "n_noise": 0,
+        "tp": 40,
+        "fp": 0,
+        "tn": 0,
+        "fn": 11,
+        "detection_probability": 0.7843137254901961,
+        "detection_wilson_95ci": [
+          0.6537364041400255,
+          0.8750606159176724
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.6467859364904808,
+          0.8871094002502565
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.7843137254901961,
+        "f1": 0.8791208791208792,
+        "localization": {
+          "n_localized": 40,
+          "median_time_iou": 0.2760299170344875,
+          "median_freq_iou": 0.5878410078512764,
+          "median_time_center_error_s": 0.008709676565999858,
+          "median_freq_center_error_hz": 8.877919914678117,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "10.0": {
+        "n_total": 45,
+        "n_signal": 45,
+        "n_noise": 0,
+        "tp": 43,
+        "fp": 0,
+        "tn": 0,
+        "fn": 2,
+        "detection_probability": 0.9555555555555556,
+        "detection_wilson_95ci": [
+          0.8517248923056439,
+          0.9877258732932802
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.8485070997566608,
+          0.9945715112997491
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.9555555555555556,
+        "f1": 0.9772727272727273,
+        "localization": {
+          "n_localized": 43,
+          "median_time_iou": 0.3304102571820806,
+          "median_freq_iou": 0.6961187778439206,
+          "median_time_center_error_s": 0.00870832725548265,
+          "median_freq_center_error_hz": 9.377119599153588,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "12.0": {
+        "n_total": 45,
+        "n_signal": 45,
+        "n_noise": 0,
+        "tp": 45,
+        "fp": 0,
+        "tn": 0,
+        "fn": 0,
+        "detection_probability": 1.0,
+        "detection_wilson_95ci": [
+          0.9213484012671117,
+          1.0
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.921294899593157,
+          1.0
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "localization": {
+          "n_localized": 45,
+          "median_time_iou": 0.2743481640083445,
+          "median_freq_iou": 0.7327506920603872,
+          "median_time_center_error_s": 0.008733566533751791,
+          "median_freq_center_error_hz": 10.54503988603176,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "16.0": {
+        "n_total": 45,
+        "n_signal": 45,
+        "n_noise": 0,
+        "tp": 45,
+        "fp": 0,
+        "tn": 0,
+        "fn": 0,
+        "detection_probability": 1.0,
+        "detection_wilson_95ci": [
+          0.9213484012671117,
+          1.0
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.921294899593157,
+          1.0
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "localization": {
+          "n_localized": 45,
+          "median_time_iou": 0.2823020158068961,
+          "median_freq_iou": 0.8522909480967175,
+          "median_time_center_error_s": 0.008785910405100128,
+          "median_freq_center_error_hz": 6.343092609028986,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "20.0": {
+        "n_total": 45,
+        "n_signal": 45,
+        "n_noise": 0,
+        "tp": 45,
+        "fp": 0,
+        "tn": 0,
+        "fn": 0,
+        "detection_probability": 1.0,
+        "detection_wilson_95ci": [
+          0.9213484012671117,
+          1.0
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.921294899593157,
+          1.0
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "localization": {
+          "n_localized": 45,
+          "median_time_iou": 0.27947832267633643,
+          "median_freq_iou": 0.8726616836392015,
+          "median_time_center_error_s": 0.006411874755140268,
+          "median_freq_center_error_hz": 5.014938550780812,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "25.0": {
+        "n_total": 45,
+        "n_signal": 45,
+        "n_noise": 0,
+        "tp": 45,
+        "fp": 0,
+        "tn": 0,
+        "fn": 0,
+        "detection_probability": 1.0,
+        "detection_wilson_95ci": [
+          0.9213484012671117,
+          1.0
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.921294899593157,
+          1.0
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "localization": {
+          "n_localized": 45,
+          "median_time_iou": 0.21467101287059903,
+          "median_freq_iou": 0.8883186045831386,
+          "median_time_center_error_s": 0.0085231625578297,
+          "median_freq_center_error_hz": 6.923526590972699,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      }
+    },
+    "linear_chirp": {
+      "4.0": {
+        "n_total": 45,
+        "n_signal": 45,
+        "n_noise": 0,
+        "tp": 2,
+        "fp": 0,
+        "tn": 0,
+        "fn": 43,
+        "detection_probability": 0.044444444444444446,
+        "detection_wilson_95ci": [
+          0.012274126706719846,
+          0.14827510769435623
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.005428488700250947,
+          0.15149290024333914
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.044444444444444446,
+        "f1": 0.0851063829787234,
+        "localization": {
+          "n_localized": 2,
+          "median_time_iou": 0.22400742142926228,
+          "median_freq_iou": 0.2820802057857164,
+          "median_time_center_error_s": 0.3482190916488087,
+          "median_freq_center_error_hz": 35.81823485195031,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "6.0": {
+        "n_total": 45,
+        "n_signal": 45,
+        "n_noise": 0,
+        "tp": 7,
+        "fp": 0,
+        "tn": 0,
+        "fn": 38,
+        "detection_probability": 0.15555555555555556,
+        "detection_wilson_95ci": [
+          0.07745423484758268,
+          0.2878390887239627
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.06490921200837761,
+          0.2945516010980533
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.15555555555555556,
+        "f1": 0.2692307692307693,
+        "localization": {
+          "n_localized": 7,
+          "median_time_iou": 0.30596657638039204,
+          "median_freq_iou": 0.3149888742153935,
+          "median_time_center_error_s": 0.3152356236378804,
+          "median_freq_center_error_hz": 28.249961954528317,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "8.0": {
+        "n_total": 45,
+        "n_signal": 45,
+        "n_noise": 0,
+        "tp": 12,
+        "fp": 0,
+        "tn": 0,
+        "fn": 33,
+        "detection_probability": 0.26666666666666666,
+        "detection_wilson_95ci": [
+          0.1596490352106652,
+          0.4103883775313494
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.1460407158381299,
+          0.4194467047420177
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.26666666666666666,
+        "f1": 0.4210526315789474,
+        "localization": {
+          "n_localized": 12,
+          "median_time_iou": 0.20111292907708045,
+          "median_freq_iou": 0.26357767958430434,
+          "median_time_center_error_s": 0.23072438728220812,
+          "median_freq_center_error_hz": 30.011213494178293,
+          "tf_overlap_rate": 0.9166666666666666
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "10.0": {
+        "n_total": 45,
+        "n_signal": 45,
+        "n_noise": 0,
+        "tp": 27,
+        "fp": 0,
+        "tn": 0,
+        "fn": 18,
+        "detection_probability": 0.6,
+        "detection_wilson_95ci": [
+          0.4545185459035138,
+          0.7297511343499085
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.4433135124790022,
+          0.7430241048073687
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1": 0.7499999999999999,
+        "localization": {
+          "n_localized": 27,
+          "median_time_iou": 0.34281770945402795,
+          "median_freq_iou": 0.40423702174018616,
+          "median_time_center_error_s": 0.27798372369079005,
+          "median_freq_center_error_hz": 30.81803652014554,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "12.0": {
+        "n_total": 45,
+        "n_signal": 45,
+        "n_noise": 0,
+        "tp": 34,
+        "fp": 0,
+        "tn": 0,
+        "fn": 11,
+        "detection_probability": 0.7555555555555555,
+        "detection_wilson_95ci": [
+          0.6132661994297965,
+          0.8576452056622828
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.6046290712401733,
+          0.871177185396492
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.7555555555555555,
+        "f1": 0.8607594936708861,
+        "localization": {
+          "n_localized": 34,
+          "median_time_iou": 0.5924668495081554,
+          "median_freq_iou": 0.6329513620671836,
+          "median_time_center_error_s": 0.37340033206291123,
+          "median_freq_center_error_hz": 30.97810822717605,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "16.0": {
+        "n_total": 45,
+        "n_signal": 45,
+        "n_noise": 0,
+        "tp": 44,
+        "fp": 0,
+        "tn": 0,
+        "fn": 1,
+        "detection_probability": 0.9777777777777777,
+        "detection_wilson_95ci": [
+          0.8843331823158513,
+          0.9960664011171667
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.8822956685817058,
+          0.9994375402845977
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.9777777777777777,
+        "f1": 0.9887640449438202,
+        "localization": {
+          "n_localized": 44,
+          "median_time_iou": 0.7999219742000131,
+          "median_freq_iou": 0.8313919081956624,
+          "median_time_center_error_s": 0.3698339748159676,
+          "median_freq_center_error_hz": 35.215880074457445,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "20.0": {
+        "n_total": 45,
+        "n_signal": 45,
+        "n_noise": 0,
+        "tp": 45,
+        "fp": 0,
+        "tn": 0,
+        "fn": 0,
+        "detection_probability": 1.0,
+        "detection_wilson_95ci": [
+          0.9213484012671117,
+          1.0
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.921294899593157,
+          1.0
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "localization": {
+          "n_localized": 45,
+          "median_time_iou": 0.9305599482174607,
+          "median_freq_iou": 0.9355253565806622,
+          "median_time_center_error_s": 0.46265066134772037,
+          "median_freq_center_error_hz": 33.08436235035481,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "25.0": {
+        "n_total": 45,
+        "n_signal": 45,
+        "n_noise": 0,
+        "tp": 45,
+        "fp": 0,
+        "tn": 0,
+        "fn": 0,
+        "detection_probability": 1.0,
+        "detection_wilson_95ci": [
+          0.9213484012671117,
+          1.0
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.921294899593157,
+          1.0
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "localization": {
+          "n_localized": 45,
+          "median_time_iou": 0.9359624363820168,
+          "median_freq_iou": 0.9233901125276475,
+          "median_time_center_error_s": 0.36103153934922316,
+          "median_freq_center_error_hz": 28.36749939308629,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      }
+    },
+    "intermittent_narrowband": {
+      "4.0": {
+        "n_total": 45,
+        "n_signal": 45,
+        "n_noise": 0,
+        "tp": 1,
+        "fp": 0,
+        "tn": 0,
+        "fn": 44,
+        "detection_probability": 0.022222222222222223,
+        "detection_wilson_95ci": [
+          0.003933598882833428,
+          0.1156668176841488
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.0005624597154022581,
+          0.11770433141829419
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.022222222222222223,
+        "f1": 0.04347826086956522,
+        "localization": {
+          "n_localized": 1,
+          "median_time_iou": 0.09816529263841128,
+          "median_freq_iou": 0.941418261411309,
+          "median_time_center_error_s": 0.6797906656916219,
+          "median_freq_center_error_hz": 3.517204594162166,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "6.0": {
+        "n_total": 45,
+        "n_signal": 45,
+        "n_noise": 0,
+        "tp": 4,
+        "fp": 0,
+        "tn": 0,
+        "fn": 41,
+        "detection_probability": 0.08888888888888889,
+        "detection_wilson_95ci": [
+          0.035111116726370226,
+          0.20733575334289356
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.024752957783469056,
+          0.21221173695433954
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.08888888888888889,
+        "f1": 0.163265306122449,
+        "localization": {
+          "n_localized": 4,
+          "median_time_iou": 0.08413325040617986,
+          "median_freq_iou": 0.6666666666666666,
+          "median_time_center_error_s": 0.7330153226193531,
+          "median_freq_center_error_hz": 3.0572855173310813,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "8.0": {
+        "n_total": 45,
+        "n_signal": 45,
+        "n_noise": 0,
+        "tp": 15,
+        "fp": 0,
+        "tn": 0,
+        "fn": 30,
+        "detection_probability": 0.3333333333333333,
+        "detection_wilson_95ci": [
+          0.21358874934330035,
+          0.47929511690099585
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.20000568801069493,
+          0.48950363785836143
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "localization": {
+          "n_localized": 15,
+          "median_time_iou": 0.1387881880757637,
+          "median_freq_iou": 0.6666666666666666,
+          "median_time_center_error_s": 0.9114332015430175,
+          "median_freq_center_error_hz": 1.8343229584750702,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "10.0": {
+        "n_total": 45,
+        "n_signal": 45,
+        "n_noise": 0,
+        "tp": 20,
+        "fp": 0,
+        "tn": 0,
+        "fn": 25,
+        "detection_probability": 0.4444444444444444,
+        "detection_wilson_95ci": [
+          0.30938930034997586,
+          0.5882386550647896
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.2964439238658582,
+          0.6000265035963213
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.4444444444444444,
+        "f1": 0.6153846153846153,
+        "localization": {
+          "n_localized": 20,
+          "median_time_iou": 0.2626126723035167,
+          "median_freq_iou": 0.5,
+          "median_time_center_error_s": 0.9479351019534568,
+          "median_freq_center_error_hz": 2.670471616265246,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "12.0": {
+        "n_total": 45,
+        "n_signal": 45,
+        "n_noise": 0,
+        "tp": 37,
+        "fp": 0,
+        "tn": 0,
+        "fn": 8,
+        "detection_probability": 0.8222222222222222,
+        "detection_wilson_95ci": [
+          0.6867017537354023,
+          0.9070561048589585
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.6794657566066298,
+          0.9199820425426939
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.8222222222222222,
+        "f1": 0.9024390243902439,
+        "localization": {
+          "n_localized": 37,
+          "median_time_iou": 0.18573476624970334,
+          "median_freq_iou": 0.6666666666666666,
+          "median_time_center_error_s": 0.7151685018107847,
+          "median_freq_center_error_hz": 2.2685347986142688,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "16.0": {
+        "n_total": 45,
+        "n_signal": 45,
+        "n_noise": 0,
+        "tp": 42,
+        "fp": 0,
+        "tn": 0,
+        "fn": 3,
+        "detection_probability": 0.9333333333333333,
+        "detection_wilson_95ci": [
+          0.8214339803640811,
+          0.977067967400749
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.8173155434217731,
+          0.9860349029556295
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.9333333333333333,
+        "f1": 0.9655172413793104,
+        "localization": {
+          "n_localized": 42,
+          "median_time_iou": 0.9302635151108993,
+          "median_freq_iou": 0.5,
+          "median_time_center_error_s": 1.0020844039223122,
+          "median_freq_center_error_hz": 1.9436949565081534,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "20.0": {
+        "n_total": 45,
+        "n_signal": 45,
+        "n_noise": 0,
+        "tp": 45,
+        "fp": 0,
+        "tn": 0,
+        "fn": 0,
+        "detection_probability": 1.0,
+        "detection_wilson_95ci": [
+          0.9213484012671117,
+          1.0
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.921294899593157,
+          1.0
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "localization": {
+          "n_localized": 45,
+          "median_time_iou": 0.9662967455679567,
+          "median_freq_iou": 0.5,
+          "median_time_center_error_s": 0.8931709516599136,
+          "median_freq_center_error_hz": 2.03579538184502,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "25.0": {
+        "n_total": 45,
+        "n_signal": 45,
+        "n_noise": 0,
+        "tp": 44,
+        "fp": 0,
+        "tn": 0,
+        "fn": 1,
+        "detection_probability": 0.9777777777777777,
+        "detection_wilson_95ci": [
+          0.8843331823158513,
+          0.9960664011171667
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.8822956685817058,
+          0.9994375402845977
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.9777777777777777,
+        "f1": 0.9887640449438202,
+        "localization": {
+          "n_localized": 44,
+          "median_time_iou": 0.980528225760843,
+          "median_freq_iou": 0.5,
+          "median_time_center_error_s": 0.9369388479776817,
+          "median_freq_center_error_hz": 2.339150181141761,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      }
+    },
+    "sinusoidal_fm": {
+      "4.0": {
+        "n_total": 63,
+        "n_signal": 63,
+        "n_noise": 0,
+        "tp": 2,
+        "fp": 0,
+        "tn": 0,
+        "fn": 61,
+        "detection_probability": 0.031746031746031744,
+        "detection_wilson_95ci": [
+          0.008749527561580449,
+          0.10856477046607432
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.003867982496418803,
+          0.11001937340888032
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.031746031746031744,
+        "f1": 0.06153846153846154,
+        "localization": {
+          "n_localized": 2,
+          "median_time_iou": 0.08068881142899399,
+          "median_freq_iou": 0.12425698847714463,
+          "median_time_center_error_s": 0.94719478155104,
+          "median_freq_center_error_hz": 101.17860711884225,
+          "tf_overlap_rate": 0.5
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "6.0": {
+        "n_total": 63,
+        "n_signal": 63,
+        "n_noise": 0,
+        "tp": 3,
+        "fp": 0,
+        "tn": 0,
+        "fn": 60,
+        "detection_probability": 0.047619047619047616,
+        "detection_wilson_95ci": [
+          0.016326168867995608,
+          0.1309096783790607
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.009929951150733281,
+          0.13291840074815062
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.047619047619047616,
+        "f1": 0.0909090909090909,
+        "localization": {
+          "n_localized": 3,
+          "median_time_iou": 0.0,
+          "median_freq_iou": 0.0,
+          "median_time_center_error_s": 2.2285968349984313,
+          "median_freq_center_error_hz": 177.22434352134798,
+          "tf_overlap_rate": 0.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "8.0": {
+        "n_total": 63,
+        "n_signal": 63,
+        "n_noise": 0,
+        "tp": 6,
+        "fp": 0,
+        "tn": 0,
+        "fn": 57,
+        "detection_probability": 0.09523809523809523,
+        "detection_wilson_95ci": [
+          0.044383484276892024,
+          0.1926170106283689
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.0357590118653331,
+          0.19585602055810697
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.09523809523809523,
+        "f1": 0.17391304347826084,
+        "localization": {
+          "n_localized": 6,
+          "median_time_iou": 0.14630845147353458,
+          "median_freq_iou": 0.5346157101313582,
+          "median_time_center_error_s": 0.6888296654175844,
+          "median_freq_center_error_hz": 68.85044111746734,
+          "tf_overlap_rate": 0.6666666666666666
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "10.0": {
+        "n_total": 63,
+        "n_signal": 63,
+        "n_noise": 0,
+        "tp": 14,
+        "fp": 0,
+        "tn": 0,
+        "fn": 49,
+        "detection_probability": 0.2222222222222222,
+        "detection_wilson_95ci": [
+          0.13725007752613644,
+          0.3391228111343367
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.12715074325312645,
+          0.3446441537043617
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.2222222222222222,
+        "f1": 0.3636363636363636,
+        "localization": {
+          "n_localized": 14,
+          "median_time_iou": 0.13014927204943177,
+          "median_freq_iou": 0.5775703690849523,
+          "median_time_center_error_s": 0.4329091568617268,
+          "median_freq_center_error_hz": 47.44713665133315,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "12.0": {
+        "n_total": 63,
+        "n_signal": 63,
+        "n_noise": 0,
+        "tp": 21,
+        "fp": 0,
+        "tn": 0,
+        "fn": 42,
+        "detection_probability": 0.3333333333333333,
+        "detection_wilson_95ci": [
+          0.22949614464603982,
+          0.456327588550244
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.21953748373221202,
+          0.46338075517251087
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "localization": {
+          "n_localized": 21,
+          "median_time_iou": 0.18821364353349973,
+          "median_freq_iou": 0.6603610427841916,
+          "median_time_center_error_s": 0.36361203257451535,
+          "median_freq_center_error_hz": 61.140528144506106,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "16.0": {
+        "n_total": 57,
+        "n_signal": 57,
+        "n_noise": 0,
+        "tp": 36,
+        "fp": 0,
+        "tn": 0,
+        "fn": 21,
+        "detection_probability": 0.631578947368421,
+        "detection_wilson_95ci": [
+          0.501777982224952,
+          0.7447644296558429
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.4934470331353673,
+          0.7555359944741882
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.631578947368421,
+        "f1": 0.7741935483870968,
+        "localization": {
+          "n_localized": 36,
+          "median_time_iou": 0.3710576610472547,
+          "median_freq_iou": 0.7861688961753968,
+          "median_time_center_error_s": 0.3856342823449854,
+          "median_freq_center_error_hz": 44.05770693513108,
+          "tf_overlap_rate": 0.9722222222222222
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "20.0": {
+        "n_total": 54,
+        "n_signal": 54,
+        "n_noise": 0,
+        "tp": 49,
+        "fp": 0,
+        "tn": 0,
+        "fn": 5,
+        "detection_probability": 0.9074074074074074,
+        "detection_wilson_95ci": [
+          0.8009011740903732,
+          0.9597988652429706
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.79699845281371,
+          0.969247214732477
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.9074074074074074,
+        "f1": 0.9514563106796117,
+        "localization": {
+          "n_localized": 49,
+          "median_time_iou": 0.7178919793845918,
+          "median_freq_iou": 0.8265547316821863,
+          "median_time_center_error_s": 0.3920329937327822,
+          "median_freq_center_error_hz": 53.3620551971579,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "25.0": {
+        "n_total": 54,
+        "n_signal": 54,
+        "n_noise": 0,
+        "tp": 51,
+        "fp": 0,
+        "tn": 0,
+        "fn": 3,
+        "detection_probability": 0.9444444444444444,
+        "detection_wilson_95ci": [
+          0.8489278568183386,
+          0.9809267315453091
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.8461149662083666,
+          0.9883932256200587
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "precision": 1.0,
+        "recall": 0.9444444444444444,
+        "f1": 0.9714285714285714,
+        "localization": {
+          "n_localized": 51,
+          "median_time_iou": 0.7406261598567851,
+          "median_freq_iou": 0.820746236410626,
+          "median_time_center_error_s": 0.47813327623673674,
+          "median_freq_center_error_hz": 53.890531949115484,
+          "tf_overlap_rate": 1.0
+        },
+        "statistically_credible": true,
+        "credibility_warnings": []
+      }
+    }
+  },
+  "robustness_pooled": {
+    "spectral_leakage": {
+      "on_bin_sinusoid_snr12": {
+        "n_total": 300,
+        "n_signal": 300,
+        "n_noise": 0,
+        "tp": 14,
+        "fp": 0,
+        "tn": 0,
+        "fn": 286,
+        "detection_probability": 0.04666666666666667,
+        "detection_wilson_95ci": [
+          0.027998933682334012,
+          0.07679736022792105
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.02574464946723095,
+          0.0770598381063587
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "off_bin_sinusoid_snr12": {
+        "n_total": 300,
+        "n_signal": 300,
+        "n_noise": 0,
+        "tp": 12,
+        "fp": 0,
+        "tn": 0,
+        "fn": 288,
+        "detection_probability": 0.04,
+        "detection_wilson_95ci": [
+          0.023027321487942308,
+          0.06860421203864003
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.02083657630641371,
+          0.0688289881894961
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "statistically_credible": true,
+        "credibility_warnings": []
+      }
+    },
+    "windowing_effects": {
+      "hann": {
+        "n_total": 300,
+        "n_signal": 300,
+        "n_noise": 0,
+        "tp": 178,
+        "fp": 0,
+        "tn": 0,
+        "fn": 122,
+        "detection_probability": 0.5933333333333334,
+        "detection_wilson_95ci": [
+          0.5369084052348393,
+          0.6473982401365789
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.5353860928839493,
+          0.6494183142327217
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "statistically_credible": true,
+        "credibility_warnings": [],
+        "calibrated_threshold": 62.624722977191965
+      },
+      "boxcar": {
+        "n_total": 300,
+        "n_signal": 300,
+        "n_noise": 0,
+        "tp": 139,
+        "fp": 0,
+        "tn": 0,
+        "fn": 161,
+        "detection_probability": 0.4633333333333333,
+        "detection_wilson_95ci": [
+          0.4077258831288866,
+          0.5198679347609133
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.40584772721474915,
+          0.5215501401280316
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "statistically_credible": true,
+        "credibility_warnings": [],
+        "calibrated_threshold": 56.692285799025115
+      },
+      "blackman": {
+        "n_total": 300,
+        "n_signal": 300,
+        "n_noise": 0,
+        "tp": 137,
+        "fp": 0,
+        "tn": 0,
+        "fn": 163,
+        "detection_probability": 0.45666666666666667,
+        "detection_wilson_95ci": [
+          0.40120290256178365,
+          0.5132261549443436
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.39930759245750125,
+          0.5148899207647797
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "statistically_credible": true,
+        "credibility_warnings": [],
+        "calibrated_threshold": 63.8526014166319
+      }
+    },
+    "boundary_artifacts": {
+      "edge_pulse_snr12": {
+        "n_total": 300,
+        "n_signal": 300,
+        "n_noise": 0,
+        "tp": 269,
+        "fp": 0,
+        "tn": 0,
+        "fn": 31,
+        "detection_probability": 0.8966666666666666,
+        "detection_wilson_95ci": [
+          0.8570598275670679,
+          0.9262434152614588
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.8565394785125855,
+          0.9287035539714669
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "interior_pulse_snr12": {
+        "n_total": 300,
+        "n_signal": 300,
+        "n_noise": 0,
+        "tp": 300,
+        "fp": 0,
+        "tn": 0,
+        "fn": 0,
+        "detection_probability": 1.0,
+        "detection_wilson_95ci": [
+          0.9873570287754538,
+          0.9999999999999998
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.9877790253057065,
+          1.0
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "statistically_credible": true,
+        "credibility_warnings": []
+      }
+    },
+    "impulsive_interference": {
+      "noise_only": {
+        "n_total": 300,
+        "n_signal": 0,
+        "n_noise": 300,
+        "tp": 0,
+        "fp": 252,
+        "tn": 48,
+        "fn": 0,
+        "detection_probability": null,
+        "detection_wilson_95ci": null,
+        "detection_clopper_pearson_95ci": null,
+        "false_alarm_rate": 0.84,
+        "far_wilson_95ci": [
+          0.7942563251514081,
+          0.8771464544159004
+        ],
+        "far_clopper_pearson_95ci": [
+          0.7935211982405275,
+          0.8796108520708988
+        ],
+        "statistically_credible": false,
+        "credibility_warnings": [
+          "Pooled FAR (0.8400, 95% exact CI [0.7935, 0.8796]) exceeds calibrated target FAP (0.0100)."
+        ]
+      },
+      "linear_chirp_snr12": {
+        "n_total": 300,
+        "n_signal": 300,
+        "n_noise": 0,
+        "tp": 272,
+        "fp": 0,
+        "tn": 0,
+        "fn": 28,
+        "detection_probability": 0.9066666666666666,
+        "detection_wilson_95ci": [
+          0.8684146029829267,
+          0.934635780421109
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.8679351741503515,
+          0.9370823407312792
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "statistically_credible": true,
+        "credibility_warnings": []
+      }
+    },
+    "strong_nonstationary": {
+      "noise_only": {
+        "n_total": 300,
+        "n_signal": 0,
+        "n_noise": 300,
+        "tp": 0,
+        "fp": 6,
+        "tn": 294,
+        "fn": 0,
+        "detection_probability": null,
+        "detection_wilson_95ci": null,
+        "detection_clopper_pearson_95ci": null,
+        "false_alarm_rate": 0.02,
+        "far_wilson_95ci": [
+          0.009197631557703614,
+          0.04293962081786058
+        ],
+        "far_clopper_pearson_95ci": [
+          0.007374162001726412,
+          0.0430210826735169
+        ],
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "intermittent_snr12": {
+        "n_total": 300,
+        "n_signal": 300,
+        "n_noise": 0,
+        "tp": 293,
+        "fp": 0,
+        "tn": 0,
+        "fn": 7,
+        "detection_probability": 0.9766666666666667,
+        "detection_wilson_95ci": [
+          0.9526280277317246,
+          0.9886523397008747
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.9525174349702181,
+          0.9905684979382053
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "statistically_credible": true,
+        "credibility_warnings": []
+      }
+    },
+    "weak_and_overlapping": {
+      "weak_chirp_snr6": {
+        "n_total": 300,
+        "n_signal": 300,
+        "n_noise": 0,
+        "tp": 23,
+        "fp": 0,
+        "tn": 0,
+        "fn": 277,
+        "detection_probability": 0.07666666666666666,
+        "detection_wilson_95ci": [
+          0.051627611786607464,
+          0.1124101038501748
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.049218783875674486,
+          0.11281811536048231
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "statistically_credible": true,
+        "credibility_warnings": []
+      },
+      "overlapping_chirp_plus_intermittent_snr10": {
+        "n_total": 300,
+        "n_signal": 300,
+        "n_noise": 0,
+        "tp": 282,
+        "fp": 0,
+        "tn": 0,
+        "fn": 18,
+        "detection_probability": 0.94,
+        "detection_wilson_95ci": [
+          0.9071605548470915,
+          0.9617136304753079
+        ],
+        "detection_clopper_pearson_95ci": [
+          0.9068297039280113,
+          0.9640561255848612
+        ],
+        "false_alarm_rate": null,
+        "far_wilson_95ci": null,
+        "far_clopper_pearson_95ci": null,
+        "statistically_credible": true,
+        "credibility_warnings": []
+      }
+    }
+  },
+  "figures": [
+    "fig01_time_domain_examples.png",
+    "fig02_spectrograms_and_excess_maps.png",
+    "fig03_candidate_overlays.png",
+    "fig04_detection_vs_snr.png",
+    "fig05_false_alarm_results.png",
+    "fig06_confusion_matrix.png",
+    "fig07_false_positive_examples.png",
+    "fig08_missed_signal_examples.png",
+    "fig09_calibration_null_distribution.png"
+  ]
+}

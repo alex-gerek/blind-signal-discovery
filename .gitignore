@@ -1,0 +1,45 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Temporary files and caches
+.tmp/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# Credentials and local secrets
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+
+# Large generated datasets and raw binary dumps
+data/
+results/smoke/
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.parquet
+*.pkl
+*.pickle
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
