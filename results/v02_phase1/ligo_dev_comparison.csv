@@ -1,0 +1,17 @@
+event,role,source_class,net_snr,detector,n_val,v1_bg_far,v2_bg_far,v1_recovered,v2_recovered,v1_other_32s,v2_other_32s,v1_timing_err_s,v2_timing_err_s,v2_winning_scale
+GW150914,reference_previously_examined,BBH,25.2,H1,422,0.004739336492890996,0.014218009478672985,True,True,0,0,-0.02500009536743164,-0.02500009536743164,medium_125ms
+GW150914,reference_previously_examined,BBH,25.2,L1,422,0.009478672985781991,0.011848341232227487,True,True,0,0,-0.05625009536743164,0.006249904632568359,short_31ms
+GW151012,independent_validation,BBH,10.0,H1,422,0.002369668246445498,0.002369668246445498,False,False,0,0,,,
+GW151012,independent_validation,BBH,10.0,L1,422,0.0071090047393364926,0.004739336492890996,False,False,0,0,,,
+GW151226,independent_validation,BBH,13.1,H1,180,0.0,0.0,False,False,0,0,,,
+GW151226,independent_validation,BBH,13.1,L1,422,0.004739336492890996,0.0071090047393364926,False,False,0,0,,,
+GW170104,independent_validation,BBH,13.0,H1,422,0.004739336492890996,0.002369668246445498,False,False,0,0,,,
+GW170104,independent_validation,BBH,13.0,L1,422,0.018957345971563982,0.016587677725118485,False,False,0,0,,,
+GW170608,independent_validation,BBH,15.4,H1,420,0.002380952380952381,0.002380952380952381,True,True,4,1,1.4375,-2.25,long_500ms
+GW170608,independent_validation,BBH,15.4,L1,422,0.0,0.0,False,False,0,0,,,
+GW170814,independent_validation,BBH,17.2,H1,422,0.002369668246445498,0.002369668246445498,False,False,0,0,,,
+GW170814,independent_validation,BBH,17.2,L1,422,0.002369668246445498,0.004739336492890996,True,True,1,4,-0.03125,-0.03125,medium_125ms
+GW170814,independent_validation,BBH,17.2,V1,422,0.0,0.0,False,False,0,0,,,
+GW170817,independent_validation,BNS,33.0,H1,390,0.0,0.0,False,False,0,0,,,
+GW170817,independent_validation,BNS,33.0,L1,390,0.005128205128205128,0.005128205128205128,False,True,2,5,,-1.0250000953674316,long_500ms
+GW170817,independent_validation,BNS,33.0,V1,390,0.023076923076923078,0.03333333333333333,False,False,0,0,,,
