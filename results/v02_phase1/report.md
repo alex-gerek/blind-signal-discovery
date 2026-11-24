@@ -31,7 +31,10 @@
 
 ## 3. Previously Examined LIGO Development Data Comparison (No Holdout Touched)
 
-- **Pooled Independent Background FAR (`N=6412` 4-s windows):** `v0.1` = **`0.56%`** (`36/6412`, `5.33` cands/hr) vs. `v0.2 Phase 1` = **`0.69%`** (`44/6412`, `9.26` cands/hr).
+- **Pooled Independent Background FAR (`N = 6,412` 4-s windows = `7.1244 hours` total livetime):**
+  - `v0.1`: **`0.56%`** per-window FAP (`36 / 6,412` triggered windows = `5.05` triggered windows/hr), `38` raw candidates (`1.06` cands/triggered window) = **`5.33` raw candidates/hr**.
+  - `v0.2 Phase 1`: **`0.69%`** per-window FAP (`44 / 6,412` triggered windows = `6.18` triggered windows/hr), `66` raw multi-scale candidates (`1.50` raw cands/triggered window) = **`9.26` raw multi-scale candidates/hr**.
+  - **Metric Audit Note:** The `9.26` vs. `6.18`/hr difference is expected and exact: `MultiResolutionDetector` preserves **all raw un-deduplicated candidates across all three STFT scales** (`31.25 ms`, `125 ms`, `500 ms`), so a single background transient that exceeds threshold on 2 or 3 scales simultaneously counts as `1` triggered window (`0.69%` per-window FAP, `6.18` triggered windows/hr) but `2–3` raw multi-scale candidates (`9.26` raw candidates/hr).
 
 | Event | Det | Net SNR | v0.1 Bg FAR | v0.2 Bg FAR | v0.1 Rec | v0.2 Rec | v0.2 Winning Scale | v0.2 Timing Err (s) | v0.2 Other 32s Cands |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
