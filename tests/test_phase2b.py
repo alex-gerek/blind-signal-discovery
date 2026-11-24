@@ -13,8 +13,10 @@ from bsd.adaptive_regime_v2b import (
     AdaptiveRegimeV2bConfig,
     FrozenReferenceBroadbandChannel,
     calibrate_joint_stft_and_broadband,
+    calibrate_separate_search_modes,
     estimate_calibration_uncertainty,
     fit_glitch_reference,
+    is_glitch_free_reference_block,
 )
 from bsd.cross_coherence import (
     COH_ARTIFACT,
@@ -183,3 +185,80 @@ def test_cross_coherence_five_regimes() -> None:
     )
     assert r_phys.classification == COH_PHYSICAL_EVIDENCE
     assert abs(abs(r_phys.peak_lag_ms) - (5.0 / 1024.0) * 1000.0) <= 1.5
+
+
+def test_separate_search_modes_preserve_transient_budget_and_control_union() -> None:
+    """Transient Search keeps full 1% FAP while Union applies explicit Sidak FWER correction."""
+    rng = np.random.default_rng(606)
+    det = MultiResolutionDetector()
+    bb = FrozenReferenceBroadbandChannel()
+    ref_obs = _white_obs(rng, 120, sigma=1.0, prefix="sep")
+    scal = calibrate_separate_search_modes(
+        det, bb, ref_obs, target_fap_transient=0.01, target_fap_persistent=0.01, target_fwer_union=0.01, calibration_seed=606
+    )
+    assert scal.transient_stft_cal.target_fap == pytest.approx(0.01)
+    assert scal.persistent_bb_cal.alpha_channel == pytest.approx(0.01)
+    assert scal.alpha_union_sidak < 0.01
+    # Union threshold must be at least as strict as dedicated Transient / Persistent thresholds
+    assert scal.union_stft_cal.global_threshold >= scal.transient_stft_cal.global_threshold
+    assert scal.union_bb_cal.threshold >= scal.persistent_bb_cal.threshold
+
+
+def test_glitch_ref_synchronizes_on_clean_transition_and_blocks_contamination() -> None:
+    """glitch_ref updates on clean pink->shifted_ar2 transition and refuses impulsive contamination."""
+    rng = np.random.default_rng(707)
+    det = MultiResolutionDetector()
+    bb = FrozenReferenceBroadbandChannel()
+    ref_obs = [Observation(f"r_{i}", generate_noise("pink_colored", 4096, 1024.0, rng, sigma=1.0)[0], 1024.0, 4.0) for i in range(90)]
+    scal = calibrate_separate_search_modes(det, bb, ref_obs, calibration_seed=707)
+    mgr = AdaptiveRegimeManagerV2b(AdaptiveRegimeV2bConfig(mode="causal_trailing", policy="transient"))
+    cref = mgr.fit_continuum_reference(ref_obs)
+    gref = fit_glitch_reference(ref_obs)
+
+    # 1. Contamination guard: impulsive glitch storm block must NOT pass clean check
+    imp_block = [Observation(f"im_{i}", generate_noise("impulsive", 4096, 1024.0, rng, sigma=1.0)[0], 1024.0, 4.0) for i in range(60)]
+    assert is_glitch_free_reference_block(imp_block, gref) is False
+
+    # 2. Clean transition: 30 pink + 110 shifted_ar2 (1.5x) -> recovers R1 AND refreshes glitch_ref
+    seq = [
+        Observation(f"a_{i}", generate_noise("pink_colored", 4096, 1024.0, rng, sigma=1.0)[0], 1024.0, 4.0) for i in range(30)
+    ] + [
+        Observation(f"b_{i}", generate_noise("shifted_ar2", 4096, 1024.0, rng, sigma=1.5)[0], 1024.0, 4.0) for i in range(110)
+    ]
+    out = mgr.process_sequence(seq, det, bb, scal, cref, gref)
+    assert out[-1].regime_id >= 1
+    assert out[-1].diagnostics["glitch_ref_refresh_count"] >= 1
+    # Post-recovery shifted_ar2 windows must be GLITCH_QUIET (not falsely flagged as glitch storm!)
+    post_clean_frac = float(np.mean([o.is_clean_calibrated for o in out[105:]]))
+    assert post_clean_frac >= 0.85
+
+
+def test_strict_causality_and_candidate_preservation_with_separate_modes() -> None:
+    """causal_trailing stays invariant to future windows and preserves transition candidates."""
+    rng = np.random.default_rng(808)
+    det = MultiResolutionDetector()
+    bb = FrozenReferenceBroadbandChannel()
+    ref_obs = _white_obs(rng, 90, sigma=1.0, prefix="cr")
+    scal = calibrate_separate_search_modes(det, bb, ref_obs, calibration_seed=808)
+    mgr = AdaptiveRegimeManagerV2b(AdaptiveRegimeV2bConfig(mode="causal_trailing", policy="transient"))
+    cref = mgr.fit_continuum_reference(ref_obs)
+    gref = fit_glitch_reference(ref_obs)
+
+    seq_a = _white_obs(rng, 25, sigma=1.0, prefix="ca") + _white_obs(rng, 35, sigma=2.5, prefix="cb")
+    t = np.arange(4096, dtype=np.float64) / 1024.0
+    pulse = _scale_to_energy_snr(np.exp(-0.5 * ((t - 2.0) / 0.005) ** 2) * np.cos(2.0 * np.pi * 200.0 * (t - 2.0)), 2.5, 25.0)
+    seq_a[32] = Observation(seq_a[32].sample_id, seq_a[32].signal + pulse, 1024.0, 4.0)
+
+    seq_b = list(seq_a)
+    for j in range(40, 60):
+        seq_b[j] = Observation(seq_b[j].sample_id, seq_b[j].signal * 6.0, 1024.0, 4.0)
+
+    out_a = mgr.process_sequence(seq_a, det, bb, scal, cref, gref)
+    out_b = mgr.process_sequence(seq_b, det, bb, scal, cref, gref)
+    for k in range(40):
+        assert out_a[k].credibility_status == out_b[k].credibility_status
+        assert out_a[k].glitch_storm_status == out_b[k].glitch_storm_status
+        assert out_a[k].regime_id == out_b[k].regime_id
+    # Raw candidate during transition at idx=32 must be preserved in Stream A
+    assert out_a[32].stft_nominated_raw is True
+    assert len(out_a[32].raw_stft_candidates) >= 1

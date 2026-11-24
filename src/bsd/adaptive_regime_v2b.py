@@ -260,6 +260,91 @@ def calibrate_joint_stft_and_broadband(
 
 
 @dataclass(frozen=True)
+class SeparateSearchModesCalibration:
+    """Separately calibrated Transient Search, Persistent Search, and Sidak Union budgets.
+
+    - `transient_stft_cal`: full `target_fap_transient` (default 1%) on STFT bank
+      without penalizing transient sensitivity for the existence of a persistent channel.
+    - `persistent_bb_cal`: full `target_fap_persistent` (default 1%) on frozen-reference
+      broadband excess channel.
+    - `union_stft_cal` & `union_bb_cal`: Sidak-corrected (`1 - sqrt(1 - target_fwer_union)`)
+      thresholds used strictly when combining both modes into a single unified discovery claim.
+    """
+
+    target_fap_transient: float
+    target_fap_persistent: float
+    target_fwer_union: float
+    alpha_union_sidak: float
+    transient_stft_cal: MultiResolutionCalibration
+    transient_stft_uncertainty: CalibrationUncertaintySummary
+    persistent_bb_cal: BroadbandChannelCalibration
+    union_stft_cal: MultiResolutionCalibration
+    union_bb_cal: BroadbandChannelCalibration
+    empirical_union_cal_far: float
+
+
+def calibrate_separate_search_modes(
+    detector: MultiResolutionDetector,
+    broadband_channel: FrozenReferenceBroadbandChannel,
+    calibration_observations: list[Observation],
+    target_fap_transient: float = 0.01,
+    target_fap_persistent: float = 0.01,
+    target_fwer_union: float = 0.01,
+    norm_fraction: float = 0.30,
+    calibration_seed: int = 0,
+) -> SeparateSearchModesCalibration:
+    """Calibrate Transient Search, Persistent Search, and Sidak Combined Union budgets."""
+    n_total = len(calibration_observations)
+    if n_total < 60:
+        raise ValueError(f"Need >= 60 calibration observations, got {n_total}.")
+    alpha_union = float(1.0 - np.sqrt(1.0 - target_fwer_union))
+
+    n_norm = max(20, int(round(n_total * norm_fraction)))
+    norm_obs = calibration_observations[:n_norm]
+    thresh_obs = calibration_observations[n_norm:]
+
+    # 1. Dedicated Transient Search STFT calibration (full target_fap_transient)
+    tr_stft_cal = detector.calibrate(
+        calibration_observations,
+        target_fap=target_fap_transient,
+        norm_fraction=norm_fraction,
+        calibration_seed=calibration_seed,
+    )
+    stft_chrono = np.array([detector.analyze(o, tr_stft_cal).max_global_score for o in thresh_obs], dtype=np.float64)
+    tr_unc = estimate_calibration_uncertainty(stft_chrono, target_fap=target_fap_transient)
+
+    # 2. Dedicated Persistent Search broadband calibration (full target_fap_persistent)
+    pers_bb_cal = broadband_channel.calibrate_with_split(norm_obs, thresh_obs, alpha_channel=target_fap_persistent)
+
+    # 3. Explicit Sidak-corrected Union calibration (used ONLY for combined discovery claims)
+    union_stft_cal = detector.calibrate(
+        calibration_observations,
+        target_fap=alpha_union,
+        norm_fraction=norm_fraction,
+        calibration_seed=calibration_seed,
+    )
+    union_bb_cal = broadband_channel.calibrate_with_split(norm_obs, thresh_obs, alpha_channel=alpha_union)
+    bb_chrono = np.array(
+        [broadband_channel.score(o, union_bb_cal.band_medians, union_bb_cal.band_mad_scales) for o in thresh_obs],
+        dtype=np.float64,
+    )
+    union_fp = float(np.mean((stft_chrono > union_stft_cal.global_threshold) | (bb_chrono > union_bb_cal.threshold)))
+
+    return SeparateSearchModesCalibration(
+        target_fap_transient=target_fap_transient,
+        target_fap_persistent=target_fap_persistent,
+        target_fwer_union=target_fwer_union,
+        alpha_union_sidak=alpha_union,
+        transient_stft_cal=tr_stft_cal,
+        transient_stft_uncertainty=tr_unc,
+        persistent_bb_cal=pers_bb_cal,
+        union_stft_cal=union_stft_cal,
+        union_bb_cal=union_bb_cal,
+        empirical_union_cal_far=union_fp,
+    )
+
+
+@dataclass(frozen=True)
 class GlitchReferenceState:
     """Reference baseline for short-timescale broadband impulsive glitch-storm indicator."""
 
@@ -267,6 +352,24 @@ class GlitchReferenceState:
     crest_mad: float
     single_window_z_thresh: float = 4.5
     elevated_window_z_thresh: float = 2.8
+
+
+def is_glitch_free_reference_block(
+    observations: list[Observation],
+    initial_glitch_ref: GlitchReferenceState,
+    max_outlier_fraction: float = 0.05,
+    max_mad_inflation_ratio: float = 2.5,
+) -> bool:
+    """Verify a candidate new-regime block is free of impulsive glitch-storm contamination."""
+    if len(observations) < 20:
+        return False
+    vals = np.array([extract_broadband_impulsive_crest(o) for o in observations], dtype=np.float64)
+    med = float(np.median(vals))
+    mad = float(1.4826 * np.median(np.abs(vals - med)))
+    scale = max(mad, initial_glitch_ref.crest_mad, 1e-6)
+    outlier_frac = float(np.mean((vals - med) / scale >= 4.0))
+    mad_ratio = mad / max(initial_glitch_ref.crest_mad, 1e-6)
+    return bool(outlier_frac <= max_outlier_fraction and mad_ratio <= max_mad_inflation_ratio)
 
 
 def extract_broadband_impulsive_crest(observation: Observation, nperseg: int = 32) -> float:
@@ -441,7 +544,7 @@ class AdaptiveRegimeManagerV2b:
         observations: list[Observation],
         detector: MultiResolutionDetector,
         broadband_channel: FrozenReferenceBroadbandChannel,
-        joint_calibration: JointDetectorCalibration,
+        joint_calibration: JointDetectorCalibration | SeparateSearchModesCalibration,
         initial_continuum_ref: ReferenceBackgroundState,
         glitch_ref: GlitchReferenceState,
         veto_config: VetoConfig | None = None,
@@ -459,20 +562,33 @@ class AdaptiveRegimeManagerV2b:
             [extract_continuum_features(o, cfg.freq_bands_hz, cfg.stft_nperseg) for o in observations]
         )
         n_features = feats_mat.shape[1]
-        glitch_z_arr = np.array(
-            [
-                (extract_broadband_impulsive_crest(o) - glitch_ref.crest_median) / glitch_ref.crest_mad
-                for o in observations
-            ],
-            dtype=np.float64,
-        )
+        # Raw per-window crest feature (purely local to window i; normalized causally by active_glitch_ref)
+        raw_crest_arr = np.array([extract_broadband_impulsive_crest(o) for o in observations], dtype=np.float64)
 
         # Frozen-reference broadband channel NEVER updates its reference R_0!
-        bb_cal = joint_calibration.broadband_calibration
+        is_separate = isinstance(joint_calibration, SeparateSearchModesCalibration)
+        if is_separate:
+            bb_cal = joint_calibration.persistent_bb_cal
+            active_stft_cal = joint_calibration.transient_stft_cal
+            active_unc = joint_calibration.transient_stft_uncertainty
+            stft_recal_fap = joint_calibration.target_fap_transient
+            union_stft_thresh = joint_calibration.union_stft_cal.global_threshold
+            union_bb_thresh = joint_calibration.union_bb_cal.threshold
+            union_sidak_fap = joint_calibration.alpha_union_sidak
+        else:
+            bb_cal = joint_calibration.broadband_calibration
+            active_stft_cal = joint_calibration.stft_calibration
+            active_unc = joint_calibration.stft_uncertainty
+            stft_recal_fap = joint_calibration.alpha_per_family_sidak
+            union_stft_thresh = active_stft_cal.global_threshold
+            union_bb_thresh = bb_cal.threshold
+            union_sidak_fap = joint_calibration.alpha_per_family_sidak
+
         active_ref = initial_continuum_ref
-        active_stft_cal = joint_calibration.stft_calibration
-        active_unc = joint_calibration.stft_uncertainty
+        active_glitch_ref = glitch_ref
         active_is_mature = True
+        glitch_ref_refresh_count = 0
+        glitch_ref_blocked_count = 0
 
         regime_id = 0
         state = CRED_CALIBRATED
@@ -499,19 +615,26 @@ class AdaptiveRegimeManagerV2b:
             bb_nom = bool(bb_score > bb_cal.threshold)
             stft_raw_nom = len(raw_cands) > 0
             stft_post_nom = len(surv_cands) > 0
-            joint_nom = bool(stft_post_nom or bb_nom)
+            # Explicit Sidak-controlled union nomination when combining both search modes
+            if is_separate:
+                stft_union_nom = bool(stft_post_nom and det_res.max_global_score > union_stft_thresh)
+                bb_union_nom = bool(bb_score > union_bb_thresh)
+                joint_nom = bool(stft_union_nom or bb_union_nom)
+            else:
+                joint_nom = bool(stft_post_nom or bb_nom)
 
-            # --- Stream B Channel 2: Orthogonal Impulsive Glitch-Storm Monitor ---
+            # --- Stream B Channel 2: Orthogonal Impulsive Glitch-Storm Monitor (causal against active_glitch_ref) ---
             if is_sym:
-                g_lo = max(0, i - half_w)
+                g_lo = max(regime_start_idx, i - half_w)
                 g_hi = min(n_obs, i + half_w + 1)
             else:
-                g_lo = max(0, i - w + 1)
+                g_lo = max(regime_start_idx, i - w + 1)
                 g_hi = i + 1
-            gz_i = float(glitch_z_arr[i])
-            g_elev_rate = float(np.mean(glitch_z_arr[g_lo:g_hi] >= glitch_ref.elevated_window_z_thresh))
+            gz_block = (raw_crest_arr[g_lo:g_hi] - active_glitch_ref.crest_median) / active_glitch_ref.crest_mad
+            gz_i = float((raw_crest_arr[i] - active_glitch_ref.crest_median) / active_glitch_ref.crest_mad)
+            g_elev_rate = float(np.mean(gz_block >= active_glitch_ref.elevated_window_z_thresh)) if gz_block.size else 0.0
             glitch_storm_active = bool(
-                gz_i >= glitch_ref.single_window_z_thresh
+                gz_i >= active_glitch_ref.single_window_z_thresh
                 or (g_hi - g_lo >= 6 and g_elev_rate >= cfg.glitch_rate_threshold)
             )
             glitch_status = GLITCH_ELEVATED if glitch_storm_active else GLITCH_QUIET
@@ -574,18 +697,30 @@ class AdaptiveRegimeManagerV2b:
                             active_ref = self.fit_continuum_reference(m_obs)
                             active_stft_cal = detector.calibrate(
                                 m_obs,
-                                target_fap=joint_calibration.alpha_per_family_sidak,
+                                target_fap=stft_recal_fap,
                                 norm_fraction=0.25,
                                 calibration_seed=regime_id * 10 + 2,
                             )
+                            if is_separate:
+                                union_stft_thresh = detector.calibrate(
+                                    m_obs,
+                                    target_fap=union_sidak_fap,
+                                    norm_fraction=0.25,
+                                    calibration_seed=regime_id * 10 + 2,
+                                ).global_threshold
+                            else:
+                                union_stft_thresh = active_stft_cal.global_threshold
                             n_norm_m = max(20, int(round(len(m_obs) * 0.25)))
                             m_chrono = np.array(
                                 [detector.analyze(o, active_stft_cal).max_global_score for o in m_obs[n_norm_m:]],
                                 dtype=np.float64,
                             )
-                            active_unc = estimate_calibration_uncertainty(
-                                m_chrono, target_fap=joint_calibration.alpha_per_family_sidak
-                            )
+                            active_unc = estimate_calibration_uncertainty(m_chrono, target_fap=stft_recal_fap)
+                            if is_glitch_free_reference_block(m_obs, glitch_ref):
+                                active_glitch_ref = fit_glitch_reference(m_obs)
+                                glitch_ref_refresh_count += 1
+                            else:
+                                glitch_ref_blocked_count += 1
                             active_is_mature = True
 
                     cred_out = CRED_CALIBRATED
@@ -629,18 +764,31 @@ class AdaptiveRegimeManagerV2b:
                         active_ref = self.fit_continuum_reference(p_obs)
                         active_stft_cal = detector.calibrate(
                             p_obs,
-                            target_fap=joint_calibration.alpha_per_family_sidak,
+                            target_fap=stft_recal_fap,
                             norm_fraction=0.25,
                             calibration_seed=regime_id * 10 + 1,
                         )
+                        if is_separate:
+                            union_stft_thresh = detector.calibrate(
+                                p_obs,
+                                target_fap=union_sidak_fap,
+                                norm_fraction=0.25,
+                                calibration_seed=regime_id * 10 + 1,
+                            ).global_threshold
+                        else:
+                            union_stft_thresh = active_stft_cal.global_threshold
                         n_norm_p = max(15, int(round(len(p_obs) * 0.25)))
                         p_chrono = np.array(
                             [detector.analyze(o, active_stft_cal).max_global_score for o in p_obs[n_norm_p:]],
                             dtype=np.float64,
                         )
-                        active_unc = estimate_calibration_uncertainty(
-                            p_chrono, target_fap=joint_calibration.alpha_per_family_sidak
-                        )
+                        active_unc = estimate_calibration_uncertainty(p_chrono, target_fap=stft_recal_fap)
+                        # Correction 2: synchronize glitch_ref ONLY if p_obs is uncontaminated
+                        if is_glitch_free_reference_block(p_obs, glitch_ref):
+                            active_glitch_ref = fit_glitch_reference(p_obs)
+                            glitch_ref_refresh_count += 1
+                        else:
+                            glitch_ref_blocked_count += 1
                         regime_id += 1
                         active_is_mature = False
                         regime_accum_indices = list(recal_indices)
@@ -689,7 +837,13 @@ class AdaptiveRegimeManagerV2b:
                     min_latency_windows=min_lat_wins,
                     glitch_crest_z=gz_i,
                     max_feature_z_drift=max_z_drift,
-                    diagnostics={"is_mature": active_is_mature, "glitch_elev_rate": g_elev_rate},
+                    diagnostics={
+                        "is_mature": active_is_mature,
+                        "glitch_elev_rate": g_elev_rate,
+                        "glitch_ref_refresh_count": glitch_ref_refresh_count,
+                        "glitch_ref_blocked_count": glitch_ref_blocked_count,
+                        "separate_modes": is_separate,
+                    },
                 )
             )
 
