@@ -8,6 +8,31 @@ A standalone, classical signal-processing and statistical research prototype for
 
 > Can a template-free anomaly detector discover previously unseen signal structures in noisy data while maintaining a controlled and independently measured experiment-level false-alarm rate?
 
+## Documentation and Results
+
+- **Full Experimental Research Report (`research_v01`):** [results/research_v01/report.md](results/research_v01/report.md)
+- **Scientific Review Package & Statistical Audit:** [docs/scientific_review_package.md](docs/scientific_review_package.md)
+- **Machine-Readable Outputs:** [results.json](results/research_v01/results.json) | [summary_by_family_snr.csv](results/research_v01/summary_by_family_snr.csv) | [per_sample_results.csv](results/research_v01/per_sample_results.csv)
+
+### Summary of Measured v0.1 Results (3 Independent Seeds: `101, 202, 303`)
+
+- **Held-out in-distribution noise-only FAR:** `0.80%` (`12 / 1500`; 95% exact Clopper-Pearson CI `[0.41%, 1.39%]`) against a calibrated `1.0%` experiment-level target FAP.
+- **Held-out known-signal detection (SNR 4–25):** `59.51%` recall (`914 / 1536`), `98.70%` precision, `99.45%` time-frequency box overlap on detected events.
+- **Withheld signal family (`sinusoidal_fm`, unseen during development):** `37.92%` pooled recall (`182 / 480`), rising to `90.7%` at SNR 20 and `94.4%` at SNR 25.
+- **Documented failure modes (automatically flagged as statistically non-credible):** `3.56%` FAR under unseen resonant AR(2) noise (`shifted_ar2`) and `84.00%` FAR under unmodeled impulsive interference.
+
+### Selected Figures (Simulated Synthetic Data)
+
+- [Time-Domain Signal Examples](results/research_v01/figures/fig01_time_domain_examples.png)
+- [Spectrograms and Excess-Power Maps](results/research_v01/figures/fig02_spectrograms_and_excess_maps.png)
+- [Candidate Overlays (Known and Withheld Families)](results/research_v01/figures/fig03_candidate_overlays.png)
+- [Detection Probability vs. Energy SNR](results/research_v01/figures/fig04_detection_vs_snr.png)
+- [Empirical False-Alarm Rates Across Noise Conditions](results/research_v01/figures/fig05_false_alarm_results.png)
+- [Held-Out Confusion Matrix](results/research_v01/figures/fig06_confusion_matrix.png)
+- [False-Positive Diagnostic Examples](results/research_v01/figures/fig07_false_positive_examples.png)
+- [Missed-Signal (False-Negative) Diagnostic Examples](results/research_v01/figures/fig08_missed_signal_examples.png)
+- [Calibration Null Distribution](results/research_v01/figures/fig09_calibration_null_distribution.png)
+
 ## Architecture
 
 The pipeline strictly separates synthetic data generation, blind anomaly detection, statistical calibration, and held-out evaluation:
@@ -26,6 +51,8 @@ blind-signal-discovery/
 ├── README.md
 ├── pyproject.toml
 ├── .gitignore
+├── docs/
+│   └── scientific_review_package.md
 ├── configs/
 │   ├── smoke.toml          # Fast smoke-test configuration
 │   └── research.toml       # Full 3-seed research configuration (>=500 noise + >=500 signal/seed)
@@ -67,7 +94,3 @@ python -m venv .venv
 ```
 
 All random number streams are derived deterministically via `numpy.random.SeedSequence([master_seed, split_stream_code])`, guaranteeing exact reproducibility and statistical independence across calibration, held-out test, and robustness splits.
-
-## Key Results
-
-See [results/research_v01/report.md](results/research_v01/report.md) for the complete measured experimental report, failure analysis, calibration limitations, and generated figures.
