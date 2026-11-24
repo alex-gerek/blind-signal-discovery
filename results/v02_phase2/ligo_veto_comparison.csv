@@ -1,0 +1,17 @@
+event,detector,net_snr,v1_pre_rec,v1_post_rec,v1_pre_other,v1_post_other,v2_pre_rec,v2_post_rec,v2_pre_other,v2_post_other
+GW150914,H1,25.2,True,True,0,0,True,True,0,0
+GW150914,L1,25.2,True,True,0,0,True,True,0,0
+GW151012,H1,10.0,False,False,0,0,False,False,0,0
+GW151012,L1,10.0,False,False,0,0,False,False,0,0
+GW151226,H1,13.1,False,False,0,0,False,False,0,0
+GW151226,L1,13.1,False,False,0,0,False,False,0,0
+GW170104,H1,13.0,False,False,0,0,False,False,0,0
+GW170104,L1,13.0,False,False,0,0,False,False,0,0
+GW170608,H1,15.4,True,False,4,0,True,False,1,0
+GW170608,L1,15.4,False,False,0,0,False,False,0,0
+GW170814,H1,17.2,False,False,0,0,False,False,0,0
+GW170814,L1,17.2,True,True,1,0,True,True,4,0
+GW170814,V1,17.2,False,False,0,0,False,False,0,0
+GW170817,H1,33.0,False,False,0,0,False,False,0,0
+GW170817,L1,33.0,False,False,2,1,True,False,5,3
+GW170817,V1,33.0,False,False,0,0,False,False,0,0
