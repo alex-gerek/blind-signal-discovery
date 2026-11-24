@@ -1,0 +1,2926 @@
+{
+  "metadata": {
+    "experiment": "ligo_experiment_003",
+    "detector_config": {
+      "nperseg": 128,
+      "noverlap": 96,
+      "window": "hann",
+      "freq_median_kernel": 11,
+      "time_median_kernel": 15,
+      "bin_seed_threshold": 4.0,
+      "min_cluster_bins": 2
+    },
+    "preprocessing_mode": "adapted_ligo_whitened",
+    "target_fap": 0.01,
+    "coincidence_window_s": 0.1,
+    "eval_timing_tolerance_s": 0.5,
+    "runtime_seconds": 149.72
+  },
+  "independent_validation_efficiency": {
+    "n_validation_events": 6,
+    "n_single_det_recovered": 3,
+    "single_det_efficiency": 0.5,
+    "single_det_cp_95ci": [
+      0.11811724875702523,
+      0.8818827512429748
+    ],
+    "single_det_wilson_95ci": [
+      0.18761630648265054,
+      0.8123836935173494
+    ],
+    "n_coincident_recovered": 0,
+    "coincident_efficiency": 0.0,
+    "coincident_cp_95ci": [
+      0.0,
+      0.45925812643990044
+    ],
+    "n_detector_events_total": 14,
+    "n_detector_events_recovered": 3,
+    "detector_event_efficiency": 0.21428571428571427,
+    "detector_event_cp_95ci": [
+      0.04657928788986731,
+      0.5079756770484718
+    ]
+  },
+  "pooled_background_summary": {
+    "n_total_val_segments": 6412,
+    "total_fp": 61,
+    "pooled_far": 0.009513412351840299,
+    "pooled_far_cp_95ci": [
+      0.007284600314744213,
+      0.012203813071841318
+    ],
+    "pooled_far_wilson_95ci": [
+      0.007413728937222329,
+      0.012200449441154441
+    ]
+  },
+  "events": [
+    {
+      "name": "GW150914",
+      "version": "v3",
+      "role": "reference_previously_examined",
+      "observing_run": "O1",
+      "source_class": "BBH",
+      "published_gps": 1126259462.4,
+      "network_matched_filter_snr": 25.2,
+      "mass_1_source": 35.6,
+      "mass_2_source": 30.6,
+      "chirp_mass_source": 28.6,
+      "api_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/",
+      "detectors_available": [
+        "H1",
+        "L1"
+      ],
+      "detectors": {
+        "H1": {
+          "event": "GW150914",
+          "detector": "H1",
+          "status": "OK",
+          "guard_s": 64.0,
+          "n_clean_bg_segments": 982,
+          "n_dq_excluded_bg_segments": 2,
+          "n_psd_segments": 60,
+          "n_cal_segments": 500,
+          "n_val_segments": 422,
+          "threshold": 77.10183449857188,
+          "min_resolvable_p": 0.001996007984031936,
+          "val_fp": 3,
+          "val_far": 0.0071090047393364926,
+          "val_far_cp_95ci": [
+            0.0014684539391562551,
+            0.020633986451231982
+          ],
+          "val_far_wilson_95ci": [
+            0.002420588908951391,
+            0.02069002800455584
+          ],
+          "val_statistically_credible": true,
+          "n_target_windows": 7,
+          "max_target_score": 818.003794545491,
+          "max_score_over_threshold": 10.609394703321133,
+          "target_windows": [
+            {
+              "event": "GW150914",
+              "detector": "H1",
+              "segment_id": "GW150914_H1_target_00",
+              "gps_start": 1126259448.0,
+              "gps_end": 1126259452.0,
+              "detected": false,
+              "max_anomaly_score": 39.06360698848923,
+              "threshold": 77.10183449857188,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW150914",
+              "detector": "H1",
+              "segment_id": "GW150914_H1_target_01",
+              "gps_start": 1126259452.0,
+              "gps_end": 1126259456.0,
+              "detected": false,
+              "max_anomaly_score": 37.24045358228895,
+              "threshold": 77.10183449857188,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW150914",
+              "detector": "H1",
+              "segment_id": "GW150914_H1_target_02",
+              "gps_start": 1126259456.0,
+              "gps_end": 1126259460.0,
+              "detected": false,
+              "max_anomaly_score": 69.48134874772137,
+              "threshold": 77.10183449857188,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW150914",
+              "detector": "H1",
+              "segment_id": "GW150914_H1_target_03",
+              "gps_start": 1126259460.0,
+              "gps_end": 1126259464.0,
+              "detected": true,
+              "max_anomaly_score": 818.003794545491,
+              "threshold": 77.10183449857188,
+              "n_candidates": 1
+            },
+            {
+              "event": "GW150914",
+              "detector": "H1",
+              "segment_id": "GW150914_H1_target_04",
+              "gps_start": 1126259464.0,
+              "gps_end": 1126259468.0,
+              "detected": false,
+              "max_anomaly_score": 32.47993862865485,
+              "threshold": 77.10183449857188,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW150914",
+              "detector": "H1",
+              "segment_id": "GW150914_H1_target_05",
+              "gps_start": 1126259468.0,
+              "gps_end": 1126259472.0,
+              "detected": false,
+              "max_anomaly_score": 28.26518598669059,
+              "threshold": 77.10183449857188,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW150914",
+              "detector": "H1",
+              "segment_id": "GW150914_H1_target_06",
+              "gps_start": 1126259472.0,
+              "gps_end": 1126259476.0,
+              "detected": false,
+              "max_anomaly_score": 32.949757927284914,
+              "threshold": 77.10183449857188,
+              "n_candidates": 0
+            }
+          ],
+          "target_candidates_gps": [
+            {
+              "detector": "H1",
+              "segment_id": "GW150914_H1_target_03",
+              "candidate_id": 3,
+              "gps_start": 1126259462.140625,
+              "gps_end": 1126259462.453125,
+              "gps_peak": 1126259462.375,
+              "duration_s": 0.3125,
+              "f_min_hz": 20.0,
+              "f_max_hz": 284.0,
+              "peak_freq_hz": 56.0,
+              "anomaly_score": 818.003794545491,
+              "peak_excess_power": 43.0366570278927,
+              "n_bins": 73,
+              "empirical_p_value": 0.001996007984031936,
+              "p_value_is_upper_bound": true,
+              "boundary_adjacent": false,
+              "event": "GW150914"
+            }
+          ]
+        },
+        "L1": {
+          "event": "GW150914",
+          "detector": "L1",
+          "status": "OK",
+          "guard_s": 64.0,
+          "n_clean_bg_segments": 982,
+          "n_dq_excluded_bg_segments": 2,
+          "n_psd_segments": 60,
+          "n_cal_segments": 500,
+          "n_val_segments": 422,
+          "threshold": 76.32655380842236,
+          "min_resolvable_p": 0.001996007984031936,
+          "val_fp": 5,
+          "val_far": 0.011848341232227487,
+          "val_far_cp_95ci": [
+            0.0038580103100447453,
+            0.027432182507676695
+          ],
+          "val_far_wilson_95ci": [
+            0.005071230933044946,
+            0.027432553125524718
+          ],
+          "val_statistically_credible": true,
+          "n_target_windows": 7,
+          "max_target_score": 136.61879130332863,
+          "max_score_over_threshold": 1.7899247966341858,
+          "target_windows": [
+            {
+              "event": "GW150914",
+              "detector": "L1",
+              "segment_id": "GW150914_L1_target_00",
+              "gps_start": 1126259448.0,
+              "gps_end": 1126259452.0,
+              "detected": false,
+              "max_anomaly_score": 54.65529456775111,
+              "threshold": 76.32655380842236,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW150914",
+              "detector": "L1",
+              "segment_id": "GW150914_L1_target_01",
+              "gps_start": 1126259452.0,
+              "gps_end": 1126259456.0,
+              "detected": false,
+              "max_anomaly_score": 40.8817342143538,
+              "threshold": 76.32655380842236,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW150914",
+              "detector": "L1",
+              "segment_id": "GW150914_L1_target_02",
+              "gps_start": 1126259456.0,
+              "gps_end": 1126259460.0,
+              "detected": false,
+              "max_anomaly_score": 33.32664667771289,
+              "threshold": 76.32655380842236,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW150914",
+              "detector": "L1",
+              "segment_id": "GW150914_L1_target_03",
+              "gps_start": 1126259460.0,
+              "gps_end": 1126259464.0,
+              "detected": true,
+              "max_anomaly_score": 136.61879130332863,
+              "threshold": 76.32655380842236,
+              "n_candidates": 2
+            },
+            {
+              "event": "GW150914",
+              "detector": "L1",
+              "segment_id": "GW150914_L1_target_04",
+              "gps_start": 1126259464.0,
+              "gps_end": 1126259468.0,
+              "detected": false,
+              "max_anomaly_score": 25.488379527312176,
+              "threshold": 76.32655380842236,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW150914",
+              "detector": "L1",
+              "segment_id": "GW150914_L1_target_05",
+              "gps_start": 1126259468.0,
+              "gps_end": 1126259472.0,
+              "detected": false,
+              "max_anomaly_score": 59.14913488296129,
+              "threshold": 76.32655380842236,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW150914",
+              "detector": "L1",
+              "segment_id": "GW150914_L1_target_06",
+              "gps_start": 1126259472.0,
+              "gps_end": 1126259476.0,
+              "detected": false,
+              "max_anomaly_score": 44.02089260288821,
+              "threshold": 76.32655380842236,
+              "n_candidates": 0
+            }
+          ],
+          "target_candidates_gps": [
+            {
+              "detector": "L1",
+              "segment_id": "GW150914_L1_target_03",
+              "candidate_id": 2,
+              "gps_start": 1126259462.296875,
+              "gps_end": 1126259462.453125,
+              "gps_peak": 1126259462.34375,
+              "duration_s": 0.15625,
+              "f_min_hz": 28.0,
+              "f_max_hz": 116.0,
+              "peak_freq_hz": 40.0,
+              "anomaly_score": 136.61879130332863,
+              "peak_excess_power": 12.711319472030585,
+              "n_bins": 19,
+              "empirical_p_value": 0.003992015968063872,
+              "p_value_is_upper_bound": false,
+              "boundary_adjacent": false,
+              "event": "GW150914"
+            },
+            {
+              "detector": "L1",
+              "segment_id": "GW150914_L1_target_03",
+              "candidate_id": 15,
+              "gps_start": 1126259462.328125,
+              "gps_end": 1126259462.453125,
+              "gps_peak": 1126259462.40625,
+              "duration_s": 0.125,
+              "f_min_hz": 124.0,
+              "f_max_hz": 188.0,
+              "peak_freq_hz": 176.0,
+              "anomaly_score": 99.48260300575676,
+              "peak_excess_power": 13.124566795411022,
+              "n_bins": 15,
+              "empirical_p_value": 0.003992015968063872,
+              "p_value_is_upper_bound": false,
+              "boundary_adjacent": false,
+              "event": "GW150914"
+            }
+          ]
+        }
+      },
+      "evaluation_by_detector": {
+        "H1": {
+          "recovered": true,
+          "n_target_candidates": 1,
+          "n_matched_candidates": 1,
+          "n_other_candidates_in_32s": 0,
+          "timing_error_s": -0.02500009536743164,
+          "best_matched_score": 818.003794545491,
+          "best_matched_p_value": 0.001996007984031936,
+          "best_matched_p_is_upper_bound": true,
+          "best_matched_candidate": {
+            "detector": "H1",
+            "segment_id": "GW150914_H1_target_03",
+            "candidate_id": 3,
+            "gps_start": 1126259462.140625,
+            "gps_end": 1126259462.453125,
+            "gps_peak": 1126259462.375,
+            "duration_s": 0.3125,
+            "f_min_hz": 20.0,
+            "f_max_hz": 284.0,
+            "peak_freq_hz": 56.0,
+            "anomaly_score": 818.003794545491,
+            "peak_excess_power": 43.0366570278927,
+            "n_bins": 73,
+            "empirical_p_value": 0.001996007984031936,
+            "p_value_is_upper_bound": true,
+            "boundary_adjacent": false,
+            "event": "GW150914"
+          }
+        },
+        "L1": {
+          "recovered": true,
+          "n_target_candidates": 2,
+          "n_matched_candidates": 2,
+          "n_other_candidates_in_32s": 0,
+          "timing_error_s": -0.05625009536743164,
+          "best_matched_score": 136.61879130332863,
+          "best_matched_p_value": 0.003992015968063872,
+          "best_matched_p_is_upper_bound": false,
+          "best_matched_candidate": {
+            "detector": "L1",
+            "segment_id": "GW150914_L1_target_03",
+            "candidate_id": 2,
+            "gps_start": 1126259462.296875,
+            "gps_end": 1126259462.453125,
+            "gps_peak": 1126259462.34375,
+            "duration_s": 0.15625,
+            "f_min_hz": 28.0,
+            "f_max_hz": 116.0,
+            "peak_freq_hz": 40.0,
+            "anomaly_score": 136.61879130332863,
+            "peak_excess_power": 12.711319472030585,
+            "n_bins": 19,
+            "empirical_p_value": 0.003992015968063872,
+            "p_value_is_upper_bound": false,
+            "boundary_adjacent": false,
+            "event": "GW150914"
+          }
+        }
+      },
+      "coincidences": {
+        "H1-L1": {
+          "n_target_coincidences": 2,
+          "n_event_matched_coincidences": 2,
+          "target_coincidences": [
+            {
+              "det_a": "H1",
+              "det_b": "L1",
+              "gps_peak_a": 1126259462.375,
+              "gps_peak_b": 1126259462.34375,
+              "dt_a_minus_b_s": 0.03125,
+              "interval_gap_s": 0.0,
+              "score_a": 818.003794545491,
+              "score_b": 136.61879130332863
+            },
+            {
+              "det_a": "H1",
+              "det_b": "L1",
+              "gps_peak_a": 1126259462.375,
+              "gps_peak_b": 1126259462.40625,
+              "dt_a_minus_b_s": -0.03125,
+              "interval_gap_s": 0.0,
+              "score_a": 818.003794545491,
+              "score_b": 99.48260300575676
+            }
+          ],
+          "time_shift_control": {
+            "n_shifts": 200,
+            "coincidence_window_s": 0.1,
+            "n_bg_cands_a": 3,
+            "n_bg_cands_b": 6,
+            "total_accidental_coincidences": 2,
+            "mean_coincidences_per_shift": 0.01,
+            "fraction_shifts_with_ge1": 0.005
+          }
+        }
+      },
+      "any_single_detector_recovered": true,
+      "coincident_recovered": true
+    },
+    {
+      "name": "GW151012",
+      "version": "v3",
+      "role": "independent_validation",
+      "observing_run": "O1",
+      "source_class": "BBH",
+      "published_gps": 1128678900.4,
+      "network_matched_filter_snr": 10.0,
+      "mass_1_source": 23.2,
+      "mass_2_source": 13.6,
+      "chirp_mass_source": 15.2,
+      "api_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW151012/v3/",
+      "detectors_available": [
+        "H1",
+        "L1"
+      ],
+      "detectors": {
+        "H1": {
+          "event": "GW151012",
+          "detector": "H1",
+          "status": "OK",
+          "guard_s": 64.0,
+          "n_clean_bg_segments": 982,
+          "n_dq_excluded_bg_segments": 2,
+          "n_psd_segments": 60,
+          "n_cal_segments": 500,
+          "n_val_segments": 422,
+          "threshold": 451.32094104915,
+          "min_resolvable_p": 0.001996007984031936,
+          "val_fp": 1,
+          "val_far": 0.002369668246445498,
+          "val_far_cp_95ci": [
+            5.999300599761368e-05,
+            0.013131652386647973
+          ],
+          "val_far_wilson_95ci": [
+            0.0004184271769615642,
+            0.013299022591483235
+          ],
+          "val_statistically_credible": true,
+          "n_target_windows": 7,
+          "max_target_score": 140.86759473107935,
+          "max_score_over_threshold": 0.31212288621843165,
+          "target_windows": [
+            {
+              "event": "GW151012",
+              "detector": "H1",
+              "segment_id": "GW151012_H1_target_00",
+              "gps_start": 1128678886.0,
+              "gps_end": 1128678890.0,
+              "detected": false,
+              "max_anomaly_score": 140.86759473107935,
+              "threshold": 451.32094104915,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW151012",
+              "detector": "H1",
+              "segment_id": "GW151012_H1_target_01",
+              "gps_start": 1128678890.0,
+              "gps_end": 1128678894.0,
+              "detected": false,
+              "max_anomaly_score": 36.419599199913684,
+              "threshold": 451.32094104915,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW151012",
+              "detector": "H1",
+              "segment_id": "GW151012_H1_target_02",
+              "gps_start": 1128678894.0,
+              "gps_end": 1128678898.0,
+              "detected": false,
+              "max_anomaly_score": 34.832752483564434,
+              "threshold": 451.32094104915,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW151012",
+              "detector": "H1",
+              "segment_id": "GW151012_H1_target_03",
+              "gps_start": 1128678898.0,
+              "gps_end": 1128678902.0,
+              "detected": false,
+              "max_anomaly_score": 26.996138621978112,
+              "threshold": 451.32094104915,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW151012",
+              "detector": "H1",
+              "segment_id": "GW151012_H1_target_04",
+              "gps_start": 1128678902.0,
+              "gps_end": 1128678906.0,
+              "detected": false,
+              "max_anomaly_score": 21.34830901717548,
+              "threshold": 451.32094104915,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW151012",
+              "detector": "H1",
+              "segment_id": "GW151012_H1_target_05",
+              "gps_start": 1128678906.0,
+              "gps_end": 1128678910.0,
+              "detected": false,
+              "max_anomaly_score": 31.51581958354787,
+              "threshold": 451.32094104915,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW151012",
+              "detector": "H1",
+              "segment_id": "GW151012_H1_target_06",
+              "gps_start": 1128678910.0,
+              "gps_end": 1128678914.0,
+              "detected": false,
+              "max_anomaly_score": 38.096596161931785,
+              "threshold": 451.32094104915,
+              "n_candidates": 0
+            }
+          ],
+          "target_candidates_gps": []
+        },
+        "L1": {
+          "event": "GW151012",
+          "detector": "L1",
+          "status": "OK",
+          "guard_s": 64.0,
+          "n_clean_bg_segments": 982,
+          "n_dq_excluded_bg_segments": 2,
+          "n_psd_segments": 60,
+          "n_cal_segments": 500,
+          "n_val_segments": 422,
+          "threshold": 116.05688428754358,
+          "min_resolvable_p": 0.001996007984031936,
+          "val_fp": 2,
+          "val_far": 0.004739336492890996,
+          "val_far_cp_95ci": [
+            0.00057447185004705,
+            0.01701445986284578
+          ],
+          "val_far_wilson_95ci": [
+            0.001300660616436652,
+            0.01711337272453936
+          ],
+          "val_statistically_credible": true,
+          "n_target_windows": 7,
+          "max_target_score": 83.81705734640941,
+          "max_score_over_threshold": 0.7222066821882235,
+          "target_windows": [
+            {
+              "event": "GW151012",
+              "detector": "L1",
+              "segment_id": "GW151012_L1_target_00",
+              "gps_start": 1128678886.0,
+              "gps_end": 1128678890.0,
+              "detected": false,
+              "max_anomaly_score": 28.669845020854524,
+              "threshold": 116.05688428754358,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW151012",
+              "detector": "L1",
+              "segment_id": "GW151012_L1_target_01",
+              "gps_start": 1128678890.0,
+              "gps_end": 1128678894.0,
+              "detected": false,
+              "max_anomaly_score": 47.29273170418085,
+              "threshold": 116.05688428754358,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW151012",
+              "detector": "L1",
+              "segment_id": "GW151012_L1_target_02",
+              "gps_start": 1128678894.0,
+              "gps_end": 1128678898.0,
+              "detected": false,
+              "max_anomaly_score": 63.73969405701691,
+              "threshold": 116.05688428754358,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW151012",
+              "detector": "L1",
+              "segment_id": "GW151012_L1_target_03",
+              "gps_start": 1128678898.0,
+              "gps_end": 1128678902.0,
+              "detected": false,
+              "max_anomaly_score": 83.81705734640941,
+              "threshold": 116.05688428754358,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW151012",
+              "detector": "L1",
+              "segment_id": "GW151012_L1_target_04",
+              "gps_start": 1128678902.0,
+              "gps_end": 1128678906.0,
+              "detected": false,
+              "max_anomaly_score": 26.0378111712458,
+              "threshold": 116.05688428754358,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW151012",
+              "detector": "L1",
+              "segment_id": "GW151012_L1_target_05",
+              "gps_start": 1128678906.0,
+              "gps_end": 1128678910.0,
+              "detected": false,
+              "max_anomaly_score": 34.993348360755405,
+              "threshold": 116.05688428754358,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW151012",
+              "detector": "L1",
+              "segment_id": "GW151012_L1_target_06",
+              "gps_start": 1128678910.0,
+              "gps_end": 1128678914.0,
+              "detected": false,
+              "max_anomaly_score": 32.69878807424163,
+              "threshold": 116.05688428754358,
+              "n_candidates": 0
+            }
+          ],
+          "target_candidates_gps": []
+        }
+      },
+      "evaluation_by_detector": {
+        "H1": {
+          "recovered": false,
+          "n_target_candidates": 0,
+          "n_matched_candidates": 0,
+          "n_other_candidates_in_32s": 0,
+          "timing_error_s": null,
+          "best_matched_score": null,
+          "best_matched_p_value": null,
+          "best_matched_candidate": null
+        },
+        "L1": {
+          "recovered": false,
+          "n_target_candidates": 0,
+          "n_matched_candidates": 0,
+          "n_other_candidates_in_32s": 0,
+          "timing_error_s": null,
+          "best_matched_score": null,
+          "best_matched_p_value": null,
+          "best_matched_candidate": null
+        }
+      },
+      "coincidences": {
+        "H1-L1": {
+          "n_target_coincidences": 0,
+          "n_event_matched_coincidences": 0,
+          "target_coincidences": [],
+          "time_shift_control": {
+            "n_shifts": 200,
+            "coincidence_window_s": 0.1,
+            "n_bg_cands_a": 1,
+            "n_bg_cands_b": 2,
+            "total_accidental_coincidences": 1,
+            "mean_coincidences_per_shift": 0.005,
+            "fraction_shifts_with_ge1": 0.005
+          }
+        }
+      },
+      "any_single_detector_recovered": false,
+      "coincident_recovered": false
+    },
+    {
+      "name": "GW151226",
+      "version": "v2",
+      "role": "independent_validation",
+      "observing_run": "O1",
+      "source_class": "BBH",
+      "published_gps": 1135136350.6,
+      "network_matched_filter_snr": 13.1,
+      "mass_1_source": 13.7,
+      "mass_2_source": 7.7,
+      "chirp_mass_source": 8.9,
+      "api_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW151226/v2/",
+      "detectors_available": [
+        "H1",
+        "L1"
+      ],
+      "detectors": {
+        "H1": {
+          "event": "GW151226",
+          "detector": "H1",
+          "status": "OK",
+          "guard_s": 64.0,
+          "n_clean_bg_segments": 500,
+          "n_dq_excluded_bg_segments": 484,
+          "n_psd_segments": 50,
+          "n_cal_segments": 270,
+          "n_val_segments": 180,
+          "threshold": 76.3391671667669,
+          "min_resolvable_p": 0.0036900369003690036,
+          "val_fp": 3,
+          "val_far": 0.016666666666666666,
+          "val_far_cp_95ci": [
+            0.003450344196972935,
+            0.047932200496390846
+          ],
+          "val_far_wilson_95ci": [
+            0.005684086620487437,
+            0.04784822803707184
+          ],
+          "val_statistically_credible": true,
+          "n_target_windows": 7,
+          "max_target_score": 49.729047164698194,
+          "max_score_over_threshold": 0.6514224481394,
+          "target_windows": [
+            {
+              "event": "GW151226",
+              "detector": "H1",
+              "segment_id": "GW151226_H1_target_00",
+              "gps_start": 1135136336.0,
+              "gps_end": 1135136340.0,
+              "detected": false,
+              "max_anomaly_score": 22.597761869356376,
+              "threshold": 76.3391671667669,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW151226",
+              "detector": "H1",
+              "segment_id": "GW151226_H1_target_01",
+              "gps_start": 1135136340.0,
+              "gps_end": 1135136344.0,
+              "detected": false,
+              "max_anomaly_score": 37.440409621096734,
+              "threshold": 76.3391671667669,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW151226",
+              "detector": "H1",
+              "segment_id": "GW151226_H1_target_02",
+              "gps_start": 1135136344.0,
+              "gps_end": 1135136348.0,
+              "detected": false,
+              "max_anomaly_score": 34.281360791555876,
+              "threshold": 76.3391671667669,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW151226",
+              "detector": "H1",
+              "segment_id": "GW151226_H1_target_03",
+              "gps_start": 1135136348.0,
+              "gps_end": 1135136352.0,
+              "detected": false,
+              "max_anomaly_score": 36.91844562253482,
+              "threshold": 76.3391671667669,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW151226",
+              "detector": "H1",
+              "segment_id": "GW151226_H1_target_04",
+              "gps_start": 1135136352.0,
+              "gps_end": 1135136356.0,
+              "detected": false,
+              "max_anomaly_score": 22.107573682007683,
+              "threshold": 76.3391671667669,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW151226",
+              "detector": "H1",
+              "segment_id": "GW151226_H1_target_05",
+              "gps_start": 1135136356.0,
+              "gps_end": 1135136360.0,
+              "detected": false,
+              "max_anomaly_score": 24.7775189200283,
+              "threshold": 76.3391671667669,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW151226",
+              "detector": "H1",
+              "segment_id": "GW151226_H1_target_06",
+              "gps_start": 1135136360.0,
+              "gps_end": 1135136364.0,
+              "detected": false,
+              "max_anomaly_score": 49.729047164698194,
+              "threshold": 76.3391671667669,
+              "n_candidates": 0
+            }
+          ],
+          "target_candidates_gps": []
+        },
+        "L1": {
+          "event": "GW151226",
+          "detector": "L1",
+          "status": "OK",
+          "guard_s": 64.0,
+          "n_clean_bg_segments": 982,
+          "n_dq_excluded_bg_segments": 2,
+          "n_psd_segments": 60,
+          "n_cal_segments": 500,
+          "n_val_segments": 422,
+          "threshold": 90.71282243320161,
+          "min_resolvable_p": 0.001996007984031936,
+          "val_fp": 2,
+          "val_far": 0.004739336492890996,
+          "val_far_cp_95ci": [
+            0.00057447185004705,
+            0.01701445986284578
+          ],
+          "val_far_wilson_95ci": [
+            0.001300660616436652,
+            0.01711337272453936
+          ],
+          "val_statistically_credible": true,
+          "n_target_windows": 7,
+          "max_target_score": 40.00607799538048,
+          "max_score_over_threshold": 0.44101899734009314,
+          "target_windows": [
+            {
+              "event": "GW151226",
+              "detector": "L1",
+              "segment_id": "GW151226_L1_target_00",
+              "gps_start": 1135136336.0,
+              "gps_end": 1135136340.0,
+              "detected": false,
+              "max_anomaly_score": 38.35579977582713,
+              "threshold": 90.71282243320161,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW151226",
+              "detector": "L1",
+              "segment_id": "GW151226_L1_target_01",
+              "gps_start": 1135136340.0,
+              "gps_end": 1135136344.0,
+              "detected": false,
+              "max_anomaly_score": 36.756062144081966,
+              "threshold": 90.71282243320161,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW151226",
+              "detector": "L1",
+              "segment_id": "GW151226_L1_target_02",
+              "gps_start": 1135136344.0,
+              "gps_end": 1135136348.0,
+              "detected": false,
+              "max_anomaly_score": 24.85626180232758,
+              "threshold": 90.71282243320161,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW151226",
+              "detector": "L1",
+              "segment_id": "GW151226_L1_target_03",
+              "gps_start": 1135136348.0,
+              "gps_end": 1135136352.0,
+              "detected": false,
+              "max_anomaly_score": 27.21474482943396,
+              "threshold": 90.71282243320161,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW151226",
+              "detector": "L1",
+              "segment_id": "GW151226_L1_target_04",
+              "gps_start": 1135136352.0,
+              "gps_end": 1135136356.0,
+              "detected": false,
+              "max_anomaly_score": 40.00607799538048,
+              "threshold": 90.71282243320161,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW151226",
+              "detector": "L1",
+              "segment_id": "GW151226_L1_target_05",
+              "gps_start": 1135136356.0,
+              "gps_end": 1135136360.0,
+              "detected": false,
+              "max_anomaly_score": 25.291470141043607,
+              "threshold": 90.71282243320161,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW151226",
+              "detector": "L1",
+              "segment_id": "GW151226_L1_target_06",
+              "gps_start": 1135136360.0,
+              "gps_end": 1135136364.0,
+              "detected": false,
+              "max_anomaly_score": 39.663882225966816,
+              "threshold": 90.71282243320161,
+              "n_candidates": 0
+            }
+          ],
+          "target_candidates_gps": []
+        }
+      },
+      "evaluation_by_detector": {
+        "H1": {
+          "recovered": false,
+          "n_target_candidates": 0,
+          "n_matched_candidates": 0,
+          "n_other_candidates_in_32s": 0,
+          "timing_error_s": null,
+          "best_matched_score": null,
+          "best_matched_p_value": null,
+          "best_matched_candidate": null
+        },
+        "L1": {
+          "recovered": false,
+          "n_target_candidates": 0,
+          "n_matched_candidates": 0,
+          "n_other_candidates_in_32s": 0,
+          "timing_error_s": null,
+          "best_matched_score": null,
+          "best_matched_p_value": null,
+          "best_matched_candidate": null
+        }
+      },
+      "coincidences": {
+        "H1-L1": {
+          "n_target_coincidences": 0,
+          "n_event_matched_coincidences": 0,
+          "target_coincidences": [],
+          "time_shift_control": {
+            "n_shifts": 200,
+            "coincidence_window_s": 0.1,
+            "n_bg_cands_a": 3,
+            "n_bg_cands_b": 2,
+            "total_accidental_coincidences": 0,
+            "mean_coincidences_per_shift": 0.0,
+            "fraction_shifts_with_ge1": 0.0
+          }
+        }
+      },
+      "any_single_detector_recovered": false,
+      "coincident_recovered": false
+    },
+    {
+      "name": "GW170104",
+      "version": "v2",
+      "role": "independent_validation",
+      "observing_run": "O2",
+      "source_class": "BBH",
+      "published_gps": 1167559936.6,
+      "network_matched_filter_snr": 13.0,
+      "mass_1_source": 30.8,
+      "mass_2_source": 20.0,
+      "chirp_mass_source": 21.4,
+      "api_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170104/v2/",
+      "detectors_available": [
+        "H1",
+        "L1"
+      ],
+      "detectors": {
+        "H1": {
+          "event": "GW170104",
+          "detector": "H1",
+          "status": "OK",
+          "guard_s": 64.0,
+          "n_clean_bg_segments": 982,
+          "n_dq_excluded_bg_segments": 2,
+          "n_psd_segments": 60,
+          "n_cal_segments": 500,
+          "n_val_segments": 422,
+          "threshold": 86.31949402857798,
+          "min_resolvable_p": 0.001996007984031936,
+          "val_fp": 2,
+          "val_far": 0.004739336492890996,
+          "val_far_cp_95ci": [
+            0.00057447185004705,
+            0.01701445986284578
+          ],
+          "val_far_wilson_95ci": [
+            0.001300660616436652,
+            0.01711337272453936
+          ],
+          "val_statistically_credible": true,
+          "n_target_windows": 7,
+          "max_target_score": 47.24985570565857,
+          "max_score_over_threshold": 0.5473833719416319,
+          "target_windows": [
+            {
+              "event": "GW170104",
+              "detector": "H1",
+              "segment_id": "GW170104_H1_target_00",
+              "gps_start": 1167559922.0,
+              "gps_end": 1167559926.0,
+              "detected": false,
+              "max_anomaly_score": 24.66262298613803,
+              "threshold": 86.31949402857798,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170104",
+              "detector": "H1",
+              "segment_id": "GW170104_H1_target_01",
+              "gps_start": 1167559926.0,
+              "gps_end": 1167559930.0,
+              "detected": false,
+              "max_anomaly_score": 28.2243017663692,
+              "threshold": 86.31949402857798,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170104",
+              "detector": "H1",
+              "segment_id": "GW170104_H1_target_02",
+              "gps_start": 1167559930.0,
+              "gps_end": 1167559934.0,
+              "detected": false,
+              "max_anomaly_score": 44.267184135271165,
+              "threshold": 86.31949402857798,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170104",
+              "detector": "H1",
+              "segment_id": "GW170104_H1_target_03",
+              "gps_start": 1167559934.0,
+              "gps_end": 1167559938.0,
+              "detected": false,
+              "max_anomaly_score": 43.57816480245063,
+              "threshold": 86.31949402857798,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170104",
+              "detector": "H1",
+              "segment_id": "GW170104_H1_target_04",
+              "gps_start": 1167559938.0,
+              "gps_end": 1167559942.0,
+              "detected": false,
+              "max_anomaly_score": 47.24985570565857,
+              "threshold": 86.31949402857798,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170104",
+              "detector": "H1",
+              "segment_id": "GW170104_H1_target_05",
+              "gps_start": 1167559942.0,
+              "gps_end": 1167559946.0,
+              "detected": false,
+              "max_anomaly_score": 27.035961494975822,
+              "threshold": 86.31949402857798,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170104",
+              "detector": "H1",
+              "segment_id": "GW170104_H1_target_06",
+              "gps_start": 1167559946.0,
+              "gps_end": 1167559950.0,
+              "detected": false,
+              "max_anomaly_score": 37.294219478206145,
+              "threshold": 86.31949402857798,
+              "n_candidates": 0
+            }
+          ],
+          "target_candidates_gps": []
+        },
+        "L1": {
+          "event": "GW170104",
+          "detector": "L1",
+          "status": "OK",
+          "guard_s": 64.0,
+          "n_clean_bg_segments": 982,
+          "n_dq_excluded_bg_segments": 2,
+          "n_psd_segments": 60,
+          "n_cal_segments": 500,
+          "n_val_segments": 422,
+          "threshold": 71.52103599772397,
+          "min_resolvable_p": 0.001996007984031936,
+          "val_fp": 17,
+          "val_far": 0.04028436018957346,
+          "val_far_cp_95ci": [
+            0.023639300853212423,
+            0.06371712398345623
+          ],
+          "val_far_wilson_95ci": [
+            0.025301354816410125,
+            0.06356143211253412
+          ],
+          "val_statistically_credible": false,
+          "n_target_windows": 7,
+          "max_target_score": 44.84515549774737,
+          "max_score_over_threshold": 0.6270204964477093,
+          "target_windows": [
+            {
+              "event": "GW170104",
+              "detector": "L1",
+              "segment_id": "GW170104_L1_target_00",
+              "gps_start": 1167559922.0,
+              "gps_end": 1167559926.0,
+              "detected": false,
+              "max_anomaly_score": 30.56982664510929,
+              "threshold": 71.52103599772397,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170104",
+              "detector": "L1",
+              "segment_id": "GW170104_L1_target_01",
+              "gps_start": 1167559926.0,
+              "gps_end": 1167559930.0,
+              "detected": false,
+              "max_anomaly_score": 32.2372093501571,
+              "threshold": 71.52103599772397,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170104",
+              "detector": "L1",
+              "segment_id": "GW170104_L1_target_02",
+              "gps_start": 1167559930.0,
+              "gps_end": 1167559934.0,
+              "detected": false,
+              "max_anomaly_score": 40.39229245503413,
+              "threshold": 71.52103599772397,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170104",
+              "detector": "L1",
+              "segment_id": "GW170104_L1_target_03",
+              "gps_start": 1167559934.0,
+              "gps_end": 1167559938.0,
+              "detected": false,
+              "max_anomaly_score": 44.84515549774737,
+              "threshold": 71.52103599772397,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170104",
+              "detector": "L1",
+              "segment_id": "GW170104_L1_target_04",
+              "gps_start": 1167559938.0,
+              "gps_end": 1167559942.0,
+              "detected": false,
+              "max_anomaly_score": 29.736469441460066,
+              "threshold": 71.52103599772397,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170104",
+              "detector": "L1",
+              "segment_id": "GW170104_L1_target_05",
+              "gps_start": 1167559942.0,
+              "gps_end": 1167559946.0,
+              "detected": false,
+              "max_anomaly_score": 24.508731014613403,
+              "threshold": 71.52103599772397,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170104",
+              "detector": "L1",
+              "segment_id": "GW170104_L1_target_06",
+              "gps_start": 1167559946.0,
+              "gps_end": 1167559950.0,
+              "detected": false,
+              "max_anomaly_score": 33.65765546519252,
+              "threshold": 71.52103599772397,
+              "n_candidates": 0
+            }
+          ],
+          "target_candidates_gps": []
+        }
+      },
+      "evaluation_by_detector": {
+        "H1": {
+          "recovered": false,
+          "n_target_candidates": 0,
+          "n_matched_candidates": 0,
+          "n_other_candidates_in_32s": 0,
+          "timing_error_s": null,
+          "best_matched_score": null,
+          "best_matched_p_value": null,
+          "best_matched_candidate": null
+        },
+        "L1": {
+          "recovered": false,
+          "n_target_candidates": 0,
+          "n_matched_candidates": 0,
+          "n_other_candidates_in_32s": 0,
+          "timing_error_s": null,
+          "best_matched_score": null,
+          "best_matched_p_value": null,
+          "best_matched_candidate": null
+        }
+      },
+      "coincidences": {
+        "H1-L1": {
+          "n_target_coincidences": 0,
+          "n_event_matched_coincidences": 0,
+          "target_coincidences": [],
+          "time_shift_control": {
+            "n_shifts": 200,
+            "coincidence_window_s": 0.1,
+            "n_bg_cands_a": 2,
+            "n_bg_cands_b": 17,
+            "total_accidental_coincidences": 1,
+            "mean_coincidences_per_shift": 0.005,
+            "fraction_shifts_with_ge1": 0.005
+          }
+        }
+      },
+      "any_single_detector_recovered": false,
+      "coincident_recovered": false
+    },
+    {
+      "name": "GW170608",
+      "version": "v3",
+      "role": "independent_validation",
+      "observing_run": "O2",
+      "source_class": "BBH",
+      "published_gps": 1180922494.5,
+      "network_matched_filter_snr": 15.4,
+      "mass_1_source": 11.0,
+      "mass_2_source": 7.6,
+      "chirp_mass_source": 7.9,
+      "api_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/",
+      "detectors_available": [
+        "H1",
+        "L1"
+      ],
+      "detectors": {
+        "H1": {
+          "event": "GW170608",
+          "detector": "H1",
+          "status": "OK",
+          "guard_s": 64.0,
+          "n_clean_bg_segments": 980,
+          "n_dq_excluded_bg_segments": 4,
+          "n_psd_segments": 60,
+          "n_cal_segments": 500,
+          "n_val_segments": 420,
+          "threshold": 4155.266512567572,
+          "min_resolvable_p": 0.001996007984031936,
+          "val_fp": 1,
+          "val_far": 0.002380952380952381,
+          "val_far_cp_95ci": [
+            6.0278678368146115e-05,
+            0.01319384401530838
+          ],
+          "val_far_wilson_95ci": [
+            0.00042042027400248944,
+            0.013361758649568439
+          ],
+          "val_statistically_credible": true,
+          "n_target_windows": 7,
+          "max_target_score": 4760.193114569083,
+          "max_score_over_threshold": 1.1455806986560104,
+          "target_windows": [
+            {
+              "event": "GW170608",
+              "detector": "H1",
+              "segment_id": "GW170608_H1_target_00",
+              "gps_start": 1180922480.0,
+              "gps_end": 1180922484.0,
+              "detected": true,
+              "max_anomaly_score": 4582.386743048769,
+              "threshold": 4155.266512567572,
+              "n_candidates": 1
+            },
+            {
+              "event": "GW170608",
+              "detector": "H1",
+              "segment_id": "GW170608_H1_target_01",
+              "gps_start": 1180922484.0,
+              "gps_end": 1180922488.0,
+              "detected": true,
+              "max_anomaly_score": 4722.10931262755,
+              "threshold": 4155.266512567572,
+              "n_candidates": 1
+            },
+            {
+              "event": "GW170608",
+              "detector": "H1",
+              "segment_id": "GW170608_H1_target_02",
+              "gps_start": 1180922488.0,
+              "gps_end": 1180922492.0,
+              "detected": true,
+              "max_anomaly_score": 4280.4919479093405,
+              "threshold": 4155.266512567572,
+              "n_candidates": 1
+            },
+            {
+              "event": "GW170608",
+              "detector": "H1",
+              "segment_id": "GW170608_H1_target_03",
+              "gps_start": 1180922492.0,
+              "gps_end": 1180922496.0,
+              "detected": true,
+              "max_anomaly_score": 4542.073604396895,
+              "threshold": 4155.266512567572,
+              "n_candidates": 1
+            },
+            {
+              "event": "GW170608",
+              "detector": "H1",
+              "segment_id": "GW170608_H1_target_04",
+              "gps_start": 1180922496.0,
+              "gps_end": 1180922500.0,
+              "detected": false,
+              "max_anomaly_score": 3998.0430036456632,
+              "threshold": 4155.266512567572,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170608",
+              "detector": "H1",
+              "segment_id": "GW170608_H1_target_05",
+              "gps_start": 1180922500.0,
+              "gps_end": 1180922504.0,
+              "detected": true,
+              "max_anomaly_score": 4760.193114569083,
+              "threshold": 4155.266512567572,
+              "n_candidates": 1
+            },
+            {
+              "event": "GW170608",
+              "detector": "H1",
+              "segment_id": "GW170608_H1_target_06",
+              "gps_start": 1180922504.0,
+              "gps_end": 1180922508.0,
+              "detected": false,
+              "max_anomaly_score": 4144.131155870344,
+              "threshold": 4155.266512567572,
+              "n_candidates": 0
+            }
+          ],
+          "target_candidates_gps": [
+            {
+              "detector": "H1",
+              "segment_id": "GW170608_H1_target_00",
+              "candidate_id": 1,
+              "gps_start": 1180922480.046875,
+              "gps_end": 1180922483.953125,
+              "gps_peak": 1180922482.5625,
+              "duration_s": 3.90625,
+              "f_min_hz": 12.0,
+              "f_max_hz": 36.0,
+              "peak_freq_hz": 24.0,
+              "anomaly_score": 4582.386743048769,
+              "peak_excess_power": 36.36425474346179,
+              "n_bins": 273,
+              "empirical_p_value": 0.005988023952095809,
+              "p_value_is_upper_bound": false,
+              "boundary_adjacent": true,
+              "event": "GW170608"
+            },
+            {
+              "detector": "H1",
+              "segment_id": "GW170608_H1_target_01",
+              "candidate_id": 1,
+              "gps_start": 1180922484.046875,
+              "gps_end": 1180922487.953125,
+              "gps_peak": 1180922484.6875,
+              "duration_s": 3.90625,
+              "f_min_hz": 12.0,
+              "f_max_hz": 36.0,
+              "peak_freq_hz": 24.0,
+              "anomaly_score": 4722.10931262755,
+              "peak_excess_power": 38.79110360490482,
+              "n_bins": 292,
+              "empirical_p_value": 0.005988023952095809,
+              "p_value_is_upper_bound": false,
+              "boundary_adjacent": true,
+              "event": "GW170608"
+            },
+            {
+              "detector": "H1",
+              "segment_id": "GW170608_H1_target_02",
+              "candidate_id": 1,
+              "gps_start": 1180922488.046875,
+              "gps_end": 1180922491.953125,
+              "gps_peak": 1180922488.4375,
+              "duration_s": 3.90625,
+              "f_min_hz": 12.0,
+              "f_max_hz": 44.0,
+              "peak_freq_hz": 24.0,
+              "anomaly_score": 4280.4919479093405,
+              "peak_excess_power": 33.22797854623881,
+              "n_bins": 288,
+              "empirical_p_value": 0.005988023952095809,
+              "p_value_is_upper_bound": false,
+              "boundary_adjacent": true,
+              "event": "GW170608"
+            },
+            {
+              "detector": "H1",
+              "segment_id": "GW170608_H1_target_03",
+              "candidate_id": 1,
+              "gps_start": 1180922492.046875,
+              "gps_end": 1180922495.953125,
+              "gps_peak": 1180922495.9375,
+              "duration_s": 3.90625,
+              "f_min_hz": 12.0,
+              "f_max_hz": 52.0,
+              "peak_freq_hz": 24.0,
+              "anomaly_score": 4542.073604396895,
+              "peak_excess_power": 35.340778812917904,
+              "n_bins": 296,
+              "empirical_p_value": 0.005988023952095809,
+              "p_value_is_upper_bound": false,
+              "boundary_adjacent": true,
+              "event": "GW170608"
+            },
+            {
+              "detector": "H1",
+              "segment_id": "GW170608_H1_target_05",
+              "candidate_id": 1,
+              "gps_start": 1180922500.046875,
+              "gps_end": 1180922503.953125,
+              "gps_peak": 1180922502.46875,
+              "duration_s": 3.90625,
+              "f_min_hz": 12.0,
+              "f_max_hz": 36.0,
+              "peak_freq_hz": 24.0,
+              "anomaly_score": 4760.193114569083,
+              "peak_excess_power": 40.91723722712918,
+              "n_bins": 276,
+              "empirical_p_value": 0.005988023952095809,
+              "p_value_is_upper_bound": false,
+              "boundary_adjacent": true,
+              "event": "GW170608"
+            }
+          ]
+        },
+        "L1": {
+          "event": "GW170608",
+          "detector": "L1",
+          "status": "OK",
+          "guard_s": 64.0,
+          "n_clean_bg_segments": 982,
+          "n_dq_excluded_bg_segments": 2,
+          "n_psd_segments": 60,
+          "n_cal_segments": 500,
+          "n_val_segments": 422,
+          "threshold": 94.99069583211676,
+          "min_resolvable_p": 0.001996007984031936,
+          "val_fp": 2,
+          "val_far": 0.004739336492890996,
+          "val_far_cp_95ci": [
+            0.00057447185004705,
+            0.01701445986284578
+          ],
+          "val_far_wilson_95ci": [
+            0.001300660616436652,
+            0.01711337272453936
+          ],
+          "val_statistically_credible": true,
+          "n_target_windows": 7,
+          "max_target_score": 94.41155248207386,
+          "max_score_over_threshold": 0.9939031570937594,
+          "target_windows": [
+            {
+              "event": "GW170608",
+              "detector": "L1",
+              "segment_id": "GW170608_L1_target_00",
+              "gps_start": 1180922480.0,
+              "gps_end": 1180922484.0,
+              "detected": false,
+              "max_anomaly_score": 46.49652749416064,
+              "threshold": 94.99069583211676,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170608",
+              "detector": "L1",
+              "segment_id": "GW170608_L1_target_01",
+              "gps_start": 1180922484.0,
+              "gps_end": 1180922488.0,
+              "detected": false,
+              "max_anomaly_score": 34.87349710488124,
+              "threshold": 94.99069583211676,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170608",
+              "detector": "L1",
+              "segment_id": "GW170608_L1_target_02",
+              "gps_start": 1180922488.0,
+              "gps_end": 1180922492.0,
+              "detected": false,
+              "max_anomaly_score": 38.22032065677146,
+              "threshold": 94.99069583211676,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170608",
+              "detector": "L1",
+              "segment_id": "GW170608_L1_target_03",
+              "gps_start": 1180922492.0,
+              "gps_end": 1180922496.0,
+              "detected": false,
+              "max_anomaly_score": 94.41155248207386,
+              "threshold": 94.99069583211676,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170608",
+              "detector": "L1",
+              "segment_id": "GW170608_L1_target_04",
+              "gps_start": 1180922496.0,
+              "gps_end": 1180922500.0,
+              "detected": false,
+              "max_anomaly_score": 44.613398250633445,
+              "threshold": 94.99069583211676,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170608",
+              "detector": "L1",
+              "segment_id": "GW170608_L1_target_05",
+              "gps_start": 1180922500.0,
+              "gps_end": 1180922504.0,
+              "detected": false,
+              "max_anomaly_score": 37.821759236341535,
+              "threshold": 94.99069583211676,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170608",
+              "detector": "L1",
+              "segment_id": "GW170608_L1_target_06",
+              "gps_start": 1180922504.0,
+              "gps_end": 1180922508.0,
+              "detected": false,
+              "max_anomaly_score": 35.82189112393826,
+              "threshold": 94.99069583211676,
+              "n_candidates": 0
+            }
+          ],
+          "target_candidates_gps": []
+        }
+      },
+      "evaluation_by_detector": {
+        "H1": {
+          "recovered": true,
+          "n_target_candidates": 5,
+          "n_matched_candidates": 1,
+          "n_other_candidates_in_32s": 4,
+          "timing_error_s": 1.4375,
+          "best_matched_score": 4542.073604396895,
+          "best_matched_p_value": 0.005988023952095809,
+          "best_matched_p_is_upper_bound": false,
+          "best_matched_candidate": {
+            "detector": "H1",
+            "segment_id": "GW170608_H1_target_03",
+            "candidate_id": 1,
+            "gps_start": 1180922492.046875,
+            "gps_end": 1180922495.953125,
+            "gps_peak": 1180922495.9375,
+            "duration_s": 3.90625,
+            "f_min_hz": 12.0,
+            "f_max_hz": 52.0,
+            "peak_freq_hz": 24.0,
+            "anomaly_score": 4542.073604396895,
+            "peak_excess_power": 35.340778812917904,
+            "n_bins": 296,
+            "empirical_p_value": 0.005988023952095809,
+            "p_value_is_upper_bound": false,
+            "boundary_adjacent": true,
+            "event": "GW170608"
+          }
+        },
+        "L1": {
+          "recovered": false,
+          "n_target_candidates": 0,
+          "n_matched_candidates": 0,
+          "n_other_candidates_in_32s": 0,
+          "timing_error_s": null,
+          "best_matched_score": null,
+          "best_matched_p_value": null,
+          "best_matched_candidate": null
+        }
+      },
+      "coincidences": {
+        "H1-L1": {
+          "n_target_coincidences": 0,
+          "n_event_matched_coincidences": 0,
+          "target_coincidences": [],
+          "time_shift_control": {
+            "n_shifts": 200,
+            "coincidence_window_s": 0.1,
+            "n_bg_cands_a": 1,
+            "n_bg_cands_b": 2,
+            "total_accidental_coincidences": 0,
+            "mean_coincidences_per_shift": 0.0,
+            "fraction_shifts_with_ge1": 0.0
+          }
+        }
+      },
+      "any_single_detector_recovered": true,
+      "coincident_recovered": false
+    },
+    {
+      "name": "GW170814",
+      "version": "v3",
+      "role": "independent_validation",
+      "observing_run": "O2",
+      "source_class": "BBH",
+      "published_gps": 1186741861.5,
+      "network_matched_filter_snr": 17.2,
+      "mass_1_source": 30.6,
+      "mass_2_source": 25.2,
+      "chirp_mass_source": 24.1,
+      "api_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170814/v3/",
+      "detectors_available": [
+        "H1",
+        "L1",
+        "V1"
+      ],
+      "detectors": {
+        "H1": {
+          "event": "GW170814",
+          "detector": "H1",
+          "status": "OK",
+          "guard_s": 64.0,
+          "n_clean_bg_segments": 982,
+          "n_dq_excluded_bg_segments": 2,
+          "n_psd_segments": 60,
+          "n_cal_segments": 500,
+          "n_val_segments": 422,
+          "threshold": 76.79565946822339,
+          "min_resolvable_p": 0.001996007984031936,
+          "val_fp": 1,
+          "val_far": 0.002369668246445498,
+          "val_far_cp_95ci": [
+            5.999300599761368e-05,
+            0.013131652386647973
+          ],
+          "val_far_wilson_95ci": [
+            0.0004184271769615642,
+            0.013299022591483235
+          ],
+          "val_statistically_credible": true,
+          "n_target_windows": 7,
+          "max_target_score": 37.931785750708585,
+          "max_score_over_threshold": 0.49393137598361336,
+          "target_windows": [
+            {
+              "event": "GW170814",
+              "detector": "H1",
+              "segment_id": "GW170814_H1_target_00",
+              "gps_start": 1186741847.0,
+              "gps_end": 1186741851.0,
+              "detected": false,
+              "max_anomaly_score": 34.352068226083595,
+              "threshold": 76.79565946822339,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170814",
+              "detector": "H1",
+              "segment_id": "GW170814_H1_target_01",
+              "gps_start": 1186741851.0,
+              "gps_end": 1186741855.0,
+              "detected": false,
+              "max_anomaly_score": 35.14513801337146,
+              "threshold": 76.79565946822339,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170814",
+              "detector": "H1",
+              "segment_id": "GW170814_H1_target_02",
+              "gps_start": 1186741855.0,
+              "gps_end": 1186741859.0,
+              "detected": false,
+              "max_anomaly_score": 32.26310911665911,
+              "threshold": 76.79565946822339,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170814",
+              "detector": "H1",
+              "segment_id": "GW170814_H1_target_03",
+              "gps_start": 1186741859.0,
+              "gps_end": 1186741863.0,
+              "detected": false,
+              "max_anomaly_score": 37.931785750708585,
+              "threshold": 76.79565946822339,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170814",
+              "detector": "H1",
+              "segment_id": "GW170814_H1_target_04",
+              "gps_start": 1186741863.0,
+              "gps_end": 1186741867.0,
+              "detected": false,
+              "max_anomaly_score": 35.844726484401924,
+              "threshold": 76.79565946822339,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170814",
+              "detector": "H1",
+              "segment_id": "GW170814_H1_target_05",
+              "gps_start": 1186741867.0,
+              "gps_end": 1186741871.0,
+              "detected": false,
+              "max_anomaly_score": 32.15318293087922,
+              "threshold": 76.79565946822339,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170814",
+              "detector": "H1",
+              "segment_id": "GW170814_H1_target_06",
+              "gps_start": 1186741871.0,
+              "gps_end": 1186741875.0,
+              "detected": false,
+              "max_anomaly_score": 31.280847670280867,
+              "threshold": 76.79565946822339,
+              "n_candidates": 0
+            }
+          ],
+          "target_candidates_gps": []
+        },
+        "L1": {
+          "event": "GW170814",
+          "detector": "L1",
+          "status": "OK",
+          "guard_s": 64.0,
+          "n_clean_bg_segments": 982,
+          "n_dq_excluded_bg_segments": 2,
+          "n_psd_segments": 60,
+          "n_cal_segments": 500,
+          "n_val_segments": 422,
+          "threshold": 74.31018610622908,
+          "min_resolvable_p": 0.001996007984031936,
+          "val_fp": 2,
+          "val_far": 0.004739336492890996,
+          "val_far_cp_95ci": [
+            0.00057447185004705,
+            0.01701445986284578
+          ],
+          "val_far_wilson_95ci": [
+            0.001300660616436652,
+            0.01711337272453936
+          ],
+          "val_statistically_credible": true,
+          "n_target_windows": 7,
+          "max_target_score": 1104.9219141209408,
+          "max_score_over_threshold": 14.869050557098797,
+          "target_windows": [
+            {
+              "event": "GW170814",
+              "detector": "L1",
+              "segment_id": "GW170814_L1_target_00",
+              "gps_start": 1186741847.0,
+              "gps_end": 1186741851.0,
+              "detected": false,
+              "max_anomaly_score": 42.20567676428306,
+              "threshold": 74.31018610622908,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170814",
+              "detector": "L1",
+              "segment_id": "GW170814_L1_target_01",
+              "gps_start": 1186741851.0,
+              "gps_end": 1186741855.0,
+              "detected": false,
+              "max_anomaly_score": 35.92380469647124,
+              "threshold": 74.31018610622908,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170814",
+              "detector": "L1",
+              "segment_id": "GW170814_L1_target_02",
+              "gps_start": 1186741855.0,
+              "gps_end": 1186741859.0,
+              "detected": true,
+              "max_anomaly_score": 1104.9219141209408,
+              "threshold": 74.31018610622908,
+              "n_candidates": 1
+            },
+            {
+              "event": "GW170814",
+              "detector": "L1",
+              "segment_id": "GW170814_L1_target_03",
+              "gps_start": 1186741859.0,
+              "gps_end": 1186741863.0,
+              "detected": true,
+              "max_anomaly_score": 275.70102678850935,
+              "threshold": 74.31018610622908,
+              "n_candidates": 1
+            },
+            {
+              "event": "GW170814",
+              "detector": "L1",
+              "segment_id": "GW170814_L1_target_04",
+              "gps_start": 1186741863.0,
+              "gps_end": 1186741867.0,
+              "detected": false,
+              "max_anomaly_score": 34.0953792036415,
+              "threshold": 74.31018610622908,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170814",
+              "detector": "L1",
+              "segment_id": "GW170814_L1_target_05",
+              "gps_start": 1186741867.0,
+              "gps_end": 1186741871.0,
+              "detected": false,
+              "max_anomaly_score": 30.29291195375277,
+              "threshold": 74.31018610622908,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170814",
+              "detector": "L1",
+              "segment_id": "GW170814_L1_target_06",
+              "gps_start": 1186741871.0,
+              "gps_end": 1186741875.0,
+              "detected": false,
+              "max_anomaly_score": 47.10164832129496,
+              "threshold": 74.31018610622908,
+              "n_candidates": 0
+            }
+          ],
+          "target_candidates_gps": [
+            {
+              "detector": "L1",
+              "segment_id": "GW170814_L1_target_02",
+              "candidate_id": 2,
+              "gps_start": 1186741855.703125,
+              "gps_end": 1186741855.890625,
+              "gps_peak": 1186741855.78125,
+              "duration_s": 0.1875,
+              "f_min_hz": 4.0,
+              "f_max_hz": 180.0,
+              "peak_freq_hz": 80.0,
+              "anomaly_score": 1104.9219141209408,
+              "peak_excess_power": 68.33073369722747,
+              "n_bins": 57,
+              "empirical_p_value": 0.001996007984031936,
+              "p_value_is_upper_bound": true,
+              "boundary_adjacent": true,
+              "event": "GW170814"
+            },
+            {
+              "detector": "L1",
+              "segment_id": "GW170814_L1_target_03",
+              "candidate_id": 2,
+              "gps_start": 1186741861.234375,
+              "gps_end": 1186741861.546875,
+              "gps_peak": 1186741861.46875,
+              "duration_s": 0.3125,
+              "f_min_hz": 20.0,
+              "f_max_hz": 124.0,
+              "peak_freq_hz": 48.0,
+              "anomaly_score": 275.70102678850935,
+              "peak_excess_power": 23.313157162476962,
+              "n_bins": 31,
+              "empirical_p_value": 0.003992015968063872,
+              "p_value_is_upper_bound": false,
+              "boundary_adjacent": false,
+              "event": "GW170814"
+            }
+          ]
+        },
+        "V1": {
+          "event": "GW170814",
+          "detector": "V1",
+          "status": "OK",
+          "guard_s": 64.0,
+          "n_clean_bg_segments": 982,
+          "n_dq_excluded_bg_segments": 2,
+          "n_psd_segments": 60,
+          "n_cal_segments": 500,
+          "n_val_segments": 422,
+          "threshold": 426.4668336430293,
+          "min_resolvable_p": 0.001996007984031936,
+          "val_fp": 2,
+          "val_far": 0.004739336492890996,
+          "val_far_cp_95ci": [
+            0.00057447185004705,
+            0.01701445986284578
+          ],
+          "val_far_wilson_95ci": [
+            0.001300660616436652,
+            0.01711337272453936
+          ],
+          "val_statistically_credible": true,
+          "n_target_windows": 7,
+          "max_target_score": 391.43418735274685,
+          "max_score_over_threshold": 0.9178537613557863,
+          "target_windows": [
+            {
+              "event": "GW170814",
+              "detector": "V1",
+              "segment_id": "GW170814_V1_target_00",
+              "gps_start": 1186741847.0,
+              "gps_end": 1186741851.0,
+              "detected": false,
+              "max_anomaly_score": 129.6477786733844,
+              "threshold": 426.4668336430293,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170814",
+              "detector": "V1",
+              "segment_id": "GW170814_V1_target_01",
+              "gps_start": 1186741851.0,
+              "gps_end": 1186741855.0,
+              "detected": false,
+              "max_anomaly_score": 64.52222738775494,
+              "threshold": 426.4668336430293,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170814",
+              "detector": "V1",
+              "segment_id": "GW170814_V1_target_02",
+              "gps_start": 1186741855.0,
+              "gps_end": 1186741859.0,
+              "detected": false,
+              "max_anomaly_score": 129.47716104475774,
+              "threshold": 426.4668336430293,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170814",
+              "detector": "V1",
+              "segment_id": "GW170814_V1_target_03",
+              "gps_start": 1186741859.0,
+              "gps_end": 1186741863.0,
+              "detected": false,
+              "max_anomaly_score": 111.0342570982657,
+              "threshold": 426.4668336430293,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170814",
+              "detector": "V1",
+              "segment_id": "GW170814_V1_target_04",
+              "gps_start": 1186741863.0,
+              "gps_end": 1186741867.0,
+              "detected": false,
+              "max_anomaly_score": 391.43418735274685,
+              "threshold": 426.4668336430293,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170814",
+              "detector": "V1",
+              "segment_id": "GW170814_V1_target_05",
+              "gps_start": 1186741867.0,
+              "gps_end": 1186741871.0,
+              "detected": false,
+              "max_anomaly_score": 329.11402149872765,
+              "threshold": 426.4668336430293,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170814",
+              "detector": "V1",
+              "segment_id": "GW170814_V1_target_06",
+              "gps_start": 1186741871.0,
+              "gps_end": 1186741875.0,
+              "detected": false,
+              "max_anomaly_score": 53.57188098746575,
+              "threshold": 426.4668336430293,
+              "n_candidates": 0
+            }
+          ],
+          "target_candidates_gps": []
+        }
+      },
+      "evaluation_by_detector": {
+        "H1": {
+          "recovered": false,
+          "n_target_candidates": 0,
+          "n_matched_candidates": 0,
+          "n_other_candidates_in_32s": 0,
+          "timing_error_s": null,
+          "best_matched_score": null,
+          "best_matched_p_value": null,
+          "best_matched_candidate": null
+        },
+        "L1": {
+          "recovered": true,
+          "n_target_candidates": 2,
+          "n_matched_candidates": 1,
+          "n_other_candidates_in_32s": 1,
+          "timing_error_s": -0.03125,
+          "best_matched_score": 275.70102678850935,
+          "best_matched_p_value": 0.003992015968063872,
+          "best_matched_p_is_upper_bound": false,
+          "best_matched_candidate": {
+            "detector": "L1",
+            "segment_id": "GW170814_L1_target_03",
+            "candidate_id": 2,
+            "gps_start": 1186741861.234375,
+            "gps_end": 1186741861.546875,
+            "gps_peak": 1186741861.46875,
+            "duration_s": 0.3125,
+            "f_min_hz": 20.0,
+            "f_max_hz": 124.0,
+            "peak_freq_hz": 48.0,
+            "anomaly_score": 275.70102678850935,
+            "peak_excess_power": 23.313157162476962,
+            "n_bins": 31,
+            "empirical_p_value": 0.003992015968063872,
+            "p_value_is_upper_bound": false,
+            "boundary_adjacent": false,
+            "event": "GW170814"
+          }
+        },
+        "V1": {
+          "recovered": false,
+          "n_target_candidates": 0,
+          "n_matched_candidates": 0,
+          "n_other_candidates_in_32s": 0,
+          "timing_error_s": null,
+          "best_matched_score": null,
+          "best_matched_p_value": null,
+          "best_matched_candidate": null
+        }
+      },
+      "coincidences": {
+        "H1-L1": {
+          "n_target_coincidences": 0,
+          "n_event_matched_coincidences": 0,
+          "target_coincidences": [],
+          "time_shift_control": {
+            "n_shifts": 200,
+            "coincidence_window_s": 0.1,
+            "n_bg_cands_a": 1,
+            "n_bg_cands_b": 2,
+            "total_accidental_coincidences": 0,
+            "mean_coincidences_per_shift": 0.0,
+            "fraction_shifts_with_ge1": 0.0
+          }
+        },
+        "H1-V1": {
+          "n_target_coincidences": 0,
+          "n_event_matched_coincidences": 0,
+          "target_coincidences": [],
+          "time_shift_control": {
+            "n_shifts": 200,
+            "coincidence_window_s": 0.1,
+            "n_bg_cands_a": 1,
+            "n_bg_cands_b": 2,
+            "total_accidental_coincidences": 0,
+            "mean_coincidences_per_shift": 0.0,
+            "fraction_shifts_with_ge1": 0.0
+          }
+        },
+        "L1-V1": {
+          "n_target_coincidences": 0,
+          "n_event_matched_coincidences": 0,
+          "target_coincidences": [],
+          "time_shift_control": {
+            "n_shifts": 200,
+            "coincidence_window_s": 0.1,
+            "n_bg_cands_a": 2,
+            "n_bg_cands_b": 2,
+            "total_accidental_coincidences": 1,
+            "mean_coincidences_per_shift": 0.005,
+            "fraction_shifts_with_ge1": 0.005
+          }
+        }
+      },
+      "any_single_detector_recovered": true,
+      "coincident_recovered": false
+    },
+    {
+      "name": "GW170817",
+      "version": "v3",
+      "role": "independent_validation",
+      "observing_run": "O2",
+      "source_class": "BNS",
+      "published_gps": 1187008882.4,
+      "network_matched_filter_snr": 33.0,
+      "mass_1_source": 1.46,
+      "mass_2_source": 1.27,
+      "chirp_mass_source": 1.186,
+      "api_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170817/v3/",
+      "detectors_available": [
+        "H1",
+        "L1",
+        "V1"
+      ],
+      "detectors": {
+        "H1": {
+          "event": "GW170817",
+          "detector": "H1",
+          "status": "OK",
+          "guard_s": 128.0,
+          "n_clean_bg_segments": 950,
+          "n_dq_excluded_bg_segments": 2,
+          "n_psd_segments": 60,
+          "n_cal_segments": 500,
+          "n_val_segments": 390,
+          "threshold": 107.45500360117083,
+          "min_resolvable_p": 0.001996007984031936,
+          "val_fp": 1,
+          "val_far": 0.002564102564102564,
+          "val_far_cp_95ci": [
+            6.491534927749925e-05,
+            0.014202812785023671
+          ],
+          "val_far_wilson_95ci": [
+            0.0004527705502334377,
+            0.014379235298479384
+          ],
+          "val_statistically_credible": true,
+          "n_target_windows": 7,
+          "max_target_score": 140.54883212176085,
+          "max_score_over_threshold": 1.3079784785399182,
+          "target_windows": [
+            {
+              "event": "GW170817",
+              "detector": "H1",
+              "segment_id": "GW170817_H1_target_00",
+              "gps_start": 1187008868.0,
+              "gps_end": 1187008872.0,
+              "detected": false,
+              "max_anomaly_score": 75.29668864095342,
+              "threshold": 107.45500360117083,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170817",
+              "detector": "H1",
+              "segment_id": "GW170817_H1_target_01",
+              "gps_start": 1187008872.0,
+              "gps_end": 1187008876.0,
+              "detected": false,
+              "max_anomaly_score": 31.17674544516514,
+              "threshold": 107.45500360117083,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170817",
+              "detector": "H1",
+              "segment_id": "GW170817_H1_target_02",
+              "gps_start": 1187008876.0,
+              "gps_end": 1187008880.0,
+              "detected": false,
+              "max_anomaly_score": 41.91938799252115,
+              "threshold": 107.45500360117083,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170817",
+              "detector": "H1",
+              "segment_id": "GW170817_H1_target_03",
+              "gps_start": 1187008880.0,
+              "gps_end": 1187008884.0,
+              "detected": true,
+              "max_anomaly_score": 140.54883212176085,
+              "threshold": 107.45500360117083,
+              "n_candidates": 1
+            },
+            {
+              "event": "GW170817",
+              "detector": "H1",
+              "segment_id": "GW170817_H1_target_04",
+              "gps_start": 1187008884.0,
+              "gps_end": 1187008888.0,
+              "detected": false,
+              "max_anomaly_score": 27.02021582779166,
+              "threshold": 107.45500360117083,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170817",
+              "detector": "H1",
+              "segment_id": "GW170817_H1_target_05",
+              "gps_start": 1187008888.0,
+              "gps_end": 1187008892.0,
+              "detected": false,
+              "max_anomaly_score": 29.51147033238098,
+              "threshold": 107.45500360117083,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170817",
+              "detector": "H1",
+              "segment_id": "GW170817_H1_target_06",
+              "gps_start": 1187008892.0,
+              "gps_end": 1187008896.0,
+              "detected": false,
+              "max_anomaly_score": 21.220951236843824,
+              "threshold": 107.45500360117083,
+              "n_candidates": 0
+            }
+          ],
+          "target_candidates_gps": [
+            {
+              "detector": "H1",
+              "segment_id": "GW170817_H1_target_03",
+              "candidate_id": 16,
+              "gps_start": 1187008881.984375,
+              "gps_end": 1187008882.328125,
+              "gps_peak": 1187008882.28125,
+              "duration_s": 0.34375,
+              "f_min_hz": 180.0,
+              "f_max_hz": 268.0,
+              "peak_freq_hz": 256.0,
+              "anomaly_score": 140.54883212176085,
+              "peak_excess_power": 12.186312659903537,
+              "n_bins": 25,
+              "empirical_p_value": 0.007984031936127744,
+              "p_value_is_upper_bound": false,
+              "boundary_adjacent": false,
+              "event": "GW170817"
+            }
+          ]
+        },
+        "L1": {
+          "event": "GW170817",
+          "detector": "L1",
+          "status": "OK",
+          "guard_s": 128.0,
+          "n_clean_bg_segments": 950,
+          "n_dq_excluded_bg_segments": 2,
+          "n_psd_segments": 60,
+          "n_cal_segments": 500,
+          "n_val_segments": 390,
+          "threshold": 83.01939347682041,
+          "min_resolvable_p": 0.001996007984031936,
+          "val_fp": 4,
+          "val_far": 0.010256410256410256,
+          "val_far_cp_95ci": [
+            0.0028013991635239825,
+            0.026050984057476387
+          ],
+          "val_far_wilson_95ci": [
+            0.003995544320242872,
+            0.026071018139056865
+          ],
+          "val_statistically_credible": true,
+          "n_target_windows": 7,
+          "max_target_score": 234777.09951186692,
+          "max_score_over_threshold": 2827.9789779169887,
+          "target_windows": [
+            {
+              "event": "GW170817",
+              "detector": "L1",
+              "segment_id": "GW170817_L1_target_00",
+              "gps_start": 1187008868.0,
+              "gps_end": 1187008872.0,
+              "detected": false,
+              "max_anomaly_score": 75.57286967517199,
+              "threshold": 83.01939347682041,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170817",
+              "detector": "L1",
+              "segment_id": "GW170817_L1_target_01",
+              "gps_start": 1187008872.0,
+              "gps_end": 1187008876.0,
+              "detected": false,
+              "max_anomaly_score": 58.579864209705015,
+              "threshold": 83.01939347682041,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170817",
+              "detector": "L1",
+              "segment_id": "GW170817_L1_target_02",
+              "gps_start": 1187008876.0,
+              "gps_end": 1187008880.0,
+              "detected": false,
+              "max_anomaly_score": 50.181594856371326,
+              "threshold": 83.01939347682041,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170817",
+              "detector": "L1",
+              "segment_id": "GW170817_L1_target_03",
+              "gps_start": 1187008880.0,
+              "gps_end": 1187008884.0,
+              "detected": true,
+              "max_anomaly_score": 234777.09951186692,
+              "threshold": 83.01939347682041,
+              "n_candidates": 2
+            },
+            {
+              "event": "GW170817",
+              "detector": "L1",
+              "segment_id": "GW170817_L1_target_04",
+              "gps_start": 1187008884.0,
+              "gps_end": 1187008888.0,
+              "detected": false,
+              "max_anomaly_score": 32.34930031428694,
+              "threshold": 83.01939347682041,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170817",
+              "detector": "L1",
+              "segment_id": "GW170817_L1_target_05",
+              "gps_start": 1187008888.0,
+              "gps_end": 1187008892.0,
+              "detected": false,
+              "max_anomaly_score": 39.353929294259366,
+              "threshold": 83.01939347682041,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170817",
+              "detector": "L1",
+              "segment_id": "GW170817_L1_target_06",
+              "gps_start": 1187008892.0,
+              "gps_end": 1187008896.0,
+              "detected": false,
+              "max_anomaly_score": 42.026664394563134,
+              "threshold": 83.01939347682041,
+              "n_candidates": 0
+            }
+          ],
+          "target_candidates_gps": [
+            {
+              "detector": "L1",
+              "segment_id": "GW170817_L1_target_03",
+              "candidate_id": 1,
+              "gps_start": 1187008880.609375,
+              "gps_end": 1187008882.171875,
+              "gps_peak": 1187008881.375,
+              "duration_s": 1.5625,
+              "f_min_hz": 4.0,
+              "f_max_hz": 508.0,
+              "peak_freq_hz": 40.0,
+              "anomaly_score": 234777.09951186692,
+              "peak_excess_power": 16216.643575618677,
+              "n_bins": 435,
+              "empirical_p_value": 0.001996007984031936,
+              "p_value_is_upper_bound": true,
+              "boundary_adjacent": true,
+              "event": "GW170817"
+            },
+            {
+              "detector": "L1",
+              "segment_id": "GW170817_L1_target_03",
+              "candidate_id": 2,
+              "gps_start": 1187008880.390625,
+              "gps_end": 1187008880.578125,
+              "gps_peak": 1187008880.53125,
+              "duration_s": 0.1875,
+              "f_min_hz": 28.0,
+              "f_max_hz": 52.0,
+              "peak_freq_hz": 40.0,
+              "anomaly_score": 111.95775578809298,
+              "peak_excess_power": 23.60772956974727,
+              "n_bins": 11,
+              "empirical_p_value": 0.005988023952095809,
+              "p_value_is_upper_bound": false,
+              "boundary_adjacent": false,
+              "event": "GW170817"
+            }
+          ]
+        },
+        "V1": {
+          "event": "GW170817",
+          "detector": "V1",
+          "status": "OK",
+          "guard_s": 128.0,
+          "n_clean_bg_segments": 950,
+          "n_dq_excluded_bg_segments": 2,
+          "n_psd_segments": 60,
+          "n_cal_segments": 500,
+          "n_val_segments": 390,
+          "threshold": 355.83934863614127,
+          "min_resolvable_p": 0.001996007984031936,
+          "val_fp": 13,
+          "val_far": 0.03333333333333333,
+          "val_far_cp_95ci": [
+            0.017865679046846116,
+            0.05632654057771627
+          ],
+          "val_far_wilson_95ci": [
+            0.01958187893531294,
+            0.05618835335574755
+          ],
+          "val_statistically_credible": false,
+          "n_target_windows": 7,
+          "max_target_score": 167.8702265849489,
+          "max_score_over_threshold": 0.47175846973742736,
+          "target_windows": [
+            {
+              "event": "GW170817",
+              "detector": "V1",
+              "segment_id": "GW170817_V1_target_00",
+              "gps_start": 1187008868.0,
+              "gps_end": 1187008872.0,
+              "detected": false,
+              "max_anomaly_score": 55.621110266437654,
+              "threshold": 355.83934863614127,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170817",
+              "detector": "V1",
+              "segment_id": "GW170817_V1_target_01",
+              "gps_start": 1187008872.0,
+              "gps_end": 1187008876.0,
+              "detected": false,
+              "max_anomaly_score": 98.26566440310062,
+              "threshold": 355.83934863614127,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170817",
+              "detector": "V1",
+              "segment_id": "GW170817_V1_target_02",
+              "gps_start": 1187008876.0,
+              "gps_end": 1187008880.0,
+              "detected": false,
+              "max_anomaly_score": 57.01325950913176,
+              "threshold": 355.83934863614127,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170817",
+              "detector": "V1",
+              "segment_id": "GW170817_V1_target_03",
+              "gps_start": 1187008880.0,
+              "gps_end": 1187008884.0,
+              "detected": false,
+              "max_anomaly_score": 68.53756799765583,
+              "threshold": 355.83934863614127,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170817",
+              "detector": "V1",
+              "segment_id": "GW170817_V1_target_04",
+              "gps_start": 1187008884.0,
+              "gps_end": 1187008888.0,
+              "detected": false,
+              "max_anomaly_score": 167.8702265849489,
+              "threshold": 355.83934863614127,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170817",
+              "detector": "V1",
+              "segment_id": "GW170817_V1_target_05",
+              "gps_start": 1187008888.0,
+              "gps_end": 1187008892.0,
+              "detected": false,
+              "max_anomaly_score": 138.45437660468875,
+              "threshold": 355.83934863614127,
+              "n_candidates": 0
+            },
+            {
+              "event": "GW170817",
+              "detector": "V1",
+              "segment_id": "GW170817_V1_target_06",
+              "gps_start": 1187008892.0,
+              "gps_end": 1187008896.0,
+              "detected": false,
+              "max_anomaly_score": 79.78388725845164,
+              "threshold": 355.83934863614127,
+              "n_candidates": 0
+            }
+          ],
+          "target_candidates_gps": []
+        }
+      },
+      "evaluation_by_detector": {
+        "H1": {
+          "recovered": true,
+          "n_target_candidates": 1,
+          "n_matched_candidates": 1,
+          "n_other_candidates_in_32s": 0,
+          "timing_error_s": -0.11875009536743164,
+          "best_matched_score": 140.54883212176085,
+          "best_matched_p_value": 0.007984031936127744,
+          "best_matched_p_is_upper_bound": false,
+          "best_matched_candidate": {
+            "detector": "H1",
+            "segment_id": "GW170817_H1_target_03",
+            "candidate_id": 16,
+            "gps_start": 1187008881.984375,
+            "gps_end": 1187008882.328125,
+            "gps_peak": 1187008882.28125,
+            "duration_s": 0.34375,
+            "f_min_hz": 180.0,
+            "f_max_hz": 268.0,
+            "peak_freq_hz": 256.0,
+            "anomaly_score": 140.54883212176085,
+            "peak_excess_power": 12.186312659903537,
+            "n_bins": 25,
+            "empirical_p_value": 0.007984031936127744,
+            "p_value_is_upper_bound": false,
+            "boundary_adjacent": false,
+            "event": "GW170817"
+          }
+        },
+        "L1": {
+          "recovered": false,
+          "n_target_candidates": 2,
+          "n_matched_candidates": 0,
+          "n_other_candidates_in_32s": 2,
+          "timing_error_s": -1.0250000953674316,
+          "best_matched_score": null,
+          "best_matched_p_value": null,
+          "best_matched_candidate": null,
+          "closest_unmatched_candidate": {
+            "detector": "L1",
+            "segment_id": "GW170817_L1_target_03",
+            "candidate_id": 1,
+            "gps_start": 1187008880.609375,
+            "gps_end": 1187008882.171875,
+            "gps_peak": 1187008881.375,
+            "duration_s": 1.5625,
+            "f_min_hz": 4.0,
+            "f_max_hz": 508.0,
+            "peak_freq_hz": 40.0,
+            "anomaly_score": 234777.09951186692,
+            "peak_excess_power": 16216.643575618677,
+            "n_bins": 435,
+            "empirical_p_value": 0.001996007984031936,
+            "p_value_is_upper_bound": true,
+            "boundary_adjacent": true,
+            "event": "GW170817"
+          }
+        },
+        "V1": {
+          "recovered": false,
+          "n_target_candidates": 0,
+          "n_matched_candidates": 0,
+          "n_other_candidates_in_32s": 0,
+          "timing_error_s": null,
+          "best_matched_score": null,
+          "best_matched_p_value": null,
+          "best_matched_candidate": null
+        }
+      },
+      "coincidences": {
+        "H1-L1": {
+          "n_target_coincidences": 1,
+          "n_event_matched_coincidences": 0,
+          "target_coincidences": [
+            {
+              "det_a": "H1",
+              "det_b": "L1",
+              "gps_peak_a": 1187008882.28125,
+              "gps_peak_b": 1187008881.375,
+              "dt_a_minus_b_s": 0.90625,
+              "interval_gap_s": 0.0,
+              "score_a": 140.54883212176085,
+              "score_b": 234777.09951186692
+            }
+          ],
+          "time_shift_control": {
+            "n_shifts": 200,
+            "coincidence_window_s": 0.1,
+            "n_bg_cands_a": 1,
+            "n_bg_cands_b": 4,
+            "total_accidental_coincidences": 2,
+            "mean_coincidences_per_shift": 0.01,
+            "fraction_shifts_with_ge1": 0.01
+          }
+        },
+        "H1-V1": {
+          "n_target_coincidences": 0,
+          "n_event_matched_coincidences": 0,
+          "target_coincidences": [],
+          "time_shift_control": {
+            "n_shifts": 200,
+            "coincidence_window_s": 0.1,
+            "n_bg_cands_a": 1,
+            "n_bg_cands_b": 14,
+            "total_accidental_coincidences": 0,
+            "mean_coincidences_per_shift": 0.0,
+            "fraction_shifts_with_ge1": 0.0
+          }
+        },
+        "L1-V1": {
+          "n_target_coincidences": 0,
+          "n_event_matched_coincidences": 0,
+          "target_coincidences": [],
+          "time_shift_control": {
+            "n_shifts": 200,
+            "coincidence_window_s": 0.1,
+            "n_bg_cands_a": 4,
+            "n_bg_cands_b": 14,
+            "total_accidental_coincidences": 3,
+            "mean_coincidences_per_shift": 0.015,
+            "fraction_shifts_with_ge1": 0.015
+          }
+        }
+      },
+      "any_single_detector_recovered": true,
+      "coincident_recovered": false
+    }
+  ],
+  "background_table": [
+    {
+      "event": "GW150914",
+      "role": "reference_previously_examined",
+      "observing_run": "O1",
+      "detector": "H1",
+      "n_clean_bg": 982,
+      "n_dq_excluded": 2,
+      "n_cal": 500,
+      "threshold": 77.10183449857188,
+      "n_val": 422,
+      "val_fp": 3,
+      "val_far": 0.0071090047393364926,
+      "val_far_cp_low": 0.0014684539391562551,
+      "val_far_cp_high": 0.020633986451231982,
+      "statistically_credible": true
+    },
+    {
+      "event": "GW150914",
+      "role": "reference_previously_examined",
+      "observing_run": "O1",
+      "detector": "L1",
+      "n_clean_bg": 982,
+      "n_dq_excluded": 2,
+      "n_cal": 500,
+      "threshold": 76.32655380842236,
+      "n_val": 422,
+      "val_fp": 5,
+      "val_far": 0.011848341232227487,
+      "val_far_cp_low": 0.0038580103100447453,
+      "val_far_cp_high": 0.027432182507676695,
+      "statistically_credible": true
+    },
+    {
+      "event": "GW151012",
+      "role": "independent_validation",
+      "observing_run": "O1",
+      "detector": "H1",
+      "n_clean_bg": 982,
+      "n_dq_excluded": 2,
+      "n_cal": 500,
+      "threshold": 451.32094104915,
+      "n_val": 422,
+      "val_fp": 1,
+      "val_far": 0.002369668246445498,
+      "val_far_cp_low": 5.999300599761368e-05,
+      "val_far_cp_high": 0.013131652386647973,
+      "statistically_credible": true
+    },
+    {
+      "event": "GW151012",
+      "role": "independent_validation",
+      "observing_run": "O1",
+      "detector": "L1",
+      "n_clean_bg": 982,
+      "n_dq_excluded": 2,
+      "n_cal": 500,
+      "threshold": 116.05688428754358,
+      "n_val": 422,
+      "val_fp": 2,
+      "val_far": 0.004739336492890996,
+      "val_far_cp_low": 0.00057447185004705,
+      "val_far_cp_high": 0.01701445986284578,
+      "statistically_credible": true
+    },
+    {
+      "event": "GW151226",
+      "role": "independent_validation",
+      "observing_run": "O1",
+      "detector": "H1",
+      "n_clean_bg": 500,
+      "n_dq_excluded": 484,
+      "n_cal": 270,
+      "threshold": 76.3391671667669,
+      "n_val": 180,
+      "val_fp": 3,
+      "val_far": 0.016666666666666666,
+      "val_far_cp_low": 0.003450344196972935,
+      "val_far_cp_high": 0.047932200496390846,
+      "statistically_credible": true
+    },
+    {
+      "event": "GW151226",
+      "role": "independent_validation",
+      "observing_run": "O1",
+      "detector": "L1",
+      "n_clean_bg": 982,
+      "n_dq_excluded": 2,
+      "n_cal": 500,
+      "threshold": 90.71282243320161,
+      "n_val": 422,
+      "val_fp": 2,
+      "val_far": 0.004739336492890996,
+      "val_far_cp_low": 0.00057447185004705,
+      "val_far_cp_high": 0.01701445986284578,
+      "statistically_credible": true
+    },
+    {
+      "event": "GW170104",
+      "role": "independent_validation",
+      "observing_run": "O2",
+      "detector": "H1",
+      "n_clean_bg": 982,
+      "n_dq_excluded": 2,
+      "n_cal": 500,
+      "threshold": 86.31949402857798,
+      "n_val": 422,
+      "val_fp": 2,
+      "val_far": 0.004739336492890996,
+      "val_far_cp_low": 0.00057447185004705,
+      "val_far_cp_high": 0.01701445986284578,
+      "statistically_credible": true
+    },
+    {
+      "event": "GW170104",
+      "role": "independent_validation",
+      "observing_run": "O2",
+      "detector": "L1",
+      "n_clean_bg": 982,
+      "n_dq_excluded": 2,
+      "n_cal": 500,
+      "threshold": 71.52103599772397,
+      "n_val": 422,
+      "val_fp": 17,
+      "val_far": 0.04028436018957346,
+      "val_far_cp_low": 0.023639300853212423,
+      "val_far_cp_high": 0.06371712398345623,
+      "statistically_credible": false
+    },
+    {
+      "event": "GW170608",
+      "role": "independent_validation",
+      "observing_run": "O2",
+      "detector": "H1",
+      "n_clean_bg": 980,
+      "n_dq_excluded": 4,
+      "n_cal": 500,
+      "threshold": 4155.266512567572,
+      "n_val": 420,
+      "val_fp": 1,
+      "val_far": 0.002380952380952381,
+      "val_far_cp_low": 6.0278678368146115e-05,
+      "val_far_cp_high": 0.01319384401530838,
+      "statistically_credible": true
+    },
+    {
+      "event": "GW170608",
+      "role": "independent_validation",
+      "observing_run": "O2",
+      "detector": "L1",
+      "n_clean_bg": 982,
+      "n_dq_excluded": 2,
+      "n_cal": 500,
+      "threshold": 94.99069583211676,
+      "n_val": 422,
+      "val_fp": 2,
+      "val_far": 0.004739336492890996,
+      "val_far_cp_low": 0.00057447185004705,
+      "val_far_cp_high": 0.01701445986284578,
+      "statistically_credible": true
+    },
+    {
+      "event": "GW170814",
+      "role": "independent_validation",
+      "observing_run": "O2",
+      "detector": "H1",
+      "n_clean_bg": 982,
+      "n_dq_excluded": 2,
+      "n_cal": 500,
+      "threshold": 76.79565946822339,
+      "n_val": 422,
+      "val_fp": 1,
+      "val_far": 0.002369668246445498,
+      "val_far_cp_low": 5.999300599761368e-05,
+      "val_far_cp_high": 0.013131652386647973,
+      "statistically_credible": true
+    },
+    {
+      "event": "GW170814",
+      "role": "independent_validation",
+      "observing_run": "O2",
+      "detector": "L1",
+      "n_clean_bg": 982,
+      "n_dq_excluded": 2,
+      "n_cal": 500,
+      "threshold": 74.31018610622908,
+      "n_val": 422,
+      "val_fp": 2,
+      "val_far": 0.004739336492890996,
+      "val_far_cp_low": 0.00057447185004705,
+      "val_far_cp_high": 0.01701445986284578,
+      "statistically_credible": true
+    },
+    {
+      "event": "GW170814",
+      "role": "independent_validation",
+      "observing_run": "O2",
+      "detector": "V1",
+      "n_clean_bg": 982,
+      "n_dq_excluded": 2,
+      "n_cal": 500,
+      "threshold": 426.4668336430293,
+      "n_val": 422,
+      "val_fp": 2,
+      "val_far": 0.004739336492890996,
+      "val_far_cp_low": 0.00057447185004705,
+      "val_far_cp_high": 0.01701445986284578,
+      "statistically_credible": true
+    },
+    {
+      "event": "GW170817",
+      "role": "independent_validation",
+      "observing_run": "O2",
+      "detector": "H1",
+      "n_clean_bg": 950,
+      "n_dq_excluded": 2,
+      "n_cal": 500,
+      "threshold": 107.45500360117083,
+      "n_val": 390,
+      "val_fp": 1,
+      "val_far": 0.002564102564102564,
+      "val_far_cp_low": 6.491534927749925e-05,
+      "val_far_cp_high": 0.014202812785023671,
+      "statistically_credible": true
+    },
+    {
+      "event": "GW170817",
+      "role": "independent_validation",
+      "observing_run": "O2",
+      "detector": "L1",
+      "n_clean_bg": 950,
+      "n_dq_excluded": 2,
+      "n_cal": 500,
+      "threshold": 83.01939347682041,
+      "n_val": 390,
+      "val_fp": 4,
+      "val_far": 0.010256410256410256,
+      "val_far_cp_low": 0.0028013991635239825,
+      "val_far_cp_high": 0.026050984057476387,
+      "statistically_credible": true
+    },
+    {
+      "event": "GW170817",
+      "role": "independent_validation",
+      "observing_run": "O2",
+      "detector": "V1",
+      "n_clean_bg": 950,
+      "n_dq_excluded": 2,
+      "n_cal": 500,
+      "threshold": 355.83934863614127,
+      "n_val": 390,
+      "val_fp": 13,
+      "val_far": 0.03333333333333333,
+      "val_far_cp_low": 0.017865679046846116,
+      "val_far_cp_high": 0.05632654057771627,
+      "statistically_credible": false
+    }
+  ],
+  "figures": [
+    "fig01_event_scores_vs_snr.png",
+    "fig02_detection_matrix.png",
+    "fig03_background_far_across_epochs.png",
+    "fig04_event_excess_maps_gallery.png"
+  ]
+}

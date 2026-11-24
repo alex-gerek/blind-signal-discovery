@@ -1,0 +1,31 @@
+{
+  "purpose": "Reserved untouched real-data evaluation set for future BSD v0.2 comparison.",
+  "status": "UNINSPECTED_AND_NOT_DOWNLOADED",
+  "policy": "These confirmed GWTC-1 events were deliberately excluded from Experiment 003 and must not be downloaded, inspected, or tuned against during v0.2 development.",
+  "events": [
+    {
+      "name": "GW170729",
+      "version": "v1",
+      "observing_run": "O2",
+      "catalog": "GWTC-1-confident"
+    },
+    {
+      "name": "GW170809",
+      "version": "v1",
+      "observing_run": "O2",
+      "catalog": "GWTC-1-confident"
+    },
+    {
+      "name": "GW170818",
+      "version": "v1",
+      "observing_run": "O2",
+      "catalog": "GWTC-1-confident"
+    },
+    {
+      "name": "GW170823",
+      "version": "v1",
+      "observing_run": "O2",
+      "catalog": "GWTC-1-confident"
+    }
+  ]
+}

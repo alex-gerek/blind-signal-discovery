@@ -1,0 +1,8 @@
+event,role,observing_run,source_class,network_matched_filter_snr,mass_1_source,mass_2_source,any_single_detector_recovered,coincident_recovered,h1_recovered,l1_recovered,v1_recovered
+GW150914,reference_previously_examined,O1,BBH,25.2,35.6,30.6,True,True,True,True,
+GW151012,independent_validation,O1,BBH,10.0,23.2,13.6,False,False,False,False,
+GW151226,independent_validation,O1,BBH,13.1,13.7,7.7,False,False,False,False,
+GW170104,independent_validation,O2,BBH,13.0,30.8,20.0,False,False,False,False,
+GW170608,independent_validation,O2,BBH,15.4,11.0,7.6,True,False,True,False,
+GW170814,independent_validation,O2,BBH,17.2,30.6,25.2,True,False,False,True,False
+GW170817,independent_validation,O2,BNS,33.0,1.46,1.27,True,False,True,False,False
