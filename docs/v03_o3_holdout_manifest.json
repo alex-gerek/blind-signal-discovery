@@ -1,0 +1,132 @@
+{
+  "manifest_version": "1.0",
+  "status": "FROZEN_UNINSPECTED_AND_NOT_DOWNLOADED",
+  "purpose": "Pre-registered untouched O3 real-data final holdout set for future BSD v0.3 evaluation.",
+  "overlap_policy": "All events belong to Observing Run O3 (2019-2020, GPS 1240215503 to 1266645879), strictly disjoint from all O1/O2 GWTC-1 development and consumed v0.2 holdout data (GPS 1126257415 to 1187531305).",
+  "data_access_policy": "No strain HDF5 files listed in this manifest have been downloaded, opened, or inspected. Strain files must remain untouched until BSD v0.3 code, hyperparameters, calibration mode, and regime-gating rules are completely frozen.",
+  "exclusion_boundaries": {
+    "bbh_event_guard_seconds": 64.0,
+    "bns_nsbh_event_guard_seconds": 128.0,
+    "target_window_duration_seconds": 32.0,
+    "rule": "Exclude [target_32s_gps_start - guard_s, target_32s_gps_end + guard_s] from all background PSD estimation, calibration, and off-source validation sets."
+  },
+  "events": [
+    {
+      "event_id": "GW190425",
+      "catalog": "GWTC-2.1-confident",
+      "version": "v3",
+      "observing_run": "O3a",
+      "source_class": "BNS",
+      "published_gps": 1240215503.0,
+      "network_matched_filter_snr": 12.4,
+      "mass_1_source": 2.1,
+      "mass_2_source": 1.3,
+      "detectors": ["L1", "V1"],
+      "guard_seconds": 128.0
+    },
+    {
+      "event_id": "GW190521_074359",
+      "catalog": "GWTC-2.1-confident",
+      "version": "v2",
+      "observing_run": "O3a",
+      "source_class": "BBH",
+      "published_gps": 1242459857.4,
+      "network_matched_filter_snr": 25.9,
+      "mass_1_source": 43.4,
+      "mass_2_source": 33.4,
+      "detectors": ["H1", "L1"],
+      "guard_seconds": 64.0
+    },
+    {
+      "event_id": "GW190708_232457",
+      "catalog": "GWTC-2.1-confident",
+      "version": "v2",
+      "observing_run": "O3a",
+      "source_class": "BBH",
+      "published_gps": 1246663515.3,
+      "network_matched_filter_snr": 13.4,
+      "mass_1_source": 19.8,
+      "mass_2_source": 11.6,
+      "detectors": ["L1", "V1"],
+      "guard_seconds": 64.0
+    },
+    {
+      "event_id": "GW191230_180458",
+      "catalog": "GWTC-3-confident",
+      "version": "v1",
+      "observing_run": "O3b",
+      "source_class": "BBH",
+      "published_gps": 1261764316.4,
+      "network_matched_filter_snr": 10.4,
+      "mass_1_source": 49.4,
+      "mass_2_source": 37.0,
+      "detectors": ["H1", "L1", "V1"],
+      "guard_seconds": 64.0
+    },
+    {
+      "event_id": "GW200115_042309",
+      "catalog": "GWTC-3-confident",
+      "version": "v2",
+      "observing_run": "O3b",
+      "source_class": "NSBH",
+      "published_gps": 1263097407.7,
+      "network_matched_filter_snr": 11.3,
+      "mass_1_source": 5.9,
+      "mass_2_source": 1.4,
+      "detectors": ["H1", "L1", "V1"],
+      "guard_seconds": 128.0
+    },
+    {
+      "event_id": "GW200129_065458",
+      "catalog": "GWTC-3-confident",
+      "version": "v1",
+      "observing_run": "O3b",
+      "source_class": "BBH",
+      "published_gps": 1264316116.4,
+      "network_matched_filter_snr": 26.8,
+      "mass_1_source": 34.5,
+      "mass_2_source": 29.0,
+      "detectors": ["H1", "L1", "V1"],
+      "guard_seconds": 64.0
+    },
+    {
+      "event_id": "GW200224_222234",
+      "catalog": "GWTC-3-confident",
+      "version": "v1",
+      "observing_run": "O3b",
+      "source_class": "BBH",
+      "published_gps": 1266618172.4,
+      "network_matched_filter_snr": 20.0,
+      "mass_1_source": 40.0,
+      "mass_2_source": 32.7,
+      "detectors": ["H1", "L1", "V1"],
+      "guard_seconds": 64.0
+    },
+    {
+      "event_id": "GW200225_060421",
+      "catalog": "GWTC-3-confident",
+      "version": "v1",
+      "observing_run": "O3b",
+      "source_class": "BBH",
+      "published_gps": 1266645879.3,
+      "network_matched_filter_snr": 12.5,
+      "mass_1_source": 19.3,
+      "mass_2_source": 14.0,
+      "detectors": ["H1", "L1"],
+      "guard_seconds": 64.0
+    }
+  ],
+  "off_source_null_selection_rule": {
+    "description": "Deterministic, blind selection of 4 off-source 1024-second null background intervals without inspecting strain data, anomaly scores, or noise stationarity.",
+    "anchor_events": [
+      "GW190521_074359",
+      "GW191230_180458",
+      "GW200129_065458",
+      "GW200224_222234"
+    ],
+    "fixed_offset_from_event_gps_seconds": 1024.0,
+    "interval_duration_seconds": 1024.0,
+    "catalog_clearance_seconds": 512.0,
+    "dq_requirement": "Require GWOSC DATA bit = 1 and all finite samples; if a pre-registered offset overlaps a DQ gap > 25%, step forward deterministically by +1024 s without inspecting anomaly scores."
+  }
+}
