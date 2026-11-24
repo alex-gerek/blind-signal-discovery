@@ -146,3 +146,21 @@ class WorkstationConfig:
 4. **Scientific Output Semantics:** Outputs strictly distinguish *measured features*, *statistical anomalies*, *detection candidates*, and *independently confirmed physical events* (never claimed by the single-channel workstation).
 5. **Reproducible Self-Test:** Synthetic injection self-test includes both positive injections with known ground truth (reporting both detected and missed injections) and a pure-noise negative control split.
 6. **Safe Research Operation:** Frozen detector math and historical benchmarks remain untouched; O3 holdout files and O3 GPS ranges are hard-blocked from loading, previewing, calibrating, or analyzing.
+
+---
+
+## Part 5 — Windows Desktop Launch, Shutdown, and Troubleshooting
+
+### Desktop Launch
+- Double-click the **BSD Workstation** shortcut on the Windows Desktop (created via `scripts/create_desktop_shortcut.ps1`).
+- The shortcut invokes `launch_workstation.bat` with the working directory set to the repository root on drive D:, uses the repository-stored icon (`app/assets/bsd_workstation.ico`), activates the local `.venv`, and opens `http://127.0.0.1:8501` in the default web browser.
+- **Duplicate-instance protection:** If BSD Workstation is already running on port `8501`, clicking the desktop shortcut again opens the existing session in your browser without spawning a second Streamlit server.
+
+### Clean Shutdown
+- Close the browser tab, then press `Ctrl+C` in the **BSD Local Measurement Workstation** console window (or close that console window directly). This terminates the local Streamlit server cleanly.
+
+### Troubleshooting
+- **Missing `.venv` or `streamlit.exe`:** The launcher pauses and prints the exact command to recreate `.venv` and install GUI dependencies (`pip install -e ".[gui,ligo,dev]"`).
+- **Port `8501` occupied by another application:** Close the conflicting local service on port `8501` or edit `PORT=8501` in `launch_workstation.bat`.
+- **Recreating the Desktop Shortcut:** Run `powershell -ExecutionPolicy Bypass -File scripts\create_desktop_shortcut.ps1` from the project root. Only the `.lnk` shortcut is placed on the Desktop; all project code, `.venv`, icon assets, and data remain strictly on drive D:.
+
