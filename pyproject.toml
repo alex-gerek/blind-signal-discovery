@@ -18,6 +18,9 @@ dependencies = [
 dev = [
     "pytest>=8.0",
 ]
+ligo = [
+    "h5py>=3.10",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]
