@@ -178,3 +178,46 @@ def test_synthetic_self_test_positive_and_negative_controls() -> None:
     assert gt["positive_injections_total"] == 4
     assert gt["positive_injections_detected"] + gt["positive_injections_missed"] == 4
     assert gt["positive_injections_detected"] >= 3
+
+
+def test_gui_measurement_clarity_labels() -> None:
+    """Verify all six GUI measurement clarity labels on generated figures and app source."""
+    import importlib.util
+    import matplotlib.pyplot as plt
+
+    app_path = Path(__file__).resolve().parent.parent / "app" / "bsd_workstation.py"
+    spec = importlib.util.spec_from_file_location("bsd_workstation_app", app_path)
+    assert spec is not None and spec.loader is not None
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+
+    res = run_synthetic_self_test(
+        WorkstationConfig(search_mode="transient", processing_mode="causal_trailing"),
+        n_bg_windows=80,
+        n_neg_control_windows=10,
+        n_pos_injections=2,
+        seed=55,
+    )
+
+    # 1, 2, 6: Waveform units, relative dB spectrogram colorbar, and absolute time interval
+    fig_w = mod._plot_window_waveform_and_spec(res, win_idx=5)
+    ax_wave, ax_spec, ax_cbar = fig_w.axes[0], fig_w.axes[1], fig_w.axes[2]
+    assert "normalized_sigma" in ax_wave.get_ylabel()
+    assert "Absolute Time: [20.0, 24.0] s" in ax_wave.get_title()
+    assert "Relative STFT Power" in ax_cbar.get_ylabel()
+    assert "dB re 1 unit^2" in ax_cbar.get_ylabel()
+    plt.close(fig_w)
+
+    # 3: Timeline dimensionless Y-axis and numeric threshold in legend
+    fig_t = mod._plot_timeline(res)
+    ax_t = fig_t.axes[0]
+    assert "dimensionless" in ax_t.get_ylabel()
+    legend_texts = [t.get_text() for t in ax_t.get_legend().get_texts()]
+    assert any("Active Calibrated Threshold =" in s and "dimensionless" in s for s in legend_texts)
+    plt.close(fig_t)
+
+    # 4 & 5: Candidate decision-rule caption and linear (NOT dB) SNR slider label
+    src_text = app_path.read_text(encoding="utf-8")
+    assert "standardized_score > active_threshold" in src_text
+    assert "raw_anomaly_score" in src_text
+    assert "linear dimensionless" in src_text and "NOT dB" in src_text

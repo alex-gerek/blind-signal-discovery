@@ -144,16 +144,16 @@ The background windows are split chronologically into **Split A (`30%`, `n_norm`
 
 ---
 
-## 7. Interface & Scientific Clarity Audit (Findings & Recommendations — No Code Modified Yet)
+## 7. Interface & Scientific Clarity Audit (Implemented in `app/bsd_workstation.py`)
 
-Inspecting `app/bsd_workstation.py` revealed **six concrete labeling ambiguities** to improve in a future UI polish commit:
+All six labeling ambiguities identified in the source audit have been implemented in `app/bsd_workstation.py` (without modifying detector mathematics):
 
-1. **Spectrogram colorbar (`Power (dB)`):** Currently implies calibrated physical power or PSD (`dB/Hz`). **Recommendation:** Relabel to `Relative STFT Power (10 log10 |Z|^2, dB re 1 unit^2)` and note `nperseg=128, Hann`.
-2. **Waveform Y-axis (`Amplitude`):** Omits units. **Recommendation:** Dynamically render `Amplitude ({units})` from `run_metadata["target_preprocessing"]["units"]` (e.g., `Amplitude (normalized_sigma)` for synthetic runs, `Amplitude (PCM_int16_normalized)` for WAV).
-3. **Timeline Y-axis (`STFT Max Global Score`):** Does not state that the quantity is dimensionless standardized null-tail units directly comparable to the threshold. **Recommendation:** Label `Standardized Global Anomaly Score (dimensionless)` and show the exact numeric threshold in the legend (`Active Threshold = 2.257`).
-4. **Candidate table (`raw_anomaly_score` vs. `standardized_score`):** Both columns appear side-by-side without explicitly stating that `standardized_score` (not `raw_anomaly_score`) is what is compared against `stft_threshold`. **Recommendation:** Add a short caption above the candidate table clarifying `Decision compares standardized_score > stft_threshold`.
-5. **Self-test slider label (`Injected Time-Domain Energy SNR`):** Users may mistake `12` or `18` for decibels (`12 dB`). **Recommendation:** Clarify `Injected Root-Energy SNR (||s||_2 / sigma, linear dimensionless — NOT dB)`.
-6. **Window Inspector time axis (`Time Within Window (s)`):** Does not display the corresponding absolute timeline span `[228.0 s, 232.0 s]` in the panel title. **Recommendation:** Include `Absolute Time: [t0_abs, t1_abs] s` in the window title so users can directly cross-reference `candidates.csv` timestamps.
+1. **Spectrogram colorbar:** Relabeled to `Relative STFT Power (10 log10 |Z|^2, dB re 1 unit^2; Hann nperseg=128)`.
+2. **Waveform Y-axis:** Dynamically displays `Amplitude ({units})` from `run_metadata["target_preprocessing"]["units"]`.
+3. **Timeline Y-axis & legend:** Explicitly labeled `(dimensionless)` with the exact numeric active calibrated threshold displayed in the legend (`Active Calibrated Threshold = 2.2568 (dimensionless)`).
+4. **Candidate table caption:** Explicitly clarifies that **`standardized_score > active_threshold`** (not `raw_anomaly_score`) governs detection, and displays `p_min = 1 / (N_thresh + 1)`.
+5. **Self-test SNR slider:** Relabeled `Injected Root-Energy SNR (||s||_2 / sigma, linear dimensionless — NOT dB)`.
+6. **Window Inspector title:** Displays `Absolute Time: [t_abs_0, t_abs_1] s` alongside the window index.
 
 ---
 
@@ -166,3 +166,25 @@ Inspecting `app/bsd_workstation.py` revealed **six concrete labeling ambiguities
 - **Target FAP vs. Empirical FAR:** Target FAP is the false-alarm rate you *ask for* (`1%`); empirical FAR is the fraction of clean background windows that *actually* cross your finite-sample threshold.
 - **Effective Sample Size ($N_{\text{eff}}$):** How many *truly independent* background windows your calibration set is worth after discounting window-to-window temporal correlation.
 - **Empirical p-Value ($p_{\text{emp}}$):** The fraction of calibration background windows that scored at least as high as your candidate. With $N_{\text{th}} = 84$, the smallest possible value is $1 / 85 = 0.0118$.
+
+---
+
+## 9. Focused Audit: `empirical_p_value = 0.0118` vs. `target_fap = 0.01` and `CALIBRATED_STATIONARY` vs. `PROVISIONAL`
+
+### 9.1 Why a Detected Candidate Can Display `empirical_p_value = 0.0118 > target_fap = 0.01`
+In the 120-window self-test (`seed = 2026`, `target_fap = 0.01`, `SNR = 18`), Window 57's top candidate has `standardized_score = 23.7075`, calibrated threshold `2.2568`, **is reported as detected**, yet displays `empirical_p_value = 0.011765` (`~0.0118 > 0.01`).
+
+**This is 100% mathematically consistent** and arises directly from finite-sample conformal resolution:
+1. **Threshold selection (`src/bsd/detector_v2.py`, lines 280–281):** With `120` background windows (`30%` Split A = `36`, `70%` Split B = $N_{\text{th}} = 84$), the order-statistic index for $\alpha = 0.01$ is:
+   $$k = \min\!\big(84,\, \lceil 0.99 \times 85 \rceil\big) = \min(84, 85) = 84$$
+   Thus $\tau_{\text{global}} = S_{(84)} = 2.2568$ is the **sample maximum** of all `84` calibration null scores — the strictest empirical threshold constructible from `84` samples.
+2. **Candidate decision (`detector_v2.py`, line 338):** The decision rule tests `standardized_score > global_threshold` (`23.7075 > 2.2568` -> **True**). It does **not** test `empirical_p_value <= target_fap`.
+3. **Conformal p-value floor (`detector_v2.py`, line 110):** Because zero calibration scores satisfy $S_i \ge 23.7075$ (`n_ge = 0`), the conformal p-value is:
+   $$p_{\text{emp}}(23.7075) = \frac{1 + 0}{84 + 1} = \frac{1}{85} = 0.011765$$
+   with `p_value_is_upper_bound = True` (meaning $p \le 0.0118$, not $p = 0.0118$). Empirically resolving $p_{\text{emp}} \le 0.01$ requires at least $N_{\text{th}} \ge 99$ threshold samples ($1/100 = 0.01$, i.e., `>= 142` background windows at `30%` Split A).
+
+### 9.2 Distinction Between `CALIBRATED_STATIONARY` (Candidate/Window Level) and `PROVISIONAL` (Workstation Level)
+These two labels answer **orthogonal questions** at different levels of the hierarchy:
+- **`CALIBRATED_STATIONARY` (Stream B per-window / per-candidate regime state):** Indicates that *during this specific 4-second window*, the background spectral continuum is statistically consistent with the active calibration reference (no detected regime shift, transition, or warmup). It describes **local stationarity**, NOT calibration ensemble size.
+- **`PROVISIONAL` (Workstation-wide `CalibrationStatusAudit`):** Indicates that the *calibration ensemble itself* does not satisfy all four statistical validation criteria (`N_thresh >= 150`, `N_eff >= 120`, `Ljung-Box p >= 0.05`, and dependence-aware upper 90% Beta FAR CI `<= 2.5%`). For `120` background windows (`N_thresh = 84`, `N_eff = 46.81`, 90% FAR CI `[0.11%, 6.20%]`), the workstation-wide calibration is **`PROVISIONAL`** even when every individual target window is **`CALIBRATED_STATIONARY`** relative to that provisional reference.
+

@@ -57,12 +57,17 @@ def _plot_window_waveform_and_spec(result: WorkstationRunResult, win_idx: int) -
     obs = result.target_observations[win_idx]
     win = result.windows[win_idx]
     t = np.arange(obs.signal.size, dtype=np.float64) / obs.sample_rate
+    units = result.run_metadata.get("target_preprocessing", {}).get("units", "arbitrary")
+    win_dur = float(result.run_metadata.get("config", {}).get("window_duration_s", obs.duration))
+    t_abs_0 = win_idx * win_dur
+    t_abs_1 = (win_idx + 1) * win_dur
 
     fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10.2, 5.4), sharex=True)
     ax1.plot(t, obs.signal, color="#1f4e79", lw=0.8)
-    ax1.set_ylabel("Amplitude")
+    ax1.set_ylabel(f"Amplitude ({units})")
     ax1.set_title(
-        f"Window {win_idx} ({obs.sample_id}) | Credibility: {win.credibility_status} | "
+        f"Window {win_idx} ({obs.sample_id}) | Absolute Time: [{t_abs_0:.1f}, {t_abs_1:.1f}] s | "
+        f"Regime: {win.credibility_status} | "
         f"Warnings: {', '.join(win.warning_causes) if win.warning_causes else 'None'}"
     )
     ax1.grid(alpha=0.25)
@@ -78,7 +83,7 @@ def _plot_window_waveform_and_spec(result: WorkstationRunResult, win_idx: int) -
     )
     pwr_db = 10.0 * np.log10(np.maximum(np.abs(zxx) ** 2, 1e-24))
     pcm = ax2.pcolormesh(times, freqs, pwr_db, shading="auto", cmap="viridis")
-    fig.colorbar(pcm, ax=ax2, label="Power (dB)")
+    fig.colorbar(pcm, ax=ax2, label="Relative STFT Power (10 log10 |Z|^2, dB re 1 unit^2; Hann nperseg=128)")
     for c in win.raw_stft_candidates:
         rect = plt.Rectangle(
             (c.t_start, c.f_min),
@@ -102,15 +107,22 @@ def _plot_timeline(result: WorkstationRunResult) -> plt.Figure:
     if mode == "transient":
         scores = [w.stft_max_score for w in result.windows]
         thresh = [w.stft_threshold for w in result.windows]
-        ylabel = "STFT Max Global Score"
+        ylabel = "Standardized Global Anomaly Score (dimensionless)"
     else:
         scores = [w.broadband_excess_score for w in result.windows]
         thresh = [w.broadband_threshold for w in result.windows]
-        ylabel = "Frozen-Ref Broadband Excess Score"
+        ylabel = "Frozen-Ref Broadband Excess Score (dimensionless)"
+
+    th_min, th_max = min(thresh), max(thresh)
+    th_lbl = (
+        f"Active Calibrated Threshold = {th_min:.4f} (dimensionless)"
+        if abs(th_max - th_min) < 1e-6
+        else f"Active Calibrated Threshold = {th_min:.4f}..{th_max:.4f} (dimensionless)"
+    )
 
     fig, ax = plt.subplots(figsize=(10.2, 3.2))
-    ax.plot(xs, scores, color="#1f4e79", lw=1.2, label=f"Stream A Score ({mode})")
-    ax.plot(xs, thresh, color="#d62728", ls="--", lw=1.3, label="Active Empirical Threshold")
+    ax.plot(xs, scores, color="#1f4e79", lw=1.2, label=f"Stream A Score ({mode}, dimensionless)")
+    ax.plot(xs, thresh, color="#d62728", ls="--", lw=1.3, label=th_lbl)
     for w in result.windows:
         if "CONTINUUM_DRIFT" in w.warning_causes:
             ax.axvspan(w.index - 0.5, w.index + 0.5, color="#fbd38d", alpha=0.25)
@@ -178,7 +190,15 @@ def main() -> None:
             sig_family = st.selectbox(
                 "Injected Signal Family", ("linear_chirp", "sinusoid", "broadband_pulse", "sinusoidal_fm")
             )
-            snr = float(st.slider("Injected Time-Domain Energy SNR", 8.0, 30.0, 18.0, step=1.0))
+            snr = float(
+                st.slider(
+                    "Injected Root-Energy SNR (||s||_2 / sigma, linear dimensionless — NOT dB)",
+                    8.0,
+                    30.0,
+                    18.0,
+                    step=1.0,
+                )
+            )
             st_seed = int(st.number_input("Self-Test Seed", 0, 999999, 2026, step=1))
             run_btn = st.button("Run Synthetic Self-Test", type="primary")
         else:
@@ -287,6 +307,13 @@ def main() -> None:
 
     with tab3:
         st.subheader("Preserved Raw Candidates & Statistical Anomalies (Stream A)")
+        th_now = result.windows[0].stft_threshold if result.windows else 0.0
+        st.caption(
+            f"**Decision Rule:** Candidates are nominated when **`standardized_score > active_threshold`** "
+            f"(dimensionless; initial threshold = `{th_now:.4f}`). `raw_anomaly_score` is the unstandardized "
+            f"cluster excess-power sum and is **not** compared directly against the threshold. "
+            f"Minimum resolvable empirical p-value is `p_min = 1 / (N_thresh + 1) = {result.calibration_audit.p_min:.4f}`."
+        )
         if result.candidates_rows:
             st.dataframe(pd.DataFrame(result.candidates_rows), use_container_width=True)
         else:
