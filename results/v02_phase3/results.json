@@ -1,0 +1,297 @@
+{
+  "metadata": {
+    "phase": "v0.2_phase3_coincidence",
+    "runtime_seconds": 207.19
+  },
+  "timing_injections": {
+    "summary": [
+      {
+        "family": "broadband_pulse",
+        "snr": 10.0,
+        "n_injections": 30,
+        "xcorr_bias_ms": 0.12698512388977795,
+        "xcorr_mae_ms": 1.4249866092627301,
+        "xcorr_rms_ms": 1.7861741093851755,
+        "xcorr_p95_abs_err_ms": 3.163259769031356,
+        "xcorr_frac_within_2ms": 0.6666666666666666,
+        "polarity_accuracy": 0.5,
+        "n_both_stft_detected": 30,
+        "stft_mae_ms": 4.398340001871883,
+        "stft_p95_abs_err_ms": 13.472636867385926
+      },
+      {
+        "family": "broadband_pulse",
+        "snr": 14.0,
+        "n_injections": 30,
+        "xcorr_bias_ms": 0.023123425778771137,
+        "xcorr_mae_ms": 1.0201281266893996,
+        "xcorr_rms_ms": 1.4366988575883521,
+        "xcorr_p95_abs_err_ms": 2.4754780017989106,
+        "xcorr_frac_within_2ms": 0.7,
+        "polarity_accuracy": 0.5666666666666667,
+        "n_both_stft_detected": 30,
+        "stft_mae_ms": 3.150513255039234,
+        "stft_p95_abs_err_ms": 10.280735860917158
+      },
+      {
+        "family": "broadband_pulse",
+        "snr": 18.0,
+        "n_injections": 30,
+        "xcorr_bias_ms": -0.05171412898586984,
+        "xcorr_mae_ms": 1.082682379677737,
+        "xcorr_rms_ms": 1.4981381789611552,
+        "xcorr_p95_abs_err_ms": 2.8993363546747255,
+        "xcorr_frac_within_2ms": 0.8,
+        "polarity_accuracy": 0.5,
+        "n_both_stft_detected": 30,
+        "stft_mae_ms": 2.9993657019397646,
+        "stft_p95_abs_err_ms": 8.781849559403375
+      },
+      {
+        "family": "broadband_pulse",
+        "snr": 25.0,
+        "n_injections": 30,
+        "xcorr_bias_ms": -0.08183822541520085,
+        "xcorr_mae_ms": 0.7017128161018905,
+        "xcorr_rms_ms": 1.198203177369426,
+        "xcorr_p95_abs_err_ms": 2.896544571333734,
+        "xcorr_frac_within_2ms": 0.9,
+        "polarity_accuracy": 0.7,
+        "n_both_stft_detected": 30,
+        "stft_mae_ms": 4.806185792592638,
+        "stft_p95_abs_err_ms": 13.187312246141262
+      },
+      {
+        "family": "linear_chirp",
+        "snr": 10.0,
+        "n_injections": 30,
+        "xcorr_bias_ms": -0.7049906204364346,
+        "xcorr_mae_ms": 1.7473574288465152,
+        "xcorr_rms_ms": 3.2763305394915623,
+        "xcorr_p95_abs_err_ms": 4.865237254638769,
+        "xcorr_frac_within_2ms": 0.7333333333333333,
+        "polarity_accuracy": 0.7333333333333333,
+        "n_both_stft_detected": 5,
+        "stft_mae_ms": 582.2029082581511,
+        "stft_p95_abs_err_ms": 1672.4473457498195
+      },
+      {
+        "family": "linear_chirp",
+        "snr": 14.0,
+        "n_injections": 30,
+        "xcorr_bias_ms": 0.24540281539555545,
+        "xcorr_mae_ms": 1.0240457647591976,
+        "xcorr_rms_ms": 1.7027454459844207,
+        "xcorr_p95_abs_err_ms": 4.018376705851642,
+        "xcorr_frac_within_2ms": 0.8,
+        "polarity_accuracy": 0.7666666666666667,
+        "n_both_stft_detected": 23,
+        "stft_mae_ms": 573.4695527853264,
+        "stft_p95_abs_err_ms": 1123.8283044611424
+      },
+      {
+        "family": "linear_chirp",
+        "snr": 18.0,
+        "n_injections": 30,
+        "xcorr_bias_ms": -0.06092171855024612,
+        "xcorr_mae_ms": 0.369023781860013,
+        "xcorr_rms_ms": 0.7415249405607667,
+        "xcorr_p95_abs_err_ms": 1.6447611023335527,
+        "xcorr_frac_within_2ms": 0.9666666666666667,
+        "polarity_accuracy": 0.8333333333333334,
+        "n_both_stft_detected": 30,
+        "stft_mae_ms": 635.7142310597015,
+        "stft_p95_abs_err_ms": 1514.565660789304
+      },
+      {
+        "family": "linear_chirp",
+        "snr": 25.0,
+        "n_injections": 30,
+        "xcorr_bias_ms": 0.001479967006375027,
+        "xcorr_mae_ms": 0.48907020332435597,
+        "xcorr_rms_ms": 0.9168378253931097,
+        "xcorr_p95_abs_err_ms": 2.300703970100869,
+        "xcorr_frac_within_2ms": 0.9,
+        "polarity_accuracy": 0.8,
+        "n_both_stft_detected": 30,
+        "stft_mae_ms": 458.83902818358877,
+        "stft_p95_abs_err_ms": 1130.0180505679355
+      }
+    ]
+  },
+  "ligo_dev": {
+    "events": [
+      {
+        "event": "GW150914",
+        "role": "reference_previously_examined",
+        "net_snr": 25.2,
+        "published_gps": 1126259462.4,
+        "n_pairs_pre_veto": 9,
+        "n_pairs_post_veto": 9,
+        "xcorr_top_pair": {
+          "delay_s": 0.007316048952136028,
+          "delay_ms": 7.316048952136028,
+          "abs_peak_corr": 0.43384655315614146,
+          "signed_peak_corr": -0.43384655315614146,
+          "within_10ms_light_travel": true,
+          "band_hz": [
+            35.0,
+            350.0
+          ],
+          "max_lag_s": 0.015
+        },
+        "time_slides_pre_veto": {
+          "n_slides": 500,
+          "slide_step_s": 4.0,
+          "coincidence_window_s": 0.05,
+          "n_bg_cands_a": 8,
+          "n_bg_cands_b": 6,
+          "single_epoch_livetime_hours": 0.4688888888888889,
+          "equivalent_time_slide_livetime_hours": 234.44444444444446,
+          "total_accidental_coincidences": 18,
+          "mean_coincidences_per_slide": 0.036,
+          "fraction_slides_with_ge1_coinc": 0.022,
+          "coincidence_far_per_hour": 0.07677725118483412,
+          "min_resolvable_p_value": 0.001996007984031936,
+          "significance_limitation": "Empirical coincidence significance is strictly bounded by available time-slide resolution: p >= 0.00200 (500 slides, 234.4 equiv. hours)."
+        },
+        "time_slides_post_veto": {
+          "n_slides": 500,
+          "slide_step_s": 4.0,
+          "coincidence_window_s": 0.05,
+          "n_bg_cands_a": 8,
+          "n_bg_cands_b": 4,
+          "single_epoch_livetime_hours": 0.4688888888888889,
+          "equivalent_time_slide_livetime_hours": 234.44444444444446,
+          "total_accidental_coincidences": 12,
+          "mean_coincidences_per_slide": 0.024,
+          "fraction_slides_with_ge1_coinc": 0.016,
+          "coincidence_far_per_hour": 0.05118483412322274,
+          "min_resolvable_p_value": 0.001996007984031936,
+          "significance_limitation": "Empirical coincidence significance is strictly bounded by available time-slide resolution: p >= 0.00200 (500 slides, 234.4 equiv. hours)."
+        }
+      },
+      {
+        "event": "GW170608",
+        "role": "independent_validation",
+        "net_snr": 15.4,
+        "published_gps": 1180922494.5,
+        "n_pairs_pre_veto": 0,
+        "n_pairs_post_veto": 0,
+        "xcorr_top_pair": null,
+        "time_slides_pre_veto": {
+          "n_slides": 500,
+          "slide_step_s": 4.0,
+          "coincidence_window_s": 0.05,
+          "n_bg_cands_a": 3,
+          "n_bg_cands_b": 0,
+          "single_epoch_livetime_hours": 0.4666666666666667,
+          "equivalent_time_slide_livetime_hours": 233.33333333333334,
+          "total_accidental_coincidences": 0,
+          "mean_coincidences_per_slide": 0.0,
+          "fraction_slides_with_ge1_coinc": 0.0,
+          "coincidence_far_per_hour": 0.0,
+          "min_resolvable_p_value": 0.001996007984031936,
+          "significance_limitation": "Empirical coincidence significance is strictly bounded by available time-slide resolution: p >= 0.00200 (500 slides, 233.3 equiv. hours)."
+        },
+        "time_slides_post_veto": {
+          "n_slides": 500,
+          "slide_step_s": 4.0,
+          "coincidence_window_s": 0.05,
+          "n_bg_cands_a": 0,
+          "n_bg_cands_b": 0,
+          "single_epoch_livetime_hours": 0.4666666666666667,
+          "equivalent_time_slide_livetime_hours": 233.33333333333334,
+          "total_accidental_coincidences": 0,
+          "mean_coincidences_per_slide": 0.0,
+          "fraction_slides_with_ge1_coinc": 0.0,
+          "coincidence_far_per_hour": 0.0,
+          "min_resolvable_p_value": 0.001996007984031936,
+          "significance_limitation": "Empirical coincidence significance is strictly bounded by available time-slide resolution: p >= 0.00200 (500 slides, 233.3 equiv. hours)."
+        }
+      },
+      {
+        "event": "GW170814",
+        "role": "independent_validation",
+        "net_snr": 17.2,
+        "published_gps": 1186741861.5,
+        "n_pairs_pre_veto": 0,
+        "n_pairs_post_veto": 0,
+        "xcorr_top_pair": null,
+        "time_slides_pre_veto": {
+          "n_slides": 500,
+          "slide_step_s": 4.0,
+          "coincidence_window_s": 0.05,
+          "n_bg_cands_a": 1,
+          "n_bg_cands_b": 2,
+          "single_epoch_livetime_hours": 0.4688888888888889,
+          "equivalent_time_slide_livetime_hours": 234.44444444444446,
+          "total_accidental_coincidences": 0,
+          "mean_coincidences_per_slide": 0.0,
+          "fraction_slides_with_ge1_coinc": 0.0,
+          "coincidence_far_per_hour": 0.0,
+          "min_resolvable_p_value": 0.001996007984031936,
+          "significance_limitation": "Empirical coincidence significance is strictly bounded by available time-slide resolution: p >= 0.00200 (500 slides, 234.4 equiv. hours)."
+        },
+        "time_slides_post_veto": {
+          "n_slides": 500,
+          "slide_step_s": 4.0,
+          "coincidence_window_s": 0.05,
+          "n_bg_cands_a": 1,
+          "n_bg_cands_b": 2,
+          "single_epoch_livetime_hours": 0.4688888888888889,
+          "equivalent_time_slide_livetime_hours": 234.44444444444446,
+          "total_accidental_coincidences": 0,
+          "mean_coincidences_per_slide": 0.0,
+          "fraction_slides_with_ge1_coinc": 0.0,
+          "coincidence_far_per_hour": 0.0,
+          "min_resolvable_p_value": 0.001996007984031936,
+          "significance_limitation": "Empirical coincidence significance is strictly bounded by available time-slide resolution: p >= 0.00200 (500 slides, 234.4 equiv. hours)."
+        }
+      },
+      {
+        "event": "GW170817",
+        "role": "independent_validation",
+        "net_snr": 33.0,
+        "published_gps": 1187008882.4,
+        "n_pairs_pre_veto": 0,
+        "n_pairs_post_veto": 0,
+        "xcorr_top_pair": null,
+        "time_slides_pre_veto": {
+          "n_slides": 500,
+          "slide_step_s": 4.0,
+          "coincidence_window_s": 0.05,
+          "n_bg_cands_a": 0,
+          "n_bg_cands_b": 4,
+          "single_epoch_livetime_hours": 0.43333333333333335,
+          "equivalent_time_slide_livetime_hours": 216.66666666666666,
+          "total_accidental_coincidences": 0,
+          "mean_coincidences_per_slide": 0.0,
+          "fraction_slides_with_ge1_coinc": 0.0,
+          "coincidence_far_per_hour": 0.0,
+          "min_resolvable_p_value": 0.001996007984031936,
+          "significance_limitation": "Empirical coincidence significance is strictly bounded by available time-slide resolution: p >= 0.00200 (500 slides, 216.7 equiv. hours)."
+        },
+        "time_slides_post_veto": {
+          "n_slides": 500,
+          "slide_step_s": 4.0,
+          "coincidence_window_s": 0.05,
+          "n_bg_cands_a": 0,
+          "n_bg_cands_b": 1,
+          "single_epoch_livetime_hours": 0.43333333333333335,
+          "equivalent_time_slide_livetime_hours": 216.66666666666666,
+          "total_accidental_coincidences": 0,
+          "mean_coincidences_per_slide": 0.0,
+          "fraction_slides_with_ge1_coinc": 0.0,
+          "coincidence_far_per_hour": 0.0,
+          "min_resolvable_p_value": 0.001996007984031936,
+          "significance_limitation": "Empirical coincidence significance is strictly bounded by available time-slide resolution: p >= 0.00200 (500 slides, 216.7 equiv. hours)."
+        }
+      }
+    ]
+  },
+  "figures": [
+    "fig01_timing_injection_validation.png",
+    "fig02_gw150914_xcorr_curve.png"
+  ]
+}
