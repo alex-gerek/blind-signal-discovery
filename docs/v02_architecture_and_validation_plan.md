@@ -1,6 +1,6 @@
 # Blind Signal Discovery (BSD) v0.2 — Architecture & Validation Plan
 
-> **Status:** Design & Validation Plan ONLY (no implementation started).  
+> **Status:** Approved in Principle — Design & Validation Plan ONLY (no implementation started).  
 > **Branch:** `development/v0.2` (branched from `main` at `12c7638`, preserving Experiments 001–003).  
 > **Frozen Baseline Reference:** Annotated tag `v0.1-baseline` (`ef8d3ee`).  
 > **Reserved Untouched Holdout Set:** `GW170729`, `GW170809`, `GW170818`, `GW170823` (see `results/ligo_experiment_003/v02_holdout_manifest.json`) — **must not be downloaded, inspected, or used during v0.2 development**.
@@ -50,9 +50,9 @@ Replace the single `125 ms` STFT with a 3-scale Hann STFT bank (all unpadded, DC
   3. Calibrate a **single** experiment-level 1% FAP threshold $\hat{\tau}_{\text{global}}$ via the conservative order statistic $k = \lceil(1 - \alpha)(N_{\text{cal}} + 1)\rceil$ on independent calibration split B ($N_{\text{cal}} \ge 1000$).
 - This guarantees exact finite-sample 1% experiment-level FAP control across **all three resolutions simultaneously** without Bonferroni over-conservatism.
 
-### 2.2 Interpretable Artifact Diagnostics & Configurable Vetoes (`src/bsd/vetoes.py`)
+### 2.2 Auditable Artifact Diagnostics & Reversible Vetoes (`src/bsd/vetoes.py`)
 
-Rather than silently discarding data, every candidate receives explicit diagnostic scores, with transparent, auditable veto flags:
+**Raw-Candidate Preservation Principle:** Every anomaly candidate exceeding the calibrated threshold **must be preserved verbatim** in the raw candidate list prior to any instrumental veto. Veto decisions are attached as auditable, reversible metadata flags (`veto_applied`, `veto_reasons`, `veto_metrics`) rather than destructively deleting candidates. All synthetic and real-data benchmarks must report detection performance, false-alarm rates, and candidate tables **both before and after vetoes**.
 
 1. **Impulsive Glitch Diagnostic & Veto (`glitch_veto`):**
    - Computes local time-domain kurtosis, spike width (consecutive samples exceeding $5\hat{\sigma}_{\text{MAD}}$), and single-frame broadband spectral flatness in the Short STFT scale.
@@ -64,18 +64,23 @@ Rather than silently discarding data, every candidate receives explicit diagnost
 3. **Adaptive Spectral Whitening Robustness:**
    - Tune/compare frequency-median kernel width on synthetic `shifted_ar2` (without touching real holdout data) to reduce resonance leakage while preserving narrowband signal sensitivity.
 
-### 2.3 Sub-10 ms Cross-Detector Coincidence & Consistency (`src/bsd/coincidence.py`)
+### 2.3 Sub-10 ms Cross-Detector Coincidence & Controlled Timing Validation (`src/bsd/coincidence.py`)
 
 For multi-detector evaluations (H1, L1, V1):
 - Use the Short STFT scale (`dt = 3.91 ms`) to narrow candidate peak timing uncertainty.
 - For any H1–L1 candidate pair within `|dt| <= 0.05 s`, compute band-limited normalized time-domain cross-correlation $r(\tau)$ over $\tau \in [-15, +15]\text{ ms}$ (physical light-travel bound $\pm 10\text{ ms}$ plus margin).
-- Validate coincidence significance strictly against **200+ unphysical background time shifts**.
+- **Empirical Timing Validation Requirement:** STFT hop size (`3.91 ms`) alone is **not** evidence of sub-10 ms timing accuracy. Sub-10 ms cross-detector timing accuracy must be explicitly validated using **controlled time-shift signal injections** (known synthetic delays spanning `[-10 ms, +10 ms]` injected into independent H1/L1 noise realizations) to measure empirical timing bias, RMS error, and 95% error bounds.
+- **Strengthened Time-Slide Background Analysis:** Expand unphysical background time-slide trials across all independent background validation epochs and report exact empirical upper bounds on accidental coincidence rates. **Never claim statistical significance (or false-alarm probability) finer than the resolution supported by the available independent background data and time-slide livetime** (`p >= 1 / (N_slides + 1)`).
 
 ### 2.4 Benchmark & Statistical Hygiene Improvements (Experiment 004)
 
 - Exact divisible stratification in synthetic benchmarks (`n_signal_test = 576 = 6 × 96`, `n_withheld_test = 192 = 8 × 24`).
 - Report both **global energy SNR** and **whitened matched-filter SNR** in colored noise.
 - Increase synthetic calibration ensemble to `N_cal = 1200` per seed (reducing finite-sample threshold variance and lowering empirical p-value floor to `0.00083`).
+- **Disaggregated False-Alarm Reporting:** Every benchmark must report three distinct false-alarm metrics separately (both before and after vetoes):
+  1. **Per-window false-alarm probability** (fraction of 4-second background windows containing $\ge 1$ candidate).
+  2. **Candidate false-alarm rate per hour** (total background candidates divided by total independent background livetime in hours).
+  3. **Coincident-event false-alarm statistics** (empirical accidental coincidence count, rate per time-slide / per hour of equivalent time-slide livetime, and minimum resolvable p-value).
 
 ---
 
@@ -99,8 +104,9 @@ Evaluate frozen v0.2 on the previously examined GWOSC events (`GW150914`, `GW151
 ### Stage 3 — One-Shot Blind Comparison on the Reserved Holdout Set
 **Only after all v0.2 code, hyperparameters, and veto thresholds are frozen:**
 - Download and verify the 4 untouched GWTC-1 holdout events (`GW170729`, `GW170809`, `GW170818`, `GW170823`).
-- Run **both** `v0.1-baseline` and frozen `v0.2` blindly in a single locked pass.
-- Report exact side-by-side recovery counts, timing errors, background FARs, and coincidence statistics.
+- Run **both** `v0.1-baseline` and frozen `v0.2` blindly in a single locked pass (reporting pre-veto and post-veto outputs, plus all three disaggregated false-alarm metrics).
+- Report exact side-by-side recovery counts, timing errors, background FARs, and time-slide coincidence statistics.
+- **Scope Limitation:** Treat these 4 reserved GWTC-1 events strictly as a **limited final holdout check**, not as sufficient statistical evidence of universal improvement across all astrophysical populations or observing runs.
 - **No post-hoc tuning is permitted after inspecting holdout results.**
 
 ---
@@ -108,7 +114,7 @@ Evaluate frozen v0.2 on the previously examined GWOSC events (`GW150914`, `GW151
 ## 4. Merge Gate to `main`
 
 `development/v0.2` may be merged into `main` only when:
-1. All automated pytest suites (existing 27 tests + new v0.2 tests) pass with 0 failures.
-2. Acceptance criteria **AC-1 through AC-5** are verified and documented with exact measurements.
+1. All automated pytest suites (existing 27 tests + new v0.2 tests, including controlled time-shift timing validation and veto reversibility tests) pass with 0 failures.
+2. Acceptance criteria **AC-1 through AC-5** are verified and documented with exact pre-veto and post-veto measurements, disaggregated false-alarm metrics, and background-bounded significance statements.
 3. The one-shot blind holdout comparison (`v0.1-baseline` vs. `v0.2`) is completed and reported transparently, including any regressions or missed holdout events.
-4. All previous Experiments 001–003 results on `main` remain intact and unmodified.
+4. All original `v0.1-baseline` results, failures, scientific reports, and reproducibility records on `main` (Experiments 001–003) remain completely intact and unmodified.
