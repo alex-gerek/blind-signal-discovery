@@ -4,7 +4,7 @@
 
 **Finding unknown structure in noisy time series, with a false-alarm rate you can measure.**
 
-[![Tests](https://img.shields.io/badge/tests-87%20passing-2ea44f.svg)](tests/)
+[![Recorded Python tests](https://img.shields.io/badge/Python%20tests-87%20reported%20at%20986dd46-64748b.svg)](docs/CURRENT_LIMITATIONS.md)
 [![License: MIT](https://img.shields.io/badge/license-MIT-0f9e8e.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-1f8fd0.svg)](pyproject.toml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24557479.svg)](https://doi.org/10.5281/zenodo.24557479)
@@ -43,23 +43,23 @@ Once the mathematical foundations, calibration limits, and failure modes are tho
 
 ## What has been measured
 
-Every claim requires a control with a known answer, explicit uncertainty, and documented failure modes.
+Every claim requires a control with a known answer, explicit uncertainty, and documented failure modes. The table distinguishes historical measurements from current-source checks; it does not report new reruns. See [known limitations and independent review scope](docs/CURRENT_LIMITATIONS.md).
 
 | Study / Check | Evidence & Measured Result | Scope / Reference |
 | --- | --- | --- |
-| **Automated regression suite (`v0.3.0`)** | **`87 / 87` pytest checks passing** (exact conformal `nextafter` bounds, low-FAP & Union STFT recovery, `n_norm_samples` Split-B alignment, `max_recal_buffer_windows` validation, coincidence/time-slide exposure, strict JSON `allow_nan=False` export) | [tests/](tests/) |
+| **Python regression checks** | Author-reported **`87 / 87` at `986dd46`**; independent follow-up at `e1bd520`: **70 passed, 2 deselected** in a selected subset (not a full-suite rerun). Exercised paths include exact conformal `nextafter` bounds, low-FAP & Union STFT recovery, `n_norm_samples` Split-B alignment, `max_recal_buffer_windows` validation, coincidence/time-slide exposure, strict JSON `allow_nan=False` export (scope differs between the recorded suites) | [tests/](tests/) |
 | **Confirmatory synthetic negative control** | `316 / 50,000 = 0.6320%` empirical FAR across `K = 100` independent seeds (`500` windows/seed, `N_B = 154`, expected $\mu_0 = 0.6452\%$, `FAIL_TO_REJECT_H0`) | [results/workstation_confirmatory_k100/](results/workstation_confirmatory_k100/report.md) · Two-sided MC SE erratum (`0.00069` → `0.00222319`) in [AUDIT_ERRATUM_47a5475.md](docs/AUDIT_ERRATUM_47a5475.md) |
 | **Manual Workstation verification (`986dd46`)** | Visually inspected synthetic self-test (`220` bg, `80` noise-only, `10` `linear_chirp` in `pink_colored`, `PROVISIONAL`, `UNION_UNAVAILABLE`, threshold `2.8889`): **`SNR=18`: `10/10` detected, `1/80` FA**; **`SNR=8`: `3/10` detected, `7/10` missed, `1/80` FA** | [manual_workstation_synthetic_verification_986dd46.md](docs/manual_workstation_synthetic_verification_986dd46.md) |
 | **v0.1 baseline synthetic benchmark** | `0.80%` held-out noise FAR (`12 / 1,500`, 95% CI `[0.41%, 1.39%]`); `59.51%` known-family recall; `37.92%` withheld `sinusoidal_fm` recall (`94.4%` at SNR 25); documented failure modes under `shifted_ar2` (`3.56%`) and impulsive glitches (`84.0%`) | [results/research_v01/report.md](results/research_v01/report.md) · [scientific_review_package.md](docs/scientific_review_package.md) |
 | **Historical adaptive & LIGO/Virgo O2 records** | Preserved untouched as pre-audit version records; O3 holdout (`docs/v03_o3_holdout_manifest.json`) strictly untouched | [AUDIT_ERRATUM_47a5475.md](docs/AUDIT_ERRATUM_47a5475.md) · [RESEARCH_HISTORY.md](docs/RESEARCH_HISTORY.md) |
 
-> **Historical note:** Passing the `v0.3.0` test suite verifies the audited code paths and does not automatically recompute or revalidate pre-audit historical reports under `results/`. See [docs/AUDIT_ERRATUM_47a5475.md](docs/AUDIT_ERRATUM_47a5475.md).
+> **Historical note:** Python regression checks cover their exercised code paths. They do not verify the separate JavaScript demo or automatically recompute or revalidate pre-audit historical reports under `results/`. See [docs/AUDIT_ERRATUM_47a5475.md](docs/AUDIT_ERRATUM_47a5475.md).
 
 ---
 
 ## Open the workstation
 
-- **In your browser (no installation required):** **[Open the Browser Workstation](https://alex-gerek.github.io/blind-signal-discovery/workstation/)** — runs template-free STFT excess-power whitening, 8-connected clustering, exact finite-sample conformal calibration (`1/(N+1) <= alpha`), interactive Viridis spectrograms with candidate boxes, local `.wav`/`.csv` upload in browser memory, and strict CSV/JSON export directly in your browser.
+- **In your browser (no installation required):** **[Open the Browser Workstation](https://alex-gerek.github.io/blind-signal-discovery/workstation/)** — runs template-free STFT excess-power whitening, 8-connected clustering, exact finite-sample conformal calibration (`1/(N+1) <= alpha`), interactive Viridis spectrograms with candidate boxes, local `.wav`/`.csv` upload in browser memory, and CSV/JSON export. **File-input and reproducibility limitations are open:** WAV aliasing, dropped nonfinite CSV rows, missing background-independence checks, and incomplete export provenance. Use synthetic data for demonstration and consult [known limitations](docs/CURRENT_LIMITATIONS.md) before drawing conclusions from file measurements.
 - **Project overview page:** [https://alex-gerek.github.io/blind-signal-discovery/](https://alex-gerek.github.io/blind-signal-discovery/)
 - **Full 3-scale audited Python Workstation (`app/bsd_workstation.py`):** For the full 3-scale `MultiResolutionDetector`, adaptive regime monitoring (`AdaptiveRegimeManagerV2b`), and `.hdf5`/`.npy` support locally on `127.0.0.1:8501`:
 
@@ -80,19 +80,20 @@ See [docs/bsd_workstation_plan_and_contract.md](docs/bsd_workstation_plan_and_co
 Requirements: Python 3.11+ on local CPU (`numpy`, `scipy`, `matplotlib`, `pytest`, optional `streamlit` and `h5py`).
 
 ```powershell
-# Run the full automated test suite (87 tests)
+# Run the Python test suite (the current result must be recorded with its commit)
 .\.venv\Scripts\python.exe -m pytest -v
 
 # Run fast smoke-test experiment
 .\.venv\Scripts\python.exe experiments\run_experiment.py --config configs\smoke.toml
 ```
 
-All synthetic random streams are derived deterministically via `numpy.random.SeedSequence`, ensuring reproducibility and statistical independence across calibration and evaluation splits.
+Python synthetic generators use named `numpy.random.SeedSequence` streams for repeatable draws. Repeatability does not prove statistical independence or data separation; the fallback mapping for arbitrary split names can collide. The browser demo uses a separate RNG. Record the implementation revision, configuration, seeds and input provenance for each study.
 
 ---
 
 ## Documentation, Audits, and Related Projects
 
+- **Known Limitations & Independent Review Scope:** [docs/CURRENT_LIMITATIONS.md](docs/CURRENT_LIMITATIONS.md)
 - **Mathematical Measurement Guide:** [docs/whisker_mathematical_measurement_guide.md](docs/whisker_mathematical_measurement_guide.md)
 - **Workstation Contract & Guide:** [docs/bsd_workstation_plan_and_contract.md](docs/bsd_workstation_plan_and_contract.md)
 - **Manual Workstation Verification (`986dd46`):** [docs/manual_workstation_synthetic_verification_986dd46.md](docs/manual_workstation_synthetic_verification_986dd46.md)
@@ -107,4 +108,6 @@ All synthetic random streams are derived deterministically via `numpy.random.See
 ## License & Citation
 
 - **License:** [MIT License](LICENSE) — Copyright (c) 2026 Lex Gerek. Third-party public datasets (e.g., GWOSC / LIGO Open Science Center) remain under their respective upstream licenses.
-- **Citation:** See [CITATION.cff](CITATION.cff) or cite via Zenodo DOI [`10.5281/zenodo.24557479`](https://doi.org/10.5281/zenodo.24557479).
+- **Archived release citation:** [CITATION.cff](CITATION.cff) describes **v0.3.0 at `c406e00`**, archived under DOI [`10.5281/zenodo.24557479`](https://doi.org/10.5281/zenodo.24557479).
+
+The current source may include changes after that archived snapshot. State the exact Git commit when citing later source. Version metadata use the `0.3.0` series consistently; no new release or archive is implied by these documentation corrections.

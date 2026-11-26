@@ -29,6 +29,8 @@ from typing import Any
 import numpy as np
 import scipy
 
+from bsd import __version__
+
 from bsd.adaptive_regime_v2b import (
     AdaptiveRegimeManagerV2b,
     AdaptiveRegimeV2bConfig,
@@ -455,7 +457,7 @@ def run_workstation_analysis(
     run_metadata = {
         "run_id": run_id,
         "timestamp_utc": run_ts.isoformat(),
-        "bsd_prototype_version": "0.3.0-phase2b-workstation",
+        "bsd_prototype_version": __version__,
         "git_commit": _get_git_commit(),
         "python_version": sys.version.split()[0],
         "platform": platform.platform(),
