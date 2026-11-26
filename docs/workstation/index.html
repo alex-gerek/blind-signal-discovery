@@ -224,7 +224,7 @@
       </select>
 
       <label>Injected Root-Energy SNR (||s||&#8322;/&sigma;, linear) <span class="range-val" id="snrVal">16</span></label>
-      <input type="range" id="snr" min="6" max="30" step="1" value="16" />
+      <input type="range" id="snr" min="2" max="30" step="1" value="16" />
 
       <label for="seed">Self-Test Seed</label>
       <input type="number" id="seed" value="2026" min="0" max="999999" />
@@ -410,15 +410,23 @@ function generateNoise(model, n, rng) {
   if (model === "gaussian_white") {
     for (let i = 0; i < n; i++) x[i] = randn(rng);
   } else if (model === "pink_colored") {
-    // Voss-McCartney / 3-pole IIR pink approximation normalized to unit std
-    let b0 = 0, b1 = 0, b2 = 0;
-    for (let i = 0; i < n; i++) {
-      const w = randn(rng);
-      b0 = 0.997 * b0 + w * 0.029;
-      b1 = 0.985 * b1 + w * 0.032;
-      b2 = 0.950 * b2 + w * 0.048;
-      x[i] = b0 + b1 + b2 + w * 0.184;
+    // Exact 1/f^1.0 power spectrum via FFT (matching src/bsd/noise.py)
+    const re = new Float64Array(n);
+    const im = new Float64Array(n);
+    for (let i = 0; i < n; i++) re[i] = randn(rng);
+    fftRadix2(re, im);
+    re[0] = 0; im[0] = 0;
+    for (let k = 1; k < n / 2; k++) {
+      const scale = 1.0 / Math.sqrt(k);
+      re[k] *= scale; im[k] *= scale;
+      re[n - k] *= scale; im[n - k] *= scale;
     }
+    re[n / 2] /= Math.sqrt(n / 2);
+    im[n / 2] = 0;
+    // Inverse FFT via conjugate
+    for (let i = 0; i < n; i++) im[i] = -im[i];
+    fftRadix2(re, im);
+    for (let i = 0; i < n; i++) x[i] = re[i] / n;
   } else {
     // shifted_ar2 resonant noise
     const r = 0.78, w0 = 2 * Math.PI * 110 / FS;
@@ -886,13 +894,26 @@ async function runMeasurement() {
     banner.innerHTML = `<strong>AVAILABLE:</strong> Exact conformal threshold <code>${threshold.toFixed(4)}</code> from <code>N=${sortedNull.length}</code> background windows (<code>p_min=${(1 / (sortedNull.length + 1)).toFixed(4)} &le; ${targetFap}</code>).`;
   }
 
-  document.getElementById("summaryMetrics").innerHTML = [
+  const summaryCards = [
     ["Background Windows", sortedNull.length],
     ["Conformal Threshold", threshold !== null ? threshold.toFixed(4) : "null (UNAVAILABLE)"],
     ["Min Resolvable p", (1 / (sortedNull.length + 1)).toFixed(4)],
     ["Active Anomaly Windows", `${nActive} / ${windows.length}`],
     ["Detection Available", `${run.summary.n_detection_available_windows} / ${windows.length}`]
-  ].map(([k, v]) => `<div class="metric"><div class="k">${k}</div><div class="v">${v}</div></div>`).join("");
+  ];
+  if (workflow === "synth") {
+    const negs0 = windows.filter(w => !w.inj);
+    const poss0 = windows.filter(w => w.inj);
+    const negFp0 = negs0.filter(w => w.activeFlag).length;
+    const posTp0 = poss0.filter(w => w.activeFlag).length;
+    summaryCards.push(
+      ["Injections Detected", `${posTp0} / ${poss0.length}`],
+      ["Injections Missed", `${poss0.length - posTp0} / ${poss0.length}`],
+      ["Negative Control False Alarms", `${negFp0} / ${negs0.length} (${(100 * negFp0 / Math.max(1, negs0.length)).toFixed(1)}%)`]
+    );
+  }
+  document.getElementById("summaryMetrics").innerHTML = summaryCards
+    .map(([k, v]) => `<div class="metric"><div class="k">${k}</div><div class="v">${v}</div></div>`).join("");
 
   // Update Tab 2
   drawTimeline(run);
