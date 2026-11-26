@@ -238,7 +238,7 @@
       <input type="file" id="tgtFile" accept=".wav,.csv,.txt" />
       <label for="csvFs">Sample Rate Hz (for CSV/TXT; must agree with time column)</label>
       <input type="number" id="csvFs" value="512" min="128" max="48000" />
-      <div class="caption">Files are processed locally in browser memory and never uploaded to any server. CSV/TXT: one value column, or time in seconds plus value; optional header, no quoted fields. Two time columns are compared as the same user-declared clock. Invalid rows are rejected. WAV must be mono; legacy WAV aliasing remains an open limitation.</div>
+      <div class="caption">Files are processed locally in browser memory and never uploaded to any server. CSV/TXT: one value column, or time in seconds plus value; optional header, no quoted fields. Two time columns are compared as the same user-declared clock. Invalid rows are rejected. WAV: mono RIFF/WAVE, original rate at least 512 Hz; filtered to exactly 512 Hz. Resampled useful band: 0–192 Hz, transition 192–256 Hz. Zero padding affects about 47 ms at each file edge; see exported preprocessing metadata.</div>
     </div>
 
     <button class="btn" id="runBtn">Run BSD Measurement</button>
@@ -248,7 +248,7 @@
   <main>
     <h1>Blind Signal Discovery (BSD) &mdash; Browser Workstation</h1>
     <div class="banner">
-      <strong>Browser Interactive Demo (v0.3.0):</strong> Runs template-free STFT excess-power whitening, 8-connected clustering, and exact finite-sample conformal calibration (<code>p_emp = (1 + n_ge) / (N_cal + 1) &le; target_fap</code>) directly in your browser &mdash; no installation required. For the full 3-scale Python core (author-reported <code>87/87</code> tests at <code>986dd46</code>), run <code>app/bsd_workstation.py</code> locally. Statistical anomalies are never proof of a physical discovery. <strong>Open limitations:</strong> WAV aliasing, externally unverified independence where timestamps are absent, seed-zero substitution, and incomplete synthetic-run provenance. Use synthetic demonstrations while these file-measurement issues are reviewed. See <a href="https://github.com/alex-gerek/blind-signal-discovery/blob/main/docs/CURRENT_LIMITATIONS.md">known limitations</a>.
+      <strong>Browser Interactive Demo (v0.3.0):</strong> Runs template-free STFT excess-power whitening, 8-connected clustering, and exact finite-sample conformal calibration (<code>p_emp = (1 + n_ge) / (N_cal + 1) &le; target_fap</code>) directly in your browser &mdash; no installation required. For the full 3-scale Python core (author-reported <code>87/87</code> tests at <code>986dd46</code>), run <code>app/bsd_workstation.py</code> locally. Statistical anomalies are never proof of a physical discovery. <strong>Measurement scope:</strong> WAV now uses a documented antialias FIR; resampled useful band is 0–192 Hz, with edge effects disclosed in metadata. Open limitations include externally unverified independence where timestamps are absent, seed-zero substitution, and incomplete synthetic-run provenance. Use synthetic demonstrations while these file-measurement issues are reviewed. See <a href="https://github.com/alex-gerek/blind-signal-discovery/blob/main/docs/CURRENT_LIMITATIONS.md">known limitations</a>.
     </div>
 
     <div class="tabs">
@@ -582,6 +582,120 @@ function analyzeWindow(signal, fs, seedThresh = 4.0) {
 }
 
 // --- WAV & CSV Readers (100% local in browser) ---
+// Browser WAV preprocessing v1. These constants define a new preprocessing
+// configuration; historical stride-decimated WAV measurements are not equivalent.
+const WAV_RESAMPLE_BETA = 8.6;
+const WAV_RESAMPLE_HALF_SUPPORT = 24;
+const WAV_RESAMPLE_MAX_COEFFICIENTS = 2000000;
+const WAV_RESAMPLE_PLANS = new Map();
+
+function besselI0(x) {
+  const y = x * x / 4;
+  let sum = 1, term = 1;
+  for (let k = 1; k <= 50; k++) {
+    term *= y / (k * k);
+    sum += term;
+    if (term <= sum * 1e-15) break;
+  }
+  return sum;
+}
+
+function resampleBrowserWav(signal, sourceRate, targetRate = FS) {
+  if (!Number.isSafeInteger(sourceRate) || !Number.isSafeInteger(targetRate) || targetRate <= 0 || sourceRate < targetRate) {
+    throw new Error("WAV resampling requires positive integer rates and source rate at least the target rate.");
+  }
+  if (!signal.length) throw new Error("WAV samples must be nonempty and finite.");
+  for (const value of signal) if (!Number.isFinite(value)) throw new Error("WAV samples must be nonempty and finite.");
+  const count = Math.floor(signal.length * targetRate / sourceRate);
+  if (!count) throw new Error("WAV is too short to produce a target-rate sample.");
+  if (sourceRate === targetRate) {
+    return { signal: Float64Array.from(signal), fs: targetRate, preprocessing: {
+      resampler_id: "bsd_kaiser_sinc_v1", resampled: false, source_sample_rate_hz: sourceRate,
+      sample_rate_hz: targetRate, antialias_filter: "not required (native target rate)",
+      useful_passband_hz: [0, targetRate / 2], edge_half_support_s: 0, output_sample_count: count,
+      processing_mode: "native_rate_copy", future_data_used: false, nominal_lookahead_s: 0
+    }};
+  }
+  function gcd(a, b) { while (b) { const r = a % b; a = b; b = r; } return a; }
+  const divisor = gcd(sourceRate, targetRate), up = targetRate / divisor, down = sourceRate / divisor;
+  const half = Math.ceil(WAV_RESAMPLE_HALF_SUPPORT * sourceRate / targetRate);
+  const taps = 2 * half + 1;
+  if (taps * up > WAV_RESAMPLE_MAX_COEFFICIENTS) throw new Error("WAV rate ratio exceeds browser FIR resource limits; use the Python Workstation.");
+  const key = `${sourceRate}/${targetRate}`;
+  let plan = WAV_RESAMPLE_PLANS.get(key);
+  if (!plan) {
+    plan = { kernels: new Map(), half, taps, up, down };
+    if (WAV_RESAMPLE_PLANS.size >= 2) WAV_RESAMPLE_PLANS.delete(WAV_RESAMPLE_PLANS.keys().next().value);
+    WAV_RESAMPLE_PLANS.set(key, plan);
+  }
+  const cutoff = targetRate * 0.4375, denomI0 = besselI0(WAV_RESAMPLE_BETA);
+  function kernel(phase) {
+    if (plan.kernels.has(phase)) return plan.kernels.get(phase);
+    const weights = new Float64Array(taps), fraction = phase / up;
+    let gain = 0;
+    for (let j = -half; j <= half; j++) {
+      const distance = j - fraction, radius = distance / half;
+      if (Math.abs(radius) > 1) continue;
+      const z = 2 * cutoff * distance / sourceRate;
+      const sinc = z === 0 ? 1 : Math.sin(Math.PI * z) / (Math.PI * z);
+      const weight = 2 * cutoff / sourceRate * sinc * besselI0(WAV_RESAMPLE_BETA * Math.sqrt(Math.max(0, 1 - radius * radius))) / denomI0;
+      weights[j + half] = weight;
+      gain += weight;
+    }
+    if (!Number.isFinite(gain) || Math.abs(gain) < 1e-12) throw new Error("Invalid WAV FIR normalization.");
+    for (let j = 0; j < taps; j++) weights[j] /= gain;
+    plan.kernels.set(phase, weights);
+    return weights;
+  }
+  const output = new Float64Array(count);
+  for (let i = 0; i < count; i++) {
+    const numerator = i * down, center = Math.floor(numerator / up), weights = kernel(numerator % up);
+    let value = 0;
+    const first = Math.max(-half, -center), last = Math.min(half, signal.length - 1 - center);
+    for (let j = first; j <= last; j++) value += signal[center + j] * weights[j + half];
+    output[i] = value;
+  }
+  return { signal: output, fs: targetRate, preprocessing: {
+    resampler_id: "bsd_kaiser_sinc_v1", resampled: true, source_sample_rate_hz: sourceRate,
+    sample_rate_hz: targetRate, up_factor: up, down_factor: down,
+    antialias_filter: "centered Kaiser-windowed sinc FIR", kaiser_beta: WAV_RESAMPLE_BETA,
+    cutoff_hz: cutoff, useful_passband_hz: [0, targetRate * 0.375], transition_band_hz: [targetRate * 0.375, targetRate / 2],
+    taps_per_phase: taps, phase_count: up, dc_normalization: "per phase",
+    padding: "zero", group_delay_compensated: true, edge_half_support_s: half / sourceRate,
+    processing_mode: "offline_centered_fir", future_data_used: true, nominal_lookahead_s: half / sourceRate,
+    applied_before_windowing: true, input_isolation: "each file filtered separately; no samples from other input files",
+    output_sample_count: count, duration_truncation_bound_s: 1 / targetRate,
+    warnings: ["FIR zero padding affects the first/last edge_half_support_s seconds; avoid interpreting edge structures without a control."]
+  }};
+}
+
+function inspectWavContainer(buffer) {
+  const view = new DataView(buffer);
+  const tag = offset => String.fromCharCode(...new Uint8Array(buffer, offset, 4));
+  if (buffer.byteLength < 12 || tag(0) !== "RIFF" || tag(8) !== "WAVE") throw new Error("Expected a little-endian RIFF/WAVE file; use the Python loader for other containers.");
+  const end = view.getUint32(4, true) + 8;
+  if (end > buffer.byteLength || end < 12) throw new Error("Truncated or invalid WAV RIFF size.");
+  let format = null, dataBytes = null;
+  for (let offset = 12; offset + 8 <= end;) {
+    const name = tag(offset), length = view.getUint32(offset + 4, true), start = offset + 8;
+    if (start + length > end) throw new Error("Truncated WAV chunk.");
+    if (name === "fmt ") {
+      if (format || length < 16) throw new Error("Ambiguous or invalid WAV format chunk.");
+      format = { format_tag: view.getUint16(start, true), channels: view.getUint16(start + 2, true),
+        sample_rate_hz: view.getUint32(start + 4, true), block_align_bytes: view.getUint16(start + 12, true), bits_per_sample: view.getUint16(start + 14, true) };
+    }
+    if (name === "data") {
+      if (dataBytes !== null) throw new Error("Multiple WAV data chunks are unsupported; use the Python loader.");
+      dataBytes = length;
+    }
+    offset = start + length + (length % 2);
+  }
+  if (!format || !dataBytes || !format.block_align_bytes) throw new Error("WAV requires a valid format and nonempty data chunk.");
+  if (format.channels !== 1) throw new Error("Browser WAV input must be mono; select a channel in the Python Workstation.");
+  if (format.sample_rate_hz < FS) throw new Error("Original WAV sample rate must be at least 512 Hz; upsampling cannot supply missing bandwidth.");
+  return { ...format, data_bytes: dataBytes, riff_size_bytes: end };
+}
+
 function parseBrowserCsv(text, csvFs) {
   const suppliedFs = Number(csvFs);
   if (!Number.isFinite(suppliedFs) || suppliedFs <= 0) throw new Error("CSV sample rate must be finite and positive.");
@@ -664,22 +778,22 @@ function validateBrowserPair(bg, tgt, bgHash, tgtHash) {
 async function readAudioOrCsv(file, csvFs) {
   const name = file.name.toLowerCase();
   if (name.endsWith(".wav")) {
+    const buffer = await file.arrayBuffer(), container = inspectWavContainer(buffer);
     const ctx = new (window.AudioContext || window.webkitAudioContext)();
     try {
-      const decoded = await ctx.decodeAudioData(await file.arrayBuffer());
-      if (decoded.numberOfChannels !== 1) throw new Error("Browser WAV input must be mono; select a channel in the Python Workstation for multichannel files.");
-      const ch0 = decoded.getChannelData(0), rawFs = decoded.sampleRate;
-      validateBrowserSignal(ch0, rawFs);
-      // Legacy stride decimation is unchanged in this input-validation step.
-      // It has NO antialias filter; WAV aliasing remains a documented open issue.
-      const step = Math.max(1, Math.round(rawFs / FS));
-      const out = new Float64Array(Math.floor(ch0.length / step));
-      for (let i = 0; i < out.length; i++) out[i] = ch0[i * step];
-      validateBrowserSignal(out, rawFs / step);
-      return { signal: out, fs: rawFs / step, timeInterval: null,
-        preprocessing: { format: "wav", channel: "mono", decoded_sample_rate_hz: rawFs,
-          sample_rate_hz: rawFs / step, stride_decimation_step: step, antialias_filter: "none",
-          warnings: ["WAV_ALIASING_RISK: legacy stride decimation has no antialias filter; frequency candidates require independent verification."] } };
+      const decoded = await ctx.decodeAudioData(buffer);
+      if (decoded.numberOfChannels !== 1) throw new Error("Decoded WAV must be mono; use the Python Workstation for multichannel input.");
+      const ch0 = decoded.getChannelData(0), decodedRate = decoded.sampleRate;
+      validateBrowserSignal(ch0, decodedRate);
+      const converted = resampleBrowserWav(ch0, decodedRate, FS);
+      validateBrowserSignal(converted.signal, converted.fs);
+      return { signal: converted.signal, fs: converted.fs, timeInterval: null,
+        preprocessing: { ...converted.preprocessing, format: "wav", channel: "mono",
+          original_sample_rate_hz: container.sample_rate_hz, decoded_sample_rate_hz: decodedRate,
+          decoder_resampled: container.sample_rate_hz !== decodedRate, wav_container: container,
+          decode_method: "Web Audio decodeAudioData (Float32 samples; decoder resampling is browser-dependent)",
+          decoded_sample_count: ch0.length, decoded_duration_s: ch0.length / decodedRate,
+          output_duration_s: converted.signal.length / converted.fs } };
     } finally { await ctx.close(); }
   }
   if (!/\.(csv|txt)$/.test(name)) throw new Error("Browser files must be WAV, CSV or TXT.");
