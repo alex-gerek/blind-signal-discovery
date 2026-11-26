@@ -13,6 +13,22 @@ A standalone, classical signal-processing and statistical research prototype for
 
 > Can a template-free anomaly detector discover previously unseen signal structures in noisy data while maintaining a controlled and independently measured experiment-level false-alarm rate?
 
+## Local Measurement Workstation (`v0.3.0`)
+
+BSD includes a standalone local Streamlit interface ([app/bsd_workstation.py](app/bsd_workstation.py)) for interactive calibration inspection, spectrogram review, and reproducible CSV/JSON export on synthetic self-tests or user-supplied local time-series files (`.wav`, `.csv`, `.npy`, `.hdf5`/`.h5`).
+
+- **Built-in Synthetic Self-Test:** Evaluates both positive injections (reporting detected and missed injections explicitly) and pure-noise negative-control windows under frozen conformal calibration.
+- **Explicit Calibration & Availability Semantics:** Reports 3-tier calibration status (`INSUFFICIENT`, `PROVISIONAL`, `VALIDATED`), distinguishes diagnostic Stream A nominations (`active_mode_diagnostic_nomination`) from accepted decisions (`active_mode_anomaly_flag`), and flags unattainable thresholds explicitly as `CALIBRATION_UNAVAILABLE` (`null` in strict RFC 8259 JSON).
+- **Interactive Inspection & Export:** Displays full-timeline anomaly scores vs. thresholds, per-window waveforms and STFT spectrograms with candidate bounding boxes, and exports reproducible `candidates.csv`, `timeline.csv`, and `run_report.json` bundles.
+- **Local-Only Safety:** Binds to `127.0.0.1:8501` by default; never classifies single-channel anomalies as independently confirmed physical events; reserved O3 holdout data is hard-blocked.
+- **Documentation & Verification:** See [docs/bsd_workstation_plan_and_contract.md](docs/bsd_workstation_plan_and_contract.md) and [docs/manual_workstation_synthetic_verification_986dd46.md](docs/manual_workstation_synthetic_verification_986dd46.md).
+
+```powershell
+# Install with GUI dependencies and launch locally
+.\.venv\Scripts\python.exe -m pip install -e ".[gui,dev]"
+.\.venv\Scripts\streamlit.exe run app\bsd_workstation.py --server.address 127.0.0.1 --server.port 8501
+```
+
 ## Documentation and Results
 
 - **Full Experimental Research Report (`research_v01`):** [results/research_v01/report.md](results/research_v01/report.md)
