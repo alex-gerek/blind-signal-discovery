@@ -231,7 +231,7 @@ min_cluster_bins = 2
 
 [calibration]
 target_fap = 0.02
-n_calibration_samples = 40
+n_calibration_samples = 50
 
 [evaluation]
 n_noise_test = 30

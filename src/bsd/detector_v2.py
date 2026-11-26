@@ -16,6 +16,7 @@ from typing import Any
 
 import numpy as np
 
+from bsd.calibration import conformal_order_rank
 from bsd.detector import CandidateEvent, DetectorConfig, TemplateFreeDetector
 from bsd.generator import Observation
 
@@ -92,16 +93,20 @@ class MultiResolutionCalibration:
     target_fap: float
     n_norm_samples: int
     n_threshold_samples: int
-    global_threshold: float
+    global_threshold: float | None
     scale_stats: dict[str, ScaleNormalizationStats]
     sorted_global_null_scores: np.ndarray
     empirical_calibration_fap: float
     calibration_seed: int
     quantile_summary: dict[str, float]
     scale_win_fractions_in_null: dict[str, float]
+    target_fap_attainable: bool = True
+    calibration_state: str = "AVAILABLE"
 
     def empirical_p_value(self, standardized_score: float) -> tuple[float, bool]:
         """Conformal finite-sample empirical p-value against global null."""
+        if not np.isfinite(standardized_score):
+            return (1.0, False)
         n = len(self.sorted_global_null_scores)
         if n == 0:
             return (1.0, False)
@@ -113,6 +118,8 @@ class MultiResolutionCalibration:
     def to_summary_dict(self) -> dict[str, Any]:
         return {
             "target_fap": self.target_fap,
+            "target_fap_attainable": self.target_fap_attainable,
+            "calibration_state": self.calibration_state,
             "n_norm_samples": self.n_norm_samples,
             "n_threshold_samples": self.n_threshold_samples,
             "n_total_calibration_samples": self.n_norm_samples + self.n_threshold_samples,
@@ -158,7 +165,7 @@ class MultiResolutionResult:
     detected: bool
     max_global_score: float
     winning_scale: str | None
-    threshold_used: float | None
+    threshold_used: float | None | None
     per_scale_raw_max: dict[str, float]
     per_scale_std_max: dict[str, float]
     candidates: list[MultiResolutionCandidate]
@@ -216,6 +223,7 @@ class MultiResolutionDetector:
         target_fap: float = 0.01,
         norm_fraction: float = 0.30,
         calibration_seed: int = 0,
+        allow_unattainable_fap: bool = False,
     ) -> MultiResolutionCalibration:
         """Split-sample joint calibration across all STFT resolutions.
 
@@ -223,9 +231,18 @@ class MultiResolutionDetector:
         (median) and upper-tail scale (`Q_0.95 - median`). Split B (remaining
         independent samples) calibrates the joint global-maximum threshold
         via the conservative order statistic `k = ceil((1 - alpha) * (N_B + 1))`.
+
+        When `k > N_B` (i.e. `1 / (N_B + 1) > target_fap`), the requested FAP
+        is mathematically unattainable:
+          - By default (`allow_unattainable_fap=False`), raises ValueError.
+          - If `allow_unattainable_fap=True`, sets `global_threshold = None`
+            and `calibration_state = "UNAVAILABLE_FAP_UNATTAINABLE"` so
+            detection explicitly abstains (JSON-safe `null`).
         """
-        if not (0.0 < target_fap < 1.0):
-            raise ValueError(f"target_fap must lie in (0, 1), got {target_fap}.")
+        if not np.isfinite(target_fap) or not (0.0 < target_fap < 1.0):
+            raise ValueError(f"target_fap must be finite and lie in (0, 1), got {target_fap}.")
+        if not np.isfinite(norm_fraction) or not (0.0 < norm_fraction < 1.0):
+            raise ValueError(f"norm_fraction must be finite and lie in (0, 1), got {norm_fraction}.")
         n_total = len(calibration_observations)
         if n_total < 60:
             raise ValueError(f"At least 60 calibration observations are required, got {n_total}.")
@@ -234,6 +251,15 @@ class MultiResolutionDetector:
         n_thresh = n_total - n_norm
         if n_thresh < 40:
             raise ValueError(f"Threshold calibration split too small: {n_thresh}.")
+
+        k_order, fap_attainable, min_required_n_thresh = conformal_order_rank(n_thresh, target_fap)
+        if not fap_attainable and not allow_unattainable_fap:
+            raise ValueError(
+                f"Unattainable target_fap={target_fap:.5g} for n_thresh={n_thresh} Split-B samples "
+                f"(n_total={n_total}, norm_fraction={norm_fraction}): minimum resolvable "
+                f"p_min=1/({n_thresh}+1)={1.0 / (n_thresh + 1):.5f} > target_fap. "
+                f"Need at least {min_required_n_thresh} Split-B samples or target_fap >= {1.0 / (n_thresh + 1):.5f}."
+            )
 
         norm_obs = calibration_observations[:n_norm]
         thresh_obs = calibration_observations[n_norm:]
@@ -277,9 +303,14 @@ class MultiResolutionDetector:
             win_counts[best_name] += 1
 
         sorted_global = np.sort(global_scores)
-        k_order = min(n_thresh, int(np.ceil((1.0 - target_fap) * (n_thresh + 1))))
-        global_threshold = float(sorted_global[k_order - 1])
-        emp_cal_fap = float(np.mean(sorted_global > global_threshold))
+        if fap_attainable and k_order is not None:
+            global_threshold: float | None = float(sorted_global[k_order - 1])
+            emp_cal_fap = float(np.mean(sorted_global > global_threshold))
+            cal_state = "AVAILABLE"
+        else:
+            global_threshold = None
+            emp_cal_fap = 0.0
+            cal_state = "UNAVAILABLE_FAP_UNATTAINABLE"
 
         q_summary = {
             "p50": float(np.quantile(sorted_global, 0.50)),
@@ -301,6 +332,8 @@ class MultiResolutionDetector:
             calibration_seed=int(calibration_seed),
             quantile_summary=q_summary,
             scale_win_fractions_in_null=win_fracs,
+            target_fap_attainable=fap_attainable,
+            calibration_state=cal_state,
         )
 
     def analyze(
@@ -320,6 +353,7 @@ class MultiResolutionDetector:
         max_global = -float("inf")
         winning_scale: str | None = None
         total_tf_bins = 0
+        det_available = bool(calibration.target_fap_attainable and calibration.global_threshold is not None)
 
         for s in self.scales:
             raw_max, raw_cands, diag = per_scale[s.name]
@@ -333,44 +367,47 @@ class MultiResolutionDetector:
                 max_global = std_max
                 winning_scale = s.name
 
-            for c in raw_cands:
-                std_score = stats.standardize(c.anomaly_score)
-                if std_score > calibration.global_threshold:
-                    p_val, p_ub = calibration.empirical_p_value(std_score)
-                    all_accepted.append(
-                        MultiResolutionCandidate(
-                            candidate_id=len(all_accepted) + 1,
-                            scale_name=s.name,
-                            t_start=c.t_start,
-                            t_end=c.t_end,
-                            f_min=c.f_min,
-                            f_max=c.f_max,
-                            peak_time=c.peak_time,
-                            peak_freq=c.peak_freq,
-                            raw_anomaly_score=c.anomaly_score,
-                            standardized_score=std_score,
-                            peak_excess_power=c.peak_excess_power,
-                            n_bins=c.n_bins,
-                            empirical_p_value=p_val,
-                            p_value_is_upper_bound=p_ub,
-                            diagnostics=dict(c.diagnostics),
+            if det_available and calibration.global_threshold is not None:
+                for c in raw_cands:
+                    std_score = stats.standardize(c.anomaly_score)
+                    if std_score > calibration.global_threshold:
+                        p_val, p_ub = calibration.empirical_p_value(std_score)
+                        all_accepted.append(
+                            MultiResolutionCandidate(
+                                candidate_id=len(all_accepted) + 1,
+                                scale_name=s.name,
+                                t_start=c.t_start,
+                                t_end=c.t_end,
+                                f_min=c.f_min,
+                                f_max=c.f_max,
+                                peak_time=c.peak_time,
+                                peak_freq=c.peak_freq,
+                                raw_anomaly_score=c.anomaly_score,
+                                standardized_score=std_score,
+                                peak_excess_power=c.peak_excess_power,
+                                n_bins=c.n_bins,
+                                empirical_p_value=p_val,
+                                p_value_is_upper_bound=p_ub,
+                                diagnostics=dict(c.diagnostics),
+                            )
                         )
-                    )
 
         all_accepted.sort(key=lambda c: c.standardized_score, reverse=True)
-        detected = len(all_accepted) > 0
+        detected = det_available and len(all_accepted) > 0
 
         return MultiResolutionResult(
             sample_id=observation.sample_id,
             detected=detected,
             max_global_score=float(max_global),
             winning_scale=winning_scale,
-            threshold_used=calibration.global_threshold,
+            threshold_used=calibration.global_threshold if det_available else None,
             per_scale_raw_max=per_scale_raw_max,
             per_scale_std_max=per_scale_std_max,
             candidates=all_accepted,
             diagnostics={
                 "n_scales": len(self.scales),
                 "total_tf_bins_across_scales": total_tf_bins,
+                "detection_available": det_available,
+                "calibration_state": calibration.calibration_state,
             },
         )

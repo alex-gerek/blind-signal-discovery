@@ -16,12 +16,14 @@ from scipy import signal as sp_signal, stats
 
 from bsd.adaptive_regime import (
     CRED_CALIBRATED,
+    CRED_CALIBRATION_UNAVAILABLE,
     CRED_RECALIBRATING,
     CRED_TRANSITION,
     SIG_EXACT,
     SIG_UNCERTAIN,
     extract_continuum_features,
 )
+from bsd.calibration import conformal_order_rank
 from bsd.detector_v2 import (
     MultiResolutionCalibration,
     MultiResolutionCandidate,
@@ -34,6 +36,7 @@ from bsd.vetoes import VetoAssessment, VetoConfig, apply_vetoes
 SIG_EMPIRICAL_PROVISIONAL = "EMPIRICAL_PROVISIONAL"
 SIG_EMPIRICAL_VALIDATED = "EMPIRICAL_VALIDATED"
 SIG_EMPIRICAL_DEPENDENT = "EMPIRICAL_DEPENDENT_UNCERTAIN"
+SIG_EMPIRICAL_UNAVAILABLE = "EMPIRICAL_UNAVAILABLE_FAP_UNATTAINABLE"
 
 CONT_STABLE = "STABLE"
 CONT_SHIFT = "SHIFT_DETECTED"
@@ -65,8 +68,17 @@ def estimate_calibration_uncertainty(
     chronological_null_scores: np.ndarray,
     target_fap: float = 0.01,
 ) -> CalibrationUncertaintySummary:
-    """Test temporal dependence and compute nominal i.i.d. + dependence-aware Beta FAR CIs."""
+    """Test linear lag-1..10 autocorrelation and compute nominal i.i.d. + N_eff Beta FAR CIs.
+
+    Note: Ljung-Box and Bartlett N_eff screen for linear autocorrelation at lags 1..10
+    only; passing them does NOT prove statistical independence, stationarity, or
+    real-data exchangeability.
+    """
     x = np.asarray(chronological_null_scores, dtype=np.float64)
+    if x.size > 0 and not np.all(np.isfinite(x)):
+        raise ValueError("chronological_null_scores must contain only finite values.")
+    if not np.isfinite(target_fap) or not (0.0 < target_fap < 1.0):
+        raise ValueError(f"target_fap must be finite and in (0, 1), got {target_fap}.")
     n = int(x.size)
     if n < 5:
         return CalibrationUncertaintySummary(
@@ -139,12 +151,16 @@ class BroadbandChannelCalibration:
 
     band_medians: np.ndarray
     band_mad_scales: np.ndarray
-    threshold: float
+    threshold: float | None
     alpha_channel: float
     sorted_null_scores: np.ndarray
     uncertainty: CalibrationUncertaintySummary
+    target_fap_attainable: bool = True
+    calibration_state: str = "AVAILABLE"
 
     def empirical_p_value(self, score: float) -> tuple[float, bool]:
+        if not np.isfinite(score):
+            return (1.0, False)
         n = int(self.sorted_null_scores.size)
         if n == 0:
             return (1.0, False)
@@ -177,6 +193,9 @@ class FrozenReferenceBroadbandChannel:
         self.stft_nperseg = stft_nperseg
 
     def _band_vec(self, obs: Observation) -> np.ndarray:
+        x = np.asarray(obs.signal, dtype=np.float64)
+        if x.size == 0 or not np.all(np.isfinite(x)):
+            raise ValueError(f"Observation '{obs.sample_id}' must be non-empty and finite.")
         feat = extract_continuum_features(obs, self.freq_bands_hz, self.stft_nperseg)
         return feat[2:]  # 4 log continuum bands
 
@@ -191,7 +210,21 @@ class FrozenReferenceBroadbandChannel:
         norm_observations: list[Observation],
         thresh_observations: list[Observation],
         alpha_channel: float,
+        allow_unattainable_fap: bool = False,
     ) -> BroadbandChannelCalibration:
+        if not norm_observations or not thresh_observations:
+            raise ValueError("norm_observations and thresh_observations must be non-empty.")
+        if not np.isfinite(alpha_channel) or not (0.0 < alpha_channel < 1.0):
+            raise ValueError(f"alpha_channel must be finite and in (0, 1), got {alpha_channel}.")
+
+        n = len(thresh_observations)
+        k_order, fap_attainable, min_req = conformal_order_rank(n, alpha_channel)
+        if not fap_attainable and not allow_unattainable_fap:
+            raise ValueError(
+                f"Unattainable alpha_channel={alpha_channel:.5g} for n_thresh={n}: "
+                f"p_min=1/({n}+1)={1.0 / (n + 1):.5f} > alpha_channel (need >= {min_req} Split-B samples)."
+            )
+
         mat_norm = np.vstack([self._band_vec(o) for o in norm_observations])
         med = np.median(mat_norm, axis=0)
         mad = 1.4826 * np.median(np.abs(mat_norm - med[None, :]), axis=0)
@@ -201,9 +234,12 @@ class FrozenReferenceBroadbandChannel:
         null_scores = np.array([self.score(o, med, scales) for o in thresh_observations], dtype=np.float64)
         unc = estimate_calibration_uncertainty(null_scores, target_fap=alpha_channel)
         sorted_s = np.sort(null_scores)
-        n = sorted_s.size
-        k = min(n, max(1, int(np.ceil((1.0 - alpha_channel) * (n + 1)))))
-        thresh = float(sorted_s[k - 1])
+        if fap_attainable and k_order is not None:
+            thresh: float | None = float(sorted_s[k_order - 1])
+            cal_state = "AVAILABLE"
+        else:
+            thresh = None
+            cal_state = "UNAVAILABLE_FAP_UNATTAINABLE"
         return BroadbandChannelCalibration(
             band_medians=med,
             band_mad_scales=scales,
@@ -211,6 +247,8 @@ class FrozenReferenceBroadbandChannel:
             alpha_channel=alpha_channel,
             sorted_null_scores=sorted_s,
             uncertainty=unc,
+            target_fap_attainable=fap_attainable,
+            calibration_state=cal_state,
         )
 
 
@@ -221,11 +259,20 @@ def calibrate_joint_stft_and_broadband(
     target_fwer: float = 0.01,
     norm_fraction: float = 0.30,
     calibration_seed: int = 0,
+    allow_unattainable_fap: bool = False,
 ) -> JointDetectorCalibration:
-    """Calibrate STFT bank + frozen-reference broadband channel with Sidak FWER control."""
+    """Calibrate STFT bank + frozen-reference broadband channel with Sidak FWER budget.
+
+    Note: The Sidak per-channel budget `1 - sqrt(1 - target_fwer)` is exact under
+    channel independence (conservative under positive orthant dependence) and is
+    NOT a distribution-free guarantee under arbitrary dependence; Bonferroni
+    (`target_fwer / 2`) provides a distribution-free bound.
+    """
     n_total = len(calibration_observations)
     if n_total < 60:
         raise ValueError(f"Need >= 60 calibration observations for joint calibration, got {n_total}.")
+    if not np.isfinite(target_fwer) or not (0.0 < target_fwer < 1.0):
+        raise ValueError(f"target_fwer must be finite and in (0, 1), got {target_fwer}.")
     alpha_each = float(1.0 - np.sqrt(1.0 - target_fwer))
 
     # Chronological split preserves temporal order for dependence testing on threshold split!
@@ -238,17 +285,30 @@ def calibrate_joint_stft_and_broadband(
         target_fap=alpha_each,
         norm_fraction=norm_fraction,
         calibration_seed=calibration_seed,
+        allow_unattainable_fap=allow_unattainable_fap,
     )
     # Chronological STFT null scores on threshold split for temporal dependence audit
     stft_chrono = np.array([detector.analyze(o, stft_cal).max_global_score for o in thresh_obs], dtype=np.float64)
     stft_unc = estimate_calibration_uncertainty(stft_chrono, target_fap=alpha_each)
 
-    bb_cal = broadband_channel.calibrate_with_split(norm_obs, thresh_obs, alpha_channel=alpha_each)
+    bb_cal = broadband_channel.calibrate_with_split(
+        norm_obs, thresh_obs, alpha_channel=alpha_each, allow_unattainable_fap=allow_unattainable_fap
+    )
     bb_chrono = np.array(
         [broadband_channel.score(o, bb_cal.band_medians, bb_cal.band_mad_scales) for o in thresh_obs],
         dtype=np.float64,
     )
-    comb_fp = np.mean((stft_chrono > stft_cal.global_threshold) | (bb_chrono > bb_cal.threshold))
+    stft_hit = (
+        (stft_chrono > stft_cal.global_threshold)
+        if stft_cal.global_threshold is not None
+        else np.zeros_like(stft_chrono, dtype=bool)
+    )
+    bb_hit = (
+        (bb_chrono > bb_cal.threshold)
+        if bb_cal.threshold is not None
+        else np.zeros_like(bb_chrono, dtype=bool)
+    )
+    comb_fp = np.mean(stft_hit | bb_hit)
     return JointDetectorCalibration(
         target_fwer=target_fwer,
         alpha_per_family_sidak=alpha_each,
@@ -316,19 +376,33 @@ def calibrate_separate_search_modes(
     # 2. Dedicated Persistent Search broadband calibration (full target_fap_persistent)
     pers_bb_cal = broadband_channel.calibrate_with_split(norm_obs, thresh_obs, alpha_channel=target_fap_persistent)
 
-    # 3. Explicit Sidak-corrected Union calibration (used ONLY for combined discovery claims)
+    # 3. Explicit Sidak-corrected Union calibration (assumes channel independence / POD;
+    #    abstain with +inf threshold if Split-B sample size cannot attain alpha_union)
     union_stft_cal = detector.calibrate(
         calibration_observations,
         target_fap=alpha_union,
         norm_fraction=norm_fraction,
         calibration_seed=calibration_seed,
+        allow_unattainable_fap=True,
     )
-    union_bb_cal = broadband_channel.calibrate_with_split(norm_obs, thresh_obs, alpha_channel=alpha_union)
+    union_bb_cal = broadband_channel.calibrate_with_split(
+        norm_obs, thresh_obs, alpha_channel=alpha_union, allow_unattainable_fap=True
+    )
     bb_chrono = np.array(
         [broadband_channel.score(o, union_bb_cal.band_medians, union_bb_cal.band_mad_scales) for o in thresh_obs],
         dtype=np.float64,
     )
-    union_fp = float(np.mean((stft_chrono > union_stft_cal.global_threshold) | (bb_chrono > union_bb_cal.threshold)))
+    stft_u_hit = (
+        (stft_chrono > union_stft_cal.global_threshold)
+        if union_stft_cal.global_threshold is not None
+        else np.zeros_like(stft_chrono, dtype=bool)
+    )
+    bb_u_hit = (
+        (bb_chrono > union_bb_cal.threshold)
+        if union_bb_cal.threshold is not None
+        else np.zeros_like(bb_chrono, dtype=bool)
+    )
+    union_fp = float(np.mean(stft_u_hit | bb_u_hit))
 
     return SeparateSearchModesCalibration(
         target_fap_transient=target_fap_transient,
@@ -420,6 +494,7 @@ class AdaptiveRegimeV2bConfig:
     stability_confirm_windows: int = 10
     provisional_recal_windows: int = 60
     mature_recal_windows: int = 200
+    max_recal_buffer_windows: int = 2000
     internal_stability_z_max: float = 3.0
     glitch_rate_threshold: float = 0.25  # >= 3 of 12 windows elevated -> GLITCH_STORM
     target_fwer: float = 0.01
@@ -442,11 +517,11 @@ class DualOutputWindowV2b:
     raw_stft_candidates: tuple[MultiResolutionCandidate, ...]
     surviving_stft_candidates: tuple[MultiResolutionCandidate, ...]
     stft_max_score: float
-    stft_threshold: float
+    stft_threshold: float | None
     stft_nominated_raw: bool
     stft_nominated_post_veto: bool
     broadband_excess_score: float
-    broadband_threshold: float
+    broadband_threshold: float | None
     broadband_nominated: bool
     joint_nominated_post_veto: bool
     veto_assessment: VetoAssessment | None
@@ -465,13 +540,15 @@ class DualOutputWindowV2b:
     glitch_crest_z: float
     max_feature_z_drift: float
     diagnostics: dict[str, Any] = field(default_factory=dict)
+    detection_available: bool = True
 
     @property
     def is_clean_calibrated(self) -> bool:
-        """True only when continuum is calibrated AND no glitch storm is active."""
+        """True only when continuum is calibrated, no glitch storm is active, AND detection is available."""
         return (
             self.credibility_status == CRED_CALIBRATED
             and self.glitch_storm_status == GLITCH_QUIET
+            and self.detection_available
         )
 
 
@@ -484,6 +561,10 @@ class AdaptiveRegimeManagerV2b:
             raise ValueError(f"Invalid mode: {self.config.mode!r}")
         if self.config.policy not in ("transient", "persistent"):
             raise ValueError(f"Invalid policy: {self.config.policy!r}")
+        for attr in ("max_recal_buffer_windows", "provisional_recal_windows", "mature_recal_windows"):
+            val = getattr(self.config, attr)
+            if isinstance(val, bool) or not isinstance(val, int) or val < 1:
+                raise ValueError(f"{attr} must be a positive integer >= 1, got {val!r}.")
 
     def fit_continuum_reference(self, reference_observations: list[Observation]) -> ReferenceBackgroundState:
         cfg = self.config
@@ -590,6 +671,31 @@ class AdaptiveRegimeManagerV2b:
         glitch_ref_refresh_count = 0
         glitch_ref_blocked_count = 0
 
+        # Dynamically compute minimum total windows needed for BOTH dedicated STFT FAP
+        # and (in separate-modes) the stricter Sidak Union STFT FAP at norm_fraction=0.25.
+        def _req_total_for_fap(target_fap: float) -> int:
+            _, _, min_nth = conformal_order_rank(1, target_fap)
+            req_nth = max(40, min_nth)
+            ntot = max(60, int(np.ceil(req_nth / 0.75)))
+            while ntot - max(20, int(round(ntot * 0.25))) < req_nth:
+                ntot += 1
+            while ntot > 60 and (ntot - 1) - max(20, int(round((ntot - 1) * 0.25))) >= req_nth:
+                ntot -= 1
+            return ntot
+
+        required_total_for_stft = _req_total_for_fap(stft_recal_fap)
+        required_total_for_union = _req_total_for_fap(union_sidak_fap) if is_separate else required_total_for_stft
+        effective_mature_windows = max(cfg.mature_recal_windows, required_total_for_stft, required_total_for_union)
+        resource_limit_blocked_stft = (
+            required_total_for_stft > cfg.max_recal_buffer_windows
+            or cfg.provisional_recal_windows > cfg.max_recal_buffer_windows
+        )
+        resource_limit_blocked_union = is_separate and (
+            required_total_for_union > cfg.max_recal_buffer_windows
+            or cfg.provisional_recal_windows > cfg.max_recal_buffer_windows
+        )
+        resource_limit_blocked = resource_limit_blocked_stft or resource_limit_blocked_union
+
         regime_id = 0
         state = CRED_CALIBRATED
         cusum_s = 0.0
@@ -601,8 +707,38 @@ class AdaptiveRegimeManagerV2b:
         outputs: list[DualOutputWindowV2b] = []
 
         for i, obs in enumerate(observations):
-            # --- Stream A: ALWAYS compute both raw scores & nominations ---
-            det_res = detector.analyze(obs, active_stft_cal)
+            # Snapshot exact calibration state actually used to evaluate window i
+            # (any recalibration triggered at window i takes effect strictly at window i + 1)
+            used_stft_cal = active_stft_cal
+            used_union_stft_thresh = union_stft_thresh
+            used_unc = active_unc
+            used_regime_id = regime_id
+            used_is_mature = active_is_mature
+            used_stft_avail = bool(used_stft_cal.target_fap_attainable and used_stft_cal.global_threshold is not None)
+            used_bb_avail = bool(bb_cal.target_fap_attainable and bb_cal.threshold is not None)
+            used_union_stft_avail = (
+                bool(used_union_stft_thresh is not None and np.isfinite(used_union_stft_thresh))
+                if is_separate
+                else used_stft_avail
+            )
+            used_union_bb_avail = (
+                bool(union_bb_thresh is not None and np.isfinite(union_bb_thresh))
+                if is_separate
+                else used_bb_avail
+            )
+            if used_union_stft_avail and used_union_bb_avail:
+                used_union_status = "FULL_UNION_AVAILABLE"
+            elif used_union_bb_avail:
+                used_union_status = "PARTIAL_BROADBAND_ONLY"
+            elif used_union_stft_avail:
+                used_union_status = "PARTIAL_STFT_ONLY"
+            else:
+                used_union_status = "UNION_UNAVAILABLE"
+            used_det_avail = used_stft_avail if cfg.policy == "transient" else used_bb_avail
+            cal_updated_for_next = False
+
+            # --- Stream A: ALWAYS compute both raw scores & nominations using used_stft_cal ---
+            det_res = detector.analyze(obs, used_stft_cal)
             raw_cands = tuple(det_res.candidates)
             if veto_config is not None:
                 v_assess: VetoAssessment | None = apply_vetoes(obs, raw_cands, veto_config)
@@ -612,13 +748,17 @@ class AdaptiveRegimeManagerV2b:
                 surv_cands = raw_cands
 
             bb_score = broadband_channel.score(obs, bb_cal.band_medians, bb_cal.band_mad_scales)
-            bb_nom = bool(bb_score > bb_cal.threshold)
+            bb_nom = bool(bb_cal.threshold is not None and bb_score > bb_cal.threshold)
             stft_raw_nom = len(raw_cands) > 0
             stft_post_nom = len(surv_cands) > 0
             # Explicit Sidak-controlled union nomination when combining both search modes
             if is_separate:
-                stft_union_nom = bool(stft_post_nom and det_res.max_global_score > union_stft_thresh)
-                bb_union_nom = bool(bb_score > union_bb_thresh)
+                stft_union_nom = bool(
+                    stft_post_nom
+                    and used_union_stft_thresh is not None
+                    and det_res.max_global_score > used_union_stft_thresh
+                )
+                bb_union_nom = bool(union_bb_thresh is not None and bb_score > union_bb_thresh)
                 joint_nom = bool(stft_union_nom or bb_union_nom)
             else:
                 joint_nom = bool(stft_post_nom or bb_nom)
@@ -689,17 +829,60 @@ class AdaptiveRegimeManagerV2b:
                         cont_status = CONT_SHIFT
                         sig_out = SIG_UNCERTAIN
                 else:
-                    # Progressive Stage 1 -> Stage 2 causal upgrade (strictly past windows <= i)
+                    # Classify window i strictly using the calibration that evaluated window i
+                    if used_stft_cal.target_fap_attainable and used_stft_cal.global_threshold is not None:
+                        cred_out = CRED_CALIBRATED
+                        cont_status = CONT_STABLE
+                        sig_out = self._classify_significance(used_regime_id, used_unc, used_is_mature)
+                    else:
+                        cred_out = CRED_CALIBRATION_UNAVAILABLE
+                        cont_status = CONT_RECAL
+                        sig_out = SIG_EMPIRICAL_UNAVAILABLE
+
+                    # Progressive Stage 1 -> Stage 2 causal upgrade (strictly past windows <= i; takes effect at i + 1)
                     if regime_id >= 1 and not active_is_mature:
                         regime_accum_indices.append(i)
-                        if len(regime_accum_indices) >= cfg.mature_recal_windows:
-                            m_obs = [observations[idx] for idx in regime_accum_indices[-cfg.mature_recal_windows :]]
+                        if len(regime_accum_indices) > cfg.max_recal_buffer_windows:
+                            regime_accum_indices = regime_accum_indices[-cfg.max_recal_buffer_windows :]
+                        n_acc = len(regime_accum_indices)
+                        n_norm_acc = max(20, int(round(n_acc * 0.25)))
+                        n_thresh_acc = n_acc - n_norm_acc
+                        _, acc_stft_ok, _ = conformal_order_rank(max(1, n_thresh_acc), stft_recal_fap)
+                        _, acc_union_ok, _ = (
+                            conformal_order_rank(max(1, n_thresh_acc), union_sidak_fap)
+                            if is_separate
+                            else (None, acc_stft_ok, 0)
+                        )
+                        need_stft_rec = (
+                            (not active_stft_cal.target_fap_attainable)
+                            and acc_stft_ok
+                            and n_thresh_acc >= 40
+                            and not resource_limit_blocked_stft
+                        )
+                        need_union_rec = (
+                            is_separate
+                            and (union_stft_thresh is None)
+                            and acc_union_ok
+                            and n_thresh_acc >= 40
+                            and not resource_limit_blocked_union
+                        )
+                        need_mature = (
+                            n_acc >= effective_mature_windows
+                            and acc_stft_ok
+                            and (not is_separate or acc_union_ok)
+                            and n_thresh_acc >= 40
+                            and not resource_limit_blocked
+                        )
+                        if need_stft_rec or need_union_rec or need_mature:
+                            slice_len = min(effective_mature_windows, cfg.max_recal_buffer_windows)
+                            m_obs = [observations[idx] for idx in regime_accum_indices[-slice_len:]]
                             active_ref = self.fit_continuum_reference(m_obs)
                             active_stft_cal = detector.calibrate(
                                 m_obs,
                                 target_fap=stft_recal_fap,
                                 norm_fraction=0.25,
                                 calibration_seed=regime_id * 10 + 2,
+                                allow_unattainable_fap=True,
                             )
                             if is_separate:
                                 union_stft_thresh = detector.calibrate(
@@ -707,12 +890,15 @@ class AdaptiveRegimeManagerV2b:
                                     target_fap=union_sidak_fap,
                                     norm_fraction=0.25,
                                     calibration_seed=regime_id * 10 + 2,
+                                    allow_unattainable_fap=True,
                                 ).global_threshold
                             else:
                                 union_stft_thresh = active_stft_cal.global_threshold
-                            n_norm_m = max(20, int(round(len(m_obs) * 0.25)))
                             m_chrono = np.array(
-                                [detector.analyze(o, active_stft_cal).max_global_score for o in m_obs[n_norm_m:]],
+                                [
+                                    detector.analyze(o, active_stft_cal).max_global_score
+                                    for o in m_obs[active_stft_cal.n_norm_samples :]
+                                ],
                                 dtype=np.float64,
                             )
                             active_unc = estimate_calibration_uncertainty(m_chrono, target_fap=stft_recal_fap)
@@ -721,11 +907,15 @@ class AdaptiveRegimeManagerV2b:
                                 glitch_ref_refresh_count += 1
                             else:
                                 glitch_ref_blocked_count += 1
-                            active_is_mature = True
-
-                    cred_out = CRED_CALIBRATED
-                    cont_status = CONT_STABLE
-                    sig_out = self._classify_significance(regime_id, active_unc, active_is_mature)
+                            cal_updated_for_next = True
+                            if (
+                                n_acc >= effective_mature_windows
+                                and active_stft_cal.target_fap_attainable
+                                and active_stft_cal.global_threshold is not None
+                                and (not is_separate or union_stft_thresh is not None)
+                                and not resource_limit_blocked
+                            ):
+                                active_is_mature = True
 
             elif state == CRED_TRANSITION:
                 transition_indices.append(i)
@@ -747,9 +937,21 @@ class AdaptiveRegimeManagerV2b:
 
             else:  # CRED_RECALIBRATING (Stage 0 -> Stage 1 provisional calibration)
                 recal_indices.append(i)
-                cred_out = CRED_RECALIBRATING
-                cont_status = CONT_RECAL
-                sig_out = SIG_UNCERTAIN
+                if len(recal_indices) > cfg.max_recal_buffer_windows:
+                    recal_indices = recal_indices[-cfg.max_recal_buffer_windows :]
+                if cfg.provisional_recal_windows > cfg.max_recal_buffer_windows:
+                    cred_out = CRED_CALIBRATION_UNAVAILABLE
+                    cont_status = CONT_RECAL
+                    sig_out = SIG_EMPIRICAL_UNAVAILABLE
+                    used_det_avail = False
+                    used_stft_avail = False
+                    used_union_stft_avail = False
+                    used_union_status = "PARTIAL_BROADBAND_ONLY" if used_union_bb_avail else "UNION_UNAVAILABLE"
+                    used_is_mature = False
+                else:
+                    cred_out = CRED_RECALIBRATING
+                    cont_status = CONT_RECAL
+                    sig_out = SIG_UNCERTAIN
                 if len(recal_indices) >= cfg.provisional_recal_windows:
                     recal_block = feats_mat[recal_indices, :]
                     if self._block_matches_reference(recal_block, active_ref):
@@ -767,6 +969,7 @@ class AdaptiveRegimeManagerV2b:
                             target_fap=stft_recal_fap,
                             norm_fraction=0.25,
                             calibration_seed=regime_id * 10 + 1,
+                            allow_unattainable_fap=True,
                         )
                         if is_separate:
                             union_stft_thresh = detector.calibrate(
@@ -774,12 +977,15 @@ class AdaptiveRegimeManagerV2b:
                                 target_fap=union_sidak_fap,
                                 norm_fraction=0.25,
                                 calibration_seed=regime_id * 10 + 1,
+                                allow_unattainable_fap=True,
                             ).global_threshold
                         else:
                             union_stft_thresh = active_stft_cal.global_threshold
-                        n_norm_p = max(15, int(round(len(p_obs) * 0.25)))
                         p_chrono = np.array(
-                            [detector.analyze(o, active_stft_cal).max_global_score for o in p_obs[n_norm_p:]],
+                            [
+                                detector.analyze(o, active_stft_cal).max_global_score
+                                for o in p_obs[active_stft_cal.n_norm_samples :]
+                            ],
                             dtype=np.float64,
                         )
                         active_unc = estimate_calibration_uncertainty(p_chrono, target_fap=stft_recal_fap)
@@ -791,13 +997,14 @@ class AdaptiveRegimeManagerV2b:
                             glitch_ref_blocked_count += 1
                         regime_id += 1
                         active_is_mature = False
-                        regime_accum_indices = list(recal_indices)
+                        regime_accum_indices = list(recal_indices[-cfg.max_recal_buffer_windows :])
                         regime_start_idx = i + 1
                         cusum_s = 0.0
                         consec_shift = 0
                         transition_indices = []
                         recal_indices = []
                         state = CRED_CALIBRATED
+                        cal_updated_for_next = True
                     else:
                         recal_indices = recal_indices[-cfg.stability_confirm_windows :]
 
@@ -809,6 +1016,11 @@ class AdaptiveRegimeManagerV2b:
             if bb_nom:
                 causes.append("SINGLE_CHANNEL_BROADBAND_AMBIGUOUS")
 
+            if not used_det_avail:
+                causes.append("CALIBRATION_UNAVAILABLE")
+            if is_separate and not used_union_stft_avail:
+                causes.append("UNION_STFT_UNAVAILABLE")
+
             outputs.append(
                 DualOutputWindowV2b(
                     index=i,
@@ -816,7 +1028,7 @@ class AdaptiveRegimeManagerV2b:
                     raw_stft_candidates=raw_cands,
                     surviving_stft_candidates=surv_cands,
                     stft_max_score=det_res.max_global_score,
-                    stft_threshold=active_stft_cal.global_threshold,
+                    stft_threshold=used_stft_cal.global_threshold,
                     stft_nominated_raw=stft_raw_nom,
                     stft_nominated_post_veto=stft_post_nom,
                     broadband_excess_score=bb_score,
@@ -824,13 +1036,13 @@ class AdaptiveRegimeManagerV2b:
                     broadband_nominated=bb_nom,
                     joint_nominated_post_veto=joint_nom,
                     veto_assessment=v_assess,
-                    regime_id=regime_id,
+                    regime_id=used_regime_id,
                     credibility_status=cred_out,
                     continuum_status=cont_status,
                     glitch_storm_status=glitch_status,
                     warning_causes=tuple(causes),
                     significance_status=sig_out,
-                    calibration_uncertainty=active_unc,
+                    calibration_uncertainty=used_unc,
                     mode=cfg.mode,
                     policy=cfg.policy,
                     future_data_used=is_sym,
@@ -838,12 +1050,29 @@ class AdaptiveRegimeManagerV2b:
                     glitch_crest_z=gz_i,
                     max_feature_z_drift=max_z_drift,
                     diagnostics={
-                        "is_mature": active_is_mature,
+                        "is_mature": used_is_mature,
                         "glitch_elev_rate": g_elev_rate,
                         "glitch_ref_refresh_count": glitch_ref_refresh_count,
                         "glitch_ref_blocked_count": glitch_ref_blocked_count,
                         "separate_modes": is_separate,
+                        "detection_available": used_det_avail,
+                        "dedicated_stft_available": used_stft_avail,
+                        "dedicated_broadband_available": used_bb_avail,
+                        "union_stft_available": used_union_stft_avail,
+                        "union_broadband_available": used_union_bb_avail,
+                        "union_stft_threshold": used_union_stft_thresh,
+                        "union_mode_status": used_union_status,
+                        "stft_calibration_state": used_stft_cal.calibration_state,
+                        "stft_n_norm_samples": used_stft_cal.n_norm_samples,
+                        "stft_n_threshold_samples": used_stft_cal.n_threshold_samples,
+                        "effective_mature_recal_windows": effective_mature_windows,
+                        "max_recal_buffer_windows": cfg.max_recal_buffer_windows,
+                        "resource_limit_blocked_stft": resource_limit_blocked_stft,
+                        "resource_limit_blocked_union": resource_limit_blocked_union,
+                        "resource_limit_blocked_recovery": resource_limit_blocked,
+                        "calibration_updated_for_next_window": cal_updated_for_next,
                     },
+                    detection_available=used_det_avail,
                 )
             )
 

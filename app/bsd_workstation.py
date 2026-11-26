@@ -113,24 +113,36 @@ def _plot_timeline(result: WorkstationRunResult) -> plt.Figure:
         thresh = [w.broadband_threshold for w in result.windows]
         ylabel = "Frozen-Ref Broadband Excess Score (dimensionless)"
 
-    th_min, th_max = min(thresh), max(thresh)
-    th_lbl = (
-        f"Active Calibrated Threshold = {th_min:.4f} (dimensionless)"
-        if abs(th_max - th_min) < 1e-6
-        else f"Active Calibrated Threshold = {th_min:.4f}..{th_max:.4f} (dimensionless)"
-    )
+    thresh_plot = [float(t) if (t is not None and np.isfinite(t)) else np.nan for t in thresh]
+    finite_th = [t for t in thresh_plot if np.isfinite(t)]
+    n_unavail = len(thresh_plot) - len(finite_th)
+    if finite_th:
+        th_min, th_max = min(finite_th), max(finite_th)
+        base_lbl = (
+            f"Active Calibrated Threshold = {th_min:.4f} (dimensionless)"
+            if abs(th_max - th_min) < 1e-6
+            else f"Active Calibrated Threshold = {th_min:.4f}..{th_max:.4f} (dimensionless)"
+        )
+        th_lbl = f"{base_lbl}; {n_unavail} window(s) UNAVAILABLE" if n_unavail > 0 else base_lbl
+    else:
+        th_lbl = "Active Calibrated Threshold = UNAVAILABLE (null)"
 
     fig, ax = plt.subplots(figsize=(10.2, 3.2))
     ax.plot(xs, scores, color="#1f4e79", lw=1.2, label=f"Stream A Score ({mode}, dimensionless)")
-    ax.plot(xs, thresh, color="#d62728", ls="--", lw=1.3, label=th_lbl)
+    ax.plot(xs, thresh_plot, color="#d62728", ls="--", lw=1.3, label=th_lbl)
     for w in result.windows:
         if "CONTINUUM_DRIFT" in w.warning_causes:
             ax.axvspan(w.index - 0.5, w.index + 0.5, color="#fbd38d", alpha=0.25)
         if "GLITCH_STORM" in w.warning_causes:
             ax.axvspan(w.index - 0.5, w.index + 0.5, color="#d6bcfa", alpha=0.25)
+        if not w.detection_available or "CALIBRATION_UNAVAILABLE" in w.warning_causes:
+            ax.axvspan(w.index - 0.5, w.index + 0.5, color="#cbd5e0", alpha=0.35)
     ax.set_xlabel("Window Index")
     ax.set_ylabel(ylabel)
-    ax.set_title("Full-Timeline Anomaly Score vs. Threshold (Orange = Continuum Drift, Purple = Glitch Storm)")
+    ax.set_title(
+        "Full-Timeline Anomaly Score vs. Threshold "
+        "(Orange = Continuum Drift, Purple = Glitch Storm, Gray = Cal Unavailable)"
+    )
     ax.legend(loc="upper right")
     ax.grid(alpha=0.25)
     fig.tight_layout()
@@ -164,6 +176,9 @@ def main() -> None:
                 "(`SINGLE_CHANNEL_BROADBAND_AMBIGUOUS`)."
             )
         target_fap = st.number_input("Target False-Alarm Probability (FAP)", 0.002, 0.10, 0.01, step=0.005, format="%.3f")
+        min_nth_req = int(np.ceil((1.0 - float(target_fap)) / float(target_fap)))
+        min_bg_req = max(60, int(np.ceil(min_nth_req / 0.70)))
+        st.caption(f"Minimum background windows for attainable `target_fap={target_fap:.3f}`: `{min_bg_req}` (`N_thresh >= {min_nth_req}`).")
         cal_seed = int(st.number_input("Calibration Seed", 0, 999999, 0, step=1))
 
         with st.expander("Optional Heuristic Vetoes (Off by Default for Arbitrary Sensors)"):
@@ -183,7 +198,7 @@ def main() -> None:
         run_btn = False
         if run_kind == "Synthetic Injection Self-Test":
             st.header("3. Self-Test Parameters")
-            n_bg = int(st.slider("Calibration Background Windows (4 s each)", 60, 260, 120, step=20))
+            n_bg = int(st.slider("Calibration Background Windows (4 s each)", 60, 260, max(160, min_bg_req), step=20))
             n_neg = int(st.slider("Negative Control Windows (Pure Noise)", 20, 80, 40, step=10))
             n_pos = int(st.slider("Positive Injections", 4, 20, 10, step=2))
             noise_model = st.selectbox("Noise Model", ("pink_colored", "gaussian_white", "shifted_ar2"))
@@ -263,7 +278,10 @@ def main() -> None:
     with tab1:
         ca = result.calibration_audit
         if ca.status == CAL_STATUS_VALIDATED:
-            st.success(f"Calibration Status: **{ca.status}** (Statistical criteria met)")
+            st.success(
+                f"Calibration Status: **{ca.status}** "
+                "(Internal finite-sample & linear lag-1..10 screening met; does NOT guarantee real-sensor stationarity or real-data FAR control)"
+            )
         elif ca.status == CAL_STATUS_PROVISIONAL:
             st.warning(f"Calibration Status: **{ca.status}** — Unmet validation criteria: {'; '.join(ca.unmet_validation_conditions)}")
         else:
@@ -272,13 +290,19 @@ def main() -> None:
         c1, c2, c3, c4 = st.columns(4)
         c1.metric("Background Windows", f"{ca.n_bg_windows}")
         c2.metric("Effective Samples (N_eff / N_th)", f"{ca.n_eff:.1f} / {ca.n_thresh}")
-        c3.metric("Ljung-Box Independence p", f"{ca.ljung_box_p:.3f}")
+        c3.metric("Ljung-Box Linear-Lag p", f"{ca.ljung_box_p:.3f}")
         c4.metric("90% FAR CI (N_eff)", f"[{ca.far_ci90_neff[0]*100:.2f}%, {ca.far_ci90_neff[1]*100:.2f}%]")
 
         sm = result.summary_metrics
+        if sm.get("n_calibration_unavailable_windows", 0) > 0:
+            st.warning(
+                f"Detection was **UNAVAILABLE** on `{sm['n_calibration_unavailable_windows']} / {sm['n_target_windows']}` "
+                "window(s) because calibration did not yet have enough clean background windows to attain the requested "
+                "`target_fap`. Unavailable windows are excluded from detection-available and clean-calibrated exposure."
+            )
         m1, m2, m3, m4 = st.columns(4)
-        m1.metric("Clean Duty Cycle", f"{sm['clean_duty_cycle']*100:.1f}%")
-        m2.metric("Active-Mode Anomaly Windows", f"{sm['n_active_mode_anomaly_windows']} / {sm['n_target_windows']}")
+        m1.metric("Clean / Det.-Avail. Duty Cycle", f"{sm['clean_duty_cycle']*100:.1f}% / {sm.get('detection_available_duty_cycle', 1.0)*100:.1f}%")
+        m2.metric("Active-Mode Anomaly Windows", f"{sm['n_active_mode_anomaly_windows']} / {sm.get('n_detection_available_windows', sm['n_target_windows'])}")
         m3.metric("Continuum Drift Warnings", f"{sm['n_continuum_drift_warnings']}")
         m4.metric("Glitch-Storm Warnings", f"{sm['n_glitch_storm_warnings']}")
 
@@ -307,10 +331,11 @@ def main() -> None:
 
     with tab3:
         st.subheader("Preserved Raw Candidates & Statistical Anomalies (Stream A)")
-        th_now = result.windows[0].stft_threshold if result.windows else 0.0
+        th_now = result.windows[0].stft_threshold if result.windows else None
+        th_str = f"`{th_now:.4f}`" if th_now is not None else "`UNAVAILABLE (null)`"
         st.caption(
             f"**Decision Rule:** Candidates are nominated when **`standardized_score > active_threshold`** "
-            f"(dimensionless; initial threshold = `{th_now:.4f}`). `raw_anomaly_score` is the unstandardized "
+            f"(dimensionless; initial threshold = {th_str}). `raw_anomaly_score` is the unstandardized "
             f"cluster excess-power sum and is **not** compared directly against the threshold. "
             f"Minimum resolvable empirical p-value is `p_min = 1 / (N_thresh + 1) = {result.calibration_audit.p_min:.4f}`."
         )
@@ -359,9 +384,33 @@ def main() -> None:
                 "independence_audit": result.independence_audit.to_dict(),
                 "calibration_audit": result.calibration_audit.to_dict(),
                 "summary_metrics": result.summary_metrics,
+                "window_availability_timeline": [
+                    {
+                        "window_index": r["window_index"],
+                        "sample_id": r["sample_id"],
+                        "regime_id": r["regime_id"],
+                        "credibility_status": r["credibility_status"],
+                        "detection_available": r["detection_available"],
+                        "active_mode_diagnostic_nomination": r["active_mode_diagnostic_nomination"],
+                        "active_mode_anomaly_flag": r["active_mode_anomaly_flag"],
+                        "stft_threshold": r["stft_threshold"],
+                        "broadband_threshold": r["broadband_threshold"],
+                        "dedicated_stft_available": r["dedicated_stft_available"],
+                        "dedicated_broadband_available": r["dedicated_broadband_available"],
+                        "union_stft_available": r["union_stft_available"],
+                        "union_broadband_available": r["union_broadband_available"],
+                        "union_stft_threshold": r["union_stft_threshold"],
+                        "union_mode_status": r["union_mode_status"],
+                        "resource_limit_blocked_stft": r["resource_limit_blocked_stft"],
+                        "resource_limit_blocked_union": r["resource_limit_blocked_union"],
+                        "calibration_updated_for_next_window": r["calibration_updated_for_next_window"],
+                    }
+                    for r in result.timeline_rows
+                ],
                 "ground_truth_audit": result.ground_truth_audit,
             },
             indent=2,
+            allow_nan=False,
         )
         d3.download_button("Download run_report.json", report_json.encode("utf-8"), "run_report.json", "application/json")
 

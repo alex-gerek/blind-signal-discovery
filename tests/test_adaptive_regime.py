@@ -33,6 +33,7 @@ def test_finite_regime_recovery_and_significance_labels() -> None:
         AdaptiveRegimeConfig(
             mode="causal_trailing",
             policy="transient",
+            target_fap=0.02,
             local_window_count=10,
             stability_confirm_windows=8,
             recal_window_count=60,

@@ -35,6 +35,7 @@ are completely untouched.
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 import platform
 import subprocess
@@ -49,6 +50,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
+import scipy
 from scipy import signal as sp_signal
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -58,6 +60,7 @@ if str(SRC_DIR) not in sys.path:
 
 from bsd.adaptive_regime_v2b import estimate_calibration_uncertainty
 from bsd.coincidence import (
+    deduplicate_candidates_by_window,
     estimate_cross_detector_delay,
     match_coincident_candidates,
     run_time_slide_analysis,
@@ -136,6 +139,22 @@ FROZEN_VETO_CONFIG = VetoConfig(
 )
 
 RESULTS_DIR = PROJECT_ROOT / "results" / "gw170814_exploratory_search"
+
+
+def _get_git_dirty() -> bool | None:
+    try:
+        out = subprocess.check_output(["git", "status", "--porcelain"], cwd=PROJECT_ROOT, stderr=subprocess.DEVNULL)
+        return bool(out.decode("utf-8").strip())
+    except Exception:
+        return None
+
+
+def _file_sha256(path: Path) -> str:
+    h = hashlib.sha256()
+    with path.open("rb") as fh:
+        for chunk in iter(lambda: fh.read(1 << 20), b""):
+            h.update(chunk)
+    return h.hexdigest()
 
 
 def _get_git_commit() -> str:
@@ -417,7 +436,11 @@ def main() -> None:
         "event_exclusion_interval": [EVENT_GPS - EVENT_EXCLUSION_HALF_WIDTH_S, EVENT_GPS + EVENT_EXCLUSION_HALF_WIDTH_S],
         "timestamp_utc": datetime.now(timezone.utc).isoformat(),
         "git_commit": _get_git_commit(),
+        "git_dirty": _get_git_dirty(),
         "python_version": platform.python_version(),
+        "numpy_version": np.__version__,
+        "scipy_version": scipy.__version__,
+        "input_files_sha256": {det: {"filename": p.name, "sha256": _file_sha256(p)} for det, p in DETECTORS.items()},
         "segment_duration_s": SEGMENT_DURATION_S,
         "pad_s": PAD_S,
         "preprocessing": {
@@ -666,8 +689,11 @@ def main() -> None:
         )
 
     # 2. Pairwise multi-detector coincidence screening (H1-L1, H1-V1, L1-V1)
+    # Uses the EXACT SAME 1-peak-per-window event deduplication as background time-slides
+    # (`deduplicate_candidates_by_window`) so foreground and background event definitions are symmetric.
     coincident_pairs_rows: list[dict[str, Any]] = []
-    coincident_row_ids: set[int] = set()
+    confirmed_coincident_row_ids: set[int] = set()
+    preliminary_match_row_ids: set[int] = set()
 
     for bucket in ("ON_SOURCE", "OFF_SOURCE"):
         for det_a, det_b in (("H1", "L1"), ("H1", "V1"), ("L1", "V1")):
@@ -675,9 +701,11 @@ def main() -> None:
             phys_lt = PHYSICAL_LIGHT_TRAVEL_S[(det_a, det_b)]
             max_lag = XCORR_MAX_LAG_S[(det_a, det_b)]
 
-            c_a = per_det_search_cands_for_coinc[bucket][det_a]
-            c_b = per_det_search_cands_for_coinc[bucket][det_b]
-            pairs = match_coincident_candidates(c_a, c_b, max_dt_s=max_dt)
+            c_a_raw = per_det_search_cands_for_coinc[bucket][det_a]
+            c_b_raw = per_det_search_cands_for_coinc[bucket][det_b]
+            c_a = deduplicate_candidates_by_window(c_a_raw, window_s=SEGMENT_DURATION_S)
+            c_b = deduplicate_candidates_by_window(c_b_raw, window_s=SEGMENT_DURATION_S)
+            pairs = match_coincident_candidates(c_a, c_b, max_dt_s=max_dt, allow_interval_gap=False)
 
             for pair in pairs:
                 # Find matching window observations for cross-correlation lag refinement
@@ -700,10 +728,15 @@ def main() -> None:
                             band_hz=(35.0, 350.0),
                             max_lag_s=max_lag,
                         )
-                        xcorr_delay_ms = round(xc.delay_s * 1000.0, 3)
+                        xcorr_delay_ms = round(xc.delay_s * 1000.0, 3) if (xc.delay_identifiable and xc.delay_s is not None) else None
                         abs_corr = round(xc.abs_peak_corr, 4)
-                        within_phys = bool(abs(xc.delay_s) <= phys_lt)
+                        within_phys = bool(xc.delay_identifiable and xc.delay_s is not None and abs(xc.delay_s) <= phys_lt)
 
+                pair_classification = (
+                    "MULTI_DETECTOR_COINCIDENT"
+                    if within_phys is True
+                    else "PRELIMINARY_STFT_MATCH_UNCONFIRMED_LAG"
+                )
                 coincident_pairs_rows.append(
                     {
                         "bucket": bucket,
@@ -719,18 +752,25 @@ def main() -> None:
                         "xcorr_abs_peak": abs_corr,
                         "within_physical_light_travel": within_phys,
                         "physical_light_travel_ms": round(phys_lt * 1000.0, 1),
+                        "pair_classification": pair_classification,
                     }
                 )
-                for item in c_a:
-                    if abs(item["gps_peak"] - pair.gps_peak_a) < 1e-4:
-                        coincident_row_ids.add(id(item["cand_row_ref"]))
-                for item in c_b:
-                    if abs(item["gps_peak"] - pair.gps_peak_b) < 1e-4:
-                        coincident_row_ids.add(id(item["cand_row_ref"]))
+                target_set = confirmed_coincident_row_ids if within_phys is True else preliminary_match_row_ids
+                # Propagate window-level coincidence status to all multi-scale clusters from the matched window
+                matched_win_a = {float(item["window_gps_start"]) for item in c_a if abs(item["gps_peak"] - pair.gps_peak_a) < 1e-4}
+                matched_win_b = {float(item["window_gps_start"]) for item in c_b if abs(item["gps_peak"] - pair.gps_peak_b) < 1e-4}
+                for item in c_a_raw:
+                    if float(item["window_gps_start"]) in matched_win_a:
+                        target_set.add(id(item["cand_row_ref"]))
+                for item in c_b_raw:
+                    if float(item["window_gps_start"]) in matched_win_b:
+                        target_set.add(id(item["cand_row_ref"]))
 
     for row in all_raw_candidates:
-        if id(row) in coincident_row_ids:
+        if id(row) in confirmed_coincident_row_ids:
             row["coincidence_status"] = "MULTI_DETECTOR_COINCIDENT"
+        elif id(row) in preliminary_match_row_ids:
+            row["coincidence_status"] = "PRELIMINARY_STFT_MATCH_UNCONFIRMED_LAG"
         else:
             row["coincidence_status"] = "SINGLE_DETECTOR_UNCONFIRMED"
 
@@ -772,16 +812,9 @@ def main() -> None:
             max_dt_s=mdt,
             n_slides=100,
             slide_step_s=4.0,
+            active_intervals=base_off_intervals,
+            deduplicate_window_s=SEGMENT_DURATION_S,
         )
-        dedup_coinc = 0
-        for dt in shifts_100:
-            for ca in win_dedup[det_a]:
-                for cb in win_dedup[det_b]:
-                    gp_b = float(cb["gps_peak"]) + dt
-                    if not any(s0 <= gp_b <= s1 for s0, s1 in base_off_intervals):
-                        continue
-                    if abs(float(ca["gps_peak"]) - gp_b) <= mdt:
-                        dedup_coinc += 1
         ts["true_valid_overlap_min_s"] = round(float(min(slide_overlaps)), 1)
         ts["true_valid_overlap_mean_s"] = round(float(np.mean(slide_overlaps)), 1)
         ts["true_valid_overlap_max_s"] = round(float(max(slide_overlaps)), 1)
@@ -789,7 +822,12 @@ def main() -> None:
         ts["true_valid_overlap_pct_of_nominal"] = round(100.0 * true_slide_livetime_hr / nominal_slide_livetime_hr, 1)
         ts["n_unique_windows_a"] = len(win_dedup[det_a])
         ts["n_unique_windows_b"] = len(win_dedup[det_b])
-        ts["dedup_window_level_slide_coinc"] = dedup_coinc
+        ts["dedup_window_level_slide_coinc"] = ts["total_accidental_coincidences"]
+        ts["event_definition"] = "window_level_1_peak_per_4s_window_stft_preliminary_only"
+        ts["comparable_foreground_metric"] = "preliminary_stft_matches"
+        ts["physically_confirmed_background_significance"] = (
+            "UNAVAILABLE (time-slides do not recompute waveform xcorr across shifted windows)"
+        )
         time_slide_results[f"{det_a}-{det_b}"] = ts
 
     # Sort raw candidates: ON_SOURCE first, then OFF_SOURCE ranked by standardized_score desc
@@ -836,6 +874,8 @@ def main() -> None:
     # Write concise, scientifically rigorous English report
     off_coinc = [p for p in coincident_pairs_rows if p["bucket"] == "OFF_SOURCE"]
     on_coinc = [p for p in coincident_pairs_rows if p["bucket"] == "ON_SOURCE"]
+    on_confirmed = [p for p in on_coinc if p["within_physical_light_travel"] is True]
+    off_confirmed = [p for p in off_coinc if p["within_physical_light_travel"] is True]
 
     rep: list[str] = [
         "# WHISKER / BSD Exploratory Real-Data Search: GW170814 Epoch (H1, L1, V1)",
@@ -927,9 +967,16 @@ def main() -> None:
             "- **Non-detection rule:** A candidate detected in only one detector is labeled `SINGLE_DETECTOR_UNCONFIRMED` "
             "and is **never** classified as instrumental solely because another detector did not trigger (antenna-pattern "
             "factors and Virgo's lower O2 sensitivity can cause genuine signals to appear in only one or two detectors).",
-            f"- **On-source coincident pairs (`GW170814`):** `{len(on_coinc)}` pair(s).",
-            f"- **Off-source coincident pairs:** `{len(off_coinc)}` pair(s).",
+            f"- **On-source window-level STFT preliminary matches (`GW170814`):** `{len(on_coinc)}` pair(s); "
+            f"**physically confirmed (`within_physical_light_travel=True`):** `{len(on_confirmed)}` pair(s).",
+            f"- **Off-source window-level STFT preliminary matches:** `{len(off_coinc)}` pair(s); "
+            f"**physically confirmed (`within_physical_light_travel=True`):** `{len(off_confirmed)}` pair(s).",
             "- **Time-slide background audit (`100` non-circular slides, `4 s` step, `+-200 s` shifts over `604 s` off-source):**",
+            "  - **Foreground/background event symmetry:** Both foreground screening and background time-slides use the "
+            "identical `deduplicate_candidates_by_window` rule (1 highest-scoring peak per 4-s window, `|dt_peak| <= max_dt`, "
+            "`allow_interval_gap=False`). Because time-slides do **not** recompute time-domain waveform cross-correlation on "
+            "shifted windows, slide background counts are comparable **only** to preliminary STFT matches; background "
+            "significance for physically confirmed (`xcorr`-verified) coincidences is explicitly `UNAVAILABLE`.",
             f"  - **Valid overlap correction:** Accounting for outer edge loss and the central `36 s` guard-zone hole "
             f"(`1186741844..1186741880`), true active overlap per slide ranges from "
             f"`{time_slide_results['H1-L1']['true_valid_overlap_min_s']:.1f} s` to "
@@ -938,20 +985,19 @@ def main() -> None:
             f"**`{time_slide_results['H1-L1']['true_valid_overlap_total_hours']:.2f} hr`** "
             f"(`{time_slide_results['H1-L1']['true_valid_overlap_pct_of_nominal']:.1f}%` of the "
             f"`{nominal_slide_livetime_hr:.2f} hr` nominal `100 x 604 s` figure computed by `run_time_slide_analysis`).",
-            "  - **Multi-cluster inflation vs. deduplicated window-level counts:** Raw cluster-level counts in "
-            f"`run_time_slide_analysis` (`H1-L1 = {time_slide_results['H1-L1']['total_accidental_coincidences']}`, "
+            "  - **Window-level deduplicated time-slide counts (current audited method):** `run_time_slide_analysis` "
+            "deduplicates multi-scale STFT clusters to 1 highest-scoring peak per 4-s window (`deduplicate_window_s=4.0`, "
+            "`allow_interval_gap=False`, restricted to merged `base_off_intervals`): "
+            f"`{time_slide_results['H1-L1']['n_unique_windows_a']}` H1, "
+            f"`{time_slide_results['H1-L1']['n_unique_windows_b']}` L1, and "
+            f"`{time_slide_results['H1-V1']['n_unique_windows_b']}` V1 unique off-source windows yield "
+            f"`H1-L1 = {time_slide_results['H1-L1']['total_accidental_coincidences']}`, "
             f"`H1-V1 = {time_slide_results['H1-V1']['total_accidental_coincidences']}`, "
-            f"`L1-V1 = {time_slide_results['L1-V1']['total_accidental_coincidences']}`) are inflated because multiple "
-            "STFT-scale clusters from the same physical window "
-            f"(`{time_slide_results['H1-L1']['n_bg_cands_a']}` H1, `{time_slide_results['H1-L1']['n_bg_cands_b']}` L1, "
-            f"`{time_slide_results['H1-V1']['n_bg_cands_b']}` V1 clusters from only "
-            f"`{time_slide_results['H1-L1']['n_unique_windows_a']}`, `{time_slide_results['H1-L1']['n_unique_windows_b']}`, "
-            f"`{time_slide_results['H1-V1']['n_unique_windows_b']}` unique windows) are cross-matched pairwise and "
-            "`match_coincident_candidates` also triggers on `interval_gap <= max_dt`. When deduplicated to 1 peak per "
-            "window with `|dt_peak| <= max_dt` inside valid active overlap, window-level slide coincidences are: "
-            f"`H1-L1 = {time_slide_results['H1-L1']['dedup_window_level_slide_coinc']}`, "
-            f"`H1-V1 = {time_slide_results['H1-V1']['dedup_window_level_slide_coinc']}`, "
-            f"`L1-V1 = {time_slide_results['L1-V1']['dedup_window_level_slide_coinc']}`.",
+            f"`L1-V1 = {time_slide_results['L1-V1']['total_accidental_coincidences']}` window-level slide coincidences "
+            f"over `{time_slide_results['H1-L1']['equivalent_time_slide_livetime_hours']:.2f} hr` valid overlap exposure. "
+            "(Historical note: pre-audit runs prior to commit `47a5475` cross-matched raw multi-scale clusters with "
+            "`interval_gap <= max_dt` and nominal `16.78 hr` livetime, which inflated historical cluster counts and "
+            "should not be conflated with the current window-level deduplicated counts.)",
             "  - **4-second shift step alignment:** Shifting by exact `4.0 s` multiples aligns 4-s window boundaries and "
             "the `36 s` (`9 x 4 s`) guard-zone hole identically across slides; any hypothetical 4-s periodic windowing "
             "artifact would remain phase-locked.",
@@ -1077,8 +1123,10 @@ def main() -> None:
         "calibration_and_search_summary": cal_summary,
         "n_raw_candidates_total": len(all_raw_candidates),
         "n_off_source_raw_candidates": len(off_source_ranked),
-        "n_coincident_pairs_on_source": len(on_coinc),
-        "n_coincident_pairs_off_source": len(off_coinc),
+        "n_preliminary_stft_matches_on_source": len(on_coinc),
+        "n_physically_confirmed_coincidences_on_source": len(on_confirmed),
+        "n_preliminary_stft_matches_off_source": len(off_coinc),
+        "n_physically_confirmed_coincidences_off_source": len(off_confirmed),
         "coincident_pairs": coincident_pairs_rows,
         "time_slide_background": time_slide_results,
         "top_offsource_amplitude_audit": top_amp_audit,

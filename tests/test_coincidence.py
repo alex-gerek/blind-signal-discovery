@@ -50,8 +50,23 @@ def test_match_coincident_candidates_and_time_slides() -> None:
     assert len(pairs) == 1
     assert pairs[0].stft_dt_a_minus_b_s == pytest.approx(-0.02)
 
-    ts = run_time_slide_analysis(ca, cb, single_epoch_livetime_s=1600.0, max_dt_s=0.05, n_slides=200)
+    ts = run_time_slide_analysis(
+        ca,
+        cb,
+        single_epoch_livetime_s=1600.0,
+        max_dt_s=0.05,
+        n_slides=200,
+        active_intervals=[(0.0, 1600.0)],
+    )
     assert ts["n_slides"] == 200
     assert ts["total_accidental_coincidences"] == 0
+    assert ts["significance_status"] == "AVAILABLE"
     assert ts["min_resolvable_p_value"] == pytest.approx(1.0 / 201.0)
-    assert ts["equivalent_time_slide_livetime_hours"] == pytest.approx(200 * 1600.0 / 3600.0)
+    assert ts["equivalent_time_slide_livetime_hours"] > 0.0
+    assert ts["equivalent_time_slide_livetime_hours"] < (200 * 1600.0 / 3600.0)
+
+    # Without active_intervals, statistical significance and FAR are explicitly unavailable
+    ts_no_int = run_time_slide_analysis(ca, cb, single_epoch_livetime_s=1600.0, max_dt_s=0.05, n_slides=200)
+    assert ts_no_int["coincidence_far_per_hour"] is None
+    assert ts_no_int["min_resolvable_p_value"] is None
+    assert ts_no_int["technical_slide_count_resolution"] == pytest.approx(1.0 / 201.0)

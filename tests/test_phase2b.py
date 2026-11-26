@@ -60,7 +60,9 @@ def test_joint_sidak_multiple_testing_control_and_broadband_nomination() -> None
     det = MultiResolutionDetector()
     bb = FrozenReferenceBroadbandChannel()
     ref_obs = _white_obs(rng, 100, sigma=1.0, prefix="ref")
-    jcal = calibrate_joint_stft_and_broadband(det, bb, ref_obs, target_fwer=0.01, norm_fraction=0.30, calibration_seed=202)
+    jcal = calibrate_joint_stft_and_broadband(
+        det, bb, ref_obs, target_fwer=0.04, norm_fraction=0.30, calibration_seed=202
+    )
 
     assert jcal.alpha_per_family_sidak < jcal.target_fwer
     assert abs(1.0 - (1.0 - jcal.alpha_per_family_sidak) ** 2 - jcal.target_fwer) < 1e-9
@@ -88,7 +90,7 @@ def test_orthogonal_glitch_storm_without_recalibration_and_sinusoid_preservation
     det = MultiResolutionDetector()
     bb = FrozenReferenceBroadbandChannel()
     ref_obs = _white_obs(rng, 90, sigma=1.0, prefix="ref")
-    jcal = calibrate_joint_stft_and_broadband(det, bb, ref_obs, target_fwer=0.02, calibration_seed=303)
+    jcal = calibrate_joint_stft_and_broadband(det, bb, ref_obs, target_fwer=0.04, calibration_seed=303)
     mgr = AdaptiveRegimeManagerV2b(AdaptiveRegimeV2bConfig(mode="causal_trailing", policy="transient"))
     cref = mgr.fit_continuum_reference(ref_obs)
     gref = fit_glitch_reference(ref_obs)
@@ -122,7 +124,7 @@ def test_causal_trailing_strict_causality_v2b() -> None:
     det = MultiResolutionDetector()
     bb = FrozenReferenceBroadbandChannel()
     ref_obs = _white_obs(rng, 90, sigma=1.0, prefix="ref")
-    jcal = calibrate_joint_stft_and_broadband(det, bb, ref_obs, target_fwer=0.02, calibration_seed=404)
+    jcal = calibrate_joint_stft_and_broadband(det, bb, ref_obs, target_fwer=0.04, calibration_seed=404)
     mgr = AdaptiveRegimeManagerV2b(AdaptiveRegimeV2bConfig(mode="causal_trailing", policy="transient"))
     cref = mgr.fit_continuum_reference(ref_obs)
     gref = fit_glitch_reference(ref_obs)
@@ -194,12 +196,14 @@ def test_separate_search_modes_preserve_transient_budget_and_control_union() -> 
     bb = FrozenReferenceBroadbandChannel()
     ref_obs = _white_obs(rng, 120, sigma=1.0, prefix="sep")
     scal = calibrate_separate_search_modes(
-        det, bb, ref_obs, target_fap_transient=0.01, target_fap_persistent=0.01, target_fwer_union=0.01, calibration_seed=606
+        det, bb, ref_obs, target_fap_transient=0.02, target_fap_persistent=0.02, target_fwer_union=0.03, calibration_seed=606
     )
-    assert scal.transient_stft_cal.target_fap == pytest.approx(0.01)
-    assert scal.persistent_bb_cal.alpha_channel == pytest.approx(0.01)
-    assert scal.alpha_union_sidak < 0.01
+    assert scal.transient_stft_cal.target_fap == pytest.approx(0.02)
+    assert scal.persistent_bb_cal.alpha_channel == pytest.approx(0.02)
+    assert scal.alpha_union_sidak < 0.02
     # Union threshold must be at least as strict as dedicated Transient / Persistent thresholds
+    assert scal.union_stft_cal.global_threshold is not None
+    assert scal.union_bb_cal.threshold is not None
     assert scal.union_stft_cal.global_threshold >= scal.transient_stft_cal.global_threshold
     assert scal.union_bb_cal.threshold >= scal.persistent_bb_cal.threshold
 
@@ -210,7 +214,9 @@ def test_glitch_ref_synchronizes_on_clean_transition_and_blocks_contamination() 
     det = MultiResolutionDetector()
     bb = FrozenReferenceBroadbandChannel()
     ref_obs = [Observation(f"r_{i}", generate_noise("pink_colored", 4096, 1024.0, rng, sigma=1.0)[0], 1024.0, 4.0) for i in range(90)]
-    scal = calibrate_separate_search_modes(det, bb, ref_obs, calibration_seed=707)
+    scal = calibrate_separate_search_modes(
+        det, bb, ref_obs, target_fap_transient=0.02, target_fap_persistent=0.02, target_fwer_union=0.02, calibration_seed=707
+    )
     mgr = AdaptiveRegimeManagerV2b(AdaptiveRegimeV2bConfig(mode="causal_trailing", policy="transient"))
     cref = mgr.fit_continuum_reference(ref_obs)
     gref = fit_glitch_reference(ref_obs)
@@ -239,7 +245,9 @@ def test_strict_causality_and_candidate_preservation_with_separate_modes() -> No
     det = MultiResolutionDetector()
     bb = FrozenReferenceBroadbandChannel()
     ref_obs = _white_obs(rng, 90, sigma=1.0, prefix="cr")
-    scal = calibrate_separate_search_modes(det, bb, ref_obs, calibration_seed=808)
+    scal = calibrate_separate_search_modes(
+        det, bb, ref_obs, target_fap_transient=0.02, target_fap_persistent=0.02, target_fwer_union=0.02, calibration_seed=808
+    )
     mgr = AdaptiveRegimeManagerV2b(AdaptiveRegimeV2bConfig(mode="causal_trailing", policy="transient"))
     cref = mgr.fit_continuum_reference(ref_obs)
     gref = fit_glitch_reference(ref_obs)

@@ -311,7 +311,13 @@ def _run_ligo_dev_coincidence_benchmark() -> dict[str, Any]:
                     band_hz=(35.0, 350.0), max_lag_s=0.015, return_curve=(ev_name == "GW150914"),
                 )
                 xcorr_summary = xc.to_summary_dict()
-                if ev_name == "GW150914" and xc.lags_s is not None and xc.corr_curve is not None:
+                if (
+                    ev_name == "GW150914"
+                    and xc.delay_identifiable
+                    and xc.delay_s is not None
+                    and xc.lags_s is not None
+                    and xc.corr_curve is not None
+                ):
                     gw150914_xcorr_curve = {
                         "lags_ms": (xc.lags_s * 1000.0).tolist(),
                         "corr": xc.corr_curve.tolist(),
@@ -434,16 +440,26 @@ def _write_report(results: dict[str, Any], out_path: Path) -> Path:
     )
     for ev in ligo:
         xc = ev["xcorr_top_pair"]
-        d_str = f"{xc['delay_ms']:+.2f}" if xc else "—"
-        r_str = f"{xc['signed_peak_corr']:+.3f}" if xc else "—"
+        d_str = f"{xc['delay_ms']:+.2f}" if (xc and xc.get("delay_ms") is not None) else "—"
+        r_str = f"{xc['signed_peak_corr']:+.3f}" if (xc and xc.get("signed_peak_corr") is not None) else "—"
         w10 = ("YES" if xc["within_10ms_light_travel"] else "NO") if xc else "—"
         ts_pre = ev["time_slides_pre_veto"]
         ts_post = ev["time_slides_post_veto"]
+        far_str = (
+            f"{ts_post['coincidence_far_per_hour']:.4f}"
+            if ts_post["coincidence_far_per_hour"] is not None
+            else "UNAVAILABLE"
+        )
+        p_str = (
+            f">= {ts_post['min_resolvable_p_value']:.5f}"
+            if ts_post["min_resolvable_p_value"] is not None
+            else "UNAVAILABLE"
+        )
         lines.append(
             f"| `{ev['event']}` | {'REF' if ev['role']=='reference_previously_examined' else 'DEV'} | "
             f"{ev['n_pairs_pre_veto']} | {ev['n_pairs_post_veto']} | `{d_str}` | `{r_str}` | {w10} | "
             f"`{ts_pre['total_accidental_coincidences']} -> {ts_post['total_accidental_coincidences']}` | "
-            f"`{ts_post['coincidence_far_per_hour']:.4f}` | `>= {ts_post['min_resolvable_p_value']:.5f}` |"
+            f"`{far_str}` | `{p_str}` |"
         )
 
     lines.extend(

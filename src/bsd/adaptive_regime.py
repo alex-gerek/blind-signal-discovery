@@ -30,6 +30,7 @@ from typing import Any
 import numpy as np
 from scipy import signal as sp_signal, stats
 
+from bsd.calibration import conformal_order_rank
 from bsd.detector_v2 import (
     MultiResolutionCalibration,
     MultiResolutionCandidate,
@@ -42,10 +43,12 @@ from bsd.vetoes import VetoAssessment, VetoConfig, apply_vetoes
 CRED_CALIBRATED = "CALIBRATED_STATIONARY"
 CRED_TRANSITION = "TRANSITION_UNCREDIBLE"
 CRED_RECALIBRATING = "RECALIBRATING_WARMUP"
+CRED_CALIBRATION_UNAVAILABLE = "CALIBRATION_UNAVAILABLE"
 
 SIG_EXACT = "CALIBRATED_EXACT"
 SIG_EMPIRICAL = "EMPIRICAL_FINITE_SAMPLE"
 SIG_UNCERTAIN = "UNCERTAIN_UNVALIDATED"
+SIG_UNAVAILABLE = "CALIBRATION_UNAVAILABLE"
 
 
 @dataclass(frozen=True)
@@ -86,7 +89,7 @@ class DualOutputWindow:
     detected_raw: bool
     detected_post_veto: bool
     max_global_score: float
-    active_threshold: float
+    active_threshold: float | None
     veto_assessment: VetoAssessment | None
     # Stream B: Background Stability & Credibility Output
     regime_id: int
@@ -102,10 +105,15 @@ class DualOutputWindow:
     max_feature_z_drift: float
     cusum_stat: float
     diagnostics: dict[str, Any] = field(default_factory=dict)
+    detection_available: bool = True
 
     @property
     def is_calibrated(self) -> bool:
-        return self.credibility_status == CRED_CALIBRATED
+        return (
+            self.credibility_status == CRED_CALIBRATED
+            and self.detection_available
+            and self.active_threshold is not None
+        )
 
 
 def extract_continuum_features(
@@ -283,8 +291,14 @@ class AdaptiveRegimeManager:
         outputs: list[DualOutputWindow] = []
 
         for i, obs in enumerate(observations):
+            # Snapshot exact calibration state actually used to evaluate window i
+            # (any recalibration triggered at window i takes effect strictly at window i + 1)
+            used_cal = active_cal
+            used_regime_id = regime_id
+            cal_updated_for_next = False
+
             # 1. Stream A: ALWAYS run detector and preserve ALL raw candidates
-            det_res = detector.analyze(obs, active_cal)
+            det_res = detector.analyze(obs, used_cal)
             raw_cands = tuple(det_res.candidates)
             if veto_config is not None:
                 v_assess: VetoAssessment | None = apply_vetoes(obs, raw_cands, veto_config)
@@ -393,24 +407,45 @@ class AdaptiveRegimeManager:
                         transition_indices = []
                         recal_indices = []
                     elif self._is_internally_stable(recal_block, active_ref.ref_mad_scales):
-                        recal_obs = [observations[idx] for idx in recal_indices]
-                        active_ref = self.fit_continuum_reference(recal_obs)
-                        active_cal = detector.calibrate(
-                            recal_obs,
-                            target_fap=cfg.target_fap,
-                            norm_fraction=0.25,
-                            calibration_seed=regime_id + 1,
-                        )
-                        regime_id += 1
-                        regime_start_idx = i + 1
-                        cusum_s = 0.0
-                        consec_shift = 0
-                        transition_indices = []
-                        recal_indices = []
-                        state = CRED_CALIBRATED
+                        n_rec = len(recal_indices)
+                        n_norm_rec = max(20, int(round(n_rec * 0.25)))
+                        n_thresh_rec = n_rec - n_norm_rec
+                        _, fap_ok, _ = conformal_order_rank(max(1, n_thresh_rec), cfg.target_fap)
+                        if fap_ok and n_thresh_rec >= 40:
+                            recal_obs = [observations[idx] for idx in recal_indices]
+                            active_ref = self.fit_continuum_reference(recal_obs)
+                            active_cal = detector.calibrate(
+                                recal_obs,
+                                target_fap=cfg.target_fap,
+                                norm_fraction=0.25,
+                                calibration_seed=regime_id + 1,
+                                allow_unattainable_fap=False,
+                            )
+                            regime_id += 1
+                            regime_start_idx = i + 1
+                            cusum_s = 0.0
+                            consec_shift = 0
+                            transition_indices = []
+                            recal_indices = []
+                            state = CRED_CALIBRATED
+                            cal_updated_for_next = True
+                        else:
+                            # Keep accumulating clean windows until target_fap becomes attainable
+                            cred_out = CRED_CALIBRATION_UNAVAILABLE
+                            sig_out = SIG_UNAVAILABLE
+                            min_p_out = 1.0 / (n_thresh_rec + 1.0)
                     else:
                         # Regime still drifting: slide recalibration buffer forward
                         recal_indices = recal_indices[-cfg.stability_confirm_windows :]
+
+            det_avail = bool(
+                used_cal.target_fap_attainable
+                and used_cal.global_threshold is not None
+                and cred_out != CRED_CALIBRATION_UNAVAILABLE
+            )
+            if not det_avail and cred_out == CRED_CALIBRATED:
+                cred_out = CRED_CALIBRATION_UNAVAILABLE
+                sig_out = SIG_UNAVAILABLE
 
             outputs.append(
                 DualOutputWindow(
@@ -418,12 +453,12 @@ class AdaptiveRegimeManager:
                     sample_id=obs.sample_id,
                     raw_candidates=raw_cands,
                     surviving_candidates=surv_cands,
-                    detected_raw=len(raw_cands) > 0,
-                    detected_post_veto=len(surv_cands) > 0,
+                    detected_raw=(len(raw_cands) > 0) if det_avail else False,
+                    detected_post_veto=(len(surv_cands) > 0) if det_avail else False,
                     max_global_score=det_res.max_global_score,
-                    active_threshold=active_cal.global_threshold,
+                    active_threshold=used_cal.global_threshold if det_avail else None,
                     veto_assessment=v_assess,
-                    regime_id=regime_id,
+                    regime_id=used_regime_id,
                     credibility_status=cred_out,
                     significance_status=sig_out,
                     min_resolvable_p=min_p_out,
@@ -435,7 +470,13 @@ class AdaptiveRegimeManager:
                     ks_min_p_bonferroni=ks_p_bonf,
                     max_feature_z_drift=max_z_drift,
                     cusum_stat=cusum_s,
-                    diagnostics={"active_n_thresh": active_cal.n_threshold_samples},
+                    diagnostics={
+                        "active_n_thresh": used_cal.n_threshold_samples,
+                        "detection_available": det_avail,
+                        "recal_buffer_len": len(recal_indices),
+                        "calibration_updated_for_next_window": cal_updated_for_next,
+                    },
+                    detection_available=det_avail,
                 )
             )
 

@@ -38,6 +38,7 @@ from bsd.adaptive_regime_v2b import (
     calibrate_separate_search_modes,
     fit_glitch_reference,
 )
+from bsd.calibration import conformal_order_rank
 from bsd.detector_v2 import MultiResolutionDetector
 from bsd.generator import Observation, _scale_to_energy_snr, generate_clean_signal, make_split_rng
 from bsd.io_loader import (
@@ -137,15 +138,27 @@ def _wilson_ci90(k: int, n: int) -> tuple[float, float]:
 def classify_calibration_status(
     n_bg_windows: int,
     uncertainty: CalibrationUncertaintySummary,
+    target_fap: float | None = None,
 ) -> CalibrationStatusAudit:
-    """Assign INSUFFICIENT, PROVISIONAL, or VALIDATED using explicit statistical criteria."""
+    """Assign INSUFFICIENT, PROVISIONAL, or VALIDATED using explicit statistical criteria.
+
+    Note: VALIDATED indicates that internal finite-sample and linear lag-1..10
+    screening criteria were met on the supplied background ensemble. It does NOT
+    prove stationarity, exchangeability, or real-world false-alarm control.
+    """
     unmet: list[str] = []
+    fap_unattainable = bool(target_fap is not None and np.isfinite(target_fap) and uncertainty.p_min > target_fap)
+    if fap_unattainable and target_fap is not None:
+        unmet.append(
+            f"target_fap={target_fap:.4g} unattainable with n_thresh={uncertainty.n_thresh} "
+            f"(p_min={uncertainty.p_min:.5f} > target_fap)"
+        )
     if n_bg_windows < MIN_BG_WINDOWS_PROVISIONAL:
         unmet.append(f"n_bg_windows={n_bg_windows} < {MIN_BG_WINDOWS_PROVISIONAL}")
     if uncertainty.n_eff < 45.0:
         unmet.append(f"n_eff={uncertainty.n_eff:.1f} < 45.0 (severe dependence or insufficient sample size)")
 
-    if n_bg_windows < MIN_BG_WINDOWS_PROVISIONAL or uncertainty.n_eff < 45.0:
+    if fap_unattainable or n_bg_windows < MIN_BG_WINDOWS_PROVISIONAL or uncertainty.n_eff < 45.0:
         tier = CAL_STATUS_INSUFFICIENT
     else:
         if uncertainty.n_thresh < MIN_THRESH_VALIDATED:
@@ -209,7 +222,42 @@ def _build_rows(
 
     for w in windows:
         t0_win = w.index * window_duration_s
-        active_nom = w.stft_nominated_post_veto if search_mode == "transient" else w.broadband_nominated
+        diag = w.diagnostics
+        active_diag_nom = bool(w.stft_nominated_post_veto if search_mode == "transient" else w.broadband_nominated)
+        active_decision = bool(w.detection_available and active_diag_nom)
+
+        ded_stft_avail = bool(
+            diag.get("dedicated_stft_available", w.stft_threshold is not None and np.isfinite(w.stft_threshold))
+        )
+        ded_bb_avail = bool(
+            diag.get(
+                "dedicated_broadband_available",
+                w.broadband_threshold is not None and np.isfinite(w.broadband_threshold),
+            )
+        )
+        u_stft_avail = bool(diag.get("union_stft_available", ded_stft_avail))
+        u_bb_avail = bool(diag.get("union_broadband_available", ded_bb_avail))
+        u_stft_th_raw = diag.get("union_stft_threshold", None)
+        u_stft_th = (
+            round(float(u_stft_th_raw), 4)
+            if (u_stft_th_raw is not None and np.isfinite(u_stft_th_raw))
+            else None
+        )
+        if "union_mode_status" in diag:
+            u_mode_status = str(diag["union_mode_status"])
+        elif u_stft_avail and u_bb_avail:
+            u_mode_status = "FULL_UNION_AVAILABLE"
+        elif u_bb_avail:
+            u_mode_status = "PARTIAL_BROADBAND_ONLY"
+        elif u_stft_avail:
+            u_mode_status = "PARTIAL_STFT_ONLY"
+        else:
+            u_mode_status = "UNION_UNAVAILABLE"
+
+        rl_stft = bool(diag.get("resource_limit_blocked_stft", False))
+        rl_union = bool(diag.get("resource_limit_blocked_union", False))
+        cal_upd_next = bool(diag.get("calibration_updated_for_next_window", False))
+
         timeline_rows.append(
             {
                 "window_index": w.index,
@@ -218,20 +266,31 @@ def _build_rows(
                 "t_window_end_s": round(t0_win + window_duration_s, 4),
                 "search_mode": search_mode,
                 "stft_max_score": round(w.stft_max_score, 4),
-                "stft_threshold": round(w.stft_threshold, 4),
+                "stft_threshold": round(w.stft_threshold, 4) if w.stft_threshold is not None else None,
                 "stft_nominated_raw": w.stft_nominated_raw,
                 "stft_nominated_post_veto": w.stft_nominated_post_veto,
                 "broadband_excess_score": round(w.broadband_excess_score, 4),
-                "broadband_threshold": round(w.broadband_threshold, 4),
+                "broadband_threshold": round(w.broadband_threshold, 4) if w.broadband_threshold is not None else None,
                 "broadband_nominated": w.broadband_nominated,
-                "active_mode_anomaly_flag": active_nom,
+                "active_mode_diagnostic_nomination": active_diag_nom,
+                "active_mode_anomaly_flag": active_decision,
                 "union_sidak_nominated": w.joint_nominated_post_veto,
+                "dedicated_stft_available": ded_stft_avail,
+                "dedicated_broadband_available": ded_bb_avail,
+                "union_stft_available": u_stft_avail,
+                "union_broadband_available": u_bb_avail,
+                "union_stft_threshold": u_stft_th,
+                "union_mode_status": u_mode_status,
+                "resource_limit_blocked_stft": rl_stft,
+                "resource_limit_blocked_union": rl_union,
+                "calibration_updated_for_next_window": cal_upd_next,
                 "regime_id": w.regime_id,
                 "credibility_status": w.credibility_status,
                 "continuum_status": w.continuum_status,
                 "glitch_storm_status": w.glitch_storm_status,
                 "warning_causes": ";".join(w.warning_causes),
                 "significance_status": w.significance_status,
+                "detection_available": w.detection_available,
                 "is_clean_calibrated": w.is_clean_calibrated,
             }
         )
@@ -303,13 +362,24 @@ def run_workstation_analysis(
         raise InputValidationError(f"Invalid search_mode: {cfg.search_mode!r}")
     if cfg.processing_mode not in ("causal_trailing", "offline_symmetric"):
         raise InputValidationError(f"Invalid processing_mode: {cfg.processing_mode!r}")
-    if not (0.001 <= cfg.target_fap <= 0.25):
-        raise InputValidationError(f"target_fap must be in [0.001, 0.25], got {cfg.target_fap}.")
+    if not np.isfinite(cfg.target_fap) or not (0.001 <= cfg.target_fap <= 0.25):
+        raise InputValidationError(f"target_fap must be finite and in [0.001, 0.25], got {cfg.target_fap}.")
 
     indep = check_background_independence(target, background)
     bg_obs = slice_into_observations(
         background, window_duration_s=cfg.window_duration_s, prefix="bg", min_windows=MIN_BG_WINDOWS_PROVISIONAL
     )
+    n_norm_split = max(20, int(round(len(bg_obs) * 0.30)))
+    n_thresh_split = len(bg_obs) - n_norm_split
+    _, fap_ok, min_n_thresh_req = conformal_order_rank(max(1, n_thresh_split), cfg.target_fap)
+    if not fap_ok:
+        min_bg_req = int(np.ceil(min_n_thresh_req / 0.70))
+        raise InputValidationError(
+            f"Unattainable target_fap={cfg.target_fap:.4g} for {len(bg_obs)} background windows "
+            f"(Split B has n_thresh={n_thresh_split}, minimum resolvable p_min=1/({n_thresh_split}+1)="
+            f"{1.0 / (n_thresh_split + 1):.5f} > target_fap). Supply at least {min_bg_req} background windows "
+            f"or raise target_fap to >= {1.0 / (n_thresh_split + 1):.5f}."
+        )
     tgt_obs = slice_into_observations(
         target, window_duration_s=cfg.window_duration_s, prefix="tgt", min_windows=1
     )
@@ -332,7 +402,7 @@ def run_workstation_analysis(
         if cfg.search_mode == "transient"
         else scal.persistent_bb_cal.uncertainty
     )
-    cal_audit = classify_calibration_status(len(bg_obs), active_unc)
+    cal_audit = classify_calibration_status(len(bg_obs), active_unc, target_fap=cfg.target_fap)
 
     mgr = AdaptiveRegimeManagerV2b(
         AdaptiveRegimeV2bConfig(
@@ -353,16 +423,23 @@ def run_workstation_analysis(
     cands_rows, tl_rows = _build_rows(windows, cfg.window_duration_s, cfg.search_mode)
 
     n_win = len(windows)
+    n_det_avail = sum(1 for w in windows if w.detection_available)
+    n_cal_unavail = n_win - n_det_avail
     n_clean = sum(1 for w in windows if w.is_clean_calibrated)
-    n_anom_active = sum(
-        1 for w in windows if (w.stft_nominated_post_veto if cfg.search_mode == "transient" else w.broadband_nominated)
-    )
+    n_anom_active = sum(1 for r in tl_rows if r["active_mode_anomaly_flag"])
+    union_status_counts: dict[str, int] = {}
+    for r in tl_rows:
+        st_name = str(r["union_mode_status"])
+        union_status_counts[st_name] = union_status_counts.get(st_name, 0) + 1
     run_ts = datetime.now(timezone.utc)
     run_id = run_ts.strftime("bsd_run_%Y%m%dT%H%M%SZ")
 
     summary_metrics = {
         "n_target_windows": n_win,
         "target_duration_s": round(n_win * cfg.window_duration_s, 2),
+        "n_detection_available_windows": n_det_avail,
+        "n_calibration_unavailable_windows": n_cal_unavail,
+        "detection_available_duty_cycle": round(n_det_avail / max(1, n_win), 4),
         "n_clean_calibrated_windows": n_clean,
         "clean_duty_cycle": round(n_clean / max(1, n_win), 4),
         "excluded_livetime_s": round((n_win - n_clean) * cfg.window_duration_s, 2),
@@ -372,6 +449,7 @@ def run_workstation_analysis(
         "n_continuum_drift_warnings": sum(1 for w in windows if "CONTINUUM_DRIFT" in w.warning_causes),
         "n_glitch_storm_warnings": sum(1 for w in windows if "GLITCH_STORM" in w.warning_causes),
         "n_regimes_established": max((w.regime_id for w in windows), default=0) + 1,
+        "union_mode_status_counts": union_status_counts,
     }
 
     run_metadata = {
@@ -498,7 +576,10 @@ def run_synthetic_self_test(
     # Evaluate negative control (pure noise windows 0..n_neg_control_windows-1)
     neg_wins = res.windows[:n_neg_control_windows]
     neg_fp = sum(
-        1 for w in neg_wins if (w.stft_nominated_post_veto if cfg.search_mode == "transient" else w.broadband_nominated)
+        1
+        for w in neg_wins
+        if w.detection_available
+        and (w.stft_nominated_post_veto if cfg.search_mode == "transient" else w.broadband_nominated)
     )
     neg_ci = _wilson_ci90(neg_fp, len(neg_wins))
 
@@ -507,12 +588,16 @@ def run_synthetic_self_test(
     missed_injs: list[dict[str, Any]] = []
     for rec in inj_records:
         w = res.windows[rec["window_index"]]
-        hit = bool(w.stft_nominated_post_veto if cfg.search_mode == "transient" else w.broadband_nominated)
+        hit = bool(
+            w.detection_available
+            and (w.stft_nominated_post_veto if cfg.search_mode == "transient" else w.broadband_nominated)
+        )
         rec_out = {
             **rec,
             "detected": hit,
             "stft_max_score": round(w.stft_max_score, 3),
-            "stft_threshold": round(w.stft_threshold, 3),
+            "stft_threshold": round(w.stft_threshold, 3) if w.stft_threshold is not None else None,
+            "detection_available": w.detection_available,
             "credibility_status": w.credibility_status,
             "warning_causes": ";".join(w.warning_causes),
         }
@@ -578,15 +663,39 @@ def export_workstation_run(result: WorkstationRunResult, output_dir: Path | str)
     )
     _dump_csv(tl_path, result.timeline_rows, ["window_index", "sample_id", "stft_max_score", "credibility_status"])
 
+    window_availability_timeline = [
+        {
+            "window_index": r["window_index"],
+            "sample_id": r["sample_id"],
+            "regime_id": r["regime_id"],
+            "credibility_status": r["credibility_status"],
+            "detection_available": r["detection_available"],
+            "active_mode_diagnostic_nomination": r["active_mode_diagnostic_nomination"],
+            "active_mode_anomaly_flag": r["active_mode_anomaly_flag"],
+            "stft_threshold": r["stft_threshold"],
+            "broadband_threshold": r["broadband_threshold"],
+            "dedicated_stft_available": r["dedicated_stft_available"],
+            "dedicated_broadband_available": r["dedicated_broadband_available"],
+            "union_stft_available": r["union_stft_available"],
+            "union_broadband_available": r["union_broadband_available"],
+            "union_stft_threshold": r["union_stft_threshold"],
+            "union_mode_status": r["union_mode_status"],
+            "resource_limit_blocked_stft": r["resource_limit_blocked_stft"],
+            "resource_limit_blocked_union": r["resource_limit_blocked_union"],
+            "calibration_updated_for_next_window": r["calibration_updated_for_next_window"],
+        }
+        for r in result.timeline_rows
+    ]
     report_payload = {
         "run_metadata": result.run_metadata,
         "scientific_semantics": result.scientific_semantics,
         "independence_audit": result.independence_audit.to_dict(),
         "calibration_audit": result.calibration_audit.to_dict(),
         "summary_metrics": result.summary_metrics,
+        "window_availability_timeline": window_availability_timeline,
         "ground_truth_audit": result.ground_truth_audit,
         "n_exported_candidates": len(result.candidates_rows),
         "n_exported_timeline_windows": len(result.timeline_rows),
     }
-    json_path.write_text(json.dumps(report_payload, indent=2), encoding="utf-8")
+    json_path.write_text(json.dumps(report_payload, indent=2, allow_nan=False), encoding="utf-8")
     return {"candidates_csv": cands_path, "timeline_csv": tl_path, "run_report_json": json_path}

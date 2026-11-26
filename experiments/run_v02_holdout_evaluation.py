@@ -358,7 +358,7 @@ def main() -> None:
                     i0 = max(0, int((h1_c["t_start"] - 0.10) * 1024.0))
                     i1 = min(4096, int((h1_c["t_end"] + 0.10) * 1024.0))
                     xc = estimate_cross_detector_delay(site_obs["H1"][sg].signal[i0:i1], site_obs["L1"][sg].signal[i0:i1], 1024.0)
-                    xc_ms = xc.delay_s * 1000.0
+                    xc_ms = (xc.delay_s * 1000.0) if (xc.delay_identifiable and xc.delay_s is not None) else None
             coinc_rows.append(
                 {
                     "event": ev_name,
@@ -479,9 +479,11 @@ def main() -> None:
     )
     for cr in coinc_rows:
         d_s = f"{cr['xcorr_delay_ms']:+.2f}" if cr["xcorr_delay_ms"] is not None else "—"
+        far_s = f"{cr['bg_coinc_far_per_hr']:.4f}" if cr["bg_coinc_far_per_hr"] is not None else "UNAVAILABLE"
+        p_s = f">= {cr['min_resolvable_p']:.5f}" if cr["min_resolvable_p"] is not None else "UNAVAILABLE"
         lines.append(
             f"| `{cr['event']}` | {cr['h1_l1_pairs_post_veto']} | `{d_s}` | `{cr['bg_500_slides_coinc']}` | "
-            f"`{cr['bg_coinc_far_per_hr']:.4f}` | `>= {cr['min_resolvable_p']:.5f}` |"
+            f"`{far_s}` | `{p_s}` |"
         )
 
     lines.extend(

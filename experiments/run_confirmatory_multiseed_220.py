@@ -106,6 +106,26 @@ BOOTSTRAP_STREAM = "confirm_220_k100_n500_boot_v1"
 RESULTS_DIR = PROJECT_ROOT / "results" / "workstation_confirmatory_k100"
 
 
+def _get_git_dirty() -> bool | None:
+    try:
+        out = subprocess.check_output(["git", "status", "--porcelain"], cwd=PROJECT_ROOT, stderr=subprocess.DEVNULL)
+        return bool(out.decode("utf-8").strip())
+    except Exception:
+        return None
+
+
+def _compute_two_sided_mc_p_and_se(p_le: float, p_ge: float, mc_draws: int) -> tuple[float, float]:
+    """Compute two-sided MC p-value `min(1, 2*min(p_le, p_ge))` and proper scaled SE `2*SE(p_one)`."""
+    if not (np.isfinite(p_le) and np.isfinite(p_ge)) or not (0.0 <= p_le <= 1.0 and 0.0 <= p_ge <= 1.0):
+        raise ValueError(f"p_le and p_ge must be finite probabilities in [0, 1], got ({p_le}, {p_ge}).")
+    if mc_draws <= 0:
+        raise ValueError(f"mc_draws must be positive, got {mc_draws}.")
+    p_one = float(min(p_le, p_ge))
+    p_two = float(min(1.0, 2.0 * p_one))
+    se_two = float(2.0 * np.sqrt(max(0.0, p_one * (1.0 - p_one)) / float(mc_draws)))
+    return p_two, se_two
+
+
 def _get_git_commit() -> str:
     try:
         out = subprocess.check_output(
@@ -716,8 +736,10 @@ def main() -> None:
         "experiment_name": "workstation_confirmatory_k100_n500",
         "timestamp_utc": datetime.now(timezone.utc).isoformat(),
         "git_commit": git_commit,
+        "git_dirty": _get_git_dirty(),
         "python_version": platform.python_version(),
         "numpy_version": np.__version__,
+        "scipy_version": __import__("scipy").__version__,
         "detector_mode": "frozen_raw_stft_only",
         "k_seeds": K_SEEDS,
         "n_bg_windows": N_BG_WINDOWS,
@@ -889,8 +911,7 @@ def main() -> None:
 
     p_le = float(np.mean(sim_sums <= s_obs))
     p_ge = float(np.mean(sim_sums >= s_obs))
-    p_two_sided = float(min(1.0, 2.0 * min(p_le, p_ge)))
-    p_two_sided_se = float(np.sqrt(p_two_sided * (1.0 - p_two_sided) / float(H0_MC_DRAWS)))
+    p_two_sided, p_two_sided_se = _compute_two_sided_mc_p_and_se(p_le, p_ge, H0_MC_DRAWS)
 
     if s_obs <= h0_spec["mc_estimated_s_lo_inclusive"]:
         decision = "REJECT_H0_BELOW_REFERENCE"

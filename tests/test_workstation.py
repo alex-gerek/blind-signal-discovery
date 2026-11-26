@@ -146,7 +146,10 @@ def test_end_to_end_local_wav_workflow_and_export(tmp_path: Path) -> None:
 
     bg_ts = load_timeseries_file(bg_wav)
     tgt_ts = load_timeseries_file(tgt_wav)
-    res = run_workstation_analysis(tgt_ts, bg_ts, WorkstationConfig(search_mode="transient", calibration_seed=33))
+    # 100 background windows -> n_thresh=70 -> target_fap=0.02 is attainable (p_min=1/71=0.0141 <= 0.02)
+    res = run_workstation_analysis(
+        tgt_ts, bg_ts, WorkstationConfig(search_mode="transient", target_fap=0.02, calibration_seed=33)
+    )
 
     assert res.calibration_audit.status == CAL_STATUS_PROVISIONAL  # 70 windows < 150 n_thresh
     assert res.windows[5].stft_nominated_raw is True
@@ -163,7 +166,7 @@ def test_end_to_end_local_wav_workflow_and_export(tmp_path: Path) -> None:
 def test_synthetic_self_test_positive_and_negative_controls() -> None:
     """Synthetic self-test reports negative-control FAR and both detected & missed injections."""
     res = run_synthetic_self_test(
-        WorkstationConfig(search_mode="transient", processing_mode="causal_trailing"),
+        WorkstationConfig(search_mode="transient", processing_mode="causal_trailing", target_fap=0.02),
         n_bg_windows=80,
         n_neg_control_windows=20,
         n_pos_injections=4,
@@ -192,7 +195,7 @@ def test_gui_measurement_clarity_labels() -> None:
     spec.loader.exec_module(mod)
 
     res = run_synthetic_self_test(
-        WorkstationConfig(search_mode="transient", processing_mode="causal_trailing"),
+        WorkstationConfig(search_mode="transient", processing_mode="causal_trailing", target_fap=0.02),
         n_bg_windows=80,
         n_neg_control_windows=10,
         n_pos_injections=2,
