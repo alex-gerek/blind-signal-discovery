@@ -1,0 +1,127 @@
+{
+  "study_label": "EXPLORATORY_ANALYSIS_OF_PREVIOUSLY_USED_O2_EPOCH_NOT_BLIND_DISCOVERY",
+  "event_name": "GW170814",
+  "event_gps": 1186741861.5,
+  "event_exclusion_half_width_s": 16.0,
+  "event_exclusion_interval": [
+    1186741845.5,
+    1186741877.5
+  ],
+  "timestamp_utc": "2026-11-26T06:04:13.453531+00:00",
+  "git_commit": "e528d0a",
+  "python_version": "3.14.3",
+  "segment_duration_s": 4.0,
+  "pad_s": 1.0,
+  "preprocessing": {
+    "mode": "adapted_ligo_whitened",
+    "target_sample_rate_hz": 1024.0,
+    "bandpass_hz": [
+      30.0,
+      380.0
+    ],
+    "psd_fit_windows": 60,
+    "psd_fit_core_duration_s": 240.0
+  },
+  "calibration_config": {
+    "detector_class": "MultiResolutionDetector",
+    "target_fap_nominal": 0.01,
+    "norm_fraction": 0.3,
+    "nominal_fap_note": "Nominal target_fap=0.01 is a calibration quantile parameter, NOT a measured FAR on real LIGO/Virgo data."
+  },
+  "veto_config_reversible": {
+    "enable_glitch_veto": true,
+    "glitch_kurtosis_threshold": 20.0,
+    "glitch_spike_sigma_threshold": 6.0,
+    "glitch_max_half_peak_samples": 3,
+    "enable_line_veto": true,
+    "line_min_time_coverage": 0.75,
+    "line_max_bandwidth_hz": 48.0,
+    "local_context_s": 0.08
+  },
+  "stft_scale_localization": [
+    {
+      "scale_name": "short_31ms",
+      "nperseg": 32,
+      "noverlap": 28,
+      "window_width_ms": 31.25,
+      "hop_step_ms": 3.91,
+      "half_hop_quantization_ms": 1.95
+    },
+    {
+      "scale_name": "medium_125ms",
+      "nperseg": 128,
+      "noverlap": 96,
+      "window_width_ms": 125.0,
+      "hop_step_ms": 31.25,
+      "half_hop_quantization_ms": 15.62
+    },
+    {
+      "scale_name": "long_500ms",
+      "nperseg": 512,
+      "noverlap": 384,
+      "window_width_ms": 500.0,
+      "hop_step_ms": 125.0,
+      "half_hop_quantization_ms": 62.5
+    }
+  ],
+  "coincidence_config": {
+    "physical_light_travel_s": {
+      "H1-L1": 0.01,
+      "H1-V1": 0.0273,
+      "L1-V1": 0.0264
+    },
+    "stft_screening_max_dt_s": {
+      "H1-L1": 0.05,
+      "H1-V1": 0.065,
+      "L1-V1": 0.065
+    },
+    "xcorr_max_lag_s": {
+      "H1-L1": 0.015,
+      "H1-V1": 0.03,
+      "L1-V1": 0.03
+    },
+    "single_detector_interpretation_rule": "A candidate detected in only one detector is NEVER classified as instrumental solely because another detector did not detect it (e.g., antenna pattern or sensitivity differences)."
+  },
+  "verified_disjoint_intervals": [
+    {
+      "name": "PSD_FIT",
+      "core_gps_start": 1186739816.0,
+      "core_gps_end": 1186740056.0,
+      "core_duration_s": 240.0,
+      "n_windows_4s": 60,
+      "padded_gps_start": 1186739815.0,
+      "padded_gps_end": 1186740057.0,
+      "guard_gap_after_padded_s": 22.0
+    },
+    {
+      "name": "CAL_BLOCK_A",
+      "core_gps_start": 1186740080.0,
+      "core_gps_end": 1186741360.0,
+      "core_duration_s": 1280.0,
+      "n_windows_4s": 320,
+      "padded_gps_start": 1186740079.0,
+      "padded_gps_end": 1186741361.0,
+      "guard_gap_after_padded_s": 178.0
+    },
+    {
+      "name": "SEARCH_TARGET",
+      "core_gps_start": 1186741540.0,
+      "core_gps_end": 1186742180.0,
+      "core_duration_s": 640.0,
+      "n_windows_4s": 160,
+      "padded_gps_start": 1186741539.0,
+      "padded_gps_end": 1186742181.0,
+      "guard_gap_after_padded_s": 178.0
+    },
+    {
+      "name": "CAL_BLOCK_B",
+      "core_gps_start": 1186742360.0,
+      "core_gps_end": 1186743908.0,
+      "core_duration_s": 1548.0,
+      "n_windows_4s": 387,
+      "padded_gps_start": 1186742359.0,
+      "padded_gps_end": 1186743909.0,
+      "guard_gap_after_padded_s": 0.0
+    }
+  ]
+}
