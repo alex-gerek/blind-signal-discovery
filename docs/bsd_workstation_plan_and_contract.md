@@ -10,7 +10,7 @@
 
 The Python loader now supports WAV, CSV, NPY and optional GWOSC-schema HDF5. The default analysis is 1024 Hz with 4-second windows; higher sampling rates require explicit antialiased resampling opt-in. Background size must support the requested FAP after the actual Split A/B allocation: 120 total windows do not support a 1% target. Initial unattainable calibration is rejected. Adaptive availability and diagnostic nominations are recorded separately from accepted decisions.
 
-The browser demo is a separate single-scale implementation, outside the original zero-duplication Python-wrapper contract. Its data-loading, independence and export limitations are open. The Python upload-basename collision, abstention-summary denominators and rounded exports also remain open. See the [current mathematical guide](whisker_mathematical_measurement_guide.md) and [known limitations](CURRENT_LIMITATIONS.md). Historical thresholds and performance numbers below have not been rerun.
+The browser demo is a separate single-scale implementation, outside the original zero-duplication Python-wrapper contract. The input-validation follow-up gives Python uploads unique paths, adds explicit CSV columns and row validation, and adds browser file hashes, rate/interval checks and visible failure handling. Unknown independence without comparable timestamps, browser WAV aliasing, abstention-summary denominators and rounded exports remain limitations. See the [current mathematical guide](whisker_mathematical_measurement_guide.md) and [known limitations](CURRENT_LIMITATIONS.md). Historical thresholds and performance numbers below have not been rerun.
 
 ## Part 1 — Historical Repository Audit (Capabilities at Planning Time)
 

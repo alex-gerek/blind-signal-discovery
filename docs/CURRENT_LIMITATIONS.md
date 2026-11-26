@@ -10,7 +10,7 @@ The author recorded 87/87 Python tests passing at `986dd46`. An independent revi
 
 Browser checks executed the actual inline functions in Node.js with an in-memory DOM and stubbed canvas calls. WAV checks supplied a decoded synthetic array through a stub AudioContext; they establish the decimation error, not real-browser codec behavior. Python upload/aggregation checks used in-memory mocks. None of these checks involved O3 input data or new scientific performance studies.
 
-## Confirmed open issues
+## Findings at the reviewed revision (follow-up status below)
 
 | ID | Evidence at reviewed revision | Impact and proposed verification |
 | --- | --- | --- |
@@ -45,3 +45,14 @@ MIT covers the project's licensed original material. The repository's general th
 ## Correction policy
 
 This documentation patch preserves historical result files, archived release `v0.3.0` at `c406e00`, and existing DOI identity. No Zenodo metadata were changed. Numerical/backend fixes, new browser reference studies, and archival metadata updates are separate steps requiring their own evidence. Keep failures and superseded results visible.
+
+
+## Input-validation follow-up (2026-11-26, working tree based on `99fce40`)
+
+- **L02 implemented:** Browser CSV rejects nonfinite, missing and malformed data rows, constant signals, invalid sampling rates and non-increasing/nonuniform time axes. Supported schema is one value column or two columns (`time_seconds,value`), optional header, no quoted fields. Python CSV retains standard CSV quoting and explicit index/name column selection, rejects malformed rows with line/column detail, and checks supplied rate against time metadata. NPY must be safe, real numeric data; object/pickle, complex and text arrays are rejected rather than coerced.
+- **L03 input checks implemented:** Browser runs reject identical file SHA-256 hashes, mismatched effective sampling rates and overlapping comparable CSV time intervals. Export metadata now records per-input hashes, sample counts, transformation details and the separation audit. Without timestamps, status remains `UNVERIFIED_EXTERNAL_CHECK_REQUIRED`; distinct hashes are not proof of independence. CSV time columns are interpreted in a user-declared common reference. Python rate/overlap checks also apply across different detector names; overlapping recordings are not relabelled as disjoint.
+- **L05 implemented:** Each Python upload gets a newly allocated directory and retains its original basename. Concurrent uploads cannot overwrite each other; reserved filenames and invalid/empty payloads are rejected. The basename remains available to existing holdout checks. Temporary uploads remain under `.tmp/uploads`; automatic retention/cleanup is not introduced.
+- Both interfaces clear stale results after a rejected new measurement. Browser errors are displayed and exports disabled; the selected window is retained on successful reruns. Browser calibration parameters are checked before rank loops, including integer-representability limits.
+- **Still open:** L01 WAV aliasing (stride-decimation mathematics unchanged, with an explicit preprocessing warning), L04 abstention metrics, L06 seed-zero/synthetic configuration provenance, L07 full numeric precision and L08 exposure-aware v0.2 reruns. Mono WAV is required in the browser; use the Python channel selector for multichannel input. This follow-up does not certify WAV frequency candidates or establish browser/Python equivalence.
+
+Validation passed for 34 distinct pytest cases across the final selections, including three existing ingestion/WAV export integration checks and a wrapper running six Node browser scenarios. The tests are `tests/test_input_validation.py` and `tests/test_browser_input_validation.js`; this was not a full-suite rerun. Test fixtures use synthetic metadata instead of reading the O3 manifest. Final outcomes are recorded in [research history](RESEARCH_HISTORY.md).

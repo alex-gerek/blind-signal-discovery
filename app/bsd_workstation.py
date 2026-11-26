@@ -30,6 +30,7 @@ from bsd.io_loader import (
     O3HoldoutBlockedError,
     load_timeseries_file,
 )
+from bsd.upload_storage import save_uploaded_bytes
 from bsd.workstation_runner import (
     CAL_STATUS_INSUFFICIENT,
     CAL_STATUS_PROVISIONAL,
@@ -45,12 +46,9 @@ st.set_page_config(page_title="BSD Local Measurement Workstation", layout="wide"
 
 
 def _save_upload_to_local_tmp(uploaded_file: Any) -> Path:
-    tmp_dir = PROJECT_ROOT / ".tmp" / "uploads"
-    tmp_dir.mkdir(parents=True, exist_ok=True)
-    safe_name = Path(uploaded_file.name).name
-    out_path = tmp_dir / safe_name
-    out_path.write_bytes(uploaded_file.getvalue())
-    return out_path
+    return save_uploaded_bytes(
+        uploaded_file.name, uploaded_file.getvalue(), PROJECT_ROOT / ".tmp" / "uploads"
+    )
 
 
 def _plot_window_waveform_and_spec(result: WorkstationRunResult, win_idx: int) -> plt.Figure:
@@ -224,10 +222,15 @@ def main() -> None:
             allow_resamp = st.checkbox("Allow explicit anti-aliased resampling to 1024 Hz (Nyquist 512 Hz)", value=False)
             man_fs = st.number_input("Manual Sample Rate Hz (for .npy / headerless .csv, 0 = auto)", 0.0, 1000000.0, 0.0, step=1.0)
             ch_idx_raw = st.number_input("Channel Index (for multi-channel .wav/.npy, -1 = auto/mono)", -1, 64, -1, step=1)
+            csv_value_col = int(st.number_input("CSV value column (0-based)", 0, 1000, 0, step=1))
+            csv_time_col_raw = int(st.number_input("CSV time column in seconds (-1 = none)", -1, 1000, -1, step=1))
+            st.caption("CSV columns apply to both files. Time columns must be finite, increasing and uniformly sampled; supply a common time reference.")
             units_lbl = st.text_input("Units Label", value="arbitrary")
             run_btn = st.button("Run Local File Measurement", type="primary")
 
     if run_btn:
+        # A rejected new input must not leave the previous run available as its result.
+        st.session_state.pop("bsd_last_result", None)
         try:
             with st.spinner("Running BSD calibration and detection..."):
                 if run_kind == "Synthetic Injection Self-Test":
@@ -249,10 +252,12 @@ def main() -> None:
                     fs_opt = float(man_fs) if man_fs > 0 else None
                     ch_opt = int(ch_idx_raw) if ch_idx_raw >= 0 else None
                     tgt_ts = load_timeseries_file(
-                        tgt_path, sample_rate_hz=fs_opt, channel_index=ch_opt, allow_resample=allow_resamp, units=units_lbl
+                        tgt_path, sample_rate_hz=fs_opt, channel_index=ch_opt, allow_resample=allow_resamp, units=units_lbl,
+                        csv_value_column=csv_value_col, csv_time_column=csv_time_col_raw if csv_time_col_raw >= 0 else None
                     )
                     bg_ts = load_timeseries_file(
-                        bg_path, sample_rate_hz=fs_opt, channel_index=ch_opt, allow_resample=allow_resamp, units=units_lbl
+                        bg_path, sample_rate_hz=fs_opt, channel_index=ch_opt, allow_resample=allow_resamp, units=units_lbl,
+                        csv_value_column=csv_value_col, csv_time_column=csv_time_col_raw if csv_time_col_raw >= 0 else None
                     )
                     result = run_workstation_analysis(tgt_ts, bg_ts, cfg)
             st.session_state["bsd_last_result"] = result

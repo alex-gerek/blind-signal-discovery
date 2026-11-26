@@ -236,9 +236,9 @@
       <input type="file" id="bgFile" accept=".wav,.csv,.txt" />
       <label for="tgtFile">Target File (.wav or .csv)</label>
       <input type="file" id="tgtFile" accept=".wav,.csv,.txt" />
-      <label for="csvFs">Sample Rate Hz (for .csv only)</label>
+      <label for="csvFs">Sample Rate Hz (for CSV/TXT; must agree with time column)</label>
       <input type="number" id="csvFs" value="512" min="128" max="48000" />
-      <div class="caption">Files are processed locally in browser memory and never uploaded to any server.</div>
+      <div class="caption">Files are processed locally in browser memory and never uploaded to any server. CSV/TXT: one value column, or time in seconds plus value; optional header, no quoted fields. Two time columns are compared as the same user-declared clock. Invalid rows are rejected. WAV must be mono; legacy WAV aliasing remains an open limitation.</div>
     </div>
 
     <button class="btn" id="runBtn">Run BSD Measurement</button>
@@ -248,7 +248,7 @@
   <main>
     <h1>Blind Signal Discovery (BSD) &mdash; Browser Workstation</h1>
     <div class="banner">
-      <strong>Browser Interactive Demo (v0.3.0):</strong> Runs template-free STFT excess-power whitening, 8-connected clustering, and exact finite-sample conformal calibration (<code>p_emp = (1 + n_ge) / (N_cal + 1) &le; target_fap</code>) directly in your browser &mdash; no installation required. For the full 3-scale Python core (author-reported <code>87/87</code> tests at <code>986dd46</code>), run <code>app/bsd_workstation.py</code> locally. Statistical anomalies are never proof of a physical discovery. <strong>Open limitations:</strong> WAV aliasing, dropped nonfinite CSV rows, unverified background separation, abstention-summary denominators, and incomplete export provenance. Use synthetic demonstrations while these file-measurement issues are reviewed. See <a href="https://github.com/alex-gerek/blind-signal-discovery/blob/main/docs/CURRENT_LIMITATIONS.md">known limitations</a>.
+      <strong>Browser Interactive Demo (v0.3.0):</strong> Runs template-free STFT excess-power whitening, 8-connected clustering, and exact finite-sample conformal calibration (<code>p_emp = (1 + n_ge) / (N_cal + 1) &le; target_fap</code>) directly in your browser &mdash; no installation required. For the full 3-scale Python core (author-reported <code>87/87</code> tests at <code>986dd46</code>), run <code>app/bsd_workstation.py</code> locally. Statistical anomalies are never proof of a physical discovery. <strong>Open limitations:</strong> WAV aliasing, externally unverified independence where timestamps are absent, abstention-summary denominators, and incomplete synthetic-run export provenance. Use synthetic demonstrations while these file-measurement issues are reviewed. See <a href="https://github.com/alex-gerek/blind-signal-discovery/blob/main/docs/CURRENT_LIMITATIONS.md">known limitations</a>.
     </div>
 
     <div class="tabs">
@@ -373,6 +373,12 @@ function median(arr) {
 
 // --- Exact Conformal Order Rank (zero upward tolerance, matching src/bsd/calibration.py) ---
 function conformalOrderRank(nSamples, targetFap) {
+  if (!Number.isSafeInteger(nSamples) || nSamples < 1 || !Number.isFinite(targetFap) || targetFap <= 0 || targetFap >= 1) {
+    throw new Error("Calibration requires a positive integer sample count and finite FAP strictly between 0 and 1.");
+  }
+  if (!Number.isFinite(1.0 / targetFap) || 1.0 / targetFap > Number.MAX_SAFE_INTEGER) {
+    throw new Error("Requested FAP requires more samples than the browser can represent safely.");
+  }
   let minReq = Math.max(1, Math.floor(1.0 / targetFap) - 1);
   while (1.0 / (minReq + 1.0) > targetFap) minReq++;
   while (minReq > 1 && 1.0 / minReq <= targetFap) minReq--;
@@ -576,31 +582,108 @@ function analyzeWindow(signal, fs, seedThresh = 4.0) {
 }
 
 // --- WAV & CSV Readers (100% local in browser) ---
+function parseBrowserCsv(text, csvFs) {
+  const suppliedFs = Number(csvFs);
+  if (!Number.isFinite(suppliedFs) || suppliedFs <= 0) throw new Error("CSV sample rate must be finite and positive.");
+  const lines = text.replace(/^\uFEFF/, "").replace(/\r\n?/g, "\n").split("\n");
+  while (lines.length && !lines[lines.length - 1].trim()) lines.pop();
+  const values = [], times = [];
+  let width = null, delimiter = null, sawRow = false;
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+    if (line.startsWith("#")) continue;
+    if (!line) {
+      if (!sawRow) continue;
+      throw new Error(`CSV row ${i + 1} is blank; missing samples are not removed.`);
+    }
+    if (line.includes('"')) throw new Error(`CSV row ${i + 1}: quoted fields are unsupported in the browser; use plain numeric CSV or the Python loader.`);
+    if (delimiter === null) delimiter = line.includes(",") ? "," : (line.includes(";") ? ";" : "space");
+    const cells = (delimiter === "space" ? line.split(/\s+/) : line.split(delimiter)).map(v => v.trim());
+    if (!sawRow) {
+      width = cells.length;
+      if (width !== 1 && width !== 2) throw new Error("Browser CSV requires one value column or two columns: time in seconds, value.");
+      sawRow = true;
+      const header = cells.every(v => v && Number.isNaN(Number(v)) && !/^[+-]?(nan|infinity|inf)$/i.test(v));
+      if (header) continue;
+    }
+    if (cells.length !== width || cells.some(v => !v || !Number.isFinite(Number(v)))) {
+      throw new Error(`CSV row ${i + 1}: expected ${width} finite numeric column(s); no rows were discarded.`);
+    }
+    values.push(Number(cells[width - 1]));
+    if (width === 2) times.push(Number(cells[0]));
+  }
+  if (values.length < 2) throw new Error("CSV needs at least two finite data rows.");
+  let fs = suppliedFs, interval = null;
+  if (times.length) {
+    const deltas = times.slice(1).map((t, i) => t - times[i]);
+    if (deltas.some(dt => !Number.isFinite(dt) || dt <= 0)) throw new Error("CSV timestamps must be strictly increasing and finite.");
+    const med = median(deltas);
+    if (deltas.some(dt => Math.abs(dt - med) / med > 0.02)) throw new Error("CSV timestamps are non-uniform (>2% jitter).");
+    fs = (times.length - 1) / (times[times.length - 1] - times[0]);
+    if (!Number.isFinite(fs) || fs <= 0 || Math.abs(suppliedFs - fs) / fs > 0.02) throw new Error("CSV sample rate conflicts with its timestamps.");
+    interval = [times[0], times[times.length - 1]];
+  }
+  validateBrowserSignal(values, fs);
+  return { signal: Float64Array.from(values), fs, timeInterval: interval,
+    preprocessing: { format: "csv", columns: width, time_column_seconds: times.length ? 0 : null,
+      sample_rate_hz: fs, resampled: false, discarded_data_rows: 0 } };
+}
+
+function validateBrowserSignal(signal, fs) {
+  if (!Number.isFinite(fs) || fs <= 0) throw new Error("Sample rate must be finite and positive.");
+  if (!signal.length) throw new Error("Input signal is empty.");
+  let first = signal[0], varies = false;
+  for (const value of signal) {
+    if (!Number.isFinite(value)) throw new Error("Input contains non-finite samples.");
+    if (value !== first) varies = true;
+  }
+  if (!varies) throw new Error("Input signal is constant and cannot be analyzed.");
+}
+
+async function hashBrowserFile(file) {
+  if (!globalThis.crypto || !globalThis.crypto.subtle) throw new Error("File hashing requires HTTPS or localhost; use the Python Workstation otherwise.");
+  const digest = await globalThis.crypto.subtle.digest("SHA-256", await file.arrayBuffer());
+  return Array.from(new Uint8Array(digest), b => b.toString(16).padStart(2, "0")).join("");
+}
+
+function validateBrowserPair(bg, tgt, bgHash, tgtHash) {
+  validateBrowserSignal(bg.signal, bg.fs);
+  validateBrowserSignal(tgt.signal, tgt.fs);
+  if (bgHash === tgtHash) throw new Error("Background and target have identical SHA-256 hashes; use independent recordings.");
+  if (Math.abs(bg.fs - tgt.fs) > Math.max(1e-6, 1e-6 * Math.max(bg.fs, tgt.fs))) throw new Error("Background and target have different effective sample rates.");
+  if (bg.timeInterval && tgt.timeInterval) {
+    const [b0, b1] = bg.timeInterval, [t0, t1] = tgt.timeInterval;
+    if (!(t1 <= b0 || t0 >= b1)) throw new Error("Background and target timestamps overlap; use disjoint intervals in a common time reference.");
+    return { status: "VERIFIED_DISJOINT_TIMESTAMPS", target_sha256: tgtHash, background_sha256: bgHash,
+      warnings: ["CSV timestamps are interpreted in a user-declared common clock; disjointness does not prove statistical independence."] };
+  }
+  return { status: "UNVERIFIED_EXTERNAL_CHECK_REQUIRED", target_sha256: tgtHash, background_sha256: bgHash,
+    warnings: ["Distinct file hashes do not prove independence. Confirm externally that recordings do not overlap or share signal energy."] };
+}
+
 async function readAudioOrCsv(file, csvFs) {
   const name = file.name.toLowerCase();
   if (name.endsWith(".wav")) {
-    const buf = await file.arrayBuffer();
     const ctx = new (window.AudioContext || window.webkitAudioContext)();
-    const decoded = await ctx.decodeAudioData(buf);
-    const ch0 = decoded.getChannelData(0);
-    const rawFs = decoded.sampleRate;
-    // Simple stride decimation to ~512 Hz for fast interactive STFT
-    const step = Math.max(1, Math.round(rawFs / FS));
-    const out = new Float64Array(Math.floor(ch0.length / step));
-    for (let i = 0; i < out.length; i++) out[i] = ch0[i * step];
-    await ctx.close();
-    return { signal: out, fs: rawFs / step };
+    try {
+      const decoded = await ctx.decodeAudioData(await file.arrayBuffer());
+      if (decoded.numberOfChannels !== 1) throw new Error("Browser WAV input must be mono; select a channel in the Python Workstation for multichannel files.");
+      const ch0 = decoded.getChannelData(0), rawFs = decoded.sampleRate;
+      validateBrowserSignal(ch0, rawFs);
+      // Legacy stride decimation is unchanged in this input-validation step.
+      // It has NO antialias filter; WAV aliasing remains a documented open issue.
+      const step = Math.max(1, Math.round(rawFs / FS));
+      const out = new Float64Array(Math.floor(ch0.length / step));
+      for (let i = 0; i < out.length; i++) out[i] = ch0[i * step];
+      validateBrowserSignal(out, rawFs / step);
+      return { signal: out, fs: rawFs / step, timeInterval: null,
+        preprocessing: { format: "wav", channel: "mono", decoded_sample_rate_hz: rawFs,
+          sample_rate_hz: rawFs / step, stride_decimation_step: step, antialias_filter: "none",
+          warnings: ["WAV_ALIASING_RISK: legacy stride decimation has no antialias filter; frequency candidates require independent verification."] } };
+    } finally { await ctx.close(); }
   }
-  const txt = await file.text();
-  const vals = [];
-  for (const line of txt.split(/\r?\n/)) {
-    const s = line.trim();
-    if (!s || s.startsWith("#")) continue;
-    const parts = s.split(/[,\s;]+/);
-    const v = Number(parts[parts.length - 1]);
-    if (Number.isFinite(v)) vals.push(v);
-  }
-  return { signal: Float64Array.from(vals), fs: Number(csvFs) || FS };
+  if (!/\.(csv|txt)$/.test(name)) throw new Error("Browser files must be WAV, CSV or TXT.");
+  return parseBrowserCsv(await file.text(), csvFs);
 }
 
 // --- Colormap (Viridis LUT) ---
@@ -760,6 +843,7 @@ async function runMeasurement() {
   const workflow = document.getElementById("workflow").value;
   const targetFap = Number(document.getElementById("targetFap").value);
   let bgWindows = [], tgtWindows = [], gtRecords = null, fs = FS;
+  let inputAudit = null, inputProvenance = null;
 
   if (workflow === "synth") {
     const nBg = Number(document.getElementById("nBg").value);
@@ -786,18 +870,23 @@ async function runMeasurement() {
     const bgFile = document.getElementById("bgFile").files[0];
     const tgtFile = document.getElementById("tgtFile").files[0];
     if (!bgFile || !tgtFile) {
-      statusEl.textContent = "Please select both a Background file and a Target file.";
-      return;
+      throw new Error("Please select both a Background file and a Target file.");
     }
-    const csvFs = Number(document.getElementById("csvFs").value) || FS;
+    const csvFs = Number(document.getElementById("csvFs").value);
+    const bgHash = await hashBrowserFile(bgFile), tgtHash = await hashBrowserFile(tgtFile);
+    if (bgHash === tgtHash) throw new Error("Background and target have identical SHA-256 hashes; use independent recordings.");
     const bgLoaded = await readAudioOrCsv(bgFile, csvFs);
     const tgtLoaded = await readAudioOrCsv(tgtFile, csvFs);
+    inputAudit = validateBrowserPair(bgLoaded, tgtLoaded, bgHash, tgtHash);
+    inputProvenance = {
+      background: { name: bgFile.name, sha256: bgHash, samples: bgLoaded.signal.length, time_interval: bgLoaded.timeInterval, preprocessing: bgLoaded.preprocessing },
+      target: { name: tgtFile.name, sha256: tgtHash, samples: tgtLoaded.signal.length, time_interval: tgtLoaded.timeInterval, preprocessing: tgtLoaded.preprocessing }
+    };
     fs = tgtLoaded.fs;
     const nBg = Math.floor(bgLoaded.signal.length / WIN_N);
     const nTgt = Math.floor(tgtLoaded.signal.length / WIN_N);
     if (nBg < 20 || nTgt < 1) {
-      statusEl.textContent = `Need >= 20 background windows (${20 * WIN_N} samples) and >= 1 target window.`;
-      return;
+      throw new Error(`Need >= 20 background windows (${20 * WIN_N} samples) and >= 1 target window.`);
     }
     for (let i = 0; i < nBg; i++) bgWindows.push(bgLoaded.signal.subarray(i * WIN_N, (i + 1) * WIN_N));
     for (let i = 0; i < nTgt; i++) tgtWindows.push({ signal: tgtLoaded.signal.subarray(i * WIN_N, (i + 1) * WIN_N), role: "LOCAL_FILE", inj: null });
@@ -859,7 +948,9 @@ async function runMeasurement() {
       target_fap: targetFap,
       n_bg_windows: sortedNull.length,
       n_target_windows: windows.length,
-      sample_rate_hz: fs
+      sample_rate_hz: fs,
+      independence_audit: inputAudit,
+      input_provenance: inputProvenance
     },
     calibration: {
       target_fap: targetFap,
@@ -971,7 +1062,35 @@ async function runMeasurement() {
   // Update Tab 4 JSON preview
   const exportPayload = buildExportPayload(run);
   document.getElementById("jsonPreview").textContent = JSON.stringify(exportPayload, null, 2);
-  statusEl.textContent = `Done: ${nActive} / ${windows.length} active anomaly window(s), ${allCands.length} candidate(s).`;
+  statusEl.textContent = `Done: ${nActive} / ${windows.length} active anomaly window(s), ${allCands.length} candidate(s).` +
+    (inputAudit ? ` Background separation: ${inputAudit.status}. See export metadata for provenance and warnings.` : "");
+}
+
+async function handleRunMeasurement() {
+  const runButton = document.getElementById("runBtn");
+  const exports = ["dlTimeline", "dlCands", "dlJson"].map(id => document.getElementById(id));
+  runButton.disabled = true;
+  exports.forEach(button => { button.disabled = true; });
+  try {
+    await runMeasurement();
+  } catch (error) {
+    LAST_RUN = null;
+    document.getElementById("statusLine").textContent = "Input / measurement error: " + error.message;
+    const banner = document.getElementById("calBanner");
+    banner.className = "banner banner-err";
+    banner.textContent = "No current result: " + error.message;
+    ["summaryMetrics", "gtMetrics", "jumpButtons"].forEach(id => { document.getElementById(id).innerHTML = ""; });
+    document.querySelector("#candTable tbody").innerHTML = "";
+    document.querySelector("#gtTable tbody").innerHTML = "";
+    document.getElementById("jsonPreview").textContent = "No valid current result to export.";
+    ["timelineCanvas", "waveCanvas", "specCanvas"].forEach(id => {
+      const canvas = document.getElementById(id);
+      canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
+    });
+  } finally {
+    runButton.disabled = false;
+    exports.forEach(button => { button.disabled = LAST_RUN === null; });
+  }
 }
 
 function buildExportPayload(run) {
@@ -1029,7 +1148,7 @@ document.getElementById("targetFap").addEventListener("change", updateFapHint);
 document.getElementById("winIdx").addEventListener("input", e => {
   if (LAST_RUN) drawWindowDetail(LAST_RUN, Number(e.target.value));
 });
-document.getElementById("runBtn").addEventListener("click", runMeasurement);
+document.getElementById("runBtn").addEventListener("click", handleRunMeasurement);
 document.getElementById("dlTimeline").addEventListener("click", () => {
   if (LAST_RUN) downloadText("timeline.csv", toCsv(buildExportPayload(LAST_RUN).timeline), "text/csv");
 });
@@ -1048,7 +1167,7 @@ window.jumpWin = function(idx) {
 };
 
 updateFapHint();
-runMeasurement();
+handleRunMeasurement();
 </script>
 </body>
 </html>
