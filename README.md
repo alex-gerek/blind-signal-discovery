@@ -1,117 +1,113 @@
+<div align="center">
+
 # Blind Signal Discovery (BSD)
 
+**Finding unknown structure in noisy time series, with a false-alarm rate you can measure.**
+
+[![Tests](https://img.shields.io/badge/tests-87%20passing-2ea44f.svg)](tests/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-0f9e8e.svg)](LICENSE)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-1f8fd0.svg)](pyproject.toml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24557479.svg)](https://doi.org/10.5281/zenodo.24557479)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A standalone, classical signal-processing and statistical research prototype for detecting statistically significant unknown signals in noisy time-series data without signal templates or machine learning.
+**[Open the workstation](#open-the-workstation)** · [How it is measured](#what-has-been-measured) · [Mathematical guide](docs/whisker_mathematical_measurement_guide.md) · [Audit erratum](docs/AUDIT_ERRATUM_47a5475.md) · [Research history](docs/RESEARCH_HISTORY.md) · [Manual verification](docs/manual_workstation_synthetic_verification_986dd46.md)
 
-> **Current Release (`v0.3.0`):** Audited multi-resolution detector, adaptive regime monitoring, local measurement Workstation (`app/bsd_workstation.py`), historical erratum ([docs/AUDIT_ERRATUM_47a5475.md](docs/AUDIT_ERRATUM_47a5475.md)), research history ([docs/RESEARCH_HISTORY.md](docs/RESEARCH_HISTORY.md)), and manual synthetic verification ([docs/manual_workstation_synthetic_verification_986dd46.md](docs/manual_workstation_synthetic_verification_986dd46.md)). Licensed under the [MIT License](LICENSE); see [SECURITY.md](SECURITY.md) for security guidance.
+</div>
 
-> **Scientific Scope:** This project is a methodological signal-detection study on simulated time-series data. It investigates template-free anomaly detection under calibrated false-alarm control. **A detected anomaly is not a physical discovery.** No claims are made regarding dark matter, axions, gravitational waves, or any physical phenomenon.
+---
 
-## Primary Research Question
+Most signal detectors search for shapes they already know. This prototype asks the complementary question: **can a purely classical, template-free detector find previously unseen time-frequency structure in noisy data while keeping its false-alarm probability calibrated and independently measurable?**
 
-> Can a template-free anomaly detector discover previously unseen signal structures in noisy data while maintaining a controlled and independently measured experiment-level false-alarm rate?
+> **Scientific Scope:** BSD is a methodological research prototype on synthetic and locally supplied time-series data. It strictly distinguishes *measured features*, *statistical anomalies*, and *detection candidates*. **A detected anomaly is never proof of a physical or astrophysical discovery.**
 
-## Local Measurement Workstation (`v0.3.0`)
+---
 
-BSD includes a standalone local Streamlit interface ([app/bsd_workstation.py](app/bsd_workstation.py)) for interactive calibration inspection, spectrogram review, and reproducible CSV/JSON export on synthetic self-tests or user-supplied local time-series files (`.wav`, `.csv`, `.npy`, `.hdf5`/`.h5`).
+## Why we built this (and what comes next)
 
-- **Built-in Synthetic Self-Test:** Evaluates both positive injections (reporting detected and missed injections explicitly) and pure-noise negative-control windows under frozen conformal calibration.
-- **Explicit Calibration & Availability Semantics:** Reports 3-tier calibration status (`INSUFFICIENT`, `PROVISIONAL`, `VALIDATED`), distinguishes diagnostic Stream A nominations (`active_mode_diagnostic_nomination`) from accepted decisions (`active_mode_anomaly_flag`), and flags unattainable thresholds explicitly as `CALIBRATION_UNAVAILABLE` (`null` in strict RFC 8259 JSON).
-- **Interactive Inspection & Export:** Displays full-timeline anomaly scores vs. thresholds, per-window waveforms and STFT spectrograms with candidate bounding boxes, and exports reproducible `candidates.csv`, `timeline.csv`, and `run_report.json` bundles.
-- **Local-Only Safety:** Binds to `127.0.0.1:8501` by default; never classifies single-channel anomalies as independently confirmed physical events; reserved O3 holdout data is hard-blocked.
-- **Documentation & Verification:** See [docs/bsd_workstation_plan_and_contract.md](docs/bsd_workstation_plan_and_contract.md) and [docs/manual_workstation_synthetic_verification_986dd46.md](docs/manual_workstation_synthetic_verification_986dd46.md).
+This repository is the mathematical and statistical testing ground first. Before applying template-free anomaly detection and finite-sample conformal calibration to broader acoustic or musical analysis, we verify the detector's behavior under strict synthetic controls, non-stationary noise shifts, and public LIGO/Virgo O2 time-series benchmarks.
+
+Once the mathematical foundations, calibration limits, and failure modes are thoroughly tested and understood here, we aim to explore whether these same signal-processing and statistical tools can inform our acoustic and musical research projects — including **[Periodic Table of Sound](https://github.com/alex-gerek/periodic-table-of-sound)** and **[PHARMAKON](https://github.com/alex-gerek/PHARMAKON)**. Every cross-domain transfer will be tested separately on its own controls rather than assumed.
+
+---
+
+## The idea in one table
+
+| Stage | Question asked of the signal | Method (`src/bsd/`) |
+| --- | --- | --- |
+| **Whitening** | What stands out above the local spectral and temporal floor? | Median DC removal, unpadded STFT, 2D robust median-filter background normalization (`detector.py`, `detector_v2.py`) |
+| **Multi-scale search** | Is the excess power brief (`31 ms`), intermediate (`125 ms`), or sustained (`500 ms`)? | 3-scale `MultiResolutionDetector` with per-scale robust standardization and 8-connected clustering (`detector_v2.py`) |
+| **Calibration** | How high must a score be so pure noise exceeds it with probability $\le \alpha$? | Finite-sample conformal order statistic (`conformal_order_rank`), strict `p_emp <= target_fap`, explicit `CALIBRATION_UNAVAILABLE` (`null`) when unattainable (`calibration.py`) |
+| **Regime monitoring** | Has the background drifted or entered an impulsive glitch storm? | Orthogonal spectral-continuum + impulsive-crest monitors, staged causal recalibration, explicit per-channel and Union availability (`adaptive_regime_v2b.py`) |
+| **Coincidence & vetoes** | Is a candidate reproducible across detectors or explained by a local artifact? | Reversible glitch/line vetoes (`vetoes.py`), peak-time coincidence, band-limited cross-correlation lag, overlap-corrected time slides (`coincidence.py`) |
+
+---
+
+## What has been measured
+
+Every claim requires a control with a known answer, explicit uncertainty, and documented failure modes.
+
+| Study / Check | Evidence & Measured Result | Scope / Reference |
+| --- | --- | --- |
+| **Automated regression suite (`v0.3.0`)** | **`87 / 87` pytest checks passing** (exact conformal `nextafter` bounds, low-FAP & Union STFT recovery, `n_norm_samples` Split-B alignment, `max_recal_buffer_windows` validation, coincidence/time-slide exposure, strict JSON `allow_nan=False` export) | [tests/](tests/) |
+| **Confirmatory synthetic negative control** | `316 / 50,000 = 0.6320%` empirical FAR across `K = 100` independent seeds (`500` windows/seed, `N_B = 154`, expected $\mu_0 = 0.6452\%$, `FAIL_TO_REJECT_H0`) | [results/workstation_confirmatory_k100/](results/workstation_confirmatory_k100/report.md) · Two-sided MC SE erratum (`0.00069` → `0.00222319`) in [AUDIT_ERRATUM_47a5475.md](docs/AUDIT_ERRATUM_47a5475.md) |
+| **Manual Workstation verification (`986dd46`)** | Visually inspected synthetic self-test (`220` bg, `80` noise-only, `10` `linear_chirp` in `pink_colored`, `PROVISIONAL`, `UNION_UNAVAILABLE`, threshold `2.8889`): **`SNR=18`: `10/10` detected, `1/80` FA**; **`SNR=8`: `3/10` detected, `7/10` missed, `1/80` FA** | [manual_workstation_synthetic_verification_986dd46.md](docs/manual_workstation_synthetic_verification_986dd46.md) |
+| **v0.1 baseline synthetic benchmark** | `0.80%` held-out noise FAR (`12 / 1,500`, 95% CI `[0.41%, 1.39%]`); `59.51%` known-family recall; `37.92%` withheld `sinusoidal_fm` recall (`94.4%` at SNR 25); documented failure modes under `shifted_ar2` (`3.56%`) and impulsive glitches (`84.0%`) | [results/research_v01/report.md](results/research_v01/report.md) · [scientific_review_package.md](docs/scientific_review_package.md) |
+| **Historical adaptive & LIGO/Virgo O2 records** | Preserved untouched as pre-audit version records; O3 holdout (`docs/v03_o3_holdout_manifest.json`) strictly untouched | [AUDIT_ERRATUM_47a5475.md](docs/AUDIT_ERRATUM_47a5475.md) · [RESEARCH_HISTORY.md](docs/RESEARCH_HISTORY.md) |
+
+> **Historical note:** Passing the `v0.3.0` test suite verifies the audited code paths and does not automatically recompute or revalidate pre-audit historical reports under `results/`. See [docs/AUDIT_ERRATUM_47a5475.md](docs/AUDIT_ERRATUM_47a5475.md).
+
+---
+
+## Open the workstation
+
+BSD includes a standalone **Local Measurement Workstation** ([app/bsd_workstation.py](app/bsd_workstation.py)) for interactive calibration inspection, spectrogram review, synthetic injection self-tests, and reproducible CSV/JSON export on local time-series files (`.wav`, `.csv`, `.npy`, `.hdf5`/`.h5`).
+
+- **Built-in Synthetic Self-Test:** Tests positive injections (explicitly listing both detected and missed events) alongside pure-noise negative-control windows.
+- **Honest Availability & Export:** Displays `INSUFFICIENT` / `PROVISIONAL` / `VALIDATED` calibration status, separates diagnostic Stream A nominations (`active_mode_diagnostic_nomination`) from accepted decisions (`active_mode_anomaly_flag`), and exports `candidates.csv`, `timeline.csv`, and strict RFC 8259 `run_report.json` (`allow_nan=False`, unavailable thresholds as `null`).
+- **Local-Only Safety:** Binds to `127.0.0.1:8501` by default; reserved O3 holdout data is hard-blocked. See [docs/bsd_workstation_plan_and_contract.md](docs/bsd_workstation_plan_and_contract.md) and [SECURITY.md](SECURITY.md).
 
 ```powershell
-# Install with GUI dependencies and launch locally
-.\.venv\Scripts\python.exe -m pip install -e ".[gui,dev]"
+# Clone, install with GUI + test dependencies, and launch locally
+git clone https://github.com/alex-gerek/blind-signal-discovery.git
+cd blind-signal-discovery
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -e ".[gui,ligo,dev]"
 .\.venv\Scripts\streamlit.exe run app\bsd_workstation.py --server.address 127.0.0.1 --server.port 8501
 ```
 
-## Documentation and Results
+On Windows, you can also start the local Workstation via `launch_workstation.bat` after creating `.venv`.
 
-- **Full Experimental Research Report (`research_v01`):** [results/research_v01/report.md](results/research_v01/report.md)
-- **Scientific Review Package & Statistical Audit:** [docs/scientific_review_package.md](docs/scientific_review_package.md)
-- **Machine-Readable Outputs:** [results.json](results/research_v01/results.json) | [summary_by_family_snr.csv](results/research_v01/summary_by_family_snr.csv) | [per_sample_results.csv](results/research_v01/per_sample_results.csv)
+---
 
-### Summary of Measured v0.1 Results (3 Independent Seeds: `101, 202, 303`)
+## Quick start (CLI & tests)
 
-- **Held-out in-distribution noise-only FAR:** `0.80%` (`12 / 1500`; 95% exact Clopper-Pearson CI `[0.41%, 1.39%]`) against a calibrated `1.0%` experiment-level target FAP.
-- **Held-out known-signal detection (SNR 4–25):** `59.51%` recall (`914 / 1536`), `98.70%` precision, `99.45%` time-frequency box overlap on detected events.
-- **Withheld signal family (`sinusoidal_fm`, unseen during development):** `37.92%` pooled recall (`182 / 480`), rising to `90.7%` at SNR 20 and `94.4%` at SNR 25.
-- **Documented failure modes (automatically flagged as statistically non-credible):** `3.56%` FAR under unseen resonant AR(2) noise (`shifted_ar2`) and `84.00%` FAR under unmodeled impulsive interference.
-
-### Selected Figures (Simulated Synthetic Data)
-
-- [Time-Domain Signal Examples](results/research_v01/figures/fig01_time_domain_examples.png)
-- [Spectrograms and Excess-Power Maps](results/research_v01/figures/fig02_spectrograms_and_excess_maps.png)
-- [Candidate Overlays (Known and Withheld Families)](results/research_v01/figures/fig03_candidate_overlays.png)
-- [Detection Probability vs. Energy SNR](results/research_v01/figures/fig04_detection_vs_snr.png)
-- [Empirical False-Alarm Rates Across Noise Conditions](results/research_v01/figures/fig05_false_alarm_results.png)
-- [Held-Out Confusion Matrix](results/research_v01/figures/fig06_confusion_matrix.png)
-- [False-Positive Diagnostic Examples](results/research_v01/figures/fig07_false_positive_examples.png)
-- [Missed-Signal (False-Negative) Diagnostic Examples](results/research_v01/figures/fig08_missed_signal_examples.png)
-- [Calibration Null Distribution](results/research_v01/figures/fig09_calibration_null_distribution.png)
-
-## Architecture
-
-The pipeline strictly separates synthetic data generation, blind anomaly detection, statistical calibration, and held-out evaluation:
-
-1. **Noise Models (`src/bsd/noise.py`)**: Gaussian white noise, pink-like $1/f^\alpha$ colored noise, smoothly nonstationary noise, impulsive interference, and an unseen resonant AR(2) shifted-noise distribution.
-2. **Synthetic Data Generator (`src/bsd/generator.py`)**: Generates isolated `Observation` objects (raw 1D time series and sample rate only) and separate `GroundTruth` records across four known signal families (`sinusoid`, `broadband_pulse`, `linear_chirp`, `intermittent_narrowband`) plus a withheld blind-test-only family (`sinusoidal_fm`).
-3. **Template-Free Baseline Detector (`src/bsd/detector.py`)**: Robust median DC removal, unpadded STFT power spectrogram (excluding DC and Nyquist bins), 2D robust median-filter spectral/temporal background whitening, normalized excess-power scoring, and 8-connected-component clustering.
-4. **Statistical Calibration (`src/bsd/calibration.py`)**: Calibrates the experiment-level maximum cluster anomaly score on an independent noise-only calibration split using the finite-sample conservative order statistic $k = \lceil (1 - \alpha)(N_{\text{cal}} + 1) \rceil$ targeting $\alpha = 1\%$ experiment-level false-alarm probability (FAP), accounting for multiple comparisons across all time-frequency bins and STFT overlap correlations.
-5. **Independent Blind Evaluation (`src/bsd/evaluation.py`)**: Evaluates frozen thresholds across strictly separated splits (in-distribution noise-only, known signal families, withheld signal family, shifted noise, and a 6-part robustness stress suite) with exact Clopper-Pearson and Wilson 95% confidence intervals and automatic statistical credibility checks.
-6. **Visualization & Reporting (`src/bsd/visualization.py`, `src/bsd/reporting.py`)**: Produces 9 publication-quality figures, machine-readable JSON/CSV summaries, and a structured Markdown research report.
-
-## Repository Layout
-
-```text
-blind-signal-discovery/
-├── README.md
-├── pyproject.toml
-├── .gitignore
-├── docs/
-│   └── scientific_review_package.md
-├── configs/
-│   ├── smoke.toml          # Fast smoke-test configuration
-│   └── research.toml       # Full 3-seed research configuration (>=500 noise + >=500 signal/seed)
-├── src/
-│   └── bsd/
-│       ├── __init__.py
-│       ├── noise.py
-│       ├── generator.py
-│       ├── detector.py
-│       ├── calibration.py
-│       ├── evaluation.py
-│       ├── visualization.py
-│       └── reporting.py
-├── experiments/
-│   └── run_experiment.py
-├── tests/
-│   └── test_bsd.py
-└── results/
-    └── research_v01/       # Generated JSON, CSV, figures, and research report
-```
-
-## Setup and Reproducibility
-
-Requirements: Python 3.11+ on local CPU, NumPy, SciPy, Matplotlib, pytest.
+Requirements: Python 3.11+ on local CPU (`numpy`, `scipy`, `matplotlib`, `pytest`, optional `streamlit` and `h5py`).
 
 ```powershell
-# Create and activate virtual environment inside the project
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -e ".[dev]"
-
-# Run automated test suite
+# Run the full automated test suite (87 tests)
 .\.venv\Scripts\python.exe -m pytest -v
 
-# Run fast smoke-test configuration
+# Run fast smoke-test experiment
 .\.venv\Scripts\python.exe experiments\run_experiment.py --config configs\smoke.toml
-
-# Run full 3-seed research configuration
-.\.venv\Scripts\python.exe experiments\run_experiment.py --config configs\research.toml
 ```
 
-All random number streams are derived deterministically via `numpy.random.SeedSequence([master_seed, split_stream_code])`, guaranteeing exact reproducibility and statistical independence across calibration, held-out test, and robustness splits.
+All synthetic random streams are derived deterministically via `numpy.random.SeedSequence`, ensuring reproducibility and statistical independence across calibration and evaluation splits.
+
+---
+
+## Documentation, Audits, and Related Projects
+
+- **Mathematical Measurement Guide:** [docs/whisker_mathematical_measurement_guide.md](docs/whisker_mathematical_measurement_guide.md)
+- **Workstation Contract & Guide:** [docs/bsd_workstation_plan_and_contract.md](docs/bsd_workstation_plan_and_contract.md)
+- **Manual Workstation Verification (`986dd46`):** [docs/manual_workstation_synthetic_verification_986dd46.md](docs/manual_workstation_synthetic_verification_986dd46.md)
+- **Independent Audit Erratum (`47a5475`):** [docs/AUDIT_ERRATUM_47a5475.md](docs/AUDIT_ERRATUM_47a5475.md)
+- **Research History Log:** [docs/RESEARCH_HISTORY.md](docs/RESEARCH_HISTORY.md)
+- **v0.1 Scientific Review Package:** [docs/scientific_review_package.md](docs/scientific_review_package.md)
+- **Security Policy:** [SECURITY.md](SECURITY.md)
+- **Related Projects:** [Periodic Table of Sound](https://github.com/alex-gerek/periodic-table-of-sound) · [PHARMAKON](https://github.com/alex-gerek/PHARMAKON)
+
+---
+
+## License & Citation
+
+- **License:** [MIT License](LICENSE) — Copyright (c) 2026 Lex Gerek. Third-party public datasets (e.g., GWOSC / LIGO Open Science Center) remain under their respective upstream licenses.
+- **Citation:** See [CITATION.cff](CITATION.cff) or cite via Zenodo DOI [`10.5281/zenodo.24557479`](https://doi.org/10.5281/zenodo.24557479).
