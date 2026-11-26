@@ -103,3 +103,8 @@ All 15 cases in the post-audit Workstation protocol completed and independent ex
 **L10 — Frozen broadband/Union mismatch after a background shift:** mature noise127/127 nominated by broadband/fullUnion, versus0/127 STFT. This is measured drift ambiguity; FULL_UNION_AVAILABLE does not certify1% FWER under the new noise distribution.
 
 The12-case syntheticA/B replay and2-arm follow-up are documented in [historical adaptive findings](HISTORICAL_ADAPTIVE_REPLAY_FINDINGS_2026-11-26.md). Other historical real-data/coincidence runs remain pending. Detector source was not changed, all old artifacts were preserved, and no O3 input/manifest was used. These unresolved limitations must accompany adaptive-recovery claims in the next release.
+
+
+## GW150914 real-data control follow-up (2026-11-26)
+
+A current-source known O1 control now recovers GW150914 inH1/L1 under fixed independently fitted preprocessing; seeGW150914_REAL_DATA_CONTROL_2026-11-26.md. It does not validate broad real-data sensitivity/FAR or adaptive recovery (no target regime change). L1 event-window glitch warning and NO_CW_HW_INJ metadata are preserved. The actual file-upload path reads the reserved manifest even for O1 filenames; that path was not exercised under the no-manifest-read rule. Large real derivative files remain outsidegit with hashes, and native user-operated ingestion is pending. L09/L10 remain unresolved.

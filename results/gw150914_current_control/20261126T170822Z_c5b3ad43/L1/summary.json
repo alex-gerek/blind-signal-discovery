@@ -1,0 +1,70 @@
+{
+  "site": "L1",
+  "frozen_threshold": 3.804636256721923,
+  "calibration_status": {
+    "status": "VALIDATED",
+    "n_bg_windows": 320,
+    "n_thresh": 224,
+    "n_eff": 170.46345765834616,
+    "lag1_autocorr": -0.06377897344105835,
+    "ljung_box_p": 0.06433003365270651,
+    "p_min": 0.0044444444444444444,
+    "expected_far_iid": 0.008888888888888889,
+    "far_ci90_iid": [
+      0.001588725475405356,
+      0.021001806501192453
+    ],
+    "far_ci90_neff": [
+      0.0009670489308186954,
+      0.02232700597116303
+    ],
+    "dependence_detected": false,
+    "unmet_validation_conditions": []
+  },
+  "event_window_index": 39,
+  "event_window_gps": 1126259460.0,
+  "frozen_event_window": {
+    "window_index": 39,
+    "gps_start": 1126259460.0,
+    "gps_end": 1126259464.0,
+    "score": 8.528027465561335,
+    "threshold": 3.804636256721923,
+    "empirical_p": 0.0044444444444444444,
+    "detected": true
+  },
+  "frozen_reference_associated_candidates": 3,
+  "frozen_control_nominations": 3,
+  "frozen_control_windows": 320,
+  "frozen_offsource_nominations": 0,
+  "frozen_offsource_windows": 71,
+  "adaptive_event": {
+    "available": true,
+    "score": 8.528027465561335,
+    "threshold": 3.804636256721923,
+    "detected": true,
+    "credibility": "CALIBRATED_STATIONARY",
+    "warnings": [
+      "GLITCH_STORM"
+    ]
+  },
+  "adaptive_summary": {
+    "n_target_windows": 80,
+    "target_duration_s": 320.0,
+    "n_detection_available_windows": 80,
+    "n_calibration_unavailable_windows": 0,
+    "detection_available_duty_cycle": 1.0,
+    "n_clean_calibrated_windows": 79,
+    "clean_duty_cycle": 0.9875,
+    "excluded_livetime_s": 4.0,
+    "n_active_mode_anomaly_windows": 1,
+    "n_raw_stft_candidates": 3,
+    "n_broadband_anomaly_windows": 0,
+    "n_continuum_drift_warnings": 0,
+    "n_glitch_storm_warnings": 1,
+    "n_regimes_established": 1,
+    "union_mode_status_counts": {
+      "FULL_UNION_AVAILABLE": 80
+    }
+  },
+  "elapsed_s": 52.051329499998246
+}

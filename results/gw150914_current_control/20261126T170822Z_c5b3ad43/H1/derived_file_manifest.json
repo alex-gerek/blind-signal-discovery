@@ -1,0 +1,16 @@
+{
+  "calibration": {
+    "csv": "data/derived/gw150914_workstation/20261126T170822Z_c5b3ad43/GW150914_H1_calibration_whitened_1024Hz.csv",
+    "csv_sha256": "065b79bb7ef0ba53e22be8ff2ce3c3516354365b8046d5747ee2edd0b17b595d",
+    "npy": "data/derived/gw150914_workstation/20261126T170822Z_c5b3ad43/GW150914_H1_calibration_whitened_1024Hz.npy",
+    "npy_sha256": "e1126a725610f22be64f9fbf214ecfb1164ddfb0ab8ba0f66667fb27a2ff65b0",
+    "samples": 1310720
+  },
+  "target": {
+    "csv": "data/derived/gw150914_workstation/20261126T170822Z_c5b3ad43/GW150914_H1_target_whitened_1024Hz.csv",
+    "csv_sha256": "27b7061c36aa9601d3ecad15d773682e13279a05ede2b78f1c6aed7b600173cf",
+    "npy": "data/derived/gw150914_workstation/20261126T170822Z_c5b3ad43/GW150914_H1_target_whitened_1024Hz.npy",
+    "npy_sha256": "83731d83bb04789b66e167a11ef27c9be6bea8e41f0a174f0d811f74e126d41e",
+    "samples": 327680
+  }
+}

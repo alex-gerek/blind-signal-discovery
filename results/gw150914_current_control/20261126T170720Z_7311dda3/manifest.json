@@ -1,0 +1,70 @@
+{
+  "run_id": "20261126T170720Z_7311dda3",
+  "source_commit": "3497211e0f19832a5e1bd268971e9e3cbc0b83d6",
+  "status": "ERROR",
+  "source_sha256": {
+    "src/bsd/adaptive_regime.py": "c5a64068b4216a04ed30da73c71e9fc396bdf8eb8a2ef89864de6a45bda5d1e8",
+    "src/bsd/adaptive_regime_v2b.py": "02bcd0f4da373e23ed4d2b2fe89b0878476d9234e4e583e172ae208aaa9c2702",
+    "src/bsd/calibration.py": "79dab28d60323192bb73f28f60e74d367c3bb17e4e75fb31acf5ef98df7706e7",
+    "src/bsd/coincidence.py": "9d0469d45d6adc26624037e1be0b4c9331dea390bc94133ddcff0f947492fd74",
+    "src/bsd/cross_coherence.py": "a306d298ea421ca26ac1111ffd313de3acc23e98263e20227d5e5d4037cfbaf1",
+    "src/bsd/detector.py": "56343accdc7e5b2b3a0a47a45e974065a9eb42d57df929138a29e09f2e94bed9",
+    "src/bsd/detector_v2.py": "a622ef294b225f1da22c55c5279dc9ccb32f27fa40ad4c9129855b1fa302274e",
+    "src/bsd/evaluation.py": "d0ae9285c2c1f80d0225f37ea6e5624506b8d270af980e5a1607c1b9f2ac62bb",
+    "src/bsd/generator.py": "70d0dbe8c31e3d4568d46909dbf795ae90f678643ac69f219fe2a431f08c4cc8",
+    "src/bsd/io_loader.py": "93f9134a0228d2856db17286264db22766393535193e6e5a01c9d4265b0727a4",
+    "src/bsd/ligo_adapter.py": "04763049dff217b3424b9095af4f391c440c96b8d29dde74b1e4a080436373be",
+    "src/bsd/noise.py": "e456400f2aae3fa6cb28716ba59b53e0f8be784a0dfbcbc107b3d87e0ee591e2",
+    "src/bsd/regime_monitor.py": "cee14eee23c457b19539a78b561ed47493a31d05111762f9cca7cbbfa28eea30",
+    "src/bsd/reporting.py": "c748efe7eadb40e43d0001e49b4162230d83bc55cd693f7ac1bf13190740b6ec",
+    "src/bsd/upload_storage.py": "5d0fa69f9bbfdd6f6f31e16a2916667e0b0d7087a0132032591894975ffd53c9",
+    "src/bsd/vetoes.py": "3ad14fba9f63eb0f34d804506b3cb98aa702c51e96ce8919341e768c97add219",
+    "src/bsd/visualization.py": "130e3447c74f547cb599ece46b133a33eaff32ee0a221b814e693c1b25701f27",
+    "src/bsd/workstation_runner.py": "50466d09d0e71b8592d0d980da593339eba56edf49af33ee901f541d6d9c1ca5",
+    "src/bsd/__init__.py": "9cc9beef45a4ee5c7662cf3c739188497d169c85721573d17838864b43d2faf0",
+    "app/bsd_workstation.py": "eb479c663333664f13e63add9914655c9a922988f34b74f4d44e8cdf986d0abb",
+    "pyproject.toml": "cf54a989ae996ffa8bcbb42a78e6752a70a87aa0532fb37f1e8f148601309501"
+  },
+  "driver_sha256": "53c09032e4c6fa1b05731138bb225c60b20e2c7b4675d841842e6cb11dc717dd",
+  "protocol_sha256": "9e96eafc7a2816a9269106f6a08cd6ff94b720c850099c9182474641434d280a",
+  "dirty_paths": [
+    "M docs/RESEARCH_HISTORY.md",
+    "?? docs/gw150914_current_control_protocol_2026-11-26.md",
+    "?? experiments/run_gw150914_current_control.py",
+    "?? results/gw150914_current_control/"
+  ],
+  "python": "3.14.3",
+  "numpy": "2.5.5",
+  "scipy": "1.18.1",
+  "h5py": "3.16.0",
+  "known_event_gps": 1126259462.422,
+  "blocks": {
+    "psd": [
+      1126257416.0,
+      1126257656.0
+    ],
+    "calibration": [
+      1126257680.0,
+      1126258960.0
+    ],
+    "target": [
+      1126259304.0,
+      1126259624.0
+    ],
+    "control": [
+      1126260104.0,
+      1126261384.0
+    ]
+  },
+  "derived_data_directory": "data/derived/gw150914_workstation/20261126T170720Z_7311dda3",
+  "scope": "Previously used O1 real-data control, not blind discovery; no injected signals",
+  "reserved_access": "BLOCKED",
+  "network": "BLOCKED",
+  "sites": [],
+  "error": {
+    "type": "AttributeError",
+    "message": "MultiResolutionCalibration has no to_dict; correct method is to_summary_dict",
+    "phase": "H1 calibration serialization, before target detection",
+    "operator_followup": "Preserve failed attempt; fix driver API usage only and repeat unchanged protocol in fresh directory"
+  }
+}

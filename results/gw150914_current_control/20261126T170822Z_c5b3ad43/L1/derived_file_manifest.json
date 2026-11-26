@@ -1,0 +1,16 @@
+{
+  "calibration": {
+    "csv": "data/derived/gw150914_workstation/20261126T170822Z_c5b3ad43/GW150914_L1_calibration_whitened_1024Hz.csv",
+    "csv_sha256": "cfd633c90fba5192eca9a02a81e45752854ec9eca985bfc7802eaab641425cb0",
+    "npy": "data/derived/gw150914_workstation/20261126T170822Z_c5b3ad43/GW150914_L1_calibration_whitened_1024Hz.npy",
+    "npy_sha256": "f727ca476a000fa4289d33afdf4a48b519cc7e980ab846bcd6ce9fbbe192685c",
+    "samples": 1310720
+  },
+  "target": {
+    "csv": "data/derived/gw150914_workstation/20261126T170822Z_c5b3ad43/GW150914_L1_target_whitened_1024Hz.csv",
+    "csv_sha256": "13e8dc61f663e75a59af27e675cb33c5e38d0e59240a56a329d62b1e57c59b4e",
+    "npy": "data/derived/gw150914_workstation/20261126T170822Z_c5b3ad43/GW150914_L1_target_whitened_1024Hz.npy",
+    "npy_sha256": "27e609eb694b0859f3c60a5e997eb31a100e630a877964ad8aaddf0a367d1363",
+    "samples": 327680
+  }
+}

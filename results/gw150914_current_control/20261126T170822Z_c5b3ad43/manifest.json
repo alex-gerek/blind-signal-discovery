@@ -1,0 +1,204 @@
+{
+  "run_id": "20261126T170822Z_c5b3ad43",
+  "source_commit": "3497211e0f19832a5e1bd268971e9e3cbc0b83d6",
+  "status": "COMPLETE",
+  "source_sha256": {
+    "src/bsd/adaptive_regime.py": "c5a64068b4216a04ed30da73c71e9fc396bdf8eb8a2ef89864de6a45bda5d1e8",
+    "src/bsd/adaptive_regime_v2b.py": "02bcd0f4da373e23ed4d2b2fe89b0878476d9234e4e583e172ae208aaa9c2702",
+    "src/bsd/calibration.py": "79dab28d60323192bb73f28f60e74d367c3bb17e4e75fb31acf5ef98df7706e7",
+    "src/bsd/coincidence.py": "9d0469d45d6adc26624037e1be0b4c9331dea390bc94133ddcff0f947492fd74",
+    "src/bsd/cross_coherence.py": "a306d298ea421ca26ac1111ffd313de3acc23e98263e20227d5e5d4037cfbaf1",
+    "src/bsd/detector.py": "56343accdc7e5b2b3a0a47a45e974065a9eb42d57df929138a29e09f2e94bed9",
+    "src/bsd/detector_v2.py": "a622ef294b225f1da22c55c5279dc9ccb32f27fa40ad4c9129855b1fa302274e",
+    "src/bsd/evaluation.py": "d0ae9285c2c1f80d0225f37ea6e5624506b8d270af980e5a1607c1b9f2ac62bb",
+    "src/bsd/generator.py": "70d0dbe8c31e3d4568d46909dbf795ae90f678643ac69f219fe2a431f08c4cc8",
+    "src/bsd/io_loader.py": "93f9134a0228d2856db17286264db22766393535193e6e5a01c9d4265b0727a4",
+    "src/bsd/ligo_adapter.py": "04763049dff217b3424b9095af4f391c440c96b8d29dde74b1e4a080436373be",
+    "src/bsd/noise.py": "e456400f2aae3fa6cb28716ba59b53e0f8be784a0dfbcbc107b3d87e0ee591e2",
+    "src/bsd/regime_monitor.py": "cee14eee23c457b19539a78b561ed47493a31d05111762f9cca7cbbfa28eea30",
+    "src/bsd/reporting.py": "c748efe7eadb40e43d0001e49b4162230d83bc55cd693f7ac1bf13190740b6ec",
+    "src/bsd/upload_storage.py": "5d0fa69f9bbfdd6f6f31e16a2916667e0b0d7087a0132032591894975ffd53c9",
+    "src/bsd/vetoes.py": "3ad14fba9f63eb0f34d804506b3cb98aa702c51e96ce8919341e768c97add219",
+    "src/bsd/visualization.py": "130e3447c74f547cb599ece46b133a33eaff32ee0a221b814e693c1b25701f27",
+    "src/bsd/workstation_runner.py": "50466d09d0e71b8592d0d980da593339eba56edf49af33ee901f541d6d9c1ca5",
+    "src/bsd/__init__.py": "9cc9beef45a4ee5c7662cf3c739188497d169c85721573d17838864b43d2faf0",
+    "app/bsd_workstation.py": "eb479c663333664f13e63add9914655c9a922988f34b74f4d44e8cdf986d0abb",
+    "pyproject.toml": "cf54a989ae996ffa8bcbb42a78e6752a70a87aa0532fb37f1e8f148601309501"
+  },
+  "driver_sha256": "58b750b7bba07395b20e7aa5d46a9b316a616aecdb3e4b446547620bdddf060b",
+  "protocol_sha256": "9e96eafc7a2816a9269106f6a08cd6ff94b720c850099c9182474641434d280a",
+  "dirty_paths": [
+    "M docs/RESEARCH_HISTORY.md",
+    "?? docs/gw150914_current_control_protocol_2026-11-26.md",
+    "?? experiments/run_gw150914_current_control.py",
+    "?? results/gw150914_current_control/"
+  ],
+  "python": "3.14.3",
+  "numpy": "2.5.5",
+  "scipy": "1.18.1",
+  "h5py": "3.16.0",
+  "known_event_gps": 1126259462.422,
+  "blocks": {
+    "psd": [
+      1126257416.0,
+      1126257656.0
+    ],
+    "calibration": [
+      1126257680.0,
+      1126258960.0
+    ],
+    "target": [
+      1126259304.0,
+      1126259624.0
+    ],
+    "control": [
+      1126260104.0,
+      1126261384.0
+    ]
+  },
+  "derived_data_directory": "data/derived/gw150914_workstation/20261126T170822Z_c5b3ad43",
+  "scope": "Previously used O1 real-data control, not blind discovery; no injected signals",
+  "reserved_access": "BLOCKED",
+  "network": "BLOCKED",
+  "sites": [
+    {
+      "site": "H1",
+      "frozen_threshold": 2.805393291305144,
+      "calibration_status": {
+        "status": "VALIDATED",
+        "n_bg_windows": 320,
+        "n_thresh": 224,
+        "n_eff": 215.58044041317504,
+        "lag1_autocorr": -0.02541143668714928,
+        "ljung_box_p": 0.9999696076823255,
+        "p_min": 0.0044444444444444444,
+        "expected_far_iid": 0.008888888888888889,
+        "far_ci90_iid": [
+          0.001588725475405356,
+          0.021001806501192453
+        ],
+        "far_ci90_neff": [
+          0.0009361175088151134,
+          0.018617411464728416
+        ],
+        "dependence_detected": false,
+        "unmet_validation_conditions": []
+      },
+      "event_window_index": 39,
+      "event_window_gps": 1126259460.0,
+      "frozen_event_window": {
+        "window_index": 39,
+        "gps_start": 1126259460.0,
+        "gps_end": 1126259464.0,
+        "score": 35.76733623492418,
+        "threshold": 2.805393291305144,
+        "empirical_p": 0.0044444444444444444,
+        "detected": true
+      },
+      "frozen_reference_associated_candidates": 3,
+      "frozen_control_nominations": 4,
+      "frozen_control_windows": 320,
+      "frozen_offsource_nominations": 0,
+      "frozen_offsource_windows": 71,
+      "adaptive_event": {
+        "available": true,
+        "score": 35.76733623492418,
+        "threshold": 2.805393291305144,
+        "detected": true,
+        "credibility": "CALIBRATED_STATIONARY",
+        "warnings": []
+      },
+      "adaptive_summary": {
+        "n_target_windows": 80,
+        "target_duration_s": 320.0,
+        "n_detection_available_windows": 80,
+        "n_calibration_unavailable_windows": 0,
+        "detection_available_duty_cycle": 1.0,
+        "n_clean_calibrated_windows": 80,
+        "clean_duty_cycle": 1.0,
+        "excluded_livetime_s": 0.0,
+        "n_active_mode_anomaly_windows": 1,
+        "n_raw_stft_candidates": 3,
+        "n_broadband_anomaly_windows": 0,
+        "n_continuum_drift_warnings": 0,
+        "n_glitch_storm_warnings": 0,
+        "n_regimes_established": 1,
+        "union_mode_status_counts": {
+          "FULL_UNION_AVAILABLE": 80
+        }
+      },
+      "elapsed_s": 52.79057190000458
+    },
+    {
+      "site": "L1",
+      "frozen_threshold": 3.804636256721923,
+      "calibration_status": {
+        "status": "VALIDATED",
+        "n_bg_windows": 320,
+        "n_thresh": 224,
+        "n_eff": 170.46345765834616,
+        "lag1_autocorr": -0.06377897344105835,
+        "ljung_box_p": 0.06433003365270651,
+        "p_min": 0.0044444444444444444,
+        "expected_far_iid": 0.008888888888888889,
+        "far_ci90_iid": [
+          0.001588725475405356,
+          0.021001806501192453
+        ],
+        "far_ci90_neff": [
+          0.0009670489308186954,
+          0.02232700597116303
+        ],
+        "dependence_detected": false,
+        "unmet_validation_conditions": []
+      },
+      "event_window_index": 39,
+      "event_window_gps": 1126259460.0,
+      "frozen_event_window": {
+        "window_index": 39,
+        "gps_start": 1126259460.0,
+        "gps_end": 1126259464.0,
+        "score": 8.528027465561335,
+        "threshold": 3.804636256721923,
+        "empirical_p": 0.0044444444444444444,
+        "detected": true
+      },
+      "frozen_reference_associated_candidates": 3,
+      "frozen_control_nominations": 3,
+      "frozen_control_windows": 320,
+      "frozen_offsource_nominations": 0,
+      "frozen_offsource_windows": 71,
+      "adaptive_event": {
+        "available": true,
+        "score": 8.528027465561335,
+        "threshold": 3.804636256721923,
+        "detected": true,
+        "credibility": "CALIBRATED_STATIONARY",
+        "warnings": [
+          "GLITCH_STORM"
+        ]
+      },
+      "adaptive_summary": {
+        "n_target_windows": 80,
+        "target_duration_s": 320.0,
+        "n_detection_available_windows": 80,
+        "n_calibration_unavailable_windows": 0,
+        "detection_available_duty_cycle": 1.0,
+        "n_clean_calibrated_windows": 79,
+        "clean_duty_cycle": 0.9875,
+        "excluded_livetime_s": 4.0,
+        "n_active_mode_anomaly_windows": 1,
+        "n_raw_stft_candidates": 3,
+        "n_broadband_anomaly_windows": 0,
+        "n_continuum_drift_warnings": 0,
+        "n_glitch_storm_warnings": 1,
+        "n_regimes_established": 1,
+        "union_mode_status_counts": {
+          "FULL_UNION_AVAILABLE": 80
+        }
+      },
+      "elapsed_s": 52.051329499998246
+    }
+  ],
+  "source_hashes_unchanged": true
+}

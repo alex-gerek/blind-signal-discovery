@@ -1,0 +1,68 @@
+{
+  "site": "H1",
+  "frozen_threshold": 2.805393291305144,
+  "calibration_status": {
+    "status": "VALIDATED",
+    "n_bg_windows": 320,
+    "n_thresh": 224,
+    "n_eff": 215.58044041317504,
+    "lag1_autocorr": -0.02541143668714928,
+    "ljung_box_p": 0.9999696076823255,
+    "p_min": 0.0044444444444444444,
+    "expected_far_iid": 0.008888888888888889,
+    "far_ci90_iid": [
+      0.001588725475405356,
+      0.021001806501192453
+    ],
+    "far_ci90_neff": [
+      0.0009361175088151134,
+      0.018617411464728416
+    ],
+    "dependence_detected": false,
+    "unmet_validation_conditions": []
+  },
+  "event_window_index": 39,
+  "event_window_gps": 1126259460.0,
+  "frozen_event_window": {
+    "window_index": 39,
+    "gps_start": 1126259460.0,
+    "gps_end": 1126259464.0,
+    "score": 35.76733623492418,
+    "threshold": 2.805393291305144,
+    "empirical_p": 0.0044444444444444444,
+    "detected": true
+  },
+  "frozen_reference_associated_candidates": 3,
+  "frozen_control_nominations": 4,
+  "frozen_control_windows": 320,
+  "frozen_offsource_nominations": 0,
+  "frozen_offsource_windows": 71,
+  "adaptive_event": {
+    "available": true,
+    "score": 35.76733623492418,
+    "threshold": 2.805393291305144,
+    "detected": true,
+    "credibility": "CALIBRATED_STATIONARY",
+    "warnings": []
+  },
+  "adaptive_summary": {
+    "n_target_windows": 80,
+    "target_duration_s": 320.0,
+    "n_detection_available_windows": 80,
+    "n_calibration_unavailable_windows": 0,
+    "detection_available_duty_cycle": 1.0,
+    "n_clean_calibrated_windows": 80,
+    "clean_duty_cycle": 1.0,
+    "excluded_livetime_s": 0.0,
+    "n_active_mode_anomaly_windows": 1,
+    "n_raw_stft_candidates": 3,
+    "n_broadband_anomaly_windows": 0,
+    "n_continuum_drift_warnings": 0,
+    "n_glitch_storm_warnings": 0,
+    "n_regimes_established": 1,
+    "union_mode_status_counts": {
+      "FULL_UNION_AVAILABLE": 80
+    }
+  },
+  "elapsed_s": 52.79057190000458
+}

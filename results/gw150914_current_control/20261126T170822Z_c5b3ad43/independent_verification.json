@@ -1,0 +1,236 @@
+{
+  "status": "VERIFIED",
+  "source_hashes": "UNCHANGED",
+  "sites": [
+    {
+      "site": "H1",
+      "strict_json_csv_decisions": "PASS",
+      "derived_data_float_and_gps_roundtrip": "PASS",
+      "raw_source_hash": "MATCH",
+      "summary": {
+        "site": "H1",
+        "frozen_threshold": 2.805393291305144,
+        "calibration_status": {
+          "status": "VALIDATED",
+          "n_bg_windows": 320,
+          "n_thresh": 224,
+          "n_eff": 215.58044041317504,
+          "lag1_autocorr": -0.02541143668714928,
+          "ljung_box_p": 0.9999696076823255,
+          "p_min": 0.0044444444444444444,
+          "expected_far_iid": 0.008888888888888889,
+          "far_ci90_iid": [
+            0.001588725475405356,
+            0.021001806501192453
+          ],
+          "far_ci90_neff": [
+            0.0009361175088151134,
+            0.018617411464728416
+          ],
+          "dependence_detected": false,
+          "unmet_validation_conditions": []
+        },
+        "event_window_index": 39,
+        "event_window_gps": 1126259460.0,
+        "frozen_event_window": {
+          "window_index": 39,
+          "gps_start": 1126259460.0,
+          "gps_end": 1126259464.0,
+          "score": 35.76733623492418,
+          "threshold": 2.805393291305144,
+          "empirical_p": 0.0044444444444444444,
+          "detected": true
+        },
+        "frozen_reference_associated_candidates": 3,
+        "frozen_control_nominations": 4,
+        "frozen_control_windows": 320,
+        "frozen_offsource_nominations": 0,
+        "frozen_offsource_windows": 71,
+        "adaptive_event": {
+          "available": true,
+          "score": 35.76733623492418,
+          "threshold": 2.805393291305144,
+          "detected": true,
+          "credibility": "CALIBRATED_STATIONARY",
+          "warnings": []
+        },
+        "adaptive_summary": {
+          "n_target_windows": 80,
+          "target_duration_s": 320.0,
+          "n_detection_available_windows": 80,
+          "n_calibration_unavailable_windows": 0,
+          "detection_available_duty_cycle": 1.0,
+          "n_clean_calibrated_windows": 80,
+          "clean_duty_cycle": 1.0,
+          "excluded_livetime_s": 0.0,
+          "n_active_mode_anomaly_windows": 1,
+          "n_raw_stft_candidates": 3,
+          "n_broadband_anomaly_windows": 0,
+          "n_continuum_drift_warnings": 0,
+          "n_glitch_storm_warnings": 0,
+          "n_regimes_established": 1,
+          "union_mode_status_counts": {
+            "FULL_UNION_AVAILABLE": 80
+          }
+        },
+        "elapsed_s": 52.79057190000458
+      },
+      "event_quality": {
+        "block": "target",
+        "window_index": "39",
+        "gps_start": "1126259460.0",
+        "dq_mask_and": "127",
+        "injection_mask_and": "31"
+      },
+      "strongest_reference_associated_candidate": {
+        "candidate_id": 2,
+        "scale_name": "medium_125ms",
+        "t_start": 2.140625,
+        "t_end": 2.453125,
+        "f_min": 20.0,
+        "f_max": 284.0,
+        "peak_time": 2.375,
+        "peak_freq": 56.0,
+        "raw_anomaly_score": 818.003794545491,
+        "standardized_score": 35.76733623492418,
+        "peak_excess_power": 43.0366570278927,
+        "n_bins": 73,
+        "empirical_p_value": 0.0044444444444444444,
+        "p_value_is_upper_bound": true,
+        "diagnostics": {
+          "time_span_s": 0.3125,
+          "bandwidth_hz": 264.0,
+          "mean_excess_power": 12.205531432130016,
+          "boundary_adjacent": false,
+          "input_kurtosis": 2.371405316133263,
+          "input_crest_factor": 7.498038670668752
+        },
+        "window_index": 39,
+        "window_gps_start": 1126259460.0,
+        "gps_t_start": 1126259462.140625,
+        "gps_t_end": 1126259462.453125,
+        "gps_peak": 1126259462.375
+      }
+    },
+    {
+      "site": "L1",
+      "strict_json_csv_decisions": "PASS",
+      "derived_data_float_and_gps_roundtrip": "PASS",
+      "raw_source_hash": "MATCH",
+      "summary": {
+        "site": "L1",
+        "frozen_threshold": 3.804636256721923,
+        "calibration_status": {
+          "status": "VALIDATED",
+          "n_bg_windows": 320,
+          "n_thresh": 224,
+          "n_eff": 170.46345765834616,
+          "lag1_autocorr": -0.06377897344105835,
+          "ljung_box_p": 0.06433003365270651,
+          "p_min": 0.0044444444444444444,
+          "expected_far_iid": 0.008888888888888889,
+          "far_ci90_iid": [
+            0.001588725475405356,
+            0.021001806501192453
+          ],
+          "far_ci90_neff": [
+            0.0009670489308186954,
+            0.02232700597116303
+          ],
+          "dependence_detected": false,
+          "unmet_validation_conditions": []
+        },
+        "event_window_index": 39,
+        "event_window_gps": 1126259460.0,
+        "frozen_event_window": {
+          "window_index": 39,
+          "gps_start": 1126259460.0,
+          "gps_end": 1126259464.0,
+          "score": 8.528027465561335,
+          "threshold": 3.804636256721923,
+          "empirical_p": 0.0044444444444444444,
+          "detected": true
+        },
+        "frozen_reference_associated_candidates": 3,
+        "frozen_control_nominations": 3,
+        "frozen_control_windows": 320,
+        "frozen_offsource_nominations": 0,
+        "frozen_offsource_windows": 71,
+        "adaptive_event": {
+          "available": true,
+          "score": 8.528027465561335,
+          "threshold": 3.804636256721923,
+          "detected": true,
+          "credibility": "CALIBRATED_STATIONARY",
+          "warnings": [
+            "GLITCH_STORM"
+          ]
+        },
+        "adaptive_summary": {
+          "n_target_windows": 80,
+          "target_duration_s": 320.0,
+          "n_detection_available_windows": 80,
+          "n_calibration_unavailable_windows": 0,
+          "detection_available_duty_cycle": 1.0,
+          "n_clean_calibrated_windows": 79,
+          "clean_duty_cycle": 0.9875,
+          "excluded_livetime_s": 4.0,
+          "n_active_mode_anomaly_windows": 1,
+          "n_raw_stft_candidates": 3,
+          "n_broadband_anomaly_windows": 0,
+          "n_continuum_drift_warnings": 0,
+          "n_glitch_storm_warnings": 1,
+          "n_regimes_established": 1,
+          "union_mode_status_counts": {
+            "FULL_UNION_AVAILABLE": 80
+          }
+        },
+        "elapsed_s": 52.051329499998246
+      },
+      "event_quality": {
+        "block": "target",
+        "window_index": "39",
+        "gps_start": "1126259460.0",
+        "dq_mask_and": "127",
+        "injection_mask_and": "23"
+      },
+      "strongest_reference_associated_candidate": {
+        "candidate_id": 1,
+        "scale_name": "short_31ms",
+        "t_start": 2.345703125,
+        "t_end": 2.427734375,
+        "f_min": 16.0,
+        "f_max": 304.0,
+        "peak_time": 2.40625,
+        "peak_freq": 96.0,
+        "raw_anomaly_score": 450.1988998574506,
+        "standardized_score": 8.528027465561335,
+        "peak_excess_power": 23.695565247574685,
+        "n_bins": 50,
+        "empirical_p_value": 0.0044444444444444444,
+        "p_value_is_upper_bound": true,
+        "diagnostics": {
+          "time_span_s": 0.08203125,
+          "bandwidth_hz": 288.0,
+          "mean_excess_power": 10.003977997149013,
+          "boundary_adjacent": true,
+          "input_kurtosis": 0.7757259788468338,
+          "input_crest_factor": 6.386552473311569
+        },
+        "window_index": 39,
+        "window_gps_start": 1126259460.0,
+        "gps_t_start": 1126259462.3457031,
+        "gps_t_end": 1126259462.4277344,
+        "gps_peak": 1126259462.40625
+      }
+    }
+  ],
+  "scope": "Known previously used real O1 event/control; no synthetic injection, no independent astrophysical significance",
+  "caveats": [
+    "Adjacent padded preprocessing windows share context",
+    "Empirical p is calibrated rank, not astrophysical probability",
+    "Background nominations may contain instrumental or physical transients; not certified noise-only false alarms",
+    "Raw/derived waveform files are local outside git; hashes and official provenance are saved",
+    "Prepared CSV ingestion in the live UI has not been validated; reserved-manifest guard review remains pending"
+  ]
+}

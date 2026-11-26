@@ -1,0 +1,14 @@
+{
+  "method": "Pooled visible-bin fifth/99.5th percentiles, both sites; display only",
+  "vmin_db": -45.08770990914494,
+  "vmax_db": -18.403986145121582,
+  "time_relative_to_known_event_s": [
+    -0.5,
+    0.3
+  ],
+  "frequency_display_hz": [
+    30,
+    380
+  ],
+  "original_full_range_plot_preserved": "event_waveform_spectrogram.png"
+}
