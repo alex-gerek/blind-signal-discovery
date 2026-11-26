@@ -1,0 +1,5 @@
+# Preserve exact research artifact bytes and recorded SHA-256 across platforms.
+results/post_audit_workstation_controls/** -text
+results/historical_adaptive_replay/** -text
+results/historical_adaptive_followup/** -text
+results/manual_workstation_controls_043f0eb_20261126/** -text
