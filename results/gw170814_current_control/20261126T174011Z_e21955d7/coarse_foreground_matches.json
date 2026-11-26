@@ -1,0 +1,74 @@
+[
+  {
+    "role": "ON_SOURCE",
+    "pair": "H1-L1",
+    "post_veto": false,
+    "coarse_matches": 0
+  },
+  {
+    "role": "ON_SOURCE",
+    "pair": "H1-L1",
+    "post_veto": true,
+    "coarse_matches": 0
+  },
+  {
+    "role": "ON_SOURCE",
+    "pair": "H1-V1",
+    "post_veto": false,
+    "coarse_matches": 0
+  },
+  {
+    "role": "ON_SOURCE",
+    "pair": "H1-V1",
+    "post_veto": true,
+    "coarse_matches": 0
+  },
+  {
+    "role": "ON_SOURCE",
+    "pair": "L1-V1",
+    "post_veto": false,
+    "coarse_matches": 0
+  },
+  {
+    "role": "ON_SOURCE",
+    "pair": "L1-V1",
+    "post_veto": true,
+    "coarse_matches": 0
+  },
+  {
+    "role": "OFF_SOURCE",
+    "pair": "H1-L1",
+    "post_veto": false,
+    "coarse_matches": 0
+  },
+  {
+    "role": "OFF_SOURCE",
+    "pair": "H1-L1",
+    "post_veto": true,
+    "coarse_matches": 0
+  },
+  {
+    "role": "OFF_SOURCE",
+    "pair": "H1-V1",
+    "post_veto": false,
+    "coarse_matches": 0
+  },
+  {
+    "role": "OFF_SOURCE",
+    "pair": "H1-V1",
+    "post_veto": true,
+    "coarse_matches": 0
+  },
+  {
+    "role": "OFF_SOURCE",
+    "pair": "L1-V1",
+    "post_veto": false,
+    "coarse_matches": 0
+  },
+  {
+    "role": "OFF_SOURCE",
+    "pair": "L1-V1",
+    "post_veto": true,
+    "coarse_matches": 0
+  }
+]

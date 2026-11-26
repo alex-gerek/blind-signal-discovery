@@ -1,0 +1,37 @@
+{
+  "site": "V1",
+  "event": {
+    "window_index": 80,
+    "gps_start": 1186741860.0,
+    "role": "ON_SOURCE",
+    "score": 3.619173510571443,
+    "threshold": 4.006891170070383,
+    "empirical_p": 0.010080645161290322,
+    "detected_raw": false,
+    "detected_post_veto": false
+  },
+  "audit": {
+    "status": "VALIDATED",
+    "n_bg_windows": 707,
+    "n_thresh": 495,
+    "n_eff": 473.63051569207556,
+    "lag1_autocorr": -0.011303343597863827,
+    "ljung_box_p": 0.9999594226623562,
+    "p_min": 0.0020161290322580645,
+    "expected_far_iid": 0.008064516129032258,
+    "far_ci90_iid": [
+      0.002764808873257607,
+      0.015588881889441868
+    ],
+    "far_ci90_neff": [
+      0.003684973546807025,
+      0.018149330099458256
+    ],
+    "dependence_detected": false,
+    "unmet_validation_conditions": []
+  },
+  "offsource_windows": 151,
+  "offsource_raw": 2,
+  "offsource_post_veto": 2,
+  "elapsed_s": 32.90713700000197
+}

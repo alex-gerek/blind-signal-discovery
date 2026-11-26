@@ -76,3 +76,8 @@ The earlier blanket statement that all historical adaptive results remain unreru
 ## GW150914 current-source real-data control (2026-11-26)
 
 At3497211, two genuine O1 H1/L1 files were processed with an independently fitted frozen PSD and separated calibration/target/control blocks. Both frozen/current Workstation targets recover the known event; background nominations4/320 H1,3/320 L1, off-source0/71 each. No injected waveform or adaptive regime update; this is a previously used positive control, not independent discovery or adaptive-recovery validation. One new-driver API failure is preserved separately. [Interpretation/evidence](GW150914_REAL_DATA_CONTROL_2026-11-26.md) includes exact output, mask/warning caveats, local-only derivative hashes and live UI ingestion limitation. Original135/1 regression source/test hashes remain the relevant unchanged implementation record; this experiment is not extra pytest passes.
+
+
+## GW170814 bounded current-source replay (2026-11-26)
+
+At8f78ca5, exact historical offline partition/vetoes onH1/L1/V1 reproducesL1-only recovery. All480target decisions checked;18 summary and22 candidate comparisons match old saved precision. No time-slide significance or adaptive run. [Known-event map](KNOWN_EVENT_CONTROL_MAP_2026-11-26.md) records both events, current subthreshold miss diagnostics and incomparable calibration-sample counts. This supersedes the unrerun label ONLY for this fixed detection/candidate scope, not historical FAR/significance.

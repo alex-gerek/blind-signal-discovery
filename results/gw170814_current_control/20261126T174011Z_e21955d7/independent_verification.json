@@ -1,0 +1,253 @@
+{
+  "status": "VERIFIED",
+  "sites": [
+    {
+      "site": "H1",
+      "summary": {
+        "site": "H1",
+        "event": {
+          "window_index": 80,
+          "gps_start": 1186741860.0,
+          "role": "ON_SOURCE",
+          "score": 1.1448066244127009,
+          "threshold": 2.590544448760812,
+          "empirical_p": 0.10887096774193548,
+          "detected_raw": false,
+          "detected_post_veto": false
+        },
+        "audit": {
+          "status": "VALIDATED",
+          "n_bg_windows": 707,
+          "n_thresh": 495,
+          "n_eff": 458.58825417262744,
+          "lag1_autocorr": -0.02487857901392641,
+          "ljung_box_p": 0.5097693048359557,
+          "p_min": 0.0020161290322580645,
+          "expected_far_iid": 0.008064516129032258,
+          "far_ci90_iid": [
+            0.002764808873257607,
+            0.015588881889441868
+          ],
+          "far_ci90_neff": [
+            0.003749758352251403,
+            0.018613957226664802
+          ],
+          "dependence_detected": false,
+          "unmet_validation_conditions": []
+        },
+        "offsource_windows": 151,
+        "offsource_raw": 2,
+        "offsource_post_veto": 1,
+        "elapsed_s": 29.275232300002244
+      },
+      "historical_agreement": {
+        "event_raw": true,
+        "event_post_veto": true,
+        "score_rounded4": true,
+        "threshold_rounded4": true,
+        "offsource_raw": true,
+        "offsource_post_veto": true
+      },
+      "per_scale_std_max": {
+        "short_31ms": 1.1448066244127009,
+        "medium_125ms": 0.1935056484640526,
+        "long_500ms": -0.43217683004059493
+      },
+      "near_reference_seed_clusters": 21,
+      "decision_explanation": "All per-scale standardized maxima below frozen threshold; pre-veto miss"
+    },
+    {
+      "site": "L1",
+      "summary": {
+        "site": "L1",
+        "event": {
+          "window_index": 80,
+          "gps_start": 1186741860.0,
+          "role": "ON_SOURCE",
+          "score": 8.892396062864524,
+          "threshold": 2.240084239235834,
+          "empirical_p": 0.0020161290322580645,
+          "detected_raw": true,
+          "detected_post_veto": true
+        },
+        "audit": {
+          "status": "VALIDATED",
+          "n_bg_windows": 707,
+          "n_thresh": 495,
+          "n_eff": 432.4867202854026,
+          "lag1_autocorr": -0.03307101513399888,
+          "ljung_box_p": 0.3014489741098164,
+          "p_min": 0.0020161290322580645,
+          "expected_far_iid": 0.008064516129032258,
+          "far_ci90_iid": [
+            0.002764808873257607,
+            0.015588881889441868
+          ],
+          "far_ci90_neff": [
+            0.0024928857221255094,
+            0.0161336530732075
+          ],
+          "dependence_detected": false,
+          "unmet_validation_conditions": []
+        },
+        "offsource_windows": 151,
+        "offsource_raw": 3,
+        "offsource_post_veto": 3,
+        "elapsed_s": 29.38409859999956
+      },
+      "historical_agreement": {
+        "event_raw": true,
+        "event_post_veto": true,
+        "score_rounded4": true,
+        "threshold_rounded4": true,
+        "offsource_raw": true,
+        "offsource_post_veto": true
+      },
+      "per_scale_std_max": {
+        "short_31ms": 8.580261064933053,
+        "medium_125ms": 8.892396062864524,
+        "long_500ms": 2.7788334581372847
+      },
+      "near_reference_seed_clusters": 23,
+      "decision_explanation": "Above frozen threshold"
+    },
+    {
+      "site": "V1",
+      "summary": {
+        "site": "V1",
+        "event": {
+          "window_index": 80,
+          "gps_start": 1186741860.0,
+          "role": "ON_SOURCE",
+          "score": 3.619173510571443,
+          "threshold": 4.006891170070383,
+          "empirical_p": 0.010080645161290322,
+          "detected_raw": false,
+          "detected_post_veto": false
+        },
+        "audit": {
+          "status": "VALIDATED",
+          "n_bg_windows": 707,
+          "n_thresh": 495,
+          "n_eff": 473.63051569207556,
+          "lag1_autocorr": -0.011303343597863827,
+          "ljung_box_p": 0.9999594226623562,
+          "p_min": 0.0020161290322580645,
+          "expected_far_iid": 0.008064516129032258,
+          "far_ci90_iid": [
+            0.002764808873257607,
+            0.015588881889441868
+          ],
+          "far_ci90_neff": [
+            0.003684973546807025,
+            0.018149330099458256
+          ],
+          "dependence_detected": false,
+          "unmet_validation_conditions": []
+        },
+        "offsource_windows": 151,
+        "offsource_raw": 2,
+        "offsource_post_veto": 2,
+        "elapsed_s": 32.90713700000197
+      },
+      "historical_agreement": {
+        "event_raw": true,
+        "event_post_veto": true,
+        "score_rounded4": true,
+        "threshold_rounded4": true,
+        "offsource_raw": true,
+        "offsource_post_veto": true
+      },
+      "per_scale_std_max": {
+        "short_31ms": 0.6273976285484312,
+        "medium_125ms": 3.4117935387350653,
+        "long_500ms": 3.619173510571443
+      },
+      "near_reference_seed_clusters": 41,
+      "decision_explanation": "All per-scale standardized maxima below frozen threshold; pre-veto miss"
+    }
+  ],
+  "coarse_foreground_matches": [
+    {
+      "role": "ON_SOURCE",
+      "pair": "H1-L1",
+      "post_veto": false,
+      "coarse_matches": 0
+    },
+    {
+      "role": "ON_SOURCE",
+      "pair": "H1-L1",
+      "post_veto": true,
+      "coarse_matches": 0
+    },
+    {
+      "role": "ON_SOURCE",
+      "pair": "H1-V1",
+      "post_veto": false,
+      "coarse_matches": 0
+    },
+    {
+      "role": "ON_SOURCE",
+      "pair": "H1-V1",
+      "post_veto": true,
+      "coarse_matches": 0
+    },
+    {
+      "role": "ON_SOURCE",
+      "pair": "L1-V1",
+      "post_veto": false,
+      "coarse_matches": 0
+    },
+    {
+      "role": "ON_SOURCE",
+      "pair": "L1-V1",
+      "post_veto": true,
+      "coarse_matches": 0
+    },
+    {
+      "role": "OFF_SOURCE",
+      "pair": "H1-L1",
+      "post_veto": false,
+      "coarse_matches": 0
+    },
+    {
+      "role": "OFF_SOURCE",
+      "pair": "H1-L1",
+      "post_veto": true,
+      "coarse_matches": 0
+    },
+    {
+      "role": "OFF_SOURCE",
+      "pair": "H1-V1",
+      "post_veto": false,
+      "coarse_matches": 0
+    },
+    {
+      "role": "OFF_SOURCE",
+      "pair": "H1-V1",
+      "post_veto": true,
+      "coarse_matches": 0
+    },
+    {
+      "role": "OFF_SOURCE",
+      "pair": "L1-V1",
+      "post_veto": false,
+      "coarse_matches": 0
+    },
+    {
+      "role": "OFF_SOURCE",
+      "pair": "L1-V1",
+      "post_veto": true,
+      "coarse_matches": 0
+    }
+  ],
+  "display_limits": {
+    "vmin_db": -45.87191221976907,
+    "vmax_db": -21.712106337278847,
+    "percentiles": [
+      5,
+      99.5
+    ]
+  },
+  "scope": "Fixed historical offline control. No time-slide significance, causal adaptation test or physical discovery. Historical original-array hashes unavailable."
+}
