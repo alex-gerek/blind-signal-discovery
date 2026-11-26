@@ -280,6 +280,7 @@
       <div class="card">
         <label>Inspect Target Window Index: <span class="range-val" id="winIdxVal">0</span></label>
         <input type="range" id="winIdx" min="0" max="0" step="1" value="0" />
+        <div id="jumpButtons" style="margin:6px 0 4px;"></div>
         <div class="status-line" id="winInfo"></div>
         <h3>Time-Domain Waveform</h3>
         <canvas id="waveCanvas" width="960" height="170"></canvas>
@@ -879,6 +880,7 @@ async function runMeasurement() {
     windows,
     candidates: allCands
   };
+  const isFirstRun = LAST_RUN === null;
   LAST_RUN = run;
 
   // Update Tab 1
@@ -915,12 +917,27 @@ async function runMeasurement() {
   document.getElementById("summaryMetrics").innerHTML = summaryCards
     .map(([k, v]) => `<div class="metric"><div class="k">${k}</div><div class="v">${v}</div></div>`).join("");
 
-  // Update Tab 2
+  // Update Tab 2 (preserve current window index instead of jumping back!)
   drawTimeline(run);
   const slider = document.getElementById("winIdx");
+  const prevIdx = Number(slider.value);
   slider.max = Math.max(0, windows.length - 1);
-  const firstHit = windows.findIndex(w => w.activeFlag);
-  slider.value = firstHit >= 0 ? firstHit : 0;
+  if (isFirstRun || !Number.isFinite(prevIdx) || prevIdx < 0 || prevIdx >= windows.length) {
+    const firstDet = windows.findIndex(w => w.inj && w.activeFlag);
+    const firstHit = windows.findIndex(w => w.activeFlag);
+    slider.value = firstDet >= 0 ? firstDet : (firstHit >= 0 ? firstHit : 0);
+  } else {
+    slider.value = prevIdx;
+  }
+  const jumpEl = document.getElementById("jumpButtons");
+  const idxFa = windows.findIndex(w => !w.inj && w.activeFlag);
+  const idxMiss = windows.findIndex(w => w.inj && !w.activeFlag);
+  const idxDet = windows.findIndex(w => w.inj && w.activeFlag);
+  const jBtns = [];
+  if (idxFa >= 0) jBtns.push(`<button class="btn btn-sm" onclick="jumpWin(${idxFa})">False Alarm (Win ${idxFa})</button>`);
+  if (idxMiss >= 0) jBtns.push(`<button class="btn btn-sm" style="background:#b7791f" onclick="jumpWin(${idxMiss})">Missed Injection (Win ${idxMiss})</button>`);
+  if (idxDet >= 0) jBtns.push(`<button class="btn btn-sm" style="background:#2f855a" onclick="jumpWin(${idxDet})">Detected Injection (Win ${idxDet})</button>`);
+  jumpEl.innerHTML = jBtns.join("");
   drawWindowDetail(run, Number(slider.value));
 
   // Update Tab 3
@@ -1022,6 +1039,13 @@ document.getElementById("dlCands").addEventListener("click", () => {
 document.getElementById("dlJson").addEventListener("click", () => {
   if (LAST_RUN) downloadText("run_report.json", JSON.stringify(buildExportPayload(LAST_RUN), null, 2), "application/json");
 });
+
+window.jumpWin = function(idx) {
+  if (!LAST_RUN) return;
+  const slider = document.getElementById("winIdx");
+  slider.value = idx;
+  drawWindowDetail(LAST_RUN, idx);
+};
 
 updateFapHint();
 runMeasurement();
