@@ -25,6 +25,7 @@ credentials.json
 # Large generated datasets and raw binary dumps
 data/
 results/smoke/
+results/workstation_runs/
 *.npy
 *.npz
 *.h5
