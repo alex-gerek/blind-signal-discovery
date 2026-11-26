@@ -1,6 +1,11 @@
-# Blind Signal Discovery (BSD) — Research Prototype v0.1
+# Blind Signal Discovery (BSD)
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24557479.svg)](https://doi.org/10.5281/zenodo.24557479)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A standalone, classical signal-processing and statistical research prototype for detecting statistically significant unknown signals in noisy time-series data without signal templates or machine learning.
+
+> **Current Release (`v0.3.0`):** Audited multi-resolution detector, adaptive regime monitoring, local measurement Workstation (`app/bsd_workstation.py`), historical erratum ([docs/AUDIT_ERRATUM_47a5475.md](docs/AUDIT_ERRATUM_47a5475.md)), research history ([docs/RESEARCH_HISTORY.md](docs/RESEARCH_HISTORY.md)), and manual synthetic verification ([docs/manual_workstation_synthetic_verification_986dd46.md](docs/manual_workstation_synthetic_verification_986dd46.md)). Licensed under the [MIT License](LICENSE); see [SECURITY.md](SECURITY.md) for security guidance.
 
 > **Scientific Scope:** This project is a methodological signal-detection study on simulated time-series data. It investigates template-free anomaly detection under calibrated false-alarm control. **A detected anomaly is not a physical discovery.** No claims are made regarding dark matter, axions, gravitational waves, or any physical phenomenon.
 

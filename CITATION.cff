@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use or reference this research prototype, please cite it using the metadata below."
+title: "Blind Signal Discovery (BSD): Template-Free Anomaly Detection with Calibrated False-Alarm Control"
+type: software
+authors:
+  - given-names: "Lex"
+    family-names: "Gerek"
+version: "0.3.0"
+doi: "10.5281/zenodo.24557479"
+license: "MIT"
+repository-code: "https://github.com/alex-gerek/blind-signal-discovery"
+url: "https://doi.org/10.5281/zenodo.24557479"
+abstract: "A standalone classical signal-processing and statistical research prototype for template-free unknown signal detection in noisy time-series data with finite-sample conformal false-alarm control, adaptive regime monitoring, and a local measurement workstation."
+keywords:
+  - signal-processing
+  - anomaly-detection
+  - time-series
+  - conformal-calibration
+  - template-free-detection
