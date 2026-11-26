@@ -1,0 +1,9 @@
+regime,n_trials,frac_null,frac_artifact_warning,frac_zero_lag_env_warning,frac_physical_lag_evidence,median_peak_lag_ms
+independent_noise,20,1.0,0.0,0.0,0.0,0.9765625
+uncorrelated_dual_drift,20,1.0,0.0,0.0,0.0,3.90625
+correlated_zero_lag_env_noise,20,0.0,0.0,1.0,0.0,0.0
+common_narrowband_line_artifact,20,0.0,1.0,0.0,0.0,0.0
+common_synchronous_glitch_artifact,20,1.0,0.0,0.0,0.0,-1.953125
+shared_broadband_pos4ms,20,0.0,0.0,0.0,1.0,-3.90625
+shared_broadband_neg7ms,20,0.0,0.0,0.0,1.0,6.8359375
+shared_broadband_unphysical_50ms,20,1.0,0.0,0.0,0.0,0.0

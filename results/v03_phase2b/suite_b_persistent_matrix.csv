@@ -1,0 +1,9 @@
+morphology,background,n_sig_windows,frozen_stft_eff_full,frozen_ref_bb_eff_full,joint_eff_full,clean_cal_stft_eff,bg_joint_far_full,cont_drift_frac_on_sig,glitch_flag_frac_on_sig,n_regimes
+80s_sinusoid,stationary,20,1.0,0.0,1.0,1.0,0.02,0.0,0.0,1
+80s_multitone_comb,stationary,20,1.0,0.05,1.0,1.0,0.02,0.0,0.0,1
+40s_slow_chirp,stationary,10,0.9,0.1,0.9,0.9,0.00909090909090909,0.0,0.0,1
+80s_broadband_stochastic,stationary,20,0.0,1.0,1.0,0.0,0.0,0.65,0.0,1
+80s_sinusoid,drifting_1.0_to_1.4x,20,1.0,1.0,1.0,0.0,0.69,1.0,0.0,1
+80s_multitone_comb,drifting_1.0_to_1.4x,20,0.95,1.0,1.0,0.0,0.75,1.0,0.0,1
+40s_slow_chirp,drifting_1.0_to_1.4x,10,0.7,1.0,1.0,0.0,0.7272727272727273,1.0,0.0,1
+80s_broadband_stochastic,drifting_1.0_to_1.4x,20,0.0,1.0,1.0,0.0,0.73,1.0,0.0,1

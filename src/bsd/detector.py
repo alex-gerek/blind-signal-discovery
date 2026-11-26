@@ -140,6 +140,10 @@ class TemplateFreeDetector:
             raise ValueError(
                 f"Observation signal must be 1D with at least {self.config.nperseg} samples."
             )
+        if not np.all(np.isfinite(x_raw)):
+            raise ValueError(f"Observation '{observation.sample_id}' contains non-finite (NaN/inf) samples.")
+        if not np.isfinite(observation.sample_rate) or observation.sample_rate <= 0.0:
+            raise ValueError(f"Observation '{observation.sample_id}' has invalid sample_rate={observation.sample_rate}.")
 
         # 1. Robust time-domain preprocessing & diagnostics
         input_median = float(np.median(x_raw))
@@ -260,12 +264,19 @@ class TemplateFreeDetector:
         raw_candidates.sort(key=lambda c: c.anomaly_score, reverse=True)
 
         # 6. Apply calibrated experiment-level threshold if provided
+        det_available = True
         if calibration is not None:
-            threshold_used: float | None = calibration.threshold
-            # Strict '>' matches the finite-sample guarantee P(T_new > T_(k)) <= target_fap
-            accepted = [c for c in raw_candidates if c.anomaly_score > calibration.threshold]
-            detected = len(accepted) > 0
-            candidates_out = accepted
+            if calibration.threshold is None or not calibration.target_fap_attainable:
+                det_available = False
+                threshold_used: float | None = None
+                detected = False
+                candidates_out: list[CandidateEvent] = []
+            else:
+                threshold_used = calibration.threshold
+                # Strict '>' matches the finite-sample guarantee P(T_new > T_(k)) <= target_fap
+                accepted = [c for c in raw_candidates if c.anomaly_score > calibration.threshold]
+                detected = len(accepted) > 0
+                candidates_out = accepted
         else:
             threshold_used = None
             detected = False
@@ -282,6 +293,7 @@ class TemplateFreeDetector:
             "input_mad_sigma": mad_sigma,
             "input_kurtosis": input_kurtosis,
             "input_crest_factor": input_crest,
+            "detection_available": det_available,
         }
 
         tf_maps = (

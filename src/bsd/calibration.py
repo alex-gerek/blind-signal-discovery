@@ -40,13 +40,45 @@ def clopper_pearson_ci(k: int, n: int, confidence: float = 0.95) -> tuple[float,
     return (lower, upper)
 
 
+def conformal_order_rank(n_samples: int, target_fap: float) -> tuple[int | None, bool, int]:
+    """Compute conformal order-statistic rank `k` strictly consistent with empirical p-values.
+
+    Returns ``(k_order_1based_or_None, is_attainable, min_required_samples)``.
+    Exact conformal condition: `m_tail` is the largest integer in `0..n_samples`
+    satisfying `m_tail / (n_samples + 1.0) <= target_fap` (using the exact same
+    IEEE-754 division as `empirical_p_value`, with zero upward tolerance).
+    If `1.0 / (n_samples + 1.0) > target_fap`, returns `(None, False, min_required)`.
+    """
+    if not np.isfinite(target_fap) or not (0.0 < target_fap < 1.0):
+        raise ValueError(f"target_fap must be finite and lie in (0, 1), got {target_fap}.")
+    if n_samples < 1:
+        raise ValueError(f"n_samples must be >= 1, got {n_samples}.")
+
+    min_required = max(1, int(np.floor(1.0 / target_fap)) - 1)
+    while (1.0 / (min_required + 1.0)) > target_fap:
+        min_required += 1
+    while min_required > 1 and (1.0 / float(min_required)) <= target_fap:
+        min_required -= 1
+
+    m_tail = int(np.floor(target_fap * (n_samples + 1)))
+    while m_tail < n_samples and ((m_tail + 1) / (n_samples + 1.0)) <= target_fap:
+        m_tail += 1
+    while m_tail > 0 and (m_tail / (n_samples + 1.0)) > target_fap:
+        m_tail -= 1
+
+    if m_tail < 1:
+        return (None, False, min_required)
+    k_order = max(1, min(n_samples, (n_samples + 1) - m_tail))
+    return (k_order, True, min_required)
+
+
 @dataclass(frozen=True)
 class CalibrationResult:
     """Frozen threshold calibration artifact produced from noise-only data."""
 
     target_fap: float
     n_calibration_samples: int
-    threshold: float
+    threshold: float | None
     sorted_null_scores: np.ndarray
     calibration_noise_models: tuple[str, ...]
     total_tf_bins_per_sample: int
@@ -56,14 +88,18 @@ class CalibrationResult:
     calibration_seed: int
     quantile_summary: dict[str, float]
     limitations: list[str] = field(default_factory=list)
+    target_fap_attainable: bool = True
+    calibration_state: str = "AVAILABLE"
 
     def empirical_p_value(self, score: float) -> tuple[float, bool]:
         """Compute finite-sample conformal empirical p-value against calibration null.
 
         Returns ``(p_value, is_upper_bound)`` where ``is_upper_bound`` is True
         when ``score`` exceeds every observed calibration noise score, meaning
-        the true tail probability is bounded only by ``1 / (N_cal + 1)``.
+        the conformal finite-sample estimate is at the resolution floor ``1 / (N_cal + 1)``.
         """
+        if not np.isfinite(score):
+            return (1.0, False)
         n = len(self.sorted_null_scores)
         if n == 0:
             return (1.0, False)
@@ -74,9 +110,11 @@ class CalibrationResult:
         return (float(p_val), is_upper_bound)
 
     def to_summary_dict(self) -> dict[str, Any]:
-        """Serialize calibration summary (excluding raw score vector)."""
+        """Serialize calibration summary (strict JSON-safe: threshold is None when unavailable)."""
         return {
             "target_fap": self.target_fap,
+            "target_fap_attainable": self.target_fap_attainable,
+            "calibration_state": self.calibration_state,
             "n_calibration_samples": self.n_calibration_samples,
             "threshold": self.threshold,
             "calibration_noise_models": list(self.calibration_noise_models),
@@ -97,37 +135,50 @@ def calibrate_detector(
     target_fap: float = 0.01,
     calibration_noise_models: tuple[str, ...] = (),
     calibration_seed: int = 0,
+    allow_unattainable_fap: bool = False,
 ) -> CalibrationResult:
     """Calibrate experiment-level detection threshold on noise-only observations.
 
-    Uses the conservative order statistic k = ceil((1 - alpha) * (N + 1)) of
-    the experiment-level maximum cluster score T_i = max_C S(C) across each
-    noise-only sample. Under exchangeability between calibration and test noise,
-    P(T_new > T_(k)) <= alpha automatically accounts for scanning all
-    time-frequency bins and their STFT overlap correlations.
+    When the required conformal rank is unavailable (`1 / (N + 1) > target_fap`):
+      - By default (`allow_unattainable_fap=False`), raises ValueError.
+      - If `allow_unattainable_fap=True`, sets `threshold = None` and
+        `calibration_state = "UNAVAILABLE_FAP_UNATTAINABLE"` (JSON-safe `null`,
+        explicitly abstaining from detections).
     """
-    if not (0.0 < target_fap < 1.0):
-        raise ValueError(f"target_fap must lie in (0, 1), got {target_fap}.")
+    if not np.isfinite(target_fap) or not (0.0 < target_fap < 1.0):
+        raise ValueError(f"target_fap must be finite and lie in (0, 1), got {target_fap}.")
     n_cal = len(calibration_observations)
     if n_cal < 20:
         raise ValueError(f"At least 20 calibration samples are required, got {n_cal}.")
+
+    k_order, fap_attainable, min_required_n = conformal_order_rank(n_cal, target_fap)
+    if not fap_attainable and not allow_unattainable_fap:
+        raise ValueError(
+            f"Unattainable target_fap={target_fap:.5g} for n_cal={n_cal} samples: "
+            f"minimum resolvable p_min=1/({n_cal}+1)={1.0 / (n_cal + 1):.5f} > target_fap. "
+            f"Provide at least {min_required_n} calibration samples or set target_fap >= {1.0 / (n_cal + 1):.5f}."
+        )
 
     null_scores = np.empty(n_cal, dtype=np.float64)
     total_tf_bins = 0
 
     for idx, obs in enumerate(calibration_observations):
         res = detector.analyze(obs, calibration=None, return_maps=False)
+        if not np.isfinite(res.max_anomaly_score):
+            raise ValueError(f"Non-finite calibration score encountered at index {idx}.")
         null_scores[idx] = res.max_anomaly_score
         if idx == 0:
             total_tf_bins = int(res.diagnostics["total_tf_bins"])
 
     sorted_scores = np.sort(null_scores)
-    # 1-indexed order statistic k = ceil((1 - alpha) * (N + 1)), clamped to N
-    k_order = min(n_cal, int(np.ceil((1.0 - target_fap) * (n_cal + 1))))
-    threshold = float(sorted_scores[k_order - 1])
-
-    # Fraction of calibration samples strictly exceeding the threshold
-    emp_cal_fap = float(np.mean(sorted_scores > threshold))
+    if fap_attainable and k_order is not None:
+        threshold: float | None = float(sorted_scores[k_order - 1])
+        emp_cal_fap = float(np.mean(sorted_scores > threshold))
+        cal_state = "AVAILABLE"
+    else:
+        threshold = None
+        emp_cal_fap = 0.0
+        cal_state = "UNAVAILABLE_FAP_UNATTAINABLE"
 
     # Reference single-bin exponential thresholds to contrast with experiment-level FAP
     naive_per_bin = float(-np.log(target_fap))
@@ -174,4 +225,6 @@ def calibrate_detector(
         calibration_seed=int(calibration_seed),
         quantile_summary=quantile_summary,
         limitations=limitations,
+        target_fap_attainable=fap_attainable,
+        calibration_state=cal_state,
     )

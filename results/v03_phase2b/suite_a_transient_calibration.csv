@@ -1,0 +1,5 @@
+scenario,n_windows,duty_cycle_clean,stft_far_full,bb_far_full,joint_far_full,joint_far_ci90_lo,joint_far_ci90_hi,cal_n_thresh,cal_n_eff,cal_ljung_box_p,cal_beta_ci90_neff_hi,t_provisional_win,t_mature_win,mature_surv_far,transient_eff_full,transient_eff_clean_cal,glitch_storm_flag_rate,n_regimes,transition_raw_preservation,mature_sig_status,glitch_causes_explicit
+stationary_null_200win,200,1.0,0.005,0.005,0.01,0.003314757643547878,0.02976545937520606,224,217.26986442387565,0.8735926319842982,0.01369345072788762,,,,,,0.0,1,,,
+abrupt_step_500win,500,0.204,0.006160164271047228,,,,,150,115.00275247453128,0.43295466795377036,0.025712868303245897,62,201,,0.5,0.0,0.792,2,1.0,EMPIRICAL_DEPENDENT_UNCERTAIN,
+transient_chirps_stationary,120,1.0,0.0,0.0,0.0,,,224,217.26986442387565,0.8735926319842982,0.01369345072788762,,,,1.0,1.0,0.0,1,,,
+glitch_storm_120win,120,0.5,0.475,0.5,0.5,,,224,217.26986442387565,0.8735926319842982,0.01369345072788762,,,0.0,,,1.0,1,,,True

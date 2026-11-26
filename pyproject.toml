@@ -7,6 +7,10 @@ name = "blind-signal-discovery"
 version = "0.1.0"
 description = "Standalone research prototype for template-free unknown signal detection in noisy time-series data with calibrated false-alarm control."
 readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Lex Gerek" },
+]
 requires-python = ">=3.11"
 dependencies = [
     "numpy>=1.26",
@@ -20,6 +24,9 @@ dev = [
 ]
 ligo = [
     "h5py>=3.10",
+]
+gui = [
+    "streamlit>=1.35",
 ]
 
 [tool.setuptools.packages.find]

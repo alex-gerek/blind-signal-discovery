@@ -1,0 +1,4 @@
+n_bg_windows,n_thresh_split_b,calibration_status,frozen_threshold,n_eval_total,frozen_raw_fp,frozen_raw_far,frozen_raw_ci95_lo,frozen_raw_ci95_hi,adaptive_full_fp,adaptive_full_far,adaptive_full_ci95_lo,adaptive_full_ci95_hi,adaptive_n_clean_eligible,adaptive_clean_duty_cycle,adaptive_clean_fp,adaptive_clean_far,adaptive_clean_ci95_lo,adaptive_clean_ci95_hi,adaptive_n_regimes,adaptive_cont_warnings,adaptive_glitch_warnings,eval_lag1_autocorr,eval_ljung_box_p,eval_n_eff
+120,84,PROVISIONAL,2.2568,2000,50,0.025,0.019014,0.032807,50,0.025,0.019014,0.032807,1985,0.9925,50,0.025189,0.019158,0.033054,1,10,5,-0.0364,0.1138,1698.6
+200,140,PROVISIONAL,2.425,2000,30,0.015,0.010527,0.021332,30,0.015,0.010527,0.021332,1989,0.9945,30,0.015083,0.010585,0.02145,1,10,1,-0.0267,0.0712,1660.0
+220,154,VALIDATED,2.3089,2000,31,0.0155,0.010941,0.021917,31,0.0155,0.010941,0.021917,1979,0.9895,31,0.015664,0.011057,0.022148,1,20,1,-0.0173,0.0866,1661.9
