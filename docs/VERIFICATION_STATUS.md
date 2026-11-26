@@ -11,7 +11,7 @@ Updated on 2026-11-26. This index separates saved implementation fixes, regressi
 | Abstention accounting and export precision | `8fab987` | Conditional rates/exposure, separate abstentions, compatibility semantics and shared precise CSV/JSON builders. 18 selected pytest cases across final runs and ten Node scenarios. |
 | Browser WAV preprocessing | `8c6d3ae` | Fixed-parameter FIR to exact 512 Hz; 0–192 Hz useful resampled band, disclosed offline lookahead/padding, original/decoded rate provenance. Sixteen Node scenarios and three SciPy references; see the [protocol](browser_wav_resampling_protocol_2026-11-26.md). |
 
-These are development-branch commits. At this check, remote `main` remained at `7e72a12` and tag `v0.3.0` at `c406e00`. Pushing development commits does not merge them into main or replace an archived release. The current fixes must not be inferred to exist in the old release archive. GitHub Pages was also checked: its source is `main:/docs`, and its latest built revision is `7e72a12`. The live site therefore still serves the pre-correction implementation until a separately authorized merge/deployment.
+Publication follow-up (2026-11-26): the corrections and history commit `043f0eb` were merged through PR #8 into public `main` at `5e19ae4e6fb9ea177738fa4bae8310c11a2633e6`. GitHub Pages successfully built that revision. The `main` and development source trees match. The earlier pre-merge snapshot is preserved in research history. Tag `v0.3.0` remains at `c406e00`; the existing Zenodo archive does not contain these later fixes.
 
 ## Consolidated regression evidence
 
@@ -48,3 +48,26 @@ Before rerunning, check the output contract: historical experiment entry points 
 - Attribution inventory, icon provenance and the owner's intended public scope for the reserved manifest. No O3 manifest contents or input data are inspected in this step.
 
 Zenodo metadata/release operations are deferred. Do not move an existing tag or silently replace a published archive to make it match a later source tree.
+
+
+## Post-audit synthetic control pilot (2026-11-26, local results)
+
+The [prespecified protocol](post_audit_workstation_control_protocol_2026-11-26.md) ran all 15 planned cases on unchanged detector source at `043f0eb` (same tree as main `5e19ae4`). The driver/protocol and local dirty-path list are saved with the [run manifest](../results/post_audit_workstation_controls/20261126T154934Z_6cbf4e69/manifest.json). No case was replaced or tuned. One initial system-Python import failure preceded the actual study and is separately recorded; the completed study used the existing project .venv.
+
+- Stationary controls: three seeds, paired SNR 8/18, 220 background windows and 200 initial noise controls per seed. Count the shared noise once: **10/600 = 1.6667%**, 2,400 s available noise exposure, zero abstentions. This observed pilot fraction is above the nominal 1% parameter; three frozen calibrations do not establish a population violation or verify 1% real-data FAP control. Report it as observed, without a pooled common-rate Bernoulli confidence interval.
+- Injections: SNR 8 **13/30**; SNR 18 **30/30**; zero abstentions. The changed 200-control target generation is not a rerun of the previous 80-control manual demonstration.
+- Adaptive amplitude-step controls: dedicated STFT recovered and detected 10/10 strong SNR 30 chirps in each of six paired seed/FAP scenarios. The FAP settings share inputs, so these are not 60 independent injection trials. First new-regime available decision: index 144 at FAP=0.01; index 277 at FAP=0.005. First mature decision: index 277 at FAP=0.01, not reached at FAP=0.005 in this duration. Multiply the zero-based index by 4 s for target-relative start time, not universal recovery latency.
+- At union FWER=0.005 the stricter channel requires 399 Split-B scores (570 initial windows at 30% normalization, 532 adaptive windows at 25%). The 320-reference/370-target pilot therefore does not verify full Union recovery; Union remained unavailable. This is expected insufficient data, not a demonstrated software defect.
+- Capped companions (buffer=150, FAP=0.005): all three exposed resource blocking and ended unavailable; 108/180 noise windows were excluded, 72 remained available under the earlier calibration. Do not treat the entire companion as zero exposure or as verified zero false alarms.
+- Independent verification recomputed counts/decisions/exposure from exported full-precision CSV, matched strict JSON, verified paired input hashes, and exactly regenerated all six stationary input arrays. Source hashes stayed unchanged. See [independent verification](../results/post_audit_workstation_controls/20261126T154934Z_6cbf4e69/independent_verification.json), [complete report](../results/post_audit_workstation_controls/20261126T154934Z_6cbf4e69/report.md), and [artifact hashes](../results/post_audit_workstation_controls/20261126T154934Z_6cbf4e69/artifact_sha256.json).
+
+These are **15 experiment cases, not 15 new pytest passes**. The saved 135-passed/1-deselected regression record still describes the unchanged implementation. The pilot is limited to pink stationary noise and Gaussian amplitude steps; it does not supersede shifted_ar2 adaptive benchmarks, real-data FAR, GW170814, native UI/browser checks or the historical 100-calibration study. No O3 manifest/data, external input or detector tuning was used.
+
+The [next-release checklist](NEXT_RELEASE_CHECKLIST.md) records the owner-confirmed author Lex Gerek, manual/operator follow-up, attribution inventory and release-version/DOI steps. No commit, push, tag, release or Zenodo change was made by this local control-study step.
+
+
+## Historical adaptive synthetic replay (2026-11-26, local evidence)
+
+Synthetic suitesA/B of run_v03_phase2b_corrected_benchmark.py were replayed without source tuning:12 cases,1,900 target windows, exact current input/reference regeneration, source/old-artifact hashes unchanged. A subsequent exploratory2-arm abrupt-case trace/control exactly reproduced the baseline and isolated threshold contamination. These are experiments, not additional pytest counts. See [findings](HISTORICAL_ADAPTIVE_REPLAY_FINDINGS_2026-11-26.md) for3/10 vs historical5/10, slower recovery, correct exposure, mature0/6 sensitivity and frozen broadband/fullUnion127/127 mature noise nominations.
+
+The earlier blanket statement that all historical adaptive results remain unrerun is superseded ONLY for these syntheticA/B cases. Real-data suiteD, coherence suiteC, other phase2/phase2b versions and coincidence/GW170814 strain reruns remain pending. No physical discovery or validated adaptive admission repair is established.

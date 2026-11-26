@@ -1,0 +1,1669 @@
+{
+  "status": "VERIFIED",
+  "source_and_historical_hashes_match": true,
+  "cases": [
+    {
+      "case": "stationary_null_200win",
+      "n_windows": 200,
+      "policy": "transient",
+      "channels": {
+        "dedicated_stft": {
+          "noise_total": 200,
+          "noise_available": 200,
+          "noise_abstained": 0,
+          "noise_fp": 1,
+          "noise_fraction": 0.005,
+          "noise_available_exposure_s": 800,
+          "clean_noise_available": 200,
+          "clean_noise_fp": 1,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 0,
+          "signal_available": 0,
+          "signal_abstained": 0,
+          "signal_detected": 0,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": null
+        },
+        "dedicated_broadband": {
+          "noise_total": 200,
+          "noise_available": 200,
+          "noise_abstained": 0,
+          "noise_fp": 1,
+          "noise_fraction": 0.005,
+          "noise_available_exposure_s": 800,
+          "clean_noise_available": 200,
+          "clean_noise_fp": 1,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 0,
+          "signal_available": 0,
+          "signal_abstained": 0,
+          "signal_detected": 0,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": null
+        },
+        "full_union": {
+          "noise_total": 200,
+          "noise_available": 200,
+          "noise_abstained": 0,
+          "noise_fp": 2,
+          "noise_fraction": 0.01,
+          "noise_available_exposure_s": 800,
+          "clean_noise_available": 200,
+          "clean_noise_fp": 2,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 0,
+          "signal_available": 0,
+          "signal_abstained": 0,
+          "signal_detected": 0,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": null
+        }
+      },
+      "timing_relative_to_step": {
+        "first_new_regime_calibrated": null,
+        "first_new_regime_stft_available": null,
+        "first_new_regime_full_union_available": null,
+        "first_mature_available": null
+      },
+      "post_step_injections": [],
+      "union_status_counts": {
+        "FULL_UNION_AVAILABLE": 200
+      },
+      "clean_windows": 200,
+      "detection_available_windows": 200,
+      "glitch_warning_windows": 0,
+      "regimes": 1,
+      "glitch_ref_refreshes": 0,
+      "unavailable_diagnostic_candidate_windows": 0
+    },
+    {
+      "case": "abrupt_step_500win",
+      "n_windows": 500,
+      "policy": "transient",
+      "channels": {
+        "dedicated_stft": {
+          "noise_total": 487,
+          "noise_available": 415,
+          "noise_abstained": 72,
+          "noise_fp": 7,
+          "noise_fraction": 0.016867469879518072,
+          "noise_available_exposure_s": 1660,
+          "clean_noise_available": 358,
+          "clean_noise_fp": 1,
+          "mature_clean_noise_available": 127,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": 0.0,
+          "signal_total": 13,
+          "signal_available": 13,
+          "signal_abstained": 0,
+          "signal_detected": 6,
+          "signal_missed_available": 7,
+          "signal_efficiency_available": 0.46153846153846156
+        },
+        "dedicated_broadband": {
+          "noise_total": 487,
+          "noise_available": 487,
+          "noise_abstained": 0,
+          "noise_fp": 387,
+          "noise_fraction": 0.7946611909650924,
+          "noise_available_exposure_s": 1948,
+          "clean_noise_available": 358,
+          "clean_noise_fp": 258,
+          "mature_clean_noise_available": 127,
+          "mature_clean_noise_fp": 127,
+          "mature_clean_noise_fraction": 1.0,
+          "signal_total": 13,
+          "signal_available": 13,
+          "signal_abstained": 0,
+          "signal_detected": 13,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": 1.0
+        },
+        "full_union": {
+          "noise_total": 487,
+          "noise_available": 286,
+          "noise_abstained": 201,
+          "noise_fp": 186,
+          "noise_fraction": 0.6503496503496503,
+          "noise_available_exposure_s": 1144,
+          "clean_noise_available": 229,
+          "clean_noise_fp": 129,
+          "mature_clean_noise_available": 127,
+          "mature_clean_noise_fp": 127,
+          "mature_clean_noise_fraction": 1.0,
+          "signal_total": 13,
+          "signal_available": 9,
+          "signal_abstained": 4,
+          "signal_detected": 9,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": 1.0
+        }
+      },
+      "timing_relative_to_step": {
+        "first_new_regime_calibrated": 134,
+        "first_new_regime_stft_available": 134,
+        "first_new_regime_full_union_available": 267,
+        "first_mature_available": 267
+      },
+      "post_step_injections": [
+        {
+          "window_index": 330,
+          "available": true,
+          "clean": true,
+          "mature": false,
+          "detected": true,
+          "score": 3.4772675334252656,
+          "threshold": 3.1360766413763086,
+          "diagnostic_candidate_count": 1
+        },
+        {
+          "window_index": 340,
+          "available": true,
+          "clean": true,
+          "mature": false,
+          "detected": true,
+          "score": 51.49248962372985,
+          "threshold": 3.1360766413763086,
+          "diagnostic_candidate_count": 4
+        },
+        {
+          "window_index": 350,
+          "available": true,
+          "clean": true,
+          "mature": false,
+          "detected": true,
+          "score": 30.891302793275106,
+          "threshold": 3.1360766413763086,
+          "diagnostic_candidate_count": 3
+        },
+        {
+          "window_index": 360,
+          "available": true,
+          "clean": true,
+          "mature": false,
+          "detected": false,
+          "score": 0.7442447244754796,
+          "threshold": 3.1360766413763086,
+          "diagnostic_candidate_count": 0
+        },
+        {
+          "window_index": 370,
+          "available": true,
+          "clean": true,
+          "mature": true,
+          "detected": false,
+          "score": 9.324284140153061,
+          "threshold": 163.83940094146237,
+          "diagnostic_candidate_count": 0
+        },
+        {
+          "window_index": 380,
+          "available": true,
+          "clean": true,
+          "mature": true,
+          "detected": false,
+          "score": 4.163510795506804,
+          "threshold": 163.83940094146237,
+          "diagnostic_candidate_count": 0
+        },
+        {
+          "window_index": 390,
+          "available": true,
+          "clean": true,
+          "mature": true,
+          "detected": false,
+          "score": 25.70715505541384,
+          "threshold": 163.83940094146237,
+          "diagnostic_candidate_count": 0
+        },
+        {
+          "window_index": 400,
+          "available": true,
+          "clean": true,
+          "mature": true,
+          "detected": false,
+          "score": 92.83968412847824,
+          "threshold": 163.83940094146237,
+          "diagnostic_candidate_count": 0
+        },
+        {
+          "window_index": 410,
+          "available": true,
+          "clean": true,
+          "mature": true,
+          "detected": false,
+          "score": 1.0152211914665845,
+          "threshold": 163.83940094146237,
+          "diagnostic_candidate_count": 0
+        },
+        {
+          "window_index": 420,
+          "available": true,
+          "clean": true,
+          "mature": true,
+          "detected": false,
+          "score": 3.5137935145834436,
+          "threshold": 163.83940094146237,
+          "diagnostic_candidate_count": 0
+        }
+      ],
+      "union_status_counts": {
+        "FULL_UNION_AVAILABLE": 295,
+        "PARTIAL_BROADBAND_ONLY": 205
+      },
+      "clean_windows": 368,
+      "detection_available_windows": 428,
+      "glitch_warning_windows": 58,
+      "regimes": 2,
+      "glitch_ref_refreshes": 3,
+      "unavailable_diagnostic_candidate_windows": 0
+    },
+    {
+      "case": "transient_chirps_stationary",
+      "n_windows": 120,
+      "policy": "transient",
+      "channels": {
+        "dedicated_stft": {
+          "noise_total": 100,
+          "noise_available": 100,
+          "noise_abstained": 0,
+          "noise_fp": 2,
+          "noise_fraction": 0.02,
+          "noise_available_exposure_s": 400,
+          "clean_noise_available": 100,
+          "clean_noise_fp": 2,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 20,
+          "signal_available": 20,
+          "signal_abstained": 0,
+          "signal_detected": 20,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": 1.0
+        },
+        "dedicated_broadband": {
+          "noise_total": 100,
+          "noise_available": 100,
+          "noise_abstained": 0,
+          "noise_fp": 0,
+          "noise_fraction": 0.0,
+          "noise_available_exposure_s": 400,
+          "clean_noise_available": 100,
+          "clean_noise_fp": 0,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 20,
+          "signal_available": 20,
+          "signal_abstained": 0,
+          "signal_detected": 0,
+          "signal_missed_available": 20,
+          "signal_efficiency_available": 0.0
+        },
+        "full_union": {
+          "noise_total": 100,
+          "noise_available": 100,
+          "noise_abstained": 0,
+          "noise_fp": 0,
+          "noise_fraction": 0.0,
+          "noise_available_exposure_s": 400,
+          "clean_noise_available": 100,
+          "clean_noise_fp": 0,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 20,
+          "signal_available": 20,
+          "signal_abstained": 0,
+          "signal_detected": 20,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": 1.0
+        }
+      },
+      "timing_relative_to_step": {
+        "first_new_regime_calibrated": null,
+        "first_new_regime_stft_available": null,
+        "first_new_regime_full_union_available": null,
+        "first_mature_available": null
+      },
+      "post_step_injections": [],
+      "union_status_counts": {
+        "FULL_UNION_AVAILABLE": 120
+      },
+      "clean_windows": 120,
+      "detection_available_windows": 120,
+      "glitch_warning_windows": 0,
+      "regimes": 1,
+      "glitch_ref_refreshes": 0,
+      "unavailable_diagnostic_candidate_windows": 0
+    },
+    {
+      "case": "glitch_storm_120win",
+      "n_windows": 120,
+      "policy": "transient",
+      "channels": {
+        "dedicated_stft": {
+          "noise_total": 120,
+          "noise_available": 120,
+          "noise_abstained": 0,
+          "noise_fp": 57,
+          "noise_fraction": 0.475,
+          "noise_available_exposure_s": 480,
+          "clean_noise_available": 60,
+          "clean_noise_fp": 0,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 0,
+          "signal_available": 0,
+          "signal_abstained": 0,
+          "signal_detected": 0,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": null
+        },
+        "dedicated_broadband": {
+          "noise_total": 120,
+          "noise_available": 120,
+          "noise_abstained": 0,
+          "noise_fp": 60,
+          "noise_fraction": 0.5,
+          "noise_available_exposure_s": 480,
+          "clean_noise_available": 60,
+          "clean_noise_fp": 0,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 0,
+          "signal_available": 0,
+          "signal_abstained": 0,
+          "signal_detected": 0,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": null
+        },
+        "full_union": {
+          "noise_total": 120,
+          "noise_available": 120,
+          "noise_abstained": 0,
+          "noise_fp": 60,
+          "noise_fraction": 0.5,
+          "noise_available_exposure_s": 480,
+          "clean_noise_available": 60,
+          "clean_noise_fp": 0,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 0,
+          "signal_available": 0,
+          "signal_abstained": 0,
+          "signal_detected": 0,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": null
+        }
+      },
+      "timing_relative_to_step": {
+        "first_new_regime_calibrated": null,
+        "first_new_regime_stft_available": null,
+        "first_new_regime_full_union_available": null,
+        "first_mature_available": null
+      },
+      "post_step_injections": [],
+      "union_status_counts": {
+        "FULL_UNION_AVAILABLE": 120
+      },
+      "clean_windows": 60,
+      "detection_available_windows": 120,
+      "glitch_warning_windows": 60,
+      "regimes": 1,
+      "glitch_ref_refreshes": 0,
+      "unavailable_diagnostic_candidate_windows": 0
+    },
+    {
+      "case": "stationary__80s_sinusoid",
+      "n_windows": 120,
+      "policy": "persistent",
+      "channels": {
+        "dedicated_stft": {
+          "noise_total": 100,
+          "noise_available": 100,
+          "noise_abstained": 0,
+          "noise_fp": 1,
+          "noise_fraction": 0.01,
+          "noise_available_exposure_s": 400,
+          "clean_noise_available": 100,
+          "clean_noise_fp": 1,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 20,
+          "signal_available": 20,
+          "signal_abstained": 0,
+          "signal_detected": 20,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": 1.0
+        },
+        "dedicated_broadband": {
+          "noise_total": 100,
+          "noise_available": 100,
+          "noise_abstained": 0,
+          "noise_fp": 2,
+          "noise_fraction": 0.02,
+          "noise_available_exposure_s": 400,
+          "clean_noise_available": 100,
+          "clean_noise_fp": 2,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 20,
+          "signal_available": 20,
+          "signal_abstained": 0,
+          "signal_detected": 0,
+          "signal_missed_available": 20,
+          "signal_efficiency_available": 0.0
+        },
+        "full_union": {
+          "noise_total": 100,
+          "noise_available": 100,
+          "noise_abstained": 0,
+          "noise_fp": 2,
+          "noise_fraction": 0.02,
+          "noise_available_exposure_s": 400,
+          "clean_noise_available": 100,
+          "clean_noise_fp": 2,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 20,
+          "signal_available": 20,
+          "signal_abstained": 0,
+          "signal_detected": 20,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": 1.0
+        }
+      },
+      "timing_relative_to_step": {
+        "first_new_regime_calibrated": null,
+        "first_new_regime_stft_available": null,
+        "first_new_regime_full_union_available": null,
+        "first_mature_available": null
+      },
+      "post_step_injections": [],
+      "union_status_counts": {
+        "FULL_UNION_AVAILABLE": 120
+      },
+      "clean_windows": 120,
+      "detection_available_windows": 120,
+      "glitch_warning_windows": 0,
+      "regimes": 1,
+      "glitch_ref_refreshes": 0,
+      "unavailable_diagnostic_candidate_windows": 0
+    },
+    {
+      "case": "stationary__80s_multitone_comb",
+      "n_windows": 120,
+      "policy": "persistent",
+      "channels": {
+        "dedicated_stft": {
+          "noise_total": 100,
+          "noise_available": 100,
+          "noise_abstained": 0,
+          "noise_fp": 1,
+          "noise_fraction": 0.01,
+          "noise_available_exposure_s": 400,
+          "clean_noise_available": 100,
+          "clean_noise_fp": 1,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 20,
+          "signal_available": 20,
+          "signal_abstained": 0,
+          "signal_detected": 20,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": 1.0
+        },
+        "dedicated_broadband": {
+          "noise_total": 100,
+          "noise_available": 100,
+          "noise_abstained": 0,
+          "noise_fp": 1,
+          "noise_fraction": 0.01,
+          "noise_available_exposure_s": 400,
+          "clean_noise_available": 100,
+          "clean_noise_fp": 1,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 20,
+          "signal_available": 20,
+          "signal_abstained": 0,
+          "signal_detected": 1,
+          "signal_missed_available": 19,
+          "signal_efficiency_available": 0.05
+        },
+        "full_union": {
+          "noise_total": 100,
+          "noise_available": 100,
+          "noise_abstained": 0,
+          "noise_fp": 2,
+          "noise_fraction": 0.02,
+          "noise_available_exposure_s": 400,
+          "clean_noise_available": 100,
+          "clean_noise_fp": 2,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 20,
+          "signal_available": 20,
+          "signal_abstained": 0,
+          "signal_detected": 20,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": 1.0
+        }
+      },
+      "timing_relative_to_step": {
+        "first_new_regime_calibrated": null,
+        "first_new_regime_stft_available": null,
+        "first_new_regime_full_union_available": null,
+        "first_mature_available": null
+      },
+      "post_step_injections": [],
+      "union_status_counts": {
+        "FULL_UNION_AVAILABLE": 120
+      },
+      "clean_windows": 120,
+      "detection_available_windows": 120,
+      "glitch_warning_windows": 0,
+      "regimes": 1,
+      "glitch_ref_refreshes": 0,
+      "unavailable_diagnostic_candidate_windows": 0
+    },
+    {
+      "case": "stationary__40s_slow_chirp",
+      "n_windows": 120,
+      "policy": "persistent",
+      "channels": {
+        "dedicated_stft": {
+          "noise_total": 110,
+          "noise_available": 110,
+          "noise_abstained": 0,
+          "noise_fp": 1,
+          "noise_fraction": 0.00909090909090909,
+          "noise_available_exposure_s": 440,
+          "clean_noise_available": 110,
+          "clean_noise_fp": 1,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 10,
+          "signal_available": 10,
+          "signal_abstained": 0,
+          "signal_detected": 9,
+          "signal_missed_available": 1,
+          "signal_efficiency_available": 0.9
+        },
+        "dedicated_broadband": {
+          "noise_total": 110,
+          "noise_available": 110,
+          "noise_abstained": 0,
+          "noise_fp": 0,
+          "noise_fraction": 0.0,
+          "noise_available_exposure_s": 440,
+          "clean_noise_available": 110,
+          "clean_noise_fp": 0,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 10,
+          "signal_available": 10,
+          "signal_abstained": 0,
+          "signal_detected": 1,
+          "signal_missed_available": 9,
+          "signal_efficiency_available": 0.1
+        },
+        "full_union": {
+          "noise_total": 110,
+          "noise_available": 110,
+          "noise_abstained": 0,
+          "noise_fp": 1,
+          "noise_fraction": 0.00909090909090909,
+          "noise_available_exposure_s": 440,
+          "clean_noise_available": 110,
+          "clean_noise_fp": 1,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 10,
+          "signal_available": 10,
+          "signal_abstained": 0,
+          "signal_detected": 9,
+          "signal_missed_available": 1,
+          "signal_efficiency_available": 0.9
+        }
+      },
+      "timing_relative_to_step": {
+        "first_new_regime_calibrated": null,
+        "first_new_regime_stft_available": null,
+        "first_new_regime_full_union_available": null,
+        "first_mature_available": null
+      },
+      "post_step_injections": [],
+      "union_status_counts": {
+        "FULL_UNION_AVAILABLE": 120
+      },
+      "clean_windows": 120,
+      "detection_available_windows": 120,
+      "glitch_warning_windows": 0,
+      "regimes": 1,
+      "glitch_ref_refreshes": 0,
+      "unavailable_diagnostic_candidate_windows": 0
+    },
+    {
+      "case": "stationary__80s_broadband_stochastic",
+      "n_windows": 120,
+      "policy": "persistent",
+      "channels": {
+        "dedicated_stft": {
+          "noise_total": 100,
+          "noise_available": 100,
+          "noise_abstained": 0,
+          "noise_fp": 0,
+          "noise_fraction": 0.0,
+          "noise_available_exposure_s": 400,
+          "clean_noise_available": 96,
+          "clean_noise_fp": 0,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 20,
+          "signal_available": 20,
+          "signal_abstained": 0,
+          "signal_detected": 0,
+          "signal_missed_available": 20,
+          "signal_efficiency_available": 0.0
+        },
+        "dedicated_broadband": {
+          "noise_total": 100,
+          "noise_available": 100,
+          "noise_abstained": 0,
+          "noise_fp": 0,
+          "noise_fraction": 0.0,
+          "noise_available_exposure_s": 400,
+          "clean_noise_available": 96,
+          "clean_noise_fp": 0,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 20,
+          "signal_available": 20,
+          "signal_abstained": 0,
+          "signal_detected": 20,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": 1.0
+        },
+        "full_union": {
+          "noise_total": 100,
+          "noise_available": 100,
+          "noise_abstained": 0,
+          "noise_fp": 0,
+          "noise_fraction": 0.0,
+          "noise_available_exposure_s": 400,
+          "clean_noise_available": 96,
+          "clean_noise_fp": 0,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 20,
+          "signal_available": 20,
+          "signal_abstained": 0,
+          "signal_detected": 20,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": 1.0
+        }
+      },
+      "timing_relative_to_step": {
+        "first_new_regime_calibrated": null,
+        "first_new_regime_stft_available": null,
+        "first_new_regime_full_union_available": null,
+        "first_mature_available": null
+      },
+      "post_step_injections": [],
+      "union_status_counts": {
+        "FULL_UNION_AVAILABLE": 120
+      },
+      "clean_windows": 103,
+      "detection_available_windows": 120,
+      "glitch_warning_windows": 0,
+      "regimes": 1,
+      "glitch_ref_refreshes": 0,
+      "unavailable_diagnostic_candidate_windows": 0
+    },
+    {
+      "case": "drifting_1.0_to_1.4x__80s_sinusoid",
+      "n_windows": 120,
+      "policy": "persistent",
+      "channels": {
+        "dedicated_stft": {
+          "noise_total": 100,
+          "noise_available": 100,
+          "noise_abstained": 0,
+          "noise_fp": 2,
+          "noise_fraction": 0.02,
+          "noise_available_exposure_s": 400,
+          "clean_noise_available": 25,
+          "clean_noise_fp": 1,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 20,
+          "signal_available": 20,
+          "signal_abstained": 0,
+          "signal_detected": 20,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": 1.0
+        },
+        "dedicated_broadband": {
+          "noise_total": 100,
+          "noise_available": 100,
+          "noise_abstained": 0,
+          "noise_fp": 68,
+          "noise_fraction": 0.68,
+          "noise_available_exposure_s": 400,
+          "clean_noise_available": 25,
+          "clean_noise_fp": 2,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 20,
+          "signal_available": 20,
+          "signal_abstained": 0,
+          "signal_detected": 20,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": 1.0
+        },
+        "full_union": {
+          "noise_total": 100,
+          "noise_available": 100,
+          "noise_abstained": 0,
+          "noise_fp": 69,
+          "noise_fraction": 0.69,
+          "noise_available_exposure_s": 400,
+          "clean_noise_available": 25,
+          "clean_noise_fp": 3,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 20,
+          "signal_available": 20,
+          "signal_abstained": 0,
+          "signal_detected": 20,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": 1.0
+        }
+      },
+      "timing_relative_to_step": {
+        "first_new_regime_calibrated": null,
+        "first_new_regime_stft_available": null,
+        "first_new_regime_full_union_available": null,
+        "first_mature_available": null
+      },
+      "post_step_injections": [],
+      "union_status_counts": {
+        "FULL_UNION_AVAILABLE": 120
+      },
+      "clean_windows": 25,
+      "detection_available_windows": 120,
+      "glitch_warning_windows": 0,
+      "regimes": 1,
+      "glitch_ref_refreshes": 0,
+      "unavailable_diagnostic_candidate_windows": 0
+    },
+    {
+      "case": "drifting_1.0_to_1.4x__80s_multitone_comb",
+      "n_windows": 120,
+      "policy": "persistent",
+      "channels": {
+        "dedicated_stft": {
+          "noise_total": 100,
+          "noise_available": 100,
+          "noise_abstained": 0,
+          "noise_fp": 4,
+          "noise_fraction": 0.04,
+          "noise_available_exposure_s": 400,
+          "clean_noise_available": 28,
+          "clean_noise_fp": 1,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 20,
+          "signal_available": 20,
+          "signal_abstained": 0,
+          "signal_detected": 19,
+          "signal_missed_available": 1,
+          "signal_efficiency_available": 0.95
+        },
+        "dedicated_broadband": {
+          "noise_total": 100,
+          "noise_available": 100,
+          "noise_abstained": 0,
+          "noise_fp": 74,
+          "noise_fraction": 0.74,
+          "noise_available_exposure_s": 400,
+          "clean_noise_available": 28,
+          "clean_noise_fp": 5,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 20,
+          "signal_available": 20,
+          "signal_abstained": 0,
+          "signal_detected": 20,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": 1.0
+        },
+        "full_union": {
+          "noise_total": 100,
+          "noise_available": 100,
+          "noise_abstained": 0,
+          "noise_fp": 75,
+          "noise_fraction": 0.75,
+          "noise_available_exposure_s": 400,
+          "clean_noise_available": 28,
+          "clean_noise_fp": 6,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 20,
+          "signal_available": 20,
+          "signal_abstained": 0,
+          "signal_detected": 20,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": 1.0
+        }
+      },
+      "timing_relative_to_step": {
+        "first_new_regime_calibrated": null,
+        "first_new_regime_stft_available": null,
+        "first_new_regime_full_union_available": null,
+        "first_mature_available": null
+      },
+      "post_step_injections": [],
+      "union_status_counts": {
+        "FULL_UNION_AVAILABLE": 120
+      },
+      "clean_windows": 28,
+      "detection_available_windows": 120,
+      "glitch_warning_windows": 0,
+      "regimes": 1,
+      "glitch_ref_refreshes": 0,
+      "unavailable_diagnostic_candidate_windows": 0
+    },
+    {
+      "case": "drifting_1.0_to_1.4x__40s_slow_chirp",
+      "n_windows": 120,
+      "policy": "persistent",
+      "channels": {
+        "dedicated_stft": {
+          "noise_total": 110,
+          "noise_available": 110,
+          "noise_abstained": 0,
+          "noise_fp": 1,
+          "noise_fraction": 0.00909090909090909,
+          "noise_available_exposure_s": 440,
+          "clean_noise_available": 24,
+          "clean_noise_fp": 0,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 10,
+          "signal_available": 10,
+          "signal_abstained": 0,
+          "signal_detected": 9,
+          "signal_missed_available": 1,
+          "signal_efficiency_available": 0.9
+        },
+        "dedicated_broadband": {
+          "noise_total": 110,
+          "noise_available": 110,
+          "noise_abstained": 0,
+          "noise_fp": 80,
+          "noise_fraction": 0.7272727272727273,
+          "noise_available_exposure_s": 440,
+          "clean_noise_available": 24,
+          "clean_noise_fp": 3,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 10,
+          "signal_available": 10,
+          "signal_abstained": 0,
+          "signal_detected": 10,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": 1.0
+        },
+        "full_union": {
+          "noise_total": 110,
+          "noise_available": 110,
+          "noise_abstained": 0,
+          "noise_fp": 80,
+          "noise_fraction": 0.7272727272727273,
+          "noise_available_exposure_s": 440,
+          "clean_noise_available": 24,
+          "clean_noise_fp": 3,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 10,
+          "signal_available": 10,
+          "signal_abstained": 0,
+          "signal_detected": 10,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": 1.0
+        }
+      },
+      "timing_relative_to_step": {
+        "first_new_regime_calibrated": null,
+        "first_new_regime_stft_available": null,
+        "first_new_regime_full_union_available": null,
+        "first_mature_available": null
+      },
+      "post_step_injections": [],
+      "union_status_counts": {
+        "FULL_UNION_AVAILABLE": 120
+      },
+      "clean_windows": 24,
+      "detection_available_windows": 120,
+      "glitch_warning_windows": 1,
+      "regimes": 1,
+      "glitch_ref_refreshes": 0,
+      "unavailable_diagnostic_candidate_windows": 0
+    },
+    {
+      "case": "drifting_1.0_to_1.4x__80s_broadband_stochastic",
+      "n_windows": 120,
+      "policy": "persistent",
+      "channels": {
+        "dedicated_stft": {
+          "noise_total": 100,
+          "noise_available": 100,
+          "noise_abstained": 0,
+          "noise_fp": 0,
+          "noise_fraction": 0.0,
+          "noise_available_exposure_s": 400,
+          "clean_noise_available": 29,
+          "clean_noise_fp": 0,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 20,
+          "signal_available": 20,
+          "signal_abstained": 0,
+          "signal_detected": 0,
+          "signal_missed_available": 20,
+          "signal_efficiency_available": 0.0
+        },
+        "dedicated_broadband": {
+          "noise_total": 100,
+          "noise_available": 100,
+          "noise_abstained": 0,
+          "noise_fp": 73,
+          "noise_fraction": 0.73,
+          "noise_available_exposure_s": 400,
+          "clean_noise_available": 29,
+          "clean_noise_fp": 5,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 20,
+          "signal_available": 20,
+          "signal_abstained": 0,
+          "signal_detected": 20,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": 1.0
+        },
+        "full_union": {
+          "noise_total": 100,
+          "noise_available": 100,
+          "noise_abstained": 0,
+          "noise_fp": 73,
+          "noise_fraction": 0.73,
+          "noise_available_exposure_s": 400,
+          "clean_noise_available": 29,
+          "clean_noise_fp": 5,
+          "mature_clean_noise_available": 0,
+          "mature_clean_noise_fp": 0,
+          "mature_clean_noise_fraction": null,
+          "signal_total": 20,
+          "signal_available": 20,
+          "signal_abstained": 0,
+          "signal_detected": 20,
+          "signal_missed_available": 0,
+          "signal_efficiency_available": 1.0
+        }
+      },
+      "timing_relative_to_step": {
+        "first_new_regime_calibrated": null,
+        "first_new_regime_stft_available": null,
+        "first_new_regime_full_union_available": null,
+        "first_mature_available": null
+      },
+      "post_step_injections": [],
+      "union_status_counts": {
+        "FULL_UNION_AVAILABLE": 120
+      },
+      "clean_windows": 29,
+      "detection_available_windows": 120,
+      "glitch_warning_windows": 0,
+      "regimes": 1,
+      "glitch_ref_refreshes": 0,
+      "unavailable_diagnostic_candidate_windows": 0
+    }
+  ],
+  "input_regeneration": [
+    {
+      "case": "stationary_null_200win",
+      "input_hash_matched": true,
+      "generated_chirps": []
+    },
+    {
+      "case": "abrupt_step_500win",
+      "input_hash_matched": true,
+      "generated_chirps": [
+        {
+          "t_start_s": 2.041933148846815,
+          "t_end_s": 3.4040344854101257,
+          "f_min_hz": 203.3089532256195,
+          "f_max_hz": 331.46824355399485,
+          "parameters": {
+            "t_start_s": 2.041933148846815,
+            "t_end_s": 3.4040344854101257,
+            "f_start_hz": 331.46824355399485,
+            "f_end_hz": 203.3089532256195,
+            "phase_rad": 5.596336688386682
+          }
+        },
+        {
+          "t_start_s": 0.7348401852214118,
+          "t_end_s": 2.3514001198092314,
+          "f_min_hz": 178.59234701706123,
+          "f_max_hz": 348.3471091296844,
+          "parameters": {
+            "t_start_s": 0.7348401852214118,
+            "t_end_s": 2.3514001198092314,
+            "f_start_hz": 348.3471091296844,
+            "f_end_hz": 178.59234701706123,
+            "phase_rad": 2.666641727311693
+          }
+        },
+        {
+          "t_start_s": 0.5715466573113843,
+          "t_end_s": 2.6188339236355516,
+          "f_min_hz": 193.59151189034674,
+          "f_max_hz": 371.9733457598284,
+          "parameters": {
+            "t_start_s": 0.5715466573113843,
+            "t_end_s": 2.6188339236355516,
+            "f_start_hz": 371.9733457598284,
+            "f_end_hz": 193.59151189034674,
+            "phase_rad": 3.4065373027206203
+          }
+        },
+        {
+          "t_start_s": 0.5181016009592788,
+          "t_end_s": 2.3595601236645285,
+          "f_min_hz": 172.6593792161142,
+          "f_max_hz": 285.12579336385113,
+          "parameters": {
+            "t_start_s": 0.5181016009592788,
+            "t_end_s": 2.3595601236645285,
+            "f_start_hz": 172.6593792161142,
+            "f_end_hz": 285.12579336385113,
+            "phase_rad": 3.277768550495817
+          }
+        },
+        {
+          "t_start_s": 1.456679841149533,
+          "t_end_s": 2.6910983336278322,
+          "f_min_hz": 236.4178282876089,
+          "f_max_hz": 413.27074301506354,
+          "parameters": {
+            "t_start_s": 1.456679841149533,
+            "t_end_s": 2.6910983336278322,
+            "f_start_hz": 236.4178282876089,
+            "f_end_hz": 413.27074301506354,
+            "phase_rad": 0.7114719478439708
+          }
+        },
+        {
+          "t_start_s": 0.8246363048989079,
+          "t_end_s": 2.9548053220617616,
+          "f_min_hz": 129.55105995485374,
+          "f_max_hz": 228.17760250460896,
+          "parameters": {
+            "t_start_s": 0.8246363048989079,
+            "t_end_s": 2.9548053220617616,
+            "f_start_hz": 129.55105995485374,
+            "f_end_hz": 228.17760250460896,
+            "phase_rad": 0.07701929656164254
+          }
+        },
+        {
+          "t_start_s": 1.903708800943115,
+          "t_end_s": 2.7883060494893237,
+          "f_min_hz": 252.0052743339129,
+          "f_max_hz": 342.23085700381574,
+          "parameters": {
+            "t_start_s": 1.903708800943115,
+            "t_end_s": 2.7883060494893237,
+            "f_start_hz": 252.0052743339129,
+            "f_end_hz": 342.23085700381574,
+            "phase_rad": 3.1201314932446538
+          }
+        },
+        {
+          "t_start_s": 1.5423937749676822,
+          "t_end_s": 3.2223164117020975,
+          "f_min_hz": 170.9805603293238,
+          "f_max_hz": 294.2357418394894,
+          "parameters": {
+            "t_start_s": 1.5423937749676822,
+            "t_end_s": 3.2223164117020975,
+            "f_start_hz": 170.9805603293238,
+            "f_end_hz": 294.2357418394894,
+            "phase_rad": 4.337397674675171
+          }
+        },
+        {
+          "t_start_s": 1.5007492708186319,
+          "t_end_s": 3.333680994990738,
+          "f_min_hz": 228.3494957660354,
+          "f_max_hz": 388.57505093745806,
+          "parameters": {
+            "t_start_s": 1.5007492708186319,
+            "t_end_s": 3.333680994990738,
+            "f_start_hz": 228.3494957660354,
+            "f_end_hz": 388.57505093745806,
+            "phase_rad": 5.021244722228501
+          }
+        },
+        {
+          "t_start_s": 1.8217357743024092,
+          "t_end_s": 3.0763310785058566,
+          "f_min_hz": 134.64276402585176,
+          "f_max_hz": 236.90472261578037,
+          "parameters": {
+            "t_start_s": 1.8217357743024092,
+            "t_end_s": 3.0763310785058566,
+            "f_start_hz": 134.64276402585176,
+            "f_end_hz": 236.90472261578037,
+            "phase_rad": 6.196228992307879
+          }
+        },
+        {
+          "t_start_s": 1.810466464416419,
+          "t_end_s": 3.1427563387808055,
+          "f_min_hz": 76.43170060369724,
+          "f_max_hz": 200.8555868862543,
+          "parameters": {
+            "t_start_s": 1.810466464416419,
+            "t_end_s": 3.1427563387808055,
+            "f_start_hz": 200.8555868862543,
+            "f_end_hz": 76.43170060369724,
+            "phase_rad": 3.2067110107817
+          }
+        },
+        {
+          "t_start_s": 1.047379689275349,
+          "t_end_s": 3.01427309353451,
+          "f_min_hz": 125.15436693841414,
+          "f_max_hz": 209.70389265722312,
+          "parameters": {
+            "t_start_s": 1.047379689275349,
+            "t_end_s": 3.01427309353451,
+            "f_start_hz": 209.70389265722312,
+            "f_end_hz": 125.15436693841414,
+            "phase_rad": 2.6243285129598313
+          }
+        },
+        {
+          "t_start_s": 1.6594516982641658,
+          "t_end_s": 2.7290972794713753,
+          "f_min_hz": 113.19553261464519,
+          "f_max_hz": 263.84252091970325,
+          "parameters": {
+            "t_start_s": 1.6594516982641658,
+            "t_end_s": 2.7290972794713753,
+            "f_start_hz": 113.19553261464519,
+            "f_end_hz": 263.84252091970325,
+            "phase_rad": 5.184729766491165
+          }
+        }
+      ]
+    },
+    {
+      "case": "transient_chirps_stationary",
+      "input_hash_matched": true,
+      "generated_chirps": [
+        {
+          "t_start_s": 0.61960490791955,
+          "t_end_s": 1.7904400280559667,
+          "f_min_hz": 113.22986252953675,
+          "f_max_hz": 282.06714119867354,
+          "parameters": {
+            "t_start_s": 0.61960490791955,
+            "t_end_s": 1.7904400280559667,
+            "f_start_hz": 113.22986252953675,
+            "f_end_hz": 282.06714119867354,
+            "phase_rad": 4.0487847460471516
+          }
+        },
+        {
+          "t_start_s": 0.6006635322315829,
+          "t_end_s": 2.461491019527383,
+          "f_min_hz": 140.33763488156393,
+          "f_max_hz": 291.7672442550739,
+          "parameters": {
+            "t_start_s": 0.6006635322315829,
+            "t_end_s": 2.461491019527383,
+            "f_start_hz": 140.33763488156393,
+            "f_end_hz": 291.7672442550739,
+            "phase_rad": 4.075755799205382
+          }
+        },
+        {
+          "t_start_s": 2.308389282714673,
+          "t_end_s": 3.190430185562812,
+          "f_min_hz": 178.1791004943551,
+          "f_max_hz": 326.5358561787308,
+          "parameters": {
+            "t_start_s": 2.308389282714673,
+            "t_end_s": 3.190430185562812,
+            "f_start_hz": 178.1791004943551,
+            "f_end_hz": 326.5358561787308,
+            "phase_rad": 1.313338453272355
+          }
+        },
+        {
+          "t_start_s": 1.6043027364062024,
+          "t_end_s": 3.300661236918637,
+          "f_min_hz": 233.13682271252222,
+          "f_max_hz": 407.891200281103,
+          "parameters": {
+            "t_start_s": 1.6043027364062024,
+            "t_end_s": 3.300661236918637,
+            "f_start_hz": 233.13682271252222,
+            "f_end_hz": 407.891200281103,
+            "phase_rad": 5.423369092699182
+          }
+        },
+        {
+          "t_start_s": 2.022660045658049,
+          "t_end_s": 3.2427293895076703,
+          "f_min_hz": 93.29083981992147,
+          "f_max_hz": 225.0809090809153,
+          "parameters": {
+            "t_start_s": 2.022660045658049,
+            "t_end_s": 3.2427293895076703,
+            "f_start_hz": 225.0809090809153,
+            "f_end_hz": 93.29083981992147,
+            "phase_rad": 0.03630319193198815
+          }
+        },
+        {
+          "t_start_s": 1.0151545973332765,
+          "t_end_s": 1.9431141096171403,
+          "f_min_hz": 55.13310612606796,
+          "f_max_hz": 188.00260635344353,
+          "parameters": {
+            "t_start_s": 1.0151545973332765,
+            "t_end_s": 1.9431141096171403,
+            "f_start_hz": 188.00260635344353,
+            "f_end_hz": 55.13310612606796,
+            "phase_rad": 4.641040228763151
+          }
+        },
+        {
+          "t_start_s": 0.8955622564278319,
+          "t_end_s": 2.9307696452580903,
+          "f_min_hz": 220.71117457815862,
+          "f_max_hz": 329.2331707853481,
+          "parameters": {
+            "t_start_s": 0.8955622564278319,
+            "t_end_s": 2.9307696452580903,
+            "f_start_hz": 220.71117457815862,
+            "f_end_hz": 329.2331707853481,
+            "phase_rad": 1.1045388073638815
+          }
+        },
+        {
+          "t_start_s": 1.6515688545096192,
+          "t_end_s": 3.5069063295422342,
+          "f_min_hz": 191.85805761891993,
+          "f_max_hz": 361.13492346967985,
+          "parameters": {
+            "t_start_s": 1.6515688545096192,
+            "t_end_s": 3.5069063295422342,
+            "f_start_hz": 361.13492346967985,
+            "f_end_hz": 191.85805761891993,
+            "phase_rad": 2.552051985053497
+          }
+        },
+        {
+          "t_start_s": 1.0583025509457418,
+          "t_end_s": 2.8417931908915754,
+          "f_min_hz": 166.58862354966146,
+          "f_max_hz": 331.59832193114755,
+          "parameters": {
+            "t_start_s": 1.0583025509457418,
+            "t_end_s": 2.8417931908915754,
+            "f_start_hz": 331.59832193114755,
+            "f_end_hz": 166.58862354966146,
+            "phase_rad": 4.167181638903565
+          }
+        },
+        {
+          "t_start_s": 0.658486505943535,
+          "t_end_s": 2.5318921099328517,
+          "f_min_hz": 198.82464643975075,
+          "f_max_hz": 288.39884379185605,
+          "parameters": {
+            "t_start_s": 0.658486505943535,
+            "t_end_s": 2.5318921099328517,
+            "f_start_hz": 288.39884379185605,
+            "f_end_hz": 198.82464643975075,
+            "phase_rad": 2.0143499686052926
+          }
+        },
+        {
+          "t_start_s": 1.11978125626858,
+          "t_end_s": 2.3364675242101374,
+          "f_min_hz": 79.44132513294039,
+          "f_max_hz": 254.65601807287825,
+          "parameters": {
+            "t_start_s": 1.11978125626858,
+            "t_end_s": 2.3364675242101374,
+            "f_start_hz": 254.65601807287825,
+            "f_end_hz": 79.44132513294039,
+            "phase_rad": 4.791217869962707
+          }
+        },
+        {
+          "t_start_s": 0.713985174611417,
+          "t_end_s": 2.6350211587078176,
+          "f_min_hz": 288.77760066449514,
+          "f_max_hz": 395.3874081511002,
+          "parameters": {
+            "t_start_s": 0.713985174611417,
+            "t_end_s": 2.6350211587078176,
+            "f_start_hz": 395.3874081511002,
+            "f_end_hz": 288.77760066449514,
+            "phase_rad": 4.465583036557139
+          }
+        },
+        {
+          "t_start_s": 0.48864270056572523,
+          "t_end_s": 2.1474391501260017,
+          "f_min_hz": 268.1470823532823,
+          "f_max_hz": 363.66231056199376,
+          "parameters": {
+            "t_start_s": 0.48864270056572523,
+            "t_end_s": 2.1474391501260017,
+            "f_start_hz": 268.1470823532823,
+            "f_end_hz": 363.66231056199376,
+            "phase_rad": 6.283134319035285
+          }
+        },
+        {
+          "t_start_s": 1.3385826234907767,
+          "t_end_s": 2.5683750136444257,
+          "f_min_hz": 146.59823078503268,
+          "f_max_hz": 261.81514910539227,
+          "parameters": {
+            "t_start_s": 1.3385826234907767,
+            "t_end_s": 2.5683750136444257,
+            "f_start_hz": 261.81514910539227,
+            "f_end_hz": 146.59823078503268,
+            "phase_rad": 4.857089121848773
+          }
+        },
+        {
+          "t_start_s": 2.38724125677166,
+          "t_end_s": 3.28750384501092,
+          "f_min_hz": 298.45362719680276,
+          "f_max_hz": 396.05328252176656,
+          "parameters": {
+            "t_start_s": 2.38724125677166,
+            "t_end_s": 3.28750384501092,
+            "f_start_hz": 298.45362719680276,
+            "f_end_hz": 396.05328252176656,
+            "phase_rad": 4.139674318302373
+          }
+        },
+        {
+          "t_start_s": 1.9884300349324877,
+          "t_end_s": 3.5030773575442447,
+          "f_min_hz": 131.09756233918125,
+          "f_max_hz": 268.1139799140445,
+          "parameters": {
+            "t_start_s": 1.9884300349324877,
+            "t_end_s": 3.5030773575442447,
+            "f_start_hz": 268.1139799140445,
+            "f_end_hz": 131.09756233918125,
+            "phase_rad": 4.878303411114406
+          }
+        },
+        {
+          "t_start_s": 1.106223164919418,
+          "t_end_s": 2.522158321786887,
+          "f_min_hz": 94.1283625106827,
+          "f_max_hz": 193.25053848388657,
+          "parameters": {
+            "t_start_s": 1.106223164919418,
+            "t_end_s": 2.522158321786887,
+            "f_start_hz": 193.25053848388657,
+            "f_end_hz": 94.1283625106827,
+            "phase_rad": 4.772925446453931
+          }
+        },
+        {
+          "t_start_s": 0.8008764921463036,
+          "t_end_s": 2.6356499866917877,
+          "f_min_hz": 185.45678805914798,
+          "f_max_hz": 279.0079609974981,
+          "parameters": {
+            "t_start_s": 0.8008764921463036,
+            "t_end_s": 2.6356499866917877,
+            "f_start_hz": 185.45678805914798,
+            "f_end_hz": 279.0079609974981,
+            "phase_rad": 4.802417033465329
+          }
+        },
+        {
+          "t_start_s": 0.9984748751799752,
+          "t_end_s": 2.6418247113954534,
+          "f_min_hz": 158.0549885078935,
+          "f_max_hz": 276.2930973158191,
+          "parameters": {
+            "t_start_s": 0.9984748751799752,
+            "t_end_s": 2.6418247113954534,
+            "f_start_hz": 158.0549885078935,
+            "f_end_hz": 276.2930973158191,
+            "phase_rad": 1.0526259151821697
+          }
+        },
+        {
+          "t_start_s": 0.9629541253035114,
+          "t_end_s": 2.8083860473806213,
+          "f_min_hz": 238.37839870981742,
+          "f_max_hz": 393.25893679690364,
+          "parameters": {
+            "t_start_s": 0.9629541253035114,
+            "t_end_s": 2.8083860473806213,
+            "f_start_hz": 238.37839870981742,
+            "f_end_hz": 393.25893679690364,
+            "phase_rad": 4.403611451722361
+          }
+        }
+      ]
+    },
+    {
+      "case": "glitch_storm_120win",
+      "input_hash_matched": true,
+      "generated_chirps": []
+    },
+    {
+      "case": "stationary__80s_sinusoid",
+      "input_hash_matched": true,
+      "generated_chirps": []
+    },
+    {
+      "case": "stationary__80s_multitone_comb",
+      "input_hash_matched": true,
+      "generated_chirps": []
+    },
+    {
+      "case": "stationary__40s_slow_chirp",
+      "input_hash_matched": true,
+      "generated_chirps": []
+    },
+    {
+      "case": "stationary__80s_broadband_stochastic",
+      "input_hash_matched": true,
+      "generated_chirps": []
+    },
+    {
+      "case": "drifting_1.0_to_1.4x__80s_sinusoid",
+      "input_hash_matched": true,
+      "generated_chirps": []
+    },
+    {
+      "case": "drifting_1.0_to_1.4x__80s_multitone_comb",
+      "input_hash_matched": true,
+      "generated_chirps": []
+    },
+    {
+      "case": "drifting_1.0_to_1.4x__40s_slow_chirp",
+      "input_hash_matched": true,
+      "generated_chirps": []
+    },
+    {
+      "case": "drifting_1.0_to_1.4x__80s_broadband_stochastic",
+      "input_hash_matched": true,
+      "generated_chirps": []
+    }
+  ],
+  "historical_comparisons": [
+    {
+      "suite": "suite_a",
+      "scenario": "stationary_null_200win",
+      "differences": {}
+    },
+    {
+      "suite": "suite_a",
+      "scenario": "abrupt_step_500win",
+      "differences": {
+        "duty_cycle_clean": {
+          "historical": 0.88,
+          "current_legacy_aggregation": 0.736
+        },
+        "cal_n_thresh": {
+          "historical": 150,
+          "current_legacy_aggregation": 199
+        },
+        "cal_n_eff": {
+          "historical": 115.00275247453128,
+          "current_legacy_aggregation": 181.77933125734825
+        },
+        "cal_ljung_box_p": {
+          "historical": 0.43295466795377036,
+          "current_legacy_aggregation": 1.0113175408221764e-08
+        },
+        "cal_beta_ci90_neff_hi": {
+          "historical": 0.025758317220151185,
+          "current_legacy_aggregation": 0.02386579523757849
+        },
+        "t_provisional_win": {
+          "historical": 62,
+          "current_legacy_aggregation": 134
+        },
+        "t_mature_win": {
+          "historical": 201,
+          "current_legacy_aggregation": 267
+        },
+        "transient_eff_full": {
+          "historical": 0.5,
+          "current_legacy_aggregation": 0.3
+        },
+        "transient_eff_clean_cal": {
+          "historical": 0.5,
+          "current_legacy_aggregation": 0.3
+        },
+        "glitch_ref_refreshes": {
+          "historical": 2,
+          "current_legacy_aggregation": 3
+        }
+      }
+    },
+    {
+      "suite": "suite_a",
+      "scenario": "transient_chirps_stationary",
+      "differences": {}
+    },
+    {
+      "suite": "suite_a",
+      "scenario": "glitch_storm_120win",
+      "differences": {}
+    },
+    {
+      "suite": "suite_b",
+      "scenario": "stationary__80s_sinusoid",
+      "differences": {}
+    },
+    {
+      "suite": "suite_b",
+      "scenario": "stationary__80s_multitone_comb",
+      "differences": {}
+    },
+    {
+      "suite": "suite_b",
+      "scenario": "stationary__40s_slow_chirp",
+      "differences": {}
+    },
+    {
+      "suite": "suite_b",
+      "scenario": "stationary__80s_broadband_stochastic",
+      "differences": {}
+    },
+    {
+      "suite": "suite_b",
+      "scenario": "drifting_1.0_to_1.4x__80s_sinusoid",
+      "differences": {}
+    },
+    {
+      "suite": "suite_b",
+      "scenario": "drifting_1.0_to_1.4x__80s_multitone_comb",
+      "differences": {}
+    },
+    {
+      "suite": "suite_b",
+      "scenario": "drifting_1.0_to_1.4x__40s_slow_chirp",
+      "differences": {}
+    },
+    {
+      "suite": "suite_b",
+      "scenario": "drifting_1.0_to_1.4x__80s_broadband_stochastic",
+      "differences": {}
+    }
+  ],
+  "limitations": [
+    "Historical original input bytes/environment are unavailable; current regenerated inputs match exactly",
+    "Legacy aggregates use historical denominator semantics and are not the primary corrected statistics",
+    "Single seed per suite; no real data or scientific novelty established"
+  ]
+}

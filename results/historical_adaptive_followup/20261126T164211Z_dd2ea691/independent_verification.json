@@ -1,0 +1,56 @@
+{
+  "status": "VERIFIED",
+  "verified_at_utc": "2026-11-26T16:45:54.979046+00:00",
+  "arms": {
+    "baseline": {
+      "mature_threshold": 163.83940094146237,
+      "threshold_split_size": 199,
+      "known_injected_threshold_members": [
+        330,
+        340,
+        350,
+        360
+      ],
+      "mature_start_index": 367,
+      "later_detected": 0,
+      "later_available": 6,
+      "later_scores": [
+        9.324284140153061,
+        4.163510795506804,
+        25.70715505541384,
+        92.83968412847824,
+        1.0152211914665845,
+        3.5137935145834436
+      ],
+      "mature_noise_false_alarms": 0,
+      "mature_noise_available": 127,
+      "last_ljung_box_p": 1.0113175408221764e-08
+    },
+    "without_earlier_four_injections": {
+      "mature_threshold": 1.6580395349128854,
+      "threshold_split_size": 199,
+      "known_injected_threshold_members": [],
+      "mature_start_index": 367,
+      "later_detected": 5,
+      "later_available": 6,
+      "later_scores": [
+        9.324284140153061,
+        4.163510795506804,
+        25.70715505541384,
+        92.83968412847824,
+        1.0152211914665845,
+        3.5137935145834436
+      ],
+      "mature_noise_false_alarms": 0,
+      "mature_noise_available": 127,
+      "last_ljung_box_p": 0.5450562102756045
+    }
+  },
+  "confirmed": "In this paired case the four earlier injected signals entered threshold SplitB and changed the threshold, not the six later scores; later detections changed0/6 to5/6.",
+  "limitations": [
+    "One post-hoc exploratory intervention on a previously used synthetic seed",
+    "No universal prevalence or ready operational admission rule established",
+    "Oracle knowledge of injected windows is unavailable on unknown real input",
+    "No evidence of a new physical signal or methodological novelty"
+  ]
+}

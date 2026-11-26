@@ -1,0 +1,65 @@
+{
+  "arm": "without_earlier_four_injections",
+  "input_array": {
+    "sha256": "255643effb76942d1eb5eadbb56ba0ea588a69f1d28fa9b7291fdcf973d7f62a",
+    "shape": [
+      500,
+      4096
+    ],
+    "dtype": "<f8",
+    "encoding": "little-endian C-order raw bytes"
+  },
+  "elapsed_s": 39.3911700000026,
+  "later_injections": [
+    {
+      "window_index": 370,
+      "available": true,
+      "detected": true,
+      "score": 9.324284140153061,
+      "threshold": 1.6580395349128854,
+      "mature": true
+    },
+    {
+      "window_index": 380,
+      "available": true,
+      "detected": true,
+      "score": 4.163510795506804,
+      "threshold": 1.6580395349128854,
+      "mature": true
+    },
+    {
+      "window_index": 390,
+      "available": true,
+      "detected": true,
+      "score": 25.70715505541384,
+      "threshold": 1.6580395349128854,
+      "mature": true
+    },
+    {
+      "window_index": 400,
+      "available": true,
+      "detected": true,
+      "score": 92.83968412847824,
+      "threshold": 1.6580395349128854,
+      "mature": true
+    },
+    {
+      "window_index": 410,
+      "available": true,
+      "detected": false,
+      "score": 1.0152211914665845,
+      "threshold": 1.6580395349128854,
+      "mature": true
+    },
+    {
+      "window_index": 420,
+      "available": true,
+      "detected": true,
+      "score": 3.5137935145834436,
+      "threshold": 1.6580395349128854,
+      "mature": true
+    }
+  ],
+  "later_detected": 5,
+  "baseline_matches_parent_exactly": null
+}

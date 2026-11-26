@@ -46,3 +46,17 @@ The previous [mathematical guide](whisker_mathematical_measurement_guide_histori
 The guide's claim that every synthetic generator is exactly RMS-normalized was also incorrect for `gaussian_white`. Its sample RMS fluctuates around its specified population standard deviation. This correction changes documentation, not the generator or old output arrays.
 
 The independent follow-up found open Workstation input, abstention-summary and export limitations; see [CURRENT_LIMITATIONS.md](CURRENT_LIMITATIONS.md). Browser-demo behavior is not covered by the historical Python regression count. The v0.2 report narrative is corrected to distinguish technical slide-count resolution from available significance; its callers still require a separate exposure-accounting update and historical rerun.
+
+
+## 5. Historical Experiment 003 narrative correction (2026-11-26)
+
+The paragraph in `results/ligo_experiment_003/report.md`, section 6 item 1, says that both H1 and L1 recovered GW170814. Its own event table (GW170814 row) records H1 NO (38/77), L1 YES (276/74), V1 NO (391/426). The corrected reading is: GW150914 was recovered in H1 and L1; GW170814 was recovered in L1 only. The later exploratory GW170814 report agrees on L1-only recovery. This is a narrative erratum; no stored candidate, detector output or efficiency count was recomputed. Historical artifact text remains preserved.
+
+The same historical report separates 3/6 automated event matches from the 2/6 count after excluding the GW170608 instrumental-line artifact. Do not quote 3/6 as verified astrophysical recovery efficiency or transfer either fraction to current code.
+
+
+## 6. Synthetic historical adaptive replay and sensitivity correction (2026-11-26)
+
+The syntheticA/B parts of the corrected Phase2b experiment were replayed at043f0eb into fresh output20261126T163629Z_75c7a756. Historical files remain unchanged. In abrupt_step_500win, fixed post-step chirp detections changed5/10 to3/10, stage offsets62/201 to134/267, and clean duty88.0% to73.6%. Legacy noise ratio7/487 remains unchanged, but the current available-noise denominator is415 (7/415=1.687%). Do not quote the old ratio as an availability-corrected current FAR.
+
+More importantly, all six mature later injections are missed at threshold163.8394. An exploratory paired trace/control confirmed that earlier injections330/340/350/360 entered thresholdSplitB. Replacing only these with exact original noise kept later scores/timing identical, lowered the threshold to1.6580 and restored5/6 later detections. Therefore the historical resonance-only explanation is incomplete. Mature0/127 noise alarms does not demonstrate recovered sensitivity. Frozen broadband/fullUnion nominates127/127 mature noise windows after the shift. See [findings and evidence](HISTORICAL_ADAPTIVE_REPLAY_FINDINGS_2026-11-26.md). This is a bounded synthetic mechanism, not a physical discovery or validated repair. Other3 suiteA and8 suiteB aggregate rows match saved historical values; real-data suiteD and other historical experiments remain unrerun.

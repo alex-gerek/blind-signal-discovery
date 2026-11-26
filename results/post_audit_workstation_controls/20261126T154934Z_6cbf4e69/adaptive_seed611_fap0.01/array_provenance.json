@@ -1,0 +1,22 @@
+{
+  "background": {
+    "sha256": "d31a543efc8ad75f7cec817a3b79daa248913cb7338949e328e72f481828a4c7",
+    "shape": [
+      320,
+      4096
+    ],
+    "dtype": "<f8",
+    "byte_order": "little",
+    "encoding": "C-order raw array bytes"
+  },
+  "target": {
+    "sha256": "2ca01bf8c819bab8fdc662d4f9d46bafa6a6bbd8ccf41e263401c2984ca45aca",
+    "shape": [
+      370,
+      4096
+    ],
+    "dtype": "<f8",
+    "byte_order": "little",
+    "encoding": "C-order raw array bytes"
+  }
+}

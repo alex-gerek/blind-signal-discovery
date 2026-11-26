@@ -1,0 +1,82 @@
+[
+  {
+    "morphology": "80s_sinusoid",
+    "background": "stationary",
+    "transient_stft_eff_full": 1.0,
+    "persistent_bb_eff_full": 0.0,
+    "union_sidak_eff_full": 1.0,
+    "clean_cal_stft_eff": 1.0,
+    "bg_union_far_full": 0.02,
+    "n_regimes": 1
+  },
+  {
+    "morphology": "80s_multitone_comb",
+    "background": "stationary",
+    "transient_stft_eff_full": 1.0,
+    "persistent_bb_eff_full": 0.05,
+    "union_sidak_eff_full": 1.0,
+    "clean_cal_stft_eff": 1.0,
+    "bg_union_far_full": 0.02,
+    "n_regimes": 1
+  },
+  {
+    "morphology": "40s_slow_chirp",
+    "background": "stationary",
+    "transient_stft_eff_full": 0.9,
+    "persistent_bb_eff_full": 0.1,
+    "union_sidak_eff_full": 0.9,
+    "clean_cal_stft_eff": 0.9,
+    "bg_union_far_full": 0.00909090909090909,
+    "n_regimes": 1
+  },
+  {
+    "morphology": "80s_broadband_stochastic",
+    "background": "stationary",
+    "transient_stft_eff_full": 0.0,
+    "persistent_bb_eff_full": 1.0,
+    "union_sidak_eff_full": 1.0,
+    "clean_cal_stft_eff": 0.0,
+    "bg_union_far_full": 0.0,
+    "n_regimes": 1
+  },
+  {
+    "morphology": "80s_sinusoid",
+    "background": "drifting_1.0_to_1.4x",
+    "transient_stft_eff_full": 1.0,
+    "persistent_bb_eff_full": 1.0,
+    "union_sidak_eff_full": 1.0,
+    "clean_cal_stft_eff": 0.0,
+    "bg_union_far_full": 0.69,
+    "n_regimes": 1
+  },
+  {
+    "morphology": "80s_multitone_comb",
+    "background": "drifting_1.0_to_1.4x",
+    "transient_stft_eff_full": 0.95,
+    "persistent_bb_eff_full": 1.0,
+    "union_sidak_eff_full": 1.0,
+    "clean_cal_stft_eff": 0.0,
+    "bg_union_far_full": 0.75,
+    "n_regimes": 1
+  },
+  {
+    "morphology": "40s_slow_chirp",
+    "background": "drifting_1.0_to_1.4x",
+    "transient_stft_eff_full": 0.9,
+    "persistent_bb_eff_full": 1.0,
+    "union_sidak_eff_full": 1.0,
+    "clean_cal_stft_eff": 0.0,
+    "bg_union_far_full": 0.7272727272727273,
+    "n_regimes": 1
+  },
+  {
+    "morphology": "80s_broadband_stochastic",
+    "background": "drifting_1.0_to_1.4x",
+    "transient_stft_eff_full": 0.0,
+    "persistent_bb_eff_full": 1.0,
+    "union_sidak_eff_full": 1.0,
+    "clean_cal_stft_eff": 0.0,
+    "bg_union_far_full": 0.73,
+    "n_regimes": 1
+  }
+]

@@ -1,0 +1,53 @@
+{
+  "status": "ALL_SIX_INPUTS_MATCHED",
+  "checks": [
+    {
+      "seed": 2026,
+      "snr": 8,
+      "background_sha256": "02afa8fe3d5e7d600b790ab5b666e830dc68e91b4b7559ed58b68dcffa6d98ae",
+      "target_sha256": "997a184f172150522e0d512e1ceaaa16a16378850fd0a44de1c9aebe273401e8",
+      "noise_control_sha256": "e0d043cefd4d0d393de90bfe45888ff40bc84ac8ae02d1d16cd4e1b4b59fd8da",
+      "status": "MATCHED"
+    },
+    {
+      "seed": 2026,
+      "snr": 18,
+      "background_sha256": "02afa8fe3d5e7d600b790ab5b666e830dc68e91b4b7559ed58b68dcffa6d98ae",
+      "target_sha256": "c60f4fd99cd0970bb505335d7e5dc83b82a1238d78e45bce1426f58536fa2cba",
+      "noise_control_sha256": "e0d043cefd4d0d393de90bfe45888ff40bc84ac8ae02d1d16cd4e1b4b59fd8da",
+      "status": "MATCHED"
+    },
+    {
+      "seed": 2027,
+      "snr": 8,
+      "background_sha256": "24da702b377994f2bdee11771c98403dfa80625a0e583498b0777cdc275ef77a",
+      "target_sha256": "4bbc13e672648a396e303ecd1b1d00dcbda022890d0d215d356a832521ca1ac3",
+      "noise_control_sha256": "c3bd98be9f548fd0552815c2869719d0e2a92842cbeb06fb297ac2595fe5fc12",
+      "status": "MATCHED"
+    },
+    {
+      "seed": 2027,
+      "snr": 18,
+      "background_sha256": "24da702b377994f2bdee11771c98403dfa80625a0e583498b0777cdc275ef77a",
+      "target_sha256": "47d5e47a07d6689b2593a5a2d728cc11789e401f96c8965c5a2791641f081f07",
+      "noise_control_sha256": "c3bd98be9f548fd0552815c2869719d0e2a92842cbeb06fb297ac2595fe5fc12",
+      "status": "MATCHED"
+    },
+    {
+      "seed": 2028,
+      "snr": 8,
+      "background_sha256": "57195279f3905e96adc5228a2553e37def0624c22171e915db7c73a7728cf0cd",
+      "target_sha256": "d61b86a98f1f4ff58c71924eb30c54c9aeb45fd5feaf7c5474f8fc775b3fb03b",
+      "noise_control_sha256": "0b27e8c868e695661c0df35f58b79760c414868df5904df08c6e8833fe7700cf",
+      "status": "MATCHED"
+    },
+    {
+      "seed": 2028,
+      "snr": 18,
+      "background_sha256": "57195279f3905e96adc5228a2553e37def0624c22171e915db7c73a7728cf0cd",
+      "target_sha256": "223a819959c06b2ae8f868768402f6c15d554aa55035082d741aefa61290e796",
+      "noise_control_sha256": "0b27e8c868e695661c0df35f58b79760c414868df5904df08c6e8833fe7700cf",
+      "status": "MATCHED"
+    }
+  ]
+}

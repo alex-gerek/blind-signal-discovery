@@ -1,0 +1,128 @@
+{
+  "verification": "Six user-operated Streamlit runs; strict JSON parsed, all available CSV decisions checked against full-precision thresholds, noise controls pairwise matched across SNR",
+  "scope": "80 initial noise controls, not the earlier 200-control headless pilot; legacy synthetic SHA fields are labels, file hashes below identify export bytes",
+  "source_commit": "043f0eb",
+  "runs": [
+    {
+      "run_id": "bsd_run_20261126T161327Z",
+      "source_commit": "043f0eb",
+      "seed": 2026,
+      "snr": 8.0,
+      "detected": 3,
+      "missed_available": 7,
+      "abstained": 0,
+      "noise_false_alarms": 1,
+      "noise_available": 80,
+      "calibration_status": "PROVISIONAL",
+      "file_sha256": {
+        "candidates.csv": "00a2c3a9175609ea3d8a4c0666d2181d3f4a388a2d4505504188f999712458bf",
+        "run_report.json": "6cc7615edfcc7307196cec6064aa915322ad6cae0bf2fc84e841b2fe29872bd6",
+        "timeline.csv": "d4b059c816f4c59fa2719be5e097891893ba85e92425c511ba792177ef8a644e"
+      }
+    },
+    {
+      "run_id": "bsd_run_20261126T161609Z",
+      "source_commit": "043f0eb",
+      "seed": 2026,
+      "snr": 18.0,
+      "detected": 10,
+      "missed_available": 0,
+      "abstained": 0,
+      "noise_false_alarms": 1,
+      "noise_available": 80,
+      "calibration_status": "PROVISIONAL",
+      "file_sha256": {
+        "candidates.csv": "3b797c77876d71cc67acfa1b1da00af019133ec4a8b2918a6ee58a269a518e81",
+        "run_report.json": "d8ec73e9f235e4303ac95cd65dc664326794b568a046f2a0a867b6b19a5311a5",
+        "timeline.csv": "b733007060bddf6903279d9f68bf393eaa60a09f51007276ecdfe32deb96075a"
+      }
+    },
+    {
+      "run_id": "bsd_run_20261126T162032Z",
+      "source_commit": "043f0eb",
+      "seed": 2027,
+      "snr": 18.0,
+      "detected": 10,
+      "missed_available": 0,
+      "abstained": 0,
+      "noise_false_alarms": 2,
+      "noise_available": 80,
+      "calibration_status": "PROVISIONAL",
+      "file_sha256": {
+        "candidates.csv": "4263750a5a2ef175bedd0fdc8b53c2efba331fdbad8ea316c02b4f545f5ff915",
+        "run_report.json": "e6958e6107861011a3944c8cb4abbe9458b8ef854ee751b7f5905b4199e2eb03",
+        "timeline.csv": "c91b2bd09e0f482496a87dd228f88b2ce048efeec3d26a11cd4a5df0742ea91f"
+      }
+    },
+    {
+      "run_id": "bsd_run_20261126T162228Z",
+      "source_commit": "043f0eb",
+      "seed": 2027,
+      "snr": 8.0,
+      "detected": 5,
+      "missed_available": 5,
+      "abstained": 0,
+      "noise_false_alarms": 2,
+      "noise_available": 80,
+      "calibration_status": "PROVISIONAL",
+      "file_sha256": {
+        "candidates.csv": "18478007780e85c88a4b89c9320684f8ba363c3d47023563ce89483f34049b73",
+        "run_report.json": "52918f85352db2eaa77a3314cfdcb9f9921f63ed6f699532e87f12347d20c061",
+        "timeline.csv": "9cdb5b8a97523c8b291560345714a81439c7e2ad354ecfc503bf7b822ec5d06c"
+      }
+    },
+    {
+      "run_id": "bsd_run_20261126T162437Z",
+      "source_commit": "043f0eb",
+      "seed": 2028,
+      "snr": 8.0,
+      "detected": 4,
+      "missed_available": 6,
+      "abstained": 0,
+      "noise_false_alarms": 2,
+      "noise_available": 80,
+      "calibration_status": "VALIDATED",
+      "file_sha256": {
+        "candidates.csv": "99795f483833984f94d7a3eb03fe486e332b7c8422ced3b70029fbaeeaf9ec5b",
+        "run_report.json": "44f21e4a678ecc04e7467680e742729479067efd01bb70eb2a979cdfe536f389",
+        "timeline.csv": "c7674bd5938d603d770df49cc85dbbc6e5f0b65b6e839a8d4f82812bd3c74798"
+      }
+    },
+    {
+      "run_id": "bsd_run_20261126T162745Z",
+      "source_commit": "043f0eb",
+      "seed": 2028,
+      "snr": 18.0,
+      "detected": 10,
+      "missed_available": 0,
+      "abstained": 0,
+      "noise_false_alarms": 2,
+      "noise_available": 80,
+      "calibration_status": "VALIDATED",
+      "file_sha256": {
+        "candidates.csv": "c881a73fef8cd105181134851d4a9ab321101fc93181f2328fdc6acf01ed5e0e",
+        "run_report.json": "5bf795a2383f3b992e59799914d871cd9fae967b43dc1308d3bc2296b3ce572d",
+        "timeline.csv": "81430e0e82a8c36d2458c97b5d0f199eef38bdec84b609066422eed5a36d04d2"
+      }
+    }
+  ],
+  "noise_controls_counted_once_per_seed": {
+    "false_alarms": 5,
+    "available_windows": 240,
+    "available_exposure_s": 960
+  },
+  "snr8": {
+    "detected": 12,
+    "available": 30
+  },
+  "snr18": {
+    "detected": 30,
+    "available": 30
+  },
+  "glitch_warning_windows_seed2028_snr18": [
+    97,
+    98,
+    99
+  ],
+  "changes": "No detector tuning; no O3 or release operations"
+}

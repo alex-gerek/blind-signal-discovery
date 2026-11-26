@@ -1,0 +1,8 @@
+{
+  "timestamp_utc": "2026-11-26T15:49:18.244563+00:00",
+  "command": "python -B -u experiments/run_post_audit_workstation_controls.py",
+  "status": "FAILED_BEFORE_EXPERIMENT",
+  "error": "ModuleNotFoundError: No module named h5py",
+  "cases_executed": 0,
+  "next_action": "Use existing project .venv with h5py 3.16.0; no dependency or detector changes"
+}

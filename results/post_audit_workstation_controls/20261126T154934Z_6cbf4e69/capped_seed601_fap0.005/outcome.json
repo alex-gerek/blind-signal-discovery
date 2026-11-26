@@ -1,0 +1,117 @@
+{
+  "case": "capped_seed601_fap0.005",
+  "seed": 601,
+  "fap": 0.005,
+  "capped": true,
+  "manager_config": {
+    "mode": "causal_trailing",
+    "policy": "transient",
+    "local_window_count": 12,
+    "ks_alpha": 0.001,
+    "drift_z_threshold": 4.0,
+    "cusum_k": 1.0,
+    "cusum_h": 22.0,
+    "shift_confirm_windows": 2,
+    "stability_confirm_windows": 10,
+    "provisional_recal_windows": 60,
+    "mature_recal_windows": 200,
+    "max_recal_buffer_windows": 150,
+    "internal_stability_z_max": 3.0,
+    "glitch_rate_threshold": 0.25,
+    "target_fwer": 0.005,
+    "min_exact_neff": 160.0,
+    "min_validated_neff": 120.0,
+    "freq_bands_hz": [
+      [
+        20.0,
+        80.0
+      ],
+      [
+        80.0,
+        160.0
+      ],
+      [
+        160.0,
+        280.0
+      ],
+      [
+        280.0,
+        450.0
+      ]
+    ],
+    "stft_nperseg": 512
+  },
+  "input_hashes": {
+    "background": {
+      "sha256": "d3f2eca18f6702a53db15c2a370ca01ee01ac19aa80357c80147f9694a49ea5f",
+      "shape": [
+        320,
+        4096
+      ],
+      "dtype": "<f8",
+      "byte_order": "little",
+      "encoding": "C-order raw array bytes"
+    },
+    "target": {
+      "sha256": "d35ce1b23efcc9daf38a53835c56e09ffb421e4c106768f704ccc21222e3380d",
+      "shape": [
+        180,
+        4096
+      ],
+      "dtype": "<f8",
+      "byte_order": "little",
+      "encoding": "C-order raw array bytes"
+    }
+  },
+  "checks": {
+    "windows_checked": 180,
+    "used_threshold_and_availability_checks": "PASS"
+  },
+  "metrics": {
+    "metric_schema_version": 2,
+    "negative_control_available_windows": 72,
+    "negative_control_abstained_windows": 108,
+    "negative_control_available_exposure_s": 288.0,
+    "negative_control_total_exposure_s": 720.0,
+    "negative_control_false_alarms_available": 0,
+    "negative_control_far_available": 0.0,
+    "negative_control_far_available_ci90": [
+      0.0,
+      0.03621609914806996
+    ],
+    "negative_control_far_status": "AVAILABLE",
+    "positive_injections_available": 0,
+    "positive_injections_abstained": 0,
+    "positive_injections_missed_available": 0,
+    "detection_efficiency_available": null,
+    "detection_efficiency_available_ci90": null,
+    "detection_efficiency_status": "UNAVAILABLE_NO_AVAILABLE_INJECTIONS",
+    "missed_available_records": [],
+    "abstained_records": [],
+    "legacy_metric_semantics": {
+      "negative_control_far": "Historical all-noise-window denominator, including abstentions; use negative_control_far_available with exposure.",
+      "positive_injections_missed": "Historical non-detection count including abstentions; use positive_injections_missed_available and positive_injections_abstained.",
+      "detection_efficiency": "Unconditional accepted detections / all injections, including abstentions in the denominator.",
+      "missed_records": "Historical list of all non-detections, including ABSTAINED records; use the separate current lists."
+    },
+    "interval_method": "90% Wilson diagnostic interval; nominal coverage assumes independent evaluation windows."
+  },
+  "injections": [],
+  "first_unavailable_index": 72,
+  "first_new_regime_available_index": null,
+  "first_mature_available_index": null,
+  "unavailable_windows": 108,
+  "available_exposure_s": 288,
+  "unavailable_diagnostic_candidate_windows": 0,
+  "union_status_counts": {
+    "UNION_UNAVAILABLE": 180
+  },
+  "compatibility_flags": {
+    "resource_block_reported": true,
+    "recovered_new_regime": false,
+    "actual_strong_injection_detected": false,
+    "expected_unavailable_at_end": true
+  },
+  "status": "COMPLETE",
+  "elapsed_s": 36.96019800000067
+}

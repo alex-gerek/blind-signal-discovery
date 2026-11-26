@@ -1,0 +1,181 @@
+{
+  "case": "adaptive_seed621_fap0.01",
+  "seed": 621,
+  "fap": 0.01,
+  "capped": false,
+  "manager_config": {
+    "mode": "causal_trailing",
+    "policy": "transient",
+    "local_window_count": 12,
+    "ks_alpha": 0.001,
+    "drift_z_threshold": 4.0,
+    "cusum_k": 1.0,
+    "cusum_h": 22.0,
+    "shift_confirm_windows": 2,
+    "stability_confirm_windows": 10,
+    "provisional_recal_windows": 60,
+    "mature_recal_windows": 200,
+    "max_recal_buffer_windows": 2000,
+    "internal_stability_z_max": 3.0,
+    "glitch_rate_threshold": 0.25,
+    "target_fwer": 0.01,
+    "min_exact_neff": 160.0,
+    "min_validated_neff": 120.0,
+    "freq_bands_hz": [
+      [
+        20.0,
+        80.0
+      ],
+      [
+        80.0,
+        160.0
+      ],
+      [
+        160.0,
+        280.0
+      ],
+      [
+        280.0,
+        450.0
+      ]
+    ],
+    "stft_nperseg": 512
+  },
+  "input_hashes": {
+    "background": {
+      "sha256": "879fe25ec78192abc628da6c757e91f264e9e85706afedec4fe9fcd2cf863128",
+      "shape": [
+        320,
+        4096
+      ],
+      "dtype": "<f8",
+      "byte_order": "little",
+      "encoding": "C-order raw array bytes"
+    },
+    "target": {
+      "sha256": "3bd09182c633427e577290121082eb4f44fd1b0de9f721909bdc13171a974b28",
+      "shape": [
+        370,
+        4096
+      ],
+      "dtype": "<f8",
+      "byte_order": "little",
+      "encoding": "C-order raw array bytes"
+    }
+  },
+  "checks": {
+    "windows_checked": 370,
+    "used_threshold_and_availability_checks": "PASS"
+  },
+  "metrics": {
+    "metric_schema_version": 2,
+    "negative_control_available_windows": 288,
+    "negative_control_abstained_windows": 72,
+    "negative_control_available_exposure_s": 1152.0,
+    "negative_control_total_exposure_s": 1440.0,
+    "negative_control_false_alarms_available": 0,
+    "negative_control_far_available": 0.0,
+    "negative_control_far_available_ci90": [
+      0.0,
+      0.009306817249205126
+    ],
+    "negative_control_far_status": "AVAILABLE",
+    "positive_injections_available": 10,
+    "positive_injections_abstained": 0,
+    "positive_injections_missed_available": 0,
+    "detection_efficiency_available": 1.0,
+    "detection_efficiency_available_ci90": [
+      0.7870580354088803,
+      1.0
+    ],
+    "detection_efficiency_status": "AVAILABLE",
+    "missed_available_records": [],
+    "abstained_records": [],
+    "legacy_metric_semantics": {
+      "negative_control_far": "Historical all-noise-window denominator, including abstentions; use negative_control_far_available with exposure.",
+      "positive_injections_missed": "Historical non-detection count including abstentions; use positive_injections_missed_available and positive_injections_abstained.",
+      "detection_efficiency": "Unconditional accepted detections / all injections, including abstentions in the denominator.",
+      "missed_records": "Historical list of all non-detections, including ABSTAINED records; use the separate current lists."
+    },
+    "interval_method": "90% Wilson diagnostic interval; nominal coverage assumes independent evaluation windows."
+  },
+  "injections": [
+    {
+      "window_index": 351,
+      "detected": true,
+      "detection_available": true,
+      "evaluation_status": "DETECTED"
+    },
+    {
+      "window_index": 353,
+      "detected": true,
+      "detection_available": true,
+      "evaluation_status": "DETECTED"
+    },
+    {
+      "window_index": 355,
+      "detected": true,
+      "detection_available": true,
+      "evaluation_status": "DETECTED"
+    },
+    {
+      "window_index": 357,
+      "detected": true,
+      "detection_available": true,
+      "evaluation_status": "DETECTED"
+    },
+    {
+      "window_index": 359,
+      "detected": true,
+      "detection_available": true,
+      "evaluation_status": "DETECTED"
+    },
+    {
+      "window_index": 361,
+      "detected": true,
+      "detection_available": true,
+      "evaluation_status": "DETECTED"
+    },
+    {
+      "window_index": 363,
+      "detected": true,
+      "detection_available": true,
+      "evaluation_status": "DETECTED"
+    },
+    {
+      "window_index": 365,
+      "detected": true,
+      "detection_available": true,
+      "evaluation_status": "DETECTED"
+    },
+    {
+      "window_index": 367,
+      "detected": true,
+      "detection_available": true,
+      "evaluation_status": "DETECTED"
+    },
+    {
+      "window_index": 369,
+      "detected": true,
+      "detection_available": true,
+      "evaluation_status": "DETECTED"
+    }
+  ],
+  "first_unavailable_index": 72,
+  "first_new_regime_available_index": 144,
+  "first_mature_available_index": 277,
+  "unavailable_windows": 72,
+  "available_exposure_s": 1192,
+  "unavailable_diagnostic_candidate_windows": 0,
+  "union_status_counts": {
+    "FULL_UNION_AVAILABLE": 165,
+    "PARTIAL_BROADBAND_ONLY": 205
+  },
+  "compatibility_flags": {
+    "resource_block_reported": false,
+    "recovered_new_regime": true,
+    "actual_strong_injection_detected": true
+  },
+  "status": "COMPLETE",
+  "elapsed_s": 93.23729079999612
+}

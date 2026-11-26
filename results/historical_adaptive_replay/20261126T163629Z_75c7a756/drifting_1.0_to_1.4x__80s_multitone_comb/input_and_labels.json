@@ -1,0 +1,74 @@
+{
+  "signal_indices": [
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69
+  ],
+  "post_step_injection_indices": [],
+  "step_index": null,
+  "impulsive_noise_start_index": null,
+  "manager_config": {
+    "mode": "causal_trailing",
+    "policy": "persistent",
+    "local_window_count": 12,
+    "ks_alpha": 0.001,
+    "drift_z_threshold": 4.0,
+    "cusum_k": 1.0,
+    "cusum_h": 22.0,
+    "shift_confirm_windows": 2,
+    "stability_confirm_windows": 10,
+    "provisional_recal_windows": 60,
+    "mature_recal_windows": 200,
+    "max_recal_buffer_windows": 2000,
+    "internal_stability_z_max": 3.0,
+    "glitch_rate_threshold": 0.25,
+    "target_fwer": 0.01,
+    "min_exact_neff": 160.0,
+    "min_validated_neff": 120.0,
+    "freq_bands_hz": [
+      [
+        20.0,
+        80.0
+      ],
+      [
+        80.0,
+        160.0
+      ],
+      [
+        160.0,
+        280.0
+      ],
+      [
+        280.0,
+        450.0
+      ]
+    ],
+    "stft_nperseg": 512
+  },
+  "input_array": {
+    "sha256": "d4787ae386d3d4d85c4d1e330e419083460f66b6e4d9760621bb3328ae6ecae3",
+    "shape": [
+      120,
+      4096
+    ],
+    "dtype": "<f8",
+    "encoding": "little-endian C-order raw bytes"
+  }
+}

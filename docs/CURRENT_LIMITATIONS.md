@@ -84,3 +84,22 @@ WAV validation follow-up: the complete Node suite reached **16 passing scenarios
 ## Consolidated verification index (2026-11-26)
 
 At committed implementation `8c6d3ae`, 135 pytest cases passed and one real-manifest mapping test was deselected in 320.25 s. Synthetic loader metadata were substituted, and actual reserved-manifest reads were blocked. The Node wrapper's 16 scenarios and three SciPy references are included in that selection, not extra pytest cases. See [verification status](VERIFICATION_STATUS.md) and the [saved record](validation/consolidated_verification_20261126T131531Z.json). Historical scientific reruns and native browser verification remain outstanding. Development fixes are pushed, but Pages still serves main `7e72a12`; no deployment or release was performed by this history update.
+
+
+## Publication follow-up (2026-11-26, after PR #8)
+
+The earlier pre-merge deployment statements are historical snapshots. Corrections through development `043f0eb` are now merged into main `5e19ae4`, with a successful Pages build. The existing v0.3.0 tag/Zenodo archive remains at `c406e00`. The Experiment 003 GW170814 H1/L1 narrative discrepancy has an explicit erratum; no historical outputs were rerun by this documentation correction. Author attribution differs between Zenodo (Alexander Gericke) and LICENSE/CFF (Lex Gerek). The owner confirmed Lex Gerek for the future release; existing LICENSE/CFF already agree. Updating the existing Zenodo record is deferred; see NEXT_RELEASE_CHECKLIST.md.
+
+
+## Bounded synthetic control follow-up (2026-11-26)
+
+All 15 cases in the post-audit Workstation protocol completed and independent exported accounting passed; see VERIFICATION_STATUS.md for exact results and scope. This closes the absence of a current-code small synthetic control measurement, not historical reruns or general real-data validation. The pilot observed 10/600 stationary noise false alarms (1.6667%) and 13/30 vs 30/30 SNR8/SNR18 injections. Dedicated-STFT recovery was observed across three seeds and two paired FAPs, but .005 Union lacked enough calibration/exposure and remained unavailable. Manual UI/decoder checks, shifted_ar2/persistent/real-data sensitivity, attribution inventory and older coincidence reruns remain open. No parameter tuning or release/Zenodo operation followed.
+
+
+## Historical adaptive replay follow-up (2026-11-26)
+
+**L09 — Confirmed adaptive calibration contamination in a constructed sequence:** earlier injected chirps enter thresholdSplitB; mature threshold163.8394 then misses6/6 later available injections. A fixed paired intervention on those four earlier injected windows leaves all later scores/timing identical and yields threshold1.6580,5/6 later detections. This is a confirmed mechanism in one post-hoc synthetic example; no admission-rule repair or prevalence/general sensitivity validation exists. Mature/available is not evidence that sensitivity has recovered.
+
+**L10 — Frozen broadband/Union mismatch after a background shift:** mature noise127/127 nominated by broadband/fullUnion, versus0/127 STFT. This is measured drift ambiguity; FULL_UNION_AVAILABLE does not certify1% FWER under the new noise distribution.
+
+The12-case syntheticA/B replay and2-arm follow-up are documented in [historical adaptive findings](HISTORICAL_ADAPTIVE_REPLAY_FINDINGS_2026-11-26.md). Other historical real-data/coincidence runs remain pending. Detector source was not changed, all old artifacts were preserved, and no O3 input/manifest was used. These unresolved limitations must accompany adaptive-recovery claims in the next release.
