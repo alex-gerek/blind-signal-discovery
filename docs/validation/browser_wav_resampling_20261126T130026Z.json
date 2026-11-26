@@ -1,0 +1,37 @@
+{
+  "run_id": "browser_wav_resampling_20261126T130026Z",
+  "source_base_commit": "8fab98742e6362f74e8905f377d726b993ccb66d",
+  "source_state": "uncommitted step-4 patch",
+  "inline_script_sha256_lf": "a4bb94910d3b64288e7d0ab5428919d51ca65b40e55b0353d4113fcb4071a00a",
+  "pytest_args": [
+    "-o",
+    "addopts=",
+    "-p",
+    "no:cacheprovider",
+    "--capture=sys",
+    "--basetemp",
+    ".tmp\\browser_wav_resampling_20261126T130026Z",
+    "tests/test_browser_wav_resampling.py",
+    "tests/test_input_validation.py::test_browser_input_regressions",
+    "-q"
+  ],
+  "exit_code": 0,
+  "console": "....                                                                     [100%]\n4 passed in 8.86s\n",
+  "python": "3.14.3",
+  "numpy": "2.5.5",
+  "scipy": "1.18.1",
+  "node": "v24.13.0",
+  "inputs": "synthetic only; no O3 data or reserved manifest contents",
+  "checks": {
+    "pytest_reference_cases": 3,
+    "browser_scenarios_via_wrapper": 15,
+    "passband_gain_tolerance": 0.01,
+    "tested_stopband_peak_limit": 0.00031622776601683794,
+    "scipy_absolute_error_limit": 1e-05
+  },
+  "limitations": [
+    "Browser native codec/rendering not manually validated",
+    "Finite stopband attenuation is not complete alias elimination",
+    "Offline centered filtering uses future samples and padding; edges not automatically excluded"
+  ]
+}

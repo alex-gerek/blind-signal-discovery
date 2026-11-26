@@ -236,9 +236,9 @@
       <input type="file" id="bgFile" accept=".wav,.csv,.txt" />
       <label for="tgtFile">Target File (.wav or .csv)</label>
       <input type="file" id="tgtFile" accept=".wav,.csv,.txt" />
-      <label for="csvFs">Sample Rate Hz (for .csv only)</label>
+      <label for="csvFs">Sample Rate Hz (for CSV/TXT; must agree with time column)</label>
       <input type="number" id="csvFs" value="512" min="128" max="48000" />
-      <div class="caption">Files are processed locally in browser memory and never uploaded to any server.</div>
+      <div class="caption">Files are processed locally in browser memory and never uploaded to any server. CSV/TXT: one value column, or time in seconds plus value; optional header, no quoted fields. Two time columns are compared as the same user-declared clock. Invalid rows are rejected. WAV: mono RIFF/WAVE, original rate at least 512 Hz; filtered to exactly 512 Hz. Resampled useful band: 0–192 Hz, transition 192–256 Hz. Zero padding affects about 47 ms at each file edge; see exported preprocessing metadata.</div>
     </div>
 
     <button class="btn" id="runBtn">Run BSD Measurement</button>
@@ -248,7 +248,7 @@
   <main>
     <h1>Blind Signal Discovery (BSD) &mdash; Browser Workstation</h1>
     <div class="banner">
-      <strong>Browser Interactive Demo (v0.3.0):</strong> Runs template-free STFT excess-power whitening, 8-connected clustering, and exact finite-sample conformal calibration (<code>p_emp = (1 + n_ge) / (N_cal + 1) &le; target_fap</code>) directly in your browser &mdash; no installation required. For the full 3-scale audited Python core (<code>87/87</code> tests), run <code>app/bsd_workstation.py</code> locally. Statistical anomalies are never proof of a physical discovery.
+      <strong>Browser Interactive Demo (v0.3.0):</strong> Runs template-free STFT excess-power whitening, 8-connected clustering, and exact finite-sample conformal calibration (<code>p_emp = (1 + n_ge) / (N_cal + 1) &le; target_fap</code>) directly in your browser &mdash; no installation required. For the full 3-scale Python core (author-reported <code>87/87</code> tests at <code>986dd46</code>), run <code>app/bsd_workstation.py</code> locally. Statistical anomalies are never proof of a physical discovery. <strong>Measurement scope:</strong> WAV now uses a documented antialias FIR; resampled useful band is 0–192 Hz, with edge effects disclosed in metadata. Open limitations include externally unverified independence where timestamps are absent, seed-zero substitution, and incomplete synthetic-run provenance. Use synthetic demonstrations while these file-measurement issues are reviewed. See <a href="https://github.com/alex-gerek/blind-signal-discovery/blob/main/docs/CURRENT_LIMITATIONS.md">known limitations</a>.
     </div>
 
     <div class="tabs">
@@ -373,6 +373,12 @@ function median(arr) {
 
 // --- Exact Conformal Order Rank (zero upward tolerance, matching src/bsd/calibration.py) ---
 function conformalOrderRank(nSamples, targetFap) {
+  if (!Number.isSafeInteger(nSamples) || nSamples < 1 || !Number.isFinite(targetFap) || targetFap <= 0 || targetFap >= 1) {
+    throw new Error("Calibration requires a positive integer sample count and finite FAP strictly between 0 and 1.");
+  }
+  if (!Number.isFinite(1.0 / targetFap) || 1.0 / targetFap > Number.MAX_SAFE_INTEGER) {
+    throw new Error("Requested FAP requires more samples than the browser can represent safely.");
+  }
   let minReq = Math.max(1, Math.floor(1.0 / targetFap) - 1);
   while (1.0 / (minReq + 1.0) > targetFap) minReq++;
   while (minReq > 1 && 1.0 / minReq <= targetFap) minReq--;
@@ -576,31 +582,222 @@ function analyzeWindow(signal, fs, seedThresh = 4.0) {
 }
 
 // --- WAV & CSV Readers (100% local in browser) ---
+// Browser WAV preprocessing v1. These constants define a new preprocessing
+// configuration; historical stride-decimated WAV measurements are not equivalent.
+const WAV_RESAMPLE_BETA = 8.6;
+const WAV_RESAMPLE_HALF_SUPPORT = 24;
+const WAV_RESAMPLE_MAX_COEFFICIENTS = 2000000;
+const WAV_RESAMPLE_PLANS = new Map();
+
+function besselI0(x) {
+  const y = x * x / 4;
+  let sum = 1, term = 1;
+  for (let k = 1; k <= 50; k++) {
+    term *= y / (k * k);
+    sum += term;
+    if (term <= sum * 1e-15) break;
+  }
+  return sum;
+}
+
+function resampleBrowserWav(signal, sourceRate, targetRate = FS) {
+  if (!Number.isSafeInteger(sourceRate) || !Number.isSafeInteger(targetRate) || targetRate <= 0 || sourceRate < targetRate) {
+    throw new Error("WAV resampling requires positive integer rates and source rate at least the target rate.");
+  }
+  if (!signal.length) throw new Error("WAV samples must be nonempty and finite.");
+  for (const value of signal) if (!Number.isFinite(value)) throw new Error("WAV samples must be nonempty and finite.");
+  const count = Math.floor(signal.length * targetRate / sourceRate);
+  if (!count) throw new Error("WAV is too short to produce a target-rate sample.");
+  if (sourceRate === targetRate) {
+    return { signal: Float64Array.from(signal), fs: targetRate, preprocessing: {
+      resampler_id: "bsd_kaiser_sinc_v1", resampled: false, source_sample_rate_hz: sourceRate,
+      sample_rate_hz: targetRate, antialias_filter: "not required (native target rate)",
+      useful_passband_hz: [0, targetRate / 2], edge_half_support_s: 0, output_sample_count: count,
+      processing_mode: "native_rate_copy", future_data_used: false, nominal_lookahead_s: 0
+    }};
+  }
+  function gcd(a, b) { while (b) { const r = a % b; a = b; b = r; } return a; }
+  const divisor = gcd(sourceRate, targetRate), up = targetRate / divisor, down = sourceRate / divisor;
+  const half = Math.ceil(WAV_RESAMPLE_HALF_SUPPORT * sourceRate / targetRate);
+  const taps = 2 * half + 1;
+  if (taps * up > WAV_RESAMPLE_MAX_COEFFICIENTS) throw new Error("WAV rate ratio exceeds browser FIR resource limits; use the Python Workstation.");
+  const key = `${sourceRate}/${targetRate}`;
+  let plan = WAV_RESAMPLE_PLANS.get(key);
+  if (!plan) {
+    plan = { kernels: new Map(), half, taps, up, down };
+    if (WAV_RESAMPLE_PLANS.size >= 2) WAV_RESAMPLE_PLANS.delete(WAV_RESAMPLE_PLANS.keys().next().value);
+    WAV_RESAMPLE_PLANS.set(key, plan);
+  }
+  const cutoff = targetRate * 0.4375, denomI0 = besselI0(WAV_RESAMPLE_BETA);
+  function kernel(phase) {
+    if (plan.kernels.has(phase)) return plan.kernels.get(phase);
+    const weights = new Float64Array(taps), fraction = phase / up;
+    let gain = 0;
+    for (let j = -half; j <= half; j++) {
+      const distance = j - fraction, radius = distance / half;
+      if (Math.abs(radius) > 1) continue;
+      const z = 2 * cutoff * distance / sourceRate;
+      const sinc = z === 0 ? 1 : Math.sin(Math.PI * z) / (Math.PI * z);
+      const weight = 2 * cutoff / sourceRate * sinc * besselI0(WAV_RESAMPLE_BETA * Math.sqrt(Math.max(0, 1 - radius * radius))) / denomI0;
+      weights[j + half] = weight;
+      gain += weight;
+    }
+    if (!Number.isFinite(gain) || Math.abs(gain) < 1e-12) throw new Error("Invalid WAV FIR normalization.");
+    for (let j = 0; j < taps; j++) weights[j] /= gain;
+    plan.kernels.set(phase, weights);
+    return weights;
+  }
+  const output = new Float64Array(count);
+  for (let i = 0; i < count; i++) {
+    const numerator = i * down, center = Math.floor(numerator / up), weights = kernel(numerator % up);
+    let value = 0;
+    const first = Math.max(-half, -center), last = Math.min(half, signal.length - 1 - center);
+    for (let j = first; j <= last; j++) value += signal[center + j] * weights[j + half];
+    output[i] = value;
+  }
+  return { signal: output, fs: targetRate, preprocessing: {
+    resampler_id: "bsd_kaiser_sinc_v1", resampled: true, source_sample_rate_hz: sourceRate,
+    sample_rate_hz: targetRate, up_factor: up, down_factor: down,
+    antialias_filter: "centered Kaiser-windowed sinc FIR", kaiser_beta: WAV_RESAMPLE_BETA,
+    cutoff_hz: cutoff, useful_passband_hz: [0, targetRate * 0.375], transition_band_hz: [targetRate * 0.375, targetRate / 2],
+    taps_per_phase: taps, phase_count: up, dc_normalization: "per phase",
+    padding: "zero", group_delay_compensated: true, edge_half_support_s: half / sourceRate,
+    processing_mode: "offline_centered_fir", future_data_used: true, nominal_lookahead_s: half / sourceRate,
+    applied_before_windowing: true, input_isolation: "each file filtered separately; no samples from other input files",
+    output_sample_count: count, duration_truncation_bound_s: 1 / targetRate,
+    warnings: ["FIR zero padding affects the first/last edge_half_support_s seconds; avoid interpreting edge structures without a control."]
+  }};
+}
+
+function inspectWavContainer(buffer) {
+  const view = new DataView(buffer);
+  const tag = offset => String.fromCharCode(...new Uint8Array(buffer, offset, 4));
+  if (buffer.byteLength < 12 || tag(0) !== "RIFF" || tag(8) !== "WAVE") throw new Error("Expected a little-endian RIFF/WAVE file; use the Python loader for other containers.");
+  const end = view.getUint32(4, true) + 8;
+  if (end > buffer.byteLength || end < 12) throw new Error("Truncated or invalid WAV RIFF size.");
+  let format = null, dataBytes = null;
+  for (let offset = 12; offset + 8 <= end;) {
+    const name = tag(offset), length = view.getUint32(offset + 4, true), start = offset + 8;
+    if (start + length > end) throw new Error("Truncated WAV chunk.");
+    if (name === "fmt ") {
+      if (format || length < 16) throw new Error("Ambiguous or invalid WAV format chunk.");
+      format = { format_tag: view.getUint16(start, true), channels: view.getUint16(start + 2, true),
+        sample_rate_hz: view.getUint32(start + 4, true), block_align_bytes: view.getUint16(start + 12, true), bits_per_sample: view.getUint16(start + 14, true) };
+    }
+    if (name === "data") {
+      if (dataBytes !== null) throw new Error("Multiple WAV data chunks are unsupported; use the Python loader.");
+      dataBytes = length;
+    }
+    offset = start + length + (length % 2);
+  }
+  if (!format || !dataBytes || !format.block_align_bytes) throw new Error("WAV requires a valid format and nonempty data chunk.");
+  if (format.channels !== 1) throw new Error("Browser WAV input must be mono; select a channel in the Python Workstation.");
+  if (format.sample_rate_hz < FS) throw new Error("Original WAV sample rate must be at least 512 Hz; upsampling cannot supply missing bandwidth.");
+  return { ...format, data_bytes: dataBytes, riff_size_bytes: end };
+}
+
+function parseBrowserCsv(text, csvFs) {
+  const suppliedFs = Number(csvFs);
+  if (!Number.isFinite(suppliedFs) || suppliedFs <= 0) throw new Error("CSV sample rate must be finite and positive.");
+  const lines = text.replace(/^\uFEFF/, "").replace(/\r\n?/g, "\n").split("\n");
+  while (lines.length && !lines[lines.length - 1].trim()) lines.pop();
+  const values = [], times = [];
+  let width = null, delimiter = null, sawRow = false;
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+    if (line.startsWith("#")) continue;
+    if (!line) {
+      if (!sawRow) continue;
+      throw new Error(`CSV row ${i + 1} is blank; missing samples are not removed.`);
+    }
+    if (line.includes('"')) throw new Error(`CSV row ${i + 1}: quoted fields are unsupported in the browser; use plain numeric CSV or the Python loader.`);
+    if (delimiter === null) delimiter = line.includes(",") ? "," : (line.includes(";") ? ";" : "space");
+    const cells = (delimiter === "space" ? line.split(/\s+/) : line.split(delimiter)).map(v => v.trim());
+    if (!sawRow) {
+      width = cells.length;
+      if (width !== 1 && width !== 2) throw new Error("Browser CSV requires one value column or two columns: time in seconds, value.");
+      sawRow = true;
+      const header = cells.every(v => v && Number.isNaN(Number(v)) && !/^[+-]?(nan|infinity|inf)$/i.test(v));
+      if (header) continue;
+    }
+    if (cells.length !== width || cells.some(v => !v || !Number.isFinite(Number(v)))) {
+      throw new Error(`CSV row ${i + 1}: expected ${width} finite numeric column(s); no rows were discarded.`);
+    }
+    values.push(Number(cells[width - 1]));
+    if (width === 2) times.push(Number(cells[0]));
+  }
+  if (values.length < 2) throw new Error("CSV needs at least two finite data rows.");
+  let fs = suppliedFs, interval = null;
+  if (times.length) {
+    const deltas = times.slice(1).map((t, i) => t - times[i]);
+    if (deltas.some(dt => !Number.isFinite(dt) || dt <= 0)) throw new Error("CSV timestamps must be strictly increasing and finite.");
+    const med = median(deltas);
+    if (deltas.some(dt => Math.abs(dt - med) / med > 0.02)) throw new Error("CSV timestamps are non-uniform (>2% jitter).");
+    fs = (times.length - 1) / (times[times.length - 1] - times[0]);
+    if (!Number.isFinite(fs) || fs <= 0 || Math.abs(suppliedFs - fs) / fs > 0.02) throw new Error("CSV sample rate conflicts with its timestamps.");
+    interval = [times[0], times[times.length - 1]];
+  }
+  validateBrowserSignal(values, fs);
+  return { signal: Float64Array.from(values), fs, timeInterval: interval,
+    preprocessing: { format: "csv", columns: width, time_column_seconds: times.length ? 0 : null,
+      sample_rate_hz: fs, resampled: false, discarded_data_rows: 0 } };
+}
+
+function validateBrowserSignal(signal, fs) {
+  if (!Number.isFinite(fs) || fs <= 0) throw new Error("Sample rate must be finite and positive.");
+  if (!signal.length) throw new Error("Input signal is empty.");
+  let first = signal[0], varies = false;
+  for (const value of signal) {
+    if (!Number.isFinite(value)) throw new Error("Input contains non-finite samples.");
+    if (value !== first) varies = true;
+  }
+  if (!varies) throw new Error("Input signal is constant and cannot be analyzed.");
+}
+
+async function hashBrowserFile(file) {
+  if (!globalThis.crypto || !globalThis.crypto.subtle) throw new Error("File hashing requires HTTPS or localhost; use the Python Workstation otherwise.");
+  const digest = await globalThis.crypto.subtle.digest("SHA-256", await file.arrayBuffer());
+  return Array.from(new Uint8Array(digest), b => b.toString(16).padStart(2, "0")).join("");
+}
+
+function validateBrowserPair(bg, tgt, bgHash, tgtHash) {
+  validateBrowserSignal(bg.signal, bg.fs);
+  validateBrowserSignal(tgt.signal, tgt.fs);
+  if (bgHash === tgtHash) throw new Error("Background and target have identical SHA-256 hashes; use independent recordings.");
+  if (Math.abs(bg.fs - tgt.fs) > Math.max(1e-6, 1e-6 * Math.max(bg.fs, tgt.fs))) throw new Error("Background and target have different effective sample rates.");
+  if (bg.timeInterval && tgt.timeInterval) {
+    const [b0, b1] = bg.timeInterval, [t0, t1] = tgt.timeInterval;
+    if (!(t1 <= b0 || t0 >= b1)) throw new Error("Background and target timestamps overlap; use disjoint intervals in a common time reference.");
+    return { status: "VERIFIED_DISJOINT_TIMESTAMPS", target_sha256: tgtHash, background_sha256: bgHash,
+      warnings: ["CSV timestamps are interpreted in a user-declared common clock; disjointness does not prove statistical independence."] };
+  }
+  return { status: "UNVERIFIED_EXTERNAL_CHECK_REQUIRED", target_sha256: tgtHash, background_sha256: bgHash,
+    warnings: ["Distinct file hashes do not prove independence. Confirm externally that recordings do not overlap or share signal energy."] };
+}
+
 async function readAudioOrCsv(file, csvFs) {
   const name = file.name.toLowerCase();
   if (name.endsWith(".wav")) {
-    const buf = await file.arrayBuffer();
+    const buffer = await file.arrayBuffer(), container = inspectWavContainer(buffer);
     const ctx = new (window.AudioContext || window.webkitAudioContext)();
-    const decoded = await ctx.decodeAudioData(buf);
-    const ch0 = decoded.getChannelData(0);
-    const rawFs = decoded.sampleRate;
-    // Simple stride decimation to ~512 Hz for fast interactive STFT
-    const step = Math.max(1, Math.round(rawFs / FS));
-    const out = new Float64Array(Math.floor(ch0.length / step));
-    for (let i = 0; i < out.length; i++) out[i] = ch0[i * step];
-    await ctx.close();
-    return { signal: out, fs: rawFs / step };
+    try {
+      const decoded = await ctx.decodeAudioData(buffer);
+      if (decoded.numberOfChannels !== 1) throw new Error("Decoded WAV must be mono; use the Python Workstation for multichannel input.");
+      const ch0 = decoded.getChannelData(0), decodedRate = decoded.sampleRate;
+      validateBrowserSignal(ch0, decodedRate);
+      const converted = resampleBrowserWav(ch0, decodedRate, FS);
+      validateBrowserSignal(converted.signal, converted.fs);
+      return { signal: converted.signal, fs: converted.fs, timeInterval: null,
+        preprocessing: { ...converted.preprocessing, format: "wav", channel: "mono",
+          original_sample_rate_hz: container.sample_rate_hz, decoded_sample_rate_hz: decodedRate,
+          decoder_resampled: container.sample_rate_hz !== decodedRate, wav_container: container,
+          decode_method: "Web Audio decodeAudioData (Float32 samples; decoder resampling is browser-dependent)",
+          decoded_sample_count: ch0.length, decoded_duration_s: ch0.length / decodedRate,
+          output_duration_s: converted.signal.length / converted.fs } };
+    } finally { await ctx.close(); }
   }
-  const txt = await file.text();
-  const vals = [];
-  for (const line of txt.split(/\r?\n/)) {
-    const s = line.trim();
-    if (!s || s.startsWith("#")) continue;
-    const parts = s.split(/[,\s;]+/);
-    const v = Number(parts[parts.length - 1]);
-    if (Number.isFinite(v)) vals.push(v);
-  }
-  return { signal: Float64Array.from(vals), fs: Number(csvFs) || FS };
+  if (!/\.(csv|txt)$/.test(name)) throw new Error("Browser files must be WAV, CSV or TXT.");
+  return parseBrowserCsv(await file.text(), csvFs);
 }
 
 // --- Colormap (Viridis LUT) ---
@@ -760,6 +957,7 @@ async function runMeasurement() {
   const workflow = document.getElementById("workflow").value;
   const targetFap = Number(document.getElementById("targetFap").value);
   let bgWindows = [], tgtWindows = [], gtRecords = null, fs = FS;
+  let inputAudit = null, inputProvenance = null;
 
   if (workflow === "synth") {
     const nBg = Number(document.getElementById("nBg").value);
@@ -786,18 +984,23 @@ async function runMeasurement() {
     const bgFile = document.getElementById("bgFile").files[0];
     const tgtFile = document.getElementById("tgtFile").files[0];
     if (!bgFile || !tgtFile) {
-      statusEl.textContent = "Please select both a Background file and a Target file.";
-      return;
+      throw new Error("Please select both a Background file and a Target file.");
     }
-    const csvFs = Number(document.getElementById("csvFs").value) || FS;
+    const csvFs = Number(document.getElementById("csvFs").value);
+    const bgHash = await hashBrowserFile(bgFile), tgtHash = await hashBrowserFile(tgtFile);
+    if (bgHash === tgtHash) throw new Error("Background and target have identical SHA-256 hashes; use independent recordings.");
     const bgLoaded = await readAudioOrCsv(bgFile, csvFs);
     const tgtLoaded = await readAudioOrCsv(tgtFile, csvFs);
+    inputAudit = validateBrowserPair(bgLoaded, tgtLoaded, bgHash, tgtHash);
+    inputProvenance = {
+      background: { name: bgFile.name, sha256: bgHash, samples: bgLoaded.signal.length, time_interval: bgLoaded.timeInterval, preprocessing: bgLoaded.preprocessing },
+      target: { name: tgtFile.name, sha256: tgtHash, samples: tgtLoaded.signal.length, time_interval: tgtLoaded.timeInterval, preprocessing: tgtLoaded.preprocessing }
+    };
     fs = tgtLoaded.fs;
     const nBg = Math.floor(bgLoaded.signal.length / WIN_N);
     const nTgt = Math.floor(tgtLoaded.signal.length / WIN_N);
     if (nBg < 20 || nTgt < 1) {
-      statusEl.textContent = `Need >= 20 background windows (${20 * WIN_N} samples) and >= 1 target window.`;
-      return;
+      throw new Error(`Need >= 20 background windows (${20 * WIN_N} samples) and >= 1 target window.`);
     }
     for (let i = 0; i < nBg; i++) bgWindows.push(bgLoaded.signal.subarray(i * WIN_N, (i + 1) * WIN_N));
     for (let i = 0; i < nTgt; i++) tgtWindows.push({ signal: tgtLoaded.signal.subarray(i * WIN_N, (i + 1) * WIN_N), role: "LOCAL_FILE", inj: null });
@@ -846,12 +1049,20 @@ async function runMeasurement() {
         f_max_hz: Number(c.f_max.toFixed(1)),
         score: Number(c.score.toFixed(4)),
         empirical_p_value: Number(p.toFixed(5)),
-        active_mode_anomaly_flag: activeFlag
+        active_mode_anomaly_flag: activeFlag,
+        score_full_precision: fullPrecisionNumber(c.score),
+        threshold_full_precision: fullPrecisionNumber(threshold),
+        empirical_p_value_full_precision: fullPrecisionNumber(p),
+        t_start_s_full_precision: fullPrecisionNumber(c.t_start),
+        t_end_s_full_precision: fullPrecisionNumber(c.t_end),
+        f_min_hz_full_precision: fullPrecisionNumber(c.f_min),
+        f_max_hz_full_precision: fullPrecisionNumber(c.f_max)
       });
     }
   }
 
   const nActive = windows.filter(w => w.activeFlag).length;
+  const groundTruthAudit = workflow === "synth" ? summarizeBrowserGroundTruth(windows, WIN_N / fs) : null;
   const run = {
     metadata: {
       mode: "browser_interactive_demo_v0.3.0",
@@ -859,7 +1070,9 @@ async function runMeasurement() {
       target_fap: targetFap,
       n_bg_windows: sortedNull.length,
       n_target_windows: windows.length,
-      sample_rate_hz: fs
+      sample_rate_hz: fs,
+      independence_audit: inputAudit,
+      input_provenance: inputProvenance
     },
     calibration: {
       target_fap: targetFap,
@@ -878,7 +1091,8 @@ async function runMeasurement() {
       n_candidates: allCands.length
     },
     windows,
-    candidates: allCands
+    candidates: allCands,
+    groundTruthAudit
   };
   const isFirstRun = LAST_RUN === null;
   LAST_RUN = run;
@@ -903,15 +1117,14 @@ async function runMeasurement() {
     ["Active Anomaly Windows", `${nActive} / ${windows.length}`],
     ["Detection Available", `${run.summary.n_detection_available_windows} / ${windows.length}`]
   ];
-  if (workflow === "synth") {
-    const negs0 = windows.filter(w => !w.inj);
-    const poss0 = windows.filter(w => w.inj);
-    const negFp0 = negs0.filter(w => w.activeFlag).length;
-    const posTp0 = poss0.filter(w => w.activeFlag).length;
+  if (groundTruthAudit) {
+    const gt = groundTruthAudit;
     summaryCards.push(
-      ["Injections Detected", `${posTp0} / ${poss0.length}`],
-      ["Injections Missed", `${poss0.length - posTp0} / ${poss0.length}`],
-      ["Negative Control False Alarms", `${negFp0} / ${negs0.length} (${(100 * negFp0 / Math.max(1, negs0.length)).toFixed(1)}%)`]
+      ["Detected / Available Injections", `${gt.positive_injections_detected} / ${gt.positive_injections_available}`],
+      ["Missed While Available", gt.positive_injections_missed_available],
+      ["Abstained Injections", gt.positive_injections_abstained],
+      ["Negative Control FAR (available)", gt.negative_control_far_available === null ? "UNAVAILABLE" : `${(100 * gt.negative_control_far_available).toFixed(2)}%`],
+      ["Available Noise Exposure", `${gt.negative_control_available_windows} windows / ${gt.negative_control_available_exposure_s} s`]
     );
   }
   document.getElementById("summaryMetrics").innerHTML = summaryCards
@@ -931,12 +1144,14 @@ async function runMeasurement() {
   }
   const jumpEl = document.getElementById("jumpButtons");
   const idxFa = windows.findIndex(w => !w.inj && w.activeFlag);
-  const idxMiss = windows.findIndex(w => w.inj && !w.activeFlag);
+  const idxMiss = windows.findIndex(w => w.inj && w.detectionAvailable && !w.activeFlag);
+  const idxAbstained = windows.findIndex(w => w.inj && !w.detectionAvailable);
   const idxDet = windows.findIndex(w => w.inj && w.activeFlag);
   const jBtns = [];
   if (idxFa >= 0) jBtns.push(`<button class="btn btn-sm" onclick="jumpWin(${idxFa})">False Alarm (Win ${idxFa})</button>`);
   if (idxMiss >= 0) jBtns.push(`<button class="btn btn-sm" style="background:#b7791f" onclick="jumpWin(${idxMiss})">Missed Injection (Win ${idxMiss})</button>`);
   if (idxDet >= 0) jBtns.push(`<button class="btn btn-sm" style="background:#2f855a" onclick="jumpWin(${idxDet})">Detected Injection (Win ${idxDet})</button>`);
+  if (idxAbstained >= 0) jBtns.push(`<button class="btn btn-sm" style="background:#718096" onclick="jumpWin(${idxAbstained})">Abstained Injection (Win ${idxAbstained})</button>`);
   jumpEl.innerHTML = jBtns.join("");
   drawWindowDetail(run, Number(slider.value));
 
@@ -944,21 +1159,19 @@ async function runMeasurement() {
   const gtCard = document.getElementById("gtCard");
   if (workflow === "synth") {
     gtCard.style.display = "block";
-    const negs = windows.filter(w => !w.inj);
-    const poss = windows.filter(w => w.inj);
-    const negFp = negs.filter(w => w.activeFlag).length;
-    const posTp = poss.filter(w => w.activeFlag).length;
+    const poss = windows.filter(w => w.inj), gt = groundTruthAudit;
     document.getElementById("gtMetrics").innerHTML = [
-      ["Negative Control FAR", `${(100 * negFp / Math.max(1, negs.length)).toFixed(2)}% (${negFp}/${negs.length})`],
-      ["Positive Detected", `${posTp} / ${poss.length}`],
-      ["Positive Missed", `${poss.length - posTp} / ${poss.length}`],
-      ["Detection Efficiency", `${(100 * posTp / Math.max(1, poss.length)).toFixed(1)}%`]
+      ["Negative Control FAR (available)", gt.negative_control_far_available === null ? "UNAVAILABLE (no available exposure)" : `${(100 * gt.negative_control_far_available).toFixed(2)}% (${gt.negative_control_false_alarms}/${gt.negative_control_available_windows})`],
+      ["Positive Detected / Available", `${gt.positive_injections_detected} / ${gt.positive_injections_available}`],
+      ["Positive Missed While Available", gt.positive_injections_missed_available],
+      ["Positive Abstained", gt.positive_injections_abstained],
+      ["Conditional Efficiency", gt.detection_efficiency_available === null ? "UNAVAILABLE" : `${(100 * gt.detection_efficiency_available).toFixed(1)}%`]
     ].map(([k, v]) => `<div class="metric"><div class="k">${k}</div><div class="v">${v}</div></div>`).join("");
 
     document.querySelector("#gtTable tbody").innerHTML = poss.map(w =>
       `<tr><td>${w.inj.id}</td><td>${w.index}</td><td>${w.inj.family}</td><td>${w.inj.snr}</td>` +
       `<td>${w.maxScore.toFixed(3)}</td><td>${threshold !== null ? threshold.toFixed(3) : "null"}</td>` +
-      `<td style="font-weight:700;color:${w.activeFlag ? "#2f855a" : "#c53030"}">${w.activeFlag ? "DETECTED" : "MISSED"}</td></tr>`
+      `<td style="font-weight:700;color:${w.activeFlag ? "#2f855a" : "#c53030"}">${!w.detectionAvailable ? "ABSTAINED" : (w.activeFlag ? "DETECTED" : "MISSED")}</td></tr>`
     ).join("");
   } else {
     gtCard.style.display = "none";
@@ -971,11 +1184,99 @@ async function runMeasurement() {
   // Update Tab 4 JSON preview
   const exportPayload = buildExportPayload(run);
   document.getElementById("jsonPreview").textContent = JSON.stringify(exportPayload, null, 2);
-  statusEl.textContent = `Done: ${nActive} / ${windows.length} active anomaly window(s), ${allCands.length} candidate(s).`;
+  statusEl.textContent = `Done: ${nActive} / ${windows.length} active anomaly window(s), ${allCands.length} candidate(s).` +
+    (inputAudit ? ` Background separation: ${inputAudit.status}. See export metadata for provenance and warnings.` : "");
 }
+
+async function handleRunMeasurement() {
+  const runButton = document.getElementById("runBtn");
+  const exports = ["dlTimeline", "dlCands", "dlJson"].map(id => document.getElementById(id));
+  runButton.disabled = true;
+  exports.forEach(button => { button.disabled = true; });
+  try {
+    await runMeasurement();
+  } catch (error) {
+    LAST_RUN = null;
+    document.getElementById("statusLine").textContent = "Input / measurement error: " + error.message;
+    const banner = document.getElementById("calBanner");
+    banner.className = "banner banner-err";
+    banner.textContent = "No current result: " + error.message;
+    ["summaryMetrics", "gtMetrics", "jumpButtons"].forEach(id => { document.getElementById(id).innerHTML = ""; });
+    document.querySelector("#candTable tbody").innerHTML = "";
+    document.querySelector("#gtTable tbody").innerHTML = "";
+    document.getElementById("jsonPreview").textContent = "No valid current result to export.";
+    ["timelineCanvas", "waveCanvas", "specCanvas"].forEach(id => {
+      const canvas = document.getElementById(id);
+      canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
+    });
+  } finally {
+    runButton.disabled = false;
+    exports.forEach(button => { button.disabled = LAST_RUN === null; });
+  }
+}
+
+function fullPrecisionNumber(value) {
+  if (value === null) return null;
+  if (!Number.isFinite(value)) throw new Error("Cannot export a non-finite decision input.");
+  return value;
+}
+
+function wilsonCI90(k, n) {
+  if (!n) return null;
+  const z = 1.6448536, p = k / n, denom = 1 + z * z / n;
+  const center = (p + z * z / (2 * n)) / denom;
+  const half = z * Math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / denom;
+  return [Math.max(0, center - half), Math.min(1, center + half)];
+}
+
+function summarizeBrowserGroundTruth(windows, windowDurationS) {
+  if (!Number.isFinite(windowDurationS) || windowDurationS <= 0) throw new Error("Exposure needs a finite positive window duration.");
+  if (windows.some(w => w.activeFlag && !w.detectionAvailable)) throw new Error("Accepted decisions require available detection.");
+  const negs = windows.filter(w => !w.inj), poss = windows.filter(w => w.inj);
+  const negAvailable = negs.filter(w => w.detectionAvailable), posAvailable = poss.filter(w => w.detectionAvailable);
+  const falseAlarms = negAvailable.filter(w => w.activeFlag).length;
+  const detected = posAvailable.filter(w => w.activeFlag).length;
+  const missed = posAvailable.length - detected, abstained = poss.length - posAvailable.length;
+  return {
+    metric_schema_version: 2,
+    negative_control_windows: negs.length,
+    negative_control_false_alarms: falseAlarms,
+    negative_control_far: falseAlarms / Math.max(1, negs.length),
+    positive_injections_total: poss.length,
+    positive_injections_detected: detected,
+    positive_injections_missed: poss.length - detected,
+    detection_efficiency: detected / Math.max(1, poss.length),
+    negative_control_available_windows: negAvailable.length,
+    negative_control_abstained_windows: negs.length - negAvailable.length,
+    negative_control_total_exposure_s: negs.length * windowDurationS,
+    negative_control_available_exposure_s: negAvailable.length * windowDurationS,
+    negative_control_far_available: negAvailable.length ? falseAlarms / negAvailable.length : null,
+    negative_control_far_available_ci90: wilsonCI90(falseAlarms, negAvailable.length),
+    negative_control_far_status: negAvailable.length ? "AVAILABLE" : "UNAVAILABLE_NO_EXPOSURE",
+    positive_injections_available: posAvailable.length,
+    positive_injections_abstained: abstained,
+    positive_injections_missed_available: missed,
+    detection_efficiency_available: posAvailable.length ? detected / posAvailable.length : null,
+    detection_efficiency_available_ci90: wilsonCI90(detected, posAvailable.length),
+    detection_efficiency_status: posAvailable.length ? "AVAILABLE" : "UNAVAILABLE_NO_AVAILABLE_INJECTIONS",
+    injection_records: poss.map(w => ({window_index: w.index, injection_id: w.inj.id,
+      detection_available: w.detectionAvailable, detected: w.activeFlag,
+      evaluation_status: !w.detectionAvailable ? "ABSTAINED" : (w.activeFlag ? "DETECTED" : "MISSED")})),
+    legacy_metric_semantics: "negative_control_far and detection_efficiency use all windows/injections; positive_injections_missed includes abstentions. Use *_available metrics with exposure and abstention counts.",
+    interval_method: "90% Wilson diagnostic interval; nominal coverage assumes independent evaluation windows."
+  };
+}
+
+const BROWSER_CANDIDATE_FIELDS = ["window_index", "t_start_s", "t_end_s", "f_min_hz", "f_max_hz", "score", "empirical_p_value", "active_mode_anomaly_flag",
+  "score_full_precision", "threshold_full_precision", "empirical_p_value_full_precision", "t_start_s_full_precision", "t_end_s_full_precision", "f_min_hz_full_precision", "f_max_hz_full_precision"];
+const BROWSER_TIMELINE_FIELDS = ["window_index", "role", "max_score", "threshold", "detection_available", "active_mode_diagnostic_nomination", "active_mode_anomaly_flag", "n_candidates",
+  "max_score_full_precision", "threshold_full_precision", "evaluation_status"];
 
 function buildExportPayload(run) {
   return {
+    export_schema_version: 2,
+    numeric_precision: "Legacy timeline/candidate values are rounded; *_full_precision values retain original finite decision inputs.",
+    ground_truth_audit: run.groundTruthAudit || null,
     metadata: run.metadata,
     calibration: run.calibration,
     summary: run.summary,
@@ -987,7 +1288,10 @@ function buildExportPayload(run) {
       detection_available: w.detectionAvailable,
       active_mode_diagnostic_nomination: w.diagnosticNomination,
       active_mode_anomaly_flag: w.activeFlag,
-      n_candidates: w.nominatedCandidates.length
+      n_candidates: w.nominatedCandidates.length,
+      max_score_full_precision: fullPrecisionNumber(w.maxScore),
+      threshold_full_precision: fullPrecisionNumber(run.calibration.threshold),
+      evaluation_status: !w.detectionAvailable ? "ABSTAINED" : (w.activeFlag ? "DETECTED" : "NOT_DETECTED")
     })),
     candidates: run.candidates
   };
@@ -1001,10 +1305,15 @@ function downloadText(filename, content, mime) {
   a.click();
   URL.revokeObjectURL(a.href);
 }
-function toCsv(rows) {
-  if (!rows.length) return "";
-  const cols = Object.keys(rows[0]);
-  return [cols.join(","), ...rows.map(r => cols.map(c => r[c] === null || r[c] === undefined ? "" : String(r[c])).join(","))].join("\n");
+function toCsv(rows, fallbackFields = []) {
+  if (!rows.length && !fallbackFields.length) return "";
+  const cols = rows.length ? Object.keys(rows[0]) : fallbackFields;
+  const cell = value => {
+    if (value === null || value === undefined) return "";
+    const text = String(value);
+    return /[",\r\n]/.test(text) ? '"' + text.replace(/"/g, '""') + '"' : text;
+  };
+  return [cols.map(cell).join(","), ...rows.map(r => cols.map(c => cell(r[c])).join(","))].join("\r\n");
 }
 
 // --- Event Listeners ---
@@ -1029,12 +1338,12 @@ document.getElementById("targetFap").addEventListener("change", updateFapHint);
 document.getElementById("winIdx").addEventListener("input", e => {
   if (LAST_RUN) drawWindowDetail(LAST_RUN, Number(e.target.value));
 });
-document.getElementById("runBtn").addEventListener("click", runMeasurement);
+document.getElementById("runBtn").addEventListener("click", handleRunMeasurement);
 document.getElementById("dlTimeline").addEventListener("click", () => {
-  if (LAST_RUN) downloadText("timeline.csv", toCsv(buildExportPayload(LAST_RUN).timeline), "text/csv");
+  if (LAST_RUN) downloadText("timeline.csv", toCsv(buildExportPayload(LAST_RUN).timeline, BROWSER_TIMELINE_FIELDS), "text/csv");
 });
 document.getElementById("dlCands").addEventListener("click", () => {
-  if (LAST_RUN) downloadText("candidates.csv", toCsv(LAST_RUN.candidates), "text/csv");
+  if (LAST_RUN) downloadText("candidates.csv", toCsv(LAST_RUN.candidates, BROWSER_CANDIDATE_FIELDS), "text/csv");
 });
 document.getElementById("dlJson").addEventListener("click", () => {
   if (LAST_RUN) downloadText("run_report.json", JSON.stringify(buildExportPayload(LAST_RUN), null, 2), "application/json");
@@ -1048,7 +1357,7 @@ window.jumpWin = function(idx) {
 };
 
 updateFapHint();
-runMeasurement();
+handleRunMeasurement();
 </script>
 </body>
 </html>

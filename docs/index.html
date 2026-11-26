@@ -130,7 +130,7 @@
       <h1>Blind Signal Discovery (BSD)</h1>
       <p class="subtitle">Finding unknown structure in noisy time series, with a false-alarm rate you can measure.</p>
       <div class="badges">
-        <img src="https://img.shields.io/badge/tests-87%20passing-2ea44f.svg" alt="87 tests passing" />
+        <img src="https://img.shields.io/badge/Python%20tests-87%20reported%20at%20986dd46-64748b.svg" alt="Author-reported Python tests at 986dd46" />
         <img src="https://img.shields.io/badge/license-MIT-0f9e8e.svg" alt="MIT License" />
         <img src="https://img.shields.io/badge/python-3.11%2B-1f8fd0.svg" alt="Python 3.11+" />
         <a href="https://doi.org/10.5281/zenodo.24557479">
@@ -150,6 +150,7 @@
 
     <div class="card">
       <h2>What this prototype tests</h2>
+      <p>The table describes the Python research core. The browser demo is a separate single-scale implementation. Before interpreting file measurements, read the <a href="https://github.com/alex-gerek/blind-signal-discovery/blob/main/docs/CURRENT_LIMITATIONS.md">known limitations</a>; documentation corrections do not rerun historical studies.</p>
       <table>
         <thead>
           <tr><th>Stage</th><th>Question asked of the signal</th><th>Method</th></tr>
@@ -158,7 +159,7 @@
           <tr><td><strong>Whitening</strong></td><td>What rises above the local spectral and temporal floor?</td><td>Median DC removal, unpadded STFT, 2D robust median-filter background normalization</td></tr>
           <tr><td><strong>Calibration</strong></td><td>How high must a score be so pure noise exceeds it with probability &le; &alpha;?</td><td>Exact finite-sample conformal order statistic (<code>p_emp &le; target_fap</code>); explicit <code>CALIBRATION_UNAVAILABLE</code> (<code>null</code>) when unattainable</td></tr>
           <tr><td><strong>Regime monitoring</strong></td><td>Has the background drifted or entered an impulsive glitch storm?</td><td>Orthogonal continuum + impulsive-crest monitors with staged causal recalibration</td></tr>
-          <tr><td><strong>Verification</strong></td><td>Does it hold under controls and blind injections?</td><td>87 automated <code>pytest</code> checks, 50,000-window confirmatory negative control (<code>0.6320%</code> FAR), and manual Workstation inspection</td></tr>
+          <tr><td><strong>Verification</strong></td><td>Does it hold under controls and blind injections?</td><td>Author-reported 87/87 Python checks at <code>986dd46</code>; independent selected subset: 70 passed at <code>e1bd520</code>. Historical 50,000-window synthetic control: <code>0.6320%</code> FAR. Browser demo requires separate verification.</td></tr>
         </tbody>
       </table>
     </div>

@@ -144,7 +144,10 @@ def _validate_and_prepare_signal(
     time_reference: str | None = None,
     provenance: dict[str, Any] | None = None,
 ) -> LoadedTimeSeries:
-    x = np.asarray(raw_signal, dtype=np.float64)
+    raw = np.asarray(raw_signal)
+    if raw.dtype.kind not in "biuf":
+        raise InputValidationError(f"Input '{source_name}' must contain real numeric samples; got {raw.dtype}.")
+    x = raw.astype(np.float64)
     if x.ndim != 1:
         raise InputValidationError(
             f"Expected 1D time-series after channel selection for '{source_name}', got shape {x.shape}."
@@ -286,7 +289,10 @@ def load_timeseries_file(
                 f"NumPy file '{p.name}' contains no sample-rate metadata. "
                 "Supply sample_rate_hz explicitly."
             )
-        arr = np.load(str(p), allow_pickle=False)
+        try:
+            arr = np.load(str(p), allow_pickle=False)
+        except (OSError, ValueError, EOFError) as exc:
+            raise InputValidationError(f"Failed to read safe numeric NPY '{p.name}': {exc}") from exc
         if arr.ndim == 2:
             if channel_index is None:
                 raise InputValidationError(
@@ -307,37 +313,67 @@ def load_timeseries_file(
         )
 
     if ext == ".csv":
-        with p.open("r", encoding="utf-8", newline="") as fh:
-            rows = list(csv.reader(fh))
-        if not rows:
-            raise InputValidationError(f"CSV file '{p.name}' is empty.")
-        # Detect header row
-        has_header = False
         try:
-            float(rows[0][0])
+            with p.open("r", encoding="utf-8-sig", newline="") as fh:
+                reader = csv.reader(fh, strict=True)
+                numbered_rows = [(reader.line_num, row) for row in reader]
+        except (OSError, UnicodeError, csv.Error) as exc:
+            raise InputValidationError(f"Failed to read CSV '{p.name}': {exc}") from exc
+        if not numbered_rows or not numbered_rows[0][1] or not any(cell.strip() for cell in numbered_rows[0][1]):
+            raise InputValidationError(f"CSV file '{p.name}' is empty or starts with a blank row.")
+        first = numbered_rows[0][1]
+        try:
+            float(first[0])
+            has_header = False
         except ValueError:
             has_header = True
-        header = [h.strip() for h in rows[0]] if has_header else []
-        data_rows = rows[1:] if has_header else rows
+        header = [h.strip() for h in first] if has_header else []
+        data_rows = numbered_rows[1:] if has_header else numbered_rows
         if len(data_rows) < 2:
             raise InputValidationError(f"CSV file '{p.name}' has too few data rows ({len(data_rows)}).")
 
         def _col_idx(spec: str | int) -> int:
-            if isinstance(spec, int):
+            if isinstance(spec, int) and not isinstance(spec, bool) and spec >= 0:
                 return spec
-            if has_header and spec in header:
+            if isinstance(spec, str) and has_header and header.count(spec) == 1:
                 return header.index(spec)
-            raise InputValidationError(f"Column '{spec}' not found in CSV header {header} of '{p.name}'.")
+            raise InputValidationError(f"CSV column {spec!r} is missing, ambiguous or invalid in '{p.name}'.")
+
+        width = len(first)
+        for line_number, row in data_rows:
+            if len(row) != width:
+                raise InputValidationError(
+                    f"CSV row {line_number} in '{p.name}' has {len(row)} columns; expected {width}."
+                )
+
+        def _values(index: int) -> np.ndarray:
+            if index >= width:
+                raise InputValidationError(f"CSV column {index} out of range for {width} columns in '{p.name}'.")
+            values: list[float] = []
+            for line_number, row in data_rows:
+                try:
+                    value = float(row[index])
+                except ValueError as exc:
+                    raise InputValidationError(
+                        f"CSV row {line_number}, column {index} in '{p.name}' is not numeric."
+                    ) from exc
+                if not np.isfinite(value):
+                    raise InputValidationError(
+                        f"CSV row {line_number}, column {index} in '{p.name}' contains a non-finite sample."
+                    )
+                values.append(value)
+            return np.asarray(values, dtype=np.float64)
 
         v_idx = _col_idx(csv_value_column)
-        vals = np.array([float(r[v_idx]) for r in data_rows], dtype=np.float64)
+        vals = _values(v_idx)
         t_interval: tuple[float, float] | None = None
         t_ref: str | None = None
         fs_eff = sample_rate_hz
-
         if csv_time_column is not None:
             t_idx = _col_idx(csv_time_column)
-            times = np.array([float(r[t_idx]) for r in data_rows], dtype=np.float64)
+            if t_idx == v_idx:
+                raise InputValidationError("CSV time and value columns must be different.")
+            times = _values(t_idx)
             dt = np.diff(times)
             if np.any(dt <= 0) or not np.all(np.isfinite(dt)):
                 raise InputValidationError(f"CSV time column in '{p.name}' is not strictly increasing and finite.")
@@ -347,8 +383,12 @@ def load_timeseries_file(
                     f"CSV time column in '{p.name}' is non-uniformly sampled (>2% jitter). "
                     "BSD requires uniformly sampled time series."
                 )
-            mean_dt = float((times[-1] - times[0]) / (times.size - 1))
-            fs_eff = 1.0 / mean_dt
+            fs_eff = 1.0 / float((times[-1] - times[0]) / (times.size - 1))
+            if sample_rate_hz is not None and (
+                not np.isfinite(sample_rate_hz) or sample_rate_hz <= 0
+                or not np.isclose(float(sample_rate_hz), fs_eff, rtol=0.02, atol=1e-6)
+            ):
+                raise InputValidationError("Supplied CSV sample rate conflicts with the time column.")
             t_interval = (float(times[0]), float(times[-1]))
             t_ref = "CSV_TIME_COLUMN"
         elif fs_eff is None:
@@ -356,8 +396,7 @@ def load_timeseries_file(
                 f"CSV file '{p.name}' has no csv_time_column specified. "
                 "Provide either csv_time_column or explicit sample_rate_hz."
             )
-
-        ch_label = header[v_idx] if has_header and v_idx < len(header) else f"col_{v_idx}"
+        ch_label = header[v_idx] if has_header else f"col_{v_idx}"
         return _validate_and_prepare_signal(
             vals, float(fs_eff), allow_resample, p.name, "csv", ch_label, units, sha, t_interval, t_ref
         )
@@ -392,6 +431,11 @@ def check_background_independence(
     background: LoadedTimeSeries,
 ) -> IndependenceAudit:
     """Reject identical files or overlapping time intervals; warn if independence is unverified."""
+    rates = (target.sample_rate_hz, background.sample_rate_hz)
+    if not all(np.isfinite(rate) and rate > 0 for rate in rates) or not np.isclose(
+        rates[0], rates[1], rtol=1e-6, atol=1e-6
+    ):
+        raise InputValidationError("Target and background must have matching finite effective sample rates.")
     if target.sha256 == background.sha256:
         raise InputValidationError(
             "Background independence violation: Target and Background inputs have identical SHA-256 "
@@ -405,12 +449,7 @@ def check_background_independence(
     ):
         t0, t1 = target.time_interval
         b0, b1 = background.time_interval
-        same_channel = (
-            target.provenance.get("detector") == background.provenance.get("detector")
-            if target.time_reference == "GPS"
-            else True
-        )
-        if same_channel and not (t1 <= b0 or t0 >= b1):
+        if not (t1 <= b0 or t0 >= b1):
             raise InputValidationError(
                 f"Background independence violation: Target interval [{t0:.2f}, {t1:.2f}] overlaps "
                 f"Background interval [{b0:.2f}, {b1:.2f}] ({target.time_reference}). "

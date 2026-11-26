@@ -1,12 +1,18 @@
 # BSD Local Measurement Workstation — Repository Audit, Implementation Plan & Interface Contract
 
-**Status:** Approved with Six Methodological Amendments (Implementing Locally on `development/v0.3`)
-**Target Branch:** Dedicated feature branch or `development/v0.3` (per user approval; never `main`)
+**Status:** Historical approved design, retained below; implementation status clarified on 2026-11-26. Parts 1–3 describe the original planning state, not an up-to-date feature inventory.
+**Original implementation branch:** `development/v0.3`; the implementation has since been merged into `main`. This historical note does not prescribe current branch-protection settings.
 **Core Principle:** Wrap existing BSD Python modules (`src/bsd/`) through a clean, minimal local Streamlit GUI without rewriting detector mathematics, without hardcoding LIGO assumptions on arbitrary data, and without touching the reserved O3 holdout (`docs/v03_o3_holdout_manifest.json`).
 
 ---
 
-## Part 1 — Repository Audit (Current Capabilities & Limits)
+## Current implementation summary (2026-11-26)
+
+The Python loader now supports WAV, CSV, NPY and optional GWOSC-schema HDF5. The default analysis is 1024 Hz with 4-second windows; higher sampling rates require explicit antialiased resampling opt-in. Background size must support the requested FAP after the actual Split A/B allocation: 120 total windows do not support a 1% target. Initial unattainable calibration is rejected. Adaptive availability and diagnostic nominations are recorded separately from accepted decisions.
+
+The browser demo is a separate single-scale implementation, outside the original zero-duplication Python-wrapper contract. The input-validation follow-up gives Python uploads unique paths, adds explicit CSV columns and row validation, and adds browser file hashes, rate/interval checks and visible failure handling. The output follow-up adds conditional exposure/rates, separate abstentions and schema-v2 full-precision fields while retaining labelled legacy counters/rounded fields. The browser WAV follow-up replaces alias-prone stride decimation with a documented FIR to exact 512 Hz (useful resampled band 0–192 Hz, padded edges disclosed). Unknown independence without comparable timestamps and incomplete synthetic provenance remain limitations. See the [WAV validation record](browser_wav_resampling_protocol_2026-11-26.md). See the [current mathematical guide](whisker_mathematical_measurement_guide.md) and [known limitations](CURRENT_LIMITATIONS.md). Historical thresholds and performance numbers below have not been rerun.
+
+## Part 1 — Historical Repository Audit (Capabilities at Planning Time)
 
 ### 1. Loadable File Formats Today
 - **GWOSC HDF5 (`.hdf5`) ONLY** via `bsd.ligo_adapter.load_gwosc_hdf5(path)` (`src/bsd/ligo_adapter.py`): strictly expects official GWOSC schema (`/strain/Strain` with `Xspacing`, `Xstart`, `/quality/simple/DQmask`, `/meta`).
@@ -153,7 +159,7 @@ class WorkstationConfig:
 
 ### Desktop Launch
 - Double-click the **BSD Workstation** shortcut on the Windows Desktop (created via `scripts/create_desktop_shortcut.ps1`).
-- The shortcut invokes `launch_workstation.bat` with the working directory set to the repository root on drive D:, uses the repository-stored icon (`app/assets/bsd_workstation.ico`), activates the local `.venv`, and opens `http://127.0.0.1:8501` in the default web browser.
+- The shortcut invokes `launch_workstation.bat` with the working directory set to the repository root, uses the repository-stored icon (`app/assets/bsd_workstation.ico`), activates the local `.venv`, and opens `http://127.0.0.1:8501` in the default web browser.
 - **Duplicate-instance protection:** If BSD Workstation is already running on port `8501`, clicking the desktop shortcut again opens the existing session in your browser without spawning a second Streamlit server.
 
 ### Clean Shutdown
@@ -162,5 +168,5 @@ class WorkstationConfig:
 ### Troubleshooting
 - **Missing `.venv` or `streamlit.exe`:** The launcher pauses and prints the exact command to recreate `.venv` and install GUI dependencies (`pip install -e ".[gui,ligo,dev]"`).
 - **Port `8501` occupied by another application:** Close the conflicting local service on port `8501` or edit `PORT=8501` in `launch_workstation.bat`.
-- **Recreating the Desktop Shortcut:** Run `powershell -ExecutionPolicy Bypass -File scripts\create_desktop_shortcut.ps1` from the project root. Only the `.lnk` shortcut is placed on the Desktop; all project code, `.venv`, icon assets, and data remain strictly on drive D:.
+- **Recreating the Desktop Shortcut:** Run `powershell -ExecutionPolicy Bypass -File scripts\create_desktop_shortcut.ps1` from the project root. Only the `.lnk` shortcut is placed on the Desktop; project code, `.venv`, icon assets, and data remain in their configured local locations.
 

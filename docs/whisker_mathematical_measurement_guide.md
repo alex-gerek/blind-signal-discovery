@@ -1,190 +1,108 @@
-# WHISKER / Blind Signal Discovery (BSD) — Mathematical Measurement Guide & Source Code Audit
+# WHISKER / Blind Signal Discovery (BSD) — Mathematical Measurement Guide
 
-**Scope:** Exact mathematical documentation of the current BSD Local Measurement Workstation implementation (`v0.3 Phase 2b`, commits `edd1ec9`–`40c7bca`), verified directly against source code in `src/bsd/` and `app/bsd_workstation.py`.
-**Policy:** Zero detector math, calibration, or GUI code was modified during this audit. Reserved O3 holdout data (`docs/v03_o3_holdout_manifest.json`) remains 100% untouched.
+**Scope:** Python Local Measurement Workstation, software series `0.3.0`, with calibration and adaptive fixes in `986dd46`. Documentation corrected on 2026-11-26 against `e1bd520`. This is a source-based explanation, not a new scientific validation run.
 
----
+The [original guide](whisker_mathematical_measurement_guide_historical_40c7bca.md) is preserved as a historical record. Its 120-background-window, FAP=1% detections used the pre-audit fallback and must not be interpreted as valid 1% conformal detections.
 
-## 1. Concise Reference Table of All GUI Quantities, Units & Calculations
+The [browser demo](workstation/index.html) is a separate JavaScript implementation: one STFT scale, 512 Hz synthetic sampling and 2-second synthetic windows, different random streams and noise generators. The Python formulas and recorded numerical examples below do not establish browser-demo equivalence. See [known limitations](CURRENT_LIMITATIONS.md) before interpreting file measurements or exported results.
 
-| GUI Quantity / Label | Symbol | Units / Status | Exact Formula in Code | Source Implementation |
-| :--- | :---: | :---: | :--- | :--- |
-| **Waveform Amplitude** | $x[n]$ | Synthetic: **dimensionless** (`normalized_sigma`, $\sigma_{\text{noise}} = 1$); WAV PCM: normalized `[-1, 1]`; GWOSC: `strain × 1e18`; CSV/NPY: user-declared | Direct 1D float64 array `obs.signal` | `bsd/io_loader.py`, `bsd/workstation_runner.py`, `app/bsd_workstation.py:_plot_window_waveform_and_spec` |
-| **Relative Window Time** | $t_{\text{rel}}$ | Seconds (`s`), $[0, T_w)$ | $t_{\text{rel}}[n] = n / f_s$, where $T_w = 4.0\text{ s}$, $f_s = 1024\text{ Hz}$ | `app/bsd_workstation.py` (`t = np.arange(N) / fs`) |
-| **Absolute Timeline Time** | $t_{\text{abs}}$ | Seconds (`s`) from target start | $t_{\text{abs}} = k \cdot T_w + t_{\text{rel}}$ for window index $k$ | `bsd/workstation_runner.py:_build_rows` |
-| **Frequency** | $f$ | Hertz (`Hz`), $[0, f_s / 2]$ | STFT frequency grid $f_m = m \cdot (f_s / N_{\text{seg}})$ | `scipy.signal.stft` in `bsd/detector.py`, `app/bsd_workstation.py` |
-| **Spectrogram Power (`Power (dB)`)** | $P_{\text{dB}}(t,f)$ | **Relative dB** (`10 log10(|Z|^2)` re $1\text{ unit}^2$, NOT `dB/Hz` or `dB SPL`) | $10 \log_{10}\!\big(\max(|Z[f,t]|^2,\, 10^{-24})\big)$ with `nperseg=128`, `noverlap=96`, Hann window | `app/bsd_workstation.py:_plot_window_waveform_and_spec` |
-| **Noise RMS ($\sigma$)** | $\sigma_{\text{noise}}$ | Same units as $x[n]$ (synthetic: `1.0` dimensionless) | Synthetic noise explicitly RMS-normalized: $\sqrt{\frac{1}{N}\sum x[n]^2} = \sigma$ | `bsd/noise.py:_normalize_rms` |
-| **Injected Time-Domain Energy SNR** | $\mathrm{SNR}_E$ | **Dimensionless linear root-energy ratio** (NOT power ratio, NOT dB) | $\mathrm{SNR}_E = \frac{\sqrt{\sum_{n=0}^{N-1} s[n]^2}}{\sigma_{\text{noise}}} = \frac{\|s\|_2}{\sigma_{\text{noise}}}$ | `bsd/generator.py:_scale_to_energy_snr` |
-| **Per-Bin Normalized Excess Power** | $Z[f,t]$ | **Dimensionless** power ratio | $Z[f,t] = \frac{|S[f,t]|^2}{B_{\text{psd}}[f]\, B_{\text{time}}[t]}$ (2D median-normalized) | `bsd/detector.py:TemplateFreeDetector.analyze` |
-| **Raw Cluster Anomaly Score** | $A_{\text{raw}}$ | **Dimensionless** excess-power sum | $A_{\text{raw}}(C) = \sum_{(f,t) \in C} \big(Z[f,t] - 1\big)$ over 8-connected bins with $Z > 4.0$, $|C| \ge 2$ | `bsd/detector.py` (lines 187–204) |
-| **Standardized Global Score (`stft_max_score`)** | $S_{\text{global}}$ | **Dimensionless** null-tail standardized units | $S_{\text{global}} = \max_{r \in \text{scales}} \frac{A_{\text{raw},r} - m_r}{\max(q_{95,r} - m_r,\, 1.0)}$ | `bsd/detector_v2.py:ScaleNormalizationStats.standardize` & `.analyze` |
-| **Active Threshold (`stft_threshold`)** | $\tau_{\text{global}}$ | **Dimensionless** (exact same scale as $S_{\text{global}}$) | $k$-th order statistic $S_{(k)}$ of Split-B null global scores, $k = \min(N_{\text{th}}, \lceil (1-\alpha)(N_{\text{th}}+1) \rceil)$ | `bsd/detector_v2.py:MultiResolutionDetector.calibrate` |
-| **Empirical p-Value (`empirical_p_value`)** | $p_{\text{emp}}$ | **Dimensionless** probability in $[p_{\min}, 1]$ | $p_{\text{emp}}(s) = \frac{1 + \#\{i : S_i \ge s\}}{N_{\text{th}} + 1}$, resolution floor $p_{\min} = \frac{1}{N_{\text{th}} + 1}$ | `bsd/detector_v2.py:MultiResolutionCalibration.empirical_p_value` |
-| **Target FAP vs. Observed FAR** | $\alpha$ vs. $\widehat{\mathrm{FAR}}$ | **Dimensionless** probability (often displayed as `%`) | Target $\alpha \in (0,1)$; Observed $\widehat{\mathrm{FAR}} = \frac{N_{\text{false}}}{N_{\text{null}}}$ with 90% Wilson CI | `bsd/workstation_runner.py:_wilson_ci90` |
-| **Effective Sample Size (`N_eff`)** | $N_{\text{eff}}$ | Effective independent windows (dimensionless) | $N_{\text{eff}} = \frac{N_{\text{th}}}{1 + 2\sum_{k=1}^{L} (1 - \frac{k}{L+1})\max(\hat{\rho}_k, 0)}$ | `bsd/adaptive_regime_v2b.py:estimate_calibration_uncertainty` |
-| **Frozen-Ref Broadband Score** | $E_{\text{bb}}$ | **Dimensionless** positive excess $\chi^2$ sum | $\sum_{b=1}^{4} \max\!\big(0, \frac{\log \hat{S}_b - \mu_{b,R_0}}{\sigma_{b,R_0}}\big)^2$ over 4 continuum bands | `bsd/adaptive_regime_v2b.py:FrozenReferenceBroadbandChannel.score` |
+## 1. Quantities, coordinates, and units
 
----
+| Quantity | Definition and interpretation | Source |
+| --- | --- | --- |
+| Waveform | `Observation.signal`, a 1D time series. Synthetic units are dimensionless; integer PCM WAV is normalized; GWOSC strain is scaled by `1e18`; CSV/NPY units are user-declared. | `src/bsd/io_loader.py`, `src/bsd/workstation_runner.py` |
+| Within-window time | `t[n] = n / fs`. Canonical Python analysis uses `fs = 1024 Hz` and non-overlapping 4-second windows (4096 samples). | `slice_into_observations` |
+| Exported timeline time | Window `k` starts at `k * 4 s` relative to target start. Fields labelled absolute time in the UI are relative to that target origin; do not assume they contain a GPS or UTC epoch. | `_build_rows` |
+| Frequency | STFT frequency grid `f[m] = m * fs / nperseg`, in Hz. Detector maps exclude DC and Nyquist. | `src/bsd/detector.py` |
+| Display spectrogram | `10 log10(max(abs(Z_stft)**2, 1e-24))`, relative to one squared input unit. The Python display uses Hann `nperseg=128`, `noverlap=96`, no boundary extension or padding. | `_plot_window_waveform_and_spec` |
+| Root-energy SNR | `norm(s, 2) / sigma`, a linear dimensionless signal norm relative to the generator's noise scale. It is not dB or a power ratio. | `_scale_to_energy_snr` |
+| Raw cluster score | Sum of `(excess_power - 1)` over a qualifying 8-connected component. | `TemplateFreeDetector.analyze` |
+| Global STFT score | Maximum across scale-standardized raw window scores. It and the calibrated STFT threshold have the same dimensionless scale. | `MultiResolutionDetector` |
+| Empirical p-value | `(1 + number of null scores >= score) / (N_B + 1)`. | `MultiResolutionCalibration.empirical_p_value` |
+| Observed false-alarm fraction | False positives divided by the stated set of noise-only windows. Availability and exclusions must be reported with the denominator. | `run_synthetic_self_test` |
 
-## 2. Physical Quantities, Units, Assumptions & Limitations
+The display is squared spectral amplitude using SciPy's spectrum scaling, not a power spectral density in units squared per Hz, and not acoustic dB SPL. Its `Z_stft` is a Fourier amplitude, distinct from the detector's normalized excess-power map.
 
-### 2.1 Waveform Amplitude and Noise Statistics
-- **Verified implementation (`src/bsd/noise.py`):** Synthetic noise generators (`gaussian_white`, `pink_colored`, `nonstationary`, `impulsive`, `shifted_ar2`) generate zero-mean arrays and pass them through `_normalize_rms(x, sigma)` so that $\sqrt{\frac{1}{N}\sum_{n=0}^{N-1} x[n]^2} = \sigma$ exactly (`sigma = 1.0` in the self-test). Synthetic waveforms have **no physical units** (they are dimensionless normalized units `normalized_sigma`).
-- **Real files (`src/bsd/io_loader.py`):** Integer PCM `.wav` files are scaled to `[-1, 1]` (`PCM_int16_normalized`); GWOSC `.hdf5` files are scaled by $10^{18}$ into `O(1)` float64 units (`GWOSC_strain_x1e18_unwhitened`); `.csv`/`.npy` files retain user-supplied units without silent rescaling.
-- **Pink colored noise (`generate_pink_colored`):** Shapes white Gaussian FFT bins by $H(f) = (f^2 + f_{\text{knee}}^2)^{-\alpha/4}$ with $f_{\text{knee}} = 16\text{ Hz}$, $\alpha \sim \mathrm{Uniform}(0.85, 1.15)$ per window, DC bin zeroed, then RMS-normalized to $\sigma = 1.0$.
+### Noise scale and injected SNR
 
-### 2.2 Time and Frequency Coordinates
-- **Window slicing (`slice_into_observations`):** Non-overlapping segments of $T_w = 4.0\text{ s}$ at $f_s = 1024.0\text{ Hz}$ ($N = 4096$ samples/window).
-- **Absolute vs. relative time:** Window $k$ covers $[k \cdot T_w,\, (k+1)\cdot T_w)$. Inside window $k$, relative time runs $t_{\text{rel}} \in [0, 4.0)\text{ s}$. Candidate timestamps in `candidates.csv` are converted to absolute time $t_{\text{abs}} = k \cdot T_w + t_{\text{rel}}$.
-  - **Worked example (Window 57):** $k = 57 \implies$ window spans **$t_{\text{abs}} \in [228.000\text{ s},\, 232.000\text{ s})$**. The injected chirp spans $t_{\text{rel}} \in [1.3162\text{ s},\, 3.2291\text{ s}]$, which corresponds to **$t_{\text{abs}} \in [229.316\text{ s},\, 231.229\text{ s}]$**.
+`generate_gaussian_white` draws Gaussian samples with the specified population standard deviation; its individual windows are not forced to have exactly zero sample mean or exact RMS. Other generators, including `pink_colored`, use `_normalize_rms`; consult the specific generator before asserting exact sample normalization.
 
-### 2.3 Spectral Power and dB Conversion
-- **Verified implementation (`app/bsd_workstation.py`, lines 62–72):** The GUI spectrogram computes `scipy.signal.stft(x - median(x), fs=1024, window="hann", nperseg=128, noverlap=96, boundary=None, padded=False)` (frequency step $\Delta f = 8\text{ Hz}$, hop $\Delta t = 31.25\text{ ms}$) and plots:
-  $$P_{\text{dB}}[f, t] = 10 \log_{10}\!\big(\max(|Z[f,t]|^2,\, 10^{-24})\big)$$
-- **Important distinction:** `scipy.signal.stft` returns complex windowed Fourier amplitudes normalized by the window sum (`scaling="spectrum"` default). Therefore $|Z[f,t]|^2$ is **uncalibrated squared spectral amplitude** (`unit^2`), NOT one-sided power spectral density (`unit^2 / Hz`) and NOT acoustic `dB SPL`. Negative dB values simply mean $|Z[f,t]|^2 < 1\text{ unit}^2$.
+Python `pink_colored` uses the amplitude shaping factor
 
----
+$$H(f) = (f^2 + f_{\mathrm{knee}}^2)^{-\alpha/4},$$
 
-## 3. Mathematical Explanation of All Three GUI Plots (Worked Example: Window 57)
+with `f_knee = 16 Hz` and per-window `alpha` uniform on `[0.85, 1.15]`, followed by RMS normalization. Browser pink noise currently uses a different spectrum; equal model names and seeds do not give equal data.
 
-All numerical values below were **verified directly by executing** `run_synthetic_self_test` with `noise_model="pink_colored"`, `signal_family="linear_chirp"`, `n_bg_windows=120`, `n_neg_control_windows=40`, `n_pos_injections=10`, `seed=2026`, `window_duration_s=4.0`, `sample_rate=1024 Hz`, `target_fap=0.01`, `calibration_seed=0`.
+Injected signals are scaled as
 
-1. **Plot 1 — Waveform (`_plot_window_waveform_and_spec`, top panel):**
-   - **X-axis:** `Time Within Window (s)` — relative time $t_{\text{rel}} \in [0, 4.0)\text{ s}$ (`4096` samples).
-   - **Y-axis:** `Amplitude` — raw time-series $x[n] = n_{57}[n] + s_{57}[n]$ in dimensionless normalized noise units ($\sigma_{\text{noise}} = 1.0$).
-   - **Window 57 values:** Noise RMS $= 1.0000$. At `SNR = 12`, peak signal amplitude is `0.4029` (signal RMS `0.1875`) — completely buried below the `1.0` RMS noise floor in the time domain! At `SNR = 18`, peak signal amplitude is `0.6043` (signal RMS `0.2812`) — still visually submerged in the time-domain waveform.
-2. **Plot 2 — Spectrogram (`_plot_window_waveform_and_spec`, bottom panel):**
-   - **X-axis:** `Time Within Window (s)` ($t_{\text{rel}} \in [0, 4.0)\text{ s}$).
-   - **Y-axis:** `Frequency (Hz)` ($[0, 512]\text{ Hz}$).
-   - **Colorbar:** `Power (dB)` $= 10 \log_{10}(\max(|Z[f,t]|^2, 10^{-24}))$.
-   - **Red bounding boxes:** Drawn for every accepted candidate in `win.raw_stft_candidates` using `(c.t_start, c.f_min)` to `(c.t_end, c.f_max)` in relative window coordinates.
-   - **Window 57 behavior:** The injected chirp sweeps linearly from `112.97 Hz` to `210.10 Hz` over `1.316 s` to `3.229 s`. Because pink noise concentrates power at low frequencies and drops off above `100 Hz`, the diagonal chirp track stands out in the `110–210 Hz` band even though it is invisible in the time-domain waveform. At `SNR = 12`, zero boxes are drawn (missed); at `SNR = 18`, 4 multi-scale candidate boxes are drawn, led by `long_500ms` spanning `[1.562 s, 3.312 s] × [131.0 Hz, 207.0 Hz]`.
-3. **Plot 3 — Full-Timeline Anomaly Score vs. Threshold (`_plot_timeline`):**
-   - **X-axis:** `Window Index` $k \in \{0, 1, \dots, 59\}$ (`0..39` are the 40 pure-noise negative-control windows; `41, 43, 45, ..., 59` are the 10 positive-injection windows, with Window `57` being injection `#8`).
-   - **Y-axis:** `STFT Max Global Score` ($S_{\text{global}}$, dimensionless) in `transient` mode, or `Frozen-Ref Broadband Excess Score` ($E_{\text{bb}}$, dimensionless) in `persistent` mode.
-   - **Red dashed line:** `Active Empirical Threshold` ($\tau_{\text{global}} = 2.2568$ for both `SNR = 12` and `SNR = 18`).
-   - **Shading:** Orange = `CONTINUUM_DRIFT` warning; Purple = `GLITCH_STORM` warning.
+$$s_{\mathrm{scaled}} = s_{\mathrm{clean}}\frac{\mathrm{SNR}_E\,\sigma}{\|s_{\mathrm{clean}}\|_2}.$$
 
----
+For a nonzero waveform, increasing root-energy SNR from 12 to 18 multiplies signal amplitude by 1.5 and signal energy by 2.25 (+3.52 dB). In ideal white noise with known variance this norm agrees with the optimal discrete matched-filter SNR. In colored noise it is an unweighted time-domain norm and generally differs from noise-weighted matched-filter SNR. Neither the noise peak amplitude nor a spectrogram score is the injected SNR.
 
-## 4. Exact SNR Formula & Determinism Audit (`SNR = 12` vs. `SNR = 18`)
+## 2. Python STFT statistic
 
-### 4.1 Exact Implementation (`src/bsd/generator.py`, lines 105–114)
-```python
-def _scale_to_energy_snr(clean_signal, noise_sigma, target_energy_snr):
-    energy_norm = float(np.linalg.norm(clean_signal))
-    return clean_signal * (target_energy_snr * noise_sigma / energy_norm)
-```
-The exact mathematical formula is:
-$$s_{\text{scaled}}[n] = s_{\text{clean}}[n] \cdot \frac{\mathrm{SNR}_E \cdot \sigma_{\text{noise}}}{\|s_{\text{clean}}\|_2}, \qquad \text{so that} \qquad \mathrm{SNR}_E = \frac{\sqrt{\sum_{n=0}^{N-1} s_{\text{scaled}}[n]^2}}{\sigma_{\text{noise}}}$$
+The default bank uses three Hann STFT scales at 1024 Hz:
 
-- **Type of ratio:** $\mathrm{SNR}_E$ is a **linear root-energy-to-RMS-noise ratio** (dimensionless, **not** in dB and **not** a squared power ratio). In white Gaussian noise of variance $\sigma_{\text{noise}}^2$, $\mathrm{SNR}_E$ equals the exact discrete matched-filter optimal SNR $\rho_{\text{opt}}$. In **colored** noise (`pink_colored` or `shifted_ar2`), $\mathrm{SNR}_E$ is an **unweighted** time-domain energy ratio and can differ substantially from the true colored matched-filter SNR $\sqrt{4\int |H(f)|^2 / S_n(f)\,df}$!
-- **Worked numerical example (Window 57):**
-  - Unscaled chirp norm: $\|s_{\text{clean}}\|_2 = 29.786218$; $\sigma_{\text{noise}} = 1.0$.
-  - At `SNR = 12`: scale factor $= 12.0 / 29.786218 = 0.402871 \implies \|s_{12}\|_2 = 12.000$, energy $\sum s_{12}^2 = 144.0$, peak $= 0.4029$, window RMS $= 12.0 / \sqrt{4096} = 0.1875$.
-  - At `SNR = 18`: scale factor $= 18.0 / 29.786218 = 0.604306 \implies \|s_{18}\|_2 = 18.000$, energy $\sum s_{18}^2 = 324.0$, peak $= 0.6043$, window RMS $= 18.0 / \sqrt{4096} = 0.2812$.
-  - **Ratio (`18` vs `12`):** Amplitude increases by **$1.50\times$**; signal energy and STFT power increase by **$1.50^2 = 2.25\times$** (**$+3.52\text{ dB}$**).
+| Scale | `nperseg` / `noverlap` | Frequency spacing | Hop |
+| --- | --- | --- | --- |
+| `short_31ms` | 32 / 28 | 32 Hz | 3.90625 ms |
+| `medium_125ms` | 128 / 96 | 8 Hz | 31.25 ms |
+| `long_500ms` | 512 / 384 | 2 Hz | 125 ms |
 
-### 4.2 Verified Determinism Audit (`seed = 2026`)
-Tracing `run_synthetic_self_test` (`src/bsd/workstation_runner.py`, lines 350–380) and verifying via `np.array_equal`:
-1. **Identical across `SNR = 12` and `SNR = 18`:** Because `rng = make_split_rng(2026, "workstation_self_test")` draws all 120 background windows, all 60 target noise windows, and all 10 unscaled `generate_clean_signal` waveforms in the exact same order **before** multiplying by `target_snr`, the following are **100% bit-for-bit identical** between `SNR = 12` and `SNR = 18`:
-   - All 120 background calibration windows, `N_thresh = 84`, `N_eff = 46.81`, `p_LB = 0.3321`, and global threshold **`2.2568`**.
-   - All 40 negative-control windows (same `2/40 = 5.0%` false alarms) and underlying target noise in Window 57.
-   - The unscaled chirp waveform, start/end times (`1.3162–3.2291 s`), and frequency trajectory (`112.97–210.10 Hz`).
-2. **What changes:** Strictly the linear amplitude multiplier on the 10 injected chirps (`1.50×` amplitude, `2.25×` power).
+Each scale removes the window median, computes unpadded STFT power, estimates a frequency baseline from temporal medians divided by `ln(2)`, smooths that baseline, and divides by a similarly estimated temporal envelope. The median-to-mean correction is motivated by the exponential power model for Gaussian noise. Estimated baselines, finite windows, overlapping frames and colored noise mean the final map is not guaranteed to consist of independent `Exp(1)` samples.
 
----
+Bins above the seed threshold (default 4.0) form 8-connected components; components with at least two bins receive raw score
 
-## 5. Exact Derivation of the STFT Detection Statistic
+$$A(C) = \sum_{(f,t)\in C}(Z[f,t]-1).$$
 
-### Step 1 — Multi-Resolution STFT Bank (`src/bsd/detector_v2.py`, lines 31–68)
-Each 4-second window is analyzed independently at **three Hann-windowed STFT scales** (DC and Nyquist bins dropped):
-- `short_31ms`: `nperseg=32`, `noverlap=28` ($\Delta f = 32\text{ Hz}$, $\Delta t = 3.9\text{ ms}$, `freq_k=5`, `time_k=31`)
-- `medium_125ms`: `nperseg=128`, `noverlap=96` ($\Delta f = 8\text{ Hz}$, $\Delta t = 31.25\text{ ms}$, `freq_k=11`, `time_k=15`)
-- `long_500ms`: `nperseg=512`, `noverlap=384` ($\Delta f = 2\text{ Hz}$, $\Delta t = 125\text{ ms}$, `freq_k=21`, `time_k=7`)
+On chronological Split A, each scale receives median `m_r` and spread `s_r = max(q95_r - m_r, 1)`. Scores are standardized as `(A - m_r) / s_r`. Split B contains the resulting global maxima across scales. With default `norm_fraction=0.30`, `n_A=max(20, round(0.30*n_total))` and `N_B=n_total-n_A`.
 
-### Step 2 — Within-Window 2D Robust Background Normalization (`src/bsd/detector.py`, lines 169–184)
-For each scale, let $P[f, t] = |S[f,t]|^2$. Under stationary Gaussian noise, $P[f,t]$ is exponentially distributed with median $= \ln(2) \cdot \mathbb{E}[P[f,t]]$:
-1. Spectral baseline: $\hat{S}_{\text{raw}}[f] = \mathrm{median}_t(P[f,t]) / \ln 2$, smoothed across frequency by a median filter of width `freq_k` to obtain $B_{\text{psd}}[f]$.
-2. Spectral whitening: $W[f,t] = P[f,t] / B_{\text{psd}}[f]$.
-3. Temporal floor: $\hat{E}_{\text{raw}}[t] = \mathrm{median}_f(W[f,t]) / \ln 2$, smoothed in time by a median filter of width `time_k` to obtain $B_{\text{time}}[t]$.
-4. Dimensionless excess-power map: $Z[f,t] = W[f,t] / B_{\text{time}}[t]$ (under stationary Gaussian noise, $Z[f,t] \approx \mathrm{Exp}(1)$ with mean $1$).
+Persistent broadband search uses a frozen-reference sum of squared positive standardized log-band deviations. That construction does not establish a chi-square null distribution. Its threshold is calibrated from background scores. Single-channel broadband excess remains ambiguous with background drift.
 
-### Step 3 — Connected-Component Clustering & Raw Score (`src/bsd/detector.py`, lines 187–204)
-- Threshold bins at $Z[f,t] > 4.0$ (`bin_seed_threshold = 4.0`), group into 8-connected components, keep clusters with $|C| \ge 2$ bins (`min_cluster_bins = 2`).
-- Each cluster's dimensionless **raw anomaly score** is:
-  $$A_{\text{raw}}(C) = \sum_{(f,t) \in C} \big(Z[f,t] - 1.0\big)$$
-- Window max raw score at scale $r$: $A_{\text{raw},r} = \max_{C} A_{\text{raw}}(C)$ (or `0.0` if no qualified cluster).
+## 3. Exact conformal calibration and decisions
 
-### Step 4 — Split-Sample Per-Scale Standardization & Global Decision (`src/bsd/detector_v2.py`, lines 238–359)
-The background windows are split chronologically into **Split A (`30%`, `n_norm`)** and **Split B (`70%`, `n_thresh`)**:
-- On **Split A**, for each scale $r$, compute null median $m_r = \mathrm{median}(A_{\text{raw},r})$ and upper-tail spread $s_r = \max(Q_{0.95}(A_{\text{raw},r}) - m_r,\, 1.0)$.
-- Standardize every cluster and window max into **dimensionless null-tail units**:
-  $$S_r = \frac{A_{\text{raw},r} - m_r}{s_r}, \qquad S_{\text{global}} = \max_{r \in \{\text{short},\,\text{medium},\,\text{long}\}} S_r$$
-- On **Split B**, collect $N_{\text{th}}$ null global scores $S_{\text{global}, 1}, \dots, S_{\text{global}, N_{\text{th}}}$, sort them, and set the **calibrated threshold**:
-  $$\tau_{\text{global}} = S_{(k)}, \qquad k = \min\!\Big(N_{\text{th}},\, \big\lceil (1 - \alpha)(N_{\text{th}} + 1) \big\rceil\Big)$$
-- **Decision rule:** A candidate is nominated if and only if $S_r(C) > \tau_{\text{global}}$ (strict inequality). Its conformal empirical p-value is $p_{\text{emp}}(s) = (1 + \#\{i : S_i \ge s\}) / (N_{\text{th}} + 1)$.
+For `N_B` finite null scores and finite `0 < alpha < 1`, the implementation finds the largest integer `m` satisfying
 
-### Step 5 — Direct Comparability of `23.7075` vs. `2.2568` (Verified!)
-- **Yes — directly comparable!** In Window 57 at `SNR = 18`, the top candidate (`long_500ms`) had `raw_anomaly_score = 501.1308` (`72` connected bins, `peak_excess_power = 18.81`), which standardized to **`standardized_score = 23.7075`** (`stft_max_score = 23.7075`). The calibrated threshold **`stft_threshold = 2.2568`** is in the **exact same dimensionless standardized scale**. Because `23.7075 > 2.2568` (and exceeds all `84` Split-B null scores), it is nominated with $p_{\text{emp}} = 1 / (84 + 1) = 0.011765$ (`p_value_is_upper_bound = True`, meaning $p \le 0.0118$).
-- **Why `SNR = 12 -> 18` caused a 13× score jump (`1.8018 -> 23.7075`):** Because of the hard per-bin seed cutoff ($Z > 4.0$) and 8-connected clustering. At `SNR = 12`, only scattered bins along the chirp ridge crossed $Z > 4.0$, giving $S_{\text{global}} = 1.8018 < 2.2568$ (missed). Increasing signal power by $2.25\times$ pushed the continuous ridge above $Z > 4.0$, merging into a `72`-bin cluster (`raw = 501.13`, `std = 23.71`).
+$$\frac{m}{N_B+1}\le\alpha.$$
 
----
+It checks this condition with the same floating-point division used for empirical p-values, without an upward tolerance. When `m >= 1`, the one-based rank is `k = N_B + 1 - m` and the threshold is the `k`-th sorted null score. A detection requires a strict threshold crossing. Ties at the threshold are conservatively rejected. A permitted crossing must have `p_emp <= alpha`; a large score cannot bypass an unattainable target FAP.
 
-## 6. Calibration, Uncertainty & Why a Missed Injection ≠ Signal Absence
+If `1/(N_B+1) > alpha`, no finite order-statistic threshold can support the requested empirical p-value. Standalone calibration rejects this by default; explicit unavailable-calibration paths use `None`/JSON `null` and abstain. The Python Workstation rejects an unattainable initial calibration with an explanatory input error. Adaptive managers can later become unavailable and recover as enough background accumulates. Per-window availability and the threshold actually used must accompany every decision.
 
-- **Target FAP ($\alpha$) vs. Observed FAR ($\widehat{\mathrm{FAR}}$):** $\alpha = 0.01$ is the *design target* false-alarm probability. With finite calibration size $N_{\text{th}} = 84$ (from `120` background windows with `30%` Split A = `36` and `70%` Split B = `84`), $k = \min(84, \lceil 0.99 \times 85 \rceil) = 84$ (the sample maximum!).
-- **Empirical p-value resolution vs. true FAR uncertainty:** $p_{\min} = 1/(84 + 1) = 1.18\%$ is strictly the discrete resolution floor of $p_{\text{emp}}$. Under i.i.d. sampling, the true population FAR of $\tau_{\text{global}}$ follows $\mathrm{Beta}(1, 84)$ with 90% CI `[0.06%, 3.50%]`. Accounting for observed lag autocorrelation (`N_eff = 46.81`, `Ljung-Box p = 0.3321`), the dependence-aware 90% Beta FAR CI widens to **`[0.11%, 6.20%]`**, which is completely consistent with the observed `2/40 = 5.0%` false alarms on the negative control!
-- **`PROVISIONAL` vs. `VALIDATED` (`classify_calibration_status`):**
-  - `INSUFFICIENT`: `n_bg < 60` or `N_eff < 45`.
-  - `VALIDATED`: requires ALL four conditions: `N_thresh >= 150`, `N_eff >= 120`, `Ljung-Box p >= 0.05`, AND dependence-aware upper 90% FAR CI `<= 2.5%`.
-  - `PROVISIONAL`: anything in between. In our `120`-window self-test (`N_th = 84`, `N_eff = 46.8`, upper CI `6.2%`), status is correctly **`PROVISIONAL`**.
-- **Why a missed injection does NOT prove a signal is absent:** Window 57 at `SNR = 12` contained a real `linear_chirp` (`||s||_2 = 12.0`), yet scored `1.8018 < 2.2568`. A non-detection only means the signal's local STFT excess-power clusters did not exceed the calibrated `1%` FAP threshold under the current background noise realization — never that no signal was present.
+| Total background windows | Split A | Split B | Minimum empirical p | FAP=1% attainable? |
+| ---: | ---: | ---: | ---: | --- |
+| 120 | 36 | 84 | `1/85 = 0.0117647...` | No |
+| 200 | 60 | 140 | `1/141 = 0.0070922...` | Yes |
+| 220 | 66 | 154 | `1/155 = 0.0064516...` | Yes |
 
----
+At FAP=1%, at least 99 Split-B scores are required. Do not clip an unavailable rank to the sample maximum. The former 120-window example did so and is corrected in the [erratum](AUDIT_ERRATUM_47a5475.md).
 
-## 7. Interface & Scientific Clarity Audit (Implemented in `app/bsd_workstation.py`)
+The legacy `p_value_is_upper_bound=True` flag means the score exceeds every observed null score and the returned p-value is at the finite-sample resolution floor. It does not prove that the true population tail probability is below that floor. Population FAR remains uncertain after calibration.
 
-All six labeling ambiguities identified in the source audit have been implemented in `app/bsd_workstation.py` (without modifying detector mathematics):
+Conformal false-alarm statements rely on exchangeability of calibration and future null scores (conditional on the separately fitted score normalization). They are marginal over repeated calibration and evaluation samples; they do not guarantee the same conditional FAR for every frozen calibration realization or establish stationarity on arbitrary sensors.
 
-1. **Spectrogram colorbar:** Relabeled to `Relative STFT Power (10 log10 |Z|^2, dB re 1 unit^2; Hann nperseg=128)`.
-2. **Waveform Y-axis:** Dynamically displays `Amplitude ({units})` from `run_metadata["target_preprocessing"]["units"]`.
-3. **Timeline Y-axis & legend:** Explicitly labeled `(dimensionless)` with the exact numeric active calibrated threshold displayed in the legend (`Active Calibrated Threshold = 2.2568 (dimensionless)`).
-4. **Candidate table caption:** Explicitly clarifies that **`standardized_score > active_threshold`** (not `raw_anomaly_score`) governs detection, and displays `p_min = 1 / (N_thresh + 1)`.
-5. **Self-test SNR slider:** Relabeled `Injected Root-Energy SNR (||s||_2 / sigma, linear dimensionless — NOT dB)`.
-6. **Window Inspector title:** Displays `Absolute Time: [t_abs_0, t_abs_1] s` alongside the window index.
+## 4. Availability, uncertainty, and validation labels
 
----
+`PROVISIONAL` and `VALIDATED` are internal Python calibration screening labels. `VALIDATED` requires all of: `N_B >= 150`, estimated `N_eff >= 120`, Ljung-Box linear-lag p-value at least 0.05, and dependence-adjusted upper 90% FAR reference interval no larger than 2.5%. `INSUFFICIENT` includes unattainable FAP or too little background/effective sample size. Initial unattainable input is rejected before a normal Workstation run.
 
-## 8. Beginner-Friendly Glossary
+`N_eff` uses Bartlett-weighted positive lag correlations and is an estimate, not a measured count of truly independent observations. A nonsignificant Ljung-Box result does not prove independence or exchangeability. For continuous i.i.d. null scores, the tail probability above a random `k`-th calibration order statistic follows `Beta(N_B+1-k, k)` across repeated calibration samples. Ties and model violations require qualifications. Replacing `N_B` with estimated `N_eff` is a heuristic dependence adjustment; its nominal coverage is not guaranteed for arbitrary dependent sensors.
 
-- **STFT (Short-Time Fourier Transform):** Slices a time series into short overlapping frames and measures how much energy is present at each frequency in each frame, producing a 2D time-frequency image (spectrogram).
-- **Excess Power ($Z[f,t]$):** How many times stronger a spectrogram pixel is than the local background noise floor ($Z = 1$ is average noise; $Z = 18$ is $18\times$ average noise power).
-- **Connected Cluster:** Adjacent bright spectrogram pixels ($Z > 4.0$) touching horizontally, vertically, or diagonally, grouped into a single localized candidate event.
-- **Root-Energy SNR ($\|s\|_2 / \sigma$):** A linear, dimensionless measure of total signal strength relative to 1-sample noise RMS. Multiplying amplitude by $1.5\times$ multiplies SNR by $1.5\times$ and power by $2.25\times$ ($+3.52\text{ dB}$).
-- **Target FAP vs. Empirical FAR:** Target FAP is the false-alarm rate you *ask for* (`1%`); empirical FAR is the fraction of clean background windows that *actually* cross your finite-sample threshold.
-- **Effective Sample Size ($N_{\text{eff}}$):** How many *truly independent* background windows your calibration set is worth after discounting window-to-window temporal correlation.
-- **Empirical p-Value ($p_{\text{emp}}$):** The fraction of calibration background windows that scored at least as high as your candidate. With $N_{\text{th}} = 84$, the smallest possible value is $1 / 85 = 0.0118$.
+`CALIBRATED_STATIONARY` describes the regime monitor's state relative to its active reference. It is not independent proof of physical stationarity. Dedicated-channel availability, Union availability, diagnostic nominations, and accepted active decisions are separate fields. The Sidak Union budget assumes independence or suitable positive orthant dependence of channels; it is not an unconditional arbitrary-dependence guarantee.
 
----
+A non-detection with an available detector is a miss for that injection and configuration. An unavailable decision is abstention. Current self-test exports retain legacy all-window counters for compatibility, with explicit semantics. The UI and new `*_available` rates exclude abstentions, report available noise exposure and separate available misses from abstained injections. A zero eligible denominator produces `null`, not an estimated zero rate. Consult [known limitations](CURRENT_LIMITATIONS.md) when interpreting legacy fields.
 
-## 9. Focused Audit: `empirical_p_value = 0.0118` vs. `target_fap = 0.01` and `CALIBRATED_STATIONARY` vs. `PROVISIONAL`
+## 5. Recorded Python example: 220 background windows
 
-### 9.1 Why a Detected Candidate Can Display `empirical_p_value = 0.0118 > target_fap = 0.01`
-In the 120-window self-test (`seed = 2026`, `target_fap = 0.01`, `SNR = 18`), Window 57's top candidate has `standardized_score = 23.7075`, calibrated threshold `2.2568`, **is reported as detected**, yet displays `empirical_p_value = 0.011765` (`~0.0118 > 0.01`).
+The [manual verification record](manual_workstation_synthetic_verification_986dd46.md) documents observations and an in-memory control check at `986dd46`: `transient`, `causal_trailing`, `target_fap=0.01`, calibration seed 0, self-test seed 2026, 220 background windows, 80 noise-only target windows, 10 pink-noise linear-chirp injections, vetoes off.
 
-**This is 100% mathematically consistent** and arises directly from finite-sample conformal resolution:
-1. **Threshold selection (`src/bsd/detector_v2.py`, lines 280–281):** With `120` background windows (`30%` Split A = `36`, `70%` Split B = $N_{\text{th}} = 84$), the order-statistic index for $\alpha = 0.01$ is:
-   $$k = \min\!\big(84,\, \lceil 0.99 \times 85 \rceil\big) = \min(84, 85) = 84$$
-   Thus $\tau_{\text{global}} = S_{(84)} = 2.2568$ is the **sample maximum** of all `84` calibration null scores — the strictest empirical threshold constructible from `84` samples.
-2. **Candidate decision (`detector_v2.py`, line 338):** The decision rule tests `standardized_score > global_threshold` (`23.7075 > 2.2568` -> **True**). It does **not** test `empirical_p_value <= target_fap`.
-3. **Conformal p-value floor (`detector_v2.py`, line 110):** Because zero calibration scores satisfy $S_i \ge 23.7075$ (`n_ge = 0`), the conformal p-value is:
-   $$p_{\text{emp}}(23.7075) = \frac{1 + 0}{84 + 1} = \frac{1}{85} = 0.011765$$
-   with `p_value_is_upper_bound = True` (meaning $p \le 0.0118$, not $p = 0.0118$). Empirically resolving $p_{\text{emp}} \le 0.01$ requires at least $N_{\text{th}} \ge 99$ threshold samples ($1/100 = 0.01$, i.e., `>= 142` background windows at `30%` Split A).
+The recorded threshold is approximately 2.888922, with 154 Split-B windows, estimated `N_eff=99.73` and `PROVISIONAL` calibration. Union is unavailable. SNR 18 recovered 10/10 injections; SNR 8 recovered 3/10; both recorded 1/80 noise-only false alarms. At SNR 8, window 4 was a noise false alarm, window 81 a missed injection, and window 83 a detected injection.
 
-### 9.2 Distinction Between `CALIBRATED_STATIONARY` (Candidate/Window Level) and `PROVISIONAL` (Workstation Level)
-These two labels answer **orthogonal questions** at different levels of the hierarchy:
-- **`CALIBRATED_STATIONARY` (Stream B per-window / per-candidate regime state):** Indicates that *during this specific 4-second window*, the background spectral continuum is statistically consistent with the active calibration reference (no detected regime shift, transition, or warmup). It describes **local stationarity**, NOT calibration ensemble size.
-- **`PROVISIONAL` (Workstation-wide `CalibrationStatusAudit`):** Indicates that the *calibration ensemble itself* does not satisfy all four statistical validation criteria (`N_thresh >= 150`, `N_eff >= 120`, `Ljung-Box p >= 0.05`, and dependence-aware upper 90% Beta FAR CI `<= 2.5%`). For `120` background windows (`N_thresh = 84`, `N_eff = 46.81`, 90% FAR CI `[0.11%, 6.20%]`), the workstation-wide calibration is **`PROVISIONAL`** even when every individual target window is **`CALIBRATED_STATIONARY`** relative to that provisional reference.
+These are previously recorded single-seed observations, not newly generated results. No UI export bundle was saved from that manual session. They do not establish general sensitivity or real-data FAR, and cannot serve as browser-demo reference values.
 
+## 6. Plots, exports, and provenance
+
+The waveform shows input amplitude; the display spectrogram shows relative STFT power; the timeline compares scores with the threshold used. Candidate boxes are diagnostic structures and may exist while an accepted decision is unavailable. A box is not a physical event or proof of novelty.
+
+Use `active_mode_anomaly_flag` for the recorded accepted decision and retain `detection_available`, warnings, Union status and provenance. Schema v2 retains rounded legacy values and adds `*_full_precision` score, threshold, p-value and candidate-coordinate values. Near a boundary, use the full-precision fields and recorded active decision; rounded display values can still be equal for a valid crossing. Legacy records without precise inputs are marked unavailable for precision rather than reconstructed. The shared Python report/CSV builders serve both saved bundles and UI downloads. Full-precision decisions and strict JSON do not replace missing generator/input provenance for reproducing an entire run. See [known limitations](CURRENT_LIMITATIONS.md).
+
+For each future check, save the implementation revision, configuration, seeds, input hashes, preprocessing, calibration evidence and full availability accounting in a fresh run location. Preserve earlier results. The [historical guide](whisker_mathematical_measurement_guide_historical_40c7bca.md), [erratum](AUDIT_ERRATUM_47a5475.md), and [research history](RESEARCH_HISTORY.md) explain which previous observations remain historical.

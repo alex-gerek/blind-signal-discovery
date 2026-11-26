@@ -30,6 +30,7 @@ from bsd.io_loader import (
     O3HoldoutBlockedError,
     load_timeseries_file,
 )
+from bsd.upload_storage import save_uploaded_bytes
 from bsd.workstation_runner import (
     CAL_STATUS_INSUFFICIENT,
     CAL_STATUS_PROVISIONAL,
@@ -37,6 +38,8 @@ from bsd.workstation_runner import (
     WorkstationConfig,
     WorkstationRunResult,
     export_workstation_run,
+    build_workstation_report,
+    build_workstation_csv,
     run_synthetic_self_test,
     run_workstation_analysis,
 )
@@ -45,12 +48,9 @@ st.set_page_config(page_title="BSD Local Measurement Workstation", layout="wide"
 
 
 def _save_upload_to_local_tmp(uploaded_file: Any) -> Path:
-    tmp_dir = PROJECT_ROOT / ".tmp" / "uploads"
-    tmp_dir.mkdir(parents=True, exist_ok=True)
-    safe_name = Path(uploaded_file.name).name
-    out_path = tmp_dir / safe_name
-    out_path.write_bytes(uploaded_file.getvalue())
-    return out_path
+    return save_uploaded_bytes(
+        uploaded_file.name, uploaded_file.getvalue(), PROJECT_ROOT / ".tmp" / "uploads"
+    )
 
 
 def _plot_window_waveform_and_spec(result: WorkstationRunResult, win_idx: int) -> plt.Figure:
@@ -149,6 +149,23 @@ def _plot_timeline(result: WorkstationRunResult) -> plt.Figure:
     return fig
 
 
+def _self_test_display_values(gt: dict[str, Any]) -> dict[str, str]:
+    """Display current availability-conditioned fields; never invent legacy exposure."""
+    far = gt.get("negative_control_far_available")
+    n_neg = gt.get("negative_control_available_windows")
+    n_pos = gt.get("positive_injections_available")
+    efficiency = gt.get("detection_efficiency_available")
+    ci = gt.get("detection_efficiency_available_ci90")
+    return {
+        "far": "UNAVAILABLE" if far is None else f"{far * 100:.2f}% ({gt['negative_control_false_alarms']}/{n_neg})",
+        "efficiency": "UNAVAILABLE" if efficiency is None or ci is None else f"{efficiency * 100:.1f}% [{ci[0] * 100:.0f}%, {ci[1] * 100:.0f}%]",
+        "exposure": "UNAVAILABLE" if n_neg is None else f"{n_neg} windows / {gt['negative_control_available_exposure_s']:g} s",
+        "detected": f"{gt['positive_injections_detected']} / {n_pos}" if n_pos is not None else "UNAVAILABLE (legacy audit)",
+        "missed": f"{gt['positive_injections_missed_available']} / {n_pos}" if n_pos is not None else "UNAVAILABLE (legacy audit)",
+        "abstained": str(gt['positive_injections_abstained']) if n_pos is not None else "UNAVAILABLE (legacy audit)",
+    }
+
+
 def main() -> None:
     st.title("Blind Signal Discovery (BSD) — Local Measurement Workstation")
     st.info(
@@ -224,10 +241,15 @@ def main() -> None:
             allow_resamp = st.checkbox("Allow explicit anti-aliased resampling to 1024 Hz (Nyquist 512 Hz)", value=False)
             man_fs = st.number_input("Manual Sample Rate Hz (for .npy / headerless .csv, 0 = auto)", 0.0, 1000000.0, 0.0, step=1.0)
             ch_idx_raw = st.number_input("Channel Index (for multi-channel .wav/.npy, -1 = auto/mono)", -1, 64, -1, step=1)
+            csv_value_col = int(st.number_input("CSV value column (0-based)", 0, 1000, 0, step=1))
+            csv_time_col_raw = int(st.number_input("CSV time column in seconds (-1 = none)", -1, 1000, -1, step=1))
+            st.caption("CSV columns apply to both files. Time columns must be finite, increasing and uniformly sampled; supply a common time reference.")
             units_lbl = st.text_input("Units Label", value="arbitrary")
             run_btn = st.button("Run Local File Measurement", type="primary")
 
     if run_btn:
+        # A rejected new input must not leave the previous run available as its result.
+        st.session_state.pop("bsd_last_result", None)
         try:
             with st.spinner("Running BSD calibration and detection..."):
                 if run_kind == "Synthetic Injection Self-Test":
@@ -249,10 +271,12 @@ def main() -> None:
                     fs_opt = float(man_fs) if man_fs > 0 else None
                     ch_opt = int(ch_idx_raw) if ch_idx_raw >= 0 else None
                     tgt_ts = load_timeseries_file(
-                        tgt_path, sample_rate_hz=fs_opt, channel_index=ch_opt, allow_resample=allow_resamp, units=units_lbl
+                        tgt_path, sample_rate_hz=fs_opt, channel_index=ch_opt, allow_resample=allow_resamp, units=units_lbl,
+                        csv_value_column=csv_value_col, csv_time_column=csv_time_col_raw if csv_time_col_raw >= 0 else None
                     )
                     bg_ts = load_timeseries_file(
-                        bg_path, sample_rate_hz=fs_opt, channel_index=ch_opt, allow_resample=allow_resamp, units=units_lbl
+                        bg_path, sample_rate_hz=fs_opt, channel_index=ch_opt, allow_resample=allow_resamp, units=units_lbl,
+                        csv_value_column=csv_value_col, csv_time_column=csv_time_col_raw if csv_time_col_raw >= 0 else None
                     )
                     result = run_workstation_analysis(tgt_ts, bg_ts, cfg)
             st.session_state["bsd_last_result"] = result
@@ -347,23 +371,32 @@ def main() -> None:
         if result.ground_truth_audit is not None:
             gt = result.ground_truth_audit
             st.subheader("Synthetic Self-Test Ground-Truth Audit")
-            g1, g2, g3, g4 = st.columns(4)
-            g1.metric("Negative Control FAR", f"{gt['negative_control_far']*100:.2f}% ({gt['negative_control_false_alarms']}/{gt['negative_control_windows']})")
-            g2.metric("Positive Detected", f"{gt['positive_injections_detected']} / {gt['positive_injections_total']}")
-            g3.metric("Positive Missed", f"{gt['positive_injections_missed']} / {gt['positive_injections_total']}")
-            g4.metric("Efficiency (90% CI)", f"{gt['detection_efficiency']*100:.1f}% [{gt['detection_efficiency_ci90'][0]*100:.0f}%, {gt['detection_efficiency_ci90'][1]*100:.0f}%]")
+            display = _self_test_display_values(gt)
+            g1, g2, g3 = st.columns(3)
+            g1.metric("Negative Control FAR (available)", display["far"])
+            g2.metric("Conditional Efficiency (90% CI)", display["efficiency"])
+            g3.metric("Available Noise Exposure", display["exposure"])
+            g4, g5, g6 = st.columns(3)
+            g4.metric("Positive Detected / Available", display["detected"])
+            g5.metric("Positive Missed / Available", display["missed"])
+            g6.metric("Positive Abstained", display["abstained"])
+            st.caption("Conditional rates exclude unavailable decisions. Legacy all-window counters remain in the export with explicit semantics; Wilson intervals assume independent evaluation windows.")
 
             st.markdown("**Detected Injections**")
             if gt["detected_records"]:
                 st.dataframe(pd.DataFrame(gt["detected_records"]), use_container_width=True)
             else:
                 st.caption("None detected.")
-
-            st.markdown("**Missed Injections (Reported Explicitly)**")
-            if gt["missed_records"]:
-                st.dataframe(pd.DataFrame(gt["missed_records"]), use_container_width=True)
+            st.markdown("**Missed Injections While Detection Was Available**")
+            if gt.get("missed_available_records"):
+                st.dataframe(pd.DataFrame(gt["missed_available_records"]), use_container_width=True)
             else:
-                st.success("Zero missed injections in this self-test.")
+                st.caption("No recorded misses among available decisions. Check abstentions and available-injection count before interpreting sensitivity.")
+            st.markdown("**Abstained Injections (No Available Decision)**")
+            if gt.get("abstained_records"):
+                st.dataframe(pd.DataFrame(gt["abstained_records"]), use_container_width=True)
+            else:
+                st.caption("No abstentions recorded in the current availability audit; legacy audits may lack this field.")
 
     with tab4:
         st.subheader("Reproducible Export (CSV + JSON)")
@@ -372,46 +405,11 @@ def main() -> None:
             paths = export_workstation_run(result, out_dir)
             st.success(f"Exported to `{out_dir.relative_to(PROJECT_ROOT)}` ({len(paths)} files).")
 
-        cands_df = pd.DataFrame(result.candidates_rows)
-        tl_df = pd.DataFrame(result.timeline_rows)
+        csv_text = build_workstation_csv(result)
         d1, d2, d3 = st.columns(3)
-        d1.download_button("Download candidates.csv", cands_df.to_csv(index=False).encode("utf-8"), "candidates.csv", "text/csv")
-        d2.download_button("Download timeline.csv", tl_df.to_csv(index=False).encode("utf-8"), "timeline.csv", "text/csv")
-        report_json = json.dumps(
-            {
-                "run_metadata": result.run_metadata,
-                "scientific_semantics": result.scientific_semantics,
-                "independence_audit": result.independence_audit.to_dict(),
-                "calibration_audit": result.calibration_audit.to_dict(),
-                "summary_metrics": result.summary_metrics,
-                "window_availability_timeline": [
-                    {
-                        "window_index": r["window_index"],
-                        "sample_id": r["sample_id"],
-                        "regime_id": r["regime_id"],
-                        "credibility_status": r["credibility_status"],
-                        "detection_available": r["detection_available"],
-                        "active_mode_diagnostic_nomination": r["active_mode_diagnostic_nomination"],
-                        "active_mode_anomaly_flag": r["active_mode_anomaly_flag"],
-                        "stft_threshold": r["stft_threshold"],
-                        "broadband_threshold": r["broadband_threshold"],
-                        "dedicated_stft_available": r["dedicated_stft_available"],
-                        "dedicated_broadband_available": r["dedicated_broadband_available"],
-                        "union_stft_available": r["union_stft_available"],
-                        "union_broadband_available": r["union_broadband_available"],
-                        "union_stft_threshold": r["union_stft_threshold"],
-                        "union_mode_status": r["union_mode_status"],
-                        "resource_limit_blocked_stft": r["resource_limit_blocked_stft"],
-                        "resource_limit_blocked_union": r["resource_limit_blocked_union"],
-                        "calibration_updated_for_next_window": r["calibration_updated_for_next_window"],
-                    }
-                    for r in result.timeline_rows
-                ],
-                "ground_truth_audit": result.ground_truth_audit,
-            },
-            indent=2,
-            allow_nan=False,
-        )
+        d1.download_button("Download candidates.csv", csv_text["candidates_csv"].encode("utf-8"), "candidates.csv", "text/csv")
+        d2.download_button("Download timeline.csv", csv_text["timeline_csv"].encode("utf-8"), "timeline.csv", "text/csv")
+        report_json = json.dumps(build_workstation_report(result), indent=2, allow_nan=False)
         d3.download_button("Download run_report.json", report_json.encode("utf-8"), "run_report.json", "application/json")
 
         st.subheader("Complete Run Metadata")

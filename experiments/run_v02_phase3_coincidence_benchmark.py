@@ -432,7 +432,7 @@ def _write_report(results: dict[str, Any], out_path: Path) -> Path:
             "",
             "## 2. LIGO Development Data: Coincidence & 500-Slide Background Analysis (Pre-Veto vs. Post-Veto)",
             "",
-            "Statistical significance is strictly bounded by the 500-slide background resolution (`min_resolvable_p = 1 / 501 = 0.00200`).",
+            "A 500-slide count has technical resolution `1 / 501 = 0.00200`; this is not by itself available statistical significance. FAR and minimum resolvable p-value are reported as `UNAVAILABLE` when valid overlapping exposure is missing. These callers currently omit active intervals; see the audit erratum before interpreting historical FAR values.",
             "",
             "| Event | Role | Pre-Veto Pairs | Post-Veto Pairs | Measured XCorr Delay (ms) | Signed r(tau) | Within ±10 ms? | 500-Slide Bg Coinc (Pre -> Post) | Post-Veto Coinc FAR (/hr) | Min Resolvable p |",
             "| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |",
