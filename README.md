@@ -4,7 +4,7 @@
 
 **Finding unknown structure in noisy time series, with a false-alarm rate you can measure.**
 
-[![Recorded Python tests](https://img.shields.io/badge/Python%20tests-87%20reported%20at%20986dd46-64748b.svg)](docs/CURRENT_LIMITATIONS.md)
+[![Verified regression snapshot](https://img.shields.io/badge/regression%20snapshot-135%20passed%20%2F%201%20excluded-64748b.svg)](docs/VERIFICATION_STATUS.md)
 [![License: MIT](https://img.shields.io/badge/license-MIT-0f9e8e.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-1f8fd0.svg)](pyproject.toml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24557479.svg)](https://doi.org/10.5281/zenodo.24557479)
@@ -47,6 +47,7 @@ Every claim requires a control with a known answer, explicit uncertainty, and do
 
 | Study / Check | Evidence & Measured Result | Scope / Reference |
 | --- | --- | --- |
+| **Consolidated verification (`8c6d3ae`)** | **135 passed, 1 deselected** in 320.25 s; synthetic fixtures, real reserved-manifest mapping excluded. Includes the 16-scenario Node wrapper and three SciPy references; this is regression evidence, not a historical scientific rerun or live CI badge. | [Saved scope and record](docs/VERIFICATION_STATUS.md) |
 | **Python regression checks** | Author-reported **`87 / 87` at `986dd46`**; independent follow-up at `e1bd520`: **70 passed, 2 deselected** in a selected subset (not a full-suite rerun). Exercised paths include exact conformal `nextafter` bounds, low-FAP & Union STFT recovery, `n_norm_samples` Split-B alignment, `max_recal_buffer_windows` validation, coincidence/time-slide exposure, strict JSON `allow_nan=False` export (scope differs between the recorded suites) | [tests/](tests/) |
 | **Confirmatory synthetic negative control** | `316 / 50,000 = 0.6320%` empirical FAR across `K = 100` independent seeds (`500` windows/seed, `N_B = 154`, expected $\mu_0 = 0.6452\%$, `FAIL_TO_REJECT_H0`) | [results/workstation_confirmatory_k100/](results/workstation_confirmatory_k100/report.md) · Two-sided MC SE erratum (`0.00069` → `0.00222319`) in [AUDIT_ERRATUM_47a5475.md](docs/AUDIT_ERRATUM_47a5475.md) |
 | **Manual Workstation verification (`986dd46`)** | Visually inspected synthetic self-test (`220` bg, `80` noise-only, `10` `linear_chirp` in `pink_colored`, `PROVISIONAL`, `UNION_UNAVAILABLE`, threshold `2.8889`): **`SNR=18`: `10/10` detected, `1/80` FA**; **`SNR=8`: `3/10` detected, `7/10` missed, `1/80` FA** | [manual_workstation_synthetic_verification_986dd46.md](docs/manual_workstation_synthetic_verification_986dd46.md) |
@@ -95,6 +96,7 @@ Python synthetic generators use named `numpy.random.SeedSequence` streams for re
 
 ## Documentation, Audits, and Related Projects
 
+- **Current Verification & Historical Rerun Queue:** [docs/VERIFICATION_STATUS.md](docs/VERIFICATION_STATUS.md)
 - **Known Limitations & Independent Review Scope:** [docs/CURRENT_LIMITATIONS.md](docs/CURRENT_LIMITATIONS.md)
 - **Mathematical Measurement Guide:** [docs/whisker_mathematical_measurement_guide.md](docs/whisker_mathematical_measurement_guide.md)
 - **Workstation Contract & Guide:** [docs/bsd_workstation_plan_and_contract.md](docs/bsd_workstation_plan_and_contract.md)

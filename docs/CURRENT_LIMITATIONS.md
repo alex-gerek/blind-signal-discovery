@@ -79,3 +79,8 @@ Validation of the output follow-up: 18 distinct pytest cases passed across final
 
 
 WAV validation follow-up: the complete Node suite reached **16 passing scenarios** after adding RIFF chunk-boundary cases; the production filter script remained unchanged. Three independent SciPy reference cases passed. A unique [combined validation record](validation/browser_wav_resampling_20261126T130026Z.json) retains the earlier 15-scenario-wrapper plus three-reference run and its source hash. Native browser codec/rendering/latency and independent real-data false-alarm validation are still not established by these deterministic checks.
+
+
+## Consolidated verification index (2026-11-26)
+
+At committed implementation `8c6d3ae`, 135 pytest cases passed and one real-manifest mapping test was deselected in 320.25 s. Synthetic loader metadata were substituted, and actual reserved-manifest reads were blocked. The Node wrapper's 16 scenarios and three SciPy references are included in that selection, not extra pytest cases. See [verification status](VERIFICATION_STATUS.md) and the [saved record](validation/consolidated_verification_20261126T131531Z.json). Historical scientific reruns and native browser verification remain outstanding. Development fixes are pushed, but Pages still serves main `7e72a12`; no deployment or release was performed by this history update.

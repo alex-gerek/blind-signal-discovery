@@ -2,6 +2,10 @@
 
 This log tracks major experimental studies, independent audits, errata, and manual verification records without modifying or overwriting historical artifacts under `results/`.
 
+## Current implementation and evidence index (2026-11-26)
+
+The saved correction sequence is `99fce40` (documentation/version), `8053741` (input integrity), `8fab987` (abstention/export), then `8c6d3ae` (WAV FIR), all pushed to `development/v0.3`. Earlier entries below retain their original local/unpublished status snapshots. The [verification status and rerun queue](VERIFICATION_STATUS.md) distinguish the saved fixes from regression checks, manual observations and historical scientific results. The consolidated check at `8c6d3ae` passed **135 pytest cases with 1 deselected** in **320.25 s**; [the saved record](validation/consolidated_verification_20261126T131531Z.json) retains the exact scope and source hashes. It excludes the real O3-manifest test and uses synthetic loader metadata. This is regression evidence, not a historical scientific rerun.
+
 ## Chronological Entries
 
 1. **v0.1 Synthetic Baseline (`results/research_v01/`)**
@@ -26,6 +30,18 @@ This log tracks major experimental studies, independent audits, errata, and manu
 10. **Independent follow-up review at `e1bd520` / public `main` `7e72a12` (2026-11-26)**
    - A selected Python subset passed 70 tests with two deselected in 261.09 seconds. This does not replace the author's full-suite 87/87 claim in entry 6. Browser functions and Python upload/aggregation helpers were checked in memory; confirmed limitations and verification boundaries are retained in [CURRENT_LIMITATIONS.md](CURRENT_LIMITATIONS.md). No raw test log or UI export was saved from this follow-up; console evidence remains in the review conversation.
    - Found WAV aliasing, silent CSV row removal, missing browser input-separation/rate checks, misleading abstention denominators, duplicate upload basenames, seed-zero substitution and incomplete/rounded export provenance. These remain open; the following documentation patch does not fix them. Historical numerical outputs and O3 input data were not altered or used.
+
+
+11. **Documentation and software-series metadata (`99fce40`)**
+   - Corrected the mathematical guide and erratum, preserved superseded text, qualified test/RNG claims and aligned package/citation/runtime labels to the existing 0.3.0 series. This did not create a new archived release or change detector statistics.
+12. **Input-integrity correction (`8053741`)**
+   - Added unique upload paths, strict CSV/NPY validation, rate/hash/time checks and explicit error handling. Saved implementation and its focused regression scope are listed in [verification status](VERIFICATION_STATUS.md).
+13. **Availability-conditioned metrics and precise exports (`8fab987`)**
+   - Added separate abstentions, eligible exposure/rates, explicit legacy semantics and full-precision decision fields. Shared Python report/CSV builders serve disk and UI downloads. Existing rounded fields and old historical files remain preserved.
+14. **Browser WAV FIR correction (`8c6d3ae`)**
+   - Replaced alias-prone stride decimation with exact-512-Hz Kaiser-sinc filtering, declared band/edge/lookahead limits and recorded original/decoded rate provenance. The [protocol](browser_wav_resampling_protocol_2026-11-26.md) distinguishes deterministic filter tests from native-browser or real-data validation.
+15. **Consolidated regression verification at `8c6d3ae` (2026-11-26)**
+   - 135 pytest cases passed, 1 real-manifest test deselected, exit 0, 320.25 s. The selection includes the 16-scenario Node wrapper and three SciPy FIR references. Synthetic reserved-event metadata and a read guard protected actual O3 manifest contents. [Machine-readable evidence](validation/consolidated_verification_20261126T131531Z.json) retains environment, command, hashes and output. No historical sensitivity/FAR study was rerun; see the [rerun queue](VERIFICATION_STATUS.md).
 
 
 ## 2026-11-26 — Documentation correction and version alignment (local work)
@@ -100,3 +116,20 @@ This log tracks major experimental studies, independent audits, errata, and manu
 - **Limits/decision:** Adopt this local preprocessing correction for review. Its useful resampled band is 0–192 Hz with transition to 256 Hz; padding affects roughly 47 ms at either edge. It is offline, not causal; adjacent filtered windows can be dependent, and edge windows are not automatically excluded. Real-browser codec/visual/latency testing and independent real-data FAR validation remain outstanding. No O3 data/manifest content, release, tag, GitHub setting or Zenodo operation was involved. The step-4 patch has not been committed or pushed.
 
 - **Subsequent owner authorization:** Commit and push the reviewed WAV preprocessing correction to `development/v0.3`, then consolidate verification evidence and update the research history as step 5. No main merge, release, tag or Zenodo update is included.
+
+
+## 2026-11-26 — Consolidated verification and research-history index (step 5)
+
+- **Before:** Documentation/version correction `99fce40`, input-integrity correction `8053741`, availability/export correction `8fab987` and WAV resampling correction `8c6d3ae` have been committed and pushed to `development/v0.3`. Earlier entries retain their original local/unpublished status at the time they were written; the current index will supersede those status snapshots without erasing them.
+- **Plan before validation:** Run the repository regression selection at `8c6d3ae`, excluding the real reserved-manifest filename test and substituting only synthetic holdout metadata in loader fixtures. Block any actual reserved-manifest read. Save a unique machine-readable record with exact selection, environment, source/test hashes, pass/fail/skip counts and console evidence; preserve unsuccessful attempts. Add an operator-readable evidence index and explicit historical-rerun queue.
+- **Expected outcome:** Regression behavior remains compatible after steps 1–4. Passing checks will not be presented as scientific revalidation, native browser codec verification or fresh evidence of astrophysical origin.
+- **Scope:** Synthetic regression fixtures and records only; no real O1/O2/O3 input, detector tuning, overwriting old results, release/tag/visibility change or Zenodo operation. No automatic commit or push of the new history/verification record is included in this step.
+- **State:** Completed locally; saved verification/history updates are uncommitted and unpublished.
+
+- **Remote/deployment snapshot:** Read-only checks confirmed development `8c6d3ae`, main `7e72a12`, release tag `v0.3.0` at `c406e00`, and the latest built Pages source `main:/docs` at `7e72a12`. Pushed corrections are not yet deployed to the public website. No merge/deployment/release was performed.
+
+- **Final outcome:** The consolidated selection completed with 135 passed, 1 deselected, no failures/skips, in 320.25 s. The excluded case and synthetic-metadata substitution are explicit limitations, not a full production reserved-manifest validation. The run is preserved in [validation/consolidated_verification_20261126T131531Z.json](validation/consolidated_verification_20261126T131531Z.json); all recorded implementation/test hashes matched the working tree after completion.
+- **Records added:** A current revision/evidence index, dated chronological entries 11–15 and a historical-rerun queue distinguish implementation fixes, regression checks, arithmetic errata, manual observations and unrerun scientific results. Historical local/unpublished statements are retained as dated snapshots; their later pushed commits are identified in the current index. The original 87/87 claim remains an author-reported historical result; the independent current selection is described separately.
+- **Preservation and next decision:** No historical result file, detector statistic or O3 input was changed or used. The 120-window calibration interpretation and MC arithmetic corrections remain explicit; adaptive/coincidence/real-data results still need fresh protocols/output locations before rerunning. The public website remains at main `7e72a12` until a separately authorized merge/deployment; tag `v0.3.0` remains at `c406e00`. No release/Zenodo update was performed. The new step-5 documentation and validation record remain local for review.
+
+- **Subsequent owner request:** Save the step-5 research-history and verification records in the containing documentation commit on `development/v0.3`. Implementation/test hashes still match `8c6d3ae`; no numerical code or historical result is changed. The established branch-save workflow does not include merging to main, publishing a release or updating Zenodo. Read-only comparison found main's tree equal to the shared base `e1bd520`; its additional merge commits are not additional file changes.
