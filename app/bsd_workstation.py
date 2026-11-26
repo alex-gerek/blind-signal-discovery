@@ -38,6 +38,8 @@ from bsd.workstation_runner import (
     WorkstationConfig,
     WorkstationRunResult,
     export_workstation_run,
+    build_workstation_report,
+    build_workstation_csv,
     run_synthetic_self_test,
     run_workstation_analysis,
 )
@@ -145,6 +147,23 @@ def _plot_timeline(result: WorkstationRunResult) -> plt.Figure:
     ax.grid(alpha=0.25)
     fig.tight_layout()
     return fig
+
+
+def _self_test_display_values(gt: dict[str, Any]) -> dict[str, str]:
+    """Display current availability-conditioned fields; never invent legacy exposure."""
+    far = gt.get("negative_control_far_available")
+    n_neg = gt.get("negative_control_available_windows")
+    n_pos = gt.get("positive_injections_available")
+    efficiency = gt.get("detection_efficiency_available")
+    ci = gt.get("detection_efficiency_available_ci90")
+    return {
+        "far": "UNAVAILABLE" if far is None else f"{far * 100:.2f}% ({gt['negative_control_false_alarms']}/{n_neg})",
+        "efficiency": "UNAVAILABLE" if efficiency is None or ci is None else f"{efficiency * 100:.1f}% [{ci[0] * 100:.0f}%, {ci[1] * 100:.0f}%]",
+        "exposure": "UNAVAILABLE" if n_neg is None else f"{n_neg} windows / {gt['negative_control_available_exposure_s']:g} s",
+        "detected": f"{gt['positive_injections_detected']} / {n_pos}" if n_pos is not None else "UNAVAILABLE (legacy audit)",
+        "missed": f"{gt['positive_injections_missed_available']} / {n_pos}" if n_pos is not None else "UNAVAILABLE (legacy audit)",
+        "abstained": str(gt['positive_injections_abstained']) if n_pos is not None else "UNAVAILABLE (legacy audit)",
+    }
 
 
 def main() -> None:
@@ -352,23 +371,32 @@ def main() -> None:
         if result.ground_truth_audit is not None:
             gt = result.ground_truth_audit
             st.subheader("Synthetic Self-Test Ground-Truth Audit")
-            g1, g2, g3, g4 = st.columns(4)
-            g1.metric("Negative Control FAR", f"{gt['negative_control_far']*100:.2f}% ({gt['negative_control_false_alarms']}/{gt['negative_control_windows']})")
-            g2.metric("Positive Detected", f"{gt['positive_injections_detected']} / {gt['positive_injections_total']}")
-            g3.metric("Positive Missed", f"{gt['positive_injections_missed']} / {gt['positive_injections_total']}")
-            g4.metric("Efficiency (90% CI)", f"{gt['detection_efficiency']*100:.1f}% [{gt['detection_efficiency_ci90'][0]*100:.0f}%, {gt['detection_efficiency_ci90'][1]*100:.0f}%]")
+            display = _self_test_display_values(gt)
+            g1, g2, g3 = st.columns(3)
+            g1.metric("Negative Control FAR (available)", display["far"])
+            g2.metric("Conditional Efficiency (90% CI)", display["efficiency"])
+            g3.metric("Available Noise Exposure", display["exposure"])
+            g4, g5, g6 = st.columns(3)
+            g4.metric("Positive Detected / Available", display["detected"])
+            g5.metric("Positive Missed / Available", display["missed"])
+            g6.metric("Positive Abstained", display["abstained"])
+            st.caption("Conditional rates exclude unavailable decisions. Legacy all-window counters remain in the export with explicit semantics; Wilson intervals assume independent evaluation windows.")
 
             st.markdown("**Detected Injections**")
             if gt["detected_records"]:
                 st.dataframe(pd.DataFrame(gt["detected_records"]), use_container_width=True)
             else:
                 st.caption("None detected.")
-
-            st.markdown("**Missed Injections (Reported Explicitly)**")
-            if gt["missed_records"]:
-                st.dataframe(pd.DataFrame(gt["missed_records"]), use_container_width=True)
+            st.markdown("**Missed Injections While Detection Was Available**")
+            if gt.get("missed_available_records"):
+                st.dataframe(pd.DataFrame(gt["missed_available_records"]), use_container_width=True)
             else:
-                st.success("Zero missed injections in this self-test.")
+                st.caption("No recorded misses among available decisions. Check abstentions and available-injection count before interpreting sensitivity.")
+            st.markdown("**Abstained Injections (No Available Decision)**")
+            if gt.get("abstained_records"):
+                st.dataframe(pd.DataFrame(gt["abstained_records"]), use_container_width=True)
+            else:
+                st.caption("No abstentions recorded in the current availability audit; legacy audits may lack this field.")
 
     with tab4:
         st.subheader("Reproducible Export (CSV + JSON)")
@@ -377,46 +405,11 @@ def main() -> None:
             paths = export_workstation_run(result, out_dir)
             st.success(f"Exported to `{out_dir.relative_to(PROJECT_ROOT)}` ({len(paths)} files).")
 
-        cands_df = pd.DataFrame(result.candidates_rows)
-        tl_df = pd.DataFrame(result.timeline_rows)
+        csv_text = build_workstation_csv(result)
         d1, d2, d3 = st.columns(3)
-        d1.download_button("Download candidates.csv", cands_df.to_csv(index=False).encode("utf-8"), "candidates.csv", "text/csv")
-        d2.download_button("Download timeline.csv", tl_df.to_csv(index=False).encode("utf-8"), "timeline.csv", "text/csv")
-        report_json = json.dumps(
-            {
-                "run_metadata": result.run_metadata,
-                "scientific_semantics": result.scientific_semantics,
-                "independence_audit": result.independence_audit.to_dict(),
-                "calibration_audit": result.calibration_audit.to_dict(),
-                "summary_metrics": result.summary_metrics,
-                "window_availability_timeline": [
-                    {
-                        "window_index": r["window_index"],
-                        "sample_id": r["sample_id"],
-                        "regime_id": r["regime_id"],
-                        "credibility_status": r["credibility_status"],
-                        "detection_available": r["detection_available"],
-                        "active_mode_diagnostic_nomination": r["active_mode_diagnostic_nomination"],
-                        "active_mode_anomaly_flag": r["active_mode_anomaly_flag"],
-                        "stft_threshold": r["stft_threshold"],
-                        "broadband_threshold": r["broadband_threshold"],
-                        "dedicated_stft_available": r["dedicated_stft_available"],
-                        "dedicated_broadband_available": r["dedicated_broadband_available"],
-                        "union_stft_available": r["union_stft_available"],
-                        "union_broadband_available": r["union_broadband_available"],
-                        "union_stft_threshold": r["union_stft_threshold"],
-                        "union_mode_status": r["union_mode_status"],
-                        "resource_limit_blocked_stft": r["resource_limit_blocked_stft"],
-                        "resource_limit_blocked_union": r["resource_limit_blocked_union"],
-                        "calibration_updated_for_next_window": r["calibration_updated_for_next_window"],
-                    }
-                    for r in result.timeline_rows
-                ],
-                "ground_truth_audit": result.ground_truth_audit,
-            },
-            indent=2,
-            allow_nan=False,
-        )
+        d1.download_button("Download candidates.csv", csv_text["candidates_csv"].encode("utf-8"), "candidates.csv", "text/csv")
+        d2.download_button("Download timeline.csv", csv_text["timeline_csv"].encode("utf-8"), "timeline.csv", "text/csv")
+        report_json = json.dumps(build_workstation_report(result), indent=2, allow_nan=False)
         d3.download_button("Download run_report.json", report_json.encode("utf-8"), "run_report.json", "application/json")
 
         st.subheader("Complete Run Metadata")

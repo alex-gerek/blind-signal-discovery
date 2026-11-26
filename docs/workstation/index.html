@@ -248,7 +248,7 @@
   <main>
     <h1>Blind Signal Discovery (BSD) &mdash; Browser Workstation</h1>
     <div class="banner">
-      <strong>Browser Interactive Demo (v0.3.0):</strong> Runs template-free STFT excess-power whitening, 8-connected clustering, and exact finite-sample conformal calibration (<code>p_emp = (1 + n_ge) / (N_cal + 1) &le; target_fap</code>) directly in your browser &mdash; no installation required. For the full 3-scale Python core (author-reported <code>87/87</code> tests at <code>986dd46</code>), run <code>app/bsd_workstation.py</code> locally. Statistical anomalies are never proof of a physical discovery. <strong>Open limitations:</strong> WAV aliasing, externally unverified independence where timestamps are absent, abstention-summary denominators, and incomplete synthetic-run export provenance. Use synthetic demonstrations while these file-measurement issues are reviewed. See <a href="https://github.com/alex-gerek/blind-signal-discovery/blob/main/docs/CURRENT_LIMITATIONS.md">known limitations</a>.
+      <strong>Browser Interactive Demo (v0.3.0):</strong> Runs template-free STFT excess-power whitening, 8-connected clustering, and exact finite-sample conformal calibration (<code>p_emp = (1 + n_ge) / (N_cal + 1) &le; target_fap</code>) directly in your browser &mdash; no installation required. For the full 3-scale Python core (author-reported <code>87/87</code> tests at <code>986dd46</code>), run <code>app/bsd_workstation.py</code> locally. Statistical anomalies are never proof of a physical discovery. <strong>Open limitations:</strong> WAV aliasing, externally unverified independence where timestamps are absent, seed-zero substitution, and incomplete synthetic-run provenance. Use synthetic demonstrations while these file-measurement issues are reviewed. See <a href="https://github.com/alex-gerek/blind-signal-discovery/blob/main/docs/CURRENT_LIMITATIONS.md">known limitations</a>.
     </div>
 
     <div class="tabs">
@@ -935,12 +935,20 @@ async function runMeasurement() {
         f_max_hz: Number(c.f_max.toFixed(1)),
         score: Number(c.score.toFixed(4)),
         empirical_p_value: Number(p.toFixed(5)),
-        active_mode_anomaly_flag: activeFlag
+        active_mode_anomaly_flag: activeFlag,
+        score_full_precision: fullPrecisionNumber(c.score),
+        threshold_full_precision: fullPrecisionNumber(threshold),
+        empirical_p_value_full_precision: fullPrecisionNumber(p),
+        t_start_s_full_precision: fullPrecisionNumber(c.t_start),
+        t_end_s_full_precision: fullPrecisionNumber(c.t_end),
+        f_min_hz_full_precision: fullPrecisionNumber(c.f_min),
+        f_max_hz_full_precision: fullPrecisionNumber(c.f_max)
       });
     }
   }
 
   const nActive = windows.filter(w => w.activeFlag).length;
+  const groundTruthAudit = workflow === "synth" ? summarizeBrowserGroundTruth(windows, WIN_N / fs) : null;
   const run = {
     metadata: {
       mode: "browser_interactive_demo_v0.3.0",
@@ -969,7 +977,8 @@ async function runMeasurement() {
       n_candidates: allCands.length
     },
     windows,
-    candidates: allCands
+    candidates: allCands,
+    groundTruthAudit
   };
   const isFirstRun = LAST_RUN === null;
   LAST_RUN = run;
@@ -994,15 +1003,14 @@ async function runMeasurement() {
     ["Active Anomaly Windows", `${nActive} / ${windows.length}`],
     ["Detection Available", `${run.summary.n_detection_available_windows} / ${windows.length}`]
   ];
-  if (workflow === "synth") {
-    const negs0 = windows.filter(w => !w.inj);
-    const poss0 = windows.filter(w => w.inj);
-    const negFp0 = negs0.filter(w => w.activeFlag).length;
-    const posTp0 = poss0.filter(w => w.activeFlag).length;
+  if (groundTruthAudit) {
+    const gt = groundTruthAudit;
     summaryCards.push(
-      ["Injections Detected", `${posTp0} / ${poss0.length}`],
-      ["Injections Missed", `${poss0.length - posTp0} / ${poss0.length}`],
-      ["Negative Control False Alarms", `${negFp0} / ${negs0.length} (${(100 * negFp0 / Math.max(1, negs0.length)).toFixed(1)}%)`]
+      ["Detected / Available Injections", `${gt.positive_injections_detected} / ${gt.positive_injections_available}`],
+      ["Missed While Available", gt.positive_injections_missed_available],
+      ["Abstained Injections", gt.positive_injections_abstained],
+      ["Negative Control FAR (available)", gt.negative_control_far_available === null ? "UNAVAILABLE" : `${(100 * gt.negative_control_far_available).toFixed(2)}%`],
+      ["Available Noise Exposure", `${gt.negative_control_available_windows} windows / ${gt.negative_control_available_exposure_s} s`]
     );
   }
   document.getElementById("summaryMetrics").innerHTML = summaryCards
@@ -1022,12 +1030,14 @@ async function runMeasurement() {
   }
   const jumpEl = document.getElementById("jumpButtons");
   const idxFa = windows.findIndex(w => !w.inj && w.activeFlag);
-  const idxMiss = windows.findIndex(w => w.inj && !w.activeFlag);
+  const idxMiss = windows.findIndex(w => w.inj && w.detectionAvailable && !w.activeFlag);
+  const idxAbstained = windows.findIndex(w => w.inj && !w.detectionAvailable);
   const idxDet = windows.findIndex(w => w.inj && w.activeFlag);
   const jBtns = [];
   if (idxFa >= 0) jBtns.push(`<button class="btn btn-sm" onclick="jumpWin(${idxFa})">False Alarm (Win ${idxFa})</button>`);
   if (idxMiss >= 0) jBtns.push(`<button class="btn btn-sm" style="background:#b7791f" onclick="jumpWin(${idxMiss})">Missed Injection (Win ${idxMiss})</button>`);
   if (idxDet >= 0) jBtns.push(`<button class="btn btn-sm" style="background:#2f855a" onclick="jumpWin(${idxDet})">Detected Injection (Win ${idxDet})</button>`);
+  if (idxAbstained >= 0) jBtns.push(`<button class="btn btn-sm" style="background:#718096" onclick="jumpWin(${idxAbstained})">Abstained Injection (Win ${idxAbstained})</button>`);
   jumpEl.innerHTML = jBtns.join("");
   drawWindowDetail(run, Number(slider.value));
 
@@ -1035,21 +1045,19 @@ async function runMeasurement() {
   const gtCard = document.getElementById("gtCard");
   if (workflow === "synth") {
     gtCard.style.display = "block";
-    const negs = windows.filter(w => !w.inj);
-    const poss = windows.filter(w => w.inj);
-    const negFp = negs.filter(w => w.activeFlag).length;
-    const posTp = poss.filter(w => w.activeFlag).length;
+    const poss = windows.filter(w => w.inj), gt = groundTruthAudit;
     document.getElementById("gtMetrics").innerHTML = [
-      ["Negative Control FAR", `${(100 * negFp / Math.max(1, negs.length)).toFixed(2)}% (${negFp}/${negs.length})`],
-      ["Positive Detected", `${posTp} / ${poss.length}`],
-      ["Positive Missed", `${poss.length - posTp} / ${poss.length}`],
-      ["Detection Efficiency", `${(100 * posTp / Math.max(1, poss.length)).toFixed(1)}%`]
+      ["Negative Control FAR (available)", gt.negative_control_far_available === null ? "UNAVAILABLE (no available exposure)" : `${(100 * gt.negative_control_far_available).toFixed(2)}% (${gt.negative_control_false_alarms}/${gt.negative_control_available_windows})`],
+      ["Positive Detected / Available", `${gt.positive_injections_detected} / ${gt.positive_injections_available}`],
+      ["Positive Missed While Available", gt.positive_injections_missed_available],
+      ["Positive Abstained", gt.positive_injections_abstained],
+      ["Conditional Efficiency", gt.detection_efficiency_available === null ? "UNAVAILABLE" : `${(100 * gt.detection_efficiency_available).toFixed(1)}%`]
     ].map(([k, v]) => `<div class="metric"><div class="k">${k}</div><div class="v">${v}</div></div>`).join("");
 
     document.querySelector("#gtTable tbody").innerHTML = poss.map(w =>
       `<tr><td>${w.inj.id}</td><td>${w.index}</td><td>${w.inj.family}</td><td>${w.inj.snr}</td>` +
       `<td>${w.maxScore.toFixed(3)}</td><td>${threshold !== null ? threshold.toFixed(3) : "null"}</td>` +
-      `<td style="font-weight:700;color:${w.activeFlag ? "#2f855a" : "#c53030"}">${w.activeFlag ? "DETECTED" : "MISSED"}</td></tr>`
+      `<td style="font-weight:700;color:${w.activeFlag ? "#2f855a" : "#c53030"}">${!w.detectionAvailable ? "ABSTAINED" : (w.activeFlag ? "DETECTED" : "MISSED")}</td></tr>`
     ).join("");
   } else {
     gtCard.style.display = "none";
@@ -1093,8 +1101,68 @@ async function handleRunMeasurement() {
   }
 }
 
+function fullPrecisionNumber(value) {
+  if (value === null) return null;
+  if (!Number.isFinite(value)) throw new Error("Cannot export a non-finite decision input.");
+  return value;
+}
+
+function wilsonCI90(k, n) {
+  if (!n) return null;
+  const z = 1.6448536, p = k / n, denom = 1 + z * z / n;
+  const center = (p + z * z / (2 * n)) / denom;
+  const half = z * Math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / denom;
+  return [Math.max(0, center - half), Math.min(1, center + half)];
+}
+
+function summarizeBrowserGroundTruth(windows, windowDurationS) {
+  if (!Number.isFinite(windowDurationS) || windowDurationS <= 0) throw new Error("Exposure needs a finite positive window duration.");
+  if (windows.some(w => w.activeFlag && !w.detectionAvailable)) throw new Error("Accepted decisions require available detection.");
+  const negs = windows.filter(w => !w.inj), poss = windows.filter(w => w.inj);
+  const negAvailable = negs.filter(w => w.detectionAvailable), posAvailable = poss.filter(w => w.detectionAvailable);
+  const falseAlarms = negAvailable.filter(w => w.activeFlag).length;
+  const detected = posAvailable.filter(w => w.activeFlag).length;
+  const missed = posAvailable.length - detected, abstained = poss.length - posAvailable.length;
+  return {
+    metric_schema_version: 2,
+    negative_control_windows: negs.length,
+    negative_control_false_alarms: falseAlarms,
+    negative_control_far: falseAlarms / Math.max(1, negs.length),
+    positive_injections_total: poss.length,
+    positive_injections_detected: detected,
+    positive_injections_missed: poss.length - detected,
+    detection_efficiency: detected / Math.max(1, poss.length),
+    negative_control_available_windows: negAvailable.length,
+    negative_control_abstained_windows: negs.length - negAvailable.length,
+    negative_control_total_exposure_s: negs.length * windowDurationS,
+    negative_control_available_exposure_s: negAvailable.length * windowDurationS,
+    negative_control_far_available: negAvailable.length ? falseAlarms / negAvailable.length : null,
+    negative_control_far_available_ci90: wilsonCI90(falseAlarms, negAvailable.length),
+    negative_control_far_status: negAvailable.length ? "AVAILABLE" : "UNAVAILABLE_NO_EXPOSURE",
+    positive_injections_available: posAvailable.length,
+    positive_injections_abstained: abstained,
+    positive_injections_missed_available: missed,
+    detection_efficiency_available: posAvailable.length ? detected / posAvailable.length : null,
+    detection_efficiency_available_ci90: wilsonCI90(detected, posAvailable.length),
+    detection_efficiency_status: posAvailable.length ? "AVAILABLE" : "UNAVAILABLE_NO_AVAILABLE_INJECTIONS",
+    injection_records: poss.map(w => ({window_index: w.index, injection_id: w.inj.id,
+      detection_available: w.detectionAvailable, detected: w.activeFlag,
+      evaluation_status: !w.detectionAvailable ? "ABSTAINED" : (w.activeFlag ? "DETECTED" : "MISSED")})),
+    legacy_metric_semantics: "negative_control_far and detection_efficiency use all windows/injections; positive_injections_missed includes abstentions. Use *_available metrics with exposure and abstention counts.",
+    interval_method: "90% Wilson diagnostic interval; nominal coverage assumes independent evaluation windows."
+  };
+}
+
+const BROWSER_CANDIDATE_FIELDS = ["window_index", "t_start_s", "t_end_s", "f_min_hz", "f_max_hz", "score", "empirical_p_value", "active_mode_anomaly_flag",
+  "score_full_precision", "threshold_full_precision", "empirical_p_value_full_precision", "t_start_s_full_precision", "t_end_s_full_precision", "f_min_hz_full_precision", "f_max_hz_full_precision"];
+const BROWSER_TIMELINE_FIELDS = ["window_index", "role", "max_score", "threshold", "detection_available", "active_mode_diagnostic_nomination", "active_mode_anomaly_flag", "n_candidates",
+  "max_score_full_precision", "threshold_full_precision", "evaluation_status"];
+
 function buildExportPayload(run) {
   return {
+    export_schema_version: 2,
+    numeric_precision: "Legacy timeline/candidate values are rounded; *_full_precision values retain original finite decision inputs.",
+    ground_truth_audit: run.groundTruthAudit || null,
     metadata: run.metadata,
     calibration: run.calibration,
     summary: run.summary,
@@ -1106,7 +1174,10 @@ function buildExportPayload(run) {
       detection_available: w.detectionAvailable,
       active_mode_diagnostic_nomination: w.diagnosticNomination,
       active_mode_anomaly_flag: w.activeFlag,
-      n_candidates: w.nominatedCandidates.length
+      n_candidates: w.nominatedCandidates.length,
+      max_score_full_precision: fullPrecisionNumber(w.maxScore),
+      threshold_full_precision: fullPrecisionNumber(run.calibration.threshold),
+      evaluation_status: !w.detectionAvailable ? "ABSTAINED" : (w.activeFlag ? "DETECTED" : "NOT_DETECTED")
     })),
     candidates: run.candidates
   };
@@ -1120,10 +1191,15 @@ function downloadText(filename, content, mime) {
   a.click();
   URL.revokeObjectURL(a.href);
 }
-function toCsv(rows) {
-  if (!rows.length) return "";
-  const cols = Object.keys(rows[0]);
-  return [cols.join(","), ...rows.map(r => cols.map(c => r[c] === null || r[c] === undefined ? "" : String(r[c])).join(","))].join("\n");
+function toCsv(rows, fallbackFields = []) {
+  if (!rows.length && !fallbackFields.length) return "";
+  const cols = rows.length ? Object.keys(rows[0]) : fallbackFields;
+  const cell = value => {
+    if (value === null || value === undefined) return "";
+    const text = String(value);
+    return /[",\r\n]/.test(text) ? '"' + text.replace(/"/g, '""') + '"' : text;
+  };
+  return [cols.map(cell).join(","), ...rows.map(r => cols.map(c => cell(r[c])).join(","))].join("\r\n");
 }
 
 // --- Event Listeners ---
@@ -1150,10 +1226,10 @@ document.getElementById("winIdx").addEventListener("input", e => {
 });
 document.getElementById("runBtn").addEventListener("click", handleRunMeasurement);
 document.getElementById("dlTimeline").addEventListener("click", () => {
-  if (LAST_RUN) downloadText("timeline.csv", toCsv(buildExportPayload(LAST_RUN).timeline), "text/csv");
+  if (LAST_RUN) downloadText("timeline.csv", toCsv(buildExportPayload(LAST_RUN).timeline, BROWSER_TIMELINE_FIELDS), "text/csv");
 });
 document.getElementById("dlCands").addEventListener("click", () => {
-  if (LAST_RUN) downloadText("candidates.csv", toCsv(LAST_RUN.candidates), "text/csv");
+  if (LAST_RUN) downloadText("candidates.csv", toCsv(LAST_RUN.candidates, BROWSER_CANDIDATE_FIELDS), "text/csv");
 });
 document.getElementById("dlJson").addEventListener("click", () => {
   if (LAST_RUN) downloadText("run_report.json", JSON.stringify(buildExportPayload(LAST_RUN), null, 2), "application/json");

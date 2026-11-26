@@ -107,3 +107,68 @@ test("default synthetic workflow still works and preserves selection", async () 
   e.get("winIdx").value="13";await ctx.handleRunMeasurement();assert.equal(Number(e.get("winIdx").value),13);
   assert.equal(e.get("dlJson").disabled,false);
 });
+
+
+test("unattainable self-test reports abstentions and unavailable rates in UI and JSON", async () => {
+  const {ctx,elements:e}=setup();setValues(e,{workflow:"synth",targetFap:.005,nBg:40,nNeg:10,nPos:2});
+  await ctx.handleRunMeasurement();
+  const payload=JSON.parse(vm.runInContext("JSON.stringify(buildExportPayload(LAST_RUN))",ctx));
+  const gt=payload.ground_truth_audit;
+  assert.equal(gt.negative_control_available_exposure_s,0);
+  assert.equal(gt.negative_control_far_available,null);assert.equal(gt.negative_control_far_available_ci90,null);
+  assert.equal(gt.positive_injections_abstained,2);assert.equal(gt.positive_injections_missed_available,0);
+  assert.equal(gt.detection_efficiency_available,null);
+  assert.equal(gt.negative_control_far,0); // legacy field explicitly retained
+  assert.equal(gt.positive_injections_missed,2); // legacy non-detection count
+  assert.ok(payload.timeline.every(r => r.evaluation_status==="ABSTAINED" && !r.active_mode_anomaly_flag && r.threshold_full_precision===null));
+  assert.match(e.get("gtMetrics").innerHTML,/UNAVAILABLE/);
+  assert.match(ctx.document.querySelector("#gtTable tbody").innerHTML,/ABSTAINED/);
+  assert.doesNotMatch(ctx.document.querySelector("#gtTable tbody").innerHTML,/MISSED/);
+  assert.match(e.get("jumpButtons").innerHTML,/Abstained Injection/);
+  assert.doesNotMatch(e.get("jumpButtons").innerHTML,/Missed Injection/);
+});
+
+test("mixed/empty availability uses explicit denominators and conditional exposure", () => {
+  const {ctx}=setup();
+  const windows=[
+    {index:0,inj:null,detectionAvailable:false,activeFlag:false},
+    {index:1,inj:null,detectionAvailable:true,activeFlag:true},
+    {index:2,inj:null,detectionAvailable:true,activeFlag:false},
+    {index:3,inj:{id:0},detectionAvailable:true,activeFlag:true},
+    {index:4,inj:{id:1},detectionAvailable:true,activeFlag:false},
+    {index:5,inj:{id:2},detectionAvailable:false,activeFlag:false}
+  ];
+  const gt=ctx.summarizeBrowserGroundTruth(windows,2);
+  assert.equal(gt.negative_control_far_available,.5);assert.equal(gt.detection_efficiency_available,.5);
+  assert.equal(gt.negative_control_available_exposure_s,4);assert.equal(gt.positive_injections_missed_available,1);
+  assert.equal(gt.positive_injections_abstained,1);
+  assert.deepEqual(Array.from(gt.injection_records,r=>r.evaluation_status),["DETECTED","MISSED","ABSTAINED"]);
+  const empty=ctx.summarizeBrowserGroundTruth([],2);assert.equal(empty.negative_control_far_available,null);assert.equal(empty.detection_efficiency_available,null);
+  assert.throws(()=>ctx.summarizeBrowserGroundTruth([{inj:null,detectionAvailable:false,activeFlag:true}],2),/require/);
+});
+
+test("precise decision inputs survive CSV and JSON while legacy display values stay rounded", () => {
+  const {ctx}=setup();const threshold=2.888922;
+  const view=new DataView(new ArrayBuffer(8));view.setFloat64(0,threshold);view.setBigUint64(0,view.getBigUint64(0)+1n);const score=view.getFloat64(0);
+  const payload=ctx.buildExportPayload({metadata:{},calibration:{threshold},summary:{},windows:[{index:0,role:"REVIEW",maxScore:score,detectionAvailable:true,diagnosticNomination:true,activeFlag:true,nominatedCandidates:[{}]}],candidates:[]});
+  const row=JSON.parse(JSON.stringify(payload)).timeline[0];
+  assert.equal(row.max_score,row.threshold);assert.ok(row.max_score_full_precision>row.threshold_full_precision);
+  assert.equal(row.max_score_full_precision,score);assert.equal(row.threshold_full_precision,threshold);
+  const csv=ctx.toCsv(payload.timeline).split("\r\n"),fields=csv[0].split(","),values=csv[1].split(",");
+  assert.equal(Number(values[fields.indexOf("max_score_full_precision")]),score);
+  assert.ok(Number(values[fields.indexOf("max_score_full_precision")])>Number(values[fields.indexOf("threshold_full_precision")]));
+  assert.throws(()=>ctx.buildExportPayload({...{metadata:{},calibration:{threshold},summary:{},candidates:[]},windows:[{...{index:0,role:"INVALID",detectionAvailable:true,diagnosticNomination:false,activeFlag:false,nominatedCandidates:[]},maxScore:NaN}]}),/non-finite/);
+  assert.match(ctx.toCsv([],vm.runInContext("BROWSER_CANDIDATE_FIELDS",ctx)),/score_full_precision/);
+  assert.equal(ctx.toCsv([{label:'a,"b"\nc'}]),'label\r\n"a,""b""\nc"');
+});
+
+test("actual detected candidate exports retain full score, p-value and threshold", async () => {
+  const {ctx,elements:e}=setup();e.get("snr").value="30";await ctx.handleRunMeasurement();
+  const payload=JSON.parse(vm.runInContext("JSON.stringify(buildExportPayload(LAST_RUN))",ctx));
+  assert.ok(payload.candidates.length>0);
+  for(const c of payload.candidates) {
+    assert.ok(c.score_full_precision>c.threshold_full_precision);
+    assert.ok(c.empirical_p_value_full_precision<=payload.calibration.target_fap);
+    assert.equal(c.threshold_full_precision,payload.calibration.threshold);
+  }
+});

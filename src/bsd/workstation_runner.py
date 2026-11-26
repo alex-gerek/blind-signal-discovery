@@ -17,6 +17,7 @@ Enforces:
 from __future__ import annotations
 
 import csv
+import io
 import json
 import platform
 import subprocess
@@ -214,6 +215,62 @@ def _scientific_semantics_block() -> dict[str, str]:
     }
 
 
+def _full_precision(value: float | None) -> float | None:
+    """Preserve a decision input without rounding; reject nonfinite records."""
+    if value is None:
+        return None
+    result = float(value)
+    if not np.isfinite(result):
+        raise InputValidationError("Cannot export a non-finite decision input.")
+    return result
+
+
+def _self_test_availability_metrics(
+    negative_windows: list[DualOutputWindowV2b],
+    positive_records: list[dict[str, Any]],
+    window_duration_s: float,
+    search_mode: str,
+) -> dict[str, Any]:
+    """Availability-conditioned accounting; legacy all-window metrics remain separate."""
+    if search_mode not in ("transient", "persistent"):
+        raise InputValidationError("Unknown search mode for self-test accounting.")
+    if not np.isfinite(window_duration_s) or window_duration_s <= 0:
+        raise InputValidationError("Exposure needs a finite positive window duration.")
+    available_neg = [w for w in negative_windows if w.detection_available]
+    false_alarms = sum(bool(w.stft_nominated_post_veto if search_mode == "transient" else w.broadband_nominated) for w in available_neg)
+    available_pos = [r for r in positive_records if r["detection_available"]]
+    detected_pos = sum(bool(r["detected"]) for r in available_pos)
+    abstained = [r for r in positive_records if not r["detection_available"]]
+    missed_available = [r for r in available_pos if not r["detected"]]
+    n_neg, n_pos = len(available_neg), len(available_pos)
+    return {
+        "metric_schema_version": 2,
+        "negative_control_available_windows": n_neg,
+        "negative_control_abstained_windows": len(negative_windows) - n_neg,
+        "negative_control_available_exposure_s": n_neg * window_duration_s,
+        "negative_control_total_exposure_s": len(negative_windows) * window_duration_s,
+        "negative_control_false_alarms_available": false_alarms,
+        "negative_control_far_available": false_alarms / n_neg if n_neg else None,
+        "negative_control_far_available_ci90": list(_wilson_ci90(false_alarms, n_neg)) if n_neg else None,
+        "negative_control_far_status": "AVAILABLE" if n_neg else "UNAVAILABLE_NO_EXPOSURE",
+        "positive_injections_available": n_pos,
+        "positive_injections_abstained": len(abstained),
+        "positive_injections_missed_available": len(missed_available),
+        "detection_efficiency_available": detected_pos / n_pos if n_pos else None,
+        "detection_efficiency_available_ci90": list(_wilson_ci90(detected_pos, n_pos)) if n_pos else None,
+        "detection_efficiency_status": "AVAILABLE" if n_pos else "UNAVAILABLE_NO_AVAILABLE_INJECTIONS",
+        "missed_available_records": missed_available,
+        "abstained_records": abstained,
+        "legacy_metric_semantics": {
+            "negative_control_far": "Historical all-noise-window denominator, including abstentions; use negative_control_far_available with exposure.",
+            "positive_injections_missed": "Historical non-detection count including abstentions; use positive_injections_missed_available and positive_injections_abstained.",
+            "detection_efficiency": "Unconditional accepted detections / all injections, including abstentions in the denominator.",
+            "missed_records": "Historical list of all non-detections, including ABSTAINED records; use the separate current lists.",
+        },
+        "interval_method": "90% Wilson diagnostic interval; nominal coverage assumes independent evaluation windows.",
+    }
+
+
 def _build_rows(
     windows: list[DualOutputWindowV2b],
     window_duration_s: float,
@@ -294,6 +351,14 @@ def _build_rows(
                 "significance_status": w.significance_status,
                 "detection_available": w.detection_available,
                 "is_clean_calibrated": w.is_clean_calibrated,
+                "evaluation_status": "ABSTAINED" if not w.detection_available else ("DETECTED" if active_decision else "NOT_DETECTED"),
+                "stft_max_score_full_precision": _full_precision(w.stft_max_score),
+                "stft_threshold_full_precision": _full_precision(w.stft_threshold),
+                "broadband_excess_score_full_precision": _full_precision(w.broadband_excess_score),
+                "broadband_threshold_full_precision": _full_precision(w.broadband_threshold),
+                "union_stft_threshold_full_precision": _full_precision(u_stft_th_raw),
+                "active_score_full_precision": _full_precision(w.stft_max_score if search_mode == "transient" else w.broadband_excess_score),
+                "active_threshold_full_precision": _full_precision(w.stft_threshold if search_mode == "transient" else w.broadband_threshold),
             }
         )
 
@@ -324,6 +389,18 @@ def _build_rows(
                     "credibility_status": w.credibility_status,
                     "warning_causes": ";".join(w.warning_causes),
                     "physical_confirmation": "UNCONFIRMED_STATISTICAL_CANDIDATE",
+                    "raw_anomaly_score_full_precision": _full_precision(c.raw_anomaly_score),
+                    "standardized_score_full_precision": _full_precision(c.standardized_score),
+                    "empirical_p_value_full_precision": _full_precision(c.empirical_p_value),
+                    "channel_threshold_full_precision": _full_precision(w.stft_threshold),
+                    "window_active_mode_anomaly_flag": active_decision,
+                    "detection_available": w.detection_available,
+                    "t_abs_start_s_full_precision": _full_precision(t0_win + c.t_start),
+                    "t_abs_end_s_full_precision": _full_precision(t0_win + c.t_end),
+                    "peak_time_abs_s_full_precision": _full_precision(t0_win + c.peak_time),
+                    "f_min_hz_full_precision": _full_precision(c.f_min),
+                    "f_max_hz_full_precision": _full_precision(c.f_max),
+                    "peak_freq_hz_full_precision": _full_precision(c.peak_freq),
                 }
             )
         if w.broadband_nominated:
@@ -347,6 +424,18 @@ def _build_rows(
                     "credibility_status": w.credibility_status,
                     "warning_causes": ";".join(w.warning_causes),
                     "physical_confirmation": "SINGLE_CHANNEL_AMBIGUOUS_NOT_CONFIRMED",
+                    "raw_anomaly_score_full_precision": _full_precision(w.broadband_excess_score),
+                    "standardized_score_full_precision": _full_precision(w.broadband_excess_score),
+                    "empirical_p_value_full_precision": None,
+                    "channel_threshold_full_precision": _full_precision(w.broadband_threshold),
+                    "window_active_mode_anomaly_flag": active_decision,
+                    "detection_available": w.detection_available,
+                    "t_abs_start_s_full_precision": _full_precision(t0_win),
+                    "t_abs_end_s_full_precision": _full_precision(t0_win + window_duration_s),
+                    "peak_time_abs_s_full_precision": _full_precision(t0_win + 0.5 * window_duration_s),
+                    "f_min_hz_full_precision": 20.0,
+                    "f_max_hz_full_precision": 450.0,
+                    "peak_freq_hz_full_precision": None,
                 }
             )
 
@@ -597,6 +686,11 @@ def run_synthetic_self_test(
         rec_out = {
             **rec,
             "detected": hit,
+            "evaluation_status": "ABSTAINED" if not w.detection_available else ("DETECTED" if hit else "MISSED"),
+            "stft_max_score_full_precision": _full_precision(w.stft_max_score),
+            "stft_threshold_full_precision": _full_precision(w.stft_threshold),
+            "active_score_full_precision": _full_precision(w.stft_max_score if cfg.search_mode == "transient" else w.broadband_excess_score),
+            "active_threshold_full_precision": _full_precision(w.stft_threshold if cfg.search_mode == "transient" else w.broadband_threshold),
             "stft_max_score": round(w.stft_max_score, 3),
             "stft_threshold": round(w.stft_threshold, 3) if w.stft_threshold is not None else None,
             "detection_available": w.detection_available,
@@ -625,6 +719,7 @@ def run_synthetic_self_test(
         "detection_efficiency_ci90": [round(pos_ci[0], 4), round(pos_ci[1], 4)],
         "detected_records": detected_injs,
         "missed_records": missed_injs,
+        **_self_test_availability_metrics(neg_wins, detected_injs + missed_injs, cfg.window_duration_s, cfg.search_mode),
     }
 
     return WorkstationRunResult(
@@ -641,63 +736,72 @@ def run_synthetic_self_test(
     )
 
 
-def export_workstation_run(result: WorkstationRunResult, output_dir: Path | str) -> dict[str, Path]:
-    """Export reproducible candidates.csv, timeline.csv, and run_report.json."""
-    out = Path(output_dir)
-    out.mkdir(parents=True, exist_ok=True)
+_PRECISION_FIELDS = (
+    "stft_max_score_full_precision", "stft_threshold_full_precision",
+    "broadband_excess_score_full_precision", "broadband_threshold_full_precision",
+    "union_stft_threshold_full_precision", "active_score_full_precision", "active_threshold_full_precision",
+)
 
-    cands_path = out / "candidates.csv"
-    tl_path = out / "timeline.csv"
-    json_path = out / "run_report.json"
 
-    def _dump_csv(path: Path, rows: list[dict[str, Any]], fallback_fields: list[str]) -> None:
-        fields = list(rows[0].keys()) if rows else fallback_fields
-        with path.open("w", newline="", encoding="utf-8") as fh:
-            w = csv.DictWriter(fh, fieldnames=fields, restval="")
-            w.writeheader()
-            if rows:
-                w.writerows(rows)
-
-    _dump_csv(
-        cands_path,
-        result.candidates_rows,
-        ["candidate_type", "window_index", "t_abs_start_s", "t_abs_end_s", "raw_anomaly_score", "physical_confirmation"],
+def build_workstation_report(result: WorkstationRunResult) -> dict[str, Any]:
+    """One report contract for saved bundles and UI downloads; legacy keys retained."""
+    legacy_timeline_fields = (
+        "window_index", "sample_id", "regime_id", "credibility_status", "detection_available",
+        "active_mode_diagnostic_nomination", "active_mode_anomaly_flag", "stft_threshold", "broadband_threshold",
+        "dedicated_stft_available", "dedicated_broadband_available", "union_stft_available", "union_broadband_available",
+        "union_stft_threshold", "union_mode_status", "resource_limit_blocked_stft", "resource_limit_blocked_union",
+        "calibration_updated_for_next_window",
     )
-    _dump_csv(tl_path, result.timeline_rows, ["window_index", "sample_id", "stft_max_score", "credibility_status"])
-
-    window_availability_timeline = [
-        {
-            "window_index": r["window_index"],
-            "sample_id": r["sample_id"],
-            "regime_id": r["regime_id"],
-            "credibility_status": r["credibility_status"],
-            "detection_available": r["detection_available"],
-            "active_mode_diagnostic_nomination": r["active_mode_diagnostic_nomination"],
-            "active_mode_anomaly_flag": r["active_mode_anomaly_flag"],
-            "stft_threshold": r["stft_threshold"],
-            "broadband_threshold": r["broadband_threshold"],
-            "dedicated_stft_available": r["dedicated_stft_available"],
-            "dedicated_broadband_available": r["dedicated_broadband_available"],
-            "union_stft_available": r["union_stft_available"],
-            "union_broadband_available": r["union_broadband_available"],
-            "union_stft_threshold": r["union_stft_threshold"],
-            "union_mode_status": r["union_mode_status"],
-            "resource_limit_blocked_stft": r["resource_limit_blocked_stft"],
-            "resource_limit_blocked_union": r["resource_limit_blocked_union"],
-            "calibration_updated_for_next_window": r["calibration_updated_for_next_window"],
-        }
-        for r in result.timeline_rows
+    timeline = [
+        {**{key: row[key] for key in legacy_timeline_fields},
+         **{key: row.get(key) for key in _PRECISION_FIELDS},
+         "evaluation_status": row.get("evaluation_status"),
+         "precision_status": "FULL_PRECISION" if all(key in row for key in _PRECISION_FIELDS) else "UNAVAILABLE_LEGACY_RECORD"}
+        for row in result.timeline_rows
     ]
-    report_payload = {
+    return {
         "run_metadata": result.run_metadata,
         "scientific_semantics": result.scientific_semantics,
         "independence_audit": result.independence_audit.to_dict(),
         "calibration_audit": result.calibration_audit.to_dict(),
         "summary_metrics": result.summary_metrics,
-        "window_availability_timeline": window_availability_timeline,
+        "window_availability_timeline": timeline,
         "ground_truth_audit": result.ground_truth_audit,
         "n_exported_candidates": len(result.candidates_rows),
         "n_exported_timeline_windows": len(result.timeline_rows),
+        "export_schema_version": 2,
+        "candidate_records": result.candidates_rows,
+        "numeric_precision": "Legacy timeline/candidate numbers remain rounded; *_full_precision fields preserve the original finite decision inputs. Missing precision in legacy records is not reconstructed.",
     }
-    json_path.write_text(json.dumps(report_payload, indent=2, allow_nan=False), encoding="utf-8")
-    return {"candidates_csv": cands_path, "timeline_csv": tl_path, "run_report_json": json_path}
+
+
+def build_workstation_csv(result: WorkstationRunResult) -> dict[str, str]:
+    """Use identical CSV content in saved bundles and Streamlit downloads."""
+    candidate_fallback = ["candidate_type", "window_index", "t_abs_start_s", "t_abs_end_s", "raw_anomaly_score", "physical_confirmation",
+                          "raw_anomaly_score_full_precision", "standardized_score_full_precision", "empirical_p_value_full_precision",
+                          "channel_threshold_full_precision", "window_active_mode_anomaly_flag", "detection_available",
+                          "t_abs_start_s_full_precision", "t_abs_end_s_full_precision", "peak_time_abs_s_full_precision",
+                          "f_min_hz_full_precision", "f_max_hz_full_precision", "peak_freq_hz_full_precision"]
+    timeline_fallback = ["window_index", "sample_id", "stft_max_score", "credibility_status", *_PRECISION_FIELDS, "evaluation_status"]
+    def encode(rows: list[dict[str, Any]], fallback: list[str]) -> str:
+        fields = list(dict.fromkeys(key for row in rows for key in row)) if rows else fallback
+        stream = io.StringIO(newline="")
+        writer = csv.DictWriter(stream, fieldnames=fields, restval="")
+        writer.writeheader()
+        writer.writerows(rows)
+        return stream.getvalue()
+    return {"candidates_csv": encode(result.candidates_rows, candidate_fallback), "timeline_csv": encode(result.timeline_rows, timeline_fallback)}
+
+
+def export_workstation_run(result: WorkstationRunResult, output_dir: Path | str) -> dict[str, Path]:
+    """Export shared CSV/strict-JSON contracts; unavailable quantities remain null."""
+    # Validate JSON before writing any bundle file.
+    report = json.dumps(build_workstation_report(result), indent=2, allow_nan=False)
+    csv_text = build_workstation_csv(result)
+    out = Path(output_dir)
+    out.mkdir(parents=True, exist_ok=True)
+    paths = {"candidates_csv": out / "candidates.csv", "timeline_csv": out / "timeline.csv", "run_report_json": out / "run_report.json"}
+    for key, text in csv_text.items():
+        paths[key].write_text(text, encoding="utf-8", newline="")
+    paths["run_report_json"].write_text(report, encoding="utf-8")
+    return paths
