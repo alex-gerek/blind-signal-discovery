@@ -9,7 +9,7 @@
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-1f8fd0.svg)](pyproject.toml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24557479.svg)](https://doi.org/10.5281/zenodo.24557479)
 
-**[Open the workstation](#open-the-workstation)** · [How it is measured](#what-has-been-measured) · [Mathematical guide](docs/whisker_mathematical_measurement_guide.md) · [Audit erratum](docs/AUDIT_ERRATUM_47a5475.md) · [Research history](docs/RESEARCH_HISTORY.md) · [Manual verification](docs/manual_workstation_synthetic_verification_986dd46.md)
+**[Open the workstation](https://alex-gerek.github.io/blind-signal-discovery/workstation/)** · [Website](https://alex-gerek.github.io/blind-signal-discovery/) · [How it is measured](#what-has-been-measured) · [Mathematical guide](docs/whisker_mathematical_measurement_guide.md) · [Audit erratum](docs/AUDIT_ERRATUM_47a5475.md) · [Research history](docs/RESEARCH_HISTORY.md)
 
 </div>
 
@@ -59,14 +59,11 @@ Every claim requires a control with a known answer, explicit uncertainty, and do
 
 ## Open the workstation
 
-BSD includes a standalone **Local Measurement Workstation** ([app/bsd_workstation.py](app/bsd_workstation.py)) for interactive calibration inspection, spectrogram review, synthetic injection self-tests, and reproducible CSV/JSON export on local time-series files (`.wav`, `.csv`, `.npy`, `.hdf5`/`.h5`).
-
-- **Built-in Synthetic Self-Test:** Tests positive injections (explicitly listing both detected and missed events) alongside pure-noise negative-control windows.
-- **Honest Availability & Export:** Displays `INSUFFICIENT` / `PROVISIONAL` / `VALIDATED` calibration status, separates diagnostic Stream A nominations (`active_mode_diagnostic_nomination`) from accepted decisions (`active_mode_anomaly_flag`), and exports `candidates.csv`, `timeline.csv`, and strict RFC 8259 `run_report.json` (`allow_nan=False`, unavailable thresholds as `null`).
-- **Local-Only Safety:** Binds to `127.0.0.1:8501` by default; reserved O3 holdout data is hard-blocked. See [docs/bsd_workstation_plan_and_contract.md](docs/bsd_workstation_plan_and_contract.md) and [SECURITY.md](SECURITY.md).
+- **In your browser (no installation required):** **[Open the Browser Workstation](https://alex-gerek.github.io/blind-signal-discovery/workstation/)** — runs template-free STFT excess-power whitening, 8-connected clustering, exact finite-sample conformal calibration (`1/(N+1) <= alpha`), interactive Viridis spectrograms with candidate boxes, local `.wav`/`.csv` upload in browser memory, and strict CSV/JSON export directly in your browser.
+- **Project overview page:** [https://alex-gerek.github.io/blind-signal-discovery/](https://alex-gerek.github.io/blind-signal-discovery/)
+- **Full 3-scale audited Python Workstation (`app/bsd_workstation.py`):** For the full 3-scale `MultiResolutionDetector`, adaptive regime monitoring (`AdaptiveRegimeManagerV2b`), and `.hdf5`/`.npy` support locally on `127.0.0.1:8501`:
 
 ```powershell
-# Clone, install with GUI + test dependencies, and launch locally
 git clone https://github.com/alex-gerek/blind-signal-discovery.git
 cd blind-signal-discovery
 python -m venv .venv
@@ -74,7 +71,7 @@ python -m venv .venv
 .\.venv\Scripts\streamlit.exe run app\bsd_workstation.py --server.address 127.0.0.1 --server.port 8501
 ```
 
-On Windows, you can also start the local Workstation via `launch_workstation.bat` after creating `.venv`.
+See [docs/bsd_workstation_plan_and_contract.md](docs/bsd_workstation_plan_and_contract.md), [docs/manual_workstation_synthetic_verification_986dd46.md](docs/manual_workstation_synthetic_verification_986dd46.md), and [SECURITY.md](SECURITY.md).
 
 ---
 

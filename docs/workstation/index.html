@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BSD — Browser Measurement Workstation</title>
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --sidebar: #ffffff;
+      --card: #ffffff;
+      --text: #1a202c;
+      --muted: #4a5568;
+      --border: #e2e8f0;
+      --accent: #1f4e79;
+      --danger: #d62728;
+      --ok: #2f855a;
+      --warn: #b7791f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      min-height: 100vh;
+    }
+    aside {
+      width: 320px;
+      min-width: 280px;
+      background: var(--sidebar);
+      border-right: 1px solid var(--border);
+      padding: 18px 18px 28px;
+      overflow-y: auto;
+    }
+    main {
+      flex: 1;
+      padding: 22px 28px 40px;
+      overflow-y: auto;
+      max-width: 1180px;
+    }
+    @media (max-width: 900px) {
+      body { flex-direction: column; }
+      aside { width: 100%; border-right: none; border-bottom: 1px solid var(--border); }
+    }
+    h1 { font-size: 1.65rem; margin: 0 0 8px; }
+    h2 { font-size: 1.05rem; margin: 16px 0 8px; color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 4px; }
+    h3 { font-size: 1.02rem; margin: 14px 0 8px; }
+    label { display: block; font-size: 0.84rem; font-weight: 600; margin: 10px 0 4px; color: #2d3748; }
+    select, input[type="number"], input[type="file"] {
+      width: 100%;
+      padding: 6px 8px;
+      border: 1px solid #cbd5e0;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      background: #fff;
+    }
+    input[type="range"] { width: 100%; }
+    .range-val { float: right; font-weight: 700; color: var(--accent); }
+    .btn {
+      display: inline-block;
+      width: 100%;
+      margin-top: 14px;
+      padding: 10px 14px;
+      background: var(--danger);
+      color: #fff;
+      border: none;
+      border-radius: 7px;
+      font-size: 0.94rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn:hover { opacity: 0.92; }
+    .btn-sm {
+      width: auto;
+      background: var(--accent);
+      padding: 7px 13px;
+      font-size: 0.85rem;
+      margin: 6px 8px 6px 0;
+    }
+    .banner {
+      background: #ebf8ff;
+      border-left: 4px solid #3182ce;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 0.87rem;
+      margin-bottom: 14px;
+    }
+    .banner-warn {
+      background: #fefcbf;
+      border-left: 4px solid #d69e2e;
+    }
+    .banner-err {
+      background: #fff5f5;
+      border-left: 4px solid #e53e3e;
+    }
+    .banner-ok {
+      background: #f0fff4;
+      border-left: 4px solid #38a169;
+    }
+    .tabs {
+      display: flex;
+      gap: 6px;
+      border-bottom: 2px solid var(--border);
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      padding: 8px 14px;
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--muted);
+    }
+    .tab-btn.active {
+      color: var(--danger);
+      border-bottom-color: var(--danger);
+    }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+      gap: 10px;
+      margin: 12px 0 16px;
+    }
+    .metric {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+    .metric .k { font-size: 0.77rem; color: var(--muted); }
+    .metric .v { font-size: 1.18rem; font-weight: 700; margin-top: 3px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+    }
+    canvas {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: #fff;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.83rem;
+      margin-top: 8px;
+    }
+    th, td {
+      padding: 6px 8px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+    }
+    th { background: #f7fafc; font-weight: 600; }
+    .caption { font-size: 0.79rem; color: var(--muted); margin-top: 4px; }
+    .top-links { font-size: 0.84rem; margin-bottom: 10px; }
+    .top-links a { color: var(--accent); text-decoration: none; margin-right: 10px; }
+    .top-links a:hover { text-decoration: underline; }
+    .status-line { font-size: 0.85rem; color: var(--muted); margin: 6px 0; }
+    .scroll-table { max-height: 320px; overflow-y: auto; border: 1px solid var(--border); border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <aside>
+    <div class="top-links">
+      <a href="../">&larr; Overview</a>
+      <a href="https://github.com/alex-gerek/blind-signal-discovery">GitHub</a>
+      <a href="https://doi.org/10.5281/zenodo.24557479">DOI</a>
+    </div>
+
+    <h2>1. Measurement Source</h2>
+    <label for="workflow">Workflow</label>
+    <select id="workflow">
+      <option value="synth" selected>Synthetic Injection Self-Test</option>
+      <option value="file">Local File Analysis (.wav / .csv)</option>
+    </select>
+
+    <h2>2. Statistical Settings</h2>
+    <label for="targetFap">Target False-Alarm Probability (FAP)</label>
+    <select id="targetFap">
+      <option value="0.01" selected>0.010 (1.0%)</option>
+      <option value="0.02">0.020 (2.0%)</option>
+      <option value="0.05">0.050 (5.0%)</option>
+      <option value="0.005">0.005 (0.5%)</option>
+    </select>
+    <div class="caption" id="fapHint"></div>
+
+    <div id="synthControls">
+      <h2>3. Self-Test Parameters</h2>
+      <label>Calibration Background Windows (2 s each) <span class="range-val" id="nBgVal">120</span></label>
+      <input type="range" id="nBg" min="40" max="240" step="10" value="120" />
+
+      <label>Negative Control Windows (Pure Noise) <span class="range-val" id="nNegVal">40</span></label>
+      <input type="range" id="nNeg" min="10" max="80" step="10" value="40" />
+
+      <label>Positive Injections <span class="range-val" id="nPosVal">10</span></label>
+      <input type="range" id="nPos" min="2" max="16" step="2" value="10" />
+
+      <label for="noiseModel">Noise Model</label>
+      <select id="noiseModel">
+        <option value="pink_colored" selected>pink_colored (1/f-like)</option>
+        <option value="gaussian_white">gaussian_white</option>
+        <option value="shifted_ar2">shifted_ar2 (resonant)</option>
+      </select>
+
+      <label for="sigFamily">Injected Signal Family</label>
+      <select id="sigFamily">
+        <option value="linear_chirp" selected>linear_chirp</option>
+        <option value="sinusoid">sinusoid</option>
+        <option value="broadband_pulse">broadband_pulse</option>
+        <option value="sinusoidal_fm">sinusoidal_fm (withheld family)</option>
+      </select>
+
+      <label>Injected Root-Energy SNR (||s||&#8322;/&sigma;, linear) <span class="range-val" id="snrVal">16</span></label>
+      <input type="range" id="snr" min="6" max="30" step="1" value="16" />
+
+      <label for="seed">Self-Test Seed</label>
+      <input type="number" id="seed" value="2026" min="0" max="999999" />
+    </div>
+
+    <div id="fileControls" style="display:none;">
+      <h2>3. Local Files (Runs 100% in Browser)</h2>
+      <label for="bgFile">Independent Background File (.wav or .csv)</label>
+      <input type="file" id="bgFile" accept=".wav,.csv,.txt" />
+      <label for="tgtFile">Target File (.wav or .csv)</label>
+      <input type="file" id="tgtFile" accept=".wav,.csv,.txt" />
+      <label for="csvFs">Sample Rate Hz (for .csv only)</label>
+      <input type="number" id="csvFs" value="512" min="128" max="48000" />
+      <div class="caption">Files are processed locally in browser memory and never uploaded to any server.</div>
+    </div>
+
+    <button class="btn" id="runBtn">Run BSD Measurement</button>
+    <div class="status-line" id="statusLine">Ready. Click Run to start.</div>
+  </aside>
+
+  <main>
+    <h1>Blind Signal Discovery (BSD) &mdash; Browser Workstation</h1>
+    <div class="banner">
+      <strong>Browser Interactive Demo (v0.3.0):</strong> Runs template-free STFT excess-power whitening, 8-connected clustering, and exact finite-sample conformal calibration (<code>p_emp = (1 + n_ge) / (N_cal + 1) &le; target_fap</code>) directly in your browser &mdash; no installation required. For the full 3-scale audited Python core (<code>87/87</code> tests), run <code>app/bsd_workstation.py</code> locally. Statistical anomalies are never proof of a physical discovery.
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="tab1">1. Calibration &amp; Summary</button>
+      <button class="tab-btn" data-tab="tab2">2. Waveform &amp; Spectrogram</button>
+      <button class="tab-btn" data-tab="tab3">3. Candidates &amp; Ground Truth</button>
+      <button class="tab-btn" data-tab="tab4">4. Export CSV / JSON</button>
+    </div>
+
+    <div id="tab1" class="tab-panel active">
+      <div id="calBanner" class="banner">Run a measurement to view calibration status.</div>
+      <div class="metrics" id="summaryMetrics"></div>
+      <div class="card">
+        <h3>Scientific Output Semantics</h3>
+        <ul style="margin:6px 0 0 18px; font-size:0.87rem;">
+          <li><strong>Measured features:</strong> 1D time-domain waveform and Hann-windowed STFT excess power normalized by 2D spectral/temporal medians.</li>
+          <li><strong>Statistical anomalies:</strong> Windows whose maximum connected-cluster excess-power score strictly exceeds the exact conformal threshold (<code>score &gt; threshold</code>) when <code>detection_available = true</code>.</li>
+          <li><strong>Abstention on unattainable FAP:</strong> When <code>1 / (N_cal + 1) &gt; target_fap</code>, threshold is <code>null</code> (<code>CALIBRATION_UNAVAILABLE</code>), <code>detection_available = false</code>, and <code>active_mode_anomaly_flag = false</code>.</li>
+          <li><strong>Physical confirmation:</strong> <code>NOT_ESTABLISHED_BY_SINGLE_CHANNEL_WORKSTATION</code>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="tab2" class="tab-panel">
+      <div class="card">
+        <h3>Full-Timeline Anomaly Score vs. Conformal Threshold</h3>
+        <canvas id="timelineCanvas" width="960" height="240"></canvas>
+      </div>
+      <div class="card">
+        <label>Inspect Target Window Index: <span class="range-val" id="winIdxVal">0</span></label>
+        <input type="range" id="winIdx" min="0" max="0" step="1" value="0" />
+        <div class="status-line" id="winInfo"></div>
+        <h3>Time-Domain Waveform</h3>
+        <canvas id="waveCanvas" width="960" height="170"></canvas>
+        <h3>STFT Power Spectrogram (Viridis) &amp; Candidate Boxes</h3>
+        <canvas id="specCanvas" width="960" height="260"></canvas>
+      </div>
+    </div>
+
+    <div id="tab3" class="tab-panel">
+      <div class="card" id="gtCard" style="display:none;">
+        <h3>Synthetic Self-Test Ground-Truth Audit (Detected &amp; Missed Reported Explicitly)</h3>
+        <div class="metrics" id="gtMetrics"></div>
+        <div class="scroll-table">
+          <table id="gtTable"><thead><tr><th>Inj #</th><th>Window</th><th>Family</th><th>SNR</th><th>Score</th><th>Threshold</th><th>Detected</th></tr></thead><tbody></tbody></table>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Preserved Candidates (Stream A)</h3>
+        <div class="scroll-table">
+          <table id="candTable"><thead><tr><th>Window</th><th>t_start (s)</th><th>t_end (s)</th><th>f_min (Hz)</th><th>f_max (Hz)</th><th>Score</th><th>Emp. p</th><th>Decision</th></tr></thead><tbody></tbody></table>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab4" class="tab-panel">
+      <div class="card">
+        <h3>Reproducible Browser Export (Strict RFC 8259 JSON, null for Unavailable Thresholds)</h3>
+        <button class="btn btn-sm" id="dlTimeline">Download timeline.csv</button>
+        <button class="btn btn-sm" id="dlCands">Download candidates.csv</button>
+        <button class="btn btn-sm" id="dlJson">Download run_report.json</button>
+        <pre id="jsonPreview" style="max-height:360px; overflow:auto; background:#f7fafc; padding:12px; border-radius:6px; font-size:0.78rem; border:1px solid var(--border);"></pre>
+      </div>
+    </div>
+  </main>
+
+<script>
+// --- Deterministic PRNG (Mulberry32) ---
+function mulberry32(seed) {
+  let a = seed >>> 0;
+  return function() {
+    a |= 0; a = (a + 0x6D2B79F5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+function randn(rng) {
+  let u = 0, v = 0;
+  while (u === 0) u = rng();
+  while (v === 0) v = rng();
+  return Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
+}
+
+// --- In-place Radix-2 FFT ---
+function fftRadix2(re, im) {
+  const n = re.length;
+  for (let i = 1, j = 0; i < n; i++) {
+    let bit = n >> 1;
+    for (; j & bit; bit >>= 1) j ^= bit;
+    j ^= bit;
+    if (i < j) {
+      [re[i], re[j]] = [re[j], re[i]];
+      [im[i], im[j]] = [im[j], im[i]];
+    }
+  }
+  for (let len = 2; len <= n; len <<= 1) {
+    const ang = -2 * Math.PI / len;
+    const wlenRe = Math.cos(ang), wlenIm = Math.sin(ang);
+    for (let i = 0; i < n; i += len) {
+      let wRe = 1, wIm = 0;
+      for (let j = 0; j < len / 2; j++) {
+        const uRe = re[i + j], uIm = im[i + j];
+        const vRe = re[i + j + len / 2] * wRe - im[i + j + len / 2] * wIm;
+        const vIm = re[i + j + len / 2] * wIm + im[i + j + len / 2] * wRe;
+        re[i + j] = uRe + vRe; im[i + j] = uIm + vIm;
+        re[i + j + len / 2] = uRe - vRe; im[i + j + len / 2] = uIm - vIm;
+        const nRe = wRe * wlenRe - wIm * wlenIm;
+        wIm = wRe * wlenIm + wIm * wlenRe;
+        wRe = nRe;
+      }
+    }
+  }
+}
+
+function median(arr) {
+  const s = Float64Array.from(arr).sort();
+  const m = s.length >> 1;
+  return s.length % 2 ? s[m] : 0.5 * (s[m - 1] + s[m]);
+}
+
+// --- Exact Conformal Order Rank (zero upward tolerance, matching src/bsd/calibration.py) ---
+function conformalOrderRank(nSamples, targetFap) {
+  let minReq = Math.max(1, Math.floor(1.0 / targetFap) - 1);
+  while (1.0 / (minReq + 1.0) > targetFap) minReq++;
+  while (minReq > 1 && 1.0 / minReq <= targetFap) minReq--;
+
+  let mTail = Math.floor(targetFap * (nSamples + 1));
+  while (mTail < nSamples && (mTail + 1) / (nSamples + 1.0) <= targetFap) mTail++;
+  while (mTail > 0 && mTail / (nSamples + 1.0) > targetFap) mTail--;
+  if (mTail < 1) return { kOrder: null, attainable: false, minRequired: minReq };
+  const kOrder = Math.max(1, Math.min(nSamples, (nSamples + 1) - mTail));
+  return { kOrder, attainable: true, minRequired: minReq };
+}
+
+function empiricalPValue(sortedNull, score) {
+  const n = sortedNull.length;
+  if (!n || !Number.isFinite(score)) return { p: 1.0, upperBound: false };
+  let lo = 0, hi = n;
+  while (lo < hi) {
+    const mid = (lo + hi) >> 1;
+    if (sortedNull[mid] < score) lo = mid + 1;
+    else hi = mid;
+  }
+  const nGe = n - lo;
+  return { p: (1.0 + nGe) / (n + 1.0), upperBound: nGe === 0 };
+}
+
+// --- Noise & Signal Generators (fs = 512 Hz, 2 s windows = 1024 samples) ---
+const FS = 512;
+const WIN_N = 1024;
+const NPERSEG = 64;
+const HOP = 16;
+const HANN = new Float64Array(NPERSEG);
+for (let i = 0; i < NPERSEG; i++) HANN[i] = 0.5 * (1 - Math.cos(2 * Math.PI * i / (NPERSEG - 1)));
+
+function generateNoise(model, n, rng) {
+  const x = new Float64Array(n);
+  if (model === "gaussian_white") {
+    for (let i = 0; i < n; i++) x[i] = randn(rng);
+  } else if (model === "pink_colored") {
+    // Voss-McCartney / 3-pole IIR pink approximation normalized to unit std
+    let b0 = 0, b1 = 0, b2 = 0;
+    for (let i = 0; i < n; i++) {
+      const w = randn(rng);
+      b0 = 0.997 * b0 + w * 0.029;
+      b1 = 0.985 * b1 + w * 0.032;
+      b2 = 0.950 * b2 + w * 0.048;
+      x[i] = b0 + b1 + b2 + w * 0.184;
+    }
+  } else {
+    // shifted_ar2 resonant noise
+    const r = 0.78, w0 = 2 * Math.PI * 110 / FS;
+    const a1 = 2 * r * Math.cos(w0), a2 = -(r * r);
+    let y1 = 0, y2 = 0;
+    for (let i = 0; i < n; i++) {
+      const y = randn(rng) + a1 * y1 + a2 * y2;
+      x[i] = y; y2 = y1; y1 = y;
+    }
+  }
+  let mean = 0; for (let i = 0; i < n; i++) mean += x[i]; mean /= n;
+  let v = 0; for (let i = 0; i < n; i++) { x[i] -= mean; v += x[i] * x[i]; }
+  const sd = Math.sqrt(v / n) || 1;
+  for (let i = 0; i < n; i++) x[i] /= sd;
+  return x;
+}
+
+function injectSignal(base, family, targetSnr, rng) {
+  const n = base.length;
+  const sig = new Float64Array(n);
+  const t0 = 0.25 + rng() * 0.75;
+  const dur = family === "broadband_pulse" ? 0.05 : (0.55 + rng() * 0.45);
+  const f0 = 35 + rng() * 90;
+  const f1 = f0 + 40 + rng() * 70;
+  for (let i = 0; i < n; i++) {
+    const t = i / FS;
+    if (family === "broadband_pulse") {
+      const dt = (t - (t0 + 0.2)) / 0.008;
+      sig[i] = Math.exp(-0.5 * dt * dt) * Math.cos(2 * Math.PI * (80 + 60 * rng()) * (t - t0));
+    } else if (t >= t0 && t <= t0 + dur) {
+      const u = (t - t0) / dur;
+      const env = Math.sin(Math.PI * u);
+      const tl = t - t0;
+      if (family === "linear_chirp") {
+        const k = (f1 - f0) / dur;
+        sig[i] = env * Math.sin(2 * Math.PI * (f0 * tl + 0.5 * k * tl * tl));
+      } else if (family === "sinusoid") {
+        sig[i] = env * Math.sin(2 * Math.PI * f0 * tl);
+      } else {
+        sig[i] = env * Math.sin(2 * Math.PI * (f0 * tl + 8.0 * Math.sin(2 * Math.PI * 3.5 * tl)));
+      }
+    }
+  }
+  let e = 0; for (let i = 0; i < n; i++) e += sig[i] * sig[i];
+  const norm = Math.sqrt(e) || 1;
+  const out = Float64Array.from(base);
+  for (let i = 0; i < n; i++) out[i] += (sig[i] / norm) * targetSnr;
+  return out;
+}
+
+// --- Core STFT + 2D Median Whitening + 8-Connected Clustering ---
+function analyzeWindow(signal, fs, seedThresh = 4.0) {
+  const n = signal.length;
+  const med0 = median(signal);
+  const x = new Float64Array(n);
+  for (let i = 0; i < n; i++) x[i] = signal[i] - med0;
+
+  const nFrames = Math.max(1, Math.floor((n - NPERSEG) / HOP) + 1);
+  const nFreq = (NPERSEG >> 1) - 1; // exclude DC and Nyquist
+  const pwr = new Float64Array(nFreq * nFrames);
+  const re = new Float64Array(NPERSEG);
+  const im = new Float64Array(NPERSEG);
+
+  for (let fr = 0; fr < nFrames; fr++) {
+    const off = fr * HOP;
+    for (let k = 0; k < NPERSEG; k++) {
+      re[k] = (off + k < n ? x[off + k] : 0) * HANN[k];
+      im[k] = 0;
+    }
+    fftRadix2(re, im);
+    for (let f = 0; f < nFreq; f++) {
+      const idx = f + 1;
+      pwr[f * nFrames + fr] = re[idx] * re[idx] + im[idx] * im[idx] + 1e-18;
+    }
+  }
+
+  // Per-frequency median PSD & per-time median envelope (robust 2D background)
+  const fMed = new Float64Array(nFreq);
+  const tmpT = new Float64Array(nFrames);
+  for (let f = 0; f < nFreq; f++) {
+    for (let fr = 0; fr < nFrames; fr++) tmpT[fr] = pwr[f * nFrames + fr];
+    fMed[f] = Math.max(median(tmpT) / Math.LN2, 1e-18);
+  }
+  const zMap = new Float64Array(nFreq * nFrames);
+  const tMed = new Float64Array(nFrames);
+  const tmpF = new Float64Array(nFreq);
+  for (let fr = 0; fr < nFrames; fr++) {
+    for (let f = 0; f < nFreq; f++) tmpF[f] = pwr[f * nFrames + fr] / fMed[f];
+    tMed[fr] = Math.max(median(tmpF) / Math.LN2, 1e-18);
+    for (let f = 0; f < nFreq; f++) {
+      zMap[f * nFrames + fr] = (pwr[f * nFrames + fr] / fMed[f]) / tMed[fr];
+    }
+  }
+
+  // 8-connected components above seedThresh (min_bins >= 2)
+  const visited = new Uint8Array(nFreq * nFrames);
+  const clusters = [];
+  const df = fs / NPERSEG;
+  const dt = HOP / fs;
+
+  for (let f = 0; f < nFreq; f++) {
+    for (let fr = 0; fr < nFrames; fr++) {
+      const idx = f * nFrames + fr;
+      if (visited[idx] || zMap[idx] <= seedThresh) continue;
+      const q = [[f, fr]];
+      visited[idx] = 1;
+      let score = 0, bins = 0;
+      let fMin = f, fMax = f, tMin = fr, tMax = fr;
+      while (q.length) {
+        const [cf, ct] = q.pop();
+        const val = zMap[cf * nFrames + ct];
+        score += (val - 1.0);
+        bins++;
+        if (cf < fMin) fMin = cf;
+        if (cf > fMax) fMax = cf;
+        if (ct < tMin) tMin = ct;
+        if (ct > tMax) tMax = ct;
+        for (let dfi = -1; dfi <= 1; dfi++) {
+          for (let dti = -1; dti <= 1; dti++) {
+            const nf = cf + dfi, nt = ct + dti;
+            if (nf >= 0 && nf < nFreq && nt >= 0 && nt < nFrames) {
+              const ni = nf * nFrames + nt;
+              if (!visited[ni] && zMap[ni] > seedThresh) {
+                visited[ni] = 1;
+                q.push([nf, nt]);
+              }
+            }
+          }
+        }
+      }
+      if (bins >= 2) {
+        clusters.push({
+          t_start: tMin * dt,
+          t_end: (tMax + 1) * dt + (NPERSEG / fs) * 0.5,
+          f_min: (fMin + 0.5) * df,
+          f_max: (fMax + 1.5) * df,
+          score,
+          bins
+        });
+      }
+    }
+  }
+  clusters.sort((a, b) => b.score - a.score);
+  const maxScore = clusters.length ? clusters[0].score : 0.0;
+  return { maxScore, clusters, pwr, nFreq, nFrames, fs };
+}
+
+// --- WAV & CSV Readers (100% local in browser) ---
+async function readAudioOrCsv(file, csvFs) {
+  const name = file.name.toLowerCase();
+  if (name.endsWith(".wav")) {
+    const buf = await file.arrayBuffer();
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const decoded = await ctx.decodeAudioData(buf);
+    const ch0 = decoded.getChannelData(0);
+    const rawFs = decoded.sampleRate;
+    // Simple stride decimation to ~512 Hz for fast interactive STFT
+    const step = Math.max(1, Math.round(rawFs / FS));
+    const out = new Float64Array(Math.floor(ch0.length / step));
+    for (let i = 0; i < out.length; i++) out[i] = ch0[i * step];
+    await ctx.close();
+    return { signal: out, fs: rawFs / step };
+  }
+  const txt = await file.text();
+  const vals = [];
+  for (const line of txt.split(/\r?\n/)) {
+    const s = line.trim();
+    if (!s || s.startsWith("#")) continue;
+    const parts = s.split(/[,\s;]+/);
+    const v = Number(parts[parts.length - 1]);
+    if (Number.isFinite(v)) vals.push(v);
+  }
+  return { signal: Float64Array.from(vals), fs: Number(csvFs) || FS };
+}
+
+// --- Colormap (Viridis LUT) ---
+const VIRIDIS = [
+  [68,1,84],[71,44,122],[59,81,139],[44,113,142],[33,144,141],
+  [39,173,129],[92,200,99],[170,220,50],[253,231,37]
+];
+function viridisRGB(t) {
+  const c = Math.max(0, Math.min(1, t)) * (VIRIDIS.length - 1);
+  const i = Math.floor(c), f = c - i;
+  const a = VIRIDIS[i], b = VIRIDIS[Math.min(i + 1, VIRIDIS.length - 1)];
+  return [
+    Math.round(a[0] + f * (b[0] - a[0])),
+    Math.round(a[1] + f * (b[1] - a[1])),
+    Math.round(a[2] + f * (b[2] - a[2]))
+  ];
+}
+
+let LAST_RUN = null;
+
+function drawTimeline(run) {
+  const cvs = document.getElementById("timelineCanvas");
+  const ctx = cvs.getContext("2d");
+  const W = cvs.width, H = cvs.height;
+  ctx.clearRect(0, 0, W, H);
+  const pad = { l: 54, r: 20, t: 22, b: 32 };
+  const pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+
+  const scores = run.windows.map(w => w.maxScore);
+  const th = run.calibration.threshold;
+  const yMax = Math.max(10, ...scores, th || 0) * 1.12;
+
+  ctx.strokeStyle = "#e2e8f0"; ctx.lineWidth = 1;
+  for (let g = 0; g <= 4; g++) {
+    const y = pad.t + ph * (1 - g / 4);
+    ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(pad.l + pw, y); ctx.stroke();
+    ctx.fillStyle = "#4a5568"; ctx.font = "11px sans-serif";
+    ctx.fillText((yMax * g / 4).toFixed(1), 8, y + 4);
+  }
+  const n = scores.length;
+  ctx.strokeStyle = "#1f4e79"; ctx.lineWidth = 1.6;
+  ctx.beginPath();
+  for (let i = 0; i < n; i++) {
+    const x = pad.l + (n > 1 ? (i / (n - 1)) * pw : pw / 2);
+    const y = pad.t + ph * (1 - scores[i] / yMax);
+    if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+  }
+  ctx.stroke();
+
+  if (th !== null) {
+    const yt = pad.t + ph * (1 - th / yMax);
+    ctx.strokeStyle = "#d62728"; ctx.setLineDash([6, 4]); ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.moveTo(pad.l, yt); ctx.lineTo(pad.l + pw, yt); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = "#d62728"; ctx.font = "bold 11px sans-serif";
+    ctx.fillText(`Conformal Threshold = ${th.toFixed(2)}`, pad.l + 8, Math.max(pad.t + 12, yt - 6));
+  } else {
+    ctx.fillStyle = "#e53e3e"; ctx.font = "bold 12px sans-serif";
+    ctx.fillText("Threshold UNAVAILABLE (null) — detection abstains", pad.l + 8, pad.t + 14);
+  }
+
+  for (let i = 0; i < n; i++) {
+    if (run.windows[i].activeFlag) {
+      const x = pad.l + (n > 1 ? (i / (n - 1)) * pw : pw / 2);
+      const y = pad.t + ph * (1 - scores[i] / yMax);
+      ctx.fillStyle = "#d62728";
+      ctx.beginPath(); ctx.arc(x, y, 4, 0, 2 * Math.PI); ctx.fill();
+    }
+  }
+  ctx.fillStyle = "#4a5568"; ctx.font = "11px sans-serif";
+  ctx.fillText("Window Index (0 .. " + (n - 1) + ")", pad.l + pw / 2 - 48, H - 8);
+}
+
+function drawWindowDetail(run, idx) {
+  const w = run.windows[idx];
+  document.getElementById("winIdxVal").textContent = idx;
+  const thStr = run.calibration.threshold !== null ? run.calibration.threshold.toFixed(3) : "UNAVAILABLE (null)";
+  document.getElementById("winInfo").textContent =
+    `Window ${idx} (${w.role}) | Max Score = ${w.maxScore.toFixed(3)} | Threshold = ${thStr} | ` +
+    `Detection Available = ${w.detectionAvailable} | Active Decision = ${w.activeFlag} | Candidates = ${w.nominatedCandidates.length}`;
+
+  // Waveform
+  const wCvs = document.getElementById("waveCanvas");
+  const wCtx = wCvs.getContext("2d");
+  const W = wCvs.width, H = wCvs.height;
+  wCtx.clearRect(0, 0, W, H);
+  const sig = w.signal;
+  let maxA = 1e-6;
+  for (let i = 0; i < sig.length; i++) maxA = Math.max(maxA, Math.abs(sig[i]));
+  wCtx.strokeStyle = "#1f4e79"; wCtx.lineWidth = 1.1;
+  wCtx.beginPath();
+  for (let i = 0; i < sig.length; i++) {
+    const x = 44 + (i / (sig.length - 1)) * (W - 60);
+    const y = H / 2 - (sig[i] / maxA) * (H * 0.40);
+    if (i === 0) wCtx.moveTo(x, y); else wCtx.lineTo(x, y);
+  }
+  wCtx.stroke();
+  wCtx.fillStyle = "#4a5568"; wCtx.font = "11px sans-serif";
+  wCtx.fillText(`0 s .. ${(sig.length / w.fs).toFixed(2)} s`, W / 2 - 30, H - 6);
+
+  // Spectrogram
+  const sCvs = document.getElementById("specCanvas");
+  const sCtx = sCvs.getContext("2d");
+  const SW = sCvs.width, SH = sCvs.height;
+  sCtx.clearRect(0, 0, SW, SH);
+  const padL = 48, padB = 26, padT = 12, padR = 16;
+  const pw = SW - padL - padR, ph = SH - padT - padB;
+  const { pwr, nFreq, nFrames, fs } = w;
+  const logP = new Float64Array(pwr.length);
+  let lo = Infinity, hi = -Infinity;
+  for (let i = 0; i < pwr.length; i++) {
+    const v = 10 * Math.log10(Math.max(pwr[i], 1e-18));
+    logP[i] = v;
+    if (v < lo) lo = v;
+    if (v > hi) hi = v;
+  }
+  const span = Math.max(1e-6, hi - lo);
+  const cw = pw / nFrames, ch = ph / nFreq;
+  for (let f = 0; f < nFreq; f++) {
+    const y = padT + ph - (f + 1) * ch;
+    for (let fr = 0; fr < nFrames; fr++) {
+      const t = (logP[f * nFrames + fr] - lo) / span;
+      const [r, g, b] = viridisRGB(t);
+      sCtx.fillStyle = `rgb(${r},${g},${b})`;
+      sCtx.fillRect(padL + fr * cw, y, cw + 0.8, ch + 0.8);
+    }
+  }
+  // Draw candidate boxes
+  const dur = sig.length / fs;
+  const nyq = fs / 2;
+  sCtx.strokeStyle = "#ff4b4b"; sCtx.lineWidth = 2;
+  for (const c of w.nominatedCandidates) {
+    const x0 = padL + (c.t_start / dur) * pw;
+    const x1 = padL + (Math.min(dur, c.t_end) / dur) * pw;
+    const y1 = padT + ph - (c.f_min / nyq) * ph;
+    const y0 = padT + ph - (Math.min(nyq, c.f_max) / nyq) * ph;
+    sCtx.strokeRect(x0, y0, Math.max(4, x1 - x0), Math.max(4, y1 - y0));
+  }
+  sCtx.fillStyle = "#4a5568"; sCtx.font = "11px sans-serif";
+  sCtx.fillText(`${nyq.toFixed(0)} Hz`, 4, padT + 10);
+  sCtx.fillText("0 Hz", 14, padT + ph);
+  sCtx.fillText(`Time Within Window (0 .. ${dur.toFixed(2)} s)`, padL + pw / 2 - 70, SH - 6);
+}
+
+function updateFapHint() {
+  const fap = Number(document.getElementById("targetFap").value);
+  const { minRequired } = conformalOrderRank(1, fap);
+  document.getElementById("fapHint").textContent =
+    `Minimum background windows for attainable target_fap=${fap}: ${minRequired} (exact 1/(N+1) <= alpha).`;
+}
+
+async function runMeasurement() {
+  const statusEl = document.getElementById("statusLine");
+  statusEl.textContent = "Computing STFT calibration and target scan...";
+  await new Promise(r => setTimeout(r, 20));
+
+  const workflow = document.getElementById("workflow").value;
+  const targetFap = Number(document.getElementById("targetFap").value);
+  let bgWindows = [], tgtWindows = [], gtRecords = null, fs = FS;
+
+  if (workflow === "synth") {
+    const nBg = Number(document.getElementById("nBg").value);
+    const nNeg = Number(document.getElementById("nNeg").value);
+    const nPos = Number(document.getElementById("nPos").value);
+    const noiseModel = document.getElementById("noiseModel").value;
+    const sigFamily = document.getElementById("sigFamily").value;
+    const snr = Number(document.getElementById("snr").value);
+    const seed = Number(document.getElementById("seed").value) || 2026;
+
+    const rngBg = mulberry32(seed * 31 + 7);
+    const rngTgt = mulberry32(seed * 97 + 13);
+    for (let i = 0; i < nBg; i++) bgWindows.push(generateNoise(noiseModel, WIN_N, rngBg));
+    gtRecords = [];
+    for (let i = 0; i < nNeg; i++) {
+      tgtWindows.push({ signal: generateNoise(noiseModel, WIN_N, rngTgt), role: "NEGATIVE_CONTROL", inj: null });
+    }
+    for (let i = 0; i < nPos; i++) {
+      const base = generateNoise(noiseModel, WIN_N, rngTgt);
+      const sig = injectSignal(base, sigFamily, snr, rngTgt);
+      tgtWindows.push({ signal: sig, role: `INJECTION_${sigFamily}_SNR${snr}`, inj: { id: i, family: sigFamily, snr } });
+    }
+  } else {
+    const bgFile = document.getElementById("bgFile").files[0];
+    const tgtFile = document.getElementById("tgtFile").files[0];
+    if (!bgFile || !tgtFile) {
+      statusEl.textContent = "Please select both a Background file and a Target file.";
+      return;
+    }
+    const csvFs = Number(document.getElementById("csvFs").value) || FS;
+    const bgLoaded = await readAudioOrCsv(bgFile, csvFs);
+    const tgtLoaded = await readAudioOrCsv(tgtFile, csvFs);
+    fs = tgtLoaded.fs;
+    const nBg = Math.floor(bgLoaded.signal.length / WIN_N);
+    const nTgt = Math.floor(tgtLoaded.signal.length / WIN_N);
+    if (nBg < 20 || nTgt < 1) {
+      statusEl.textContent = `Need >= 20 background windows (${20 * WIN_N} samples) and >= 1 target window.`;
+      return;
+    }
+    for (let i = 0; i < nBg; i++) bgWindows.push(bgLoaded.signal.subarray(i * WIN_N, (i + 1) * WIN_N));
+    for (let i = 0; i < nTgt; i++) tgtWindows.push({ signal: tgtLoaded.signal.subarray(i * WIN_N, (i + 1) * WIN_N), role: "LOCAL_FILE", inj: null });
+  }
+
+  // Calibration
+  const nullScores = bgWindows.map(s => analyzeWindow(s, fs).maxScore);
+  const sortedNull = Float64Array.from(nullScores).sort();
+  const { kOrder, attainable, minRequired } = conformalOrderRank(sortedNull.length, targetFap);
+  const threshold = attainable ? sortedNull[kOrder - 1] : null;
+  const calState = attainable ? "AVAILABLE" : "UNAVAILABLE_FAP_UNATTAINABLE";
+  const calTier = !attainable ? "INSUFFICIENT" : (sortedNull.length >= 150 ? "VALIDATED_SYNTH_COUNT" : "PROVISIONAL");
+
+  // Target scan
+  const windows = [];
+  const allCands = [];
+  for (let i = 0; i < tgtWindows.length; i++) {
+    const res = analyzeWindow(tgtWindows[i].signal, fs);
+    const detectionAvailable = attainable && threshold !== null;
+    const nominated = detectionAvailable ? res.clusters.filter(c => c.score > threshold) : [];
+    const diagNom = nominated.length > 0;
+    const activeFlag = detectionAvailable && diagNom;
+    const wObj = {
+      index: i,
+      role: tgtWindows[i].role,
+      inj: tgtWindows[i].inj,
+      signal: tgtWindows[i].signal,
+      fs,
+      maxScore: res.maxScore,
+      pwr: res.pwr,
+      nFreq: res.nFreq,
+      nFrames: res.nFrames,
+      detectionAvailable,
+      diagnosticNomination: diagNom,
+      activeFlag,
+      nominatedCandidates: nominated
+    };
+    windows.push(wObj);
+    for (const c of nominated) {
+      const { p } = empiricalPValue(sortedNull, c.score);
+      allCands.push({
+        window_index: i,
+        t_start_s: Number(c.t_start.toFixed(4)),
+        t_end_s: Number(c.t_end.toFixed(4)),
+        f_min_hz: Number(c.f_min.toFixed(1)),
+        f_max_hz: Number(c.f_max.toFixed(1)),
+        score: Number(c.score.toFixed(4)),
+        empirical_p_value: Number(p.toFixed(5)),
+        active_mode_anomaly_flag: activeFlag
+      });
+    }
+  }
+
+  const nActive = windows.filter(w => w.activeFlag).length;
+  const run = {
+    metadata: {
+      mode: "browser_interactive_demo_v0.3.0",
+      workflow,
+      target_fap: targetFap,
+      n_bg_windows: sortedNull.length,
+      n_target_windows: windows.length,
+      sample_rate_hz: fs
+    },
+    calibration: {
+      target_fap: targetFap,
+      target_fap_attainable: attainable,
+      calibration_state: calState,
+      calibration_tier: calTier,
+      n_calibration_samples: sortedNull.length,
+      min_required_samples: minRequired,
+      min_resolvable_p_value: 1.0 / (sortedNull.length + 1.0),
+      threshold
+    },
+    summary: {
+      n_target_windows: windows.length,
+      n_detection_available_windows: windows.filter(w => w.detectionAvailable).length,
+      n_active_mode_anomaly_windows: nActive,
+      n_candidates: allCands.length
+    },
+    windows,
+    candidates: allCands
+  };
+  LAST_RUN = run;
+
+  // Update Tab 1
+  const banner = document.getElementById("calBanner");
+  if (!attainable) {
+    banner.className = "banner banner-err";
+    banner.innerHTML = `<strong>CALIBRATION_UNAVAILABLE:</strong> Requested <code>target_fap=${targetFap}</code> is unattainable with <code>N=${sortedNull.length}</code> background windows (<code>p_min = 1/${sortedNull.length + 1} = ${(1 / (sortedNull.length + 1)).toFixed(4)} &gt; ${targetFap}</code>; need &ge; <code>${minRequired}</code>). Threshold is <code>null</code> and detection explicitly abstains.`;
+  } else if (calTier === "PROVISIONAL") {
+    banner.className = "banner banner-warn";
+    banner.innerHTML = `<strong>PROVISIONAL:</strong> Attainable conformal threshold <code>${threshold.toFixed(4)}</code> from <code>N=${sortedNull.length}</code> windows (<code>p_min=${(1 / (sortedNull.length + 1)).toFixed(4)}</code>). Fewer than 150 calibration windows.`;
+  } else {
+    banner.className = "banner banner-ok";
+    banner.innerHTML = `<strong>AVAILABLE:</strong> Exact conformal threshold <code>${threshold.toFixed(4)}</code> from <code>N=${sortedNull.length}</code> background windows (<code>p_min=${(1 / (sortedNull.length + 1)).toFixed(4)} &le; ${targetFap}</code>).`;
+  }
+
+  document.getElementById("summaryMetrics").innerHTML = [
+    ["Background Windows", sortedNull.length],
+    ["Conformal Threshold", threshold !== null ? threshold.toFixed(4) : "null (UNAVAILABLE)"],
+    ["Min Resolvable p", (1 / (sortedNull.length + 1)).toFixed(4)],
+    ["Active Anomaly Windows", `${nActive} / ${windows.length}`],
+    ["Detection Available", `${run.summary.n_detection_available_windows} / ${windows.length}`]
+  ].map(([k, v]) => `<div class="metric"><div class="k">${k}</div><div class="v">${v}</div></div>`).join("");
+
+  // Update Tab 2
+  drawTimeline(run);
+  const slider = document.getElementById("winIdx");
+  slider.max = Math.max(0, windows.length - 1);
+  const firstHit = windows.findIndex(w => w.activeFlag);
+  slider.value = firstHit >= 0 ? firstHit : 0;
+  drawWindowDetail(run, Number(slider.value));
+
+  // Update Tab 3
+  const gtCard = document.getElementById("gtCard");
+  if (workflow === "synth") {
+    gtCard.style.display = "block";
+    const negs = windows.filter(w => !w.inj);
+    const poss = windows.filter(w => w.inj);
+    const negFp = negs.filter(w => w.activeFlag).length;
+    const posTp = poss.filter(w => w.activeFlag).length;
+    document.getElementById("gtMetrics").innerHTML = [
+      ["Negative Control FAR", `${(100 * negFp / Math.max(1, negs.length)).toFixed(2)}% (${negFp}/${negs.length})`],
+      ["Positive Detected", `${posTp} / ${poss.length}`],
+      ["Positive Missed", `${poss.length - posTp} / ${poss.length}`],
+      ["Detection Efficiency", `${(100 * posTp / Math.max(1, poss.length)).toFixed(1)}%`]
+    ].map(([k, v]) => `<div class="metric"><div class="k">${k}</div><div class="v">${v}</div></div>`).join("");
+
+    document.querySelector("#gtTable tbody").innerHTML = poss.map(w =>
+      `<tr><td>${w.inj.id}</td><td>${w.index}</td><td>${w.inj.family}</td><td>${w.inj.snr}</td>` +
+      `<td>${w.maxScore.toFixed(3)}</td><td>${threshold !== null ? threshold.toFixed(3) : "null"}</td>` +
+      `<td style="font-weight:700;color:${w.activeFlag ? "#2f855a" : "#c53030"}">${w.activeFlag ? "DETECTED" : "MISSED"}</td></tr>`
+    ).join("");
+  } else {
+    gtCard.style.display = "none";
+  }
+
+  document.querySelector("#candTable tbody").innerHTML = allCands.length
+    ? allCands.map(c => `<tr><td>${c.window_index}</td><td>${c.t_start_s}</td><td>${c.t_end_s}</td><td>${c.f_min_hz}</td><td>${c.f_max_hz}</td><td>${c.score}</td><td>${c.empirical_p_value}</td><td>${c.active_mode_anomaly_flag}</td></tr>`).join("")
+    : `<tr><td colspan="8" style="color:#718096;">No candidates exceeded threshold in this run.</td></tr>`;
+
+  // Update Tab 4 JSON preview
+  const exportPayload = buildExportPayload(run);
+  document.getElementById("jsonPreview").textContent = JSON.stringify(exportPayload, null, 2);
+  statusEl.textContent = `Done: ${nActive} / ${windows.length} active anomaly window(s), ${allCands.length} candidate(s).`;
+}
+
+function buildExportPayload(run) {
+  return {
+    metadata: run.metadata,
+    calibration: run.calibration,
+    summary: run.summary,
+    timeline: run.windows.map(w => ({
+      window_index: w.index,
+      role: w.role,
+      max_score: Number(w.maxScore.toFixed(4)),
+      threshold: run.calibration.threshold !== null ? Number(run.calibration.threshold.toFixed(4)) : null,
+      detection_available: w.detectionAvailable,
+      active_mode_diagnostic_nomination: w.diagnosticNomination,
+      active_mode_anomaly_flag: w.activeFlag,
+      n_candidates: w.nominatedCandidates.length
+    })),
+    candidates: run.candidates
+  };
+}
+
+function downloadText(filename, content, mime) {
+  const blob = new Blob([content], { type: mime });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+function toCsv(rows) {
+  if (!rows.length) return "";
+  const cols = Object.keys(rows[0]);
+  return [cols.join(","), ...rows.map(r => cols.map(c => r[c] === null || r[c] === undefined ? "" : String(r[c])).join(","))].join("\n");
+}
+
+// --- Event Listeners ---
+document.querySelectorAll(".tab-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".tab-panel").forEach(p => p.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById(btn.dataset.tab).classList.add("active");
+  });
+});
+["nBg", "nNeg", "nPos", "snr"].forEach(id => {
+  const el = document.getElementById(id);
+  el.addEventListener("input", () => { document.getElementById(id + "Val").textContent = el.value; });
+});
+document.getElementById("workflow").addEventListener("change", e => {
+  const isSynth = e.target.value === "synth";
+  document.getElementById("synthControls").style.display = isSynth ? "block" : "none";
+  document.getElementById("fileControls").style.display = isSynth ? "none" : "block";
+});
+document.getElementById("targetFap").addEventListener("change", updateFapHint);
+document.getElementById("winIdx").addEventListener("input", e => {
+  if (LAST_RUN) drawWindowDetail(LAST_RUN, Number(e.target.value));
+});
+document.getElementById("runBtn").addEventListener("click", runMeasurement);
+document.getElementById("dlTimeline").addEventListener("click", () => {
+  if (LAST_RUN) downloadText("timeline.csv", toCsv(buildExportPayload(LAST_RUN).timeline), "text/csv");
+});
+document.getElementById("dlCands").addEventListener("click", () => {
+  if (LAST_RUN) downloadText("candidates.csv", toCsv(LAST_RUN.candidates), "text/csv");
+});
+document.getElementById("dlJson").addEventListener("click", () => {
+  if (LAST_RUN) downloadText("run_report.json", JSON.stringify(buildExportPayload(LAST_RUN), null, 2), "application/json");
+});
+
+updateFapHint();
+runMeasurement();
+</script>
+</body>
+</html>
