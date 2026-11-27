@@ -1,0 +1,20 @@
+{
+  "status": "VALIDATED",
+  "n_bg_windows": 707,
+  "n_thresh": 495,
+  "n_eff": 464.1022225064664,
+  "lag1_autocorr": -0.054043179935713115,
+  "ljung_box_p": 0.6720413969879622,
+  "p_min": 0.0020161290322580645,
+  "expected_far_iid": 0.008064516129032258,
+  "far_ci90_iid": [
+    0.002764808873257607,
+    0.015588881889441868
+  ],
+  "far_ci90_neff": [
+    0.003077866132260674,
+    0.016932237125887525
+  ],
+  "dependence_detected": false,
+  "unmet_validation_conditions": []
+}

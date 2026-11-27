@@ -1,0 +1,44 @@
+{
+  "window_index": 80,
+  "gps_start": 1186741858.0,
+  "role": "ON_SOURCE",
+  "score": 10.072417220849967,
+  "threshold": 2.6028473257791225,
+  "empirical_p": 0.0020161290322580645,
+  "detected_raw": true,
+  "detected_post_veto": true,
+  "dq_all_pass": true,
+  "dq_failed_flags": "NONE",
+  "inj_active_flags": "CW_HW_INJ",
+  "event_local_s": 3.5,
+  "near_score": 10.072417220849967,
+  "near_empirical_p": 0.0020161290322580645,
+  "associated_raw": true,
+  "associated_post_veto": true,
+  "per_scale_raw_max": {
+    "short_31ms": 466.64495949151205,
+    "medium_125ms": 264.9899766974555,
+    "long_500ms": 121.32302549068584
+  },
+  "per_scale_std_max": {
+    "short_31ms": 8.399133360487653,
+    "medium_125ms": 10.072417220849967,
+    "long_500ms": 3.832085709855885
+  },
+  "winning_scale": "medium_125ms",
+  "zero_calibration": {
+    "score": 9.268619482044334,
+    "near_score": 9.268619482044334,
+    "threshold": 2.240084239235834,
+    "empirical_p": 0.0020161290322580645,
+    "near_empirical_p": 0.0020161290322580645,
+    "associated_raw": true
+  },
+  "processed_event_array_sha256": "655916688ef4f563479b488e4249f908e48d80eb59033fbe4adfefb3cfdcfb90",
+  "processed_array_hash_definition": "C-order float64 signal bytes, excluding NPY header",
+  "quality": {
+    "dq_all_pass": true,
+    "dq_failed_flags": "NONE",
+    "inj_active_flags": "CW_HW_INJ"
+  }
+}

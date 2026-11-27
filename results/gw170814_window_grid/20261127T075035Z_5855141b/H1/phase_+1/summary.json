@@ -1,0 +1,93 @@
+{
+  "site": "H1",
+  "phase_s": 1,
+  "n_calibration": 707,
+  "n_target": 160,
+  "event": {
+    "window_index": 80,
+    "gps_start": 1186741861.0,
+    "role": "ON_SOURCE",
+    "score": 1.3071396167507527,
+    "threshold": 2.24973580342009,
+    "empirical_p": 0.07661290322580645,
+    "detected_raw": false,
+    "detected_post_veto": false,
+    "dq_all_pass": true,
+    "dq_failed_flags": "NONE",
+    "inj_active_flags": "CW_HW_INJ",
+    "event_local_s": 0.5,
+    "near_score": 1.3071396167507527,
+    "near_empirical_p": 0.07661290322580645,
+    "associated_raw": false,
+    "associated_post_veto": false,
+    "per_scale_raw_max": {
+      "short_31ms": 137.42606228715687,
+      "medium_125ms": 36.88877980641193,
+      "long_500ms": 23.399194199328814
+    },
+    "per_scale_std_max": {
+      "short_31ms": 1.3071396167507527,
+      "medium_125ms": 0.2180552536373855,
+      "long_500ms": -0.45777702669632553
+    },
+    "winning_scale": "short_31ms",
+    "zero_calibration": {
+      "score": 1.4425483006469006,
+      "near_score": 1.4425483006469006,
+      "threshold": 2.590544448760812,
+      "empirical_p": 0.0625,
+      "near_empirical_p": 0.0625,
+      "associated_raw": false
+    },
+    "processed_event_array_sha256": "c1434ecad26c11fe95e4b07c35e85c559079d6c5e856fbf7f16883c93822d9ae",
+    "processed_array_hash_definition": "C-order float64 signal bytes, excluding NPY header",
+    "quality": {
+      "dq_all_pass": true,
+      "dq_failed_flags": "NONE",
+      "inj_active_flags": "CW_HW_INJ"
+    }
+  },
+  "offsource_windows": 150,
+  "offsource_exposure_s": 600,
+  "offsource_raw": 5,
+  "offsource_post_veto": 4,
+  "audit": {
+    "status": "VALIDATED",
+    "n_bg_windows": 707,
+    "n_thresh": 495,
+    "n_eff": 439.15624700131457,
+    "lag1_autocorr": -0.011842738074554106,
+    "ljung_box_p": 0.8654008429005887,
+    "p_min": 0.0020161290322580645,
+    "expected_far_iid": 0.008064516129032258,
+    "far_ci90_iid": [
+      0.002764808873257607,
+      0.015588881889441868
+    ],
+    "far_ci90_neff": [
+      0.0033254197457334867,
+      0.01806180507063018
+    ],
+    "dependence_detected": false,
+    "unmet_validation_conditions": []
+  },
+  "elapsed_s": 24.478472200000397,
+  "padded_block_footprints": [
+    [
+      1186739815.0,
+      1186740057.0
+    ],
+    [
+      1186740080.0,
+      1186741362.0
+    ],
+    [
+      1186741540.0,
+      1186742182.0
+    ],
+    [
+      1186742360.0,
+      1186743910.0
+    ]
+  ]
+}
