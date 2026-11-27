@@ -1,0 +1,50 @@
+{
+  "seed": 17101,
+  "case": "pink",
+  "summaries": [
+    {
+      "alpha": 0.01,
+      "guard": {
+        "admitted": true,
+        "reason": "ADMITTED",
+        "median": 0.26904451590037237,
+        "spread": 1.0,
+        "limit": 10.269044515900372,
+        "maximum": 2.524068809653758
+      },
+      "policy_available": true,
+      "core_noise_alarms": 1,
+      "policy_noise_alarms": 1,
+      "available_noise_windows": 80,
+      "available_noise_seconds": 320.0,
+      "conditional_noise_rate": 0.0125,
+      "core_signal_detected": 7,
+      "policy_signal_detected": 7,
+      "policy_signal_missed": 5,
+      "policy_signal_abstained": 0,
+      "lost_baseline_detections": 0
+    },
+    {
+      "alpha": 0.005,
+      "guard": {
+        "admitted": true,
+        "reason": "ADMITTED",
+        "median": 0.26904451590037237,
+        "spread": 1.0,
+        "limit": 10.269044515900372,
+        "maximum": 2.524068809653758
+      },
+      "policy_available": true,
+      "core_noise_alarms": 1,
+      "policy_noise_alarms": 1,
+      "available_noise_windows": 80,
+      "available_noise_seconds": 320.0,
+      "conditional_noise_rate": 0.0125,
+      "core_signal_detected": 7,
+      "policy_signal_detected": 7,
+      "policy_signal_missed": 5,
+      "policy_signal_abstained": 0,
+      "lost_baseline_detections": 0
+    }
+  ]
+}

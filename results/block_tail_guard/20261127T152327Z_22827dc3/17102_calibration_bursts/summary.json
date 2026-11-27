@@ -1,0 +1,50 @@
+{
+  "seed": 17102,
+  "case": "calibration_bursts",
+  "summaries": [
+    {
+      "alpha": 0.01,
+      "guard": {
+        "admitted": true,
+        "reason": "ADMITTED",
+        "median": 0.40970860909547524,
+        "spread": 1.378933575330171,
+        "limit": 14.199044362397185,
+        "maximum": 11.0379206078953
+      },
+      "policy_available": true,
+      "core_noise_alarms": 0,
+      "policy_noise_alarms": 0,
+      "available_noise_windows": 80,
+      "available_noise_seconds": 320.0,
+      "conditional_noise_rate": 0.0,
+      "core_signal_detected": 6,
+      "policy_signal_detected": 6,
+      "policy_signal_missed": 6,
+      "policy_signal_abstained": 0,
+      "lost_baseline_detections": 0
+    },
+    {
+      "alpha": 0.005,
+      "guard": {
+        "admitted": true,
+        "reason": "ADMITTED",
+        "median": 0.40970860909547524,
+        "spread": 1.378933575330171,
+        "limit": 14.199044362397185,
+        "maximum": 11.0379206078953
+      },
+      "policy_available": true,
+      "core_noise_alarms": 0,
+      "policy_noise_alarms": 0,
+      "available_noise_windows": 80,
+      "available_noise_seconds": 320.0,
+      "conditional_noise_rate": 0.0,
+      "core_signal_detected": 4,
+      "policy_signal_detected": 4,
+      "policy_signal_missed": 8,
+      "policy_signal_abstained": 0,
+      "lost_baseline_detections": 0
+    }
+  ]
+}

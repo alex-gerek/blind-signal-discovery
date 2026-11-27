@@ -1,0 +1,5714 @@
+[
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_000",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 0,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "763095bcc149b1469b344ffb4ee3056277f0881410c5e0443ee24761040647a5",
+    "raw_maxima": {
+      "short_31ms": 45.2968238909733,
+      "medium_125ms": 25.220812511087956,
+      "long_500ms": 27.023457058956083
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_001",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 1,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b4f95a79ec7d588e19f0ce41206e1b08f1b1b296c57f7452be0c903db1e2acf9",
+    "raw_maxima": {
+      "short_31ms": 50.5170742407656,
+      "medium_125ms": 26.8318687449445,
+      "long_500ms": 28.78135284994779
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_002",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 2,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d7a1390b2b57c6cba58a2213b5b3b01abd7305aafa3c29482eaa925098cb5b8a",
+    "raw_maxima": {
+      "short_31ms": 56.63108204341153,
+      "medium_125ms": 34.76176186134186,
+      "long_500ms": 35.03147270132006
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_003",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 3,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "960d818fcb5c29a94b1e5098c9a6e6aff9c119469640ce19e53a74f97208684f",
+    "raw_maxima": {
+      "short_31ms": 59.27892025337016,
+      "medium_125ms": 24.989784280017737,
+      "long_500ms": 24.00787102693998
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_004",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 4,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a1c42267dee01a6ff9391a5d4c491186af9e3bdfc3612d62a389196f84b1bb42",
+    "raw_maxima": {
+      "short_31ms": 69.81718715208416,
+      "medium_125ms": 36.851349647679136,
+      "long_500ms": 35.064475492331695
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_005",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 5,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d8b9b2387e089cede9ade44bdaec72d32e1243e9080d39c206242b0eaa65a33d",
+    "raw_maxima": {
+      "short_31ms": 60.88295032940858,
+      "medium_125ms": 22.828724790420285,
+      "long_500ms": 43.19254876448478
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_006",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 6,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ce32553f7a0aae6ce2eec2b45f1d05d8fb1a6fcda2b4b03eea1959df9379fd90",
+    "raw_maxima": {
+      "short_31ms": 47.304215285040065,
+      "medium_125ms": 24.035472697926803,
+      "long_500ms": 25.817893200416375
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_007",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 7,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a1a24dee3921d9693c8afe903abe47dc7b68b24cc522e3768afc2d5d8e4beed6",
+    "raw_maxima": {
+      "short_31ms": 66.27921317719489,
+      "medium_125ms": 27.630769447444088,
+      "long_500ms": 35.72183330610618
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_008",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 8,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "cdeb1339c45356d91255f071495cb36f0730ab718819473c30f2ac9de1b787f8",
+    "raw_maxima": {
+      "short_31ms": 70.27362997651211,
+      "medium_125ms": 41.78611919548793,
+      "long_500ms": 30.24983236476787
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_009",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 9,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a591340b6595b60bfee9291fbd90a565450abde59fa43eff386d569c6fd27d01",
+    "raw_maxima": {
+      "short_31ms": 73.7559499982325,
+      "medium_125ms": 36.025180372732024,
+      "long_500ms": 37.704718816085474
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_010",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 10,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "818078dfc3e6879e049408d34021736747c4061b0ccb4e15e5ae43475aefa0f9",
+    "raw_maxima": {
+      "short_31ms": 76.86880651844727,
+      "medium_125ms": 24.389586830966078,
+      "long_500ms": 30.079643587669413
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_011",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 11,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9cdca76abfe90a810df77cc3e28b03a7e15c5f75a791c02ad7f007623caec217",
+    "raw_maxima": {
+      "short_31ms": 77.43518201820198,
+      "medium_125ms": 33.97087764075676,
+      "long_500ms": 33.86587599932399
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_012",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 12,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5b675ddd429772e7f675f2a9975013d85e470dd553fddd9ba2a2361d246c1c9d",
+    "raw_maxima": {
+      "short_31ms": 75.57004069545549,
+      "medium_125ms": 29.099295420347442,
+      "long_500ms": 34.25083736505593
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_013",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 13,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6214f84b4f20d23d4257185b70be8c561d7b21cab078d6ea7e6e968cab1b71ba",
+    "raw_maxima": {
+      "short_31ms": 75.20366067683956,
+      "medium_125ms": 33.79873758631493,
+      "long_500ms": 29.609949154365143
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_014",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 14,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "328ccbbb7684644c380fd61cd753898667e6ea065a4d2654e4443ba522387f85",
+    "raw_maxima": {
+      "short_31ms": 79.78566797355853,
+      "medium_125ms": 33.07771948851409,
+      "long_500ms": 26.925603448063065
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_015",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 15,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d9f66d0819f20bbc13a42a98ac3932f29be8af79dad1e3aeca51991422b24cc1",
+    "raw_maxima": {
+      "short_31ms": 55.90015563315959,
+      "medium_125ms": 36.293228736720295,
+      "long_500ms": 22.79897610131043
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_016",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 16,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ba1c4a9f81f621a8cd746f64d7b18b0194d45a1a88929893dd9bdc8dc2c0ceee",
+    "raw_maxima": {
+      "short_31ms": 50.23367996372628,
+      "medium_125ms": 35.84306109816825,
+      "long_500ms": 29.931218096632723
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_017",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 17,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7a2cdb77a4603721c3629e982f4b76f9f740069938340e15b8c74507055d8e87",
+    "raw_maxima": {
+      "short_31ms": 54.62778555695965,
+      "medium_125ms": 25.761766413450726,
+      "long_500ms": 48.88146195967718
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_018",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 18,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "457cb3d9a99e4c0716de56be2d0350f64b0c0ea3e057f44b85246f62a698ed41",
+    "raw_maxima": {
+      "short_31ms": 70.84461398606574,
+      "medium_125ms": 31.301481364745378,
+      "long_500ms": 51.508486089535346
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_019",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 19,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0f0c93e3d3d06bb88c36483774a31fe91b2ece81431949a0d6850ac6b49a5707",
+    "raw_maxima": {
+      "short_31ms": 53.307448071203844,
+      "medium_125ms": 33.73005857406042,
+      "long_500ms": 34.43678173104194
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_020",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 20,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3647ef31d358cdca7289ca9c714f17d9e312c549496acd5494d604f0b8c3ab8a",
+    "raw_maxima": {
+      "short_31ms": 58.746903250128504,
+      "medium_125ms": 54.77900775899224,
+      "long_500ms": 44.222533308769165
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_021",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 21,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "847f32a001d6ff6fa9bce78dd5b1cf864b4d7598601c8616a51b4191f7baa4db",
+    "raw_maxima": {
+      "short_31ms": 77.98974839786139,
+      "medium_125ms": 38.137054829548816,
+      "long_500ms": 32.18146144377393
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_022",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 22,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "05af23409975edb0fd08b61a612a4c65cfc013f0e0b471801868fe285868609d",
+    "raw_maxima": {
+      "short_31ms": 56.38132707343687,
+      "medium_125ms": 40.44318910573054,
+      "long_500ms": 32.09081933111961
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_023",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 23,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1fbd35334c060a5543fa8a0fa8b64200b8b709f630a27bb80aac5a452250e5ec",
+    "raw_maxima": {
+      "short_31ms": 39.2438147017375,
+      "medium_125ms": 28.77724525403096,
+      "long_500ms": 34.52921506526235
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_024",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 24,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "251c74972a2ab867a657320bbea277d78fc1498c1f59d1ef621e384cd2cb1e6b",
+    "raw_maxima": {
+      "short_31ms": 61.871937789916004,
+      "medium_125ms": 34.56207521377872,
+      "long_500ms": 30.336777276545906
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_025",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 25,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c8cb54926bd34662a580def0628f276ba268b6f4391a5b90c3c101694de44069",
+    "raw_maxima": {
+      "short_31ms": 35.46221934910531,
+      "medium_125ms": 29.07337013805718,
+      "long_500ms": 20.66022448322319
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_026",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 26,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "90acb7c0b81bcf94cae2a293b719730fbd283f8d9b80795efd0b0bac40fdb41f",
+    "raw_maxima": {
+      "short_31ms": 56.68117286484299,
+      "medium_125ms": 18.387759686721267,
+      "long_500ms": 20.004741629033784
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_027",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 27,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4cd7a7134bf3c3a405f48f3bd1903fddb272769a41907514d0c3852d5a12f577",
+    "raw_maxima": {
+      "short_31ms": 44.89387433606372,
+      "medium_125ms": 22.411685147032447,
+      "long_500ms": 24.3764847602533
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_028",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 28,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "67ddc5598dfbf90bfbc3c861de7fe01fab81fdd8bce3ff39ab819b32e7fe4cd8",
+    "raw_maxima": {
+      "short_31ms": 67.3353588073835,
+      "medium_125ms": 32.184020775611785,
+      "long_500ms": 27.665603042859587
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_029",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 29,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "870707c210fe42baf41c4d9394450b71ae3770887859ca9e7c2511e2769e62c2",
+    "raw_maxima": {
+      "short_31ms": 71.58777722820895,
+      "medium_125ms": 38.56106821417759,
+      "long_500ms": 34.66655230970579
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_030",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 30,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "df5aa0525b5a5db505b7faf1e3da99cdd54079fe043511ed57c2de4232e9cb3a",
+    "raw_maxima": {
+      "short_31ms": 51.29607011373088,
+      "medium_125ms": 35.0690768282798,
+      "long_500ms": 45.98812575667419
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_031",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 31,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3024ad3bcab0994fc7ba5e9c86b0cf1e199d60a9d99ad913dd3abc06668140a9",
+    "raw_maxima": {
+      "short_31ms": 94.4469615764244,
+      "medium_125ms": 34.651391225403515,
+      "long_500ms": 33.154586504522975
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_032",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 32,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a443486457c572369cfa891a26930afabf46a159b8096056d3f2d3bb1b25659b",
+    "raw_maxima": {
+      "short_31ms": 68.37556555675538,
+      "medium_125ms": 30.09617756225367,
+      "long_500ms": 39.45513661243542
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_033",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 33,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6cda7c272915b32b4e442c8ea8c0d8435f913bff6d7a8c396f6b2ec7a56bf1f2",
+    "raw_maxima": {
+      "short_31ms": 66.90942980798485,
+      "medium_125ms": 36.21800826431272,
+      "long_500ms": 24.214274201860356
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_034",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 34,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "67d183c0085a9cfa74e607afa3ef37fb16ea8a396e8c17f5b30e4ccc785c2486",
+    "raw_maxima": {
+      "short_31ms": 96.14168417592377,
+      "medium_125ms": 45.926427742842485,
+      "long_500ms": 37.89768336578146
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_035",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 35,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "cd96c650eb3237d8b171c651adb42a53ea77abe0526095a7020ba6677c78bee2",
+    "raw_maxima": {
+      "short_31ms": 83.74039114958762,
+      "medium_125ms": 33.04253138870161,
+      "long_500ms": 36.410973688159174
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_036",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 36,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "933310ceee622c52e29bc36f3c6965783043077ca917bbf1d3e79f30a235bf56",
+    "raw_maxima": {
+      "short_31ms": 53.0779094008857,
+      "medium_125ms": 31.410530609894654,
+      "long_500ms": 36.881042148442035
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_037",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 37,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ab9a808436607f0fd2611005836cf49e3c283e47faed15aa0845d7f77b3d097f",
+    "raw_maxima": {
+      "short_31ms": 48.65800870954604,
+      "medium_125ms": 19.6691366104432,
+      "long_500ms": 20.219564847885874
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_038",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 38,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "824eedf12c236fb18e05edd27ae6791c5132b90ce87eb0cfbc15214ff9091524",
+    "raw_maxima": {
+      "short_31ms": 96.9892628145314,
+      "medium_125ms": 45.66891691330973,
+      "long_500ms": 36.702018866034585
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_039",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 39,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f1bce3e72c170fcfb0184498b9929be013885b5fb04ecaad951046bfd3305ebd",
+    "raw_maxima": {
+      "short_31ms": 58.647267672400005,
+      "medium_125ms": 41.43098996609303,
+      "long_500ms": 53.08764520415838
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_040",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 40,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d11c82e21c245906bfce22e5f58fb714f38e22117ae797f13ec11ae523429715",
+    "raw_maxima": {
+      "short_31ms": 58.11695613073631,
+      "medium_125ms": 35.29700020832203,
+      "long_500ms": 53.95329022458714
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_041",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 41,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "420a0d97baa245b5180e666b5a6b20ab218079d77d0a1088a3385ed3669ac693",
+    "raw_maxima": {
+      "short_31ms": 65.60827572341697,
+      "medium_125ms": 36.32598373459859,
+      "long_500ms": 58.8966110787785
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_042",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 42,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "72d512dd3fe07dceb8457a4561460ea99a051b92c4f5ceaa26c0d08879cf5170",
+    "raw_maxima": {
+      "short_31ms": 58.09003005725621,
+      "medium_125ms": 30.979542814582803,
+      "long_500ms": 37.75189560350919
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_043",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 43,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2184abc7d54288cf1c15e4ef9393a18dde3c90ba4eb33acc83a3e467fe3f8c0a",
+    "raw_maxima": {
+      "short_31ms": 59.212826951262784,
+      "medium_125ms": 25.91796190526581,
+      "long_500ms": 31.13884745097194
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_044",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 44,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c173fbecdaccd9723c4855f4b7e6dfc9c4b22ebe201557aa0a920103662c5e55",
+    "raw_maxima": {
+      "short_31ms": 53.442666610561126,
+      "medium_125ms": 26.433249396315098,
+      "long_500ms": 33.30200382418728
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_045",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 45,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8752c02dcf15525f3ed0039a42e58c86c93213eaaa754bd3654f09a7eb224e46",
+    "raw_maxima": {
+      "short_31ms": 72.01018206560595,
+      "medium_125ms": 46.347474445354074,
+      "long_500ms": 22.303013084305945
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_046",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 46,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4425d035bae3b15110fb12f0fba72ae4930bdc1cc220cf5cac5ee61aa1243581",
+    "raw_maxima": {
+      "short_31ms": 44.383736184025665,
+      "medium_125ms": 41.076637325154095,
+      "long_500ms": 26.822479689914637
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_047",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 47,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ce4dcb46dea50efce6ababe7620b79479ca5efd20c882b9953a2a4bab386f114",
+    "raw_maxima": {
+      "short_31ms": 48.899237205819674,
+      "medium_125ms": 21.81179913742511,
+      "long_500ms": 25.184185435632607
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_048",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 48,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e49b4b7587771b90d0301ed4ce59ac54af8332c7774786e6e91a2fd6becd5ef2",
+    "raw_maxima": {
+      "short_31ms": 78.11822360676325,
+      "medium_125ms": 39.764698814481925,
+      "long_500ms": 34.56462746168941
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_049",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 49,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c179fe4d8521b19cfff29e8d90a0810095272ce895b97d59f17cc1430e471380",
+    "raw_maxima": {
+      "short_31ms": 69.74090861232239,
+      "medium_125ms": 28.236446065925414,
+      "long_500ms": 28.330580596146152
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_050",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 50,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "239c578117bcdb6d0a1b5531b0ce0516dd12bbb91435cc1605af83cf4f6fc4e8",
+    "raw_maxima": {
+      "short_31ms": 59.51791495978959,
+      "medium_125ms": 43.70196286518716,
+      "long_500ms": 40.23633943854335
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_051",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 51,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2d641aed9b4fc941f62df2053252ffeb2b2638d9e9ea0f9d2c6ca705b9c8ce35",
+    "raw_maxima": {
+      "short_31ms": 63.55761707789298,
+      "medium_125ms": 34.4024394952831,
+      "long_500ms": 24.89180870389508
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_052",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 52,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f42d0fbdf9ac75ccff081863136d232ca3e8b843fed3652404fa3320a15e134a",
+    "raw_maxima": {
+      "short_31ms": 137.89517480252943,
+      "medium_125ms": 43.62607045600586,
+      "long_500ms": 29.70686352338374
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_053",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 53,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "96db47544b37ade1d4f5f7538baaa97d3ed01cba251038243e199d083eeae6a2",
+    "raw_maxima": {
+      "short_31ms": 102.23921836663123,
+      "medium_125ms": 50.62774982755997,
+      "long_500ms": 45.996000854891705
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_054",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 54,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "844aa050e976d85d8739184d0bfdd24d1e1e71e7c468e2682b4ab03e7b4b43f9",
+    "raw_maxima": {
+      "short_31ms": 44.338872847682985,
+      "medium_125ms": 42.31492151561952,
+      "long_500ms": 27.684446160443684
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_055",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 55,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f9659ad9666f139609ea58173e941884753998c2d62f21bee2bab5465668bc6f",
+    "raw_maxima": {
+      "short_31ms": 61.956677406508966,
+      "medium_125ms": 29.366506300183215,
+      "long_500ms": 34.04969255676427
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_056",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 56,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "815f350ea912a8fcfcc71e873a4a9b18ea34b4110e268af101783c2a2c71541b",
+    "raw_maxima": {
+      "short_31ms": 45.091616021951836,
+      "medium_125ms": 23.008702095024724,
+      "long_500ms": 31.96710222081294
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_057",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 57,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6f14e5c5fb093337b4a7cf57eb7aaf3df498970ced097d8f51f638457d1818e9",
+    "raw_maxima": {
+      "short_31ms": 53.79867896451185,
+      "medium_125ms": 27.949514624205975,
+      "long_500ms": 39.49270520022001
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_058",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 58,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2a59951ef2a641e28e73795a62c6eb43ca8a94831c651abf5d77b6fad2f691ac",
+    "raw_maxima": {
+      "short_31ms": 86.38144904463748,
+      "medium_125ms": 23.32614854195865,
+      "long_500ms": 24.045943714485446
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_059",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 59,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a33aeadb79989377a2642419272e255de144dbb5ce2752f8c84b55f777637b48",
+    "raw_maxima": {
+      "short_31ms": 52.38301309367873,
+      "medium_125ms": 26.792186137559835,
+      "long_500ms": 27.857464946267193
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_060",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 60,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "487c55ce1e4cb05e31c5296a6f31e9a7ec59ecc5a630b48f186e3703fd29e70f",
+    "raw_maxima": {
+      "short_31ms": 51.976705635972905,
+      "medium_125ms": 25.568699966802033,
+      "long_500ms": 28.292060663965273
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_061",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 61,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "78e4e292c38a1f9a773fd6676204bd1614b4fff1d0b73c1419fd68ea585fa124",
+    "raw_maxima": {
+      "short_31ms": 67.48967659880391,
+      "medium_125ms": 27.266686118822754,
+      "long_500ms": 34.92919549934712
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_062",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 62,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "935675cf9242bcfe3fcf90433ea120c8fb49ed5fd51b433b8b72d18fc692fb83",
+    "raw_maxima": {
+      "short_31ms": 48.99996881142805,
+      "medium_125ms": 35.49023772619447,
+      "long_500ms": 41.457321678011624
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_063",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 63,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "800d7645fa7a01cd7ff61540ff95d80ca9879fa1cd63c0a44410a443a0b2daee",
+    "raw_maxima": {
+      "short_31ms": 80.81442960136124,
+      "medium_125ms": 32.084017251356244,
+      "long_500ms": 44.24304474573515
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_064",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 64,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "57e7179d0f1946cf806f124a17c342ac25243db288f29579c8a51c72d43c6f70",
+    "raw_maxima": {
+      "short_31ms": 64.79095175797825,
+      "medium_125ms": 32.56889620071951,
+      "long_500ms": 30.855413387304658
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_065",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 65,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3b367f28d83944bb6a599c902c53b5422f1f7a463e5a0d9a9e66f75223d5979a",
+    "raw_maxima": {
+      "short_31ms": 98.87003601691312,
+      "medium_125ms": 36.17872516561437,
+      "long_500ms": 33.98600168723653
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_066",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 66,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5c3525b9b2976d4d19a37e3f4941837b393cd4e59f0375f433d07db716c850cc",
+    "raw_maxima": {
+      "short_31ms": 76.35163184001442,
+      "medium_125ms": 23.44857268615653,
+      "long_500ms": 27.710951885326974
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_067",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 67,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "cd5e33921ca94c5f504a0fc044a3d8a01eb32c6b676a623bc65e89afd5b1c54e",
+    "raw_maxima": {
+      "short_31ms": 74.40668487335557,
+      "medium_125ms": 27.110258657846124,
+      "long_500ms": 45.00818759684457
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_068",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 68,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d6cfc58fc380339cac295efa77d9f86ef7136fbd24f1d9aaa0aa28ba21f7aad1",
+    "raw_maxima": {
+      "short_31ms": 54.35059023868187,
+      "medium_125ms": 26.459836954127155,
+      "long_500ms": 24.44430650833999
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_069",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 69,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "43b7596c7d3512de0c4fb3d90a3d4529c0b0184394eaf69fc05892be0590c9cb",
+    "raw_maxima": {
+      "short_31ms": 83.52267426467752,
+      "medium_125ms": 22.801442792969308,
+      "long_500ms": 25.795476186552392
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_070",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 70,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "536cd5ebc5a61ee5a64fc5b44c7d68cdb7f711b3c1e28eaa8b39f9ba690af646",
+    "raw_maxima": {
+      "short_31ms": 37.47584197764844,
+      "medium_125ms": 24.835507910234703,
+      "long_500ms": 53.65303857537091
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_071",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 71,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d705f2e185b6b2b1c000106bc3c1dd28c848932db726e0f58cc77ac220bbbf0e",
+    "raw_maxima": {
+      "short_31ms": 54.017275685892166,
+      "medium_125ms": 32.27686970787472,
+      "long_500ms": 45.69614505516498
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_072",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 72,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "fb231eda1df2f3c6c4bdf93e55ee72989d268d756c58831266bc3dd41f505bc4",
+    "raw_maxima": {
+      "short_31ms": 31.55388298563497,
+      "medium_125ms": 22.322035080034947,
+      "long_500ms": 25.44540949332853
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_073",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 73,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "36a038bf7faa28ea06f93db6e352b8840c2210f9e2b2c45c585f90466f36cc6e",
+    "raw_maxima": {
+      "short_31ms": 59.76852684880852,
+      "medium_125ms": 40.02728607746273,
+      "long_500ms": 31.18378148415998
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_074",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 74,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6c9b1f8fc0a38c59ded4d57a6c0086b2587c8ba1a4aed2dc6eca25fcfeca26c3",
+    "raw_maxima": {
+      "short_31ms": 58.453950758044584,
+      "medium_125ms": 35.480281470489544,
+      "long_500ms": 32.88751795016664
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_075",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 75,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "bfe247b9fec228dc8c7ab42c1fc5ad50a6d16f545073e103f18035f959fb620f",
+    "raw_maxima": {
+      "short_31ms": 73.09363209634577,
+      "medium_125ms": 32.00186358747297,
+      "long_500ms": 27.746230728379846
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_076",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 76,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9d8e2d682a3f63ab45a250acce86df8eba31c0ecb5d90c112b1d9f2cb9bb96cb",
+    "raw_maxima": {
+      "short_31ms": 77.23994390199347,
+      "medium_125ms": 31.78478485383745,
+      "long_500ms": 31.44796170370396
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_077",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 77,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "fe2735d379d9056fb373b0f7e36406359fd2217bbdbd5d1f12c14953872b353b",
+    "raw_maxima": {
+      "short_31ms": 37.00348616980291,
+      "medium_125ms": 35.47018365827587,
+      "long_500ms": 43.246292567750686
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_078",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 78,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "fcfd05d109c08bd7a3f88e8d9de0ea2712ad7318b254a5bb31705b1de70d1a04",
+    "raw_maxima": {
+      "short_31ms": 102.75194427884811,
+      "medium_125ms": 42.9152323298936,
+      "long_500ms": 50.58776295963184
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_079",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 79,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7d56c9007ba55a6f3bc21b76db980c8838481a14de0bda8db5208e56116514fa",
+    "raw_maxima": {
+      "short_31ms": 40.35637161439924,
+      "medium_125ms": 23.175163894398096,
+      "long_500ms": 29.4648078199228
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_080",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 80,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8764bb160777c57be4b1946cf7ca2a0df6665f837718c5eeeb17cb6600f66d92",
+    "raw_maxima": {
+      "short_31ms": 109.47210561384183,
+      "medium_125ms": 42.75693241838343,
+      "long_500ms": 23.583760421377708
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_081",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 81,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c200769cb050b6990c1d55dd179d0de5f743750f42cf2d0cb4ab701f6a319912",
+    "raw_maxima": {
+      "short_31ms": 66.89957189401512,
+      "medium_125ms": 52.9196292936297,
+      "long_500ms": 47.089792844457925
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_082",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 82,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "75cdccf21ad2e836ec09974e00b9d150fce52e172b53ed98b106e142511cf2d9",
+    "raw_maxima": {
+      "short_31ms": 37.90044966150252,
+      "medium_125ms": 23.026072803162222,
+      "long_500ms": 22.822305006606108
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_083",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 83,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8c263f84fe861e92af823692f6656d3f1b8c33355b84d63c0803cea0fda5dcb9",
+    "raw_maxima": {
+      "short_31ms": 60.21777636144557,
+      "medium_125ms": 24.54466598062261,
+      "long_500ms": 27.10157491697914
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_084",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 84,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "683b1435c0853b73ff576faa235a87acde6225822a1979ddad831b5e11b532f9",
+    "raw_maxima": {
+      "short_31ms": 34.784585083995246,
+      "medium_125ms": 26.543498240014518,
+      "long_500ms": 31.449838797249104
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_085",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 85,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "710285bafe1cd1d2f987a03cfde5405dd6f62d7e00d08ece5a4578d193b96eb4",
+    "raw_maxima": {
+      "short_31ms": 41.23933527455089,
+      "medium_125ms": 17.635395505291907,
+      "long_500ms": 24.409778584649473
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_086",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 86,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "914d68c813bd58385e7d7924fc42fa59a40f0814700bbf6ab51e6aa55daae9b9",
+    "raw_maxima": {
+      "short_31ms": 77.1964531646116,
+      "medium_125ms": 27.789756614273195,
+      "long_500ms": 37.576591530431756
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_087",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 87,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "119e2704436295064e06fa85cfaa5b3e2514ab02d0516d79d351a555a01c99c4",
+    "raw_maxima": {
+      "short_31ms": 73.07964558646525,
+      "medium_125ms": 23.71504695899581,
+      "long_500ms": 31.55842156873302
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_088",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 88,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a1138b3a91e7e8fa74ce36abe055321d824c9333624c70c57c6ee5bb69ee6227",
+    "raw_maxima": {
+      "short_31ms": 76.69472673238201,
+      "medium_125ms": 52.120274986299144,
+      "long_500ms": 49.33552291141859
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_089",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 89,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "151e0241acbcb28df3889374f3badbdbfa76ad823bfcd3fa8369f9ee5255dad2",
+    "raw_maxima": {
+      "short_31ms": 80.51358672118424,
+      "medium_125ms": 28.62004173153439,
+      "long_500ms": 27.299401626159355
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_090",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 90,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0d78470bac105b09aba085e4d348264dede72a9e1a09eee085bb5e6486b6b455",
+    "raw_maxima": {
+      "short_31ms": 78.1965718421979,
+      "medium_125ms": 27.43943570025692,
+      "long_500ms": 30.296948955694056
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_091",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 91,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b84f7c044a99468eb441cb9b7e66392e5c1c2811caa0f91b9392ce13d711ab90",
+    "raw_maxima": {
+      "short_31ms": 53.44525299784805,
+      "medium_125ms": 22.84348049434461,
+      "long_500ms": 27.012973253209736
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_092",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 92,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9df6c8950d71a5b703ff42124ecb1a82fe9cc122d0d53d85e4c822c33e2b1977",
+    "raw_maxima": {
+      "short_31ms": 47.622376218037246,
+      "medium_125ms": 27.678566979560436,
+      "long_500ms": 40.16488953706498
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_093",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 93,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6b406757277d92a3ac1bdd31f26443e0c3c86d3df5b7fef6f84f578bfa7f2db5",
+    "raw_maxima": {
+      "short_31ms": 62.12665491502996,
+      "medium_125ms": 26.466491023751534,
+      "long_500ms": 25.74576324320946
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_094",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 94,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "33f8fe012fb36b5ce50b3bf96c6174a28e235c5cd3e1fb4d3ac5b3d99f8a1853",
+    "raw_maxima": {
+      "short_31ms": 43.576936242314616,
+      "medium_125ms": 31.14270447699587,
+      "long_500ms": 29.14360514549997
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_095",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 95,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "37437b591dc3e8a1d90e9279e4b68c6ffb2ee20cc00fa16257d432c8df6b6240",
+    "raw_maxima": {
+      "short_31ms": 65.15102828276767,
+      "medium_125ms": 35.37160656428929,
+      "long_500ms": 32.96650602045382
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_096",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 96,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4b15c2c788d830715b776f92d3a23b95fefa06162f7e434271a60c0f042ab5c9",
+    "raw_maxima": {
+      "short_31ms": 89.3655447358375,
+      "medium_125ms": 28.624876975094303,
+      "long_500ms": 31.65464444805518
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_097",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 97,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "022f466433e89084a9d11a329652a99aac500463f25931605f2b090f47f40291",
+    "raw_maxima": {
+      "short_31ms": 66.20853868776123,
+      "medium_125ms": 28.79328185165292,
+      "long_500ms": 49.21619490996207
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_098",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 98,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "45a530d8041c8a5d7e261a40d1b6413390c10721816f66804dd4f923e8652155",
+    "raw_maxima": {
+      "short_31ms": 94.69752492991782,
+      "medium_125ms": 38.9015518189103,
+      "long_500ms": 26.984647870577437
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_099",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 99,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6297b2fefb6c1efad40bea02b7247f13afba55a51bc31f7ef7fb9654851dd781",
+    "raw_maxima": {
+      "short_31ms": 75.81682953291174,
+      "medium_125ms": 25.923745119662286,
+      "long_500ms": 33.43343554182891
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_100",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 100,
+    "family": "chirp",
+    "snr": 18.0,
+    "unit": null,
+    "input_sha256": "dc9a6230659c7cacc9634c815cc99b6bc98671fee3f7ef761d47790850080e91",
+    "raw_maxima": {
+      "short_31ms": 90.16769830447383,
+      "medium_125ms": 832.8359527837849,
+      "long_500ms": 802.6385162180443
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_101",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 101,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1f94a29fe3a20a8105362760f42063c7837f65b2e2cce2e55e8ffa29c38be8b3",
+    "raw_maxima": {
+      "short_31ms": 37.89020656738904,
+      "medium_125ms": 29.376736257988078,
+      "long_500ms": 37.01588777809257
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_102",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 102,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c9f822ba59a8870ffce32020bc2aad8fde11fa52828218a54572a7c95965a375",
+    "raw_maxima": {
+      "short_31ms": 58.54955252557278,
+      "medium_125ms": 25.520666317346627,
+      "long_500ms": 30.890167518329832
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_103",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 103,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "78bbfb52118d1a23524516cb372b62084cef9381341e8737a8e29b9056697690",
+    "raw_maxima": {
+      "short_31ms": 85.83415552975211,
+      "medium_125ms": 24.519676833515035,
+      "long_500ms": 26.946471329353397
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_104",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 104,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f2ff1c94a0683294b1fad0ec2e1baf179a92e41b079e8e2a123586d06c429112",
+    "raw_maxima": {
+      "short_31ms": 40.43906922079156,
+      "medium_125ms": 29.318974994486844,
+      "long_500ms": 42.72248951257128
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_105",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 105,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5d2e4cd9c2fb6dc7c2427663c32211bf441cd7ce5cc00c8cb9d6a26fcb1347be",
+    "raw_maxima": {
+      "short_31ms": 50.24194453327555,
+      "medium_125ms": 35.075194556673644,
+      "long_500ms": 25.642205107251336
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_106",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 106,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "fbbf389ce6b44187def34db569fa2046d1ee9e8912ea99dd01c373db77e255bf",
+    "raw_maxima": {
+      "short_31ms": 78.32626919527209,
+      "medium_125ms": 19.61915731438698,
+      "long_500ms": 34.44106792240176
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_107",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 107,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2ccd5dee61218fa5609fdc9b5c56183aa4176d9385e6038a11d5366979ddb03a",
+    "raw_maxima": {
+      "short_31ms": 67.76527367741005,
+      "medium_125ms": 51.49412974441883,
+      "long_500ms": 40.589539817647115
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_108",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 108,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0d92d054687ecfacc5e27ab132ff46a5c230e4f6275747975ff1c221a0c63aff",
+    "raw_maxima": {
+      "short_31ms": 70.71951350416714,
+      "medium_125ms": 24.84309049698428,
+      "long_500ms": 42.9497304705791
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_109",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 109,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "42059b1232078a5fd3b746b23b48ea7efdf83d0a5ecfad023e574fe16cface7f",
+    "raw_maxima": {
+      "short_31ms": 70.25012576505831,
+      "medium_125ms": 22.280521475784823,
+      "long_500ms": 35.46955366338594
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_110",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 110,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "dee274675191ad6f230e1bd03ae482864ce852f34a3346980559e780a1b23ec3",
+    "raw_maxima": {
+      "short_31ms": 48.99348565569209,
+      "medium_125ms": 35.05286636396178,
+      "long_500ms": 22.581942268509607
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_111",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 111,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "65746aec30dc89108b0793ab4278c59426db1dacdfb2bee06e5dceb42ffb8f3b",
+    "raw_maxima": {
+      "short_31ms": 90.9531165340347,
+      "medium_125ms": 36.041422914183244,
+      "long_500ms": 28.76912225758568
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_112",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 112,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b3b9b269e3be5b589271ac1fa51b8c944144901171575f6fbd96b22009446409",
+    "raw_maxima": {
+      "short_31ms": 91.11104330176768,
+      "medium_125ms": 42.77464148954225,
+      "long_500ms": 35.33254013859067
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_113",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 113,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "518d9b5d4df1a4abeefbe5c236812ed5bf007c036cc245dee77a477187baaa84",
+    "raw_maxima": {
+      "short_31ms": 96.18028450937332,
+      "medium_125ms": 26.175889752626492,
+      "long_500ms": 66.55148087714085
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_114",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 114,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "78eefe6dc1ed4ea660c97dcf5816f19dcb404b8d386181974db6cafdf314af54",
+    "raw_maxima": {
+      "short_31ms": 48.44752784366939,
+      "medium_125ms": 29.796976829855915,
+      "long_500ms": 21.447888385025724
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_115",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 115,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f8ba44ed0f6598bfce937bab4e464dd208d23f9c70f8dd69e6dc5959fa4b2e65",
+    "raw_maxima": {
+      "short_31ms": 65.47609013488125,
+      "medium_125ms": 34.22941205004007,
+      "long_500ms": 29.472255633294903
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_116",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 116,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8d8c79f334d843aff66b69b7837cd02f3b70c49d0faa460153f512438d148748",
+    "raw_maxima": {
+      "short_31ms": 56.31523922359305,
+      "medium_125ms": 32.16114441731623,
+      "long_500ms": 26.341550468065854
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_117",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 117,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1be06d0a6e5248195362c155c989c03c08f90c4f0bd34e2258e05f4babd21461",
+    "raw_maxima": {
+      "short_31ms": 79.98203846260593,
+      "medium_125ms": 24.300737396734974,
+      "long_500ms": 34.05081721486038
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_118",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 118,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "490cf16ec7457bfdea1756ae03c907d3bed4d6fe3ee65920337ba8b4598e4949",
+    "raw_maxima": {
+      "short_31ms": 68.838291488721,
+      "medium_125ms": 37.21710360973058,
+      "long_500ms": 21.75132212772938
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_119",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 119,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0b8ec64b6f1436c82254915cb81c6a416e050170a997f24946bc4577ee3c2a4a",
+    "raw_maxima": {
+      "short_31ms": 77.13540108602692,
+      "medium_125ms": 40.74963699013622,
+      "long_500ms": 20.947971662706667
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_120",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 120,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "474c74dd61c021ec710762216b2c2007ef3a1657925cb16ff3a753219c27ddbf",
+    "raw_maxima": {
+      "short_31ms": 54.32578871479248,
+      "medium_125ms": 28.25304193110494,
+      "long_500ms": 27.37253535591136
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_121",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 121,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "bcc2d05c3e1926ce721d7615ced5e53a7e0610f2d4519423fcf7b74c4d36db0c",
+    "raw_maxima": {
+      "short_31ms": 55.4090541617951,
+      "medium_125ms": 19.094074039901642,
+      "long_500ms": 16.476670189618726
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_122",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 122,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9bc8c207ea716bbf9399a6566205f549086484c356214ba65ff39ab3f0671bf2",
+    "raw_maxima": {
+      "short_31ms": 35.24488122935153,
+      "medium_125ms": 27.234741616592135,
+      "long_500ms": 39.66729656138092
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_123",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 123,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "676903ef0cd45377e3506aa62d0bc2e735168daadbe0bf593066cf43399f6bb4",
+    "raw_maxima": {
+      "short_31ms": 55.14262592657203,
+      "medium_125ms": 39.94301396276225,
+      "long_500ms": 44.07102341167926
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_124",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 124,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6a8b6343d402ac6e1e60de67bdfc4b0e49325dfcbe096a8733fc4cea3efd290c",
+    "raw_maxima": {
+      "short_31ms": 43.48594147518154,
+      "medium_125ms": 29.590091028761513,
+      "long_500ms": 22.97801801371579
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_125",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 125,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ed710256a4a34e3f28a53731a7200227bc5f57f4c04c93147b5597a46c72f1fd",
+    "raw_maxima": {
+      "short_31ms": 67.19490657783032,
+      "medium_125ms": 41.18264143423632,
+      "long_500ms": 29.149202738204373
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_126",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 126,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "34f2c0a5817ee6854015d7d4e843729220a31c94088b3b3b54d753ee41be94af",
+    "raw_maxima": {
+      "short_31ms": 96.89279539694681,
+      "medium_125ms": 34.78825104728547,
+      "long_500ms": 30.23363386468369
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_127",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 127,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5569b880ecd93e9072557236cfc81867655c253e839260d8a9d5195eaed29d69",
+    "raw_maxima": {
+      "short_31ms": 87.13902607951184,
+      "medium_125ms": 39.90926952909804,
+      "long_500ms": 43.22143960007608
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_128",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 128,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e729b574261f72eddf17797489330f74fe0808c5f390f6c175fff31aa599d6dc",
+    "raw_maxima": {
+      "short_31ms": 62.689710431058735,
+      "medium_125ms": 24.458107810744274,
+      "long_500ms": 31.88024254642912
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_129",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 129,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2a57765d9b50c5580445ba583f7745bd999281f2b252c3943147ff3f1be9e2a9",
+    "raw_maxima": {
+      "short_31ms": 53.5759773161103,
+      "medium_125ms": 40.619372436452686,
+      "long_500ms": 24.29264956904854
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_130",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 130,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7557e80e035e762fb8d8520d04e6339679731a1f8350509062d0c421924ed14c",
+    "raw_maxima": {
+      "short_31ms": 59.146581810075396,
+      "medium_125ms": 29.32871910216794,
+      "long_500ms": 33.68437899094332
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_131",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 131,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a0d520d5464037d62c1e3c5b76a1bfa41bc646c07087dcce98c1fc70dffdb1a9",
+    "raw_maxima": {
+      "short_31ms": 56.66958717968713,
+      "medium_125ms": 27.921858765287308,
+      "long_500ms": 23.274209955471623
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_132",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 132,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6cd4b9a3b868971e6226ce3677874c1fffed2d82209f3fd23fe6e729cdd17eaf",
+    "raw_maxima": {
+      "short_31ms": 47.919556139464255,
+      "medium_125ms": 40.389645794483144,
+      "long_500ms": 30.572679761936577
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_133",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 133,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4561b60bdd90535e4ab7a6695902156dc254816b521a0426e075e344445675b8",
+    "raw_maxima": {
+      "short_31ms": 60.05869968256654,
+      "medium_125ms": 29.21818661040135,
+      "long_500ms": 72.01549652711675
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_134",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 134,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "59a9a46903c0ca3f0e078c8347e1ae484fec3b7106908c56fad720cf439e78d6",
+    "raw_maxima": {
+      "short_31ms": 72.87664157711053,
+      "medium_125ms": 26.068242162348504,
+      "long_500ms": 25.95616297364426
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_135",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 135,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "873539f90a35edf5c9091a4a66df06700bbdb4865db47a1b217f0f868b3a6edf",
+    "raw_maxima": {
+      "short_31ms": 51.73005442089793,
+      "medium_125ms": 33.121363335076865,
+      "long_500ms": 34.466795817955244
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_136",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 136,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f29a31de7146bb3593851acfe0aedccc0e9301ff75b0d9c0b22d5f8c56cfe787",
+    "raw_maxima": {
+      "short_31ms": 65.33149593664183,
+      "medium_125ms": 19.471211258300606,
+      "long_500ms": 26.24795292036876
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_137",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 137,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a060c0af26f2af9dcf1ce297443d573356dcd27a7f9326008dd7fdb92bccbb67",
+    "raw_maxima": {
+      "short_31ms": 57.092560853205086,
+      "medium_125ms": 23.659881161421445,
+      "long_500ms": 32.46183796655909
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_138",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 138,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5f62ee6eb80a858f0c3146f6f5417ec39582d954fda49e483137b50cbb51b4a5",
+    "raw_maxima": {
+      "short_31ms": 64.0875331180424,
+      "medium_125ms": 26.521980995418517,
+      "long_500ms": 34.653629270939646
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_139",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 139,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "34caeca6d7ed4210c06c273ef62f74509c4f5d0413cdd77e4f117e459b2aef4c",
+    "raw_maxima": {
+      "short_31ms": 56.997214861578136,
+      "medium_125ms": 31.50095118637325,
+      "long_500ms": 30.469636053177542
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_140",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 140,
+    "family": "chirp",
+    "snr": 18.0,
+    "unit": null,
+    "input_sha256": "e47ba1e7a1eead7caddc2a02b38d5a577dc1953dbaf75dc6b2505b79b089d815",
+    "raw_maxima": {
+      "short_31ms": 119.7049186970536,
+      "medium_125ms": 601.6384432967791,
+      "long_500ms": 514.693638843573
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_141",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 141,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c6500da8cab5e66ec98c05494651d94427ac7c132f3fa9024bc024c79d3217aa",
+    "raw_maxima": {
+      "short_31ms": 82.14969618345786,
+      "medium_125ms": 40.12206406409262,
+      "long_500ms": 34.152280449587195
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_142",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 142,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "329042fc0cc3e09480d656778f0b37ddb50261fdde5836b7efef12636cc2630c",
+    "raw_maxima": {
+      "short_31ms": 86.13416258652474,
+      "medium_125ms": 57.86246754492283,
+      "long_500ms": 33.89917479046738
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_143",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 143,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "28a24f763a4ee3f3a64e2c460117e47f649f8220c914c0abf4e95b9f1f477cc7",
+    "raw_maxima": {
+      "short_31ms": 93.32683557058765,
+      "medium_125ms": 33.03280726869654,
+      "long_500ms": 23.53422290463938
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_144",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 144,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b29cb28a4c1ea0bc21ed315cdd1194a925b7dc2979164330ef039b5298a0dd88",
+    "raw_maxima": {
+      "short_31ms": 39.79154373180938,
+      "medium_125ms": 27.694332167135272,
+      "long_500ms": 20.707919837845697
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_145",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 145,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "cd33149d2ce1c97ffcf916092b3122698058d9e74dded62eb0b6089b9d832726",
+    "raw_maxima": {
+      "short_31ms": 51.24270742030108,
+      "medium_125ms": 40.947065937831226,
+      "long_500ms": 28.645503049488788
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_146",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 146,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f74b903e60c730089370946c8fffc43226550479c3e8a03ea92c3849d254cd13",
+    "raw_maxima": {
+      "short_31ms": 57.152274457604655,
+      "medium_125ms": 33.41278698418382,
+      "long_500ms": 21.807587908592264
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_147",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 147,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "cb973c8694462dfd3fddb8ca0495ada174a717a98affd4e9825d3fa801fef345",
+    "raw_maxima": {
+      "short_31ms": 85.09041496188476,
+      "medium_125ms": 33.781166719010834,
+      "long_500ms": 49.68649161911536
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_148",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 148,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4c53c913e84bdd54f466369f4ddf9a8a513b8c904c290bd9bfd5f4146dfd0d59",
+    "raw_maxima": {
+      "short_31ms": 70.08955822621739,
+      "medium_125ms": 32.14655411973806,
+      "long_500ms": 21.411242063999843
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_149",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 149,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "240782892f19efe876310eeb096c31dadacab665f87b7e0a73ab078e0eba1fb7",
+    "raw_maxima": {
+      "short_31ms": 60.963803068683085,
+      "medium_125ms": 34.546474349932986,
+      "long_500ms": 23.968680279289824
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_150",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 150,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "93f2b978f1c932c27ab7096991d788fd2cea8f4c062457c319d39a991b8d1ce7",
+    "raw_maxima": {
+      "short_31ms": 94.5027645254932,
+      "medium_125ms": 31.90462988937426,
+      "long_500ms": 25.302810565798772
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_151",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 151,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6aedbe12525bed591f526f66272a0fd08f0255409b34d67f239ca7164a65f70f",
+    "raw_maxima": {
+      "short_31ms": 70.80409881208462,
+      "medium_125ms": 27.53981581209977,
+      "long_500ms": 23.601539065655537
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_152",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 152,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8b3d76dbff2ec6b842cfbbbf521f45163a3fa3e9c12ff58947dc2ead5a0afc69",
+    "raw_maxima": {
+      "short_31ms": 55.86960219695057,
+      "medium_125ms": 26.3536276103919,
+      "long_500ms": 46.28704016835128
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_153",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 153,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "12c19ec089ab2864d5b8b8917d6bcd7a2bc072e1dc88c4fdc144e7668d9a15e6",
+    "raw_maxima": {
+      "short_31ms": 75.63674433064075,
+      "medium_125ms": 25.55958556301995,
+      "long_500ms": 37.18672633746059
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_154",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 154,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7acac05ade9dae35648c9e1e6fec667e535b7e0afe5a2fd3002530f90a281070",
+    "raw_maxima": {
+      "short_31ms": 71.8487391949816,
+      "medium_125ms": 62.57134966979476,
+      "long_500ms": 26.009045511957677
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_155",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 155,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6d2b6be1937a06ee884b1774e2b9bff8473f639ad3d3013b0f4b8cfba9454c61",
+    "raw_maxima": {
+      "short_31ms": 82.77757348447206,
+      "medium_125ms": 42.87068662598796,
+      "long_500ms": 28.84025347772107
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_156",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 156,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "731d6166b2d73defcacf775345b5794a2e0e0019763fcdf56dc997de0ad5c894",
+    "raw_maxima": {
+      "short_31ms": 55.558302623630695,
+      "medium_125ms": 22.493869941778712,
+      "long_500ms": 30.482728636564744
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_157",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 157,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "99d58175e456bff3cbc7d6816eae1160e5e6828458b2c220c2bd95da37316ab9",
+    "raw_maxima": {
+      "short_31ms": 63.39515275281377,
+      "medium_125ms": 38.88578010744261,
+      "long_500ms": 50.14199308738076
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_158",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 158,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c44bfd844963c0a7c4aeb2c9ae169b429625085760e2747ec4aec0363240cc1c",
+    "raw_maxima": {
+      "short_31ms": 61.43418417344446,
+      "medium_125ms": 72.46503622447813,
+      "long_500ms": 32.53764835113629
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_159",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 159,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d2d3f6cbe5227754eece2bac6b31eaf304aaf405bc22f16213be16080f26e7af",
+    "raw_maxima": {
+      "short_31ms": 40.40491870696776,
+      "medium_125ms": 43.872955719513655,
+      "long_500ms": 39.45463376418596
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_160",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 160,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8c7c640fe93b76d47baeb81cc3d5b83782a40741db4084ebe672715c8f135a59",
+    "raw_maxima": {
+      "short_31ms": 66.68886486724153,
+      "medium_125ms": 25.41636520171072,
+      "long_500ms": 38.19951302208685
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_161",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 161,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d8b5b196d70a6fc0be0125208ec06432a568ad8a09fcadf010d008d4f92b7935",
+    "raw_maxima": {
+      "short_31ms": 110.22278557548714,
+      "medium_125ms": 24.31106353094166,
+      "long_500ms": 30.486202437327925
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_162",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 162,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "aa0d28f8cacc38fd1ea3636124a6555dafae7e12c59765e2e1a222a454c4884a",
+    "raw_maxima": {
+      "short_31ms": 65.14175658714817,
+      "medium_125ms": 32.04409416544171,
+      "long_500ms": 29.79800930059365
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_163",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 163,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a0716b46bfb47d5ddbddfdf707c0066c0f459cd8c61e11f257a855bc4a6e0e22",
+    "raw_maxima": {
+      "short_31ms": 48.39540246870584,
+      "medium_125ms": 29.766780874961512,
+      "long_500ms": 36.21733949610929
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_164",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 164,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b03a1be22d4841235c42c5e7e65e9a418a7875594b894efc71f0cdb71516defc",
+    "raw_maxima": {
+      "short_31ms": 46.2723796267289,
+      "medium_125ms": 37.72740717802116,
+      "long_500ms": 37.73004804343166
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_165",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 165,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9db9f71ce69cb85f4ca2f6d56eca12705ad2a31aa2ef8c0219df9d4ccf7d4030",
+    "raw_maxima": {
+      "short_31ms": 88.50482302987284,
+      "medium_125ms": 34.15900089152561,
+      "long_500ms": 32.22514158818916
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_166",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 166,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b85365a6b5d1ef08cc33f789a302fe408434b9181a5ef5b343ee73e04bfcbe41",
+    "raw_maxima": {
+      "short_31ms": 64.40405226287118,
+      "medium_125ms": 31.56957181413533,
+      "long_500ms": 22.060812590302106
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_167",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 167,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9abc49b5498be3769b92694733907aa6adf59ff1fe5a19f5e7b74704e6b91023",
+    "raw_maxima": {
+      "short_31ms": 55.79019244870835,
+      "medium_125ms": 28.53550159004778,
+      "long_500ms": 18.067976325276483
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_168",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 168,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2c59e47efd8802dc3dcf857850d3109b7bbea837ff199f5171c71c42c6d9a62b",
+    "raw_maxima": {
+      "short_31ms": 72.4065498590505,
+      "medium_125ms": 28.988981771249954,
+      "long_500ms": 29.184929531917895
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_169",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 169,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0862dc5c5b24058e81144ee14ca2aea4dd3bf7b0b12e204883a847e2113d2d36",
+    "raw_maxima": {
+      "short_31ms": 59.62020436521078,
+      "medium_125ms": 27.984146724670744,
+      "long_500ms": 56.49691113853452
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_170",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 170,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f8c9f209d15e6d86507df985c4855ea4dd5567418dfe308587bfa06eb664095b",
+    "raw_maxima": {
+      "short_31ms": 55.83709302992722,
+      "medium_125ms": 28.737094795033627,
+      "long_500ms": 25.08919293093232
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_171",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 171,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e4e3c627c496c6b86a148f85fc0621fb7760376158d7298f936c24266537230f",
+    "raw_maxima": {
+      "short_31ms": 45.145253662363,
+      "medium_125ms": 44.390559803081985,
+      "long_500ms": 49.247837732221655
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_172",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 172,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9906f3eafd04e6151a888a75f760832274b2de666624ccc095157646722a09ae",
+    "raw_maxima": {
+      "short_31ms": 34.26871457585392,
+      "medium_125ms": 36.82794764606017,
+      "long_500ms": 37.9563304852155
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_173",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 173,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3070360b8266743b5331067c5b6c08d71c4974336bf0334eb61c37244f7622d1",
+    "raw_maxima": {
+      "short_31ms": 57.17993811829459,
+      "medium_125ms": 24.477866118381804,
+      "long_500ms": 17.707942535341278
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_174",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 174,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1d788cd1c3f396affba2fd62da1ac41d130b12c0b1f347571e6310356b66bf3b",
+    "raw_maxima": {
+      "short_31ms": 37.43482415056168,
+      "medium_125ms": 25.714793445411225,
+      "long_500ms": 22.567293997702592
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_175",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 175,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "43aa39fdafec82708e045b3e803b53f5a3a9a93448ed702720e338c957e15f6a",
+    "raw_maxima": {
+      "short_31ms": 75.60485225305759,
+      "medium_125ms": 59.4945676528487,
+      "long_500ms": 29.420385869538716
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_176",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 176,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "aa43a0c4e0d5abaf53e8391445b07e28d69d51122210efa11d735196dc8eb0aa",
+    "raw_maxima": {
+      "short_31ms": 45.90545081583773,
+      "medium_125ms": 44.83570570111145,
+      "long_500ms": 46.72867209410863
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_177",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 177,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d8b5b84d978f57a842644fd4e18ecf4407779cfd741ff896fb6017bfcb85b78d",
+    "raw_maxima": {
+      "short_31ms": 53.90657437429093,
+      "medium_125ms": 33.75215795126147,
+      "long_500ms": 50.254559214670515
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_178",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 178,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "17dc8203641afd5882ba03abde320945e905fa27f02d7cc7dbad9a390f35fa8f",
+    "raw_maxima": {
+      "short_31ms": 44.9171946752731,
+      "medium_125ms": 44.77123083885482,
+      "long_500ms": 27.010888521799068
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_179",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 179,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "137d022d8c2df735eb98ac12a70e3882aecd9850c7484aea8f4057b5ad3e9721",
+    "raw_maxima": {
+      "short_31ms": 106.96982056414888,
+      "medium_125ms": 33.05389704807872,
+      "long_500ms": 36.705543331821715
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_180",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 180,
+    "family": "chirp",
+    "snr": 18.0,
+    "unit": null,
+    "input_sha256": "574d8298d0afa7ec77473d0eb0d944f31ff0a12a1b87f2786f16a5cd20ccd217",
+    "raw_maxima": {
+      "short_31ms": 71.47235794307713,
+      "medium_125ms": 956.6362757487132,
+      "long_500ms": 1041.2330437067362
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_181",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 181,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "561401dc63bfbfd605cf02410ce8cf2f0beb54ed7e0b0af0b07f5d0fba02695f",
+    "raw_maxima": {
+      "short_31ms": 51.85604514402111,
+      "medium_125ms": 34.73019421247888,
+      "long_500ms": 23.89679857402067
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_182",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 182,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "856e2ee3860719a56229f1db295cc5e06b3cb8241ce0dd043eb270978e2d4f7f",
+    "raw_maxima": {
+      "short_31ms": 47.51870798085557,
+      "medium_125ms": 32.85355759810108,
+      "long_500ms": 36.08840789375438
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_183",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 183,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2d63c8d35518397f8b0ef26e9ebadb1ec48560e4f3227ad85f1f03511066ae1f",
+    "raw_maxima": {
+      "short_31ms": 57.240529231103764,
+      "medium_125ms": 20.599695031146513,
+      "long_500ms": 23.62423587429086
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_184",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 184,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "04adf9e45d56d175c75f36a13f03516f2ba5337f0521e460134aaaffff9c93b7",
+    "raw_maxima": {
+      "short_31ms": 69.43142318910165,
+      "medium_125ms": 30.396431575376255,
+      "long_500ms": 21.055546624192786
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_185",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 185,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9028b05e30b4685a68c245b084f768266262b4f4f6c362fef7e91bc53d5bc963",
+    "raw_maxima": {
+      "short_31ms": 66.7897322112247,
+      "medium_125ms": 41.387178079141066,
+      "long_500ms": 51.07237614700704
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_186",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 186,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b0e95201148015bb3c735557de8c12c90bb407043f6486308685b7c3303394a0",
+    "raw_maxima": {
+      "short_31ms": 80.06856449851622,
+      "medium_125ms": 49.31692324141051,
+      "long_500ms": 26.966420089379532
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_187",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 187,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5e43a708741c92c08bb872208dc6a2cd152ecd0a2cde10fc32494bd6ffbae080",
+    "raw_maxima": {
+      "short_31ms": 76.06574105495422,
+      "medium_125ms": 53.80505501351176,
+      "long_500ms": 29.61260560237624
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_188",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 188,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "940873513617387ce2c11e0939254dd61d2c64a1fd3099882198529815260c69",
+    "raw_maxima": {
+      "short_31ms": 58.451275132294725,
+      "medium_125ms": 31.82985023505158,
+      "long_500ms": 18.57290856927078
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_189",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 189,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8829911ad66e4b3ad55501f4fda9d0e7f2450ed9bf19774c8094067503b2d731",
+    "raw_maxima": {
+      "short_31ms": 46.60687895873859,
+      "medium_125ms": 55.48760526033491,
+      "long_500ms": 37.588829677798095
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_190",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 190,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9d923321e242ff4c8c6f2ec6b4f3986b99be3ff56950de5db416726c7f5c6ce5",
+    "raw_maxima": {
+      "short_31ms": 72.95128971287551,
+      "medium_125ms": 67.70955691928103,
+      "long_500ms": 36.48378522726253
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_191",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 191,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2b9d3150d70a044fc7bac18d5674f9df10b1e07f1110ab36fc4833c4215cc155",
+    "raw_maxima": {
+      "short_31ms": 49.28190748336216,
+      "medium_125ms": 39.58463959993889,
+      "long_500ms": 31.794869760043348
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_192",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 192,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b0d93cf2dc693405dace73186165c2262a10ca89dd2dba4aa9a68742bcba90d7",
+    "raw_maxima": {
+      "short_31ms": 71.70139652150058,
+      "medium_125ms": 21.864518413304605,
+      "long_500ms": 25.610359815994933
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_193",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 193,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b9b557cbf5a20380f1fff716e70e951dd1a0efb33f2f32b56cc0f1fa65d73471",
+    "raw_maxima": {
+      "short_31ms": 62.70141994212517,
+      "medium_125ms": 24.477334753609618,
+      "long_500ms": 20.54274549534658
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_194",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 194,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6926e8f88053bc9c8fff6cd5b4c2014ea407ab953da98ce3ec76b2a046283ea2",
+    "raw_maxima": {
+      "short_31ms": 76.93766070556572,
+      "medium_125ms": 40.307664916853405,
+      "long_500ms": 37.06340284592377
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_195",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 195,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c31279ec6dfdd95c42b6a8c93fdce9d85b5d97789d18fb1ff8104f6cf42df8ac",
+    "raw_maxima": {
+      "short_31ms": 47.266935936285655,
+      "medium_125ms": 44.949614882962415,
+      "long_500ms": 34.35621861057431
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_196",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 196,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b585ea8b270dd170422e301a561420bf4718130a3d2a3889f94fad4e6946558f",
+    "raw_maxima": {
+      "short_31ms": 49.25558963674841,
+      "medium_125ms": 35.209194148857435,
+      "long_500ms": 38.204483255491766
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_197",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 197,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "cfb51372c00f87d663af490bc8328f9c1795fba74264e1a564141fa2225cd054",
+    "raw_maxima": {
+      "short_31ms": 73.81632843906404,
+      "medium_125ms": 34.30404731507257,
+      "long_500ms": 36.85153996994808
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_198",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 198,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0c5f33a6bc9268898511f288e3a3a8880a3383bcc192d1c48983afc4ab75b893",
+    "raw_maxima": {
+      "short_31ms": 56.17502447175163,
+      "medium_125ms": 40.601210236836934,
+      "long_500ms": 33.84430141844424
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_199",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 199,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0d589dc95c8b3cae55e4166a1f244a059861d8fcfb3fbd55c7b2120362048014",
+    "raw_maxima": {
+      "short_31ms": 62.746572990414016,
+      "medium_125ms": 32.327714634680525,
+      "long_500ms": 22.35834565011162
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_200",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 200,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e9e03639124ad1be8e720367d6c4fb847ed813ce6c17e445e12c2b8cdde6488d",
+    "raw_maxima": {
+      "short_31ms": 76.15870165345346,
+      "medium_125ms": 26.897599973953003,
+      "long_500ms": 24.101863603980874
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_201",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 201,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b617810d1528b9c74509cb583305689cced5d5a28c66650bb46efb6c3d6624e7",
+    "raw_maxima": {
+      "short_31ms": 52.96089785957427,
+      "medium_125ms": 68.70910783320561,
+      "long_500ms": 32.792533697717104
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_202",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 202,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e42cefb9ced4b8f8921e79b3c527c9e6a28062842fee6950b01202b986607f42",
+    "raw_maxima": {
+      "short_31ms": 92.56435678713736,
+      "medium_125ms": 29.659576949702053,
+      "long_500ms": 28.628451233642974
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_203",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 203,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "126eb5203e0a0ceed4d2cfdc534ff67375ad4915c276fd656e2e88e925599718",
+    "raw_maxima": {
+      "short_31ms": 73.29510662027332,
+      "medium_125ms": 29.117053375426092,
+      "long_500ms": 38.61443210304783
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_204",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 204,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "142a3878f73ca78ec49c10610e9ab20dcd86a1c1c27a0097cc414183d83e1966",
+    "raw_maxima": {
+      "short_31ms": 72.79666348359328,
+      "medium_125ms": 22.926535628449276,
+      "long_500ms": 24.82628225104746
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_205",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 205,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d7ab8945679357b95994d66cfdd493e5f591508cb07f495418aa53872068321b",
+    "raw_maxima": {
+      "short_31ms": 100.88748849367568,
+      "medium_125ms": 22.052266177803055,
+      "long_500ms": 22.231076298093484
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_206",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 206,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "575e1334873afb33df469e6698d89ffb44927a945e1c3868d57fe828ba711652",
+    "raw_maxima": {
+      "short_31ms": 46.320126841145424,
+      "medium_125ms": 31.8169904173948,
+      "long_500ms": 34.227253299989236
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_207",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 207,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "fe31f668095e4ad6b073789b7bf1a4297dde2a1c748c6ef6c4f33f329bd6c5a7",
+    "raw_maxima": {
+      "short_31ms": 61.24441297013153,
+      "medium_125ms": 29.234241389860465,
+      "long_500ms": 36.56955766742263
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_208",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 208,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c269fd5ebac2ac719795d8637550287fe3e70fb796184401f619da53bb9854ce",
+    "raw_maxima": {
+      "short_31ms": 53.92799865835779,
+      "medium_125ms": 39.27552737833789,
+      "long_500ms": 23.030417888582008
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_209",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 209,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "fd639400b82dab82c21538547ab9c2464b0048000c3d45e9abd400c171e059f5",
+    "raw_maxima": {
+      "short_31ms": 45.807870151544115,
+      "medium_125ms": 21.230958259902525,
+      "long_500ms": 31.386649398591235
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_210",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 210,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9f6d6b98557de1b84365a8aaedca19e8b4d67f96cda6ab92256774a3a7d2c025",
+    "raw_maxima": {
+      "short_31ms": 78.60525017360631,
+      "medium_125ms": 64.50397406981119,
+      "long_500ms": 43.33962703710831
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_211",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 211,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4a8c26f2add566346160aad5611406cac311fe089ee0fd651d5743e83ee0f251",
+    "raw_maxima": {
+      "short_31ms": 100.2546247541592,
+      "medium_125ms": 30.308058663166236,
+      "long_500ms": 36.80672600510536
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_212",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 212,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d47e1727266d9b6c614e3e92baa64036f9db291e2bdd2ac6267a0675a3cb954e",
+    "raw_maxima": {
+      "short_31ms": 63.227022797131525,
+      "medium_125ms": 26.222880773215234,
+      "long_500ms": 20.648500806941033
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_213",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 213,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "aa6cb2292c4a8f57014f0b7e53c1d29642814e87768e62926f728c30054635c1",
+    "raw_maxima": {
+      "short_31ms": 49.4353153719146,
+      "medium_125ms": 34.91608922723763,
+      "long_500ms": 17.653291461175485
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_214",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 214,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6f55b7b0605d129990b3d28c9e4ea42ed1d54f551870b0773518402502afcd9f",
+    "raw_maxima": {
+      "short_31ms": 47.61813408194934,
+      "medium_125ms": 32.057812587968456,
+      "long_500ms": 29.863661931389103
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_215",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 215,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d318dff4f7874785d1f1d8df751f0067fedaafd9f6dd3095f49d68c2ac848ebe",
+    "raw_maxima": {
+      "short_31ms": 94.94822291330107,
+      "medium_125ms": 26.41061026211964,
+      "long_500ms": 34.23119549199566
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_216",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 216,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f31fb68699155a69315c4946a38682d808a53691e9cb7cc8dc0f9cb5b56a1c2f",
+    "raw_maxima": {
+      "short_31ms": 50.42392558355571,
+      "medium_125ms": 31.3804057019874,
+      "long_500ms": 25.84146753315527
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_217",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 217,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7e9211bc5b09f4890c90cae0021dcdaae4c9a40e56ec1573b7c61606ba6f20f5",
+    "raw_maxima": {
+      "short_31ms": 73.75801913517587,
+      "medium_125ms": 25.867735530227755,
+      "long_500ms": 28.931303856972175
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_218",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 218,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3a247c51812163abc60d5c309d8fd95e07995f2ebca495a675d48847b03e12c7",
+    "raw_maxima": {
+      "short_31ms": 40.14427547431571,
+      "medium_125ms": 27.958811561662504,
+      "long_500ms": 27.264936423406652
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_219",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 219,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "aa32c6e5b011e9919cdb04bf99a8b12849a45000820202b5987502a83458c1fd",
+    "raw_maxima": {
+      "short_31ms": 134.0693048573664,
+      "medium_125ms": 28.430448833251276,
+      "long_500ms": 31.26991083716142
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_220",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 220,
+    "family": "chirp",
+    "snr": 18.0,
+    "unit": null,
+    "input_sha256": "5103fd72bf1e053fe969022c674b9cc9e4a2c019a5580a9ef8176240cc2a6817",
+    "raw_maxima": {
+      "short_31ms": 82.75259449312188,
+      "medium_125ms": 841.354914247519,
+      "long_500ms": 599.7489470278987
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_221",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 221,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "33354a4c5b05abda11178cbeda8a425b908421a63018d23dd7aefda813e8fb6c",
+    "raw_maxima": {
+      "short_31ms": 78.44301701607989,
+      "medium_125ms": 48.74594229734065,
+      "long_500ms": 29.344547131087786
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_222",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 222,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "904b5f4b0a981bb093ad26cbf376e453d9b74cc4f7602219d2626fc0fb7a7151",
+    "raw_maxima": {
+      "short_31ms": 47.63461824376776,
+      "medium_125ms": 26.45071935023314,
+      "long_500ms": 31.906676050404442
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_223",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 223,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3d98228564fd4f65eead98c5916a0e4e3c9671bc995991aadda3e13795335b09",
+    "raw_maxima": {
+      "short_31ms": 73.64708959832726,
+      "medium_125ms": 33.31729268841006,
+      "long_500ms": 23.561897176565502
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_224",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 224,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "80bb3a2c94f9149743b2414ec031b96f949583eb36df007841f7a7173437bf20",
+    "raw_maxima": {
+      "short_31ms": 78.40532183358607,
+      "medium_125ms": 27.522278806846195,
+      "long_500ms": 18.618134381353737
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_225",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 225,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "eef8e3f1b27fa87e19cf547650ca3a9e03168391b32e8e8351267e88a69577e8",
+    "raw_maxima": {
+      "short_31ms": 57.36868034544569,
+      "medium_125ms": 38.87157281556034,
+      "long_500ms": 24.48609093819255
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_226",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 226,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "89ac3205a53ba81dc5136b6a6d8e18d196b56388a20d1786d8cb29d23e64426f",
+    "raw_maxima": {
+      "short_31ms": 39.490446013012544,
+      "medium_125ms": 30.39112630087067,
+      "long_500ms": 20.19751414852751
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_227",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 227,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b489e3c91673e85b9bfcd5f2c36232e1cff5adc7d85cc56284ddf35f06a979ab",
+    "raw_maxima": {
+      "short_31ms": 72.2685026644885,
+      "medium_125ms": 19.235110584517795,
+      "long_500ms": 46.515263194389654
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_228",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 228,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c6f977c7fd05bb3c3ab9c2ee2c94a2093d9076836820ebc67d67c4d4be348ef4",
+    "raw_maxima": {
+      "short_31ms": 39.839164388275414,
+      "medium_125ms": 25.11144556695334,
+      "long_500ms": 43.4146772559976
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_229",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 229,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2ad0ba78ae033095888a687c8c00341f46f513e5860f226fdb571677ecd154b4",
+    "raw_maxima": {
+      "short_31ms": 75.87321718697889,
+      "medium_125ms": 31.5488385113536,
+      "long_500ms": 37.87344306222678
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_230",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 230,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2459d24ef7810030acf6dbb7aef7c55baa2ca3a8eb8f0af8f1f6d9be8a31c2b9",
+    "raw_maxima": {
+      "short_31ms": 45.02845625041296,
+      "medium_125ms": 22.43177346508894,
+      "long_500ms": 28.30853395472121
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_231",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 231,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "45a4608e23038c935c802e81306b0deb16ee3795fa9a3470330cf601299e1566",
+    "raw_maxima": {
+      "short_31ms": 47.49684390819229,
+      "medium_125ms": 26.65688162724269,
+      "long_500ms": 52.3230854335859
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_232",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 232,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e1841f5bba9ace68350c40b7aef98ece0c1095d7d7253937f7437cb5f7adeceb",
+    "raw_maxima": {
+      "short_31ms": 36.2795412019284,
+      "medium_125ms": 22.826172208500104,
+      "long_500ms": 23.62744902882054
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_233",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 233,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8df2ff9e30d69027d5d497c745304f85c393490bc4d5b7f219b283c4bf385d2d",
+    "raw_maxima": {
+      "short_31ms": 57.89740776205725,
+      "medium_125ms": 31.443622805153424,
+      "long_500ms": 29.706566391452096
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_234",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 234,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5a4d1dd0250ab22b815b99dd478de12e239a569aa3b575b588ddda15281108d0",
+    "raw_maxima": {
+      "short_31ms": 103.28493981460662,
+      "medium_125ms": 30.688061630873605,
+      "long_500ms": 49.46255591474628
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_235",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 235,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2c71be2dad8a8bf10239b9c70985ad606d5c63bb918ac05dfadfd9c8150084dc",
+    "raw_maxima": {
+      "short_31ms": 54.462462902569236,
+      "medium_125ms": 37.31326263645216,
+      "long_500ms": 26.659449642623628
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_236",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 236,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c969596e5579b05dfafe1c6280437f61deba307a1d8542ab2ed4a5ccea5a17f7",
+    "raw_maxima": {
+      "short_31ms": 49.80602260582423,
+      "medium_125ms": 25.84631974819863,
+      "long_500ms": 24.21032495126534
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_237",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 237,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d7b49b47b6fd63da4ec576976e25730e8b48af50b74e29e9a569329410825e42",
+    "raw_maxima": {
+      "short_31ms": 49.37579031674145,
+      "medium_125ms": 22.190182736451803,
+      "long_500ms": 24.59390354447499
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_238",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 238,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "54cf88c822fef240e424b8f282f2a7b7602afbf8fed473c5ab0791a6aefc71e7",
+    "raw_maxima": {
+      "short_31ms": 52.33096012467881,
+      "medium_125ms": 42.984385387688846,
+      "long_500ms": 43.88225581464321
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_239",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 239,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d4738ad7e833363489187a4eab23230eb5c6721320ade5f4564b9cf1ad7548f2",
+    "raw_maxima": {
+      "short_31ms": 87.65112854449215,
+      "medium_125ms": 39.33651797852153,
+      "long_500ms": 28.306161873379274
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_240",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 240,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4b17974f98d1f26061ce65343e386c07b53f51937edc04cb2c3f747cff7c340d",
+    "raw_maxima": {
+      "short_31ms": 46.153161078403144,
+      "medium_125ms": 27.15974922509749,
+      "long_500ms": 22.802776364690445
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_241",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 241,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "07b70214ff48ac22e89140179b91ac65ce69d90ca0841a25eb6ff8eebcb188ae",
+    "raw_maxima": {
+      "short_31ms": 60.64897893502394,
+      "medium_125ms": 21.131377125359233,
+      "long_500ms": 28.01209947225557
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_242",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 242,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a73502276de25945a7c25bf23b752dd0bf14c85000c69652996530f95d1417e8",
+    "raw_maxima": {
+      "short_31ms": 46.721287426621814,
+      "medium_125ms": 22.374450411226206,
+      "long_500ms": 31.601532056951438
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_243",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 243,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "02366a88d32a1e74f45048f48fdcfff6a52c7f427fca345ebf9a2436a5e4d621",
+    "raw_maxima": {
+      "short_31ms": 86.36947534667149,
+      "medium_125ms": 27.27245806462306,
+      "long_500ms": 19.548329970781705
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_244",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 244,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2a696cf87e0f3d277a7d49ff11a2b6a69294c5dd82481c6f3dcc5597d23b0014",
+    "raw_maxima": {
+      "short_31ms": 53.07742180483146,
+      "medium_125ms": 36.72340823564846,
+      "long_500ms": 41.3089029569048
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_245",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 245,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "958fea2612b9606448ae852fb6c45b7411d4996913dcd29bc3beb5a417703e3f",
+    "raw_maxima": {
+      "short_31ms": 42.68613875843631,
+      "medium_125ms": 27.00076731975439,
+      "long_500ms": 42.87439301422275
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_246",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 246,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2e596f92b61d0ba853fc50f4e8eea2b4b0607e54a5d40c15b0b17fc10b005295",
+    "raw_maxima": {
+      "short_31ms": 49.77695966192988,
+      "medium_125ms": 24.08529046024244,
+      "long_500ms": 32.45195477681961
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_247",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 247,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c16d90fbad9fbb571d7161d73441ee5440f5c78f01c9cfa0ea77c289ac62aade",
+    "raw_maxima": {
+      "short_31ms": 102.82128920778204,
+      "medium_125ms": 19.65909866884045,
+      "long_500ms": 20.74453449471734
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_248",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 248,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b015a6c2d9a975798c02a115a2369b36ac6137ce264a603e52a118861c7dacd9",
+    "raw_maxima": {
+      "short_31ms": 42.615895658182204,
+      "medium_125ms": 34.079305419100656,
+      "long_500ms": 25.330243651436145
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_249",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 249,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1407c540c3cd3ced40cd3b9742b067671efad254b358094e9706c516e354d4d1",
+    "raw_maxima": {
+      "short_31ms": 52.15902654641203,
+      "medium_125ms": 17.146927469708153,
+      "long_500ms": 24.63219483782532
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_250",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 250,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f0e31307b1a7bb132b0c7687682ac6a2cd83de13bceb06a7887408aedf3fa646",
+    "raw_maxima": {
+      "short_31ms": 45.015159729242065,
+      "medium_125ms": 31.00632439659024,
+      "long_500ms": 21.711688619059387
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_251",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 251,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "205e6e0ac91915a15f6a0f09ea0f0bb1d22c6395dc7cb8d03aa27254e88d9851",
+    "raw_maxima": {
+      "short_31ms": 46.13477283662811,
+      "medium_125ms": 26.210262141176965,
+      "long_500ms": 32.65191023591038
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_252",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 252,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "abff95869c4a99aa87bec64564944e52a459fa0bdcf29c181407f7c4c9aafdd1",
+    "raw_maxima": {
+      "short_31ms": 76.47431826188678,
+      "medium_125ms": 48.352675465915446,
+      "long_500ms": 23.723913576329622
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_253",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 253,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f54b7b044c6b1e64c4a20d3396586a8c181dc353e638cd8db9b0acedcc0f7a5d",
+    "raw_maxima": {
+      "short_31ms": 55.82883485069209,
+      "medium_125ms": 37.966128914435885,
+      "long_500ms": 29.7867194855498
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_254",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 254,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f8a26078c9f0ead26dddd5fef751d588e1b553194ce883dd32920e3458da7e55",
+    "raw_maxima": {
+      "short_31ms": 65.55427294658833,
+      "medium_125ms": 24.788272060050296,
+      "long_500ms": 35.16336972660258
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_255",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 255,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8d62b9a28db8d426d3fd1d6d6006cd8e2bb777f807637eea0aa74bc47a64b513",
+    "raw_maxima": {
+      "short_31ms": 39.270637895409415,
+      "medium_125ms": 38.64747080759265,
+      "long_500ms": 35.06946810493996
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_256",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 256,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0101a6b041634b72c41a556157067f92aaa84f814135871ae8a3350459371756",
+    "raw_maxima": {
+      "short_31ms": 52.269176580505075,
+      "medium_125ms": 32.609861925553695,
+      "long_500ms": 26.367083902102117
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_257",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 257,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d4cd6bd7bb3a6d970dae1f59607438b1bfee156a6d35c7d6237309b454541ff3",
+    "raw_maxima": {
+      "short_31ms": 63.20021875513223,
+      "medium_125ms": 31.680517170869,
+      "long_500ms": 23.103308457599958
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_258",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 258,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1c077610dfff927e26efeafb66062b4ec2c3f506ca94f49aaebec4b7f7f34456",
+    "raw_maxima": {
+      "short_31ms": 75.1291523320183,
+      "medium_125ms": 25.270219265068114,
+      "long_500ms": 56.089811925264655
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_259",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 259,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9dcfb56b46488f76dde67136e987c67059df8bd939459edc2833be9571fbc0df",
+    "raw_maxima": {
+      "short_31ms": 70.30546806212004,
+      "medium_125ms": 35.38057678913347,
+      "long_500ms": 41.85994755389264
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_260",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 260,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "cba9f5df7a323d62a9dfdb9d8436a78358f94963a63dd4e54b69251c837583d4",
+    "raw_maxima": {
+      "short_31ms": 45.75200788572166,
+      "medium_125ms": 27.947012635758362,
+      "long_500ms": 28.513818790093396
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_261",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 261,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c9575b2fddae90b473abe7b59b44d1a7101097985ffd20ffab7badef440ec774",
+    "raw_maxima": {
+      "short_31ms": 68.65486157560517,
+      "medium_125ms": 35.82930144571324,
+      "long_500ms": 38.7777749332218
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_262",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 262,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "22d2f1d7572ff794fb31cc2593f1c58a5d0d0f09c2dd53a1e906cc881760f6c2",
+    "raw_maxima": {
+      "short_31ms": 51.38214717607094,
+      "medium_125ms": 46.39266792160875,
+      "long_500ms": 36.59821818667179
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_263",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 263,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "27d5725ba963e17ab5155cc9e89e06f9ee16c28b03c74a0fa7f8f95264cfda40",
+    "raw_maxima": {
+      "short_31ms": 57.22990112212518,
+      "medium_125ms": 17.05022453005071,
+      "long_500ms": 21.92978340870892
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_calibration_264",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "calibration",
+    "index": 264,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "26ca2c5dccd8e6a9eb8e2e040bd2a3531e563a22d5e6be4484aa1dd08af47c39",
+    "raw_maxima": {
+      "short_31ms": 75.64554849290882,
+      "medium_125ms": 26.787309530145446,
+      "long_500ms": 37.04931163336997
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_000",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 0,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "121761099fd145b4ad185a0d7c638db4a2e4bd12a1e9a1ce813d4331b2da6673",
+    "raw_maxima": {
+      "short_31ms": 80.46331267823925,
+      "medium_125ms": 30.83215002146344,
+      "long_500ms": 28.40907981511515
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_001",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 1,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "aca86b5beb59a8c542612efeb4f02f9f86e8f8ea195855775fe8cce573dcad1f",
+    "raw_maxima": {
+      "short_31ms": 60.98004926263183,
+      "medium_125ms": 21.36620521421819,
+      "long_500ms": 25.130992002735518
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_002",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 2,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a27bb58fb60f68cdc410af9a54aa1073aa3affea1fa092ee7099cd1f7923083c",
+    "raw_maxima": {
+      "short_31ms": 95.50101645267242,
+      "medium_125ms": 36.22372721863506,
+      "long_500ms": 23.43395068269322
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_003",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 3,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b84d805a109be7dbb0a0c6677843dd8b2d4c0d387f97661c1116acd15e73ad5b",
+    "raw_maxima": {
+      "short_31ms": 54.191445794162036,
+      "medium_125ms": 34.151741234697965,
+      "long_500ms": 24.765306275807998
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_004",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 4,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "fc83e530d5c60021bbf2874b30db726c277509215cce0b57ecd50770fbe4eed7",
+    "raw_maxima": {
+      "short_31ms": 41.2348899477211,
+      "medium_125ms": 26.433405331787522,
+      "long_500ms": 59.461021326769995
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_005",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 5,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "46d65d1237258efcb1c790ee689a23e24dc68b8dacf6cd561f6915b52e6785bb",
+    "raw_maxima": {
+      "short_31ms": 56.8933985907269,
+      "medium_125ms": 31.58522905364102,
+      "long_500ms": 17.616347551413998
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_006",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 6,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0f25991a84bb5cff31ce68820ce2beca070149229971b170732043fc6a5f7115",
+    "raw_maxima": {
+      "short_31ms": 48.29547480732359,
+      "medium_125ms": 31.140069966982576,
+      "long_500ms": 42.19597557221338
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_007",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 7,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "552ac75e24e7478925c78f37065d2d63261906e96e0ca1dfd4450ab454e337fe",
+    "raw_maxima": {
+      "short_31ms": 59.44677941269294,
+      "medium_125ms": 70.4226276624292,
+      "long_500ms": 43.04082894685835
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_008",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 8,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5c7e5d660e3afe3837e20ce1c8ed5f69d527becaee0c2654c9efab5ed69ec0dd",
+    "raw_maxima": {
+      "short_31ms": 91.09261508242271,
+      "medium_125ms": 43.06448236254846,
+      "long_500ms": 30.896551446612946
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_009",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 9,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f9b72b184b8b2227bd81e1acb4f325277aa5a47a6c333dab43eabd9037282d27",
+    "raw_maxima": {
+      "short_31ms": 56.06866388069523,
+      "medium_125ms": 33.301933241438185,
+      "long_500ms": 28.666228227711716
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_010",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 10,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8f6dfac37ec7eac56d892a9ea6163b07c5bab06bf262a4a95aa01658005a13f0",
+    "raw_maxima": {
+      "short_31ms": 64.22793945095069,
+      "medium_125ms": 31.010499267551523,
+      "long_500ms": 19.585145958135108
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_011",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 11,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "91b52c4e2e2fe4a204cd4cbf9a115bc3fc3b7a38c179f7ab3cf8d6cc30ef9373",
+    "raw_maxima": {
+      "short_31ms": 55.72737199923243,
+      "medium_125ms": 28.81385100918145,
+      "long_500ms": 30.314181787033277
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_012",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 12,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b25bf090501f8cf9169e695416475bcf1fcab9ccf8592c9fe044feb16e1878b7",
+    "raw_maxima": {
+      "short_31ms": 66.49941346744586,
+      "medium_125ms": 26.92816151876493,
+      "long_500ms": 32.23232319104215
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_013",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 13,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9ddfdfc80814b6aad45aaa5e05cd46a28f6e4e1a488d46c6caa2cbdd331af730",
+    "raw_maxima": {
+      "short_31ms": 60.04515427912109,
+      "medium_125ms": 36.63894805646066,
+      "long_500ms": 28.260334361207935
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_014",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 14,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d6428ae9e42c48450c9fb29c591ffa924c1a10dca96d57103e4a755383595c50",
+    "raw_maxima": {
+      "short_31ms": 87.01669411649392,
+      "medium_125ms": 38.57219374152892,
+      "long_500ms": 34.633390129309234
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_015",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 15,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "352c728c0ebae2a046d1bb012c8833ca7f086f0cd8c06ced1f0bd58fe2b31a47",
+    "raw_maxima": {
+      "short_31ms": 83.62567611424366,
+      "medium_125ms": 40.84680470435882,
+      "long_500ms": 20.4271707992228
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_016",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 16,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8d355bd233e8b88c02be851fd2ab161ccb42c419b76825307395898f792ae20f",
+    "raw_maxima": {
+      "short_31ms": 65.81601360669212,
+      "medium_125ms": 32.589580566577446,
+      "long_500ms": 25.065271068223883
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_017",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 17,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "82bac57b66f4188907fe83a1c3d7a1b53213d4c098059aeecc36da93fbe366d0",
+    "raw_maxima": {
+      "short_31ms": 47.68826185292811,
+      "medium_125ms": 33.53223257404972,
+      "long_500ms": 28.21638766627325
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_018",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 18,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4f78d92b40c1cff474f6a63486fb88f450936f14e94aa4b7a759d27f6a536e32",
+    "raw_maxima": {
+      "short_31ms": 52.20420990915247,
+      "medium_125ms": 24.41634999420049,
+      "long_500ms": 30.98866625572428
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_019",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 19,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "79583f4479d68b68835a85b2e1904ae479026df78ff46a953b80cd249226bec5",
+    "raw_maxima": {
+      "short_31ms": 80.03519609815106,
+      "medium_125ms": 38.67054062044002,
+      "long_500ms": 39.87901942909069
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_020",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 20,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "fcca2c3e5364cff6eea049a17a8dd48a1f7c0c26181fcd19ea20a87ffca0bc8d",
+    "raw_maxima": {
+      "short_31ms": 59.09556160029077,
+      "medium_125ms": 31.14940174897115,
+      "long_500ms": 32.67088376503021
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_021",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 21,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "df7287d0363378cb3e6633fd80d104f4f064810362fc7691b8d285b0c0da7a54",
+    "raw_maxima": {
+      "short_31ms": 82.22649615188767,
+      "medium_125ms": 28.96440202786529,
+      "long_500ms": 25.064588159420133
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_022",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 22,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "05bc5f3059081e4fffb6490559c0018387744b1f92b0e87f7df6ab8eabaf501a",
+    "raw_maxima": {
+      "short_31ms": 85.83835805744124,
+      "medium_125ms": 41.14016472152453,
+      "long_500ms": 27.247687503356786
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_023",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 23,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d83b45e7779737d337a8424fb2c4def45af68a5d407d29e38df6749e9d318000",
+    "raw_maxima": {
+      "short_31ms": 50.648508899686064,
+      "medium_125ms": 30.396327026447214,
+      "long_500ms": 22.22956841581566
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_024",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 24,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7fb8bff17c85309bc29779108726a0a499410accc27297df02d644655774423d",
+    "raw_maxima": {
+      "short_31ms": 43.38696578292695,
+      "medium_125ms": 36.45379697198209,
+      "long_500ms": 31.20598128025955
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_025",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 25,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "bb42060628a677c4908ba0e4ad9ee541af91a9d72ca43e949dd5217ed66ca972",
+    "raw_maxima": {
+      "short_31ms": 73.51560933187095,
+      "medium_125ms": 36.78824050324562,
+      "long_500ms": 40.36503641568652
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_026",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 26,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e55d8f54c8f0045ace9b5eee53c605d84b561ae34eb81e82774dbcf497adf093",
+    "raw_maxima": {
+      "short_31ms": 75.28552556469631,
+      "medium_125ms": 27.903810242576153,
+      "long_500ms": 32.30180749178233
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_027",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 27,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c34718b8cbec174dd94156eef53dd586089993f8145d923a5219e472e029ab1a",
+    "raw_maxima": {
+      "short_31ms": 99.13286240837209,
+      "medium_125ms": 50.057460337269724,
+      "long_500ms": 32.05689539023312
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_028",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 28,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "af5d401ee1ae40a0fa9d98effc5b03560ef67c164230f78cdcbce1cc0e2d7f16",
+    "raw_maxima": {
+      "short_31ms": 70.64775581273605,
+      "medium_125ms": 41.104395204531606,
+      "long_500ms": 37.25177743016312
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_029",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 29,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "17ccd0f1642ada090662b3a08632ac356cf6a202d19477d7b5b5388994f82710",
+    "raw_maxima": {
+      "short_31ms": 68.0913166882248,
+      "medium_125ms": 35.50722172854453,
+      "long_500ms": 49.928525661139616
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_030",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 30,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ae62b0fa08753e65b1c3ab1b6e38dcc0cc347b9b2b4529500fb1e668e0226f74",
+    "raw_maxima": {
+      "short_31ms": 46.823169286809886,
+      "medium_125ms": 50.43268205414308,
+      "long_500ms": 29.292816629339278
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_031",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 31,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8230dd4e86bd2cfaa75204bf1cefef841370a328abeeca27c2a67d3326a745f2",
+    "raw_maxima": {
+      "short_31ms": 63.19039117642646,
+      "medium_125ms": 24.14537668704301,
+      "long_500ms": 37.5922263738975
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_032",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 32,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9385b4afff86b0ada474bc34a83eb6a11768d78bb4f91f68aecd1f8d4876b9c3",
+    "raw_maxima": {
+      "short_31ms": 86.59911276406956,
+      "medium_125ms": 44.08513696866311,
+      "long_500ms": 26.465716501397953
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_033",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 33,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "eb56bbd29117478cc5d7c9985e7e80e932cdb22cfc4d5c756336bff5e122d679",
+    "raw_maxima": {
+      "short_31ms": 58.798764948829096,
+      "medium_125ms": 25.031888849981478,
+      "long_500ms": 31.33654710670797
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_034",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 34,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a884b1249eb4d1d4b58559d1ab7f7bdbbb88ad6026b4db420ee656166dedac6c",
+    "raw_maxima": {
+      "short_31ms": 66.29205936951273,
+      "medium_125ms": 45.31549875981637,
+      "long_500ms": 45.18106272873536
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_035",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 35,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "353452df74f79815f80617f558186bd8958a5fa74fa437bf7d602951e5d92f98",
+    "raw_maxima": {
+      "short_31ms": 76.65974692078957,
+      "medium_125ms": 48.26688515848988,
+      "long_500ms": 39.721652432718365
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_036",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 36,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "396546a4ea511a08291c19c72c70904413884dff23a58ec1da4a924ce42c1a23",
+    "raw_maxima": {
+      "short_31ms": 53.151638321856154,
+      "medium_125ms": 39.80076560269474,
+      "long_500ms": 35.9000161897851
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_037",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 37,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7a0c19878e865a2bd8b8bb17b301944197cf3db02b0def411d4a4b9a9007167b",
+    "raw_maxima": {
+      "short_31ms": 42.36854700693071,
+      "medium_125ms": 24.52755948531319,
+      "long_500ms": 26.65407548973952
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_038",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 38,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5c31c116117aa9401ddc8cc14f80c73418f236fac380ddb7d8cbd840e4b0d27f",
+    "raw_maxima": {
+      "short_31ms": 54.98270193640072,
+      "medium_125ms": 23.220846303286635,
+      "long_500ms": 20.668149694534875
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_039",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 39,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "83a09018fa7f44feb5adf64132a275b655204e08799c344f7850e034c50bfdf2",
+    "raw_maxima": {
+      "short_31ms": 79.01564550233104,
+      "medium_125ms": 37.36077666111032,
+      "long_500ms": 27.10469167078076
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_040",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 40,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e5a23310c5960fc6919d4c2ed5fc17e669bec4dddd8df4f3955e38837bf02d1e",
+    "raw_maxima": {
+      "short_31ms": 54.833145421049124,
+      "medium_125ms": 33.347324740230114,
+      "long_500ms": 33.5047247252358
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_041",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 41,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "843f3e821ff6100b9199f475e6fdbfce11668b3f5cdba860a8804ac19032804d",
+    "raw_maxima": {
+      "short_31ms": 45.64824800609663,
+      "medium_125ms": 19.79281540935254,
+      "long_500ms": 21.683269975388704
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_042",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 42,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "bbb53ddffd72a44c2a1c76dc6ee3fa36e12bc80ff32e5dc98e0defba48e6ade7",
+    "raw_maxima": {
+      "short_31ms": 48.877532510891655,
+      "medium_125ms": 30.434931935494138,
+      "long_500ms": 50.755656301819855
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_043",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 43,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1ffe52904af7b419448541a5fa81dc7dfc707526ae2c606556539ecdfda52165",
+    "raw_maxima": {
+      "short_31ms": 47.41978219423622,
+      "medium_125ms": 33.06637454577145,
+      "long_500ms": 37.50786751339582
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_044",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 44,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "60bef6c9d8584a7c2a522a2eaac050d39f0cecc66237b6d5f0e7836ecfd75554",
+    "raw_maxima": {
+      "short_31ms": 53.63398015070871,
+      "medium_125ms": 26.77200676580447,
+      "long_500ms": 34.507389381915864
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_045",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 45,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0d1d24de163f55d57bbfccbcfed9fa4da56494894cb53e0d6b6c0e8137f858b6",
+    "raw_maxima": {
+      "short_31ms": 53.73049682525952,
+      "medium_125ms": 27.06388154185226,
+      "long_500ms": 27.340252803343724
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_046",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 46,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1393cc826a02ad21617fb47036d491aaf17412c0a7bd369e84409c5fd5537de3",
+    "raw_maxima": {
+      "short_31ms": 53.735015054666455,
+      "medium_125ms": 29.250397445891732,
+      "long_500ms": 44.45019336428889
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_047",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 47,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "be29678d38b555cb72bc03826c6b06b1c4ca7554ba7a23209816561799dd7d2e",
+    "raw_maxima": {
+      "short_31ms": 51.857388402175246,
+      "medium_125ms": 25.66397444862694,
+      "long_500ms": 23.612398026227808
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_048",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 48,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6528547ed5519f0258813da916a06beaa4872a4c4a40af2ba6a9994679c8606b",
+    "raw_maxima": {
+      "short_31ms": 64.1463015802108,
+      "medium_125ms": 30.63350337979055,
+      "long_500ms": 32.43837486733113
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_049",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 49,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6b2c4d75f1666778505dd780fb0a2299b04d1ab08dde04c0067ec408c25bdc39",
+    "raw_maxima": {
+      "short_31ms": 99.63845505867008,
+      "medium_125ms": 30.72060047846037,
+      "long_500ms": 43.57577684341408
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_050",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 50,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3c117f9ae972e8d8b011c0a131942aca84151aee0c719db11150fbe197019fd3",
+    "raw_maxima": {
+      "short_31ms": 62.56949999722204,
+      "medium_125ms": 17.305796785341624,
+      "long_500ms": 26.619744340811096
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_051",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 51,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0559f9c420fbcd5e511d722001ef8a57bce11125e3bdf26e9d93264734187de4",
+    "raw_maxima": {
+      "short_31ms": 95.51513234757232,
+      "medium_125ms": 35.099834226926774,
+      "long_500ms": 38.64830275343036
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_052",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 52,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5518c19b70942f94b352a5f0df4e83d33d4e54cac183876c04ccf7e817791ed1",
+    "raw_maxima": {
+      "short_31ms": 59.722220186498156,
+      "medium_125ms": 29.844847095779055,
+      "long_500ms": 33.38154488283385
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_053",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 53,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "edb0720c5c6a0310705c602de26c9bbdb1eb36edc186327aaf3951a108bdfd91",
+    "raw_maxima": {
+      "short_31ms": 73.12363043582631,
+      "medium_125ms": 54.89000375017063,
+      "long_500ms": 23.18769166602465
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_054",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 54,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8af430ceb9700329245e8d3a70e09fc1be96a9022385e7cec9a447a5ca8ab0b0",
+    "raw_maxima": {
+      "short_31ms": 58.013140801504825,
+      "medium_125ms": 25.138955173323776,
+      "long_500ms": 27.456891800189513
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_055",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 55,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "343d5c4440004269603f619c65a1133def2cdbcde7cb309124431b089f0f0c9f",
+    "raw_maxima": {
+      "short_31ms": 59.82130149756767,
+      "medium_125ms": 35.46220811919043,
+      "long_500ms": 28.254885414108806
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_056",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 56,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "df48aeb6cbfc1b7583675f99ab43458286971f52dda16fed585e1035dd6eb665",
+    "raw_maxima": {
+      "short_31ms": 78.42472384472524,
+      "medium_125ms": 36.570365423712396,
+      "long_500ms": 36.76401171209821
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_057",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 57,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "029cf59bd49e4ba06106bd9678b518778cbb1ae4825fa102ffb7afc527d328aa",
+    "raw_maxima": {
+      "short_31ms": 69.55725424571821,
+      "medium_125ms": 25.424818523785177,
+      "long_500ms": 36.49898864881164
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_058",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 58,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "49fdac04ed2621b622b4b58c046ec71d455083d0a10cade5d8d99b203bc89138",
+    "raw_maxima": {
+      "short_31ms": 63.68148348269255,
+      "medium_125ms": 31.90103139819442,
+      "long_500ms": 33.97293800574724
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_059",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 59,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e150f98f7ff568f75702fb428664a1c39b30083b491d5b729eecf558c5432407",
+    "raw_maxima": {
+      "short_31ms": 34.191300209320104,
+      "medium_125ms": 39.0185028225915,
+      "long_500ms": 24.09605800888982
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_060",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 60,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "cb3237e8eff8786d7b0ecf0a857ca88e085381ee4002968d4fb062f8284a9387",
+    "raw_maxima": {
+      "short_31ms": 46.07781027443449,
+      "medium_125ms": 18.235662745346534,
+      "long_500ms": 35.928873279954004
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_061",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 61,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "488eee9dca39ceb90d4692443cf667fc7e050e756a6d6c064cead69cd54bf6a3",
+    "raw_maxima": {
+      "short_31ms": 50.17232012026037,
+      "medium_125ms": 25.97801621376756,
+      "long_500ms": 32.578904393954815
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_062",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 62,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "14d820c5ac9f3fb1e2d8b8a1e0ce3a8f02ae762724685d1a5ea9bdd989a197dc",
+    "raw_maxima": {
+      "short_31ms": 89.42077968116698,
+      "medium_125ms": 28.135490201323595,
+      "long_500ms": 54.39753546756458
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_063",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 63,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9b02e37897e4f62b9a56c209a897e1d7e5bac6b812740794388e71be555db1cb",
+    "raw_maxima": {
+      "short_31ms": 46.91207020667649,
+      "medium_125ms": 26.09494185757354,
+      "long_500ms": 24.550014682530907
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_064",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 64,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1aab5a3b5a2c9503ce70c37125745ca2c19f8f5a5e3ffc143b0ce6db43aed48a",
+    "raw_maxima": {
+      "short_31ms": 41.050352059328404,
+      "medium_125ms": 36.13406770211994,
+      "long_500ms": 56.30542094827235
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_065",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 65,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "cd7fcdf9de98469b3c9521d348e2e42280a2fc9f85240cd866019eebe3253add",
+    "raw_maxima": {
+      "short_31ms": 76.54282487152564,
+      "medium_125ms": 27.31276479642436,
+      "long_500ms": 39.907831209742305
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_066",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 66,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5cd6e2dd7561c424cb38bc23ab741c9a66182bdfcc3ef8dbcd43688747cf7588",
+    "raw_maxima": {
+      "short_31ms": 67.73184882786408,
+      "medium_125ms": 25.05680928066208,
+      "long_500ms": 39.66803200640291
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_067",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 67,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b8e4607e5347611d61e6b7b27955123d6b6a3a16c7e624d8d3dd19800bbaac55",
+    "raw_maxima": {
+      "short_31ms": 97.93241467071007,
+      "medium_125ms": 36.40555522374838,
+      "long_500ms": 28.988014730776122
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_068",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 68,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "508bb570c3a7278078befa388308f7902e1d512e6e14300bd3c7bd85d8e7e7ce",
+    "raw_maxima": {
+      "short_31ms": 111.07760618063121,
+      "medium_125ms": 22.688901660926646,
+      "long_500ms": 26.08644767721249
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_069",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 69,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e0557ede112430cd8564bbbf963c781eba55839b66e83acbd9f37656c7706e65",
+    "raw_maxima": {
+      "short_31ms": 53.11873185699096,
+      "medium_125ms": 26.606138642635216,
+      "long_500ms": 17.269447969255836
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_070",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 70,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "71b64d21a8bd745a778b57d23c2e158ec651b04751cbf233a29278ea1952f766",
+    "raw_maxima": {
+      "short_31ms": 85.30302834003896,
+      "medium_125ms": 39.9060476479136,
+      "long_500ms": 35.068409885042215
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_071",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 71,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "401df33c09166a32ee1f8cc88d6a7293210496349c693bb49039f1304aa00ed2",
+    "raw_maxima": {
+      "short_31ms": 87.26913212352824,
+      "medium_125ms": 32.470545018126145,
+      "long_500ms": 24.423400976075836
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_072",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 72,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "639d9f0f33ac69c2403eca2bf8db5aa3e60a1d0b8c850e86c45ec4c0c84a1cb7",
+    "raw_maxima": {
+      "short_31ms": 51.97398117911808,
+      "medium_125ms": 22.74151490907535,
+      "long_500ms": 35.14787217025866
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_073",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 73,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "95a4d6866e809b9db58a83af85012983049aa7db51bac2e2e9b7c91e3c7dabf8",
+    "raw_maxima": {
+      "short_31ms": 58.94178137823899,
+      "medium_125ms": 26.321724719631142,
+      "long_500ms": 26.06953834083694
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_074",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 74,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3788bd6471326de380f6d823c9159555e6edba4890d809c38438108afa481aa1",
+    "raw_maxima": {
+      "short_31ms": 75.8304862201648,
+      "medium_125ms": 31.036127834523704,
+      "long_500ms": 33.329581435379254
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_075",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 75,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "99c5d253a5d6d3fc42d235d4b3ba86b2f31620159d3191b25d503b4576b3c5d3",
+    "raw_maxima": {
+      "short_31ms": 53.548545026480284,
+      "medium_125ms": 23.517440033547143,
+      "long_500ms": 38.80592146334786
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_076",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 76,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "101de238cc0121dfb9121ed43c105c01f08190bb9e990f4ef7d85de818f679fb",
+    "raw_maxima": {
+      "short_31ms": 86.06543250980052,
+      "medium_125ms": 24.682076631395766,
+      "long_500ms": 33.22725203633245
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_077",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 77,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9ec13f59a829da7cc442327381157fca2eca665bb8a352cea8fffbfa17f55944",
+    "raw_maxima": {
+      "short_31ms": 61.136683966386435,
+      "medium_125ms": 35.72823002258974,
+      "long_500ms": 28.890012921243425
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_078",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 78,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b0d9d2002c4237f9559ea78c69c770be6a29c8c55a3f8c3ea8ebf47aa5f9dd39",
+    "raw_maxima": {
+      "short_31ms": 66.81358479840017,
+      "medium_125ms": 47.2229844814229,
+      "long_500ms": 55.7621301913477
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_noise_079",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "noise",
+    "index": 79,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "918a0beebe275693e4347fcb644038ae6539f98a77b4580475864f73a55aa580",
+    "raw_maxima": {
+      "short_31ms": 67.37117674491428,
+      "medium_125ms": 42.53789170494811,
+      "long_500ms": 46.97715564091745
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_signal_000",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "signal",
+    "index": 0,
+    "family": "chirp",
+    "snr": 8.0,
+    "unit": 0,
+    "input_sha256": "c052b1890c947052399c2a6db578432633539474c163845791cab4203978151d",
+    "raw_maxima": {
+      "short_31ms": 76.34982979240837,
+      "medium_125ms": 66.5699245718993,
+      "long_500ms": 54.5226272633266
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_signal_001",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "signal",
+    "index": 1,
+    "family": "chirp",
+    "snr": 18.0,
+    "unit": 0,
+    "input_sha256": "982be693005506cb42ff4b9d1d98773d3a13e5f4e483d0fdbf24f896436034fb",
+    "raw_maxima": {
+      "short_31ms": 118.18433999434778,
+      "medium_125ms": 526.9397392135547,
+      "long_500ms": 250.7906331304002
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_signal_002",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "signal",
+    "index": 2,
+    "family": "chirp",
+    "snr": 8.0,
+    "unit": 1,
+    "input_sha256": "2f6cb685c1386bcb9e96bb2b8192364c9c89fc6f8f8f9d375fd560a9451231b6",
+    "raw_maxima": {
+      "short_31ms": 80.27315126193882,
+      "medium_125ms": 54.95714586090767,
+      "long_500ms": 43.90782519326843
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_signal_003",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "signal",
+    "index": 3,
+    "family": "chirp",
+    "snr": 18.0,
+    "unit": 1,
+    "input_sha256": "f08a758f54c945a8a9289ced3cdf42ab13257c34a6674c284dee5998a0aa7588",
+    "raw_maxima": {
+      "short_31ms": 88.50428567924632,
+      "medium_125ms": 1173.6247700163012,
+      "long_500ms": 1213.8808642524843
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_signal_004",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "signal",
+    "index": 4,
+    "family": "chirp",
+    "snr": 8.0,
+    "unit": 2,
+    "input_sha256": "73f1d6842227dc1bcf1cc593d158e4797db4390a98b34ae859b0ac51f598de95",
+    "raw_maxima": {
+      "short_31ms": 45.49481673997285,
+      "medium_125ms": 95.26662461609479,
+      "long_500ms": 46.00548694636942
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_signal_005",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "signal",
+    "index": 5,
+    "family": "chirp",
+    "snr": 18.0,
+    "unit": 2,
+    "input_sha256": "17aa99e66760ff72d08b97a48c6ac80b0c51faf8ce90b067a1065a691b578842",
+    "raw_maxima": {
+      "short_31ms": 108.87067474147072,
+      "medium_125ms": 870.0161493854364,
+      "long_500ms": 626.4802617576453
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_signal_006",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "signal",
+    "index": 6,
+    "family": "burst",
+    "snr": 8.0,
+    "unit": 0,
+    "input_sha256": "f2b19fd1f1f765f63212c69e69a82659e855a120e50fa087fff5c7f61c520f78",
+    "raw_maxima": {
+      "short_31ms": 57.47354041510358,
+      "medium_125ms": 43.3940673074137,
+      "long_500ms": 45.10973430801406
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_signal_007",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "signal",
+    "index": 7,
+    "family": "burst",
+    "snr": 18.0,
+    "unit": 0,
+    "input_sha256": "397f9eb7c24aff754390e9e928efaa3782e3df2271596885ccdd1d1691ef7bda",
+    "raw_maxima": {
+      "short_31ms": 163.07898900110166,
+      "medium_125ms": 242.70573658395014,
+      "long_500ms": 207.30107254939233
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_signal_008",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "signal",
+    "index": 8,
+    "family": "burst",
+    "snr": 8.0,
+    "unit": 1,
+    "input_sha256": "8cc3d0dcb35a73a7848c79fc0b2343e996c0a2c288404723f0e3424c872ce1a4",
+    "raw_maxima": {
+      "short_31ms": 68.22443796795541,
+      "medium_125ms": 24.29400691553115,
+      "long_500ms": 35.53888568917517
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_signal_009",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "signal",
+    "index": 9,
+    "family": "burst",
+    "snr": 18.0,
+    "unit": 1,
+    "input_sha256": "9aef076c6a772fffa711569fcd725498d261a305a67a840e4840d3f94382e17e",
+    "raw_maxima": {
+      "short_31ms": 82.55076205085832,
+      "medium_125ms": 187.63720627684043,
+      "long_500ms": 116.5673958298342
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_signal_010",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "signal",
+    "index": 10,
+    "family": "burst",
+    "snr": 8.0,
+    "unit": 2,
+    "input_sha256": "562be8439f26dc8521cb221e1570e49448ab8c747837264a01088dc07200da9b",
+    "raw_maxima": {
+      "short_31ms": 57.03917360234526,
+      "medium_125ms": 44.141229020002534,
+      "long_500ms": 34.02692722854285
+    }
+  },
+  {
+    "sample_id": "s17103_calibration_chirps_signal_011",
+    "seed": 17103,
+    "case": "calibration_chirps",
+    "part": "signal",
+    "index": 11,
+    "family": "burst",
+    "snr": 18.0,
+    "unit": 2,
+    "input_sha256": "890d6d5907524bdaf0b68856a74733dcb91be80cfdb2993f1cd47c00475fcdbf",
+    "raw_maxima": {
+      "short_31ms": 166.82446669284968,
+      "medium_125ms": 252.71077289219363,
+      "long_500ms": 137.4957738804734
+    }
+  }
+]

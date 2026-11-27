@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "checks": [
+    "constant_ties",
+    "strict_boundary_equal",
+    "nextafter_above",
+    "nextafter_below",
+    "empty",
+    "small",
+    "nan",
+    "infinity",
+    "matrix",
+    "tail_spike",
+    "fap005_attainable",
+    "union005_unattainable"
+  ],
+  "count": 12
+}

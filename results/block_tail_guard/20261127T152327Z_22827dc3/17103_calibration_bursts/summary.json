@@ -1,0 +1,50 @@
+{
+  "seed": 17103,
+  "case": "calibration_bursts",
+  "summaries": [
+    {
+      "alpha": 0.01,
+      "guard": {
+        "admitted": false,
+        "reason": "WHOLE_BLOCK_TAIL_QUARANTINE",
+        "median": 0.4028059560982222,
+        "spread": 1.6756751074082077,
+        "limit": 17.1595570301803,
+        "maximum": 24.728685929935843
+      },
+      "policy_available": false,
+      "core_noise_alarms": 0,
+      "policy_noise_alarms": 0,
+      "available_noise_windows": 0,
+      "available_noise_seconds": 0.0,
+      "conditional_noise_rate": null,
+      "core_signal_detected": 6,
+      "policy_signal_detected": 0,
+      "policy_signal_missed": 0,
+      "policy_signal_abstained": 12,
+      "lost_baseline_detections": 6
+    },
+    {
+      "alpha": 0.005,
+      "guard": {
+        "admitted": false,
+        "reason": "WHOLE_BLOCK_TAIL_QUARANTINE",
+        "median": 0.4028059560982222,
+        "spread": 1.6756751074082077,
+        "limit": 17.1595570301803,
+        "maximum": 24.728685929935843
+      },
+      "policy_available": false,
+      "core_noise_alarms": 0,
+      "policy_noise_alarms": 0,
+      "available_noise_windows": 0,
+      "available_noise_seconds": 0.0,
+      "conditional_noise_rate": null,
+      "core_signal_detected": 3,
+      "policy_signal_detected": 0,
+      "policy_signal_missed": 0,
+      "policy_signal_abstained": 12,
+      "lost_baseline_detections": 3
+    }
+  ]
+}

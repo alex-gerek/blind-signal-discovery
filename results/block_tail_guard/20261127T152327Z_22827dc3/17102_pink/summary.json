@@ -1,0 +1,50 @@
+{
+  "seed": 17102,
+  "case": "pink",
+  "summaries": [
+    {
+      "alpha": 0.01,
+      "guard": {
+        "admitted": true,
+        "reason": "ADMITTED",
+        "median": 0.40657167981814923,
+        "spread": 1.2508701492177896,
+        "limit": 12.915273171996045,
+        "maximum": 4.467686702573813
+      },
+      "policy_available": true,
+      "core_noise_alarms": 1,
+      "policy_noise_alarms": 1,
+      "available_noise_windows": 80,
+      "available_noise_seconds": 320.0,
+      "conditional_noise_rate": 0.0125,
+      "core_signal_detected": 8,
+      "policy_signal_detected": 8,
+      "policy_signal_missed": 4,
+      "policy_signal_abstained": 0,
+      "lost_baseline_detections": 0
+    },
+    {
+      "alpha": 0.005,
+      "guard": {
+        "admitted": true,
+        "reason": "ADMITTED",
+        "median": 0.40657167981814923,
+        "spread": 1.2508701492177896,
+        "limit": 12.915273171996045,
+        "maximum": 4.467686702573813
+      },
+      "policy_available": true,
+      "core_noise_alarms": 0,
+      "policy_noise_alarms": 0,
+      "available_noise_windows": 80,
+      "available_noise_seconds": 320.0,
+      "conditional_noise_rate": 0.0,
+      "core_signal_detected": 6,
+      "policy_signal_detected": 6,
+      "policy_signal_missed": 6,
+      "policy_signal_abstained": 0,
+      "lost_baseline_detections": 0
+    }
+  ]
+}

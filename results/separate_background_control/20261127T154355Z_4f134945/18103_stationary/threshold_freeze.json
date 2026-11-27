@@ -1,0 +1,13 @@
+{
+  "target_decisions_measured": 0,
+  "calibration_hashes": {
+    "calibration_stream_contaminated_0.01.json": "05a49f526d32e48b88487dbe42052a988c856c708805c4e951cada6e63dadb3f",
+    "calibration_stream_contaminated_0.005.json": "95775b9aeebc62c0c505ad473d04cdb7f0d01cbf2429e15085571724494bc8ce",
+    "calibration_paired_noise_oracle_0.01.json": "5ae29e9976e9d63eebd34a1c988d0803b80824e9b6f2346cd40e1b55fc28bbc0",
+    "calibration_paired_noise_oracle_0.005.json": "a242ddd7716c7c5c31c521552aa9775db516180810089e958c8c09b042fc3a5c",
+    "calibration_separate_matched_0.01.json": "b5e3e5ac6bacc304c6003b1597ed984ce7366c11e22e00d124bea633d7f9ad21",
+    "calibration_separate_matched_0.005.json": "330c62037ff443d3c8b0bf4a7c629e1b8439fb8573fef4c45b243bf5e7b87810",
+    "calibration_separate_old_0.01.json": "77f43d6d08d602d6819726eeaa90a2e642ab63bb599f3126ccc26eb52549720c",
+    "calibration_separate_old_0.005.json": "92a0651a9b4e5f9d7e9c3378331c339f0b392c8d6296092e6f10ea4a4d68984f"
+  }
+}

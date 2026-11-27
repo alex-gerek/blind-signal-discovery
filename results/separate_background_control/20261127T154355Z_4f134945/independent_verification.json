@@ -1,0 +1,1391 @@
+{
+  "status": "PASS",
+  "calibrations": 96,
+  "evaluation_records": 23040,
+  "candidate_records": 22090,
+  "input_records": 15600,
+  "groups": {
+    "stationary_stream_contaminated_fap0.01": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 0,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 17,
+          "associated": 17
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        }
+      }
+    },
+    "stationary_stream_contaminated_fap0.005": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 0,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 12,
+          "associated": 12
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        }
+      }
+    },
+    "stationary_paired_noise_oracle_fap0.01": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 6,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 14,
+          "associated": 14
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 30,
+          "associated": 30
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 29,
+          "associated": 29
+        }
+      }
+    },
+    "stationary_paired_noise_oracle_fap0.005": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 5,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 14,
+          "associated": 14
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 30,
+          "associated": 30
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 29,
+          "associated": 29
+        }
+      }
+    },
+    "stationary_separate_matched_fap0.01": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 4,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 13,
+          "associated": 13
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 30,
+          "associated": 30
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 27,
+          "associated": 27
+        }
+      }
+    },
+    "stationary_separate_matched_fap0.005": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 2,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 11,
+          "associated": 11
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 30,
+          "associated": 30
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 25,
+          "associated": 25
+        }
+      }
+    },
+    "stationary_separate_old_fap0.01": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 7,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 13,
+          "associated": 13
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 30,
+          "associated": 30
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 27,
+          "associated": 27
+        }
+      }
+    },
+    "stationary_separate_old_fap0.005": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 6,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 12,
+          "associated": 12
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 30,
+          "associated": 30
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 26,
+          "associated": 26
+        }
+      }
+    },
+    "level_step_stream_contaminated_fap0.01": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 0,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 23,
+          "associated": 23
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 1,
+          "associated": 1
+        }
+      }
+    },
+    "level_step_stream_contaminated_fap0.005": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 0,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 15,
+          "associated": 15
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        }
+      }
+    },
+    "level_step_paired_noise_oracle_fap0.01": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 4,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 10,
+          "associated": 10
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 30,
+          "associated": 30
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 2,
+          "associated": 2
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 27,
+          "associated": 27
+        }
+      }
+    },
+    "level_step_paired_noise_oracle_fap0.005": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 2,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 6,
+          "associated": 6
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 30,
+          "associated": 30
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 1,
+          "associated": 1
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 25,
+          "associated": 25
+        }
+      }
+    },
+    "level_step_separate_matched_fap0.01": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 4,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 12,
+          "associated": 11
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 30,
+          "associated": 30
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 4,
+          "associated": 3
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 29,
+          "associated": 29
+        }
+      }
+    },
+    "level_step_separate_matched_fap0.005": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 1,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 9,
+          "associated": 9
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 30,
+          "associated": 30
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 2,
+          "associated": 2
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 27,
+          "associated": 27
+        }
+      }
+    },
+    "level_step_separate_old_fap0.01": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 11,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 14,
+          "associated": 13
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 30,
+          "associated": 30
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 3,
+          "associated": 2
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 29,
+          "associated": 29
+        }
+      }
+    },
+    "level_step_separate_old_fap0.005": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 9,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 14,
+          "associated": 13
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 30,
+          "associated": 30
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 3,
+          "associated": 2
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 29,
+          "associated": 29
+        }
+      }
+    },
+    "spectral_line_stream_contaminated_fap0.01": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 3,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 2,
+          "associated": 2
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        }
+      }
+    },
+    "spectral_line_stream_contaminated_fap0.005": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 1,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        }
+      }
+    },
+    "spectral_line_paired_noise_oracle_fap0.01": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 3,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 2,
+          "associated": 2
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        }
+      }
+    },
+    "spectral_line_paired_noise_oracle_fap0.005": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 1,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        }
+      }
+    },
+    "spectral_line_separate_matched_fap0.01": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 11,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 4,
+          "associated": 4
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        }
+      }
+    },
+    "spectral_line_separate_matched_fap0.005": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 10,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 4,
+          "associated": 4
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        }
+      }
+    },
+    "spectral_line_separate_old_fap0.01": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 600,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 30,
+          "associated": 30
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 30,
+          "associated": 30
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 30,
+          "associated": 30
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 30,
+          "associated": 30
+        }
+      }
+    },
+    "spectral_line_separate_old_fap0.005": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 600,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 30,
+          "associated": 30
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 30,
+          "associated": 30
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 30,
+          "associated": 30
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 30,
+          "associated": 30
+        }
+      }
+    },
+    "impulsive_noise_stream_contaminated_fap0.01": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 1,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 23,
+          "associated": 23
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 1,
+          "associated": 1
+        }
+      }
+    },
+    "impulsive_noise_stream_contaminated_fap0.005": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 0,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 9,
+          "associated": 9
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        }
+      }
+    },
+    "impulsive_noise_paired_noise_oracle_fap0.01": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 5,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 1,
+          "associated": 0
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 27,
+          "associated": 27
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 3,
+          "associated": 2
+        }
+      }
+    },
+    "impulsive_noise_paired_noise_oracle_fap0.005": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 1,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 1,
+          "associated": 0
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 26,
+          "associated": 26
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 3,
+          "associated": 2
+        }
+      }
+    },
+    "impulsive_noise_separate_matched_fap0.01": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 4,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 1,
+          "associated": 0
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 24,
+          "associated": 24
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 1,
+          "associated": 1
+        }
+      }
+    },
+    "impulsive_noise_separate_matched_fap0.005": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 2,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 1,
+          "associated": 0
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 23,
+          "associated": 23
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 0,
+          "associated": 0
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 1,
+          "associated": 1
+        }
+      }
+    },
+    "impulsive_noise_separate_old_fap0.01": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 19,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 6,
+          "associated": 4
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 30,
+          "associated": 30
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 2,
+          "associated": 0
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 29,
+          "associated": 29
+        }
+      }
+    },
+    "impulsive_noise_separate_old_fap0.005": {
+      "calibration_seeds": 3,
+      "noise_windows": 600,
+      "noise_alarms": 15,
+      "available_noise_seconds": 2400.0,
+      "signals": {
+        "chirp_snr8.0": {
+          "total": 30,
+          "detected": 5,
+          "associated": 3
+        },
+        "chirp_snr18.0": {
+          "total": 30,
+          "detected": 30,
+          "associated": 30
+        },
+        "burst_snr8.0": {
+          "total": 30,
+          "detected": 2,
+          "associated": 0
+        },
+        "burst_snr18.0": {
+          "total": 30,
+          "detected": 27,
+          "associated": 27
+        }
+      }
+    }
+  },
+  "paired_association": {
+    "stationary_paired_noise_oracle_fap0.01_chirp_snr8.0": {
+      "gained": 14,
+      "lost": 0,
+      "pairs": 30
+    },
+    "stationary_paired_noise_oracle_fap0.01_chirp_snr18.0": {
+      "gained": 13,
+      "lost": 0,
+      "pairs": 30
+    },
+    "stationary_paired_noise_oracle_fap0.01_burst_snr8.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "stationary_paired_noise_oracle_fap0.01_burst_snr18.0": {
+      "gained": 29,
+      "lost": 0,
+      "pairs": 30
+    },
+    "stationary_separate_matched_fap0.01_chirp_snr8.0": {
+      "gained": 13,
+      "lost": 0,
+      "pairs": 30
+    },
+    "stationary_separate_matched_fap0.01_chirp_snr18.0": {
+      "gained": 13,
+      "lost": 0,
+      "pairs": 30
+    },
+    "stationary_separate_matched_fap0.01_burst_snr8.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "stationary_separate_matched_fap0.01_burst_snr18.0": {
+      "gained": 27,
+      "lost": 0,
+      "pairs": 30
+    },
+    "stationary_separate_old_fap0.01_chirp_snr8.0": {
+      "gained": 13,
+      "lost": 0,
+      "pairs": 30
+    },
+    "stationary_separate_old_fap0.01_chirp_snr18.0": {
+      "gained": 13,
+      "lost": 0,
+      "pairs": 30
+    },
+    "stationary_separate_old_fap0.01_burst_snr8.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "stationary_separate_old_fap0.01_burst_snr18.0": {
+      "gained": 27,
+      "lost": 0,
+      "pairs": 30
+    },
+    "stationary_paired_noise_oracle_fap0.005_chirp_snr8.0": {
+      "gained": 14,
+      "lost": 0,
+      "pairs": 30
+    },
+    "stationary_paired_noise_oracle_fap0.005_chirp_snr18.0": {
+      "gained": 18,
+      "lost": 0,
+      "pairs": 30
+    },
+    "stationary_paired_noise_oracle_fap0.005_burst_snr8.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "stationary_paired_noise_oracle_fap0.005_burst_snr18.0": {
+      "gained": 29,
+      "lost": 0,
+      "pairs": 30
+    },
+    "stationary_separate_matched_fap0.005_chirp_snr8.0": {
+      "gained": 11,
+      "lost": 0,
+      "pairs": 30
+    },
+    "stationary_separate_matched_fap0.005_chirp_snr18.0": {
+      "gained": 18,
+      "lost": 0,
+      "pairs": 30
+    },
+    "stationary_separate_matched_fap0.005_burst_snr8.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "stationary_separate_matched_fap0.005_burst_snr18.0": {
+      "gained": 25,
+      "lost": 0,
+      "pairs": 30
+    },
+    "stationary_separate_old_fap0.005_chirp_snr8.0": {
+      "gained": 12,
+      "lost": 0,
+      "pairs": 30
+    },
+    "stationary_separate_old_fap0.005_chirp_snr18.0": {
+      "gained": 18,
+      "lost": 0,
+      "pairs": 30
+    },
+    "stationary_separate_old_fap0.005_burst_snr8.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "stationary_separate_old_fap0.005_burst_snr18.0": {
+      "gained": 26,
+      "lost": 0,
+      "pairs": 30
+    },
+    "level_step_paired_noise_oracle_fap0.01_chirp_snr8.0": {
+      "gained": 10,
+      "lost": 0,
+      "pairs": 30
+    },
+    "level_step_paired_noise_oracle_fap0.01_chirp_snr18.0": {
+      "gained": 7,
+      "lost": 0,
+      "pairs": 30
+    },
+    "level_step_paired_noise_oracle_fap0.01_burst_snr8.0": {
+      "gained": 2,
+      "lost": 0,
+      "pairs": 30
+    },
+    "level_step_paired_noise_oracle_fap0.01_burst_snr18.0": {
+      "gained": 26,
+      "lost": 0,
+      "pairs": 30
+    },
+    "level_step_separate_matched_fap0.01_chirp_snr8.0": {
+      "gained": 11,
+      "lost": 0,
+      "pairs": 30
+    },
+    "level_step_separate_matched_fap0.01_chirp_snr18.0": {
+      "gained": 7,
+      "lost": 0,
+      "pairs": 30
+    },
+    "level_step_separate_matched_fap0.01_burst_snr8.0": {
+      "gained": 3,
+      "lost": 0,
+      "pairs": 30
+    },
+    "level_step_separate_matched_fap0.01_burst_snr18.0": {
+      "gained": 28,
+      "lost": 0,
+      "pairs": 30
+    },
+    "level_step_separate_old_fap0.01_chirp_snr8.0": {
+      "gained": 13,
+      "lost": 0,
+      "pairs": 30
+    },
+    "level_step_separate_old_fap0.01_chirp_snr18.0": {
+      "gained": 7,
+      "lost": 0,
+      "pairs": 30
+    },
+    "level_step_separate_old_fap0.01_burst_snr8.0": {
+      "gained": 2,
+      "lost": 0,
+      "pairs": 30
+    },
+    "level_step_separate_old_fap0.01_burst_snr18.0": {
+      "gained": 28,
+      "lost": 0,
+      "pairs": 30
+    },
+    "level_step_paired_noise_oracle_fap0.005_chirp_snr8.0": {
+      "gained": 6,
+      "lost": 0,
+      "pairs": 30
+    },
+    "level_step_paired_noise_oracle_fap0.005_chirp_snr18.0": {
+      "gained": 15,
+      "lost": 0,
+      "pairs": 30
+    },
+    "level_step_paired_noise_oracle_fap0.005_burst_snr8.0": {
+      "gained": 1,
+      "lost": 0,
+      "pairs": 30
+    },
+    "level_step_paired_noise_oracle_fap0.005_burst_snr18.0": {
+      "gained": 25,
+      "lost": 0,
+      "pairs": 30
+    },
+    "level_step_separate_matched_fap0.005_chirp_snr8.0": {
+      "gained": 9,
+      "lost": 0,
+      "pairs": 30
+    },
+    "level_step_separate_matched_fap0.005_chirp_snr18.0": {
+      "gained": 15,
+      "lost": 0,
+      "pairs": 30
+    },
+    "level_step_separate_matched_fap0.005_burst_snr8.0": {
+      "gained": 2,
+      "lost": 0,
+      "pairs": 30
+    },
+    "level_step_separate_matched_fap0.005_burst_snr18.0": {
+      "gained": 27,
+      "lost": 0,
+      "pairs": 30
+    },
+    "level_step_separate_old_fap0.005_chirp_snr8.0": {
+      "gained": 13,
+      "lost": 0,
+      "pairs": 30
+    },
+    "level_step_separate_old_fap0.005_chirp_snr18.0": {
+      "gained": 15,
+      "lost": 0,
+      "pairs": 30
+    },
+    "level_step_separate_old_fap0.005_burst_snr8.0": {
+      "gained": 2,
+      "lost": 0,
+      "pairs": 30
+    },
+    "level_step_separate_old_fap0.005_burst_snr18.0": {
+      "gained": 29,
+      "lost": 0,
+      "pairs": 30
+    },
+    "spectral_line_paired_noise_oracle_fap0.01_chirp_snr8.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "spectral_line_paired_noise_oracle_fap0.01_chirp_snr18.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "spectral_line_paired_noise_oracle_fap0.01_burst_snr8.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "spectral_line_paired_noise_oracle_fap0.01_burst_snr18.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "spectral_line_separate_matched_fap0.01_chirp_snr8.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "spectral_line_separate_matched_fap0.01_chirp_snr18.0": {
+      "gained": 3,
+      "lost": 1,
+      "pairs": 30
+    },
+    "spectral_line_separate_matched_fap0.01_burst_snr8.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "spectral_line_separate_matched_fap0.01_burst_snr18.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "spectral_line_separate_old_fap0.01_chirp_snr8.0": {
+      "gained": 30,
+      "lost": 0,
+      "pairs": 30
+    },
+    "spectral_line_separate_old_fap0.01_chirp_snr18.0": {
+      "gained": 28,
+      "lost": 0,
+      "pairs": 30
+    },
+    "spectral_line_separate_old_fap0.01_burst_snr8.0": {
+      "gained": 30,
+      "lost": 0,
+      "pairs": 30
+    },
+    "spectral_line_separate_old_fap0.01_burst_snr18.0": {
+      "gained": 30,
+      "lost": 0,
+      "pairs": 30
+    },
+    "spectral_line_paired_noise_oracle_fap0.005_chirp_snr8.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "spectral_line_paired_noise_oracle_fap0.005_chirp_snr18.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "spectral_line_paired_noise_oracle_fap0.005_burst_snr8.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "spectral_line_paired_noise_oracle_fap0.005_burst_snr18.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "spectral_line_separate_matched_fap0.005_chirp_snr8.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "spectral_line_separate_matched_fap0.005_chirp_snr18.0": {
+      "gained": 4,
+      "lost": 0,
+      "pairs": 30
+    },
+    "spectral_line_separate_matched_fap0.005_burst_snr8.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "spectral_line_separate_matched_fap0.005_burst_snr18.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "spectral_line_separate_old_fap0.005_chirp_snr8.0": {
+      "gained": 30,
+      "lost": 0,
+      "pairs": 30
+    },
+    "spectral_line_separate_old_fap0.005_chirp_snr18.0": {
+      "gained": 30,
+      "lost": 0,
+      "pairs": 30
+    },
+    "spectral_line_separate_old_fap0.005_burst_snr8.0": {
+      "gained": 30,
+      "lost": 0,
+      "pairs": 30
+    },
+    "spectral_line_separate_old_fap0.005_burst_snr18.0": {
+      "gained": 30,
+      "lost": 0,
+      "pairs": 30
+    },
+    "impulsive_noise_paired_noise_oracle_fap0.01_chirp_snr8.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "impulsive_noise_paired_noise_oracle_fap0.01_chirp_snr18.0": {
+      "gained": 4,
+      "lost": 0,
+      "pairs": 30
+    },
+    "impulsive_noise_paired_noise_oracle_fap0.01_burst_snr8.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "impulsive_noise_paired_noise_oracle_fap0.01_burst_snr18.0": {
+      "gained": 1,
+      "lost": 0,
+      "pairs": 30
+    },
+    "impulsive_noise_separate_matched_fap0.01_chirp_snr8.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "impulsive_noise_separate_matched_fap0.01_chirp_snr18.0": {
+      "gained": 1,
+      "lost": 0,
+      "pairs": 30
+    },
+    "impulsive_noise_separate_matched_fap0.01_burst_snr8.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "impulsive_noise_separate_matched_fap0.01_burst_snr18.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "impulsive_noise_separate_old_fap0.01_chirp_snr8.0": {
+      "gained": 4,
+      "lost": 0,
+      "pairs": 30
+    },
+    "impulsive_noise_separate_old_fap0.01_chirp_snr18.0": {
+      "gained": 7,
+      "lost": 0,
+      "pairs": 30
+    },
+    "impulsive_noise_separate_old_fap0.01_burst_snr8.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "impulsive_noise_separate_old_fap0.01_burst_snr18.0": {
+      "gained": 28,
+      "lost": 0,
+      "pairs": 30
+    },
+    "impulsive_noise_paired_noise_oracle_fap0.005_chirp_snr8.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "impulsive_noise_paired_noise_oracle_fap0.005_chirp_snr18.0": {
+      "gained": 17,
+      "lost": 0,
+      "pairs": 30
+    },
+    "impulsive_noise_paired_noise_oracle_fap0.005_burst_snr8.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "impulsive_noise_paired_noise_oracle_fap0.005_burst_snr18.0": {
+      "gained": 2,
+      "lost": 0,
+      "pairs": 30
+    },
+    "impulsive_noise_separate_matched_fap0.005_chirp_snr8.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "impulsive_noise_separate_matched_fap0.005_chirp_snr18.0": {
+      "gained": 14,
+      "lost": 0,
+      "pairs": 30
+    },
+    "impulsive_noise_separate_matched_fap0.005_burst_snr8.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "impulsive_noise_separate_matched_fap0.005_burst_snr18.0": {
+      "gained": 1,
+      "lost": 0,
+      "pairs": 30
+    },
+    "impulsive_noise_separate_old_fap0.005_chirp_snr8.0": {
+      "gained": 3,
+      "lost": 0,
+      "pairs": 30
+    },
+    "impulsive_noise_separate_old_fap0.005_chirp_snr18.0": {
+      "gained": 21,
+      "lost": 0,
+      "pairs": 30
+    },
+    "impulsive_noise_separate_old_fap0.005_burst_snr8.0": {
+      "gained": 0,
+      "lost": 0,
+      "pairs": 30
+    },
+    "impulsive_noise_separate_old_fap0.005_burst_snr18.0": {
+      "gained": 27,
+      "lost": 0,
+      "pairs": 30
+    }
+  },
+  "scope": "Descriptive synthetic fixed-source control, three calibration seeds per profile",
+  "regenerated_inputs": 15600,
+  "source_hashes_unchanged": true,
+  "uncached_parity_checks": 180
+}

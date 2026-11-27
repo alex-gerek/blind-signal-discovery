@@ -1,0 +1,50 @@
+{
+  "seed": 17102,
+  "case": "impulsive_noise",
+  "summaries": [
+    {
+      "alpha": 0.01,
+      "guard": {
+        "admitted": false,
+        "reason": "WHOLE_BLOCK_TAIL_QUARANTINE",
+        "median": 0.38661817041638047,
+        "spread": 1.3162795052101917,
+        "limit": 13.549413222518297,
+        "maximum": 28.22773715514336
+      },
+      "policy_available": false,
+      "core_noise_alarms": 1,
+      "policy_noise_alarms": 0,
+      "available_noise_windows": 0,
+      "available_noise_seconds": 0.0,
+      "conditional_noise_rate": null,
+      "core_signal_detected": 3,
+      "policy_signal_detected": 0,
+      "policy_signal_missed": 0,
+      "policy_signal_abstained": 12,
+      "lost_baseline_detections": 3
+    },
+    {
+      "alpha": 0.005,
+      "guard": {
+        "admitted": false,
+        "reason": "WHOLE_BLOCK_TAIL_QUARANTINE",
+        "median": 0.38661817041638047,
+        "spread": 1.3162795052101917,
+        "limit": 13.549413222518297,
+        "maximum": 28.22773715514336
+      },
+      "policy_available": false,
+      "core_noise_alarms": 0,
+      "policy_noise_alarms": 0,
+      "available_noise_windows": 0,
+      "available_noise_seconds": 0.0,
+      "conditional_noise_rate": null,
+      "core_signal_detected": 3,
+      "policy_signal_detected": 0,
+      "policy_signal_missed": 0,
+      "policy_signal_abstained": 12,
+      "lost_baseline_detections": 3
+    }
+  ]
+}

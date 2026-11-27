@@ -1,0 +1,86 @@
+{
+  "scope": "Unchanged synthetic historical reproduction, not independent efficacy validation",
+  "interval_fixture_checks": 7,
+  "arms": {
+    "baseline": {
+      "switches": [
+        {
+          "index": 0,
+          "calibration_id": "cal_000",
+          "threshold": 2.8957490413140143
+        },
+        {
+          "index": 162,
+          "calibration_id": "cal_002",
+          "threshold": null
+        },
+        {
+          "index": 234,
+          "calibration_id": "cal_004",
+          "threshold": 3.1360766413763086
+        },
+        {
+          "index": 367,
+          "calibration_id": "cal_006",
+          "threshold": 163.83940094146237
+        }
+      ],
+      "available_noise_windows": 415,
+      "unavailable_noise_windows": 72,
+      "available_noise_seconds": 1660.0,
+      "unavailable_noise_seconds": 288.0,
+      "available_noise_alarms": 7,
+      "later_available": 6,
+      "later_detected": 0,
+      "raw_candidates_during_unavailability": 0,
+      "mature_clean_noise_windows": 127,
+      "mature_clean_noise_stft": 0,
+      "mature_clean_noise_broadband": 127,
+      "mature_clean_noise_union": 127
+    },
+    "without_earlier_four_injections": {
+      "switches": [
+        {
+          "index": 0,
+          "calibration_id": "cal_000",
+          "threshold": 2.8957490413140143
+        },
+        {
+          "index": 162,
+          "calibration_id": "cal_002",
+          "threshold": null
+        },
+        {
+          "index": 234,
+          "calibration_id": "cal_004",
+          "threshold": 3.1360766413763086
+        },
+        {
+          "index": 367,
+          "calibration_id": "cal_006",
+          "threshold": 1.6580395349128854
+        }
+      ],
+      "available_noise_windows": 419,
+      "unavailable_noise_windows": 72,
+      "available_noise_seconds": 1676.0,
+      "unavailable_noise_seconds": 288.0,
+      "available_noise_alarms": 7,
+      "later_available": 6,
+      "later_detected": 5,
+      "raw_candidates_during_unavailability": 0,
+      "mature_clean_noise_windows": 127,
+      "mature_clean_noise_stft": 0,
+      "mature_clean_noise_broadband": 127,
+      "mature_clean_noise_union": 127
+    }
+  },
+  "checks": {
+    "windows": 1000,
+    "calibrations": 16,
+    "members": 3108,
+    "p_values": 856
+  },
+  "source_hashes_unchanged": true,
+  "status": "PASS"
+}

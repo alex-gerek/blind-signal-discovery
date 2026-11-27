@@ -1,0 +1,351 @@
+{
+  "seed": 18102,
+  "case": "spectral_line",
+  "summaries": [
+    {
+      "arm": "stream_contaminated",
+      "alpha": 0.01,
+      "threshold": 3.1649873627807223,
+      "noise_total": 200,
+      "available_noise_windows": 200,
+      "available_noise_seconds": 800.0,
+      "noise_alarms": 0,
+      "groups": [
+        {
+          "family": "chirp",
+          "snr": 8.0,
+          "total": 10,
+          "detected": 0,
+          "associated": 0,
+          "abstained": 0
+        },
+        {
+          "family": "chirp",
+          "snr": 18.0,
+          "total": 10,
+          "detected": 1,
+          "associated": 1,
+          "abstained": 0
+        },
+        {
+          "family": "burst",
+          "snr": 8.0,
+          "total": 10,
+          "detected": 0,
+          "associated": 0,
+          "abstained": 0
+        },
+        {
+          "family": "burst",
+          "snr": 18.0,
+          "total": 10,
+          "detected": 0,
+          "associated": 0,
+          "abstained": 0
+        }
+      ]
+    },
+    {
+      "arm": "stream_contaminated",
+      "alpha": 0.005,
+      "threshold": 3.36279630692339,
+      "noise_total": 200,
+      "available_noise_windows": 200,
+      "available_noise_seconds": 800.0,
+      "noise_alarms": 0,
+      "groups": [
+        {
+          "family": "chirp",
+          "snr": 8.0,
+          "total": 10,
+          "detected": 0,
+          "associated": 0,
+          "abstained": 0
+        },
+        {
+          "family": "chirp",
+          "snr": 18.0,
+          "total": 10,
+          "detected": 0,
+          "associated": 0,
+          "abstained": 0
+        },
+        {
+          "family": "burst",
+          "snr": 8.0,
+          "total": 10,
+          "detected": 0,
+          "associated": 0,
+          "abstained": 0
+        },
+        {
+          "family": "burst",
+          "snr": 18.0,
+          "total": 10,
+          "detected": 0,
+          "associated": 0,
+          "abstained": 0
+        }
+      ]
+    },
+    {
+      "arm": "paired_noise_oracle",
+      "alpha": 0.01,
+      "threshold": 3.1649873627807223,
+      "noise_total": 200,
+      "available_noise_windows": 200,
+      "available_noise_seconds": 800.0,
+      "noise_alarms": 0,
+      "groups": [
+        {
+          "family": "chirp",
+          "snr": 8.0,
+          "total": 10,
+          "detected": 0,
+          "associated": 0,
+          "abstained": 0
+        },
+        {
+          "family": "chirp",
+          "snr": 18.0,
+          "total": 10,
+          "detected": 1,
+          "associated": 1,
+          "abstained": 0
+        },
+        {
+          "family": "burst",
+          "snr": 8.0,
+          "total": 10,
+          "detected": 0,
+          "associated": 0,
+          "abstained": 0
+        },
+        {
+          "family": "burst",
+          "snr": 18.0,
+          "total": 10,
+          "detected": 0,
+          "associated": 0,
+          "abstained": 0
+        }
+      ]
+    },
+    {
+      "arm": "paired_noise_oracle",
+      "alpha": 0.005,
+      "threshold": 3.36279630692339,
+      "noise_total": 200,
+      "available_noise_windows": 200,
+      "available_noise_seconds": 800.0,
+      "noise_alarms": 0,
+      "groups": [
+        {
+          "family": "chirp",
+          "snr": 8.0,
+          "total": 10,
+          "detected": 0,
+          "associated": 0,
+          "abstained": 0
+        },
+        {
+          "family": "chirp",
+          "snr": 18.0,
+          "total": 10,
+          "detected": 0,
+          "associated": 0,
+          "abstained": 0
+        },
+        {
+          "family": "burst",
+          "snr": 8.0,
+          "total": 10,
+          "detected": 0,
+          "associated": 0,
+          "abstained": 0
+        },
+        {
+          "family": "burst",
+          "snr": 18.0,
+          "total": 10,
+          "detected": 0,
+          "associated": 0,
+          "abstained": 0
+        }
+      ]
+    },
+    {
+      "arm": "separate_matched",
+      "alpha": 0.01,
+      "threshold": 1.5850829738300964,
+      "noise_total": 200,
+      "available_noise_windows": 200,
+      "available_noise_seconds": 800.0,
+      "noise_alarms": 1,
+      "groups": [
+        {
+          "family": "chirp",
+          "snr": 8.0,
+          "total": 10,
+          "detected": 0,
+          "associated": 0,
+          "abstained": 0
+        },
+        {
+          "family": "chirp",
+          "snr": 18.0,
+          "total": 10,
+          "detected": 1,
+          "associated": 1,
+          "abstained": 0
+        },
+        {
+          "family": "burst",
+          "snr": 8.0,
+          "total": 10,
+          "detected": 0,
+          "associated": 0,
+          "abstained": 0
+        },
+        {
+          "family": "burst",
+          "snr": 18.0,
+          "total": 10,
+          "detected": 0,
+          "associated": 0,
+          "abstained": 0
+        }
+      ]
+    },
+    {
+      "arm": "separate_matched",
+      "alpha": 0.005,
+      "threshold": 1.5880195766024663,
+      "noise_total": 200,
+      "available_noise_windows": 200,
+      "available_noise_seconds": 800.0,
+      "noise_alarms": 1,
+      "groups": [
+        {
+          "family": "chirp",
+          "snr": 8.0,
+          "total": 10,
+          "detected": 0,
+          "associated": 0,
+          "abstained": 0
+        },
+        {
+          "family": "chirp",
+          "snr": 18.0,
+          "total": 10,
+          "detected": 1,
+          "associated": 1,
+          "abstained": 0
+        },
+        {
+          "family": "burst",
+          "snr": 8.0,
+          "total": 10,
+          "detected": 0,
+          "associated": 0,
+          "abstained": 0
+        },
+        {
+          "family": "burst",
+          "snr": 18.0,
+          "total": 10,
+          "detected": 0,
+          "associated": 0,
+          "abstained": 0
+        }
+      ]
+    },
+    {
+      "arm": "separate_old",
+      "alpha": 0.01,
+      "threshold": 2.393186566247382,
+      "noise_total": 200,
+      "available_noise_windows": 200,
+      "available_noise_seconds": 800.0,
+      "noise_alarms": 200,
+      "groups": [
+        {
+          "family": "chirp",
+          "snr": 8.0,
+          "total": 10,
+          "detected": 10,
+          "associated": 10,
+          "abstained": 0
+        },
+        {
+          "family": "chirp",
+          "snr": 18.0,
+          "total": 10,
+          "detected": 10,
+          "associated": 10,
+          "abstained": 0
+        },
+        {
+          "family": "burst",
+          "snr": 8.0,
+          "total": 10,
+          "detected": 10,
+          "associated": 10,
+          "abstained": 0
+        },
+        {
+          "family": "burst",
+          "snr": 18.0,
+          "total": 10,
+          "detected": 10,
+          "associated": 10,
+          "abstained": 0
+        }
+      ]
+    },
+    {
+      "arm": "separate_old",
+      "alpha": 0.005,
+      "threshold": 5.01163902920634,
+      "noise_total": 200,
+      "available_noise_windows": 200,
+      "available_noise_seconds": 800.0,
+      "noise_alarms": 200,
+      "groups": [
+        {
+          "family": "chirp",
+          "snr": 8.0,
+          "total": 10,
+          "detected": 10,
+          "associated": 10,
+          "abstained": 0
+        },
+        {
+          "family": "chirp",
+          "snr": 18.0,
+          "total": 10,
+          "detected": 10,
+          "associated": 10,
+          "abstained": 0
+        },
+        {
+          "family": "burst",
+          "snr": 8.0,
+          "total": 10,
+          "detected": 10,
+          "associated": 10,
+          "abstained": 0
+        },
+        {
+          "family": "burst",
+          "snr": 18.0,
+          "total": 10,
+          "detected": 10,
+          "associated": 10,
+          "abstained": 0
+        }
+      ]
+    }
+  ],
+  "threshold_hashes_unchanged": true
+}

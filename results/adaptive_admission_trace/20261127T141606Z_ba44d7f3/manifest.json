@@ -1,0 +1,186 @@
+{
+  "run_id": "20261127T141606Z_ba44d7f3",
+  "source_commit": "d049e2b1c97626b562d234a22bc12db5d51702dd",
+  "dirty_paths": "M docs/RESEARCH_HISTORY.md\n M tests/run_browser_wav_resampler.js\n M tests/test_browser_input_validation.js\n M tests/test_input_validation.py\n?? docs/adaptive_admission_trace_protocol_2026-11-27.md\n?? docs/articles/\n?? experiments/run_adaptive_admission_trace.py\n?? results/adaptive_admission_trace/\n?? tests/helpers/\n?? tests/test_workstation_script_source.js",
+  "python_version": "3.14.3",
+  "numpy_version": "2.5.5",
+  "scipy_version": "1.18.1",
+  "parent_run": "20261126T163629Z_75c7a756",
+  "status": "COMPLETE",
+  "source_sha256": {
+    "src/bsd/__init__.py": "9cc9beef45a4ee5c7662cf3c739188497d169c85721573d17838864b43d2faf0",
+    "src/bsd/adaptive_regime.py": "c5a64068b4216a04ed30da73c71e9fc396bdf8eb8a2ef89864de6a45bda5d1e8",
+    "src/bsd/adaptive_regime_v2b.py": "02bcd0f4da373e23ed4d2b2fe89b0878476d9234e4e583e172ae208aaa9c2702",
+    "src/bsd/calibration.py": "79dab28d60323192bb73f28f60e74d367c3bb17e4e75fb31acf5ef98df7706e7",
+    "src/bsd/coincidence.py": "9d0469d45d6adc26624037e1be0b4c9331dea390bc94133ddcff0f947492fd74",
+    "src/bsd/cross_coherence.py": "a306d298ea421ca26ac1111ffd313de3acc23e98263e20227d5e5d4037cfbaf1",
+    "src/bsd/detector.py": "56343accdc7e5b2b3a0a47a45e974065a9eb42d57df929138a29e09f2e94bed9",
+    "src/bsd/detector_v2.py": "a622ef294b225f1da22c55c5279dc9ccb32f27fa40ad4c9129855b1fa302274e",
+    "src/bsd/evaluation.py": "d0ae9285c2c1f80d0225f37ea6e5624506b8d270af980e5a1607c1b9f2ac62bb",
+    "src/bsd/generator.py": "70d0dbe8c31e3d4568d46909dbf795ae90f678643ac69f219fe2a431f08c4cc8",
+    "src/bsd/io_loader.py": "93f9134a0228d2856db17286264db22766393535193e6e5a01c9d4265b0727a4",
+    "src/bsd/ligo_adapter.py": "04763049dff217b3424b9095af4f391c440c96b8d29dde74b1e4a080436373be",
+    "src/bsd/noise.py": "e456400f2aae3fa6cb28716ba59b53e0f8be784a0dfbcbc107b3d87e0ee591e2",
+    "src/bsd/regime_monitor.py": "cee14eee23c457b19539a78b561ed47493a31d05111762f9cca7cbbfa28eea30",
+    "src/bsd/reporting.py": "c748efe7eadb40e43d0001e49b4162230d83bc55cd693f7ac1bf13190740b6ec",
+    "src/bsd/upload_storage.py": "5d0fa69f9bbfdd6f6f31e16a2916667e0b0d7087a0132032591894975ffd53c9",
+    "src/bsd/vetoes.py": "3ad14fba9f63eb0f34d804506b3cb98aa702c51e96ce8919341e768c97add219",
+    "src/bsd/visualization.py": "130e3447c74f547cb599ece46b133a33eaff32ee0a221b814e693c1b25701f27",
+    "src/bsd/workstation_runner.py": "50466d09d0e71b8592d0d980da593339eba56edf49af33ee901f541d6d9c1ca5",
+    "experiments/run_v03_phase2b_corrected_benchmark.py": "9d77d0282faaf60041db0c37692377d75432ce57b82cdf088a9054f54fcbb88c",
+    "pyproject.toml": "cf54a989ae996ffa8bcbb42a78e6752a70a87aa0532fb37f1e8f148601309501"
+  },
+  "parent_manifest_sha256": "4731625cd8bebd3b04973af3c8ddb853f610c56c5679d48d4dfebe7323a1a55b",
+  "driver_sha256": "c2a074a76a63f4e197366362574260bb12b208a13ac7f0cd6237d1edc7c115b1",
+  "protocol_sha256": "ec50c3fed616e35b32dcb5b2d4e4b22543d15028cc900ea24e3ea3756bc76469",
+  "post_hoc": "Specified after observing mature threshold inflation; single exploratory paired intervention, no detector tuning",
+  "removed_signal_indices": [
+    330,
+    340,
+    350,
+    360
+  ],
+  "later_paired_injection_indices": [
+    370,
+    380,
+    390,
+    400,
+    410,
+    420
+  ],
+  "arms": [
+    {
+      "arm": "baseline",
+      "input_array": {
+        "sha256": "970cc0b03977bb29af77179409d4be183d1d466fd189a65270bcaeefe06c4680",
+        "shape": [
+          500,
+          4096
+        ],
+        "dtype": "<f8",
+        "encoding": "little-endian C-order raw bytes"
+      },
+      "elapsed_s": 35.148548799999844,
+      "later_injections": [
+        {
+          "window_index": 370,
+          "available": true,
+          "detected": false,
+          "score": 9.324284140153061,
+          "threshold": 163.83940094146237,
+          "mature": true
+        },
+        {
+          "window_index": 380,
+          "available": true,
+          "detected": false,
+          "score": 4.163510795506804,
+          "threshold": 163.83940094146237,
+          "mature": true
+        },
+        {
+          "window_index": 390,
+          "available": true,
+          "detected": false,
+          "score": 25.70715505541384,
+          "threshold": 163.83940094146237,
+          "mature": true
+        },
+        {
+          "window_index": 400,
+          "available": true,
+          "detected": false,
+          "score": 92.83968412847824,
+          "threshold": 163.83940094146237,
+          "mature": true
+        },
+        {
+          "window_index": 410,
+          "available": true,
+          "detected": false,
+          "score": 1.0152211914665845,
+          "threshold": 163.83940094146237,
+          "mature": true
+        },
+        {
+          "window_index": 420,
+          "available": true,
+          "detected": false,
+          "score": 3.5137935145834436,
+          "threshold": 163.83940094146237,
+          "mature": true
+        }
+      ],
+      "later_detected": 0,
+      "baseline_matches_parent_exactly": true,
+      "matches_previous_followup_exactly": true
+    },
+    {
+      "arm": "without_earlier_four_injections",
+      "input_array": {
+        "sha256": "255643effb76942d1eb5eadbb56ba0ea588a69f1d28fa9b7291fdcf973d7f62a",
+        "shape": [
+          500,
+          4096
+        ],
+        "dtype": "<f8",
+        "encoding": "little-endian C-order raw bytes"
+      },
+      "elapsed_s": 38.18059799999901,
+      "later_injections": [
+        {
+          "window_index": 370,
+          "available": true,
+          "detected": true,
+          "score": 9.324284140153061,
+          "threshold": 1.6580395349128854,
+          "mature": true
+        },
+        {
+          "window_index": 380,
+          "available": true,
+          "detected": true,
+          "score": 4.163510795506804,
+          "threshold": 1.6580395349128854,
+          "mature": true
+        },
+        {
+          "window_index": 390,
+          "available": true,
+          "detected": true,
+          "score": 25.70715505541384,
+          "threshold": 1.6580395349128854,
+          "mature": true
+        },
+        {
+          "window_index": 400,
+          "available": true,
+          "detected": true,
+          "score": 92.83968412847824,
+          "threshold": 1.6580395349128854,
+          "mature": true
+        },
+        {
+          "window_index": 410,
+          "available": true,
+          "detected": false,
+          "score": 1.0152211914665845,
+          "threshold": 1.6580395349128854,
+          "mature": true
+        },
+        {
+          "window_index": 420,
+          "available": true,
+          "detected": true,
+          "score": 3.5137935145834436,
+          "threshold": 1.6580395349128854,
+          "mature": true
+        }
+      ],
+      "later_detected": 5,
+      "baseline_matches_parent_exactly": null,
+      "matches_previous_followup_exactly": true
+    }
+  ],
+  "source_hashes_unchanged": true
+}

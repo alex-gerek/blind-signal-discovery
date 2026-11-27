@@ -1,0 +1,31 @@
+# Whole-block tail guard: fixed-schedule feasibility pilot — 27 November 2026
+
+Pre-execution protocol, source d049e2b; unchanged core. ONE exploratory rule, no parameter sweep or production/adaptive-manager integration. This follows admission design and exact historical tracing; the known historical failure motivated the hypothesis, so reused history is developmental only.
+
+## Exact observable-only rule
+
+Fit the unchanged MultiResolutionDetector on a proposed block with norm_fraction0.25. Let z be its finite sorted Split-B maximum scores, m=median(z), s=max(Q95(z)-m,1). Quarantine the WHOLE block iff max(z)>m+10*s (strict >, equality passes). Constant10 is a fixed exploratory heuristic, not derived significance or an estimated contamination probability. Require at least40finite Split-B scores; invalid/incomplete inputs fail closed with a distinct reason. No sample deletion, winsorizing, injection labels, future target windows or oracle noise in admission. A rejected block has unavailable STFT decisions and null threshold/p in the experimental policy output. Its preliminary core calibration and candidate measurements remain diagnostic evidence. Reference/Union channels are not repaired.
+
+Score-based whole-block selection can still bias the calibration distribution; no exchangeability or 1% FAP guarantee is claimed. This is only a fixed-schedule feasibility/falsification experiment, NOT an end-to-end adaptive-recovery or quarantine-release study. There is one proposed block per sequence. No replacement block is sought; rejection means unavailable throughout that sequence. A successful subsequent recovery requires a separate study.
+
+## Frozen inputs and sample counts
+
+Three new seeds17101/17102/17103. For each seed four cases: stationary pink; same pink calibration plus four chirps; same pink calibration plus four broadband bursts; independent pink with rare impulsive NOISE. Twelve sequence units, not thousands of independent replications. Each calibration block265windows4s/1024Hz:66normalization/199threshold. Per seed base calibration RNG SeedSequence([seed,1]), target-noise[seed,2], injections[seed,3], impulsive-noise[seed,4]. Cases share underlying clean pink inputs for paired comparisons; cases/alphas/amplitudes are NOT independent samples.
+
+Use existing noise.generate_noise pink_colored sigma1 alpha1 knee16. Calibrating signals at indices100/140/180/220, outside A. Chirp clean generator linear_chirp; burst full4096Gaussian filtered Butterworth4 zero-phase35..350Hz, support1.375..1.625s/Tukey0.15. Scale added calibration signals to root-energy SNR18 relative to sigma1. Target:80new noise windows and3independent noise/signal bases per family at SNR8/18, yielding12paired-amplitude records (6base units) per case. Signal support for chirps is existing generator metadata where available; evaluate whole-window nomination only in this pilot, NOT physical/known-support association or family-identification accuracy.
+
+Impulsive-noise case adds to each calibration/target noise base one signed amplitude12 single-sample impulse with probability0.03, index uniform0..4095. These are labelled NOISE for false-alarm accounting; do not delete them as known signals. Calibration signal labels used for post-admission diagnostics only. Mixture pairs at both amplitudes share the same profiled target noise. No whole-window renormalization or amplitude retuning.
+
+For each case evaluate core FAP0.01 and0.005, same fixed rule and exact same inputs;199SplitB makes the latter just attainable. Store actual rank/ties/empirical p. Union Sidak alpha atFWER0.005 would be unattainable with199; fixture verifies this and explicitly prevents claiming Union recovery. No independent Union method comparison.
+
+## Evaluation and rejection gates
+
+Record block acceptance/reason/tail statistics, full preliminary calibrations, raw feature maxima, candidate measurements before the guard, official policy threshold/p/null status, accepted/rejected counts, signal detected/missed/abstained, available noise exposure and alarms, and operational coverage. Unavailable noise rate is null, never zero. Exposure is four seconds per unique valid nonoverlapping ID; score records reused across two amplitudes/alphas are not extra independent exposure. The original core remains available when attainable, even if the guard rejects its block.
+
+Descriptive fixed pilot only; no confidence/p-value superiority inference from three seeds. A promising guard must preserve all clean-pink block availability and all baseline signal recoveries, quarantine every deliberately contaminated block, and not obtain apparent alarm reduction solely through abstention. Report every criterion separately. Failure of any criterion rules out adoption here. An unavailable/missed signal counts as an operational loss if baseline detected it; report conditional sensitivity separately. No claim of general efficacy even if every pilot condition passes. Impulsive noise is an adversarial validity check, not a tuning sample.
+
+## Verification and preservation
+
+Before waveform measurements, focused fixtures cover strict equality/nextafter, ties/constants, nonfinite/empty/too-small arrays, false-tail-spike rejection and attainable0.005/unattainableUnion ranks. Cache only unchanged core raw features, keyed by waveform bytes and sample metadata, with direct uncached parity checks on the first3reference/evaluation inputs per seed and each case's firstinjectedcalibration input. No statistical rule changes through caching.
+
+Independent verifier reconstructs per-scale A median/Q95/spread, every B maximum/order threshold and every evaluation maximum/p/decision directly from saved raw maxima; separately checks the guard equation, partition sizes, labels/exposure/null serialization, official availability and operational loss counts. Driver saves copied protocol/helper/source hashes, seed/case membership/input hashes, preliminary calibrations, all evaluation candidates and raw scores, environment/errors and unique UTC/UUID outputs. Verify original source and archived results unchanged. No O3/data/manifest/network, no real signals, no production/test edits, merge/release/Zenodo, automatic commit/push. Preserve expected failures rather than calling unavailable decisions successes. Initial status: frozen pilot design, execution pending.

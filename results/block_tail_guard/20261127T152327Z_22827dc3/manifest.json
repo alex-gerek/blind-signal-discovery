@@ -1,0 +1,642 @@
+{
+  "run_id": "20261127T152327Z_22827dc3",
+  "status": "COMPLETE",
+  "source_commit": "d049e2b1c97626b562d234a22bc12db5d51702dd",
+  "dirty_paths": "M docs/RESEARCH_HISTORY.md\n M tests/run_browser_wav_resampler.js\n M tests/test_browser_input_validation.js\n M tests/test_input_validation.py\n?? docs/ADAPTIVE_ADMISSION_TRACE_FINDINGS_2026-11-27.md\n?? docs/adaptive_admission_trace_protocol_2026-11-27.md\n?? docs/articles/\n?? docs/block_tail_guard_protocol_2026-11-27.md\n?? experiments/block_tail_guard.py\n?? experiments/run_adaptive_admission_trace.py\n?? experiments/run_block_tail_guard.py\n?? experiments/verify_adaptive_admission_trace.py\n?? results/adaptive_admission_trace/\n?? results/block_tail_guard/\n?? tests/helpers/\n?? tests/test_workstation_script_source.js",
+  "source_sha256": {
+    "src/bsd/adaptive_regime.py": "c5a64068b4216a04ed30da73c71e9fc396bdf8eb8a2ef89864de6a45bda5d1e8",
+    "src/bsd/adaptive_regime_v2b.py": "02bcd0f4da373e23ed4d2b2fe89b0878476d9234e4e583e172ae208aaa9c2702",
+    "src/bsd/calibration.py": "79dab28d60323192bb73f28f60e74d367c3bb17e4e75fb31acf5ef98df7706e7",
+    "src/bsd/coincidence.py": "9d0469d45d6adc26624037e1be0b4c9331dea390bc94133ddcff0f947492fd74",
+    "src/bsd/cross_coherence.py": "a306d298ea421ca26ac1111ffd313de3acc23e98263e20227d5e5d4037cfbaf1",
+    "src/bsd/detector.py": "56343accdc7e5b2b3a0a47a45e974065a9eb42d57df929138a29e09f2e94bed9",
+    "src/bsd/detector_v2.py": "a622ef294b225f1da22c55c5279dc9ccb32f27fa40ad4c9129855b1fa302274e",
+    "src/bsd/evaluation.py": "d0ae9285c2c1f80d0225f37ea6e5624506b8d270af980e5a1607c1b9f2ac62bb",
+    "src/bsd/generator.py": "70d0dbe8c31e3d4568d46909dbf795ae90f678643ac69f219fe2a431f08c4cc8",
+    "src/bsd/io_loader.py": "93f9134a0228d2856db17286264db22766393535193e6e5a01c9d4265b0727a4",
+    "src/bsd/ligo_adapter.py": "04763049dff217b3424b9095af4f391c440c96b8d29dde74b1e4a080436373be",
+    "src/bsd/noise.py": "e456400f2aae3fa6cb28716ba59b53e0f8be784a0dfbcbc107b3d87e0ee591e2",
+    "src/bsd/regime_monitor.py": "cee14eee23c457b19539a78b561ed47493a31d05111762f9cca7cbbfa28eea30",
+    "src/bsd/reporting.py": "c748efe7eadb40e43d0001e49b4162230d83bc55cd693f7ac1bf13190740b6ec",
+    "src/bsd/upload_storage.py": "5d0fa69f9bbfdd6f6f31e16a2916667e0b0d7087a0132032591894975ffd53c9",
+    "src/bsd/vetoes.py": "3ad14fba9f63eb0f34d804506b3cb98aa702c51e96ce8919341e768c97add219",
+    "src/bsd/visualization.py": "130e3447c74f547cb599ece46b133a33eaff32ee0a221b814e693c1b25701f27",
+    "src/bsd/workstation_runner.py": "50466d09d0e71b8592d0d980da593339eba56edf49af33ee901f541d6d9c1ca5",
+    "src/bsd/__init__.py": "9cc9beef45a4ee5c7662cf3c739188497d169c85721573d17838864b43d2faf0"
+  },
+  "python": "3.14.3",
+  "numpy": "2.5.5",
+  "scipy": "1.18.1",
+  "seeds": [
+    17101,
+    17102,
+    17103
+  ],
+  "scope": "Fixed-schedule exploratory pilot, not end-to-end adaptive recovery",
+  "cases": [
+    {
+      "seed": 17101,
+      "case": "pink",
+      "summaries": [
+        {
+          "alpha": 0.01,
+          "guard": {
+            "admitted": true,
+            "reason": "ADMITTED",
+            "median": 0.26904451590037237,
+            "spread": 1.0,
+            "limit": 10.269044515900372,
+            "maximum": 2.524068809653758
+          },
+          "policy_available": true,
+          "core_noise_alarms": 1,
+          "policy_noise_alarms": 1,
+          "available_noise_windows": 80,
+          "available_noise_seconds": 320.0,
+          "conditional_noise_rate": 0.0125,
+          "core_signal_detected": 7,
+          "policy_signal_detected": 7,
+          "policy_signal_missed": 5,
+          "policy_signal_abstained": 0,
+          "lost_baseline_detections": 0
+        },
+        {
+          "alpha": 0.005,
+          "guard": {
+            "admitted": true,
+            "reason": "ADMITTED",
+            "median": 0.26904451590037237,
+            "spread": 1.0,
+            "limit": 10.269044515900372,
+            "maximum": 2.524068809653758
+          },
+          "policy_available": true,
+          "core_noise_alarms": 1,
+          "policy_noise_alarms": 1,
+          "available_noise_windows": 80,
+          "available_noise_seconds": 320.0,
+          "conditional_noise_rate": 0.0125,
+          "core_signal_detected": 7,
+          "policy_signal_detected": 7,
+          "policy_signal_missed": 5,
+          "policy_signal_abstained": 0,
+          "lost_baseline_detections": 0
+        }
+      ]
+    },
+    {
+      "seed": 17101,
+      "case": "calibration_chirps",
+      "summaries": [
+        {
+          "alpha": 0.01,
+          "guard": {
+            "admitted": false,
+            "reason": "WHOLE_BLOCK_TAIL_QUARANTINE",
+            "median": 0.27391633820501454,
+            "spread": 1.0773211893148023,
+            "limit": 11.047128231353037,
+            "maximum": 51.26860732657998
+          },
+          "policy_available": false,
+          "core_noise_alarms": 0,
+          "policy_noise_alarms": 0,
+          "available_noise_windows": 0,
+          "available_noise_seconds": 0.0,
+          "conditional_noise_rate": null,
+          "core_signal_detected": 0,
+          "policy_signal_detected": 0,
+          "policy_signal_missed": 0,
+          "policy_signal_abstained": 12,
+          "lost_baseline_detections": 0
+        },
+        {
+          "alpha": 0.005,
+          "guard": {
+            "admitted": false,
+            "reason": "WHOLE_BLOCK_TAIL_QUARANTINE",
+            "median": 0.27391633820501454,
+            "spread": 1.0773211893148023,
+            "limit": 11.047128231353037,
+            "maximum": 51.26860732657998
+          },
+          "policy_available": false,
+          "core_noise_alarms": 0,
+          "policy_noise_alarms": 0,
+          "available_noise_windows": 0,
+          "available_noise_seconds": 0.0,
+          "conditional_noise_rate": null,
+          "core_signal_detected": 0,
+          "policy_signal_detected": 0,
+          "policy_signal_missed": 0,
+          "policy_signal_abstained": 12,
+          "lost_baseline_detections": 0
+        }
+      ]
+    },
+    {
+      "seed": 17101,
+      "case": "calibration_bursts",
+      "summaries": [
+        {
+          "alpha": 0.01,
+          "guard": {
+            "admitted": false,
+            "reason": "WHOLE_BLOCK_TAIL_QUARANTINE",
+            "median": 0.27391633820501454,
+            "spread": 1.0773211893148023,
+            "limit": 11.047128231353037,
+            "maximum": 11.978631657550912
+          },
+          "policy_available": false,
+          "core_noise_alarms": 0,
+          "policy_noise_alarms": 0,
+          "available_noise_windows": 0,
+          "available_noise_seconds": 0.0,
+          "conditional_noise_rate": null,
+          "core_signal_detected": 6,
+          "policy_signal_detected": 0,
+          "policy_signal_missed": 0,
+          "policy_signal_abstained": 12,
+          "lost_baseline_detections": 6
+        },
+        {
+          "alpha": 0.005,
+          "guard": {
+            "admitted": false,
+            "reason": "WHOLE_BLOCK_TAIL_QUARANTINE",
+            "median": 0.27391633820501454,
+            "spread": 1.0773211893148023,
+            "limit": 11.047128231353037,
+            "maximum": 11.978631657550912
+          },
+          "policy_available": false,
+          "core_noise_alarms": 0,
+          "policy_noise_alarms": 0,
+          "available_noise_windows": 0,
+          "available_noise_seconds": 0.0,
+          "conditional_noise_rate": null,
+          "core_signal_detected": 5,
+          "policy_signal_detected": 0,
+          "policy_signal_missed": 0,
+          "policy_signal_abstained": 12,
+          "lost_baseline_detections": 5
+        }
+      ]
+    },
+    {
+      "seed": 17101,
+      "case": "impulsive_noise",
+      "summaries": [
+        {
+          "alpha": 0.01,
+          "guard": {
+            "admitted": false,
+            "reason": "WHOLE_BLOCK_TAIL_QUARANTINE",
+            "median": 0.23971956741821265,
+            "spread": 1.0,
+            "limit": 10.239719567418213,
+            "maximum": 14.778206264804133
+          },
+          "policy_available": false,
+          "core_noise_alarms": 5,
+          "policy_noise_alarms": 0,
+          "available_noise_windows": 0,
+          "available_noise_seconds": 0.0,
+          "conditional_noise_rate": null,
+          "core_signal_detected": 7,
+          "policy_signal_detected": 0,
+          "policy_signal_missed": 0,
+          "policy_signal_abstained": 12,
+          "lost_baseline_detections": 7
+        },
+        {
+          "alpha": 0.005,
+          "guard": {
+            "admitted": false,
+            "reason": "WHOLE_BLOCK_TAIL_QUARANTINE",
+            "median": 0.23971956741821265,
+            "spread": 1.0,
+            "limit": 10.239719567418213,
+            "maximum": 14.778206264804133
+          },
+          "policy_available": false,
+          "core_noise_alarms": 4,
+          "policy_noise_alarms": 0,
+          "available_noise_windows": 0,
+          "available_noise_seconds": 0.0,
+          "conditional_noise_rate": null,
+          "core_signal_detected": 3,
+          "policy_signal_detected": 0,
+          "policy_signal_missed": 0,
+          "policy_signal_abstained": 12,
+          "lost_baseline_detections": 3
+        }
+      ]
+    },
+    {
+      "seed": 17102,
+      "case": "pink",
+      "summaries": [
+        {
+          "alpha": 0.01,
+          "guard": {
+            "admitted": true,
+            "reason": "ADMITTED",
+            "median": 0.40657167981814923,
+            "spread": 1.2508701492177896,
+            "limit": 12.915273171996045,
+            "maximum": 4.467686702573813
+          },
+          "policy_available": true,
+          "core_noise_alarms": 1,
+          "policy_noise_alarms": 1,
+          "available_noise_windows": 80,
+          "available_noise_seconds": 320.0,
+          "conditional_noise_rate": 0.0125,
+          "core_signal_detected": 8,
+          "policy_signal_detected": 8,
+          "policy_signal_missed": 4,
+          "policy_signal_abstained": 0,
+          "lost_baseline_detections": 0
+        },
+        {
+          "alpha": 0.005,
+          "guard": {
+            "admitted": true,
+            "reason": "ADMITTED",
+            "median": 0.40657167981814923,
+            "spread": 1.2508701492177896,
+            "limit": 12.915273171996045,
+            "maximum": 4.467686702573813
+          },
+          "policy_available": true,
+          "core_noise_alarms": 0,
+          "policy_noise_alarms": 0,
+          "available_noise_windows": 80,
+          "available_noise_seconds": 320.0,
+          "conditional_noise_rate": 0.0,
+          "core_signal_detected": 6,
+          "policy_signal_detected": 6,
+          "policy_signal_missed": 6,
+          "policy_signal_abstained": 0,
+          "lost_baseline_detections": 0
+        }
+      ]
+    },
+    {
+      "seed": 17102,
+      "case": "calibration_chirps",
+      "summaries": [
+        {
+          "alpha": 0.01,
+          "guard": {
+            "admitted": false,
+            "reason": "WHOLE_BLOCK_TAIL_QUARANTINE",
+            "median": 0.40970860909547524,
+            "spread": 1.3898899005634644,
+            "limit": 14.308607614730118,
+            "maximum": 107.17053748171153
+          },
+          "policy_available": false,
+          "core_noise_alarms": 0,
+          "policy_noise_alarms": 0,
+          "available_noise_windows": 0,
+          "available_noise_seconds": 0.0,
+          "conditional_noise_rate": null,
+          "core_signal_detected": 2,
+          "policy_signal_detected": 0,
+          "policy_signal_missed": 0,
+          "policy_signal_abstained": 12,
+          "lost_baseline_detections": 2
+        },
+        {
+          "alpha": 0.005,
+          "guard": {
+            "admitted": false,
+            "reason": "WHOLE_BLOCK_TAIL_QUARANTINE",
+            "median": 0.40970860909547524,
+            "spread": 1.3898899005634644,
+            "limit": 14.308607614730118,
+            "maximum": 107.17053748171153
+          },
+          "policy_available": false,
+          "core_noise_alarms": 0,
+          "policy_noise_alarms": 0,
+          "available_noise_windows": 0,
+          "available_noise_seconds": 0.0,
+          "conditional_noise_rate": null,
+          "core_signal_detected": 0,
+          "policy_signal_detected": 0,
+          "policy_signal_missed": 0,
+          "policy_signal_abstained": 12,
+          "lost_baseline_detections": 0
+        }
+      ]
+    },
+    {
+      "seed": 17102,
+      "case": "calibration_bursts",
+      "summaries": [
+        {
+          "alpha": 0.01,
+          "guard": {
+            "admitted": true,
+            "reason": "ADMITTED",
+            "median": 0.40970860909547524,
+            "spread": 1.378933575330171,
+            "limit": 14.199044362397185,
+            "maximum": 11.0379206078953
+          },
+          "policy_available": true,
+          "core_noise_alarms": 0,
+          "policy_noise_alarms": 0,
+          "available_noise_windows": 80,
+          "available_noise_seconds": 320.0,
+          "conditional_noise_rate": 0.0,
+          "core_signal_detected": 6,
+          "policy_signal_detected": 6,
+          "policy_signal_missed": 6,
+          "policy_signal_abstained": 0,
+          "lost_baseline_detections": 0
+        },
+        {
+          "alpha": 0.005,
+          "guard": {
+            "admitted": true,
+            "reason": "ADMITTED",
+            "median": 0.40970860909547524,
+            "spread": 1.378933575330171,
+            "limit": 14.199044362397185,
+            "maximum": 11.0379206078953
+          },
+          "policy_available": true,
+          "core_noise_alarms": 0,
+          "policy_noise_alarms": 0,
+          "available_noise_windows": 80,
+          "available_noise_seconds": 320.0,
+          "conditional_noise_rate": 0.0,
+          "core_signal_detected": 4,
+          "policy_signal_detected": 4,
+          "policy_signal_missed": 8,
+          "policy_signal_abstained": 0,
+          "lost_baseline_detections": 0
+        }
+      ]
+    },
+    {
+      "seed": 17102,
+      "case": "impulsive_noise",
+      "summaries": [
+        {
+          "alpha": 0.01,
+          "guard": {
+            "admitted": false,
+            "reason": "WHOLE_BLOCK_TAIL_QUARANTINE",
+            "median": 0.38661817041638047,
+            "spread": 1.3162795052101917,
+            "limit": 13.549413222518297,
+            "maximum": 28.22773715514336
+          },
+          "policy_available": false,
+          "core_noise_alarms": 1,
+          "policy_noise_alarms": 0,
+          "available_noise_windows": 0,
+          "available_noise_seconds": 0.0,
+          "conditional_noise_rate": null,
+          "core_signal_detected": 3,
+          "policy_signal_detected": 0,
+          "policy_signal_missed": 0,
+          "policy_signal_abstained": 12,
+          "lost_baseline_detections": 3
+        },
+        {
+          "alpha": 0.005,
+          "guard": {
+            "admitted": false,
+            "reason": "WHOLE_BLOCK_TAIL_QUARANTINE",
+            "median": 0.38661817041638047,
+            "spread": 1.3162795052101917,
+            "limit": 13.549413222518297,
+            "maximum": 28.22773715514336
+          },
+          "policy_available": false,
+          "core_noise_alarms": 0,
+          "policy_noise_alarms": 0,
+          "available_noise_windows": 0,
+          "available_noise_seconds": 0.0,
+          "conditional_noise_rate": null,
+          "core_signal_detected": 3,
+          "policy_signal_detected": 0,
+          "policy_signal_missed": 0,
+          "policy_signal_abstained": 12,
+          "lost_baseline_detections": 3
+        }
+      ]
+    },
+    {
+      "seed": 17103,
+      "case": "pink",
+      "summaries": [
+        {
+          "alpha": 0.01,
+          "guard": {
+            "admitted": true,
+            "reason": "ADMITTED",
+            "median": 0.3897589012827816,
+            "spread": 1.3760207143187337,
+            "limit": 14.14996604447012,
+            "maximum": 3.078045842854103
+          },
+          "policy_available": true,
+          "core_noise_alarms": 1,
+          "policy_noise_alarms": 1,
+          "available_noise_windows": 80,
+          "available_noise_seconds": 320.0,
+          "conditional_noise_rate": 0.0125,
+          "core_signal_detected": 7,
+          "policy_signal_detected": 7,
+          "policy_signal_missed": 5,
+          "policy_signal_abstained": 0,
+          "lost_baseline_detections": 0
+        },
+        {
+          "alpha": 0.005,
+          "guard": {
+            "admitted": true,
+            "reason": "ADMITTED",
+            "median": 0.3897589012827816,
+            "spread": 1.3760207143187337,
+            "limit": 14.14996604447012,
+            "maximum": 3.078045842854103
+          },
+          "policy_available": true,
+          "core_noise_alarms": 0,
+          "policy_noise_alarms": 0,
+          "available_noise_windows": 80,
+          "available_noise_seconds": 320.0,
+          "conditional_noise_rate": 0.0,
+          "core_signal_detected": 7,
+          "policy_signal_detected": 7,
+          "policy_signal_missed": 5,
+          "policy_signal_abstained": 0,
+          "lost_baseline_detections": 0
+        }
+      ]
+    },
+    {
+      "seed": 17103,
+      "case": "calibration_chirps",
+      "summaries": [
+        {
+          "alpha": 0.01,
+          "guard": {
+            "admitted": false,
+            "reason": "WHOLE_BLOCK_TAIL_QUARANTINE",
+            "median": 0.4028059560982222,
+            "spread": 1.6756751074082077,
+            "limit": 17.1595570301803,
+            "maximum": 72.14353930324299
+          },
+          "policy_available": false,
+          "core_noise_alarms": 0,
+          "policy_noise_alarms": 0,
+          "available_noise_windows": 0,
+          "available_noise_seconds": 0.0,
+          "conditional_noise_rate": null,
+          "core_signal_detected": 2,
+          "policy_signal_detected": 0,
+          "policy_signal_missed": 0,
+          "policy_signal_abstained": 12,
+          "lost_baseline_detections": 2
+        },
+        {
+          "alpha": 0.005,
+          "guard": {
+            "admitted": false,
+            "reason": "WHOLE_BLOCK_TAIL_QUARANTINE",
+            "median": 0.4028059560982222,
+            "spread": 1.6756751074082077,
+            "limit": 17.1595570301803,
+            "maximum": 72.14353930324299
+          },
+          "policy_available": false,
+          "core_noise_alarms": 0,
+          "policy_noise_alarms": 0,
+          "available_noise_windows": 0,
+          "available_noise_seconds": 0.0,
+          "conditional_noise_rate": null,
+          "core_signal_detected": 1,
+          "policy_signal_detected": 0,
+          "policy_signal_missed": 0,
+          "policy_signal_abstained": 12,
+          "lost_baseline_detections": 1
+        }
+      ]
+    },
+    {
+      "seed": 17103,
+      "case": "calibration_bursts",
+      "summaries": [
+        {
+          "alpha": 0.01,
+          "guard": {
+            "admitted": false,
+            "reason": "WHOLE_BLOCK_TAIL_QUARANTINE",
+            "median": 0.4028059560982222,
+            "spread": 1.6756751074082077,
+            "limit": 17.1595570301803,
+            "maximum": 24.728685929935843
+          },
+          "policy_available": false,
+          "core_noise_alarms": 0,
+          "policy_noise_alarms": 0,
+          "available_noise_windows": 0,
+          "available_noise_seconds": 0.0,
+          "conditional_noise_rate": null,
+          "core_signal_detected": 6,
+          "policy_signal_detected": 0,
+          "policy_signal_missed": 0,
+          "policy_signal_abstained": 12,
+          "lost_baseline_detections": 6
+        },
+        {
+          "alpha": 0.005,
+          "guard": {
+            "admitted": false,
+            "reason": "WHOLE_BLOCK_TAIL_QUARANTINE",
+            "median": 0.4028059560982222,
+            "spread": 1.6756751074082077,
+            "limit": 17.1595570301803,
+            "maximum": 24.728685929935843
+          },
+          "policy_available": false,
+          "core_noise_alarms": 0,
+          "policy_noise_alarms": 0,
+          "available_noise_windows": 0,
+          "available_noise_seconds": 0.0,
+          "conditional_noise_rate": null,
+          "core_signal_detected": 3,
+          "policy_signal_detected": 0,
+          "policy_signal_missed": 0,
+          "policy_signal_abstained": 12,
+          "lost_baseline_detections": 3
+        }
+      ]
+    },
+    {
+      "seed": 17103,
+      "case": "impulsive_noise",
+      "summaries": [
+        {
+          "alpha": 0.01,
+          "guard": {
+            "admitted": false,
+            "reason": "WHOLE_BLOCK_TAIL_QUARANTINE",
+            "median": 0.2291706969435389,
+            "spread": 1.4729290308914367,
+            "limit": 14.958461005857906,
+            "maximum": 19.317323398075303
+          },
+          "policy_available": false,
+          "core_noise_alarms": 0,
+          "policy_noise_alarms": 0,
+          "available_noise_windows": 0,
+          "available_noise_seconds": 0.0,
+          "conditional_noise_rate": null,
+          "core_signal_detected": 3,
+          "policy_signal_detected": 0,
+          "policy_signal_missed": 0,
+          "policy_signal_abstained": 12,
+          "lost_baseline_detections": 3
+        },
+        {
+          "alpha": 0.005,
+          "guard": {
+            "admitted": false,
+            "reason": "WHOLE_BLOCK_TAIL_QUARANTINE",
+            "median": 0.2291706969435389,
+            "spread": 1.4729290308914367,
+            "limit": 14.958461005857906,
+            "maximum": 19.317323398075303
+          },
+          "policy_available": false,
+          "core_noise_alarms": 0,
+          "policy_noise_alarms": 0,
+          "available_noise_windows": 0,
+          "available_noise_seconds": 0.0,
+          "conditional_noise_rate": null,
+          "core_signal_detected": 3,
+          "policy_signal_detected": 0,
+          "policy_signal_missed": 0,
+          "policy_signal_abstained": 12,
+          "lost_baseline_detections": 3
+        }
+      ]
+    }
+  ],
+  "source_hashes_unchanged": true,
+  "elapsed_s": 59.41348619999917,
+  "cache_uncached_parity_checks": 78,
+  "unique_cached_observations": 1119
+}

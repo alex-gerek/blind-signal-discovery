@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "input_records": 4284,
+  "calibrations": 24,
+  "evaluation_records": 2208,
+  "candidate_records": 270,
+  "groups": {
+    "pink_fap0.01": {
+      "blocks": 3,
+      "admitted": 3,
+      "core_noise_alarms": 3,
+      "policy_noise_alarms": 3,
+      "available_noise_windows": 240,
+      "core_signal_detected": 22,
+      "policy_signal_detected": 22,
+      "policy_signal_abstained": 0,
+      "lost_baseline_detections": 0
+    },
+    "pink_fap0.005": {
+      "blocks": 3,
+      "admitted": 3,
+      "core_noise_alarms": 1,
+      "policy_noise_alarms": 1,
+      "available_noise_windows": 240,
+      "core_signal_detected": 20,
+      "policy_signal_detected": 20,
+      "policy_signal_abstained": 0,
+      "lost_baseline_detections": 0
+    },
+    "calibration_chirps_fap0.01": {
+      "blocks": 3,
+      "admitted": 0,
+      "core_noise_alarms": 0,
+      "policy_noise_alarms": 0,
+      "available_noise_windows": 0,
+      "core_signal_detected": 4,
+      "policy_signal_detected": 0,
+      "policy_signal_abstained": 36,
+      "lost_baseline_detections": 4
+    },
+    "calibration_chirps_fap0.005": {
+      "blocks": 3,
+      "admitted": 0,
+      "core_noise_alarms": 0,
+      "policy_noise_alarms": 0,
+      "available_noise_windows": 0,
+      "core_signal_detected": 1,
+      "policy_signal_detected": 0,
+      "policy_signal_abstained": 36,
+      "lost_baseline_detections": 1
+    },
+    "calibration_bursts_fap0.01": {
+      "blocks": 3,
+      "admitted": 1,
+      "core_noise_alarms": 0,
+      "policy_noise_alarms": 0,
+      "available_noise_windows": 80,
+      "core_signal_detected": 18,
+      "policy_signal_detected": 6,
+      "policy_signal_abstained": 24,
+      "lost_baseline_detections": 12
+    },
+    "calibration_bursts_fap0.005": {
+      "blocks": 3,
+      "admitted": 1,
+      "core_noise_alarms": 0,
+      "policy_noise_alarms": 0,
+      "available_noise_windows": 80,
+      "core_signal_detected": 12,
+      "policy_signal_detected": 4,
+      "policy_signal_abstained": 24,
+      "lost_baseline_detections": 8
+    },
+    "impulsive_noise_fap0.01": {
+      "blocks": 3,
+      "admitted": 0,
+      "core_noise_alarms": 6,
+      "policy_noise_alarms": 0,
+      "available_noise_windows": 0,
+      "core_signal_detected": 13,
+      "policy_signal_detected": 0,
+      "policy_signal_abstained": 36,
+      "lost_baseline_detections": 13
+    },
+    "impulsive_noise_fap0.005": {
+      "blocks": 3,
+      "admitted": 0,
+      "core_noise_alarms": 4,
+      "policy_noise_alarms": 0,
+      "available_noise_windows": 0,
+      "core_signal_detected": 9,
+      "policy_signal_detected": 0,
+      "policy_signal_abstained": 36,
+      "lost_baseline_detections": 9
+    }
+  },
+  "scope": "Descriptive fixed-schedule pilot, three paired seed units, no adaptive recovery inference",
+  "regenerated_inputs": 4284,
+  "source_hashes_unchanged": true,
+  "focused_fixture_checks": 12,
+  "uncached_parity_checks": 78,
+  "criteria": {
+    "clean_pink_all_admitted": true,
+    "contaminated_all_quarantined": false,
+    "no_baseline_recovery_lost": false
+  },
+  "adoption_rejected": true
+}

@@ -1,0 +1,5714 @@
+[
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_000",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 0,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4304502fa2261f1b9098d1aee5ffe1d48eaf3ed47df3ae61732d7988e787e0d6",
+    "raw_maxima": {
+      "short_31ms": 77.06601466401614,
+      "medium_125ms": 36.16997971945842,
+      "long_500ms": 34.41476136987164
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_001",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 1,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4711ab57629ff21c1a69f6235abe03bb42943754b448cad66b638204622fe56c",
+    "raw_maxima": {
+      "short_31ms": 46.41972915367762,
+      "medium_125ms": 32.38364089660577,
+      "long_500ms": 19.23742170049882
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_002",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 2,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2d5a540a6be0ae9b4b8003fb99a5cd154c00ee87d4b2d77fc5925088f3b62281",
+    "raw_maxima": {
+      "short_31ms": 65.92031108639344,
+      "medium_125ms": 23.783385455080616,
+      "long_500ms": 22.663290236762787
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_003",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 3,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1ee3739af81bf550806d1c449789046beb97b86faccba16e8435051a1a65f9ba",
+    "raw_maxima": {
+      "short_31ms": 54.750707743774605,
+      "medium_125ms": 41.29686907631734,
+      "long_500ms": 32.78365334428306
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_004",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 4,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6ed918e18e7e2e2260b5ceaec9b6750a9ca8eb8909c2ac08afd0e3480641950e",
+    "raw_maxima": {
+      "short_31ms": 74.47964475503419,
+      "medium_125ms": 28.826765948600126,
+      "long_500ms": 23.994316942112288
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_005",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 5,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e4ce01ccbb46e794b24307abbb2b7dbf66d9117295489b6b2cdb556e847742b0",
+    "raw_maxima": {
+      "short_31ms": 52.213108340223926,
+      "medium_125ms": 23.94459993924067,
+      "long_500ms": 31.525635535084653
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_006",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 6,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f304f00eb8921fef239a98cae40b741ab48330704a052bf3ed91999102cd2ee6",
+    "raw_maxima": {
+      "short_31ms": 90.73955646945222,
+      "medium_125ms": 18.138322666076643,
+      "long_500ms": 26.49398046951069
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_007",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 7,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "bb75bf4b6c6a7f4695386a4baa6c58f1de9e6d2782c54c21cece92e62c30616b",
+    "raw_maxima": {
+      "short_31ms": 68.82665116092012,
+      "medium_125ms": 35.83059024886998,
+      "long_500ms": 27.620782552816344
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_008",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 8,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f2a35f40c37876bc9ce7c5a6b9e9f51a36c1a93512243ab0955947f489281c16",
+    "raw_maxima": {
+      "short_31ms": 78.38823484649915,
+      "medium_125ms": 36.97544127148893,
+      "long_500ms": 26.35003186108906
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_009",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 9,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8cf1bd5f578202463f684c5155adc9fec1b4c2578aed0582eca094c7608f3e60",
+    "raw_maxima": {
+      "short_31ms": 50.27427387149991,
+      "medium_125ms": 25.99548906751086,
+      "long_500ms": 33.39445631143231
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_010",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 10,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9fc5e30ded3573bc536836a2b3f2d88892f79a03a516e8f741b1b3bf67adc507",
+    "raw_maxima": {
+      "short_31ms": 120.95126960813089,
+      "medium_125ms": 26.33287028658154,
+      "long_500ms": 40.59063891401141
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_011",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 11,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6bc7c6a10ebbc0b0c8cdd3deabe40324066ee8b29ccc787a483fb20f2d8eae44",
+    "raw_maxima": {
+      "short_31ms": 76.09321473485585,
+      "medium_125ms": 44.392593395898714,
+      "long_500ms": 53.550170040164765
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_012",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 12,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "60be46502e3947e26646ce6024788bb76d6c16109116becc1bed24c0ef56bd25",
+    "raw_maxima": {
+      "short_31ms": 65.52814905475202,
+      "medium_125ms": 21.986722749280272,
+      "long_500ms": 29.92089181078448
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_013",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 13,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "69bea7928bf805ed9207e12afe80e9abe09f6bce34463129e227ed419a53cdb9",
+    "raw_maxima": {
+      "short_31ms": 59.298743860007804,
+      "medium_125ms": 29.748950326796745,
+      "long_500ms": 43.38776676852191
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_014",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 14,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4531bbb318bf6e713ddca04e002ec6d994ffad19d1ecde975e1176c4b9db0269",
+    "raw_maxima": {
+      "short_31ms": 57.38984873714492,
+      "medium_125ms": 35.43946181254802,
+      "long_500ms": 41.32892487829518
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_015",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 15,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a96f29424f2d2b9c5beb22eb313e271a5e492a7fe042b0619f28de4b2d807330",
+    "raw_maxima": {
+      "short_31ms": 91.92771096712593,
+      "medium_125ms": 30.227504926041053,
+      "long_500ms": 27.000484961796435
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_016",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 16,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "72f436731d369b43a5cd4d13ff239bc005dd300a1256d20759e8d5eaeb58d4a4",
+    "raw_maxima": {
+      "short_31ms": 68.45555530981856,
+      "medium_125ms": 35.82303461019987,
+      "long_500ms": 35.25712294846301
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_017",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 17,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "69d65fcfd1cdcdf75c03272b5abad6d8734668a54dd29c4c44dd46d25077cd34",
+    "raw_maxima": {
+      "short_31ms": 77.52475355774297,
+      "medium_125ms": 38.427792271163646,
+      "long_500ms": 25.188057294876728
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_018",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 18,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b697951937f780172f63b2f93abfe68b8533cf38f5476937a598ad157dad2cce",
+    "raw_maxima": {
+      "short_31ms": 68.59906382535384,
+      "medium_125ms": 53.30465468874559,
+      "long_500ms": 31.303522738453168
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_019",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 19,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4f424b94f60bf3bebe807468d1b9de9c8a1de5126a710e63ae292cabb583af77",
+    "raw_maxima": {
+      "short_31ms": 61.660509092865006,
+      "medium_125ms": 45.30462417973979,
+      "long_500ms": 27.539545324108502
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_020",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 20,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7285038b578ab9feab2bcac2d6d50bcfd7e96d48750bf5ab62f4701099c3cf28",
+    "raw_maxima": {
+      "short_31ms": 62.635409579256674,
+      "medium_125ms": 26.56918959208807,
+      "long_500ms": 30.040674615147907
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_021",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 21,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "73cb9304ed10c73331f14de4a0fd9a79aa17d4b8fe39d5e3a551e468263c3430",
+    "raw_maxima": {
+      "short_31ms": 127.56914486089073,
+      "medium_125ms": 34.274043077909774,
+      "long_500ms": 28.885134813099157
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_022",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 22,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b47dcef824e700efa5ea983aeca53672315dc6a915ef14402dda79d85e5cddfa",
+    "raw_maxima": {
+      "short_31ms": 74.93834180851186,
+      "medium_125ms": 23.18249653492201,
+      "long_500ms": 40.24881574415625
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_023",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 23,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a31b42f50346c02e03ba440e81fb387790267ba82a6b5dfc6294968082e6e294",
+    "raw_maxima": {
+      "short_31ms": 61.467514322638124,
+      "medium_125ms": 33.83630981865883,
+      "long_500ms": 29.40725299102443
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_024",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 24,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "fc7044e908c0a1a4cde32234e979c457c5b764f40dffd170a6ab11ce601f9418",
+    "raw_maxima": {
+      "short_31ms": 116.39158374918458,
+      "medium_125ms": 18.025609124799633,
+      "long_500ms": 33.89642765876086
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_025",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 25,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "18d8629dd23febdd8996a50795a7710c0c39976eceb871f6888158dbd9a7f825",
+    "raw_maxima": {
+      "short_31ms": 46.70116056049402,
+      "medium_125ms": 37.77986463021281,
+      "long_500ms": 24.839344033129624
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_026",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 26,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9345f9831350216476fd4ad41e7e5a9977a815b51f3553d397d6da19579ed3ef",
+    "raw_maxima": {
+      "short_31ms": 34.70393959804929,
+      "medium_125ms": 19.93763752643961,
+      "long_500ms": 25.596966279167127
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_027",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 27,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1ea727879b138c5e7c8e64e69706a65be01b3180caa0c84cf1bea3bc86ffa0e3",
+    "raw_maxima": {
+      "short_31ms": 76.79123751333822,
+      "medium_125ms": 32.64173001238181,
+      "long_500ms": 30.651905785835538
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_028",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 28,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "11473e1dae20ca397ff377d46055b809c5454a583537aa4bc4717714567738ec",
+    "raw_maxima": {
+      "short_31ms": 49.97779696759225,
+      "medium_125ms": 39.93016203395797,
+      "long_500ms": 31.50948840880198
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_029",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 29,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ee08519b6463c6678d2f53340bd835c1c7d079980ff4eebef64fb20e6453f0c5",
+    "raw_maxima": {
+      "short_31ms": 47.212432225011185,
+      "medium_125ms": 28.42773065753744,
+      "long_500ms": 51.22047747262729
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_030",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 30,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "05af6d06af4f1d0c840b6000ff897f37b18aa070e2674d46e9bcf2b58f658008",
+    "raw_maxima": {
+      "short_31ms": 74.3572864923938,
+      "medium_125ms": 31.156109220075457,
+      "long_500ms": 24.381339077284146
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_031",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 31,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "75adb8b9198a522bfd07ea65ed3aeb11ea160aefbf5bcdd3b3d096d0c9b89ca9",
+    "raw_maxima": {
+      "short_31ms": 61.14001912543234,
+      "medium_125ms": 26.296433824614873,
+      "long_500ms": 31.655589252050333
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_032",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 32,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "98575ed1ed3437f3dec1fb6dd75de89cdc497904e230c326d0e2aa5a84fec904",
+    "raw_maxima": {
+      "short_31ms": 43.771832820147665,
+      "medium_125ms": 36.4730540947815,
+      "long_500ms": 26.157515373462267
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_033",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 33,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "949a9fdef28a2a0a71f68006799e0f658b02f25e474f10b705de974177a63bf9",
+    "raw_maxima": {
+      "short_31ms": 70.47934490167505,
+      "medium_125ms": 27.32808619712227,
+      "long_500ms": 33.641104599611225
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_034",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 34,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d5d49f83b264f9de878d9b2cbae9d0a771cc4cc578336a9b0ea7f9d27a00cd56",
+    "raw_maxima": {
+      "short_31ms": 42.20169131153155,
+      "medium_125ms": 29.402403070987685,
+      "long_500ms": 34.624363062641514
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_035",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 35,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3916ca0b9c6e517521f69f698244a7467df4179a88e76d6aa2cb04fbbae43144",
+    "raw_maxima": {
+      "short_31ms": 84.65953753993824,
+      "medium_125ms": 23.09235389738074,
+      "long_500ms": 32.47009771579582
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_036",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 36,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a51fb8a31913bea6a1ba69902e6fbddc814e3ba7182730d5eeabba4abb5be5a6",
+    "raw_maxima": {
+      "short_31ms": 45.9139986355729,
+      "medium_125ms": 27.329035427582568,
+      "long_500ms": 42.87476212561933
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_037",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 37,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4764612131635a6448e8f0bdc350fa6c937b8fccb2b294662e85ef2189afaa66",
+    "raw_maxima": {
+      "short_31ms": 90.77682606028395,
+      "medium_125ms": 43.43932393230289,
+      "long_500ms": 38.08974076142846
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_038",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 38,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a14e8f595b567e9b11962100f050ad5625f45c0535986113c78c36fa27297ceb",
+    "raw_maxima": {
+      "short_31ms": 53.29383290826288,
+      "medium_125ms": 30.836729402483556,
+      "long_500ms": 30.20325576977273
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_039",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 39,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "200c8ac1ede290d694a412d77e609492d1dc769adcae23ba325fff19cb39a1be",
+    "raw_maxima": {
+      "short_31ms": 66.24587063279623,
+      "medium_125ms": 54.07588628852425,
+      "long_500ms": 45.46741146922483
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_040",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 40,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "eb75dc5a7f831f23b00964bb704abb8904778f3c1e676cec2f1d009abbf42b7d",
+    "raw_maxima": {
+      "short_31ms": 74.26260346866592,
+      "medium_125ms": 29.611567148860495,
+      "long_500ms": 27.305097869521656
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_041",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 41,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7e59464cd12ef1f4212a2c0ea773cca0b502443883b21a7feaad8d43e900411d",
+    "raw_maxima": {
+      "short_31ms": 925.0532405180845,
+      "medium_125ms": 372.0217645142182,
+      "long_500ms": 49.26565325628696
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_042",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 42,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "cb796906055b05366c01fd7c7afc05201701a4aed16368db907e8dbbaac75267",
+    "raw_maxima": {
+      "short_31ms": 88.61934025117658,
+      "medium_125ms": 27.82115277381972,
+      "long_500ms": 42.151294650115005
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_043",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 43,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "eaf6f907f2920ec1534547057d72c2609cef1c6a538bcd8780bddc6c61607ca0",
+    "raw_maxima": {
+      "short_31ms": 81.95982339264563,
+      "medium_125ms": 33.51951163120109,
+      "long_500ms": 42.34666687336263
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_044",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 44,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5d3d3ec707cb81875d21d551f71e5c0251f0ed0d87248305177251f2767ff5d1",
+    "raw_maxima": {
+      "short_31ms": 71.9159009283499,
+      "medium_125ms": 33.42037547356338,
+      "long_500ms": 29.28778920374593
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_045",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 45,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "10fb86e41a777745935fb6491a892809205f2db87e400e97e54fc67d0b51dc0e",
+    "raw_maxima": {
+      "short_31ms": 75.07788470366944,
+      "medium_125ms": 34.37133205224991,
+      "long_500ms": 28.30168998744096
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_046",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 46,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1940f82f1f86c97b510a70d3a401dd12b80d03c87204dd38b91572be374ef7c1",
+    "raw_maxima": {
+      "short_31ms": 43.17148581643842,
+      "medium_125ms": 32.4164287559648,
+      "long_500ms": 20.005115628255464
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_047",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 47,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5681db018faae788cc78e83a3c6c9d7dbbbd57fc43765afbbf4ac7fdcd529a29",
+    "raw_maxima": {
+      "short_31ms": 69.9919357675419,
+      "medium_125ms": 40.33353756753296,
+      "long_500ms": 28.632881713084473
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_048",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 48,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c404728b2bed85059549834a425f4de6a2d93f3e222be05d0e85fc9629dce582",
+    "raw_maxima": {
+      "short_31ms": 106.69849300411786,
+      "medium_125ms": 33.6994056451213,
+      "long_500ms": 36.94396927724624
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_049",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 49,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "25f6892c24892c47d10c874df165bd3723fe04052d5ccf9711e857a7b3d1579b",
+    "raw_maxima": {
+      "short_31ms": 66.5842054721581,
+      "medium_125ms": 34.23291655200373,
+      "long_500ms": 22.38022743098394
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_050",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 50,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d5e01caf3e7dd64ff7234dd0db6e8a77a12cca0168595b7be5aeef5a7ea4bc0a",
+    "raw_maxima": {
+      "short_31ms": 116.96361095012587,
+      "medium_125ms": 23.95121142866257,
+      "long_500ms": 19.93546895974564
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_051",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 51,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2ade4cc5d70d06c689860c0308b65be10e021f0e118c7164bc7bdc905645628e",
+    "raw_maxima": {
+      "short_31ms": 121.40825103697127,
+      "medium_125ms": 40.46055311710121,
+      "long_500ms": 55.16983361118467
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_052",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 52,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3e441d250aa75324537302ccf23fed85c2cb1b139c2238254778e51007f87fb4",
+    "raw_maxima": {
+      "short_31ms": 38.11167185198856,
+      "medium_125ms": 39.22156549868817,
+      "long_500ms": 34.49045665466377
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_053",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 53,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6d617a19b183d4dbf4280954ca6fa1a70b626652e5195fa572cda3ff9cf64364",
+    "raw_maxima": {
+      "short_31ms": 53.333468613832174,
+      "medium_125ms": 29.37292522132242,
+      "long_500ms": 37.03453310218774
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_054",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 54,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "49561302b47519821fc2e1690bb32524772e2a31ae5cea0f2179b366343cbf7a",
+    "raw_maxima": {
+      "short_31ms": 44.76863852772913,
+      "medium_125ms": 33.91212752834287,
+      "long_500ms": 20.493795106400434
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_055",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 55,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9bb5419cdd80ece73b12adfc36ba512bcd85b9d43ecb044ae938e8e6e81f8d7a",
+    "raw_maxima": {
+      "short_31ms": 124.08162158353501,
+      "medium_125ms": 39.15709708943091,
+      "long_500ms": 25.293111047503686
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_056",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 56,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "edc2c52dbd45d3cf5ccad1a01f58235606766f582a8f561e06492bc6026816ea",
+    "raw_maxima": {
+      "short_31ms": 37.52340333353604,
+      "medium_125ms": 18.91262497772113,
+      "long_500ms": 42.65433877774631
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_057",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 57,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "45bba7a6fe87d0f35ed191e3a5e1a910cd7ac991ecde5d18fa69b3795b1aee99",
+    "raw_maxima": {
+      "short_31ms": 74.68217785806802,
+      "medium_125ms": 28.81822409627414,
+      "long_500ms": 35.85119331945586
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_058",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 58,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d5b65d46b010d96aa0a00b2d80409933a40524ee761f0b3ac6d8e1360fd30de2",
+    "raw_maxima": {
+      "short_31ms": 51.330813838172226,
+      "medium_125ms": 29.31867849744722,
+      "long_500ms": 28.42119219598724
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_059",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 59,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "211e1954fdda47f0f672a4871315759e8b1ad383d17c14595538d17473f11eec",
+    "raw_maxima": {
+      "short_31ms": 64.19142665181145,
+      "medium_125ms": 24.881580871186475,
+      "long_500ms": 27.712094606446016
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_060",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 60,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "16073706dc186b00c2417785f8c24862e06c1333bf5aed7427d54313cad3ed4a",
+    "raw_maxima": {
+      "short_31ms": 71.72734177609921,
+      "medium_125ms": 23.121482907622315,
+      "long_500ms": 24.68971544844556
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_061",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 61,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8e9931dbf67180c2801b6446be2e44a8925852282662aacaf8bcee6f45ba2688",
+    "raw_maxima": {
+      "short_31ms": 65.88046360298907,
+      "medium_125ms": 45.65905168410751,
+      "long_500ms": 33.01639807560182
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_062",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 62,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2380bf01f211c96f44d07339550b1cd94d33667066f53d5301eacde6acb254fd",
+    "raw_maxima": {
+      "short_31ms": 66.06452350052173,
+      "medium_125ms": 32.095763362481044,
+      "long_500ms": 26.995068997918285
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_063",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 63,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7da3e9c308fb50873c9a2f3c0bfbca4b8c9bd84ad73b64ba48ae57fc4d380990",
+    "raw_maxima": {
+      "short_31ms": 75.04138666196363,
+      "medium_125ms": 24.67947002162958,
+      "long_500ms": 23.23220204728822
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_064",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 64,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "21795ca5c98659b9a6f742db07734dcaf7133ce076d5d577e416fb8377d1a588",
+    "raw_maxima": {
+      "short_31ms": 75.79622128660478,
+      "medium_125ms": 25.786226127935436,
+      "long_500ms": 27.021196647656136
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_065",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 65,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e2c1397cdccd347ea30c2a35cdacfd4809c640d6a4933cc743dae9e386b1d0fd",
+    "raw_maxima": {
+      "short_31ms": 59.49034172047837,
+      "medium_125ms": 24.822871731790155,
+      "long_500ms": 27.57676297296466
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_066",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 66,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c0f33e6d47d2e7b885d19ab83f1458fc88e75f604855a3bd5ead4204d0edf4d6",
+    "raw_maxima": {
+      "short_31ms": 73.11037607529067,
+      "medium_125ms": 37.95769645307492,
+      "long_500ms": 41.600681127397436
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_067",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 67,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b0fe63eb2c0f846cd28b200d7b7cbbf19ea7e7a72deaed9b71f708ca73f563d6",
+    "raw_maxima": {
+      "short_31ms": 55.876836902554345,
+      "medium_125ms": 33.929824283386644,
+      "long_500ms": 22.68473516843235
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_068",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 68,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "890e9b6bd269b8cf69914a90a42d8b1e702d0a90817d5c78e69ba4e839dc0266",
+    "raw_maxima": {
+      "short_31ms": 59.21427458619012,
+      "medium_125ms": 35.185375296504446,
+      "long_500ms": 27.109486224993468
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_069",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 69,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b36075be8ff217396b058fa820fb1ff013d751ab7a50cfddf09d3ecedbb266be",
+    "raw_maxima": {
+      "short_31ms": 55.33948286556247,
+      "medium_125ms": 33.70008059129218,
+      "long_500ms": 33.52951592198039
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_070",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 70,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ed175c4c845bf363cae200bf3f696124a7e05dbefe1f46168d913e31c1648400",
+    "raw_maxima": {
+      "short_31ms": 100.36204197659296,
+      "medium_125ms": 23.629606331822778,
+      "long_500ms": 20.07624194058561
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_071",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 71,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1f67b5b9284048746143d19c682d63e4db70ec44dafb7e03d7050d4df1028315",
+    "raw_maxima": {
+      "short_31ms": 42.32570357016784,
+      "medium_125ms": 27.25083597956491,
+      "long_500ms": 48.46018866621065
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_072",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 72,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c6483473dea22264f559d83cfbf09148ec89ce1eae5a25a8e8df802eece61e00",
+    "raw_maxima": {
+      "short_31ms": 66.07943534293898,
+      "medium_125ms": 55.66754215989266,
+      "long_500ms": 33.421628148035204
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_073",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 73,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b84ac843d6f3d01086089bcc03da4b0ecc1889723c9df6cdbfaeace617fb4a85",
+    "raw_maxima": {
+      "short_31ms": 72.71741614627953,
+      "medium_125ms": 39.90136399332717,
+      "long_500ms": 36.6724567355696
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_074",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 74,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "78b7cfc3d83228f5497ce713a912cbb2cd4e01848d2adb8332df10faa4fb7535",
+    "raw_maxima": {
+      "short_31ms": 59.057193426665506,
+      "medium_125ms": 28.86698973308521,
+      "long_500ms": 25.73118999563175
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_075",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 75,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5edd6a5e05203a2499e611097d45978adba3082129514cc9ad8f38682b72a27b",
+    "raw_maxima": {
+      "short_31ms": 75.80863555011176,
+      "medium_125ms": 41.54449459680819,
+      "long_500ms": 31.367937671826006
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_076",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 76,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "aa72c38a221e362d235d4ae3f9e6e90cb95f101f93a1cd994d5ab41b3531b38e",
+    "raw_maxima": {
+      "short_31ms": 57.0598394017037,
+      "medium_125ms": 25.681649085255543,
+      "long_500ms": 28.808364537798525
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_077",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 77,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "00c8bc54ea01741fae902f204f7510625602a5863978ba65982df4a595d146ac",
+    "raw_maxima": {
+      "short_31ms": 72.19416952424046,
+      "medium_125ms": 27.16427271582433,
+      "long_500ms": 52.197648943493
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_078",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 78,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "fcdbc3040f6ebd270472c5677a4b442c57ae96851a46a5e6f0083798480d3f12",
+    "raw_maxima": {
+      "short_31ms": 102.42641559764859,
+      "medium_125ms": 28.506555773723314,
+      "long_500ms": 42.7730697504355
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_079",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 79,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d7b60f75f15652b0f08ad17632e509ba2ab38e0d7f36fc2cf5bb1df4c9664e60",
+    "raw_maxima": {
+      "short_31ms": 91.78547266184182,
+      "medium_125ms": 32.43357368938055,
+      "long_500ms": 39.753436477993404
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_080",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 80,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3892bdd512467c4a0c17646e919bfcda5081f703e5e40716f12c3fe0c709d0ea",
+    "raw_maxima": {
+      "short_31ms": 47.05722200617251,
+      "medium_125ms": 23.66887551902646,
+      "long_500ms": 18.863783777770923
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_081",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 81,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2d8a679379a1e3bc7f89dee07bc50f7d55abb0ece941428674e57f9d28ac0364",
+    "raw_maxima": {
+      "short_31ms": 104.14818417565758,
+      "medium_125ms": 42.83042674356249,
+      "long_500ms": 28.688599745536024
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_082",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 82,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "eca5c46a7ca5620e9490ad9231c1bcdef8b896e1b41c43fc351c35c3d6543d29",
+    "raw_maxima": {
+      "short_31ms": 57.43647699078921,
+      "medium_125ms": 22.461725710681016,
+      "long_500ms": 47.39897822941276
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_083",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 83,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f318787f979aaa86f191085191e0161db5930b49b6712bb8a1a5b59783e67293",
+    "raw_maxima": {
+      "short_31ms": 44.02176568992893,
+      "medium_125ms": 30.079999800716973,
+      "long_500ms": 19.76095050830516
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_084",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 84,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "728beb23699a26407e354f244305b0a4c41fb6b9c18768427d1bd0df6358dd7d",
+    "raw_maxima": {
+      "short_31ms": 65.46104320777417,
+      "medium_125ms": 35.17074230316285,
+      "long_500ms": 22.374380040504157
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_085",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 85,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b9d8d43b3184c72e6e5595f018c4972a81a946b8507bdacdb70c5188299c0db0",
+    "raw_maxima": {
+      "short_31ms": 47.831564306081845,
+      "medium_125ms": 27.245658471565548,
+      "long_500ms": 41.21324837546563
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_086",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 86,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a13fe766c1e1de0bc717cbabefd596d11d4cc9219bbaa08df7a63d17df09b68e",
+    "raw_maxima": {
+      "short_31ms": 39.076154941338515,
+      "medium_125ms": 38.3750338964167,
+      "long_500ms": 24.86096896564342
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_087",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 87,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b776333c627af8039ac6a23a34884fdb2a4819729668a6b79025bb3b54f138fb",
+    "raw_maxima": {
+      "short_31ms": 69.62971704153351,
+      "medium_125ms": 32.89083632161472,
+      "long_500ms": 28.096754718529528
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_088",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 88,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b4ae9e0e94b2326881cf9a6b732318491f8a898dbd30257305567d34be850426",
+    "raw_maxima": {
+      "short_31ms": 53.750043051013684,
+      "medium_125ms": 24.390136726930486,
+      "long_500ms": 22.394180909961662
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_089",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 89,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ddf0b67e1a7bc0b0c4391d9e513ab6dd3e19abeac11bc7363ab94c81a7d34ae0",
+    "raw_maxima": {
+      "short_31ms": 42.15227860633924,
+      "medium_125ms": 26.024340526775354,
+      "long_500ms": 23.837351480195345
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_090",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 90,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "de4e5268e865269ebb5a858fae23f6052f93f2ed89e694596ae76b6a9c3d3e4b",
+    "raw_maxima": {
+      "short_31ms": 61.796453214795044,
+      "medium_125ms": 46.98297633017588,
+      "long_500ms": 43.35851673363845
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_091",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 91,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a157d076383f0087ee7e540b36f18ae69112a42e9dcd8603f47529883765b332",
+    "raw_maxima": {
+      "short_31ms": 48.23100909444385,
+      "medium_125ms": 28.53886995554015,
+      "long_500ms": 41.61303772495534
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_092",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 92,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "22d89bf435daaeb917af80015898cd437308ce631517a418a5245d9f2cfb279a",
+    "raw_maxima": {
+      "short_31ms": 56.95512698691593,
+      "medium_125ms": 35.05179854470407,
+      "long_500ms": 43.03116354470753
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_093",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 93,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a41d51cc35f94c2a1cefc78796d460db14de8fabc380499c5ae991ff7adafa80",
+    "raw_maxima": {
+      "short_31ms": 55.23804767946977,
+      "medium_125ms": 25.1607788693832,
+      "long_500ms": 30.051121288516136
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_094",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 94,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "01a9851717249d744f068617d38c60e165fc6d540957d2a9dbecfa3124723fee",
+    "raw_maxima": {
+      "short_31ms": 84.548274462759,
+      "medium_125ms": 25.40780047656962,
+      "long_500ms": 34.18357832268631
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_095",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 95,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8249f1eb91705422fab0c1254489bad16a0052c3512e09321eea664ff36cdae4",
+    "raw_maxima": {
+      "short_31ms": 70.84519410943744,
+      "medium_125ms": 31.22431380748506,
+      "long_500ms": 55.91086300648159
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_096",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 96,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b6cedd72232dbd46b7b174fe1efc0679f0428010b81ab7c15e8f985f57985dd0",
+    "raw_maxima": {
+      "short_31ms": 72.00940710423025,
+      "medium_125ms": 36.661275958155485,
+      "long_500ms": 31.33326088053834
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_097",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 97,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0f082859a849f90dc775559afc87440cb3a1df039e77b59e4d80487e9cc2281f",
+    "raw_maxima": {
+      "short_31ms": 35.52755225515079,
+      "medium_125ms": 33.5348292439308,
+      "long_500ms": 30.058949145262584
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_098",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 98,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "78cdea6590c2fe7e20b629340410b4495a292bdb71fc3372a642a58738589f6f",
+    "raw_maxima": {
+      "short_31ms": 60.302367247530356,
+      "medium_125ms": 28.756950208904282,
+      "long_500ms": 49.878210192048975
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_099",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 99,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d0437a03e1bfbf2c555af5a083c5cae083aa32d5db3127ce25d2f4b442252496",
+    "raw_maxima": {
+      "short_31ms": 67.79070450574925,
+      "medium_125ms": 26.91585087261679,
+      "long_500ms": 31.88195657217133
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_100",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 100,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "17f5185aff5e2872dc6aecc7ca20a4c66e07573efc39972a2585de669fc4750a",
+    "raw_maxima": {
+      "short_31ms": 43.59100174443932,
+      "medium_125ms": 21.543860250987844,
+      "long_500ms": 29.81418870696072
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_101",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 101,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e8bf6612bdb1637c781db1281d51b813caeb93de5bd5c9d83de2267bdc944f90",
+    "raw_maxima": {
+      "short_31ms": 80.78013215643072,
+      "medium_125ms": 28.79812779609294,
+      "long_500ms": 43.90396429997735
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_102",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 102,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b3d9010f4013c350debeb1c77268f5c76378dad4740fd0089d871df62282e8c8",
+    "raw_maxima": {
+      "short_31ms": 64.14315372865426,
+      "medium_125ms": 34.6712030485836,
+      "long_500ms": 19.30090884054548
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_103",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 103,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "adc8f36e350bcc99555acd284f1bdfebd123fb390d308ac55dc02d79af111947",
+    "raw_maxima": {
+      "short_31ms": 1334.809999673247,
+      "medium_125ms": 425.2478574593976,
+      "long_500ms": 22.91204360624741
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_104",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 104,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b8648f1b3299a0dac24a5a569e99fee614b0d9c826841d8cb2fbbd3acc297706",
+    "raw_maxima": {
+      "short_31ms": 53.61937775217249,
+      "medium_125ms": 32.708813455117294,
+      "long_500ms": 33.744295013733975
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_105",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 105,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1d4de9b779b52cda21c0b33cbb0654ee55a5edc2efe60b555c6dc906c60e8b73",
+    "raw_maxima": {
+      "short_31ms": 47.70333286846815,
+      "medium_125ms": 32.14013189776904,
+      "long_500ms": 20.882467292724705
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_106",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 106,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "733700a8057ceb88fb47a7513228710cf534d953ec6fc9a5665cb16daf744831",
+    "raw_maxima": {
+      "short_31ms": 69.37854446837272,
+      "medium_125ms": 30.25957970151701,
+      "long_500ms": 25.45468504799682
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_107",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 107,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "846e41d06207a1ae2276dbee91fbe0e6bfb11eabe2fd7b8c126b089428808872",
+    "raw_maxima": {
+      "short_31ms": 46.52604477688635,
+      "medium_125ms": 39.98059091208843,
+      "long_500ms": 29.943965666514472
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_108",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 108,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7dcb4cdb014844e67f5daf6e20bd95b1a759484ed953e3868aab54f644e56ca8",
+    "raw_maxima": {
+      "short_31ms": 66.30069966744432,
+      "medium_125ms": 24.900093256608013,
+      "long_500ms": 28.444361288476344
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_109",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 109,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4d64a3bf244de465493aeb2a99e752a1186aae55ea2edbbcc42958b099723e2b",
+    "raw_maxima": {
+      "short_31ms": 72.77096529917293,
+      "medium_125ms": 28.802084273216625,
+      "long_500ms": 31.47076198579196
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_110",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 110,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3314a56bb13167712029064fd8ac52dcd5c8b3bb7d729d699b22ccbdbc54dd83",
+    "raw_maxima": {
+      "short_31ms": 50.80273283675129,
+      "medium_125ms": 32.993367647172086,
+      "long_500ms": 51.874803904600796
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_111",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 111,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "094812c24c35318f53db768113d803941ddd929a98f86415098b6b2d5896b0fb",
+    "raw_maxima": {
+      "short_31ms": 70.13935325880182,
+      "medium_125ms": 45.693633534633044,
+      "long_500ms": 26.02533838074583
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_112",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 112,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "95bbc3053539b51ef54d8f6077fdf42f7c00f061feacaf6f07178ba006da3795",
+    "raw_maxima": {
+      "short_31ms": 77.34240675558308,
+      "medium_125ms": 36.226173175718344,
+      "long_500ms": 21.870939423386112
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_113",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 113,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3f85d22fbc73126e6f1fb59051cbdc4bc44bb8694cb22bc1a2a154f736269667",
+    "raw_maxima": {
+      "short_31ms": 60.09199838888613,
+      "medium_125ms": 18.661862601565993,
+      "long_500ms": 39.818447590902636
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_114",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 114,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "76bd84182115b103e1be38836925bcbac4ccab80189513de301384e469149d88",
+    "raw_maxima": {
+      "short_31ms": 54.248071978539336,
+      "medium_125ms": 44.52425386360429,
+      "long_500ms": 46.68617756437503
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_115",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 115,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ffcf39defe7ef98e6cbbf54ca97029a6949e2e10df65635bf13d63fb7b820e39",
+    "raw_maxima": {
+      "short_31ms": 41.7601887264203,
+      "medium_125ms": 24.06663189801326,
+      "long_500ms": 26.539632075444665
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_116",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 116,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1a17040447de6858f77d06e8db51dc0c757b267225d16e8e9157b034b61dce4a",
+    "raw_maxima": {
+      "short_31ms": 63.65830640815367,
+      "medium_125ms": 52.74120481942287,
+      "long_500ms": 36.44014866107631
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_117",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 117,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7615da9e5dfdfa146305ffba03c95e29edc773aa7ae3eb7a022f1c48e76f47be",
+    "raw_maxima": {
+      "short_31ms": 52.18825893261582,
+      "medium_125ms": 37.764764450915756,
+      "long_500ms": 34.00911295884165
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_118",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 118,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "fc8c6aaf8986307eb16d36e15b71afa6babf77d6453e1ba35ca550b3e90126f6",
+    "raw_maxima": {
+      "short_31ms": 93.73608350228054,
+      "medium_125ms": 27.04272640487009,
+      "long_500ms": 38.603327439616265
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_119",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 119,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d5c5db235d644d7bb02704af41cdd2f4eaa7d99048ef48365bf1ed0aa14aa3f9",
+    "raw_maxima": {
+      "short_31ms": 48.213151449261176,
+      "medium_125ms": 35.23294153180801,
+      "long_500ms": 23.33905820422881
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_120",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 120,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5d763b37274106b23e39192ebab48b5d597973123ad8dd742d33a56960071804",
+    "raw_maxima": {
+      "short_31ms": 105.81844648285849,
+      "medium_125ms": 45.56004767564542,
+      "long_500ms": 26.98177903423152
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_121",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 121,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "fcd9bd49b3df699a09655057aeec2fc881126bd66f07893f7dca8ae7d9df07ec",
+    "raw_maxima": {
+      "short_31ms": 46.546396209996665,
+      "medium_125ms": 27.584471810993257,
+      "long_500ms": 36.79320850340598
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_122",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 122,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "85b92e765025b4a8541938a910b4bb796a3b9285670ca22c97233a3c6f7305e3",
+    "raw_maxima": {
+      "short_31ms": 66.0782453607253,
+      "medium_125ms": 41.789149823759715,
+      "long_500ms": 31.27348992993204
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_123",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 123,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "39627dd815f47949459082983a4ebc1619f519e7893c353d14bd84986784e531",
+    "raw_maxima": {
+      "short_31ms": 58.66551904340046,
+      "medium_125ms": 31.538833517271037,
+      "long_500ms": 25.890275490966005
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_124",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 124,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8cdb1c92c68452fa097faf80620ec90d47f71b3175771951523de8711908c9ec",
+    "raw_maxima": {
+      "short_31ms": 51.41007340023509,
+      "medium_125ms": 44.63582512373828,
+      "long_500ms": 27.318843221277092
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_125",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 125,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7325224c0909877e196c8792812e641fc702caa99fba0ad4809ee3b03f0c4e53",
+    "raw_maxima": {
+      "short_31ms": 49.080979134908084,
+      "medium_125ms": 31.177436471042732,
+      "long_500ms": 32.2889490045208
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_126",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 126,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2dc6c64ca91e57fab13f5c5e59b6453c14ab4ffc321fdaf211992f44883a50fb",
+    "raw_maxima": {
+      "short_31ms": 39.696967478088425,
+      "medium_125ms": 29.05994276177657,
+      "long_500ms": 31.70170359444765
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_127",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 127,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "370fea2ece3ed8e6d4a28c88f1e77491d321c6795caf4ce4e5fe03095a118424",
+    "raw_maxima": {
+      "short_31ms": 63.727432043672536,
+      "medium_125ms": 25.16529211279949,
+      "long_500ms": 19.73324970435513
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_128",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 128,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a081c149c97d83dbcaab84ea0e821b815064b82b5925d9b0086e3c22e32722db",
+    "raw_maxima": {
+      "short_31ms": 68.06071263887517,
+      "medium_125ms": 58.219702967744425,
+      "long_500ms": 26.56280265379322
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_129",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 129,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "30542a592ea084e95b20fb30b8213be3e7e65f6332d20cad9f216cebb10db838",
+    "raw_maxima": {
+      "short_31ms": 69.24471457502813,
+      "medium_125ms": 31.174329967650465,
+      "long_500ms": 29.077669663088276
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_130",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 130,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2c609560e05f0e654c1ab4fe83e386fbe6468297bb275ace3fa0ee7e0c8d3463",
+    "raw_maxima": {
+      "short_31ms": 44.549119880854555,
+      "medium_125ms": 19.1079860011893,
+      "long_500ms": 32.498049929068145
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_131",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 131,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "41b835b25552aa1e4cea56c6105a38b8b947b4f442176e09c0b9a2d478b0bdff",
+    "raw_maxima": {
+      "short_31ms": 111.92461678050921,
+      "medium_125ms": 21.38476059732082,
+      "long_500ms": 22.67227410265614
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_132",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 132,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2fc734ce5e67dd2b6affbced67b373b8d5c39b515035cb92d67dc6d5db562ffb",
+    "raw_maxima": {
+      "short_31ms": 44.78590012796264,
+      "medium_125ms": 43.82169554144669,
+      "long_500ms": 32.54274594623375
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_133",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 133,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6f373ae76a0caf7aefd960edfd96b40dc5293169005ada42507a4316a30d47e0",
+    "raw_maxima": {
+      "short_31ms": 55.50327091043303,
+      "medium_125ms": 18.13545296654493,
+      "long_500ms": 21.05506764857686
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_134",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 134,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ae8171349c825e7b98bf1e9a5a34c060004bdca70eaa905e737d300e47ff30a8",
+    "raw_maxima": {
+      "short_31ms": 93.38783163344758,
+      "medium_125ms": 30.824995510742376,
+      "long_500ms": 25.240204038394324
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_135",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 135,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "38e5292b112419eebe2dd71082baea0062f3527bd769c9e239fb354078513af1",
+    "raw_maxima": {
+      "short_31ms": 61.55304977143793,
+      "medium_125ms": 34.173931849138334,
+      "long_500ms": 23.94521243968216
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_136",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 136,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5a0f573e573279cdae910dc67ec375f29d5ed36aee8340403767a899afb3fec7",
+    "raw_maxima": {
+      "short_31ms": 47.214436970229954,
+      "medium_125ms": 21.627505364393787,
+      "long_500ms": 24.20778405798967
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_137",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 137,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "20c557be5cfcef24a5cbbe00a1cbd31749dacef2e35bf98627dd39a6e2720bf4",
+    "raw_maxima": {
+      "short_31ms": 66.17107180949569,
+      "medium_125ms": 34.26188055368343,
+      "long_500ms": 36.11277605098216
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_138",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 138,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b693fcb01ce14edc5f8cce0dceb84444988c08ce6f5d75a0c478b3d2ed5c191c",
+    "raw_maxima": {
+      "short_31ms": 53.46900060119054,
+      "medium_125ms": 35.88234968534289,
+      "long_500ms": 22.097381335559056
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_139",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 139,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4957a5b398d72c76e0c0f2a54dfd0badf2e4970b99cdb8343ecd691f1eb4b40d",
+    "raw_maxima": {
+      "short_31ms": 87.94129183343968,
+      "medium_125ms": 33.01602056336831,
+      "long_500ms": 42.64948830615532
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_140",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 140,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8ab3993a4ed1836ec92c941aadcff67c4cdf194d7eb4c0158ddf0538cb5f4c16",
+    "raw_maxima": {
+      "short_31ms": 70.14963288300909,
+      "medium_125ms": 21.9269822923854,
+      "long_500ms": 25.35481608851741
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_141",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 141,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "667fe152070168bcf1e3665d9ea36777f8021637165d25844c1a7e95fc35bd9d",
+    "raw_maxima": {
+      "short_31ms": 101.91626954676829,
+      "medium_125ms": 32.53453306860387,
+      "long_500ms": 48.186046892759606
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_142",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 142,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e41c5a93fdfd5c5d7eed22516aa537ed0bb33deb5fc960c64a8076b22de2c19d",
+    "raw_maxima": {
+      "short_31ms": 45.3281928476691,
+      "medium_125ms": 33.22276195827392,
+      "long_500ms": 36.14036042654858
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_143",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 143,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "04be586f3e491bdbe1c05add495557ee835a56e2cef300f36db301c72ede65fa",
+    "raw_maxima": {
+      "short_31ms": 77.42858804642324,
+      "medium_125ms": 27.45785908601453,
+      "long_500ms": 37.87429000308907
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_144",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 144,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "75ae3069bfcf8a23d307665a9cbfeac1947bf3fa4e8d5adb80e485a301c102df",
+    "raw_maxima": {
+      "short_31ms": 928.5922476247202,
+      "medium_125ms": 26.794143946591255,
+      "long_500ms": 35.623945701880004
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_145",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 145,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "988f68e9165fa32d461165f3f3bcd55f6d335d05e886f1f3594e48cc8a3eacb4",
+    "raw_maxima": {
+      "short_31ms": 122.82983790417556,
+      "medium_125ms": 29.823576172509117,
+      "long_500ms": 29.723411317805628
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_146",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 146,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "df86dd1808d7447a6c26c5531e4d8307472ff5be2c9ecc2764540b7064055708",
+    "raw_maxima": {
+      "short_31ms": 66.40454686002452,
+      "medium_125ms": 18.155303334913953,
+      "long_500ms": 16.78995086703931
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_147",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 147,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ab1b150d4a27b5256ff0f997da920eaa5bd64a759a61496b7fb348af60e8167c",
+    "raw_maxima": {
+      "short_31ms": 61.9971933130345,
+      "medium_125ms": 34.587360988083034,
+      "long_500ms": 25.18007061709479
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_148",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 148,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1c07e5451c0e66e880b02167a822c490cb14443f16ac3f97ea3914d59c374a13",
+    "raw_maxima": {
+      "short_31ms": 61.678377734984956,
+      "medium_125ms": 33.18419970548102,
+      "long_500ms": 19.01458835733352
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_149",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 149,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8e4fe2455c12d750a1c664e869f38327f19a5491762382e88946fbaa179a1047",
+    "raw_maxima": {
+      "short_31ms": 41.886379410429655,
+      "medium_125ms": 45.988798892951905,
+      "long_500ms": 32.90477494886529
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_150",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 150,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f54730ff95a20ec46dffc113d3cb2b5de33604fdc0d9645e9fb394ef0e88a3b5",
+    "raw_maxima": {
+      "short_31ms": 67.66547633956236,
+      "medium_125ms": 44.462729995231044,
+      "long_500ms": 42.81774737464082
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_151",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 151,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e0c1ceb9b27d877a099c0d91a1f2c7a9ba6e566935f420617f313e84d950311a",
+    "raw_maxima": {
+      "short_31ms": 50.247832207243846,
+      "medium_125ms": 33.35961115182472,
+      "long_500ms": 59.59275692921513
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_152",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 152,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "06913f769a82cdc8cc9490ac0a15a0b9474c6ea53be1a050bb112cd7ad4914ea",
+    "raw_maxima": {
+      "short_31ms": 67.19208364246933,
+      "medium_125ms": 37.42468069895038,
+      "long_500ms": 26.768362442025765
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_153",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 153,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "00d9bdd864168dd4553df8704d99d5c1f2e233dbba2d1b253fe9437684366152",
+    "raw_maxima": {
+      "short_31ms": 58.78565783144509,
+      "medium_125ms": 44.387596241824866,
+      "long_500ms": 54.25338704265587
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_154",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 154,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "20b4afe8595209409cced44f1a2506b5e658d12dc51443181ac01946221d905d",
+    "raw_maxima": {
+      "short_31ms": 33.146949140585015,
+      "medium_125ms": 31.542772572172332,
+      "long_500ms": 22.51494292802347
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_155",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 155,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a6a1afb544901b786f7ab9a32eb1562d2fbc8ec4cb2b5ad20af09432f2093121",
+    "raw_maxima": {
+      "short_31ms": 78.50645128445895,
+      "medium_125ms": 57.309723756991644,
+      "long_500ms": 40.620137754951934
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_156",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 156,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "dc11027673971d9b58afeb61d9475080123232a78f4251d3ee04d5688bd5f274",
+    "raw_maxima": {
+      "short_31ms": 122.42270918081906,
+      "medium_125ms": 49.64331205905438,
+      "long_500ms": 25.740540798581204
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_157",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 157,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e1522e4ef9f788a86e0453fd19353b4250c08d00a3a928531d11b2ae28a7171d",
+    "raw_maxima": {
+      "short_31ms": 570.8681050350867,
+      "medium_125ms": 178.18119175540747,
+      "long_500ms": 37.16650243659956
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_158",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 158,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "87e1293472cf84205f1af80a4331530250882465b7448abda449ec99c6ab95d5",
+    "raw_maxima": {
+      "short_31ms": 76.26069258184859,
+      "medium_125ms": 29.186406532523954,
+      "long_500ms": 31.368406111112265
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_159",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 159,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "03b1caf8e8027c79d0935b064403a7efbe48a10968f7f4707296f0d5045e8c03",
+    "raw_maxima": {
+      "short_31ms": 55.652852159552396,
+      "medium_125ms": 31.245533709461736,
+      "long_500ms": 29.766177125570017
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_160",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 160,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a257bcdef638ba141dbe1967bdc9460f137ea6961129dae8e757e6f15d96ddc0",
+    "raw_maxima": {
+      "short_31ms": 57.371407008742494,
+      "medium_125ms": 24.718404830711204,
+      "long_500ms": 27.542238727186444
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_161",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 161,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ebca0147453c740e7f7f423f2327eeb5ae63d7bdc8cbfd416344573e8696c34e",
+    "raw_maxima": {
+      "short_31ms": 34.52642436283971,
+      "medium_125ms": 24.31474783212357,
+      "long_500ms": 29.48679918664306
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_162",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 162,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b6fc2b22562a4a7b6fb98df887c7d4ad94a77c7c6548945822699f9f0d1ae8b7",
+    "raw_maxima": {
+      "short_31ms": 85.80445692494162,
+      "medium_125ms": 53.8753908030732,
+      "long_500ms": 36.11653836887297
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_163",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 163,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "15ff3eeb62f1446462462834f787825ccb4d8697cd219c7c53a1174ce6e622ba",
+    "raw_maxima": {
+      "short_31ms": 76.0816990556906,
+      "medium_125ms": 25.651166776170527,
+      "long_500ms": 27.15767719547256
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_164",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 164,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c3c4179bd2e9161b81e82667d3fa1a00910673d3fa2aae32867d72fb30f60420",
+    "raw_maxima": {
+      "short_31ms": 57.946283487144115,
+      "medium_125ms": 25.74965816585593,
+      "long_500ms": 39.71710569089917
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_165",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 165,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0af12f08b02902ab8054f80decb446d96b7bcdf4f209b149d9bfff440553633a",
+    "raw_maxima": {
+      "short_31ms": 91.05418129168409,
+      "medium_125ms": 53.7098832403506,
+      "long_500ms": 20.863835528552855
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_166",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 166,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "92ab6ecdf9f168af7b376d9367953e0b99f76402758ecda2c902c7b457c93e8a",
+    "raw_maxima": {
+      "short_31ms": 53.092827181709396,
+      "medium_125ms": 35.44418983999285,
+      "long_500ms": 37.46463703469043
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_167",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 167,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d4511726c04ab885d1f68cff7f504cb991a1da6d4ef2ef08257cdfcf7ecec449",
+    "raw_maxima": {
+      "short_31ms": 57.619170594164416,
+      "medium_125ms": 37.59537171387356,
+      "long_500ms": 40.76442598137112
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_168",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 168,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f698a97c4da5976a2be69952cfaba87c0b5b8ff315be6c256e6c1541e9aa737c",
+    "raw_maxima": {
+      "short_31ms": 68.85296954790886,
+      "medium_125ms": 34.0888056348557,
+      "long_500ms": 26.966394489558382
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_169",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 169,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c38951be8586b9a4e81ed59afef4d981f41a7395ab22dcb3cda4d1ad0d814ba0",
+    "raw_maxima": {
+      "short_31ms": 128.18877319058004,
+      "medium_125ms": 42.05711754793972,
+      "long_500ms": 31.63942195287553
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_170",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 170,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "987fb8fcc111bbb3770507d528388d07ad1f4398864b96881281f4b34d80de1b",
+    "raw_maxima": {
+      "short_31ms": 73.0973367882009,
+      "medium_125ms": 34.45592404830332,
+      "long_500ms": 26.645142875166407
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_171",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 171,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "fed3f45eae25caad96cbbec585110541dfaf7bb28da136e3bb284c4cd8dd7141",
+    "raw_maxima": {
+      "short_31ms": 70.06135979422628,
+      "medium_125ms": 33.633133936358135,
+      "long_500ms": 39.85521419076227
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_172",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 172,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4136da83bc30308b2c9bde06a465b2fe96e3923981cd5d1bd03675ecc921af70",
+    "raw_maxima": {
+      "short_31ms": 69.32091788035498,
+      "medium_125ms": 41.28474266335645,
+      "long_500ms": 35.07701968963732
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_173",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 173,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "022828569ded9069e04d202067e7f7f601ff9cab56418d06eccb987362478c09",
+    "raw_maxima": {
+      "short_31ms": 60.14010670913614,
+      "medium_125ms": 27.1658712040122,
+      "long_500ms": 56.33259452979171
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_174",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 174,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9c2796ce68782ef0fa26de773942913a3c7d43c22728f77bebe6a508f934e364",
+    "raw_maxima": {
+      "short_31ms": 84.84194297972915,
+      "medium_125ms": 32.67590065348975,
+      "long_500ms": 27.314835186919357
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_175",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 175,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3302af001d1d858aa628112cce26f6c8d1692873b6e971425e49160debab674d",
+    "raw_maxima": {
+      "short_31ms": 74.58031614869522,
+      "medium_125ms": 36.82549426475482,
+      "long_500ms": 30.552140304431056
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_176",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 176,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "11f2116529989b3aca82fabec77061a513311aa0f55aa3a0fcd0826d92e30c47",
+    "raw_maxima": {
+      "short_31ms": 71.87533332034717,
+      "medium_125ms": 19.299527567263663,
+      "long_500ms": 29.18108765044238
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_177",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 177,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2b56ba740f396d9364c0cd4ce9106e409a0b6c3affaadaa21701560f91bd1ece",
+    "raw_maxima": {
+      "short_31ms": 75.46673226156932,
+      "medium_125ms": 35.03384065129925,
+      "long_500ms": 42.89106493718981
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_178",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 178,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "106ccc51347fd1ad3439cca082d64baa60132db9c693b70d94d21a93ce50314b",
+    "raw_maxima": {
+      "short_31ms": 55.35376824428575,
+      "medium_125ms": 28.884923847749242,
+      "long_500ms": 26.545826822670755
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_179",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 179,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b24bfddd98f50c8df1c64fc8d8f4451420173b8fd151bd63595113a9a0f1358d",
+    "raw_maxima": {
+      "short_31ms": 65.45820915387587,
+      "medium_125ms": 31.32530523446272,
+      "long_500ms": 26.28861880566998
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_180",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 180,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4a909c3dc93a8a06d75dbecec4c684e363c2f38583111d3ca6355f3ecd3f5f01",
+    "raw_maxima": {
+      "short_31ms": 58.0792516283262,
+      "medium_125ms": 44.53979056074348,
+      "long_500ms": 28.500385200140016
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_181",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 181,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "65fe9a5ec8464b3a49cd41bd2cb722f948fb2b83b79d3e39708f796bd7a3eb87",
+    "raw_maxima": {
+      "short_31ms": 86.37870183626198,
+      "medium_125ms": 35.3664179743494,
+      "long_500ms": 33.404643069664765
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_182",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 182,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "019652847f08261980f31f18037487b3689f1982c06b677b49c9cb08262c68ec",
+    "raw_maxima": {
+      "short_31ms": 68.72726378287851,
+      "medium_125ms": 28.736840283897788,
+      "long_500ms": 46.51467410357825
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_183",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 183,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "91075291365520bc0f57f9c02026b545c98945fe07548daaca8eea280f3ce30e",
+    "raw_maxima": {
+      "short_31ms": 94.5730844114029,
+      "medium_125ms": 48.36476031943435,
+      "long_500ms": 46.473976416318386
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_184",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 184,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f4c566fe3e870cb509f98c163f007d174ee70141e6d93e5b32880b74654997af",
+    "raw_maxima": {
+      "short_31ms": 50.469001929676786,
+      "medium_125ms": 29.71310160812799,
+      "long_500ms": 31.66534224104799
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_185",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 185,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6844da18439db88cc46da62a7b10308dc3be5d59b2db1b4fd0b5343754987c23",
+    "raw_maxima": {
+      "short_31ms": 50.326693995494026,
+      "medium_125ms": 23.99617496438224,
+      "long_500ms": 24.135966986526057
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_186",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 186,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "cf678a284cc72b947155d125f9b497db86e49ff6d66ecd4522de7ef126c2c35c",
+    "raw_maxima": {
+      "short_31ms": 42.09113444848263,
+      "medium_125ms": 24.758884204591553,
+      "long_500ms": 21.587640515870596
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_187",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 187,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "39e236f185bc3c70ea6857d42d922fc38043ba06a56338adc9d9266ad18639f7",
+    "raw_maxima": {
+      "short_31ms": 61.81613452413226,
+      "medium_125ms": 32.770057109244874,
+      "long_500ms": 40.94294736496495
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_188",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 188,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8e9c5611811dd2a03258d6852da82aa76f81bc4de39f0f4e3355494871b7e9d7",
+    "raw_maxima": {
+      "short_31ms": 56.81509109316828,
+      "medium_125ms": 37.10837849128339,
+      "long_500ms": 26.76449503174908
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_189",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 189,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a43440d5997060dfc79585e6dc29ea64430f8330a5873d3470a24853a1ca6180",
+    "raw_maxima": {
+      "short_31ms": 84.68903580462697,
+      "medium_125ms": 24.07436853838056,
+      "long_500ms": 25.481777502048608
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_190",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 190,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "21c4b8001adda20d10e5396e49816d14ec387623563a234a4fe0bfd325888d40",
+    "raw_maxima": {
+      "short_31ms": 64.64906061572259,
+      "medium_125ms": 34.28195593788412,
+      "long_500ms": 26.62044177053031
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_191",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 191,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f0ec7a56fb9b889d895aa1517c442e887257e3c22548245358c8ff7939f4ef59",
+    "raw_maxima": {
+      "short_31ms": 54.16617423879707,
+      "medium_125ms": 29.056977459440574,
+      "long_500ms": 43.04500992618074
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_192",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 192,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e06322b4195d99f7678414ea642abdaecc879ead38f368f9558b95aecdaae623",
+    "raw_maxima": {
+      "short_31ms": 71.26866953547159,
+      "medium_125ms": 24.078722595210593,
+      "long_500ms": 38.56107053646841
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_193",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 193,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9b2a50f2c8e70dc733544a8cf2556d86d6818a4ef8e9c82e3edc55eef9efff02",
+    "raw_maxima": {
+      "short_31ms": 81.35671213322269,
+      "medium_125ms": 33.26099794258672,
+      "long_500ms": 40.34505259395886
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_194",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 194,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9d506d2d93e2f155c7bc038f45a350c71957bbe55b9de66b0af91dc062a54061",
+    "raw_maxima": {
+      "short_31ms": 50.38310545658008,
+      "medium_125ms": 26.811869388493808,
+      "long_500ms": 31.180433982653206
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_195",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 195,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c73e328caef3124c6dea0b2a23060f5ebf381462b2c54972aa2c07e85218dbe5",
+    "raw_maxima": {
+      "short_31ms": 68.69591565238963,
+      "medium_125ms": 36.50501225072996,
+      "long_500ms": 39.75135304369253
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_196",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 196,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "84e58d81928c83bdb34f6e4d7883e35bcc48475456474a1b55aabbb29c945639",
+    "raw_maxima": {
+      "short_31ms": 47.36069965867762,
+      "medium_125ms": 19.257929036945193,
+      "long_500ms": 26.121477223429686
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_197",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 197,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a9c9613f25c9a5bcf9242a47a40d68b4d4511c716d1ac9f3beb67c43e28ad6fc",
+    "raw_maxima": {
+      "short_31ms": 47.46387669095304,
+      "medium_125ms": 21.2333545182372,
+      "long_500ms": 23.853277064702834
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_198",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 198,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d4b4a7802d7da41430d1e20460ca4596ed4c755010600b53874b5adff6adf1f4",
+    "raw_maxima": {
+      "short_31ms": 89.90832135423449,
+      "medium_125ms": 43.23360133794908,
+      "long_500ms": 30.162164683762477
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_199",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 199,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a5703e2e9542d4dd2f1142be9689f5bbefa4ec295b8fa00df9014b04642733aa",
+    "raw_maxima": {
+      "short_31ms": 49.784966507414495,
+      "medium_125ms": 31.56464530564643,
+      "long_500ms": 38.23287772111093
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_200",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 200,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f440ab769cd1b0f3db3af53fd330ad115a6e5a46a4e6758803466a5a359f3a96",
+    "raw_maxima": {
+      "short_31ms": 76.27835867395021,
+      "medium_125ms": 34.18131376304785,
+      "long_500ms": 35.346352263553094
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_201",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 201,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "87db2341eba0597797698c5efb2ef2628153e075031617b217499ab7c0dbdf96",
+    "raw_maxima": {
+      "short_31ms": 62.45682828129496,
+      "medium_125ms": 43.198785700436055,
+      "long_500ms": 32.42506672316649
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_202",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 202,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0273641ecba98e364ff2f2000c22653de3c992655fae6fa80bacdfc18e6aa87b",
+    "raw_maxima": {
+      "short_31ms": 69.15026342300179,
+      "medium_125ms": 22.6315665775451,
+      "long_500ms": 34.220422623901314
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_203",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 203,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1b623559cae027a252d29bdd3dc608527753ad01e75b92fab36c4ffd9fd8d53c",
+    "raw_maxima": {
+      "short_31ms": 65.17961534950584,
+      "medium_125ms": 27.900217713920767,
+      "long_500ms": 43.21016270047906
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_204",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 204,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "915a50deca4c4dc220c8280bbb8e7f43d45ec2b3480f5debc768687ee0b8843e",
+    "raw_maxima": {
+      "short_31ms": 60.668918704049716,
+      "medium_125ms": 32.3972317632777,
+      "long_500ms": 28.27535039211142
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_205",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 205,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "df15fba55b0a1b350c3a582305fbcfdc5e477f4ebda4b400947b86fdc8280bb5",
+    "raw_maxima": {
+      "short_31ms": 100.70788014946683,
+      "medium_125ms": 33.91699694453586,
+      "long_500ms": 38.260782385168135
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_206",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 206,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "95a4544771376f4d1730207d77a71ea49b3fc07e7cd2b26c878c9ca06100b0dc",
+    "raw_maxima": {
+      "short_31ms": 58.061316748460364,
+      "medium_125ms": 19.015521681599786,
+      "long_500ms": 44.99265636990182
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_207",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 207,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "04e8a2ff3e85adc55c11da048f6eacc4332328f6efbf6989b0559c4bec2e915d",
+    "raw_maxima": {
+      "short_31ms": 59.31389413931338,
+      "medium_125ms": 39.83547793335062,
+      "long_500ms": 38.78798535304888
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_208",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 208,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "87562c837060098c70781e83a1b6ad525fcf33e8482160054c276874a05fee10",
+    "raw_maxima": {
+      "short_31ms": 65.32010773982857,
+      "medium_125ms": 27.36818260211146,
+      "long_500ms": 37.156145524090626
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_209",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 209,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "275c2263c79e6dcb877393175d865dfd117fef6c8fb3f3d959c2c985d70d8128",
+    "raw_maxima": {
+      "short_31ms": 47.533077776046355,
+      "medium_125ms": 28.664679053335973,
+      "long_500ms": 22.213549759060882
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_210",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 210,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "169d7a12d1b50d8990b7c283d2c5cbf1fa0592c8a752dec4dd2af76e97332689",
+    "raw_maxima": {
+      "short_31ms": 55.15668030822754,
+      "medium_125ms": 22.20996072052905,
+      "long_500ms": 41.952593971348875
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_211",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 211,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2ba2240bbbcb163dae92f4be6cd02a7a6941f352020f9799f997a6c15907bf29",
+    "raw_maxima": {
+      "short_31ms": 67.67879337187294,
+      "medium_125ms": 24.76900518971847,
+      "long_500ms": 21.759603687194137
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_212",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 212,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c5a744410c17d613cbef87b4408afe5c450d5f26087e2dfe227eb620d5b2580f",
+    "raw_maxima": {
+      "short_31ms": 62.50323983102942,
+      "medium_125ms": 25.637431109348867,
+      "long_500ms": 40.507377697550254
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_213",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 213,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c151ec1b1c8cba2ce2aa089858c54e5f364f995016049c715cb3c8d945368ced",
+    "raw_maxima": {
+      "short_31ms": 59.11923524350054,
+      "medium_125ms": 29.216282301290082,
+      "long_500ms": 34.6593896758245
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_214",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 214,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9d8dfc834fb6512a3e493d04b37d5df59abb415aa4281e81be6f363b8ebaaab1",
+    "raw_maxima": {
+      "short_31ms": 73.20681511102084,
+      "medium_125ms": 24.571983066186835,
+      "long_500ms": 22.746777726209636
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_215",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 215,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0606b2e0bb772d7daa6187cad648d85afa146a9e902e237f0742b847c3382b55",
+    "raw_maxima": {
+      "short_31ms": 41.072695977859595,
+      "medium_125ms": 37.968692440507624,
+      "long_500ms": 19.499752381404647
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_216",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 216,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "17599157f40575175a0b2d3139575b9895e284df0fcd343e13f5e49f4506217f",
+    "raw_maxima": {
+      "short_31ms": 74.4489945804705,
+      "medium_125ms": 24.6706459968267,
+      "long_500ms": 19.451100314697406
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_217",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 217,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "834ceabb0fc4ecd17be0e2fa54cdbbad1578ee036667d3e92b956258e396645d",
+    "raw_maxima": {
+      "short_31ms": 44.63400664910015,
+      "medium_125ms": 34.75218485482264,
+      "long_500ms": 15.008550715607358
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_218",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 218,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ed917c2035966f9ef49531c24dab739ec824f55df494a11da4ef2ef1e615f7b4",
+    "raw_maxima": {
+      "short_31ms": 42.177384321401405,
+      "medium_125ms": 44.539463067724554,
+      "long_500ms": 96.84738609730465
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_219",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 219,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d875c1285bea7a80c81b4b4e9c845fac6bcf815e0f67bf077820a6834625a5c7",
+    "raw_maxima": {
+      "short_31ms": 57.25023735185764,
+      "medium_125ms": 49.28469754319537,
+      "long_500ms": 41.89080853744961
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_220",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 220,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "506934729c8dacc436a7eb70263450e2d5e948a5988f1af70313478db0c4339a",
+    "raw_maxima": {
+      "short_31ms": 78.9938578934839,
+      "medium_125ms": 45.51403826814025,
+      "long_500ms": 31.024152663092803
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_221",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 221,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f13f36b470601ed974e2779f8a9e1a4aacef41b873598a2fbf7fcb2967e3242e",
+    "raw_maxima": {
+      "short_31ms": 85.31479768381419,
+      "medium_125ms": 38.167343290831354,
+      "long_500ms": 29.54649866808246
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_222",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 222,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2ede2700c45b1a6b88be2d25512274633da8f98c6541feaff091b83b80c5067e",
+    "raw_maxima": {
+      "short_31ms": 42.627893842555416,
+      "medium_125ms": 29.935089560236086,
+      "long_500ms": 37.06394800022695
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_223",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 223,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9473c0a2e7058822403f5dcacc88f1209292a402d5d6bc454c51178931e2bc17",
+    "raw_maxima": {
+      "short_31ms": 57.883297194514185,
+      "medium_125ms": 24.278548705059887,
+      "long_500ms": 25.310723193326748
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_224",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 224,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4df10b5e024d7d43858836ee13dc31d6dc3a48c8f2fb4b3d661a34cc08037d38",
+    "raw_maxima": {
+      "short_31ms": 87.26997320581953,
+      "medium_125ms": 21.853734722215677,
+      "long_500ms": 25.09587009149341
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_225",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 225,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c4381ce661a850bca7ba3713c6f852afc3ecd5c2810ff26e7f56ba556e8f8268",
+    "raw_maxima": {
+      "short_31ms": 39.649569475066976,
+      "medium_125ms": 25.762340411971103,
+      "long_500ms": 23.207973390582993
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_226",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 226,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6295d230e6f5078faa34ac8f7c830e82991bc3997f4e1db66e7ce7d45a00c30e",
+    "raw_maxima": {
+      "short_31ms": 62.8159397921669,
+      "medium_125ms": 49.82419808865367,
+      "long_500ms": 30.358208798776904
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_227",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 227,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6c102492cf0a6a6c3e47c51349ac7e5a7793a9e0aaea7abb20b4d926ddbad016",
+    "raw_maxima": {
+      "short_31ms": 47.06744338672985,
+      "medium_125ms": 24.669033512097773,
+      "long_500ms": 32.16851792503842
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_228",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 228,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d9fecb9b15bae4b560cb1fb632c72636f423e8c29d101b95f916cfc44ec627c5",
+    "raw_maxima": {
+      "short_31ms": 83.69979544168889,
+      "medium_125ms": 52.85497600528481,
+      "long_500ms": 27.88569481182349
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_229",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 229,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "53e51c5200d80cfe71a66394e4a50fc9567a8a851732555eb4b19bb1d78d58cd",
+    "raw_maxima": {
+      "short_31ms": 51.56894043350522,
+      "medium_125ms": 33.02933661201558,
+      "long_500ms": 30.269100641315685
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_230",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 230,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6cd7c5299c4f9b6831ee48dd2f467ee20bc39417f0f8021fc8605a867a1b07fc",
+    "raw_maxima": {
+      "short_31ms": 62.118214542985335,
+      "medium_125ms": 26.307816567470127,
+      "long_500ms": 17.355606570511114
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_231",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 231,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1fdb327dd0534352d4d9bd82f5e6c32b33d03aee389bbe43c12fee8c2a017adc",
+    "raw_maxima": {
+      "short_31ms": 41.12113658405341,
+      "medium_125ms": 49.51421683908986,
+      "long_500ms": 35.48909540979076
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_232",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 232,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5bd6393f900686b7b549178a105c3e3396f0ba2d473c8c11ca1c182ff33169b3",
+    "raw_maxima": {
+      "short_31ms": 92.43757819090153,
+      "medium_125ms": 27.255397118671056,
+      "long_500ms": 33.06009373095241
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_233",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 233,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d5c2f36a57e58033de0e1183b59bc0182c1729eae76160b5a33812c010ca0510",
+    "raw_maxima": {
+      "short_31ms": 103.8659520548539,
+      "medium_125ms": 35.647636760893704,
+      "long_500ms": 34.87078183837913
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_234",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 234,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1f3904b40b22ba2e62a57daedd06c018877beb5974d81aaff09b840ec3b5302a",
+    "raw_maxima": {
+      "short_31ms": 53.96873860071919,
+      "medium_125ms": 30.40508534066106,
+      "long_500ms": 21.282211219164154
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_235",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 235,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0b64044ab2db81a3fe0ba03d39829326e0036ed4c09628e7d3b268f45bd956a7",
+    "raw_maxima": {
+      "short_31ms": 44.673580578864176,
+      "medium_125ms": 24.723536065909258,
+      "long_500ms": 26.808634311381244
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_236",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 236,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "435a2d9f46cbd72d765a3892e8907f5605749f7b29c3b19e1039b3361a1524eb",
+    "raw_maxima": {
+      "short_31ms": 69.15921956325258,
+      "medium_125ms": 31.750589528213037,
+      "long_500ms": 39.11794481582322
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_237",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 237,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a52acf8ff0ef1177aca94487178bd12c69276a156f81ca7508c32172cee83f69",
+    "raw_maxima": {
+      "short_31ms": 51.32953281485694,
+      "medium_125ms": 34.51936985601889,
+      "long_500ms": 32.90595527612465
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_238",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 238,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "749e32e0689382c22eeea04094ba3c80a705bf6509345234d29f2ed747a1fddf",
+    "raw_maxima": {
+      "short_31ms": 59.2075688461802,
+      "medium_125ms": 23.34739888260389,
+      "long_500ms": 35.218965177715276
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_239",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 239,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d5533e53cf55374098d987c5a1873940f5239db084d493fefbe49cd54d2f02f3",
+    "raw_maxima": {
+      "short_31ms": 42.27832725795639,
+      "medium_125ms": 29.500260579452153,
+      "long_500ms": 27.602973898415414
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_240",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 240,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "dd10242dd2b86613b65b309ab995f859c38f3e2249b19887839f31bca9e3a768",
+    "raw_maxima": {
+      "short_31ms": 71.39539972540233,
+      "medium_125ms": 32.268193955261154,
+      "long_500ms": 30.97752300864822
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_241",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 241,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "dc3c99343cf1b2a4f0d47179d4a0bfef5a715035d3645e95c757e6da06638780",
+    "raw_maxima": {
+      "short_31ms": 53.11297505370008,
+      "medium_125ms": 40.17062232810624,
+      "long_500ms": 20.084474414055826
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_242",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 242,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "84a6414b3f47324cfdd4f7e389612cea13aacc00d046c4b05db07f034738b217",
+    "raw_maxima": {
+      "short_31ms": 85.53817776868175,
+      "medium_125ms": 54.318045485491425,
+      "long_500ms": 42.686881013527326
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_243",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 243,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "adeba02f16f36afd1d2bcad121b907ab46fd2fc7985a1ad6d8a6760369cb65fc",
+    "raw_maxima": {
+      "short_31ms": 71.25466544864457,
+      "medium_125ms": 33.491061909976295,
+      "long_500ms": 32.86536939435944
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_244",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 244,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "40a61b1d959b34f37a6e3876a6bf657b4c12f1b349bb14a8f23d363560d46c6a",
+    "raw_maxima": {
+      "short_31ms": 42.5292368702562,
+      "medium_125ms": 31.126051399349624,
+      "long_500ms": 31.35325170865805
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_245",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 245,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "199d7a865fd87cbb20c1942b1336f80717c5fded6a8a40bdd2c3a61f098da2b3",
+    "raw_maxima": {
+      "short_31ms": 53.30774914580964,
+      "medium_125ms": 29.714520590563204,
+      "long_500ms": 19.21277749175322
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_246",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 246,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4e5872caf9f32b0b58a76d4a756e87541c86f8fd3b13fca5b4c622a561c0296f",
+    "raw_maxima": {
+      "short_31ms": 77.76655929100392,
+      "medium_125ms": 26.902869181976545,
+      "long_500ms": 42.42889114302952
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_247",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 247,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0fbb57f4a24f66948c3d75231c080bf1bf4ace75eb073d4c96ecb7460fa90880",
+    "raw_maxima": {
+      "short_31ms": 63.0107405045682,
+      "medium_125ms": 49.540727825432,
+      "long_500ms": 27.65541119496792
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_248",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 248,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e20b61f36680bae00fee8b436b35d96ad4417050fc4d1e745706e2222b0126aa",
+    "raw_maxima": {
+      "short_31ms": 80.64882767204038,
+      "medium_125ms": 30.884549200840453,
+      "long_500ms": 27.778749470077027
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_249",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 249,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "50cee7715e9303cf6a0f3b39e2cdae1a2e04f1eaa4ac8d390b1c34a3d5ba7543",
+    "raw_maxima": {
+      "short_31ms": 29.93629401686954,
+      "medium_125ms": 22.22314522259122,
+      "long_500ms": 36.06582651798506
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_250",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 250,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "fe5da428da8eb7aae6c4fdc22f28e9ccde20b40c06ed9a5f92523d266da7c0e6",
+    "raw_maxima": {
+      "short_31ms": 83.45124550720124,
+      "medium_125ms": 34.28779176802906,
+      "long_500ms": 28.51348214373307
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_251",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 251,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "297e63bc6746af3223e5581157985ce56e5b059993c5a76559a92c1ba44b5b7c",
+    "raw_maxima": {
+      "short_31ms": 56.988972110937226,
+      "medium_125ms": 46.09250723248863,
+      "long_500ms": 61.06185842443612
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_252",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 252,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4b1bac4fd4b101f164a67a1097f9150f4faa6472b69723d0818552d4b7f489e9",
+    "raw_maxima": {
+      "short_31ms": 582.6853699081614,
+      "medium_125ms": 129.228027305313,
+      "long_500ms": 47.993212311764864
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_253",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 253,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4e70a0dcbf3bc615d972742c10b4ddd3bbf38999f4edddd8671855c52dcc1578",
+    "raw_maxima": {
+      "short_31ms": 51.964746942112455,
+      "medium_125ms": 31.3553020320161,
+      "long_500ms": 25.4119292495053
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_254",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 254,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f0b698b04bed7fddeca1b00e44c27205592e6b8183bd59bab23935863fe3704f",
+    "raw_maxima": {
+      "short_31ms": 58.034007952525215,
+      "medium_125ms": 31.90401714241519,
+      "long_500ms": 42.81269600239945
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_255",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 255,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7529b73a76d3e3c3bd2e543b4ee2ed603737548269995a0053cd2f44ee7283f6",
+    "raw_maxima": {
+      "short_31ms": 68.340177245649,
+      "medium_125ms": 47.042505408726214,
+      "long_500ms": 33.909387027634295
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_256",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 256,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "911aeaef1c899ff64b336738bb15fd38c9d6dcfab0813ead90eae6a012190d30",
+    "raw_maxima": {
+      "short_31ms": 70.9288114047437,
+      "medium_125ms": 32.373905668839775,
+      "long_500ms": 30.039244920766834
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_257",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 257,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "95f03947f51d81d14efb19b20ae6351afb3c5fa9cbdb64244b72f6ed56299da3",
+    "raw_maxima": {
+      "short_31ms": 57.55003881711713,
+      "medium_125ms": 41.507673562842456,
+      "long_500ms": 49.49378284604713
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_258",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 258,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2943b51de05b1ab0a9abf05f0e9458f431d05cc744d8c3dd0a8a42a0341d3483",
+    "raw_maxima": {
+      "short_31ms": 73.95931652811727,
+      "medium_125ms": 58.53632084278218,
+      "long_500ms": 38.77570532360734
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_259",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 259,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4af12b56c4019f1f06f5a4633a7c40e6d5e5f261aa656225b619fc97e28e447e",
+    "raw_maxima": {
+      "short_31ms": 71.7795813759665,
+      "medium_125ms": 35.74641756220707,
+      "long_500ms": 24.994975579504086
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_260",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 260,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1e47f2b62e531f2d0a72fd73fcf5984e5ed285f9f85a9ebecf62ab7a8599fb26",
+    "raw_maxima": {
+      "short_31ms": 52.9781226392334,
+      "medium_125ms": 25.688341899034842,
+      "long_500ms": 25.544388443895745
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_261",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 261,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ff08ea494c08cc7fe6b53de3ae2fb8668100c2e7d625fa0fd3d5aaae02a0a6a3",
+    "raw_maxima": {
+      "short_31ms": 67.58463392141282,
+      "medium_125ms": 29.838405092209435,
+      "long_500ms": 30.587717225635572
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_262",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 262,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b040a836657fc32e0dce38b40602829186c8f17097a9a27326fb8fa7188c435f",
+    "raw_maxima": {
+      "short_31ms": 79.06388416398252,
+      "medium_125ms": 34.992251413569406,
+      "long_500ms": 48.90801658104214
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_263",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 263,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3b39a70ee6d908f293a0cead36721f6fa1dfbeebca33cee938464a020e020f8b",
+    "raw_maxima": {
+      "short_31ms": 77.69311480493236,
+      "medium_125ms": 26.901246055393763,
+      "long_500ms": 27.163924613701038
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_calibration_264",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "calibration",
+    "index": 264,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0707af3d51f1303c2423eedbe73c3e250a91d3dadd6704721b672a84ee026341",
+    "raw_maxima": {
+      "short_31ms": 1073.483951841245,
+      "medium_125ms": 195.7973273237397,
+      "long_500ms": 25.130946647123455
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_000",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 0,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "58f73ea02a694d378686c11246f042c0acd6182271e1ad23b60fd4f38799078c",
+    "raw_maxima": {
+      "short_31ms": 56.11613196482361,
+      "medium_125ms": 21.654698372985578,
+      "long_500ms": 42.036808982727706
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_001",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 1,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a8441fbcfd0ea61448d1c580057f74987c5084e7f12246e54c3594409fb936d4",
+    "raw_maxima": {
+      "short_31ms": 82.51607884922748,
+      "medium_125ms": 17.339771927109922,
+      "long_500ms": 32.27748400387088
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_002",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 2,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a28beb92fb21604688b9cd651243c1cce5956e4231c5ade03366e8eecde0bcbc",
+    "raw_maxima": {
+      "short_31ms": 59.88927191671052,
+      "medium_125ms": 21.902742296568743,
+      "long_500ms": 20.881894754551745
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_003",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 3,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "77014b6ed0dc33994193c30507ad6b0f2a21c6df6e1aa3450fd885a5c51a3810",
+    "raw_maxima": {
+      "short_31ms": 50.87772168815718,
+      "medium_125ms": 39.10920827486116,
+      "long_500ms": 29.81303406003844
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_004",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 4,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "bc3c42edf6fb66cd714d2f4e27d294f9ed1c1f0bbc9ebdf4f1e0d87611474d51",
+    "raw_maxima": {
+      "short_31ms": 48.48617685287159,
+      "medium_125ms": 25.701951069828812,
+      "long_500ms": 40.401347953120066
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_005",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 5,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2e09a259cee6d23bab60fe524eab824f7c793612af29c9950bd047eed1912c93",
+    "raw_maxima": {
+      "short_31ms": 85.27502027393989,
+      "medium_125ms": 50.79050715914187,
+      "long_500ms": 34.249766659347266
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_006",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 6,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c63aa2ee7deeeeb6b037df6e8ea0340d4b4894add2991322fd30a428f08793ab",
+    "raw_maxima": {
+      "short_31ms": 74.3444691024769,
+      "medium_125ms": 23.848888013803112,
+      "long_500ms": 25.997598957409274
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_007",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 7,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "03bba6fa9b4975443e9b36056b9a3dcd1eb121afa77729f5d30893a21b80a4c0",
+    "raw_maxima": {
+      "short_31ms": 41.73771342908377,
+      "medium_125ms": 27.236923541479186,
+      "long_500ms": 29.271569846417098
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_008",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 8,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ab4085e760fd8eb3582ddb88f33b469e581a7819364f00b020d8b3c843334de5",
+    "raw_maxima": {
+      "short_31ms": 45.703645765269876,
+      "medium_125ms": 28.013596469990343,
+      "long_500ms": 26.162460366654066
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_009",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 9,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "700f4fd4ab980d7f0c550bcade6812b65ede649c6a889ee97001e655afe163dc",
+    "raw_maxima": {
+      "short_31ms": 66.55700798974864,
+      "medium_125ms": 21.741310104880526,
+      "long_500ms": 21.20899606023942
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_010",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 10,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c89a0573f166102b1f458ab628eb41207895203735d7625ed316bf25529dd22e",
+    "raw_maxima": {
+      "short_31ms": 61.04138171477375,
+      "medium_125ms": 42.29146739143061,
+      "long_500ms": 19.420431119457596
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_011",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 11,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d5096ec6024fcf852d10ed39011ea7f57dc1c17abe587644b413a742392b807c",
+    "raw_maxima": {
+      "short_31ms": 86.39042910368555,
+      "medium_125ms": 30.706533119094235,
+      "long_500ms": 39.84948834358228
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_012",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 12,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6cc081cb1daf9a8ea440846c6d290ca6b0642e0cde3cf3d23643fddabf6a5ed0",
+    "raw_maxima": {
+      "short_31ms": 56.25136334215357,
+      "medium_125ms": 25.631333932495508,
+      "long_500ms": 58.505836949808234
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_013",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 13,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "cbf5c091714eb7450f6d571d7f7d5f25e95b3133e3c7709908e287b46c129228",
+    "raw_maxima": {
+      "short_31ms": 56.8459749453161,
+      "medium_125ms": 26.688832652316112,
+      "long_500ms": 28.80157932180497
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_014",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 14,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d3b4810ea232b1a09e57e42457a5ada768e8a74490a767a318dd159dee43648e",
+    "raw_maxima": {
+      "short_31ms": 65.45710887319795,
+      "medium_125ms": 23.977242841777546,
+      "long_500ms": 28.8452554366065
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_015",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 15,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "799c7d230b80d002b0f470cf8dfaaba09b12e5f877360ec0d6a9eab8085e8cd1",
+    "raw_maxima": {
+      "short_31ms": 36.86203814564618,
+      "medium_125ms": 25.859376009083213,
+      "long_500ms": 24.17008467003638
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_016",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 16,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "cffd9a99f4821c638661952c260b6436448ad5965a616831657e16d788c94a54",
+    "raw_maxima": {
+      "short_31ms": 49.40517958283516,
+      "medium_125ms": 31.400943927915915,
+      "long_500ms": 26.969116810502626
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_017",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 17,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "cd193e61c72bbb631885557c6a9207b9c736fb9f4210e85cb872d29a5830ae9d",
+    "raw_maxima": {
+      "short_31ms": 45.211063913705,
+      "medium_125ms": 43.582913514120015,
+      "long_500ms": 38.194328104320554
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_018",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 18,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "70d2eea820bc49a543831c7e34df73d23f545014af642a75ef134875caaf5bf1",
+    "raw_maxima": {
+      "short_31ms": 48.10990786941605,
+      "medium_125ms": 32.07118519116589,
+      "long_500ms": 36.78628980925885
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_019",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 19,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3cb2eef726e214c0d8d4b79c374f70617fc63ae9a80353c36966cec6c02860fd",
+    "raw_maxima": {
+      "short_31ms": 60.853530036603175,
+      "medium_125ms": 39.85575757055264,
+      "long_500ms": 25.32725467411897
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_020",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 20,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "57e50d52ddc3ec283940f3c7196dd4dff3c091ff381b9f1995e28a3397d7522c",
+    "raw_maxima": {
+      "short_31ms": 64.29310265347236,
+      "medium_125ms": 26.028449529169514,
+      "long_500ms": 26.595880767683774
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_021",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 21,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e95ec1ab92cd56fecbe16ad6f979838c51bd074bafa049ed5fd27490a708c76e",
+    "raw_maxima": {
+      "short_31ms": 67.115195689521,
+      "medium_125ms": 36.44653171031834,
+      "long_500ms": 38.29699150681334
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_022",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 22,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "57547ccbcec3e5131b8578f7f60407fddd26560761d9dc88d782693648798ac4",
+    "raw_maxima": {
+      "short_31ms": 41.78050800271044,
+      "medium_125ms": 34.132499798287384,
+      "long_500ms": 26.784525083891143
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_023",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 23,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9b02dca0f0c7150001a5dd0e612d85bf39c1da5e640e09d6ecbf3dc5caa9ad4c",
+    "raw_maxima": {
+      "short_31ms": 46.207904245590534,
+      "medium_125ms": 34.77270196691376,
+      "long_500ms": 27.548826037790413
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_024",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 24,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "652fe7e4cd0daa4a704a256ddc812ace32d850f0781d6b1b757b9534a2df8b5a",
+    "raw_maxima": {
+      "short_31ms": 41.76615714197912,
+      "medium_125ms": 27.62352707843888,
+      "long_500ms": 31.406133450619464
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_025",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 25,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a665bf283c5c80cfa99b65600dc9140b99c5222c53b6cb36c83da8f886c8ec13",
+    "raw_maxima": {
+      "short_31ms": 78.55348514292751,
+      "medium_125ms": 34.75268794698138,
+      "long_500ms": 30.065958788019362
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_026",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 26,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1b37dfae703aebf2cb663f64e73d3ba6d35ab176d384da462ece19c5b2bf5d0c",
+    "raw_maxima": {
+      "short_31ms": 78.2726112124746,
+      "medium_125ms": 49.258791735751764,
+      "long_500ms": 61.05763840674916
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_027",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 27,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "adb13d783c2dd4e718afd0783e2cd5b76fb841690f3ccbe4d0a1c26092581242",
+    "raw_maxima": {
+      "short_31ms": 46.2126910161476,
+      "medium_125ms": 36.49138300006746,
+      "long_500ms": 31.296638158361866
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_028",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 28,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c0d60bbd69f8dc58566c2d2ae368b244082e374b92facd6c1c32f28f146b83f6",
+    "raw_maxima": {
+      "short_31ms": 68.3796276287646,
+      "medium_125ms": 35.04065663386906,
+      "long_500ms": 22.96015754611748
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_029",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 29,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c75d23185501e85f1ba729638480a645fa9c851ed90559343209d7498ed78d6d",
+    "raw_maxima": {
+      "short_31ms": 73.54037947464485,
+      "medium_125ms": 25.434877982572804,
+      "long_500ms": 31.68450176901273
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_030",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 30,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9cc930c46bb60c9b767c325eed1496c5f3ad262c5d0ed196d564362112dd2730",
+    "raw_maxima": {
+      "short_31ms": 53.384445935207545,
+      "medium_125ms": 33.888347049425434,
+      "long_500ms": 42.884320510066594
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_031",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 31,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1c1a5bf6260fa1cfe9397eb0bf2014ca19768a013a66d48fcb52332e5d5b48f7",
+    "raw_maxima": {
+      "short_31ms": 85.94873385419098,
+      "medium_125ms": 26.43222263421614,
+      "long_500ms": 31.876667950051306
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_032",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 32,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "cacaa065542a5e95fe63e31f00687dc679be606d759aea81299e0dd1de7d36a2",
+    "raw_maxima": {
+      "short_31ms": 48.55222264178518,
+      "medium_125ms": 26.140951753204195,
+      "long_500ms": 29.15169594529146
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_033",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 33,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c6947e455231cb2e2ae4640dd66b5f5ceef2d4922237e73f08cf74b93ed801f7",
+    "raw_maxima": {
+      "short_31ms": 48.479713545435374,
+      "medium_125ms": 29.302160285875296,
+      "long_500ms": 39.24562308331472
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_034",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 34,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "cd64f5361d9ea48b323fc2d003d42f48f3e744cb21482d332335a48e78d5958e",
+    "raw_maxima": {
+      "short_31ms": 62.78984973596218,
+      "medium_125ms": 37.4960209577912,
+      "long_500ms": 32.422575315137856
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_035",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 35,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a41e3e7d772f39601c6715c2300c2c92bdac92f1796a2fb9b70b298957790533",
+    "raw_maxima": {
+      "short_31ms": 63.68354376674997,
+      "medium_125ms": 54.188121188386106,
+      "long_500ms": 31.37008299022817
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_036",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 36,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d86fd2354fa976a46ffadfe357cb5c4604879a2dfc9d19bdba114095a84e5882",
+    "raw_maxima": {
+      "short_31ms": 59.581547811465526,
+      "medium_125ms": 31.849068265518184,
+      "long_500ms": 33.043842458628674
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_037",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 37,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "df22b9ed0ad1c3b2af7eced9c7fee7574888cc88eb68dd20b0f475b9774f32eb",
+    "raw_maxima": {
+      "short_31ms": 34.84015466660453,
+      "medium_125ms": 24.539202896072137,
+      "long_500ms": 22.988730866451547
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_038",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 38,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ed5e8250f2e12148b969fb390fb4c377242060160bea27543c47e91651a23223",
+    "raw_maxima": {
+      "short_31ms": 46.55155710462172,
+      "medium_125ms": 42.706808375036225,
+      "long_500ms": 28.453258732287175
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_039",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 39,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f85f1969f00c6685b2df327943d5bcb26dc9ce2c00f42a4f4ec9255c025f9c06",
+    "raw_maxima": {
+      "short_31ms": 59.799560971166954,
+      "medium_125ms": 27.28073840061903,
+      "long_500ms": 18.95815729983753
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_040",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 40,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "204e0a7439fed1e604f7221f02f024ed3c506245a92357f6444aa4b20b7788fd",
+    "raw_maxima": {
+      "short_31ms": 79.39294836443433,
+      "medium_125ms": 23.925651164270725,
+      "long_500ms": 31.856556827845907
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_041",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 41,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2aa9e522ee809db59bcebf01a0ffbb3d5a466abd0599769870de4ab2fcd7d5c5",
+    "raw_maxima": {
+      "short_31ms": 68.87375976116063,
+      "medium_125ms": 24.42987504431722,
+      "long_500ms": 32.8809864885849
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_042",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 42,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "454846661b894d906c9fa1b52c8794ba7b14c54090103c98129a0d10f02df3ad",
+    "raw_maxima": {
+      "short_31ms": 56.209490762859325,
+      "medium_125ms": 34.11429664095303,
+      "long_500ms": 27.20526939706152
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_043",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 43,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b02d2aa73e2a8f51509309b3fcf3639fe1b4b09b3429949bf56980e07c199643",
+    "raw_maxima": {
+      "short_31ms": 65.20251195938651,
+      "medium_125ms": 35.818276354253854,
+      "long_500ms": 31.460103349465207
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_044",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 44,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "29bdb27d34f902cea43ce5b524a97fb910aeccf1c6d0ca15983e53eef01708bb",
+    "raw_maxima": {
+      "short_31ms": 64.78411512681703,
+      "medium_125ms": 22.446223250640813,
+      "long_500ms": 24.505921798301785
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_045",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 45,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "45c42cb2ddb862a5f2b5d8d2498cc382083abcd9fa28338922b0c668748f943c",
+    "raw_maxima": {
+      "short_31ms": 48.40280253578252,
+      "medium_125ms": 35.67561652740476,
+      "long_500ms": 18.862628413961573
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_046",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 46,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "149e83052f05e79e01879697d66f92a91f79ca3602398f81ae77f1e8b8331061",
+    "raw_maxima": {
+      "short_31ms": 42.70817000907074,
+      "medium_125ms": 41.678582971000566,
+      "long_500ms": 23.88457547207424
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_047",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 47,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "617bf0bb7b4c54f2ea66237d03621525e9eebe234223e324684d50a9a079c17e",
+    "raw_maxima": {
+      "short_31ms": 71.5518793626789,
+      "medium_125ms": 30.73711646191392,
+      "long_500ms": 27.79573523971861
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_048",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 48,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4a7b67c8def9abf7ac573ed2a2074069aadb6c0325e6712da074cf1b866060d3",
+    "raw_maxima": {
+      "short_31ms": 71.05315686062201,
+      "medium_125ms": 43.42753619656072,
+      "long_500ms": 32.29667920484425
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_049",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 49,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5f6c84729faab163823715f71b972d5e9a4effad5e01f4013b0eff18e1d01dc9",
+    "raw_maxima": {
+      "short_31ms": 53.23814410040225,
+      "medium_125ms": 19.54732066485832,
+      "long_500ms": 29.66362232143473
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_050",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 50,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d8980226e2e3f8045893556c8088129e3f6c0a89ec495424a246a9ea187ca79b",
+    "raw_maxima": {
+      "short_31ms": 37.78294445696294,
+      "medium_125ms": 14.802726403412647,
+      "long_500ms": 28.388416706392984
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_051",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 51,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3737a9f7979ff66adfdac044a7c7f01cd514b2ed0d1c137938c13ed44eb11e70",
+    "raw_maxima": {
+      "short_31ms": 974.3794587732303,
+      "medium_125ms": 283.45987334215704,
+      "long_500ms": 58.27904427458097
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_052",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 52,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "db8201e69f7bb39e5dee1e9cc324bd5acb388ff212bd30d276cf7651318f5931",
+    "raw_maxima": {
+      "short_31ms": 79.39307094306008,
+      "medium_125ms": 28.066077939801886,
+      "long_500ms": 26.73198878455879
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_053",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 53,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "fd2cea4c55a452bd93ce72e1181c301531d9ee9014105cc0d2efb9f83935bbf3",
+    "raw_maxima": {
+      "short_31ms": 64.72264012432777,
+      "medium_125ms": 37.88312026184622,
+      "long_500ms": 28.241652189942798
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_054",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 54,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "011d458161d7d71fa1630c115c9b2716b6171c6056c4950acd7284c10f36a778",
+    "raw_maxima": {
+      "short_31ms": 54.17934917615817,
+      "medium_125ms": 22.370650250685376,
+      "long_500ms": 23.56886497395427
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_055",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 55,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a7566e31bce7671c519080b5c9ce0b9bd567c6d278f286ac442e299317dd40b0",
+    "raw_maxima": {
+      "short_31ms": 43.32493052736823,
+      "medium_125ms": 31.38537977947515,
+      "long_500ms": 20.97812758626258
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_056",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 56,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4d2036ad438acdcc3805930559e9f3ecea6a6cd08038d801970de7cf81df4e80",
+    "raw_maxima": {
+      "short_31ms": 51.64334693400669,
+      "medium_125ms": 21.110080262405553,
+      "long_500ms": 27.299631421529483
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_057",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 57,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ae0702b43ed3542d9b4932d1478ef1128a925b138de4f64688e2769b41d214a9",
+    "raw_maxima": {
+      "short_31ms": 89.60322363240672,
+      "medium_125ms": 37.85768480709852,
+      "long_500ms": 29.996146605713108
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_058",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 58,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e19231998054dc2034b4d45f6df3c5f1356a63b96a171ab37554e924bcac1e4c",
+    "raw_maxima": {
+      "short_31ms": 51.289273337852485,
+      "medium_125ms": 26.538075723277597,
+      "long_500ms": 29.81597580402822
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_059",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 59,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "daafc7c12e773e974d8302b957c917815c7c02560f1673c2ad863561480c44bc",
+    "raw_maxima": {
+      "short_31ms": 81.13295947787432,
+      "medium_125ms": 24.191100989520322,
+      "long_500ms": 36.362356644592
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_060",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 60,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f0bdba0eedeab1621a0e113f2c38bff1099ee478cc8cea9dd94eff0b56375dde",
+    "raw_maxima": {
+      "short_31ms": 54.374562371642085,
+      "medium_125ms": 25.1650337167773,
+      "long_500ms": 19.31328047120364
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_061",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 61,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8ea43e71c1ca1dc490b78b4bc24efdd5e54bbc373815061e2dcce01b933bc2f8",
+    "raw_maxima": {
+      "short_31ms": 62.567140507789446,
+      "medium_125ms": 36.42076688827606,
+      "long_500ms": 27.040230396575566
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_062",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 62,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "47017286384612c4a50646920533010ecd30e8a6270562024cd0516e040287f2",
+    "raw_maxima": {
+      "short_31ms": 65.00875172460815,
+      "medium_125ms": 31.801954164443075,
+      "long_500ms": 37.37935895973388
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_063",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 63,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1a2047b5478b353f8349a35eac415982a67d95e05586a2f17fd7c5545df5792a",
+    "raw_maxima": {
+      "short_31ms": 61.60869194620641,
+      "medium_125ms": 31.943602717537665,
+      "long_500ms": 37.620138785896906
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_064",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 64,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "463f94ebfe1c462316953d709ae38da557dc3c8029b034e8b063396e7c3f833b",
+    "raw_maxima": {
+      "short_31ms": 79.63528499863185,
+      "medium_125ms": 27.27898254212894,
+      "long_500ms": 25.219282950271527
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_065",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 65,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d23c75e0de2480a3e4efa909a2c41286ca076c5ef0ce184d523a05bb3ebf819c",
+    "raw_maxima": {
+      "short_31ms": 55.92094232636141,
+      "medium_125ms": 35.625227800048265,
+      "long_500ms": 37.81284078524361
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_066",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 66,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "472277852025c44fde3eed0dea72308e33b07db7ea4d6be300d4eb00ffc584e5",
+    "raw_maxima": {
+      "short_31ms": 58.05382418412396,
+      "medium_125ms": 32.914381414428775,
+      "long_500ms": 34.02994100415989
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_067",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 67,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "94459742ab6ec74f39207a872205819227749f820c0d263d54945c8d8c087302",
+    "raw_maxima": {
+      "short_31ms": 54.38440512664019,
+      "medium_125ms": 27.674364416702193,
+      "long_500ms": 37.56817895508651
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_068",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 68,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "fe8195e6c189c0dafff4071d30ac55684c694cdb4bad515582b9bfc998b4206a",
+    "raw_maxima": {
+      "short_31ms": 48.3483675754627,
+      "medium_125ms": 34.1213723827233,
+      "long_500ms": 42.73196484198443
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_069",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 69,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a1259055ac127d641595d6ee656bb284606cce4132c8d054094c0d66c540d920",
+    "raw_maxima": {
+      "short_31ms": 96.94785253570953,
+      "medium_125ms": 30.301566233043708,
+      "long_500ms": 39.566057407268275
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_070",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 70,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f41e8627674bdae9bb975229243ce95ee6cdc7856d501fc439fe886ebba35e04",
+    "raw_maxima": {
+      "short_31ms": 98.84572652348355,
+      "medium_125ms": 34.500820967607254,
+      "long_500ms": 14.880508847527462
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_071",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 71,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e77a8b39bdd2386bdacf1dd491b7e49dbe862793667e5766d1c002cccd56319e",
+    "raw_maxima": {
+      "short_31ms": 59.22598031979723,
+      "medium_125ms": 20.358500214397313,
+      "long_500ms": 27.67640080870692
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_072",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 72,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "00e6a17c7bd4238eb1cc7b1412870cde15892a9c3cee6a6f52f5154980f090b7",
+    "raw_maxima": {
+      "short_31ms": 56.248833605771594,
+      "medium_125ms": 24.756024873804485,
+      "long_500ms": 26.83374239275374
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_073",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 73,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "af66797ba5069bbd70937de8145fd9ecfc745c67905fd9ec8d27b2e3473f328c",
+    "raw_maxima": {
+      "short_31ms": 44.41363745425817,
+      "medium_125ms": 27.679835315906576,
+      "long_500ms": 28.17294384167033
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_074",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 74,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "63e85669420965f6645bf9aaba1da5c257fcdebe47fb2a01d76b85637e913b91",
+    "raw_maxima": {
+      "short_31ms": 43.93504105082205,
+      "medium_125ms": 27.802468929852388,
+      "long_500ms": 17.36033992455839
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_075",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 75,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "549f2db8118ad753a20936ac5d58b7900293351d3902cdfa2c78c56b71cb36f5",
+    "raw_maxima": {
+      "short_31ms": 84.7025756750351,
+      "medium_125ms": 51.997838975344195,
+      "long_500ms": 36.44285781546562
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_076",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 76,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c4ed57b301da07b4077610d0e5bb48c6ad275efb250061a02954d399746e692c",
+    "raw_maxima": {
+      "short_31ms": 870.863532918546,
+      "medium_125ms": 412.2664293892886,
+      "long_500ms": 50.15037928140853
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_077",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 77,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "169a71505c2b11e942d1fe7ebfdcb16df39d790bfea6083b1c9a8347a3f67574",
+    "raw_maxima": {
+      "short_31ms": 43.81557749406718,
+      "medium_125ms": 39.10792287611838,
+      "long_500ms": 66.46606515280189
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_078",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 78,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3500908bca9ddcb069f895d57bb6871a497edd8da4f880acf494a517aa87197d",
+    "raw_maxima": {
+      "short_31ms": 73.88050415304815,
+      "medium_125ms": 41.187241624727854,
+      "long_500ms": 37.45905946305446
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_noise_079",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "noise",
+    "index": 79,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7c283eff39882fa17518b7635c88a5d661500552d17df5c96b05b0e37962300f",
+    "raw_maxima": {
+      "short_31ms": 95.22354585474537,
+      "medium_125ms": 29.93509822504073,
+      "long_500ms": 24.394631514684082
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_signal_000",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "signal",
+    "index": 0,
+    "family": "chirp",
+    "snr": 8.0,
+    "unit": 0,
+    "input_sha256": "2c5221874f0a5baa9887ed4ece0d2bc4466ba6615651a988cff7bc2137f8adfc",
+    "raw_maxima": {
+      "short_31ms": 52.77405071658757,
+      "medium_125ms": 186.67797072986065,
+      "long_500ms": 59.290039828103644
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_signal_001",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "signal",
+    "index": 1,
+    "family": "chirp",
+    "snr": 18.0,
+    "unit": 0,
+    "input_sha256": "a255c880bd81e1eba7a38cd1a378ed067e588ee6a4cef5706a2849e092453ff1",
+    "raw_maxima": {
+      "short_31ms": 183.974734208734,
+      "medium_125ms": 1427.5629365435102,
+      "long_500ms": 1337.3505159861147
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_signal_002",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "signal",
+    "index": 2,
+    "family": "chirp",
+    "snr": 8.0,
+    "unit": 1,
+    "input_sha256": "38c08e5d99c3ee3ab0259fe04a501f61b1400e3b0228eb1b5f182e3b1bee2305",
+    "raw_maxima": {
+      "short_31ms": 58.58992900551519,
+      "medium_125ms": 73.35379362564629,
+      "long_500ms": 50.89844632963439
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_signal_003",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "signal",
+    "index": 3,
+    "family": "chirp",
+    "snr": 18.0,
+    "unit": 1,
+    "input_sha256": "3606dcc0c49e716836fb724f5e90009b40ba03a427b2a6b281d3be5e82af500c",
+    "raw_maxima": {
+      "short_31ms": 263.3658888104309,
+      "medium_125ms": 916.7675567740013,
+      "long_500ms": 397.22474502663545
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_signal_004",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "signal",
+    "index": 4,
+    "family": "chirp",
+    "snr": 8.0,
+    "unit": 2,
+    "input_sha256": "f3e0376ccc1d04d23c3e80005422a4bbfa6b63c7a97f5703570bb34d0ac7d62f",
+    "raw_maxima": {
+      "short_31ms": 49.909446782152244,
+      "medium_125ms": 49.08110119743218,
+      "long_500ms": 54.43386836996265
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_signal_005",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "signal",
+    "index": 5,
+    "family": "chirp",
+    "snr": 18.0,
+    "unit": 2,
+    "input_sha256": "b06e1428774942fcdc56cf19216539d1b2032fd733da04c792bd22da5139e1bb",
+    "raw_maxima": {
+      "short_31ms": 102.95645882637695,
+      "medium_125ms": 383.43944688558224,
+      "long_500ms": 627.6462820707796
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_signal_006",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "signal",
+    "index": 6,
+    "family": "burst",
+    "snr": 8.0,
+    "unit": 0,
+    "input_sha256": "368f4deb9cc148613340891682d6fb3b81fbcc90fdb051e63075069644568771",
+    "raw_maxima": {
+      "short_31ms": 97.70011242867488,
+      "medium_125ms": 48.48330625385241,
+      "long_500ms": 44.35328528084066
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_signal_007",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "signal",
+    "index": 7,
+    "family": "burst",
+    "snr": 18.0,
+    "unit": 0,
+    "input_sha256": "8bdeb5c0c6e5c4e7fc1eecef61ca939e5cfa64f845447e7d5399fcf1f80714e3",
+    "raw_maxima": {
+      "short_31ms": 102.23905880394275,
+      "medium_125ms": 167.08455749789238,
+      "long_500ms": 146.72972761698153
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_signal_008",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "signal",
+    "index": 8,
+    "family": "burst",
+    "snr": 8.0,
+    "unit": 1,
+    "input_sha256": "25b0d12bbac392c66ecb063b8f499681a0943e01143de50166d9b1b82e777252",
+    "raw_maxima": {
+      "short_31ms": 82.11709643544177,
+      "medium_125ms": 24.723556889302635,
+      "long_500ms": 21.568266909844006
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_signal_009",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "signal",
+    "index": 9,
+    "family": "burst",
+    "snr": 18.0,
+    "unit": 1,
+    "input_sha256": "828db88d2bed43162397a7a07c21cd6f3f5caa59dfe4d47db3ae15981a3d7fd3",
+    "raw_maxima": {
+      "short_31ms": 187.98678969989555,
+      "medium_125ms": 88.75992780839938,
+      "long_500ms": 93.61885061069088
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_signal_010",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "signal",
+    "index": 10,
+    "family": "burst",
+    "snr": 8.0,
+    "unit": 2,
+    "input_sha256": "1ad3f91f3cc7d8bbf08ca1eddad4bc2bd083a93f5ac63a7e3ede071b19399606",
+    "raw_maxima": {
+      "short_31ms": 68.89169810597187,
+      "medium_125ms": 43.32509245264242,
+      "long_500ms": 43.48490185644997
+    }
+  },
+  {
+    "sample_id": "s17102_impulsive_noise_signal_011",
+    "seed": 17102,
+    "case": "impulsive_noise",
+    "part": "signal",
+    "index": 11,
+    "family": "burst",
+    "snr": 18.0,
+    "unit": 2,
+    "input_sha256": "35ce24aeeefd0fde7c8dfa759c5510f7384b356abd8afec8716c89482c14c995",
+    "raw_maxima": {
+      "short_31ms": 68.39235522151324,
+      "medium_125ms": 83.41713938980092,
+      "long_500ms": 114.81620358451751
+    }
+  }
+]

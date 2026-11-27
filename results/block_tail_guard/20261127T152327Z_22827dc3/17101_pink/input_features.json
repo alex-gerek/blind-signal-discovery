@@ -1,0 +1,5714 @@
+[
+  {
+    "sample_id": "s17101_pink_calibration_000",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 0,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8c17d9ffcd9ca7769b19340e8dea8e9fe2c8f5da71d8ea4ab78c68d1f3285eb2",
+    "raw_maxima": {
+      "short_31ms": 95.34483963478077,
+      "medium_125ms": 46.527219499957624,
+      "long_500ms": 57.85554904784164
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_001",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 1,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "de14a5641e9dd2a8674fd01e25edc60439faeac1184f9444e4a341484f259d4e",
+    "raw_maxima": {
+      "short_31ms": 69.15869419533718,
+      "medium_125ms": 31.66423310690694,
+      "long_500ms": 25.59921357048546
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_002",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 2,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3c871d83d255f482ce4ed5748ced48aa1006a47ef5002847ae08f7ad4a05c95f",
+    "raw_maxima": {
+      "short_31ms": 45.92193009253926,
+      "medium_125ms": 64.75382514799047,
+      "long_500ms": 26.57926573937223
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_003",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 3,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "df7e5efef8138e01f78269b324f0b729a6852727c9f67218b5ee351a8996b590",
+    "raw_maxima": {
+      "short_31ms": 58.132566686366005,
+      "medium_125ms": 44.4550917942265,
+      "long_500ms": 30.646355187533928
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_004",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 4,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2e4225e6c1317c2a80e62a30f6a2ad0026710289dd3508434a9f8a76831606ac",
+    "raw_maxima": {
+      "short_31ms": 112.18471892357596,
+      "medium_125ms": 38.55150118346976,
+      "long_500ms": 46.061327695279125
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_005",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 5,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a42d05d6f2dc5d4615fcd1d3ec45fb0ab9fc901f2e8ef46db92e6dab46b83408",
+    "raw_maxima": {
+      "short_31ms": 64.57060005088238,
+      "medium_125ms": 27.11987038257159,
+      "long_500ms": 23.770538876644004
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_006",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 6,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4eccf8f549d8ecbd993463471982aab48c62ed3c4708985e78c4a582b25e6b43",
+    "raw_maxima": {
+      "short_31ms": 49.94363286729206,
+      "medium_125ms": 28.75842408166571,
+      "long_500ms": 29.123533710948745
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_007",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 7,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7d219515ce430a6a881d2de692f4ccfee5211790d867a4ee27f77e2e3878f14e",
+    "raw_maxima": {
+      "short_31ms": 62.90930750008703,
+      "medium_125ms": 33.640986479780835,
+      "long_500ms": 22.706806946688296
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_008",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 8,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "746e9ad53d6f168ebda61eae4018e8085677b7ba3c45c8f695818bbbfc11ee68",
+    "raw_maxima": {
+      "short_31ms": 71.74538426773655,
+      "medium_125ms": 40.735700127359834,
+      "long_500ms": 31.68598993736314
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_009",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 9,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "73d6ace498cd6ed795d4fedbc90eb249fe8dd9f978e6166dc264090ceb0b1818",
+    "raw_maxima": {
+      "short_31ms": 61.79579742973055,
+      "medium_125ms": 28.944935166321514,
+      "long_500ms": 29.158205997901003
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_010",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 10,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6e280e2024d74e4ea1450db5b66a8f33ab6f0a097cbd7d928655a0ad2c0eef1c",
+    "raw_maxima": {
+      "short_31ms": 55.530807843668704,
+      "medium_125ms": 27.082927539729944,
+      "long_500ms": 23.992466946817917
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_011",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 11,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f5888faa7205d0b526b5126aa030ac6e360b07b07102352e12c34fb8bdd7e4d2",
+    "raw_maxima": {
+      "short_31ms": 64.93087894147305,
+      "medium_125ms": 26.509052811601897,
+      "long_500ms": 22.735362887069975
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_012",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 12,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "61ea89cd9f4fd507ac12b4a294dd6fbce6b4dc1353cbbcf4e6b7886e9f6ca929",
+    "raw_maxima": {
+      "short_31ms": 76.73123819286391,
+      "medium_125ms": 58.04952134083918,
+      "long_500ms": 31.212195699206397
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_013",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 13,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "121f68a022ce3c9baacc453f3fce61ec587ecb9b3aedc6e5fc1a5a9c9230faa1",
+    "raw_maxima": {
+      "short_31ms": 53.189256990033805,
+      "medium_125ms": 31.893116747477563,
+      "long_500ms": 29.99420906855412
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_014",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 14,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d8c26c277ea02c2b6325e2727f9e433061dcc6a4e706d6684f6121ff1cd97531",
+    "raw_maxima": {
+      "short_31ms": 89.42540963959446,
+      "medium_125ms": 43.82731227090923,
+      "long_500ms": 29.792259189230222
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_015",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 15,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c15f423a877b810c2db36f633e013f8e178c826bc75b51652719207253792e18",
+    "raw_maxima": {
+      "short_31ms": 32.673561702153926,
+      "medium_125ms": 32.6027432645743,
+      "long_500ms": 38.75083771167843
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_016",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 16,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "322a8041dceb8fac3260e7abc5d9fa18ef3a667ebd87d5ab8d43f51a58bfe1ec",
+    "raw_maxima": {
+      "short_31ms": 66.24147342142307,
+      "medium_125ms": 28.744708130140864,
+      "long_500ms": 34.617512812849554
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_017",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 17,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4a6250036f3c1011f395ed1fa40d8cb4b021f3fa10d68a53b6b14357745364d2",
+    "raw_maxima": {
+      "short_31ms": 80.34580731726665,
+      "medium_125ms": 33.92233120240516,
+      "long_500ms": 45.48534814088298
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_018",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 18,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d73f4f0a83890c82b92839d4bb70cdb6c17ace04addfc215256eb22132d5659c",
+    "raw_maxima": {
+      "short_31ms": 43.59929209337446,
+      "medium_125ms": 26.07894506652634,
+      "long_500ms": 33.76119929384742
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_019",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 19,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "31796f35b86bb7446a10fbc402cdbee90cc8e4289e74fac2598867d9396c78a0",
+    "raw_maxima": {
+      "short_31ms": 75.63374941930572,
+      "medium_125ms": 32.81967012968373,
+      "long_500ms": 59.83257662501158
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_020",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 20,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4dc05c7506af9328092b5fcfa50b81a7e12005c286a89ca0e02ac5ccbc79126e",
+    "raw_maxima": {
+      "short_31ms": 74.70847899546074,
+      "medium_125ms": 25.314719148300533,
+      "long_500ms": 26.021226199792505
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_021",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 21,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f2d40c13f526ee14600d584e63527199474f1722d34f399cc0a59df939384eba",
+    "raw_maxima": {
+      "short_31ms": 63.84108472118965,
+      "medium_125ms": 27.646276599638448,
+      "long_500ms": 45.854186080476865
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_022",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 22,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e629b34bac34de9206a0b69677d84912c2ffc8713caef10e612b658f9acde2b7",
+    "raw_maxima": {
+      "short_31ms": 61.39748323365421,
+      "medium_125ms": 23.317356809217674,
+      "long_500ms": 29.763620903547704
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_023",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 23,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "367ba1ae0ac9776e33788c18b00cebd0d06738b7cc06b3e0c10a9b29636fef2d",
+    "raw_maxima": {
+      "short_31ms": 100.04785512765721,
+      "medium_125ms": 56.146317862722356,
+      "long_500ms": 30.57366948135127
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_024",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 24,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "dc140b5317f9c4d047f9759d92840ed75fea32da5c93378c6ea98603cd216677",
+    "raw_maxima": {
+      "short_31ms": 115.8811988227763,
+      "medium_125ms": 42.612385224315915,
+      "long_500ms": 26.84341644882504
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_025",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 25,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9f357dbd6173ea5b874006eded8c7e25c003d6cd7f6154034ef8d2ae27cec967",
+    "raw_maxima": {
+      "short_31ms": 54.17427538323217,
+      "medium_125ms": 30.393188626763582,
+      "long_500ms": 38.67953300434275
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_026",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 26,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4c54f4527d6a542e35a05aed917ae212dc2825efe62825c2bb729f1956f51d54",
+    "raw_maxima": {
+      "short_31ms": 51.36831856907392,
+      "medium_125ms": 19.735327775904913,
+      "long_500ms": 29.994647987439066
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_027",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 27,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9d1e136326b090629811e8af2fab2920e38e9c8061f65db73833c0c0846e29fa",
+    "raw_maxima": {
+      "short_31ms": 52.4455657540844,
+      "medium_125ms": 33.40803524285099,
+      "long_500ms": 33.91293349105132
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_028",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 28,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a444cb6b411f53acc58c955936bb01633fbe3ddfd1cc0c164c0899cefd3e9f58",
+    "raw_maxima": {
+      "short_31ms": 96.30646146283128,
+      "medium_125ms": 41.11340135688837,
+      "long_500ms": 35.08543578635983
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_029",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 29,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "97166efbcf5aab32feeac324d04a006fac7ac4e5cc4b8f9015dbfd48e339bcb6",
+    "raw_maxima": {
+      "short_31ms": 45.74902605413709,
+      "medium_125ms": 48.229278959066704,
+      "long_500ms": 33.08213568935043
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_030",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 30,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7ff666f5275e779462a314d50d0c19e5a5d32e065c6a98fee9a04a51f380a80e",
+    "raw_maxima": {
+      "short_31ms": 37.18363438225922,
+      "medium_125ms": 25.09261869268092,
+      "long_500ms": 31.8931424038976
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_031",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 31,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d74e7eab8c04af3a38c92b84022058931a45484d101055a337d6fea559c03d71",
+    "raw_maxima": {
+      "short_31ms": 67.55719880425701,
+      "medium_125ms": 39.95191384365239,
+      "long_500ms": 38.47753943449624
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_032",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 32,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "51bf373bb5136885cdb971ef6ca35b77d0b159a9bb133a17af57533cab19f896",
+    "raw_maxima": {
+      "short_31ms": 42.466791786011434,
+      "medium_125ms": 16.792387101875594,
+      "long_500ms": 37.49879259849152
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_033",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 33,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "35b6fe82ae2ab76cd45fe1e22feef40f6ded213c13086342858994b04ed465fc",
+    "raw_maxima": {
+      "short_31ms": 70.62069568577786,
+      "medium_125ms": 22.443789944315704,
+      "long_500ms": 36.05726179024244
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_034",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 34,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "475a08e3f65d22ef22145f82bb3c8c7b62eeb4c58084612e29ba4da9bdff01ac",
+    "raw_maxima": {
+      "short_31ms": 45.32685093173673,
+      "medium_125ms": 17.11616328198572,
+      "long_500ms": 22.36889303717684
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_035",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 35,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b9a0cd6dc32e272510975fd64e8a710604db7cc4c6c74a016807b2e91bd3da48",
+    "raw_maxima": {
+      "short_31ms": 88.94877992449236,
+      "medium_125ms": 31.45937065804698,
+      "long_500ms": 19.48944335795845
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_036",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 36,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "048dfc4a0147a7598248fee12daf349cb6196688c7e34508ca8e5bb2a2eb05fb",
+    "raw_maxima": {
+      "short_31ms": 39.25800805070345,
+      "medium_125ms": 41.16728864578093,
+      "long_500ms": 31.30772989001577
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_037",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 37,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4a70c754e58abc808dd2a32a55660cdc8aa8a88f3ec95c5e43f0e18b65f54c73",
+    "raw_maxima": {
+      "short_31ms": 50.03371165577108,
+      "medium_125ms": 28.980362030390737,
+      "long_500ms": 41.00680612267513
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_038",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 38,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1a8307dbdd66275a2837bd9d6f933671c0a021283e8dcf10fd79fc5821763c00",
+    "raw_maxima": {
+      "short_31ms": 44.7345711301283,
+      "medium_125ms": 62.3090193345705,
+      "long_500ms": 40.268395438650835
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_039",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 39,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "26ae240be4e9a4de812aa438dcd3cbb69f821b7826e592e9097887abdd037d79",
+    "raw_maxima": {
+      "short_31ms": 61.30530103466285,
+      "medium_125ms": 28.583733107659782,
+      "long_500ms": 19.25679134677415
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_040",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 40,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1bb2a9ea6a91c882f8bbb77fd9161a214b3a721407d45288efc93458e57ca270",
+    "raw_maxima": {
+      "short_31ms": 66.5190269141878,
+      "medium_125ms": 19.1588950497166,
+      "long_500ms": 21.679981551792565
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_041",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 41,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3d71ba99747fc558a338635ac5473ee04f7aa65fb7b5c7c066c4a462478c9610",
+    "raw_maxima": {
+      "short_31ms": 74.85380221358069,
+      "medium_125ms": 30.847503876879586,
+      "long_500ms": 46.98479666296843
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_042",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 42,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6e1a6af8c9654136b582c57e2b20de7f61cb8404b4b8fe6429440d5016b34639",
+    "raw_maxima": {
+      "short_31ms": 47.998042183509355,
+      "medium_125ms": 23.67634622786607,
+      "long_500ms": 33.94904666897849
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_043",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 43,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "613932eb800bcde5bb296b12848ee218fc34cc72fb6b28f584f3412277136ee5",
+    "raw_maxima": {
+      "short_31ms": 56.16525526595911,
+      "medium_125ms": 41.876853944883244,
+      "long_500ms": 48.12794281497479
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_044",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 44,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "20a812e193fff8e1f7823e4e0d780e7cddc037a6e5eb70aa02eddd605f0832ae",
+    "raw_maxima": {
+      "short_31ms": 50.4722060540341,
+      "medium_125ms": 42.10141787683634,
+      "long_500ms": 28.84049626641052
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_045",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 45,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "79c949d23ab2c46ccca2030b40d8f79fb241663d823adb3fbb0f4f06924d6d1d",
+    "raw_maxima": {
+      "short_31ms": 35.01131270393249,
+      "medium_125ms": 30.625203064738148,
+      "long_500ms": 23.65477243570804
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_046",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 46,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ac73d88a8e465a7b88e026ae72cd233bb04a31974d7c4502d89321e765fea486",
+    "raw_maxima": {
+      "short_31ms": 53.491201171420194,
+      "medium_125ms": 33.15420278197555,
+      "long_500ms": 35.336304745604544
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_047",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 47,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f96cf6f84505af2507e33af8b248d4916a7742a8c7d556261a410b121cecb531",
+    "raw_maxima": {
+      "short_31ms": 76.87455323355084,
+      "medium_125ms": 32.24526326099697,
+      "long_500ms": 23.021515355767857
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_048",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 48,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0e2c62badafc11dc7c9a54f9eb881f384acbfa378567a6285dad2c7a3f7473bc",
+    "raw_maxima": {
+      "short_31ms": 120.83721800723671,
+      "medium_125ms": 20.262705285331663,
+      "long_500ms": 32.91974906149957
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_049",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 49,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f6bf03c030349acdc3c5c3b5e6c543ffd94c7e9fde5c57f0c10e83b49472de4f",
+    "raw_maxima": {
+      "short_31ms": 50.61977640478118,
+      "medium_125ms": 36.540913187363856,
+      "long_500ms": 48.681395337487075
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_050",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 50,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d270db9888cb106936f6363b928e35ef717ed515aaa535b184fb27f6b4f8703a",
+    "raw_maxima": {
+      "short_31ms": 107.7411459959041,
+      "medium_125ms": 31.72592126963997,
+      "long_500ms": 43.663655289358985
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_051",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 51,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d0f4730cf7f68b4890b2c074d798b665f0ee7522041f71baa2a8592e4b0439b5",
+    "raw_maxima": {
+      "short_31ms": 51.19093384963952,
+      "medium_125ms": 30.27007692797258,
+      "long_500ms": 26.580038695339994
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_052",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 52,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "420dbc6298807597f5c31feaf7319d0cd400fdf982a0053593730abe8abdf84a",
+    "raw_maxima": {
+      "short_31ms": 56.96597424274544,
+      "medium_125ms": 42.008258471153724,
+      "long_500ms": 29.932985676333274
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_053",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 53,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "02c2086d0f8fa5dfc33e1ec1666b2da58c1803319d26da303ec93e2918aef7c9",
+    "raw_maxima": {
+      "short_31ms": 65.44426670550743,
+      "medium_125ms": 33.286292100376436,
+      "long_500ms": 36.83916048337595
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_054",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 54,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "696b862baf934d21f9ffc0d11e3c0dc905131479ad0c8228c35d4423430acbe3",
+    "raw_maxima": {
+      "short_31ms": 62.770459105233485,
+      "medium_125ms": 29.731340938185923,
+      "long_500ms": 24.77630904012142
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_055",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 55,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3ac3111f2d4c3ea4915cb641d21bd0f8fe59fd13463a85b482f3af8051a2888b",
+    "raw_maxima": {
+      "short_31ms": 23.810590556181026,
+      "medium_125ms": 23.95376841245632,
+      "long_500ms": 53.06813799465796
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_056",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 56,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "765d95930a39920d5e2c0a2642db8f5301c3a08b5989d1efd4bcb529f26b2933",
+    "raw_maxima": {
+      "short_31ms": 80.13143383729201,
+      "medium_125ms": 32.372846580526236,
+      "long_500ms": 25.730505351875017
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_057",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 57,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6fce115bdd71bea421e792a0ee769761d37be3dbfb22d1e96c9259735649aef5",
+    "raw_maxima": {
+      "short_31ms": 67.33520385939966,
+      "medium_125ms": 19.113954227512323,
+      "long_500ms": 26.590998724739062
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_058",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 58,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e9fe5609c5b2004bfc03778f94da054e56e8b8f6aceb6ec6f4ff1dc22f0ef5cc",
+    "raw_maxima": {
+      "short_31ms": 42.24038155101301,
+      "medium_125ms": 45.12477898098068,
+      "long_500ms": 23.085521847949074
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_059",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 59,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8dd7c47b9800f93a16850188fee60e62ea327de65381aca849684b73e0a14259",
+    "raw_maxima": {
+      "short_31ms": 76.92190526754827,
+      "medium_125ms": 28.36500458394654,
+      "long_500ms": 26.03136611761603
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_060",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 60,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "aa813f10a425ac3ef4bbe0268f082637c5acbe13b351aad6b16df23b919cdf80",
+    "raw_maxima": {
+      "short_31ms": 108.73761413598287,
+      "medium_125ms": 34.731185528270245,
+      "long_500ms": 54.455435222048656
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_061",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 61,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9d40c819e67dd3b1d60f035e6a963853666e67c47fbcc1149bff826ff0095d03",
+    "raw_maxima": {
+      "short_31ms": 48.58276150618894,
+      "medium_125ms": 22.95991687169156,
+      "long_500ms": 52.4899548815369
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_062",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 62,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8cf4ad97e4c692372563c0d8e8c70d84d93dc1050a7c2796dbde3a252178618f",
+    "raw_maxima": {
+      "short_31ms": 73.85173651272683,
+      "medium_125ms": 30.59469398670087,
+      "long_500ms": 36.73033188688004
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_063",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 63,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "dbc27cca100a08acace5928d40aa715be5db0bc4e3645ed1252a1965bddcdebe",
+    "raw_maxima": {
+      "short_31ms": 55.15769899977922,
+      "medium_125ms": 41.858249981753005,
+      "long_500ms": 30.98241797290205
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_064",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 64,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c7053b07cdccbf9db4a2f7311aa3a383206f3e5edaec71c0abc0a766a1df03c8",
+    "raw_maxima": {
+      "short_31ms": 52.29267695315231,
+      "medium_125ms": 28.63023648943507,
+      "long_500ms": 28.527433102100872
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_065",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 65,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7f6a46fe3ac8cd4854770a44248cd76290f287230e1bc3f717e949874405be36",
+    "raw_maxima": {
+      "short_31ms": 53.300046597412475,
+      "medium_125ms": 28.161539070742688,
+      "long_500ms": 40.14884360413089
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_066",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 66,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "83442d9741e559ca7d9d7d78258f4c3fa807789c243f1bbc9890666ccd17a6c8",
+    "raw_maxima": {
+      "short_31ms": 41.29700723534641,
+      "medium_125ms": 28.75715878902103,
+      "long_500ms": 31.436218105321345
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_067",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 67,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3dc96ab293d430cd92df03e43435d246ffa3f8a8e693a6e903155d13975f061d",
+    "raw_maxima": {
+      "short_31ms": 77.11224859616202,
+      "medium_125ms": 29.64795008503589,
+      "long_500ms": 43.196186960546726
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_068",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 68,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3856570f169f9bb0835804ded121e5b07354594b7933c21be8fc44cbe3c91f1f",
+    "raw_maxima": {
+      "short_31ms": 47.49356774150426,
+      "medium_125ms": 31.547863600418935,
+      "long_500ms": 39.93816402633944
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_069",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 69,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d356ae9ca7233e22a26719ea5c0727acec87ddcfbe20c161cabcfd2e341214a6",
+    "raw_maxima": {
+      "short_31ms": 65.64119551162275,
+      "medium_125ms": 19.974883256203782,
+      "long_500ms": 34.193129345432936
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_070",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 70,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6493ca379e1ae7724dec7ca5601e8cb96687ca93f60b4094748c5c2000dbccd9",
+    "raw_maxima": {
+      "short_31ms": 82.5481358821509,
+      "medium_125ms": 20.86696199225058,
+      "long_500ms": 37.829986448456665
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_071",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 71,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f0d9c6d7017821f3cc853d11e98cc6432ae8258c2a4779023ea801d0ede6a5c3",
+    "raw_maxima": {
+      "short_31ms": 46.30378151007529,
+      "medium_125ms": 26.841960850351654,
+      "long_500ms": 21.175771961227433
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_072",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 72,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f195b41ec72f42f91f9dc9ec89a237cc175e036923405b8a2cab30dabee275dd",
+    "raw_maxima": {
+      "short_31ms": 71.38449225075341,
+      "medium_125ms": 29.28048157693206,
+      "long_500ms": 30.064203006600692
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_073",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 73,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e907acdd1046c2962cfee3d386d85555533a43bb0699940bf3025f294905c4d5",
+    "raw_maxima": {
+      "short_31ms": 68.32960766025074,
+      "medium_125ms": 22.583816766906004,
+      "long_500ms": 42.9924853851274
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_074",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 74,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d2cc274d2e8a5af64646b566cbae923b920a0191fc2d8bea4e45ccccaa71bb2d",
+    "raw_maxima": {
+      "short_31ms": 59.61536363203454,
+      "medium_125ms": 35.091727662663615,
+      "long_500ms": 43.692408857653994
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_075",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 75,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ec3e70efaaf32411b2d21624d12b9f0a9778c7832bcd206e9e260847308a8668",
+    "raw_maxima": {
+      "short_31ms": 41.063910861482036,
+      "medium_125ms": 33.69864746559403,
+      "long_500ms": 31.511130376230174
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_076",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 76,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "37f70068e978184633d486802473634154f5b65639d70514e1ed71b2eae348f0",
+    "raw_maxima": {
+      "short_31ms": 72.14321116295437,
+      "medium_125ms": 32.78050664969136,
+      "long_500ms": 20.944918196114457
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_077",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 77,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4fb993b26b25d0981823d8723a6382a1cc4a22340e53b9f1d1e35695d7370eb8",
+    "raw_maxima": {
+      "short_31ms": 47.281960141323445,
+      "medium_125ms": 40.52599881663867,
+      "long_500ms": 51.90766985562287
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_078",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 78,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1c09e8f9c2090c5c1d2f90b3ed13337440bff26f0363100db464636ce01d4b84",
+    "raw_maxima": {
+      "short_31ms": 55.78481358509178,
+      "medium_125ms": 29.179855343713946,
+      "long_500ms": 32.385269246595534
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_079",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 79,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e87bc397413c6ce15523c813268552897f171b867151476ea23e9cbb30aaaab8",
+    "raw_maxima": {
+      "short_31ms": 57.42978885114907,
+      "medium_125ms": 30.228043583875042,
+      "long_500ms": 29.722450349516514
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_080",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 80,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0f12763811723017a650e38e66f34b641c1aabd4a35b657e1db7bb6e7d80455d",
+    "raw_maxima": {
+      "short_31ms": 70.1455297072819,
+      "medium_125ms": 29.601471728188255,
+      "long_500ms": 40.638980225939825
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_081",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 81,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "06d58f8156c5a8ae4a9eeb09bffc2183959ebc0059027830261ae6fd875ee3b2",
+    "raw_maxima": {
+      "short_31ms": 65.72581681405731,
+      "medium_125ms": 27.062752914735068,
+      "long_500ms": 45.836790008627005
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_082",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 82,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "42bb199691145da3c2b5ac4732877e372c411af841c507be892bb9c6ac2334c8",
+    "raw_maxima": {
+      "short_31ms": 53.38574207758077,
+      "medium_125ms": 21.485672650475884,
+      "long_500ms": 31.042616113233915
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_083",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 83,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "96df4c9b963350bf3f00ba0a21951479b3a6cbe9de08fd3e0cb1f0014d90f3b5",
+    "raw_maxima": {
+      "short_31ms": 58.72692882644699,
+      "medium_125ms": 32.3024798192357,
+      "long_500ms": 32.654457895661004
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_084",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 84,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "31cae60e719b583b7c6ec93b104790e5b9a9d1c9baa53bb5bac1f5317006db00",
+    "raw_maxima": {
+      "short_31ms": 82.96307255701961,
+      "medium_125ms": 36.04304502700915,
+      "long_500ms": 28.119329962409964
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_085",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 85,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c816b8b8164d0ed042b888619ad7e9d1dfcd5b41e902f4695a8d7ca416f5690f",
+    "raw_maxima": {
+      "short_31ms": 63.28761975588821,
+      "medium_125ms": 29.971507804029372,
+      "long_500ms": 37.54710468311344
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_086",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 86,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "cba64d181eae50deafa777859dbdacb21d2a5f0843948d5579ff8141e36db094",
+    "raw_maxima": {
+      "short_31ms": 68.0433492198681,
+      "medium_125ms": 35.334957493401994,
+      "long_500ms": 22.087613321454313
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_087",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 87,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7625ff9e7fecd4307aa50bcf4ef85c333c9f080686d79342a2707f98095930e0",
+    "raw_maxima": {
+      "short_31ms": 67.77210877878186,
+      "medium_125ms": 35.56597161166743,
+      "long_500ms": 28.562997321350533
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_088",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 88,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "24556a8f4a6bc85f1e0e9b0962235c193671fdbcdf92aa3c517393561ef47860",
+    "raw_maxima": {
+      "short_31ms": 50.23267762850663,
+      "medium_125ms": 28.322075270999946,
+      "long_500ms": 38.830326436788404
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_089",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 89,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "585ca9047a96bfdaabc28df7a0323caaf21168e676e21e249685af08bb0731d4",
+    "raw_maxima": {
+      "short_31ms": 55.88917711859956,
+      "medium_125ms": 31.208722394813922,
+      "long_500ms": 22.55022637321643
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_090",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 90,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "092d3e04d58d13850b897dd368cec3bc89206fc336ffc2582b385c7567fc1e29",
+    "raw_maxima": {
+      "short_31ms": 78.54596554923666,
+      "medium_125ms": 44.59595093038091,
+      "long_500ms": 36.090819150723085
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_091",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 91,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9a9e33602e32db734f5fa0acdce442b4dba918166146c8563e7e6882c5c2b075",
+    "raw_maxima": {
+      "short_31ms": 51.75221996261641,
+      "medium_125ms": 33.492680497008315,
+      "long_500ms": 43.198505888529574
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_092",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 92,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1ff60d80f6626837a3c21111195f2f38a36657258d4ac42a0e0391be3fc42628",
+    "raw_maxima": {
+      "short_31ms": 51.37903478567535,
+      "medium_125ms": 30.264618735519278,
+      "long_500ms": 46.72904966637862
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_093",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 93,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "cd3ea7f3955f11f36677eb0a5bcfc3efe598259332a84e2fabcc21a5799ebf46",
+    "raw_maxima": {
+      "short_31ms": 57.12483371060447,
+      "medium_125ms": 29.66652637874985,
+      "long_500ms": 31.227725458203675
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_094",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 94,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2c6d785c9b49c67693a891aeefc294b27485230522808be4a5c0d9c5c285b7c3",
+    "raw_maxima": {
+      "short_31ms": 50.31400377366853,
+      "medium_125ms": 19.052943035598553,
+      "long_500ms": 29.411331495164248
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_095",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 95,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c651f543fe68f03cb135873872452286eb33c3cd03ae6af57a74fb13b658b010",
+    "raw_maxima": {
+      "short_31ms": 72.91004421841386,
+      "medium_125ms": 21.73131105313234,
+      "long_500ms": 32.15971794277197
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_096",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 96,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c6c1430b47901322137c1136bc41b4cbcc47c19288710213d04b8d2c9fb23b8e",
+    "raw_maxima": {
+      "short_31ms": 39.41261248047205,
+      "medium_125ms": 37.54798061842773,
+      "long_500ms": 28.35283954192507
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_097",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 97,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "254e44727edc14784dceda1b3433a2725644e8e5d6c2b83e9542c372024b3ee2",
+    "raw_maxima": {
+      "short_31ms": 63.63232620906689,
+      "medium_125ms": 46.35964324955239,
+      "long_500ms": 42.93542969147951
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_098",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 98,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b597bacf16f44263ead0e53ede3f57371b1adc704a01ccf712c4dbc4e6cfc4a2",
+    "raw_maxima": {
+      "short_31ms": 67.75812348820047,
+      "medium_125ms": 37.176008264858574,
+      "long_500ms": 41.47709546890944
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_099",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 99,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d69e6bd7c66f3845d2fa8a8e827e0b56ce198a2e8a0a3f9d4fb912b78c7c6435",
+    "raw_maxima": {
+      "short_31ms": 64.6012085908606,
+      "medium_125ms": 66.36863734695555,
+      "long_500ms": 41.843875942577455
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_100",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 100,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9fe04f71bae09da7e75523121e9310b12355eed3f63a46c21a72689c8e0c0778",
+    "raw_maxima": {
+      "short_31ms": 35.503703784216476,
+      "medium_125ms": 32.31382812318902,
+      "long_500ms": 23.254464898257808
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_101",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 101,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d3d77d8047226efd18bce22fdd72e300757b038d8893f687656de15211bfddb6",
+    "raw_maxima": {
+      "short_31ms": 62.724558623801734,
+      "medium_125ms": 31.474050279248132,
+      "long_500ms": 37.74769921470748
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_102",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 102,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "80f2cb02dfde9b09f76fa814b0916cebb9f0001e3b523a114d2d48914f3ddcc2",
+    "raw_maxima": {
+      "short_31ms": 35.46682148812023,
+      "medium_125ms": 23.27226360632641,
+      "long_500ms": 31.26289142233057
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_103",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 103,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0edc0786f1de1d93d3e7dadc02faa4709b39d890230004ac06a1edbc083ec262",
+    "raw_maxima": {
+      "short_31ms": 66.15918466187433,
+      "medium_125ms": 36.487629984265965,
+      "long_500ms": 37.667617729301455
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_104",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 104,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9c921c1fca15416b4322a5e29637d93ce235432360095067fed0c3eb6423f9b9",
+    "raw_maxima": {
+      "short_31ms": 90.51118170230433,
+      "medium_125ms": 46.90806906221412,
+      "long_500ms": 34.4528648358859
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_105",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 105,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "cef3569ba36eb75e7fc33967e060ce4eca85299ab3b65c83a20f6b85afe92744",
+    "raw_maxima": {
+      "short_31ms": 65.77513041313878,
+      "medium_125ms": 54.30839396666656,
+      "long_500ms": 30.13736794662137
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_106",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 106,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "70911c3101c7f0ff79cf654971c7f59cbd748845cc9f7a96f6eedcbf015b2ef6",
+    "raw_maxima": {
+      "short_31ms": 39.82164267371492,
+      "medium_125ms": 30.25626511363153,
+      "long_500ms": 30.708240975153227
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_107",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 107,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b066b2d90529dcf219f8c837d7073d43b1d3d107f9a359478c6defc3218669af",
+    "raw_maxima": {
+      "short_31ms": 74.21263723585044,
+      "medium_125ms": 31.23369715147814,
+      "long_500ms": 34.84542549921197
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_108",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 108,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "72bee4a303b186f3afe6eef55dd30822f1b65b7cf59e0cdb24942ca484a774ba",
+    "raw_maxima": {
+      "short_31ms": 52.9422990806336,
+      "medium_125ms": 47.034228100044444,
+      "long_500ms": 52.48192120948497
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_109",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 109,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "738158c350c14318450352f9fca5d594d7870d6a71df197cfc08914a345ab506",
+    "raw_maxima": {
+      "short_31ms": 43.57034062649494,
+      "medium_125ms": 22.31683088353624,
+      "long_500ms": 19.911673929637477
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_110",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 110,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "565616c8c97ed289851c5a9c86fa253946435fa3de7ac87e1a4a2a1522bb904c",
+    "raw_maxima": {
+      "short_31ms": 78.07513781976536,
+      "medium_125ms": 37.31144645538245,
+      "long_500ms": 35.43984606216851
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_111",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 111,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "fa09466a759b7e96c66741441c8d400d17d8f48b8c6b29f8e245eafe116ac813",
+    "raw_maxima": {
+      "short_31ms": 62.016369289135866,
+      "medium_125ms": 34.1238760613624,
+      "long_500ms": 41.83343426299451
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_112",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 112,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8870cdd1b908d9f59ad96b44aa22c36ff8bee5f2f2a073589ebb87b01cb0518a",
+    "raw_maxima": {
+      "short_31ms": 40.30340233881996,
+      "medium_125ms": 22.58912822342888,
+      "long_500ms": 37.11000863858665
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_113",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 113,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "22c66e7e182491609f64c876b6bbc976d3ee148213c275092226c612bc7edbf7",
+    "raw_maxima": {
+      "short_31ms": 43.43420306585808,
+      "medium_125ms": 41.61606904160369,
+      "long_500ms": 41.967725584447294
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_114",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 114,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9d040091922a1bb5409d5a9110b994cdb71dd3564f78851eff0db9cf5c43f338",
+    "raw_maxima": {
+      "short_31ms": 59.73877312743703,
+      "medium_125ms": 31.3956264651465,
+      "long_500ms": 27.11569734654856
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_115",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 115,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b97e5a265435e1cc52dba63f12fe425f6fa82f46f426738e6f513fee7e10a280",
+    "raw_maxima": {
+      "short_31ms": 34.340482284561624,
+      "medium_125ms": 23.551351021538913,
+      "long_500ms": 29.391400056060814
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_116",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 116,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e7e7e3edce3b85b9cd86db57bd0f2a9fff8e3db09a00b052bcf8edc30720eb0e",
+    "raw_maxima": {
+      "short_31ms": 48.567476410354715,
+      "medium_125ms": 36.292272933160255,
+      "long_500ms": 20.134832889778565
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_117",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 117,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "bae7c91dae748ae0f5e85da42dcab793a3d9ed5188ed147aad600e188b0a6a5e",
+    "raw_maxima": {
+      "short_31ms": 58.11534498097548,
+      "medium_125ms": 37.66267390315953,
+      "long_500ms": 33.48145898278601
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_118",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 118,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e75abea56d10f4a8f8e6fb55dbe4db30f88f52f66d6e9cb61506bfcfb492a605",
+    "raw_maxima": {
+      "short_31ms": 49.26415444168062,
+      "medium_125ms": 36.840980620069175,
+      "long_500ms": 22.556861689272793
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_119",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 119,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b6ae4b66894d9909ee3192470e6a0d396c1332d99e2c819cae02f38cbadbd6d8",
+    "raw_maxima": {
+      "short_31ms": 50.37137112447582,
+      "medium_125ms": 31.694963056402333,
+      "long_500ms": 34.796434864429074
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_120",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 120,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3f3cb063167128d195ac1197f0412e56acd527bc3598fcf2c6a62a23cc8baaa6",
+    "raw_maxima": {
+      "short_31ms": 39.062556060482905,
+      "medium_125ms": 32.93986157583101,
+      "long_500ms": 31.314928586353
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_121",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 121,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "467ac3f0c4c2a86fa8a30cb15dec7c03be7d2584ffe7967504fe9eb2bbe35858",
+    "raw_maxima": {
+      "short_31ms": 71.61143455080548,
+      "medium_125ms": 33.721566584009445,
+      "long_500ms": 33.910376376830975
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_122",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 122,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7c0a38a5f0afad9d41f1b69dc71dd06441b222a63b121f579701b46edf48fdb0",
+    "raw_maxima": {
+      "short_31ms": 179.95491342976024,
+      "medium_125ms": 41.26216509845037,
+      "long_500ms": 24.050920783620644
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_123",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 123,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "00f9f420bd3149c28d5f4da0763f89d5975fed24e9df33ca5686488d22fcb98c",
+    "raw_maxima": {
+      "short_31ms": 66.93242817305162,
+      "medium_125ms": 41.45744076811766,
+      "long_500ms": 45.54455483853237
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_124",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 124,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "493bcdd36ac44f98540d2bc0af1231ac9eba7a6dd33a23d0e807d45dbd48adce",
+    "raw_maxima": {
+      "short_31ms": 45.564814709897504,
+      "medium_125ms": 28.994113446498574,
+      "long_500ms": 33.62523778058823
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_125",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 125,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c988e0f961674c53ecd9cccc95ebf143be8ce9704a8531c842bf1a257efef696",
+    "raw_maxima": {
+      "short_31ms": 53.18759725012351,
+      "medium_125ms": 26.860808530384844,
+      "long_500ms": 30.84823374356186
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_126",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 126,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9aeae7d843324a60f3bca5fe5adf41c7e77f8cf7b213c47440974d70bf401a56",
+    "raw_maxima": {
+      "short_31ms": 63.19813222072345,
+      "medium_125ms": 20.013828631867746,
+      "long_500ms": 35.73504248064742
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_127",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 127,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "abe517e108633ab30c25702d8603e42912ff571280578d0afb7ea72951c6a1e7",
+    "raw_maxima": {
+      "short_31ms": 51.81769698810505,
+      "medium_125ms": 21.361919048946618,
+      "long_500ms": 25.96635219117756
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_128",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 128,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7ecb1e66a52a1c48b002d772cf9020917c446c6efbd2bcb53f7b39386cac6e8f",
+    "raw_maxima": {
+      "short_31ms": 51.393522594281954,
+      "medium_125ms": 24.297842475735173,
+      "long_500ms": 25.028999248104373
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_129",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 129,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "171151a6ea37a45b084683cfdededd4443c979f1d3f716f7e19d17f3cf6f0070",
+    "raw_maxima": {
+      "short_31ms": 65.08665322777244,
+      "medium_125ms": 31.68110258712266,
+      "long_500ms": 25.66771713313266
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_130",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 130,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c99835187bd3cdb8315f6da562d9f5d218fa6e7b6626a844b227c0448a1a7e62",
+    "raw_maxima": {
+      "short_31ms": 54.37866736840518,
+      "medium_125ms": 21.869151002939837,
+      "long_500ms": 29.689565691980555
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_131",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 131,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e64b61b28cb17e9698797e62263a2134fc5d6e0835d52069b03d25fbf173e2cc",
+    "raw_maxima": {
+      "short_31ms": 66.6843979558124,
+      "medium_125ms": 31.71149800058763,
+      "long_500ms": 22.49020993675237
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_132",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 132,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ad0bed11079d8d08409db285e04544d3c8913a5426da169d2f0870df4fca41d8",
+    "raw_maxima": {
+      "short_31ms": 40.998996880717954,
+      "medium_125ms": 28.453260728672987,
+      "long_500ms": 19.287147496413027
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_133",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 133,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2a547f19268f89ae9a2d72917a5126df824d7cc36f08af96aa9ebab52774e33b",
+    "raw_maxima": {
+      "short_31ms": 83.0013789909395,
+      "medium_125ms": 35.351215788612905,
+      "long_500ms": 23.231134639582717
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_134",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 134,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9ea318904fd49267cd0840752ed8884ebffa0e404963bd6e4e12a62ba9fbb189",
+    "raw_maxima": {
+      "short_31ms": 93.10147283154163,
+      "medium_125ms": 31.754433930891615,
+      "long_500ms": 30.273584446863037
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_135",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 135,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9becbebd55ae06fee39f1366f7ea1c145447ce13f770f6b8693f08613c4b0b85",
+    "raw_maxima": {
+      "short_31ms": 77.28798007075466,
+      "medium_125ms": 30.6938574656629,
+      "long_500ms": 20.06926987653818
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_136",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 136,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0fa76318309e1e0155e9b8c7767be7b20f35d4373f945270846caecd15718024",
+    "raw_maxima": {
+      "short_31ms": 57.09297509684561,
+      "medium_125ms": 22.160143545438295,
+      "long_500ms": 25.333286729150515
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_137",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 137,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3c106f3e6a0a7202529da7fcab5e0cbb15f0ff3744af83c54f2e98f9680b35fa",
+    "raw_maxima": {
+      "short_31ms": 58.73925844633102,
+      "medium_125ms": 23.90755909979566,
+      "long_500ms": 26.847703593692476
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_138",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 138,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "96db1dd44dac991a8da95d937ce6734a7f42a68052035c248ea14f1bb5f5d911",
+    "raw_maxima": {
+      "short_31ms": 57.695064508205576,
+      "medium_125ms": 23.837002034845078,
+      "long_500ms": 26.488789717998277
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_139",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 139,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "85b88b9e81f289769b9a773596cf5d75e2fe006aa0e537a2e93f4e15a0451399",
+    "raw_maxima": {
+      "short_31ms": 52.401750353074675,
+      "medium_125ms": 28.3854949828131,
+      "long_500ms": 31.180527189379312
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_140",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 140,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "eddf3c1588651c644de8d3ec99d19e3548f6d0602641b5a6afac9e0a26a4f246",
+    "raw_maxima": {
+      "short_31ms": 61.55104815124252,
+      "medium_125ms": 25.830707603109737,
+      "long_500ms": 20.86273266564242
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_141",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 141,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7ca3fcde45bbca843f3b17328dd598b7b0ddf1fdf6dc822a7d08765d2b96c3c8",
+    "raw_maxima": {
+      "short_31ms": 66.00172172509058,
+      "medium_125ms": 30.30013534674592,
+      "long_500ms": 46.88402864737637
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_142",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 142,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9b960910187410c14815f5284a5ab48147d6753e676984016b376cbb26767dc8",
+    "raw_maxima": {
+      "short_31ms": 38.96568746566087,
+      "medium_125ms": 23.933801236698024,
+      "long_500ms": 30.842776601077325
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_143",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 143,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e2a672f083927b761693d043fe3b9273d14f0a955549ec7a83b6e3f5dd7be295",
+    "raw_maxima": {
+      "short_31ms": 55.59685934635846,
+      "medium_125ms": 23.63646737486001,
+      "long_500ms": 44.198814578159414
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_144",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 144,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5805ec05d3858fe508cf3a4269e61a4a967831ce010feb9e76413954a865488b",
+    "raw_maxima": {
+      "short_31ms": 58.829020005608925,
+      "medium_125ms": 24.886877242218958,
+      "long_500ms": 25.376517283172973
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_145",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 145,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "dfb10f9cdb649a49983ac4e0f407c0bce9e39b13a54427916284f59031ecaed4",
+    "raw_maxima": {
+      "short_31ms": 74.62119287666245,
+      "medium_125ms": 22.08383815206346,
+      "long_500ms": 29.320459682105554
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_146",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 146,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c33b79f69c234cb5fc01e6f6b0caff98ec08ae35edbb9c11885444925c563ad7",
+    "raw_maxima": {
+      "short_31ms": 56.743770973921066,
+      "medium_125ms": 29.92927304767583,
+      "long_500ms": 31.151130745734115
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_147",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 147,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "bea9fbeb742a8a6c350c25aafe82d9fa17c03380deae6f02d16a089701936196",
+    "raw_maxima": {
+      "short_31ms": 44.48861262411546,
+      "medium_125ms": 30.18544153559963,
+      "long_500ms": 48.68900682822198
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_148",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 148,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1be8c4829e1640e3f06298a24b09524c37eeba290c14c6f3dfa7bc4052afe797",
+    "raw_maxima": {
+      "short_31ms": 56.19205848537242,
+      "medium_125ms": 47.63461278611415,
+      "long_500ms": 19.787392082896375
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_149",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 149,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "bffa78d56ba02d1a387cae18ce9beb1a001ff3742a5ed005291ebb75d257355e",
+    "raw_maxima": {
+      "short_31ms": 64.99731595609263,
+      "medium_125ms": 31.897380892979367,
+      "long_500ms": 29.000403124664977
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_150",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 150,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "839458d4346d56fa63fa21c8b614e80447c53a4d45c34c5cace6b9f3834a07ca",
+    "raw_maxima": {
+      "short_31ms": 52.86091628238227,
+      "medium_125ms": 35.61005901193545,
+      "long_500ms": 44.5450965297311
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_151",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 151,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "cd6f06c17d7b3fc02b86534e44806ee64c6530b4935b10d411a73e11462a043d",
+    "raw_maxima": {
+      "short_31ms": 49.55820651219256,
+      "medium_125ms": 28.923024783483736,
+      "long_500ms": 43.328481124338936
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_152",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 152,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1a9206c01e243a3f450cccfab6b065d6ef7cb102f7ce4e800bfe45365ce21b86",
+    "raw_maxima": {
+      "short_31ms": 55.14781164548187,
+      "medium_125ms": 29.789343778703863,
+      "long_500ms": 39.21341471590666
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_153",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 153,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5871609c94fbfe27ed0714dafab79351b43b7dbc1501a704016dc7f00e45e9f3",
+    "raw_maxima": {
+      "short_31ms": 100.35955036397104,
+      "medium_125ms": 32.198159341771074,
+      "long_500ms": 28.558806752114247
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_154",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 154,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ee697cfa96eac5bdac4d34007e45670b37e79f6a5d3b55bd0f44b392faf76826",
+    "raw_maxima": {
+      "short_31ms": 57.310941875618894,
+      "medium_125ms": 22.60437365926001,
+      "long_500ms": 63.027138512756416
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_155",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 155,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e880d348477d32478ea17b3f4856e902c235c363e338351d1596d0b912083f9a",
+    "raw_maxima": {
+      "short_31ms": 101.4255651517415,
+      "medium_125ms": 26.9655769992772,
+      "long_500ms": 32.360705752875944
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_156",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 156,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4b6a1019bfd003865b0f73bbe521d0c10eb68e3e54cff4e1be4107c2570018c0",
+    "raw_maxima": {
+      "short_31ms": 53.1795272312142,
+      "medium_125ms": 34.047485340485125,
+      "long_500ms": 28.18670587711573
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_157",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 157,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3d4953756dc0ce82de7795b9b7251e935ad51fd58502e2512848c8624107cde2",
+    "raw_maxima": {
+      "short_31ms": 65.49764681004302,
+      "medium_125ms": 38.32974264386759,
+      "long_500ms": 35.506037664471776
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_158",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 158,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "93ad07772578e64bdf8473632dbb7db3e388b0340374e01b19516992fd3931fe",
+    "raw_maxima": {
+      "short_31ms": 53.27353210820283,
+      "medium_125ms": 21.86875714882738,
+      "long_500ms": 29.495052973601513
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_159",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 159,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0e5a39fa238b6f0aa4712404fd47ce1a76231f2702b78acd7b105fd148d76dd2",
+    "raw_maxima": {
+      "short_31ms": 45.24199082636127,
+      "medium_125ms": 28.016026600904166,
+      "long_500ms": 22.42608434793486
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_160",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 160,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "847cfd123435673c8a9373f9becaac1626ba76fb9a7eb6bb14a72f947f4edcdc",
+    "raw_maxima": {
+      "short_31ms": 46.72553178664717,
+      "medium_125ms": 32.30972179950601,
+      "long_500ms": 25.93779120548841
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_161",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 161,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6893d0c0b8eae67627628873cfdeb10c393f618bc0d40a3b8c3082ddaa26d475",
+    "raw_maxima": {
+      "short_31ms": 51.85541186470138,
+      "medium_125ms": 20.55085737497878,
+      "long_500ms": 18.12642600968732
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_162",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 162,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1ca19d94a8d0459d3ecfa5232c7231d9882006300011cd3d224ed0a7de111d1d",
+    "raw_maxima": {
+      "short_31ms": 72.60265703495921,
+      "medium_125ms": 41.403315690481996,
+      "long_500ms": 30.466634856390854
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_163",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 163,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "118305b4269210e793ef79c4bfed2deb2eca38dd97bcfa87a85a0b502df93d65",
+    "raw_maxima": {
+      "short_31ms": 70.69543515482124,
+      "medium_125ms": 31.213633780418206,
+      "long_500ms": 49.11859703933671
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_164",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 164,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f102696bd4ebe2f605dda87c42d676029aa80892db7dd5f6dfc91b15a569fd9b",
+    "raw_maxima": {
+      "short_31ms": 51.598537384743615,
+      "medium_125ms": 29.982765179970986,
+      "long_500ms": 21.4100760452206
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_165",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 165,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "76dc0f9b0bb051b395a34143980f04aa51ce08839d32a800f0c6598ac0fec268",
+    "raw_maxima": {
+      "short_31ms": 57.13117733216336,
+      "medium_125ms": 45.241003022725224,
+      "long_500ms": 41.3947544059009
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_166",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 166,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "399fd2632df6d35e345b1142af65ffa079e47816fdfc8172d3b686a12efb0fe1",
+    "raw_maxima": {
+      "short_31ms": 48.48015624976227,
+      "medium_125ms": 28.40142823930108,
+      "long_500ms": 19.893860940033584
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_167",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 167,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4a7d80407a5a87cd5aeccd63e614f9094523c1c7cc0665acb98c2fe9c3998ec8",
+    "raw_maxima": {
+      "short_31ms": 80.68800375515937,
+      "medium_125ms": 38.6945652306611,
+      "long_500ms": 29.792879676531197
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_168",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 168,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "25cb704e3d787fb4afa4087519c6cf3dacc551f3ef13caf9aca2a0ce47e2e4ce",
+    "raw_maxima": {
+      "short_31ms": 61.40876364657759,
+      "medium_125ms": 41.11571348314839,
+      "long_500ms": 31.598884119561518
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_169",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 169,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "af4bf36559a80cf3ad03028384940285ec38c9ce5cb536d5ecdea45e31d502db",
+    "raw_maxima": {
+      "short_31ms": 60.47705898206487,
+      "medium_125ms": 27.964026059429454,
+      "long_500ms": 26.271642235805132
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_170",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 170,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "87d8f9754a4c07474d9e548c52b5d46efe243138e2431f740df681edb032626b",
+    "raw_maxima": {
+      "short_31ms": 53.19497892939678,
+      "medium_125ms": 35.09005448156048,
+      "long_500ms": 28.891436478240735
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_171",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 171,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "69e8bcd10568ce67da33781a510c198443cfbfbdab74d36acb1f290b9a55949b",
+    "raw_maxima": {
+      "short_31ms": 65.39319231920888,
+      "medium_125ms": 23.54278042359445,
+      "long_500ms": 33.83119428202494
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_172",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 172,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a394f784f00e1c2050121a5e33ca3fad6c2532b1cec817d4384b7492be36a906",
+    "raw_maxima": {
+      "short_31ms": 69.20601034078285,
+      "medium_125ms": 33.03011023410581,
+      "long_500ms": 32.851414978618905
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_173",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 173,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e77dd3be76284ebd55944391c5df24c84ec475eeb964b5f0e4cda8c9bf79257d",
+    "raw_maxima": {
+      "short_31ms": 46.20798864091006,
+      "medium_125ms": 48.70800419903229,
+      "long_500ms": 45.77114946991989
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_174",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 174,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "45e6333937f105931612601d017427d256872470ef9cf34f0a62f8c81bc00f07",
+    "raw_maxima": {
+      "short_31ms": 60.4929307535513,
+      "medium_125ms": 40.42786603527661,
+      "long_500ms": 23.6628129411372
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_175",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 175,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a4eb2983c1490ec67926d206a5dfd8f9c727876ce15ad4cf8d0d38c9c054aa16",
+    "raw_maxima": {
+      "short_31ms": 33.842274912371906,
+      "medium_125ms": 29.508052848566372,
+      "long_500ms": 21.364623829466247
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_176",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 176,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "43b840ef7a39a26e946a83702030ae9193e5e425fd88ea9e956f0547a1843102",
+    "raw_maxima": {
+      "short_31ms": 51.60065696790154,
+      "medium_125ms": 32.41251224183677,
+      "long_500ms": 80.39844049623112
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_177",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 177,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b32efa7db510d21387c046b0fd9c5f4fdb1955facbf2316666a79ee1c8dce1d8",
+    "raw_maxima": {
+      "short_31ms": 94.50864717214408,
+      "medium_125ms": 64.248346809277,
+      "long_500ms": 29.36024507609344
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_178",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 178,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ad5ae58d67aa276453577f968b100f01bd23edfc6c5a7a88b0268069e9ce47fa",
+    "raw_maxima": {
+      "short_31ms": 60.9382555490101,
+      "medium_125ms": 31.786962187561905,
+      "long_500ms": 34.87167138464008
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_179",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 179,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ceaa4d123e95f316a5535398c623ff3dbd1df43cc4b952faec57f5076e79ba74",
+    "raw_maxima": {
+      "short_31ms": 48.02559148150843,
+      "medium_125ms": 31.31350171570483,
+      "long_500ms": 33.29236340822668
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_180",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 180,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "31539bd80316edc74eb2edafd7f80dc4a261e386ce94bd39586bb050775dcd8d",
+    "raw_maxima": {
+      "short_31ms": 38.90295272751663,
+      "medium_125ms": 35.429983494010195,
+      "long_500ms": 35.92719308309921
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_181",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 181,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "836ec59ed96c31be8901375653273ee763eb4924df755e3df68c7685abdc17f1",
+    "raw_maxima": {
+      "short_31ms": 71.74209453214168,
+      "medium_125ms": 38.16901734669493,
+      "long_500ms": 25.09656866886746
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_182",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 182,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0d39572da1a2ff871557ef16d57593972dc8b251623b984f3b7c02e4845fea7d",
+    "raw_maxima": {
+      "short_31ms": 53.337512861872995,
+      "medium_125ms": 26.13665566470484,
+      "long_500ms": 35.57829185513342
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_183",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 183,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "73ac52e5ea72ce2a6d7bf178092f206bf821fb560217480291ac65939a51723d",
+    "raw_maxima": {
+      "short_31ms": 47.53428250721759,
+      "medium_125ms": 31.722134752107035,
+      "long_500ms": 26.278706522571508
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_184",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 184,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "176bb2f9d3914afaf997084572ad47ab90208ce91f3bbe6184ea3d35946078ee",
+    "raw_maxima": {
+      "short_31ms": 60.9310542532334,
+      "medium_125ms": 36.27677497870481,
+      "long_500ms": 25.657489563662423
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_185",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 185,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "72eeef10d51dac0411469d30dd266bccbe6e214a3b1b2680c347936ae23fd20b",
+    "raw_maxima": {
+      "short_31ms": 58.615973649060045,
+      "medium_125ms": 34.98068133770807,
+      "long_500ms": 25.28546726023488
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_186",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 186,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c74d8c09a83392bb128555641b9da0c9f221dc8380622b3928da0f8329fa3444",
+    "raw_maxima": {
+      "short_31ms": 111.76274860922918,
+      "medium_125ms": 36.44464890934813,
+      "long_500ms": 26.289434224993876
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_187",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 187,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f06f019e98d9bb86f198316f88a331c9dc5df88aee7e8885b41904613b2c12cc",
+    "raw_maxima": {
+      "short_31ms": 47.5980154442558,
+      "medium_125ms": 30.766643919164082,
+      "long_500ms": 34.04275727979838
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_188",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 188,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7c1987f47fb31a27932282081bf9b47ca57ef0d27bc34b818b64ed623074a5b7",
+    "raw_maxima": {
+      "short_31ms": 59.29609931996476,
+      "medium_125ms": 27.9682821876454,
+      "long_500ms": 39.121859723263505
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_189",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 189,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "dfd2acd30b3abafedd0296b25ef7b662766d498030589f144bd78461237cca98",
+    "raw_maxima": {
+      "short_31ms": 52.2529148688408,
+      "medium_125ms": 23.56670513518713,
+      "long_500ms": 43.45733639616769
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_190",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 190,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ff8ec939811cae7c65d9f56f757b97ee1c20e3936e9dacda1a538d677f94f5bd",
+    "raw_maxima": {
+      "short_31ms": 110.69617319207238,
+      "medium_125ms": 55.68684070530688,
+      "long_500ms": 33.12466279094118
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_191",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 191,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5e8c6838935c9cdc528bd68d05b2f02a5711a21bddae5bebee301403fc89db56",
+    "raw_maxima": {
+      "short_31ms": 53.33341106108264,
+      "medium_125ms": 30.93319583667755,
+      "long_500ms": 43.87733183020217
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_192",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 192,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "56cfad11e42cd8e4b3384014b8e1879c9ec838e006a5d756e173c1767e651341",
+    "raw_maxima": {
+      "short_31ms": 87.76829867238935,
+      "medium_125ms": 51.0653501787467,
+      "long_500ms": 46.77304908279491
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_193",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 193,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e7f1252fe4a873cbe513afb043daf009aa397ccd8da5fd02683eb79105b37862",
+    "raw_maxima": {
+      "short_31ms": 78.57970058870877,
+      "medium_125ms": 47.593044654349335,
+      "long_500ms": 26.60937868780989
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_194",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 194,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9c0dc4e63a191acb833620f424da2d1328bb22e0279b6e21ff085f611d103709",
+    "raw_maxima": {
+      "short_31ms": 91.75405503237785,
+      "medium_125ms": 35.76693928000104,
+      "long_500ms": 28.646788746766845
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_195",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 195,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6d5ba5c342842daacc264aacc34a731004530be635739c63a73a7386c5bfc0c5",
+    "raw_maxima": {
+      "short_31ms": 61.142381633762575,
+      "medium_125ms": 38.73795714896113,
+      "long_500ms": 47.887181250588746
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_196",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 196,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "081332d93480aaf95404e6d03678ddbf99349df96bb757869731d8a7ed26f6e7",
+    "raw_maxima": {
+      "short_31ms": 78.35456189178089,
+      "medium_125ms": 35.727454766676004,
+      "long_500ms": 27.778523221837016
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_197",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 197,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d335da96fd1ee7996c060149a66b48a00f9feadb6b9d0acd17699e5382bbaa83",
+    "raw_maxima": {
+      "short_31ms": 61.545297862602425,
+      "medium_125ms": 27.43979989951491,
+      "long_500ms": 22.95352204669233
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_198",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 198,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f07fd9d35e0628f3509e25f4344d4d0c5e437198f9490209e1229f71bb859d07",
+    "raw_maxima": {
+      "short_31ms": 56.900870385024135,
+      "medium_125ms": 61.87022907775687,
+      "long_500ms": 30.33762052854204
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_199",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 199,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "09c2e732f2edf008bc925d761e910ef1595a06ca47c4b3bf4e53c8e9ef828732",
+    "raw_maxima": {
+      "short_31ms": 65.30866543578608,
+      "medium_125ms": 46.7533187295223,
+      "long_500ms": 30.5018338825903
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_200",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 200,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a23d47d2936d47974c2cfb75f369f923a0b840bcc0082caee1fcd26df86998f2",
+    "raw_maxima": {
+      "short_31ms": 82.17248581852228,
+      "medium_125ms": 26.721035095176138,
+      "long_500ms": 26.84253428573419
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_201",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 201,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d772d219377a69396ed543ff4091d5f92ccfe598930c3a63fc290a99edcdccb5",
+    "raw_maxima": {
+      "short_31ms": 80.62377323724839,
+      "medium_125ms": 32.18395203001574,
+      "long_500ms": 46.324576618889495
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_202",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 202,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "bf875d5915290c5fe7cfac16d8d72a56e7f4ba94e073ed9f27c2f81b719babc0",
+    "raw_maxima": {
+      "short_31ms": 63.36946144427303,
+      "medium_125ms": 41.57654099915922,
+      "long_500ms": 26.252457502066036
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_203",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 203,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e08bcd50d5f050ef682e00e67677f7d6fd95b087ba7f4d72eb00ccec5c3dea2a",
+    "raw_maxima": {
+      "short_31ms": 60.6378800177792,
+      "medium_125ms": 55.459022033117286,
+      "long_500ms": 23.64920151944525
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_204",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 204,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "6dae25b5a06590c3f99d3c647fe5665f0ebf87c9a928c4077387c50581ba1117",
+    "raw_maxima": {
+      "short_31ms": 62.60158832218238,
+      "medium_125ms": 25.842254913391166,
+      "long_500ms": 23.14364997470369
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_205",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 205,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a2919462d912e92b3f17e1553d891d0c0b7601bf6c79b396b4073317e97403df",
+    "raw_maxima": {
+      "short_31ms": 44.35305007643437,
+      "medium_125ms": 32.076435227996875,
+      "long_500ms": 20.795921153323416
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_206",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 206,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d4d2889d9dac4ec4a5af819fae1eeeb014feeb3e427b0dffe5e18fdf6419c1d0",
+    "raw_maxima": {
+      "short_31ms": 123.46020810597518,
+      "medium_125ms": 32.8199052036496,
+      "long_500ms": 62.57374534648501
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_207",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 207,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5da7c514f82f87418f13e4740294c01b8dee318faff66f2e0ef4bb27408bef17",
+    "raw_maxima": {
+      "short_31ms": 47.12427451964952,
+      "medium_125ms": 35.30773376102643,
+      "long_500ms": 35.69257018077771
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_208",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 208,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "00de48522d37a612a2c20d17fd938cfd0a018bad932f0f2b9a0ce91217c3ebfa",
+    "raw_maxima": {
+      "short_31ms": 58.00113287975176,
+      "medium_125ms": 32.351636463844386,
+      "long_500ms": 39.30258625231439
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_209",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 209,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "62ae65a23acf40314671b1aa65cd9fdbeaa59eedcf326437c884ce2dc3ef9c70",
+    "raw_maxima": {
+      "short_31ms": 41.08037430097403,
+      "medium_125ms": 28.02434187724371,
+      "long_500ms": 29.80770381383569
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_210",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 210,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f94e465d7cc4cde49bfe41d20697f7c7f2fbcd657aa677bc4d831adf54b5e48f",
+    "raw_maxima": {
+      "short_31ms": 94.08270136003125,
+      "medium_125ms": 37.314700577601585,
+      "long_500ms": 23.586926047127147
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_211",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 211,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f756abf816ee9aef431c9b96c8716d3b3fcdebd720239fd151909beae9b3c103",
+    "raw_maxima": {
+      "short_31ms": 50.70468940954157,
+      "medium_125ms": 40.54438140663905,
+      "long_500ms": 22.05880542254169
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_212",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 212,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "16cea58ad823698ace112d87addd6f5c34b6dd139ae066f6f0a37738ab664079",
+    "raw_maxima": {
+      "short_31ms": 91.65741533737676,
+      "medium_125ms": 43.38638896456404,
+      "long_500ms": 32.78345590491643
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_213",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 213,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "405d5b5af4c87c9b74a712c4af564fcfec7e364f156d7f45dc339697a3c6e0e4",
+    "raw_maxima": {
+      "short_31ms": 52.54399014879125,
+      "medium_125ms": 31.778621668226275,
+      "long_500ms": 45.49943994908254
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_214",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 214,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "30fb37528f4a6236f0414efbd1316fbbbdf2429e94dd879d151a150e0f06cc21",
+    "raw_maxima": {
+      "short_31ms": 57.08317758110344,
+      "medium_125ms": 25.00899462835816,
+      "long_500ms": 30.11888045158143
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_215",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 215,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "89a2b1ef678b772282f73261b36bc329064f7419bbb9ff4038b507cf80e36f5d",
+    "raw_maxima": {
+      "short_31ms": 56.239193732104916,
+      "medium_125ms": 30.585436643227606,
+      "long_500ms": 37.19398483805181
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_216",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 216,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "eb0a8841cb62d46d20e3e230f04fe87f6c2b3fa0bdd3d8b5b6ff9d605b44161d",
+    "raw_maxima": {
+      "short_31ms": 59.03977100937977,
+      "medium_125ms": 42.74735552780648,
+      "long_500ms": 31.94818077604271
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_217",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 217,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3aaceedf1541d89935af3055f912c5bc997e0eb94d8d5838b10198bddfb1cdc6",
+    "raw_maxima": {
+      "short_31ms": 95.07309085396109,
+      "medium_125ms": 26.6061221621046,
+      "long_500ms": 22.778640334264146
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_218",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 218,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "80a5dc15004bae9b3a3cc4dccf932990a04ace84de04515459d795ba15b0c295",
+    "raw_maxima": {
+      "short_31ms": 67.67581327365914,
+      "medium_125ms": 39.632309017519034,
+      "long_500ms": 42.93757129347376
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_219",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 219,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1e6e29a880dfe002c35f5e9c4b9a331abc489e32082de590c5e865d791504254",
+    "raw_maxima": {
+      "short_31ms": 118.3602736546659,
+      "medium_125ms": 34.2252109848538,
+      "long_500ms": 34.74322521091488
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_220",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 220,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0f6491f66ce5fd41a4a4906dafcd3eaa7f6e443af6c232fb576c4a50bac26434",
+    "raw_maxima": {
+      "short_31ms": 70.98460823317399,
+      "medium_125ms": 55.21257087447927,
+      "long_500ms": 38.610030619312724
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_221",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 221,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8d3d1c891573535bf4565402b5640fd4fa9b374f0b05eb583982029f455b284c",
+    "raw_maxima": {
+      "short_31ms": 63.75821014395797,
+      "medium_125ms": 26.68344178864151,
+      "long_500ms": 32.97114232634436
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_222",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 222,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c3dff4de87f7ee839fa37ffd4b335705a0d5684803f91a4579003a0ac055fb65",
+    "raw_maxima": {
+      "short_31ms": 53.02131864898488,
+      "medium_125ms": 28.191786195301418,
+      "long_500ms": 31.495362960685775
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_223",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 223,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2abcda9b06a60e7fc402cdd1f9f311b4ce30e579458d818ab6a58b074f22a830",
+    "raw_maxima": {
+      "short_31ms": 59.98359249598809,
+      "medium_125ms": 36.7174018365671,
+      "long_500ms": 37.451360450627284
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_224",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 224,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3d8808cd2c093c4dcccdf107e04a9033220cd1d0c16e199ba92dc02cec6472f8",
+    "raw_maxima": {
+      "short_31ms": 79.54338156154714,
+      "medium_125ms": 34.30765166547975,
+      "long_500ms": 36.43722589387899
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_225",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 225,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "13225bc20f52baf96a9980b137265ce830fb2687af95fb547cfbd4fc28e82901",
+    "raw_maxima": {
+      "short_31ms": 55.40127445955596,
+      "medium_125ms": 34.60082304541709,
+      "long_500ms": 32.556937262902956
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_226",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 226,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0e52aa7bf038e657eac868c1bc04e194e1fa68740dda77f5c034873789ed9e57",
+    "raw_maxima": {
+      "short_31ms": 68.03881200844633,
+      "medium_125ms": 36.87745540171383,
+      "long_500ms": 29.023286250736998
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_227",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 227,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "527fb85db2ae637ac68e312e0ecabfb8a91776e6dd5eb9df95be6438f281ee60",
+    "raw_maxima": {
+      "short_31ms": 37.315672482026756,
+      "medium_125ms": 22.650225728562862,
+      "long_500ms": 31.692197243786545
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_228",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 228,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "dd5501b1d034ccde8843bc7afff57a9c935aa452f8489b61a933a39f81ffe0eb",
+    "raw_maxima": {
+      "short_31ms": 40.02808179532086,
+      "medium_125ms": 23.134547399725932,
+      "long_500ms": 31.09113087622562
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_229",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 229,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0754b8fd806e905c08ff20e27ac4e8540e8024306d346fca9f5cb9c2e84f2e4c",
+    "raw_maxima": {
+      "short_31ms": 37.759862606327715,
+      "medium_125ms": 28.388863761849834,
+      "long_500ms": 26.636562100120777
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_230",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 230,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d6fa438326d2d0eff4bd7cff793915838bbef484cd7fcb0c73da966a4ac5ce1c",
+    "raw_maxima": {
+      "short_31ms": 72.4083349513784,
+      "medium_125ms": 27.644092695714136,
+      "long_500ms": 44.779586230124885
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_231",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 231,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "218c490183912421f5f62a4ae2d33b14b164fcf4ad6e6f779fb61ea618e1f7aa",
+    "raw_maxima": {
+      "short_31ms": 48.52752506016753,
+      "medium_125ms": 33.126044181174144,
+      "long_500ms": 33.21258173240629
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_232",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 232,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a53c84206066c9f9bdfbb14118684e513a53ea19003128ff88f3f97b4d72eda0",
+    "raw_maxima": {
+      "short_31ms": 102.57646136051214,
+      "medium_125ms": 31.068344915097647,
+      "long_500ms": 34.48833907800192
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_233",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 233,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0e6bf5487d472b744c3dbdb8f317a5accb558c5576657fe2891089c3b7d835df",
+    "raw_maxima": {
+      "short_31ms": 90.11462155182866,
+      "medium_125ms": 28.698789016821735,
+      "long_500ms": 27.586556018819525
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_234",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 234,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0defd8b62cd181a376b33216643d2b0d4bfafca3b752ed9a3ae3b96e4803f304",
+    "raw_maxima": {
+      "short_31ms": 79.53346452390385,
+      "medium_125ms": 31.265192228067534,
+      "long_500ms": 24.166134525475325
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_235",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 235,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "57b6cb833f449df3168d63c5510f20c1eb94bb7d7e9f4c453b0b692e2d39439c",
+    "raw_maxima": {
+      "short_31ms": 51.51745579379513,
+      "medium_125ms": 36.5701453334826,
+      "long_500ms": 29.667267339525463
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_236",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 236,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3d2551f2ce6cdf607f6455e1e296a43b42d93753bc624edd2e0e13fa4e66af58",
+    "raw_maxima": {
+      "short_31ms": 49.35991470020338,
+      "medium_125ms": 23.396331868929355,
+      "long_500ms": 34.10074785847512
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_237",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 237,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b13777b358c15b657bf53604d7e35ada2b4ac2e293859b1fb1f5a2413d1c3b36",
+    "raw_maxima": {
+      "short_31ms": 44.55471245474527,
+      "medium_125ms": 32.33281598186328,
+      "long_500ms": 32.75614637118541
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_238",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 238,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "127ec086d5b81ca205b223ca676227b9dda6f2e7a6b0309aff5fbf2fe82e1701",
+    "raw_maxima": {
+      "short_31ms": 75.96221287736412,
+      "medium_125ms": 26.035457607363938,
+      "long_500ms": 32.25409765168688
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_239",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 239,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "df433e21f0759421b447cc53dceb58f2e2aa5c998f4bce67c1efa71c928dce09",
+    "raw_maxima": {
+      "short_31ms": 50.9415977867251,
+      "medium_125ms": 30.20282010671071,
+      "long_500ms": 21.818873539401842
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_240",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 240,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f9464bdc0708be90d13774219f9682ecb59c7f7feb19ca1bfc3f34dc5924215a",
+    "raw_maxima": {
+      "short_31ms": 51.848645905003075,
+      "medium_125ms": 23.48709767656075,
+      "long_500ms": 31.63072485937601
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_241",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 241,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3422ec09f349e7c3489224aa5c14af52e61f17ccd54ac1795a81a9895b78cbcb",
+    "raw_maxima": {
+      "short_31ms": 55.865994611808546,
+      "medium_125ms": 39.417678228676486,
+      "long_500ms": 40.059569927465674
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_242",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 242,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d1a3514139ac3ecb32ed52eaab7e876f66d0f9cb541073c582e85aef58bce599",
+    "raw_maxima": {
+      "short_31ms": 56.65355313923415,
+      "medium_125ms": 35.41911202904805,
+      "long_500ms": 26.15852405116721
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_243",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 243,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "cfb733749ac8b8d73db1865784aa26e192fd6d57bc09dfd5bc5af176a0573697",
+    "raw_maxima": {
+      "short_31ms": 57.31985999745769,
+      "medium_125ms": 33.153919804140244,
+      "long_500ms": 27.966214786342384
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_244",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 244,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "100371b3ecb3bbcd3f5b659ff2b1fe98096535312b186f1bac273dd37910d222",
+    "raw_maxima": {
+      "short_31ms": 84.82324134931585,
+      "medium_125ms": 24.951583864289553,
+      "long_500ms": 41.793559453897956
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_245",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 245,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "54be2835d4032b0386faa954a58069e631ec9b25ef440a60c0d7a8c4cefb06ae",
+    "raw_maxima": {
+      "short_31ms": 59.910917035895885,
+      "medium_125ms": 39.802863174007726,
+      "long_500ms": 41.74362852055824
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_246",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 246,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e6bb13b0a5e6f2585bc4799f957598921aea583d35f495dc1c6e81d44324af94",
+    "raw_maxima": {
+      "short_31ms": 59.50427891510614,
+      "medium_125ms": 33.82350107686105,
+      "long_500ms": 17.832104261099936
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_247",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 247,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1bc63f786e9d78a96d8cff752d2dfb34609d36ccc126d385ac875dd93b5bec64",
+    "raw_maxima": {
+      "short_31ms": 45.354202148807964,
+      "medium_125ms": 33.49672528561486,
+      "long_500ms": 26.136950581460603
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_248",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 248,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "82afcb01efee8637282e3856e8b6871e6a4facbf56f609a97ccd3068fde05a0f",
+    "raw_maxima": {
+      "short_31ms": 69.58770385732433,
+      "medium_125ms": 29.766225102069992,
+      "long_500ms": 27.606606704355066
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_249",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 249,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "48019ef90244ff43421c6667032475df77e0eafca9901bfb2a70b5cfdc9e40a2",
+    "raw_maxima": {
+      "short_31ms": 71.32575862977508,
+      "medium_125ms": 46.80414186666935,
+      "long_500ms": 48.88478178916775
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_250",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 250,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "89fa381921371ec32635d25b24a0bf39caf530bc69edf2e20cdaec09afaa4574",
+    "raw_maxima": {
+      "short_31ms": 46.13120064864789,
+      "medium_125ms": 29.301333126304968,
+      "long_500ms": 37.9501134301362
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_251",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 251,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9a62ea1dc7b791cc4cf8b759f4406c7cf465233a2920c43db7156db3745119d7",
+    "raw_maxima": {
+      "short_31ms": 57.60048939323343,
+      "medium_125ms": 26.316170308441876,
+      "long_500ms": 35.25240716896684
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_252",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 252,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "30975aae567fdcc0672a651f828bc144812afe209bbe22a61447d84a77510ebf",
+    "raw_maxima": {
+      "short_31ms": 58.8230673978989,
+      "medium_125ms": 30.14389318153148,
+      "long_500ms": 32.46232136175908
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_253",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 253,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0b473b4eae46deab65eb7c5e17554cfe8db9fd23e952793f4f83aa900d67178c",
+    "raw_maxima": {
+      "short_31ms": 94.29661711420837,
+      "medium_125ms": 30.35901436510988,
+      "long_500ms": 30.602813670048118
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_254",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 254,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f097d5e203b887c6307d7d55b06c5c4cf86f1821ec3d3d8ce35b83f8eccca104",
+    "raw_maxima": {
+      "short_31ms": 62.187381544527895,
+      "medium_125ms": 28.31329246004963,
+      "long_500ms": 23.136484174008267
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_255",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 255,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c363434840cd98fe68632ebf24f3196003a26ae37ef05a8432e311b275cebd5d",
+    "raw_maxima": {
+      "short_31ms": 78.80132785121386,
+      "medium_125ms": 29.072672400568187,
+      "long_500ms": 21.67898686069969
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_256",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 256,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ea5ad4fa2d37d7fb2d36ae8e6c0c773273feea04c79104aada6bc9afb57929b1",
+    "raw_maxima": {
+      "short_31ms": 62.4186512902634,
+      "medium_125ms": 29.246875413703975,
+      "long_500ms": 31.210158784502898
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_257",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 257,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "4a3d72e6f8c1f46effdd7a67c4b9df35b0fcdeb47608c54de5b6c984dd2a1f08",
+    "raw_maxima": {
+      "short_31ms": 59.418326270317536,
+      "medium_125ms": 24.8944487845869,
+      "long_500ms": 58.262441338929015
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_258",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 258,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e645311ef6e40157224e620243230349c1973c54461831c0072b726573449003",
+    "raw_maxima": {
+      "short_31ms": 62.48862992888028,
+      "medium_125ms": 27.49866820158453,
+      "long_500ms": 27.588256756021657
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_259",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 259,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5d34552105561e7f47cc28ae45a10645e3f1dc36fc3e6ce77b34457b5fefd6ec",
+    "raw_maxima": {
+      "short_31ms": 76.54418992430833,
+      "medium_125ms": 19.223056209545298,
+      "long_500ms": 34.41638888022271
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_260",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 260,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ae9eb8d1dd8f9084a4137ef306f70ed85e1bc64ebb50518e5c8d94b69e8994e3",
+    "raw_maxima": {
+      "short_31ms": 62.018560085328645,
+      "medium_125ms": 36.69612829726948,
+      "long_500ms": 23.717594372151733
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_261",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 261,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5c0ff2e85aedabe0effe9543b339eb0dd4607f985e9426b89bc690ab8586aba0",
+    "raw_maxima": {
+      "short_31ms": 67.18681422741109,
+      "medium_125ms": 28.40528594356597,
+      "long_500ms": 35.93352891923601
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_262",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 262,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "07548487d068ed2189b16d2794a5fb0fcf2c2d95c61912c2b53fe5a9a9011d08",
+    "raw_maxima": {
+      "short_31ms": 66.18032196649487,
+      "medium_125ms": 30.89150329449255,
+      "long_500ms": 23.55676083412527
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_263",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 263,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1c4c4fa4435fbc85d49024c62bdff723518bf432301f3fb6d6c9fab8aa557500",
+    "raw_maxima": {
+      "short_31ms": 57.34503635737126,
+      "medium_125ms": 37.8986943614532,
+      "long_500ms": 23.29745279516207
+    }
+  },
+  {
+    "sample_id": "s17101_pink_calibration_264",
+    "seed": 17101,
+    "case": "pink",
+    "part": "calibration",
+    "index": 264,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b63af2b5861f9f1e5fd7b126e5d1bd7a6e15b4643f264a3a85c0356a8e05a31f",
+    "raw_maxima": {
+      "short_31ms": 38.46314127862228,
+      "medium_125ms": 36.86214039408176,
+      "long_500ms": 22.974841241942322
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_000",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 0,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5fa4c16ecd128e19fe0787cc188133c3996a8023087abeba897975f3a7a9c5a7",
+    "raw_maxima": {
+      "short_31ms": 71.12735545162514,
+      "medium_125ms": 32.576589680478975,
+      "long_500ms": 31.739741670249924
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_001",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 1,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3c3e23ca343901930e34bcf7fe241c8b309b24c0cf2f45e20c4cabd01d68450f",
+    "raw_maxima": {
+      "short_31ms": 77.53494377750256,
+      "medium_125ms": 31.485932927513183,
+      "long_500ms": 38.5350720771836
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_002",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 2,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7c6c1af4381f57d842ce758faff296bbddd8317aa20bcd30221cdbf0fbb6d75d",
+    "raw_maxima": {
+      "short_31ms": 49.1636662498763,
+      "medium_125ms": 20.2856559689477,
+      "long_500ms": 29.336908186894306
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_003",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 3,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9083eaf163db4223fcd777ff671b2c09515f544cf7e66ed7f30e566fa0f631ce",
+    "raw_maxima": {
+      "short_31ms": 43.34920305653385,
+      "medium_125ms": 29.918999962238498,
+      "long_500ms": 44.661408632527866
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_004",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 4,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f34e041306eb1b8dd4795f9f2247102027ee186ecedd367775613ccaea9605f0",
+    "raw_maxima": {
+      "short_31ms": 58.87087391891221,
+      "medium_125ms": 40.33528312304303,
+      "long_500ms": 24.845444000132474
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_005",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 5,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "7ec26884d220fb91f2ac6c05d35af99abc44c741560da2e466bef9f037b2bd9a",
+    "raw_maxima": {
+      "short_31ms": 72.08357312991173,
+      "medium_125ms": 19.554806366897147,
+      "long_500ms": 27.079032427895502
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_006",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 6,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "db801daa15f482693083d0f3db5274f27dab4b22bb31ce5dbd263c109f9d1293",
+    "raw_maxima": {
+      "short_31ms": 73.59885472299985,
+      "medium_125ms": 22.65669832852129,
+      "long_500ms": 25.803577039204697
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_007",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 7,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e2bb5b559b5310f5c94cd17684b1d002614807d889f491ffd560b174e661344d",
+    "raw_maxima": {
+      "short_31ms": 59.2802378390215,
+      "medium_125ms": 20.904850597514525,
+      "long_500ms": 24.09000118516895
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_008",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 8,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a6a26b0c31da612c0e2565403a63ed11826d6f1ec31c3844062da9dc999728e4",
+    "raw_maxima": {
+      "short_31ms": 48.61034746067847,
+      "medium_125ms": 25.052501898458228,
+      "long_500ms": 29.487014521927186
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_009",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 9,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "72ff7c5227eb2a47c0b45a811e8d53f37d220a6a48d87fcf1651e552439a6356",
+    "raw_maxima": {
+      "short_31ms": 82.29187265703862,
+      "medium_125ms": 49.359702051838624,
+      "long_500ms": 24.692649636411396
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_010",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 10,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1bf65f48e670e3381caa4abe3c702192da73e6cc759260a9639faff72e94f09f",
+    "raw_maxima": {
+      "short_31ms": 48.265856394109335,
+      "medium_125ms": 55.13057894164087,
+      "long_500ms": 24.289904937027735
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_011",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 11,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f971d32b39e67dadcc40dcf425090900dc2eff1299b9b58ed62bb18aa2b1927c",
+    "raw_maxima": {
+      "short_31ms": 41.733845889804556,
+      "medium_125ms": 23.39691433925659,
+      "long_500ms": 27.52400833421627
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_012",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 12,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "36865523a0c6b8a45c3b35af26e5eebbf268e602fcc9a7228a25920ac65e2a95",
+    "raw_maxima": {
+      "short_31ms": 142.3358892316192,
+      "medium_125ms": 31.407038832848475,
+      "long_500ms": 33.434189915716615
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_013",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 13,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "401b54e6ddfa9c70805c15b290ee90c4273a0396933c74607ab966ae546b1adf",
+    "raw_maxima": {
+      "short_31ms": 45.32640512024155,
+      "medium_125ms": 22.13289511949566,
+      "long_500ms": 36.393689066568285
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_014",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 14,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9e7027eb329283f0bf05eb91607ca8d87ecfaa15da7ff27226fdec49b6f46735",
+    "raw_maxima": {
+      "short_31ms": 50.19874351205397,
+      "medium_125ms": 30.402486050116526,
+      "long_500ms": 31.388139452186557
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_015",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 15,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e2f2c8598dcdb4f895cb595439aeda091a312ec83161f00b4f5b0460485ff528",
+    "raw_maxima": {
+      "short_31ms": 44.00931184204731,
+      "medium_125ms": 29.84761855812017,
+      "long_500ms": 21.164917768577375
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_016",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 16,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a7484f8dcafdf4b94af63fbdbcc31c89b5426f5ae5ab77389b8108e3c2b306fb",
+    "raw_maxima": {
+      "short_31ms": 55.07500759285503,
+      "medium_125ms": 29.96663697648009,
+      "long_500ms": 53.021226182161456
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_017",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 17,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "018ce193a31206af7408a40b386dd0549e6dee9aa10381d39b427e10921a3439",
+    "raw_maxima": {
+      "short_31ms": 66.35045062217847,
+      "medium_125ms": 37.779131875335665,
+      "long_500ms": 26.360715430299468
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_018",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 18,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ef7dea4c81e1f4cf0d04ce27de0bb0953dc717c8affb3d17ad0fc08a88782889",
+    "raw_maxima": {
+      "short_31ms": 62.09681938647047,
+      "medium_125ms": 26.016406551192873,
+      "long_500ms": 23.965833928397014
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_019",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 19,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "de8112539f87d320c071fe161139702d194c81633faf5ad9a099c8d9fe3590d1",
+    "raw_maxima": {
+      "short_31ms": 36.77233297706822,
+      "medium_125ms": 39.25325820478692,
+      "long_500ms": 36.91174390640689
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_020",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 20,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f5dcf1d04840d77b3c4488814275f069b76ec0467d1eabf5a07ad50fbb478a36",
+    "raw_maxima": {
+      "short_31ms": 73.40855569801627,
+      "medium_125ms": 38.32306491951549,
+      "long_500ms": 58.742958958064875
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_021",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 21,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b8955b329d3c2feca6914aaedd883ac155884047cc1e6696f0dbe8a0b850b1fe",
+    "raw_maxima": {
+      "short_31ms": 99.01077800302069,
+      "medium_125ms": 36.72987384131304,
+      "long_500ms": 27.78793585527199
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_022",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 22,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "756425e34c8019abb81094da46607223be3c5d4c86ab24d2ca698d46da975695",
+    "raw_maxima": {
+      "short_31ms": 60.007564951451016,
+      "medium_125ms": 31.66578385585136,
+      "long_500ms": 25.117883256290654
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_023",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 23,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f0c3833880d0809bc6afe5b5d35cdddab10e510d52c4b8c13bb708b6a9ed1372",
+    "raw_maxima": {
+      "short_31ms": 74.99305311302649,
+      "medium_125ms": 30.083595393583252,
+      "long_500ms": 79.2535454998668
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_024",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 24,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "522592513e95d56c3a7b402a4eab46ef039ca951445cfaa1585357086d2755ec",
+    "raw_maxima": {
+      "short_31ms": 69.0816998719067,
+      "medium_125ms": 25.411042090580438,
+      "long_500ms": 23.480489059658463
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_025",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 25,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "5a57a9882480b324ed2de9041d3bf28ea1f617807562a1441dcf245ab5137179",
+    "raw_maxima": {
+      "short_31ms": 57.297175999349584,
+      "medium_125ms": 24.15959626267218,
+      "long_500ms": 27.19004560367509
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_026",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 26,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a79531cfa799063c31d78a0442e626bc0befb988dc17d30c39cef08460d910d1",
+    "raw_maxima": {
+      "short_31ms": 104.10735830570526,
+      "medium_125ms": 38.00569609729636,
+      "long_500ms": 29.33611921225129
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_027",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 27,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3ae2a4d12b1420b1c0f393ca864782eb10ac866dc2fc3c9db0d0c555134d6794",
+    "raw_maxima": {
+      "short_31ms": 50.159312376534125,
+      "medium_125ms": 43.560341891254325,
+      "long_500ms": 42.45810313785139
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_028",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 28,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "885b78d3be9f387e677b68959f6d0a8035bfffd01f9169254da72ab9e7333df4",
+    "raw_maxima": {
+      "short_31ms": 67.70937252071062,
+      "medium_125ms": 23.998002854279203,
+      "long_500ms": 20.70487787482251
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_029",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 29,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ae48ba068f5456e73cd5deb3c998fd334fe4921ca0a36407d3d3746b94a86ee7",
+    "raw_maxima": {
+      "short_31ms": 49.68657148333499,
+      "medium_125ms": 24.235712497950843,
+      "long_500ms": 41.96303615926318
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_030",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 30,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b7c2288c049d72459e310839ea30859e440cf8cdd44edc1c2b1c25bfbb04113d",
+    "raw_maxima": {
+      "short_31ms": 50.34405197365603,
+      "medium_125ms": 25.132997865729962,
+      "long_500ms": 31.03831951595764
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_031",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 31,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e662b572a2bea310931c24b2bc758941a467d6827371317c087438a13d292e23",
+    "raw_maxima": {
+      "short_31ms": 50.63399980922762,
+      "medium_125ms": 27.312666061589354,
+      "long_500ms": 37.965903572954765
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_032",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 32,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "07b537d90d2358adcda08731732806c5b763433af0a105d43ca5fc8a8bb8a4b7",
+    "raw_maxima": {
+      "short_31ms": 98.52678628960645,
+      "medium_125ms": 21.802248982165693,
+      "long_500ms": 20.18585286198634
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_033",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 33,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ab0bd16722c57c986c3c0d9554eec376ea8c4ef5498743b19d25d2f7f5b0c78d",
+    "raw_maxima": {
+      "short_31ms": 42.2025914369157,
+      "medium_125ms": 28.203045969721536,
+      "long_500ms": 33.469604732509495
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_034",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 34,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "56101a74052d2fb52fab4ead8eca5dddbb35b683d9fb2310a22a376595ec1844",
+    "raw_maxima": {
+      "short_31ms": 49.37609187630784,
+      "medium_125ms": 34.90531981276064,
+      "long_500ms": 27.495670796884536
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_035",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 35,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "070689e4b4ac15560facaa9705888d4976aa50830e346b3f08e382095cc30dc4",
+    "raw_maxima": {
+      "short_31ms": 51.52643519748206,
+      "medium_125ms": 21.449966929937865,
+      "long_500ms": 25.9666468897459
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_036",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 36,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f20a64afbb7704aa514c6787e51ff72be523d47fe56767121a7debf3226f790b",
+    "raw_maxima": {
+      "short_31ms": 62.06538200945704,
+      "medium_125ms": 25.708449138349717,
+      "long_500ms": 31.754090295468487
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_037",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 37,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "422eddd8e66a1427fa63705acffc6c6e8c24feaf0166c6cc7e1824d80e32ba6f",
+    "raw_maxima": {
+      "short_31ms": 60.78094205134376,
+      "medium_125ms": 35.12598246675408,
+      "long_500ms": 86.61704754520314
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_038",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 38,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "1a76752424c5d54370906dee101eed24da6a7cf34e89cff3aab7b959fa84d5e1",
+    "raw_maxima": {
+      "short_31ms": 48.41815837712371,
+      "medium_125ms": 30.796479251280577,
+      "long_500ms": 27.87224126123451
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_039",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 39,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e828eae7a6e8e8675fe640aee11180b07e17a24f546d94a5fba86e6b8dad838d",
+    "raw_maxima": {
+      "short_31ms": 71.58521590056144,
+      "medium_125ms": 25.019785438137422,
+      "long_500ms": 21.768223767550364
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_040",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 40,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "54ede43a9474066bbbc11f2b7d9c020ec7eadd1c2bd56774382be5a5f4547617",
+    "raw_maxima": {
+      "short_31ms": 34.98649396848336,
+      "medium_125ms": 33.173969243100984,
+      "long_500ms": 18.16914730378175
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_041",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 41,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "50d1afcbaf92761651e2e1799ff36aadd6b29696cd397e693d4d67ad2b9bf13c",
+    "raw_maxima": {
+      "short_31ms": 45.35959926523618,
+      "medium_125ms": 34.938508381474584,
+      "long_500ms": 17.463413892568155
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_042",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 42,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "69361cef326a54cdb343796b75ccf115055aee64983120e9b9f7d37109ef497f",
+    "raw_maxima": {
+      "short_31ms": 127.57580921974555,
+      "medium_125ms": 39.08963130538379,
+      "long_500ms": 35.829464384486755
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_043",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 43,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e4b6db2a90c87979eaa7ec1681337945d5dceabd94003690ecaa953af30ad6f4",
+    "raw_maxima": {
+      "short_31ms": 45.163054326816216,
+      "medium_125ms": 30.348415826797343,
+      "long_500ms": 25.23468063233243
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_044",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 44,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "fc172da1fdffa1ddc3fecf46dcfbc1a07291b0b15a9de9010ebf6b9d817a892c",
+    "raw_maxima": {
+      "short_31ms": 88.79837757805333,
+      "medium_125ms": 38.840524414908685,
+      "long_500ms": 39.51789337867322
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_045",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 45,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e6f659390b6ac6d5611f1f46c56246259d38d99b49aed3d0203646190fc27bee",
+    "raw_maxima": {
+      "short_31ms": 63.84396854402609,
+      "medium_125ms": 43.61217498279959,
+      "long_500ms": 39.380753065420556
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_046",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 46,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "c3f84b0244cc53de86e8c667adf3f0b713e41d2dabaa835fce0a41933eedd536",
+    "raw_maxima": {
+      "short_31ms": 51.521550734424586,
+      "medium_125ms": 46.92984487515401,
+      "long_500ms": 73.30333218617935
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_047",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 47,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b240954dff1e5f25173efb54f5fc94d25dada794bb0604094315dfff5dc02b09",
+    "raw_maxima": {
+      "short_31ms": 56.20294079228759,
+      "medium_125ms": 32.4039820771383,
+      "long_500ms": 52.22616311206722
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_048",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 48,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "160874d47be92f1aa37f35beb7001802ec330f0a3db7cebd54bbc08cc560b3cc",
+    "raw_maxima": {
+      "short_31ms": 65.17467771438612,
+      "medium_125ms": 49.15221754567103,
+      "long_500ms": 67.76991433373725
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_049",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 49,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3c5a90003a9cfc2a28db51ee1d795a5354c909581ec630a6c94def56ff9355c0",
+    "raw_maxima": {
+      "short_31ms": 37.92998797206684,
+      "medium_125ms": 25.002080219786734,
+      "long_500ms": 29.06281712048463
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_050",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 50,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "38f83cc3f2a5f2b10b0db6f01c5c6023343c1282bc842e177c0ed211b537510f",
+    "raw_maxima": {
+      "short_31ms": 64.5690101782824,
+      "medium_125ms": 28.36163479874523,
+      "long_500ms": 31.906226989179423
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_051",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 51,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8cbe1eba72090b4916aa35b88d4276830c7ee1c2281f2ac9e05863c91b43215b",
+    "raw_maxima": {
+      "short_31ms": 41.88263496574185,
+      "medium_125ms": 45.05612736277358,
+      "long_500ms": 29.6643164686766
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_052",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 52,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d49cd5628a1d00136c961708e57096783239dca57f59e0beeea9f5b0afd5e9a6",
+    "raw_maxima": {
+      "short_31ms": 57.64046923889692,
+      "medium_125ms": 28.9099135107289,
+      "long_500ms": 30.086763350903887
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_053",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 53,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "dd479f77ba752d609837943a39a5449786594affb60bd56c1ee24d50934ed513",
+    "raw_maxima": {
+      "short_31ms": 94.92819839937508,
+      "medium_125ms": 23.9341778519589,
+      "long_500ms": 27.719528077365798
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_054",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 54,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "8bf2ace5309c9e6c8807372162e13ee92e666709c4e3392e8e752eecbfa4e5bb",
+    "raw_maxima": {
+      "short_31ms": 56.87200055815615,
+      "medium_125ms": 20.79265661990821,
+      "long_500ms": 19.32494031099952
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_055",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 55,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "72aab909238d83549e8cf489cce2e37ab6e0a61c921f30fac1a90a9a58880ed4",
+    "raw_maxima": {
+      "short_31ms": 57.03702566984646,
+      "medium_125ms": 34.00908612252118,
+      "long_500ms": 22.57184405485242
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_056",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 56,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b47038a2ef270e4ce8c935c99c57bc63dbaab5be98d7f1597b22a8f50837c6ca",
+    "raw_maxima": {
+      "short_31ms": 63.59082401050953,
+      "medium_125ms": 28.384843814976236,
+      "long_500ms": 47.15112602185749
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_057",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 57,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "56d0c27d95889eaa8f27b0e427fe71d4ec39d98240b5489974cf37d21ced6d3b",
+    "raw_maxima": {
+      "short_31ms": 79.13524013124318,
+      "medium_125ms": 56.79988428250583,
+      "long_500ms": 42.26242436329684
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_058",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 58,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "cc11287f349efeb1349a34e26c5be44b3aed88be7b94b276011712ed565a544c",
+    "raw_maxima": {
+      "short_31ms": 51.212765227235685,
+      "medium_125ms": 27.86588480435332,
+      "long_500ms": 32.76062768458786
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_059",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 59,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9d94bac46233fee7e8d365e92ce56a5d911422c185cbf2d3943917eb3f68a80f",
+    "raw_maxima": {
+      "short_31ms": 49.92505407103525,
+      "medium_125ms": 37.783613131143824,
+      "long_500ms": 24.347937323617916
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_060",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 60,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "759ab660ac31e1a7c94a05da5744cee81bb11b84969fe1e3e996177747d8bcc5",
+    "raw_maxima": {
+      "short_31ms": 54.07249337962563,
+      "medium_125ms": 41.935591011776424,
+      "long_500ms": 29.94706989933516
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_061",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 61,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "bffc36bb4a5fca4d7f22e30b1ead376fb47b45f8a57f6a03c944d43121ff246a",
+    "raw_maxima": {
+      "short_31ms": 52.27276248204201,
+      "medium_125ms": 20.588242053080933,
+      "long_500ms": 18.435362580968423
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_062",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 62,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e7d23391db44855e5f7e87f8285997599a9c7120b96ed31d21637447febf6b0d",
+    "raw_maxima": {
+      "short_31ms": 78.3112921568065,
+      "medium_125ms": 25.47849176138103,
+      "long_500ms": 20.957975488563193
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_063",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 63,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ed75aed873ac9cf6cdfd48bbd7cf9b12e66bfa21e0baf6cda00ee8e6d123d741",
+    "raw_maxima": {
+      "short_31ms": 56.43414461350108,
+      "medium_125ms": 35.6496758488052,
+      "long_500ms": 59.54629381290293
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_064",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 64,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3ab1b7e384c7d58b12812e0d2cd86db34f5fdce61b11984723a4e9ec76a803f0",
+    "raw_maxima": {
+      "short_31ms": 69.14550253269884,
+      "medium_125ms": 30.985888636667436,
+      "long_500ms": 26.432016896390476
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_065",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 65,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "2c018bb7dfd9a9c15fac6cab36e1438ec9930631af8064b0ac4a424b7a7e7060",
+    "raw_maxima": {
+      "short_31ms": 43.33694253887766,
+      "medium_125ms": 39.23514900045447,
+      "long_500ms": 30.983890939159643
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_066",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 66,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "d56c735d31e2610ca135a977eb22e7c97ad9941347200757397d011d9b165738",
+    "raw_maxima": {
+      "short_31ms": 67.03212290869031,
+      "medium_125ms": 28.58316198133579,
+      "long_500ms": 25.154991561661397
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_067",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 67,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "ada1d4acdcfbb075550e11765786144e1f3933d3b5c47c478d6ce243b05238dd",
+    "raw_maxima": {
+      "short_31ms": 65.4842676082159,
+      "medium_125ms": 36.38828474095442,
+      "long_500ms": 51.80494546898223
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_068",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 68,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "b303eba8cb126a0f5955de282819d3b71f1d023eea1d5d3026be4b042e1800c5",
+    "raw_maxima": {
+      "short_31ms": 95.79020271460334,
+      "medium_125ms": 31.241778309677287,
+      "long_500ms": 29.27663115210326
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_069",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 69,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "85a179b186f2423fa4f005ccf85745e68d352698bbdf4e365af03ac53f1025d8",
+    "raw_maxima": {
+      "short_31ms": 64.16785356873186,
+      "medium_125ms": 32.03770921905004,
+      "long_500ms": 33.742990057860865
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_070",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 70,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "e73692d7aabf04fffe0e42c0eaeedeee7c694567907b7424d2466f356bf939b3",
+    "raw_maxima": {
+      "short_31ms": 50.774522829537766,
+      "medium_125ms": 35.21180706090047,
+      "long_500ms": 19.319124019282484
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_071",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 71,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "3e5ee2dc95c98349fca41385c5b306c4ff311b6cc8bd39ebd389f21b8d2ab089",
+    "raw_maxima": {
+      "short_31ms": 41.65742294618843,
+      "medium_125ms": 49.69176726350106,
+      "long_500ms": 39.884361861019364
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_072",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 72,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "34687cda53dd76785ef2cc535a697f7f70d4e162a388d6ef11a0fd9120f61db9",
+    "raw_maxima": {
+      "short_31ms": 65.34650097123716,
+      "medium_125ms": 30.015820181990478,
+      "long_500ms": 35.739649943405276
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_073",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 73,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "10c1950ab8e06200103cdd62c0f248363d715bd22d91b0296b7add8246632501",
+    "raw_maxima": {
+      "short_31ms": 63.025949130343626,
+      "medium_125ms": 41.48634888875205,
+      "long_500ms": 17.73656494426296
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_074",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 74,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9506478007586bc2172c348dc7d2700280f2159a6587fa3479a037e0d595ac02",
+    "raw_maxima": {
+      "short_31ms": 58.241555299070086,
+      "medium_125ms": 32.070498152488874,
+      "long_500ms": 49.755337805296946
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_075",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 75,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "f7f6f63b8ecba5111f4dc9fb02161542b39711c586645daee97a100d01557e8a",
+    "raw_maxima": {
+      "short_31ms": 99.71642656516714,
+      "medium_125ms": 37.37381377731653,
+      "long_500ms": 43.00498159895372
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_076",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 76,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "0d87c836f289100eeeebe4ac7983cede12c056812e9532047bf59914133a3441",
+    "raw_maxima": {
+      "short_31ms": 58.39047129408671,
+      "medium_125ms": 23.61083647137927,
+      "long_500ms": 28.294503233560363
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_077",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 77,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "72e01c89c354bd046af8f0c8aaaea54893ba6f6bc12b52fc26386a01c565d4ea",
+    "raw_maxima": {
+      "short_31ms": 46.64863211868072,
+      "medium_125ms": 45.571788683228874,
+      "long_500ms": 29.91924136115566
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_078",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 78,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "a3ee39c58b13034385d58d74a8baccff7ff639b0f77751710ec8de69b5983d02",
+    "raw_maxima": {
+      "short_31ms": 75.739475527005,
+      "medium_125ms": 36.17609617356764,
+      "long_500ms": 25.084612501051197
+    }
+  },
+  {
+    "sample_id": "s17101_pink_noise_079",
+    "seed": 17101,
+    "case": "pink",
+    "part": "noise",
+    "index": 79,
+    "family": null,
+    "snr": null,
+    "unit": null,
+    "input_sha256": "9c0f33846fcb4c01d18898249db6a69361260251bf0771e8dd7480175e32bfb8",
+    "raw_maxima": {
+      "short_31ms": 64.02253858402509,
+      "medium_125ms": 37.266129600886785,
+      "long_500ms": 35.125818949833636
+    }
+  },
+  {
+    "sample_id": "s17101_pink_signal_000",
+    "seed": 17101,
+    "case": "pink",
+    "part": "signal",
+    "index": 0,
+    "family": "chirp",
+    "snr": 8.0,
+    "unit": 0,
+    "input_sha256": "e0e5654a5a5db843ee5e3e7a5667c23e51fcf36156f6aa8fca74cd5480016dde",
+    "raw_maxima": {
+      "short_31ms": 53.85255392613709,
+      "medium_125ms": 27.246994191747575,
+      "long_500ms": 19.64531653454383
+    }
+  },
+  {
+    "sample_id": "s17101_pink_signal_001",
+    "seed": 17101,
+    "case": "pink",
+    "part": "signal",
+    "index": 1,
+    "family": "chirp",
+    "snr": 18.0,
+    "unit": 0,
+    "input_sha256": "25e06b98d67709961bbe57159edb4c4c781a7279232ad0e0dafd6e882a2a9ca2",
+    "raw_maxima": {
+      "short_31ms": 51.64845260687948,
+      "medium_125ms": 740.3182737937883,
+      "long_500ms": 868.0455519770742
+    }
+  },
+  {
+    "sample_id": "s17101_pink_signal_002",
+    "seed": 17101,
+    "case": "pink",
+    "part": "signal",
+    "index": 2,
+    "family": "chirp",
+    "snr": 8.0,
+    "unit": 1,
+    "input_sha256": "4b9f5e5fb84c804c8011b1bb1eea903f4634e6b52a85a5857d8d823fbe281a01",
+    "raw_maxima": {
+      "short_31ms": 104.6367607965525,
+      "medium_125ms": 62.507285803112474,
+      "long_500ms": 52.18549653606495
+    }
+  },
+  {
+    "sample_id": "s17101_pink_signal_003",
+    "seed": 17101,
+    "case": "pink",
+    "part": "signal",
+    "index": 3,
+    "family": "chirp",
+    "snr": 18.0,
+    "unit": 1,
+    "input_sha256": "6b208e73ed10cd33532160d165ad53684a1963fa9e9a21a897278e4df3f0aba8",
+    "raw_maxima": {
+      "short_31ms": 73.9011984284533,
+      "medium_125ms": 600.6080749074724,
+      "long_500ms": 623.5887786716155
+    }
+  },
+  {
+    "sample_id": "s17101_pink_signal_004",
+    "seed": 17101,
+    "case": "pink",
+    "part": "signal",
+    "index": 4,
+    "family": "chirp",
+    "snr": 8.0,
+    "unit": 2,
+    "input_sha256": "8e1fe420874036155d7f0a82894980161606a93306d240095bdb39c868e64238",
+    "raw_maxima": {
+      "short_31ms": 109.70436079199494,
+      "medium_125ms": 116.5157004261088,
+      "long_500ms": 43.98069501553855
+    }
+  },
+  {
+    "sample_id": "s17101_pink_signal_005",
+    "seed": 17101,
+    "case": "pink",
+    "part": "signal",
+    "index": 5,
+    "family": "chirp",
+    "snr": 18.0,
+    "unit": 2,
+    "input_sha256": "02d2fc5da08aa78edf833fade9384df9059966ab601f64873ae2fc6f687b638d",
+    "raw_maxima": {
+      "short_31ms": 172.77193916623705,
+      "medium_125ms": 777.4856234244352,
+      "long_500ms": 446.005086386903
+    }
+  },
+  {
+    "sample_id": "s17101_pink_signal_006",
+    "seed": 17101,
+    "case": "pink",
+    "part": "signal",
+    "index": 6,
+    "family": "burst",
+    "snr": 8.0,
+    "unit": 0,
+    "input_sha256": "efdbe5684252e96165744bd072b36754c43e07e7e7496ee5662d72e308fe398d",
+    "raw_maxima": {
+      "short_31ms": 48.70562684743136,
+      "medium_125ms": 25.579888962072097,
+      "long_500ms": 30.960988875106807
+    }
+  },
+  {
+    "sample_id": "s17101_pink_signal_007",
+    "seed": 17101,
+    "case": "pink",
+    "part": "signal",
+    "index": 7,
+    "family": "burst",
+    "snr": 18.0,
+    "unit": 0,
+    "input_sha256": "4c3bcf645056e44bcf435acbf46a705c99001390201ee31d409eab0c39541a35",
+    "raw_maxima": {
+      "short_31ms": 128.47144907387687,
+      "medium_125ms": 364.5926566781405,
+      "long_500ms": 269.71732269179614
+    }
+  },
+  {
+    "sample_id": "s17101_pink_signal_008",
+    "seed": 17101,
+    "case": "pink",
+    "part": "signal",
+    "index": 8,
+    "family": "burst",
+    "snr": 8.0,
+    "unit": 1,
+    "input_sha256": "f9dfb9901f90dc90dddd9b12b78a2a5ab48a1dda6a5793c1fe67026677756caf",
+    "raw_maxima": {
+      "short_31ms": 74.70171602345441,
+      "medium_125ms": 65.56550911636036,
+      "long_500ms": 21.192839768824005
+    }
+  },
+  {
+    "sample_id": "s17101_pink_signal_009",
+    "seed": 17101,
+    "case": "pink",
+    "part": "signal",
+    "index": 9,
+    "family": "burst",
+    "snr": 18.0,
+    "unit": 1,
+    "input_sha256": "7025aafbe9110ce5e4c52ce180efbca95f62e6ef64601601fc5b8e7e95b1f203",
+    "raw_maxima": {
+      "short_31ms": 76.93368505621541,
+      "medium_125ms": 376.4651005917427,
+      "long_500ms": 63.2669763310344
+    }
+  },
+  {
+    "sample_id": "s17101_pink_signal_010",
+    "seed": 17101,
+    "case": "pink",
+    "part": "signal",
+    "index": 10,
+    "family": "burst",
+    "snr": 8.0,
+    "unit": 2,
+    "input_sha256": "6100463a609366708e5d8042f65b67c886778fe9d9589cdea87b275a276c7ac3",
+    "raw_maxima": {
+      "short_31ms": 62.67974922904749,
+      "medium_125ms": 30.017060361753806,
+      "long_500ms": 30.974491233834968
+    }
+  },
+  {
+    "sample_id": "s17101_pink_signal_011",
+    "seed": 17101,
+    "case": "pink",
+    "part": "signal",
+    "index": 11,
+    "family": "burst",
+    "snr": 18.0,
+    "unit": 2,
+    "input_sha256": "7e606b4d72999f936f293d83aec314dd78de446db4e1ab223850013dd02062d5",
+    "raw_maxima": {
+      "short_31ms": 159.98607043571823,
+      "medium_125ms": 222.47754353235464,
+      "long_500ms": 157.91814157654346
+    }
+  }
+]
