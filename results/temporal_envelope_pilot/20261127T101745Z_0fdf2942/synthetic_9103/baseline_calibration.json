@@ -1,0 +1,47 @@
+{
+  "target_fap": 0.01,
+  "target_fap_attainable": true,
+  "calibration_state": "AVAILABLE",
+  "n_norm_samples": 96,
+  "n_threshold_samples": 224,
+  "n_total_calibration_samples": 320,
+  "global_threshold": 2.5717132077073943,
+  "empirical_calibration_fap": 0.004464285714285714,
+  "min_resolvable_p_value": 0.0044444444444444444,
+  "calibration_seed": 0,
+  "quantile_summary": {
+    "p50": 0.3588744144155965,
+    "p90": 0.9275235342117845,
+    "p95": 1.162938560825316,
+    "p99": 2.507248639823503,
+    "max": 2.782509032389855
+  },
+  "scale_stats": {
+    "short_31ms": {
+      "scale_name": "short_31ms",
+      "median_null_score": 61.17097674689269,
+      "q95_null_score": 107.20638916881894,
+      "spread_scale": 46.03541242192625,
+      "n_norm_samples": 96
+    },
+    "medium_125ms": {
+      "scale_name": "medium_125ms",
+      "median_null_score": 31.868106374763286,
+      "q95_null_score": 53.20953714795747,
+      "spread_scale": 21.341430773194183,
+      "n_norm_samples": 96
+    },
+    "long_500ms": {
+      "scale_name": "long_500ms",
+      "median_null_score": 30.78214865736782,
+      "q95_null_score": 52.451451620096904,
+      "spread_scale": 21.669302962729084,
+      "n_norm_samples": 96
+    }
+  },
+  "scale_win_fractions_in_null": {
+    "short_31ms": 0.3705357142857143,
+    "medium_125ms": 0.2767857142857143,
+    "long_500ms": 0.35267857142857145
+  }
+}

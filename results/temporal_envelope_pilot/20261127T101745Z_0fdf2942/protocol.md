@@ -1,0 +1,36 @@
+# Temporal-envelope smoothing pilot — 27 November 2026
+
+Specified before implementation measurements. Source HEAD0cedef5dbc236864cd67f6e7f0027ed15c3f9d79; production hashes must match the saved GW170814 parent. Owner authorized investigating a more robust temporal background. One fixed research-only variant, no src/app/UI change or adoption. No new event, O3/manifest/network, main merge, release or Zenodo.
+
+## Fixed alternative and interpretation
+
+Keep the same STFT, local spectral estimate, strict Z>4, original eight-neighbor clustering and two-cell minimum. Do NOT include the unsuccessful gap-link rule. Change only the centered temporal median smoothing width of raw_time_env = median(P/S_bg across frequencies)/ln2.
+
+Candidate kernel k = 2*floor(0.5 seconds / hop_seconds)+1, giving257/33/9frames at hops3.90625/31.25/125ms. These are nominal1.00390625/1.03125/1.125second k*hop widths (center-to-center span(k-1)*hop). Clip to available odd frame count if necessary; nearest-edge extension and1e-18 floor unchanged. Baseline kernels31/15/7. This is a fixed approximately-one-second centered median, not an optimized duration. It uses future frames within the current four-second observation and is NOT a causal online estimator. Local spectral self-normalization remains unchanged.
+
+Hypothesis: short transients affect the new temporal denominator less. Counter-hypothesis: useful noise tracking or false-alarm behavior worsens. Retain all outcomes, no kernel sweep or post-result changes. An ideal monotonic step can pass a centered median without a simple fixed lag; do not assume that increasing width always delays every step.
+
+## A. Fresh synthetic comparison and drift controls
+
+- Seeds9101,9102,9103;1024Hz,4s,pink noise alpha1,knee16Hz,sigma1. Per seed320 separate stationary calibration windows (96normalization/224threshold), two independently fitted detector arms, nominalFAP.01,norm_fraction.30,calibration_seed0. Reuse production calibration/acceptance math on explicit measured raw-feature tables. No signal labels enter scoring/calibration.
+- Per seed200 distinct evaluation-noise bases transformed into three predefined regimes: stationary, smooth drift, persistent step. The same base is paired across regimes; do not pool them as independent trials. Each regime therefore has600negative records across three shared calibrations.
+- Stationary envelope g=1. Smooth envelope g=1+0.5*sin(2*pi*0.25*t+phase),phase uniform0..2pi. Step g=1 until t_step uniform1..3s, then factor2 or0.5 with equal probability. Multiply the base by g and rescale to unit whole-window RMS. Preserve g(t) and the final scale as generation metadata/hashes. Global scaling removal does not remove local amplitude variation.
+- Independent SeedSequence streams: [seed,0,i] calibration;[seed,1,i] evaluation-negative base;[seed,2,i,family_index] injection-noise base;[seed,3,i,family_index] clean waveform;[seed,4,kind,i,regime_index] envelope,kind0negative,1+family_indexinjection. Families chirp and band_limited_noise_burst. Ten distinct injection bases/family/seed, reused across regimes and root-energy SNR8/18. There are60distinct injection base/clean realizations across seeds/families, evaluated in360dependent mixtures, not360 independent signal examples.
+- Chirp generation matches previous ranges: start1.1..1.4s,duration.2...5s,f_start60..140Hz,f_end200..340Hz,phase0..2pi,Tukey.15. Broadband burst matches prior fixed support1.375..1.625s: independent full-length white vector,4th-order zero-phase Butterworth35..350Hz,mask and Tukey.15. Root-energy SNR uses each profiled noise's whole-window std; local SNR varies with envelope. Save exact hashes and parameters.
+- Accept injection recovery only if an accepted candidate interval/frequency rectangle intersects the known support; also retain whole-window nominations separately. No vetoes for synthetic core comparison. For drift, stationary-calibrated detection rates are explicit out-of-distribution stress results, not a guaranteed nominalFAP. No adaptive recalibration in this test; no Workstation/Union claim.
+- For each pure-negative observation, report a tracking PROXY per scale: RMS log error of T/median(T) against g(time_center)^2/median(g(time_center)^2) over available STFT centers. This is a relative-envelope descriptor, not an unbiased expected STFT variance for colored noise; finite STFT support/correlation/edge effects remain. Pairwise error differences are descriptive, no tests treating frames as independent.
+- For each injection mixture, compare each arm's denominator with its exact profiled-noise partner over known active time-frame centers. Report median T_mix/T_noise, both arms, all scales. Noise-only partner is used only for evaluation, never the candidate algorithm. Positive/negative direction and all realizations retained.
+
+## B. Developmental GW170814 control
+
+Only existing H1/L1 official O2 4096s files, hashes against parent before/after. Same original independent PSD60,CalA320+CalB387,target160,4s+1s padding,30–380Hz/1024Hz recipe. No new real events/V1. Each arm gets its own212/495 calibration; baseline must reproduce parent scores/thresholds/p and151off-source raw/post counts. Preserve candidate geometry, scores, p-values, original reversible vetoes, DQ/injection flags and reference gate local[1,2]s,35–250Hz. Off-source excludes padded +/-16s event interval, actual604s core exposure/site. This epoch informed development, and CalB is post-target: no independent sensitivity/FAR or physical-cause claim. Real off-source nominations are not certified noise-only false alarms.
+
+## Checks, preservation and decision
+
+Focused checks: exact odd kernels, finite/positive floor and clipping, constant/monotonic-step behavior, short-envelope-spike rejection, no spike rejection assumed at arbitrary widths, strict seed/two-cell/original eight-neighbor topology. Independent reconstruction on deterministic maps confirms the alternative, before measurement.
+
+Save fresh UTC/UUID output, complete driver/helper/protocol copies and hashes, generation/parent/source/input hashes, calibration raw features/nulls, all candidate/evaluation/paired/tracking records, versions/dirty paths, failures and figures. No output overwrite or array redistribution. Separate verifier checks exact recalibration/order statistics/p-values/decisions/role accounting, input regeneration and predefined map subset (seed9101,first negative/injection,all regimes/families/SNRs/scales). The verifier reads no original/derived waveform files. Production and historical sources unchanged. Unrelated article/CodeQL drafts excluded.
+
+This pilot is for characterization, NOT automatic adoption. Report each regime/seed separately, descriptive paired counts and tracking metrics; no pooled common-rate CI across calibrations/regimes or cross-study sensitivity comparison. More recovery alone is insufficient if noise tracking/false-alarm behavior degrades. A later adoption decision needs larger independent validation and a task-specific tolerance. Adaptive L09/L10 and deferred DNA-window remain separate. Save/push research to development per owner preference, no release. Real-data attribution GWOSC/LIGO/Virgo CC BY4.0.
+
+Initial status: protocol prepared; implementation/checks and measurement pending.

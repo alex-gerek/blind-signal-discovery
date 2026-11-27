@@ -1,0 +1,164 @@
+[
+  {
+    "regime": "stationary",
+    "arm": "baseline",
+    "scale": "short_31ms",
+    "negative_records": 600,
+    "median_log_rmse_proxy": 0.16092498573354747,
+    "min": 0.11627551585824725,
+    "max": 0.20636008725136806
+  },
+  {
+    "regime": "stationary",
+    "arm": "baseline",
+    "scale": "medium_125ms",
+    "negative_records": 600,
+    "median_log_rmse_proxy": 0.08843858737791371,
+    "min": 0.04525249435055562,
+    "max": 0.1479212863621974
+  },
+  {
+    "regime": "stationary",
+    "arm": "baseline",
+    "scale": "long_500ms",
+    "negative_records": 600,
+    "median_log_rmse_proxy": 0.05684750458509047,
+    "min": 0.013974224595649435,
+    "max": 0.12585371582613747
+  },
+  {
+    "regime": "stationary",
+    "arm": "slow",
+    "scale": "short_31ms",
+    "negative_records": 600,
+    "median_log_rmse_proxy": 0.11432242509519211,
+    "min": 0.02625971306256829,
+    "max": 0.2228281783708503
+  },
+  {
+    "regime": "stationary",
+    "arm": "slow",
+    "scale": "medium_125ms",
+    "negative_records": 600,
+    "median_log_rmse_proxy": 0.07390386129238777,
+    "min": 0.027435965530853,
+    "max": 0.16028627449843788
+  },
+  {
+    "regime": "stationary",
+    "arm": "slow",
+    "scale": "long_500ms",
+    "negative_records": 600,
+    "median_log_rmse_proxy": 0.05208565284497209,
+    "min": 0.010882026521241971,
+    "max": 0.1216093608984863
+  },
+  {
+    "regime": "smooth_drift",
+    "arm": "baseline",
+    "scale": "short_31ms",
+    "negative_records": 600,
+    "median_log_rmse_proxy": 0.17077486167707492,
+    "min": 0.12294432689601331,
+    "max": 0.2763244006462771
+  },
+  {
+    "regime": "smooth_drift",
+    "arm": "baseline",
+    "scale": "medium_125ms",
+    "negative_records": 600,
+    "median_log_rmse_proxy": 0.11167477891828537,
+    "min": 0.06349846834977124,
+    "max": 0.22978667733543848
+  },
+  {
+    "regime": "smooth_drift",
+    "arm": "baseline",
+    "scale": "long_500ms",
+    "negative_records": 600,
+    "median_log_rmse_proxy": 0.11597012906938953,
+    "min": 0.05280086021299402,
+    "max": 0.2862556332121252
+  },
+  {
+    "regime": "smooth_drift",
+    "arm": "slow",
+    "scale": "short_31ms",
+    "negative_records": 600,
+    "median_log_rmse_proxy": 0.1427631017668347,
+    "min": 0.061051221983850185,
+    "max": 0.42050738719774605
+  },
+  {
+    "regime": "smooth_drift",
+    "arm": "slow",
+    "scale": "medium_125ms",
+    "negative_records": 600,
+    "median_log_rmse_proxy": 0.12115466689066554,
+    "min": 0.050604392046875606,
+    "max": 0.31834299284696443
+  },
+  {
+    "regime": "smooth_drift",
+    "arm": "slow",
+    "scale": "long_500ms",
+    "negative_records": 600,
+    "median_log_rmse_proxy": 0.12462146173237934,
+    "min": 0.05620767236987543,
+    "max": 0.2918525675750855
+  },
+  {
+    "regime": "persistent_step",
+    "arm": "baseline",
+    "scale": "short_31ms",
+    "negative_records": 600,
+    "median_log_rmse_proxy": 0.2230935402908814,
+    "min": 0.14103579645331313,
+    "max": 0.8185708688908151
+  },
+  {
+    "regime": "persistent_step",
+    "arm": "baseline",
+    "scale": "medium_125ms",
+    "negative_records": 600,
+    "median_log_rmse_proxy": 0.15001018630360988,
+    "min": 0.07202563404646774,
+    "max": 0.6562593969438908
+  },
+  {
+    "regime": "persistent_step",
+    "arm": "baseline",
+    "scale": "long_500ms",
+    "negative_records": 600,
+    "median_log_rmse_proxy": 0.15105934329944598,
+    "min": 0.06161918449878391,
+    "max": 0.8916081448150627
+  },
+  {
+    "regime": "persistent_step",
+    "arm": "slow",
+    "scale": "short_31ms",
+    "negative_records": 600,
+    "median_log_rmse_proxy": 0.23353299997330484,
+    "min": 0.14210595581246604,
+    "max": 0.759739561022718
+  },
+  {
+    "regime": "persistent_step",
+    "arm": "slow",
+    "scale": "medium_125ms",
+    "negative_records": 600,
+    "median_log_rmse_proxy": 0.15464359642569112,
+    "min": 0.07799442753874748,
+    "max": 0.6548644850824837
+  },
+  {
+    "regime": "persistent_step",
+    "arm": "slow",
+    "scale": "long_500ms",
+    "negative_records": 600,
+    "median_log_rmse_proxy": 0.15079192017935072,
+    "min": 0.05792199459533023,
+    "max": 0.8912859026579215
+  }
+]

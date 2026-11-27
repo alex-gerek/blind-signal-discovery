@@ -1,0 +1,121 @@
+{
+  "case": "L1",
+  "n_calibration": 707,
+  "n_evaluation": 160,
+  "arms": {
+    "baseline": {
+      "GUARD": {
+        "windows": 8,
+        "window_nominations": 2,
+        "associated_nominations": 0,
+        "post_veto_window_nominations": 1,
+        "associated_post_veto": 0
+      },
+      "OFF_SOURCE": {
+        "windows": 151,
+        "window_nominations": 3,
+        "associated_nominations": 0,
+        "post_veto_window_nominations": 3,
+        "associated_post_veto": 0
+      },
+      "ON_SOURCE": {
+        "windows": 1,
+        "window_nominations": 1,
+        "associated_nominations": 1,
+        "post_veto_window_nominations": 1,
+        "associated_post_veto": 1
+      }
+    },
+    "slow": {
+      "GUARD": {
+        "windows": 8,
+        "window_nominations": 1,
+        "associated_nominations": 0,
+        "post_veto_window_nominations": 0,
+        "associated_post_veto": 0
+      },
+      "OFF_SOURCE": {
+        "windows": 151,
+        "window_nominations": 2,
+        "associated_nominations": 0,
+        "post_veto_window_nominations": 2,
+        "associated_post_veto": 0
+      },
+      "ON_SOURCE": {
+        "windows": 1,
+        "window_nominations": 1,
+        "associated_nominations": 1,
+        "post_veto_window_nominations": 1,
+        "associated_post_veto": 1
+      }
+    }
+  },
+  "discordant": {
+    "GUARD": {
+      "slow_only": 0,
+      "baseline_only": 1
+    },
+    "OFF_SOURCE": {
+      "slow_only": 0,
+      "baseline_only": 1
+    },
+    "ON_SOURCE": {
+      "slow_only": 0,
+      "baseline_only": 0
+    }
+  },
+  "by_regime": {
+    "real": {
+      "arms": {
+        "baseline": {
+          "GUARD": {
+            "windows": 8,
+            "window_nominations": 2,
+            "associated_nominations": 0
+          },
+          "OFF_SOURCE": {
+            "windows": 151,
+            "window_nominations": 3,
+            "associated_nominations": 0
+          },
+          "ON_SOURCE": {
+            "windows": 1,
+            "window_nominations": 1,
+            "associated_nominations": 1
+          }
+        },
+        "slow": {
+          "GUARD": {
+            "windows": 8,
+            "window_nominations": 1,
+            "associated_nominations": 0
+          },
+          "OFF_SOURCE": {
+            "windows": 151,
+            "window_nominations": 2,
+            "associated_nominations": 0
+          },
+          "ON_SOURCE": {
+            "windows": 1,
+            "window_nominations": 1,
+            "associated_nominations": 1
+          }
+        }
+      },
+      "discordant": {
+        "GUARD": {
+          "slow_only": 0,
+          "baseline_only": 1
+        },
+        "OFF_SOURCE": {
+          "slow_only": 0,
+          "baseline_only": 1
+        },
+        "ON_SOURCE": {
+          "slow_only": 0,
+          "baseline_only": 0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "status": "VERIFIED",
+  "calibrations": 10,
+  "arm_window_decisions": 4960,
+  "accepted_candidates": 1931,
+  "input_regeneration_records": 3120,
+  "negative_tracking_records": 10800,
+  "paired_response_records": 2160,
+  "manual_map_arm_checks": 90,
+  "manual_tracking_proxy_checks": 18,
+  "manual_paired_ratio_checks": 72,
+  "scope": "Saved calibration/decision/summary checks; synthetic input regeneration; prespecified seed9101 first noise/injection manual maps and tracking/paired ratios; no real waveform/O3 reads"
+}

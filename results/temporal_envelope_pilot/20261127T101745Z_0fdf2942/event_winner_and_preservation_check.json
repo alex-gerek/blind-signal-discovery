@@ -1,0 +1,137 @@
+{
+  "status": "VERIFIED",
+  "near_reference_winners": [
+    {
+      "site": "H1",
+      "arm": "baseline",
+      "winning_associated_scale": "short_31ms",
+      "standardized_score": 1.1448066244127009,
+      "global_threshold": 2.590544448760812,
+      "raw_score": 123.2247603377489,
+      "own_raw_boundary": 192.1817153832292,
+      "candidate": {
+        "candidate_id": 8,
+        "t_start": 1.501953125,
+        "t_end": 1.537109375,
+        "f_min": 48.0,
+        "f_max": 208.0,
+        "peak_time": 1.53125,
+        "peak_freq": 160.0,
+        "anomaly_score": 123.2247603377489,
+        "peak_excess_power": 12.807149638950007,
+        "n_bins": 20,
+        "empirical_p_value": null,
+        "p_value_is_upper_bound": false,
+        "diagnostics": {
+          "time_span_s": 0.03515625,
+          "bandwidth_hz": 160.0,
+          "mean_excess_power": 7.161238016887445,
+          "boundary_adjacent": false,
+          "input_kurtosis": 0.13633580486834118,
+          "input_crest_factor": 4.184723258245534
+        }
+      },
+      "accepted": false
+    },
+    {
+      "site": "H1",
+      "arm": "slow",
+      "winning_associated_scale": "short_31ms",
+      "standardized_score": 2.612767923841793,
+      "global_threshold": 3.160593236143025,
+      "raw_score": 252.8364598038752,
+      "own_raw_boundary": 290.48062516290804,
+      "candidate": {
+        "candidate_id": 3,
+        "t_start": 1.458984375,
+        "t_end": 1.541015625,
+        "f_min": 16.0,
+        "f_max": 208.0,
+        "peak_time": 1.53125,
+        "peak_freq": 160.0,
+        "anomaly_score": 252.8364598038752,
+        "peak_excess_power": 14.037406032003544,
+        "n_bins": 43,
+        "empirical_p_value": null,
+        "p_value_is_upper_bound": false,
+        "diagnostics": {
+          "time_span_s": 0.08203125,
+          "bandwidth_hz": 192.0,
+          "mean_excess_power": 6.879917669857562,
+          "boundary_adjacent": true,
+          "input_kurtosis": 0.13633580486834118,
+          "input_crest_factor": 4.184723258245534,
+          "research_slow_temporal_median": true
+        }
+      },
+      "accepted": false
+    },
+    {
+      "site": "L1",
+      "arm": "baseline",
+      "winning_associated_scale": "medium_125ms",
+      "standardized_score": 8.892396062864524,
+      "global_threshold": 2.240084239235834,
+      "raw_score": 255.50977809052887,
+      "own_raw_boundary": 87.88268719679253,
+      "candidate": {
+        "candidate_id": 1,
+        "t_start": 1.234375,
+        "t_end": 1.546875,
+        "f_min": 20.0,
+        "f_max": 124.0,
+        "peak_time": 1.46875,
+        "peak_freq": 48.0,
+        "anomaly_score": 255.50977809052887,
+        "peak_excess_power": 20.156194013939874,
+        "n_bins": 32,
+        "empirical_p_value": null,
+        "p_value_is_upper_bound": false,
+        "diagnostics": {
+          "time_span_s": 0.3125,
+          "bandwidth_hz": 104.0,
+          "mean_excess_power": 8.984680565329027,
+          "boundary_adjacent": false,
+          "input_kurtosis": 0.5217782919980687,
+          "input_crest_factor": 5.328064775789701
+        }
+      },
+      "accepted": true
+    },
+    {
+      "site": "L1",
+      "arm": "slow",
+      "winning_associated_scale": "medium_125ms",
+      "standardized_score": 9.857506562842266,
+      "global_threshold": 2.50311468889689,
+      "raw_score": 275.56447803065646,
+      "own_raw_boundary": 93.82821888551176,
+      "candidate": {
+        "candidate_id": 1,
+        "t_start": 1.234375,
+        "t_end": 1.546875,
+        "f_min": 20.0,
+        "f_max": 124.0,
+        "peak_time": 1.46875,
+        "peak_freq": 48.0,
+        "anomaly_score": 275.56447803065646,
+        "peak_excess_power": 21.04443971456351,
+        "n_bins": 32,
+        "empirical_p_value": null,
+        "p_value_is_upper_bound": false,
+        "diagnostics": {
+          "time_span_s": 0.3125,
+          "bandwidth_hz": 104.0,
+          "mean_excess_power": 9.611389938458014,
+          "boundary_adjacent": false,
+          "input_kurtosis": 0.5217782919980687,
+          "input_crest_factor": 5.328064775789701,
+          "research_slow_temporal_median": true
+        }
+      },
+      "accepted": true
+    }
+  ],
+  "original_two_O2_hashes_after_run_match_parent": true,
+  "scope": "Saved cluster association and own-boundary arithmetic; raw inputs read only for hash preservation, no detector run or O3 access"
+}

@@ -1,0 +1,345 @@
+{
+  "case": "synthetic_9101",
+  "n_calibration": 320,
+  "n_evaluation": 720,
+  "arms": {
+    "baseline": {
+      "NOISE": {
+        "windows": 600,
+        "window_nominations": 3,
+        "associated_nominations": 0,
+        "post_veto_window_nominations": null,
+        "associated_post_veto": null
+      },
+      "SIGNAL_band_limited_noise_burst_SNR18": {
+        "windows": 30,
+        "window_nominations": 30,
+        "associated_nominations": 30,
+        "post_veto_window_nominations": null,
+        "associated_post_veto": null
+      },
+      "SIGNAL_band_limited_noise_burst_SNR8": {
+        "windows": 30,
+        "window_nominations": 1,
+        "associated_nominations": 1,
+        "post_veto_window_nominations": null,
+        "associated_post_veto": null
+      },
+      "SIGNAL_linear_chirp_SNR18": {
+        "windows": 30,
+        "window_nominations": 30,
+        "associated_nominations": 30,
+        "post_veto_window_nominations": null,
+        "associated_post_veto": null
+      },
+      "SIGNAL_linear_chirp_SNR8": {
+        "windows": 30,
+        "window_nominations": 17,
+        "associated_nominations": 17,
+        "post_veto_window_nominations": null,
+        "associated_post_veto": null
+      }
+    },
+    "slow": {
+      "NOISE": {
+        "windows": 600,
+        "window_nominations": 13,
+        "associated_nominations": 0,
+        "post_veto_window_nominations": null,
+        "associated_post_veto": null
+      },
+      "SIGNAL_band_limited_noise_burst_SNR18": {
+        "windows": 30,
+        "window_nominations": 30,
+        "associated_nominations": 30,
+        "post_veto_window_nominations": null,
+        "associated_post_veto": null
+      },
+      "SIGNAL_band_limited_noise_burst_SNR8": {
+        "windows": 30,
+        "window_nominations": 6,
+        "associated_nominations": 6,
+        "post_veto_window_nominations": null,
+        "associated_post_veto": null
+      },
+      "SIGNAL_linear_chirp_SNR18": {
+        "windows": 30,
+        "window_nominations": 30,
+        "associated_nominations": 30,
+        "post_veto_window_nominations": null,
+        "associated_post_veto": null
+      },
+      "SIGNAL_linear_chirp_SNR8": {
+        "windows": 30,
+        "window_nominations": 19,
+        "associated_nominations": 19,
+        "post_veto_window_nominations": null,
+        "associated_post_veto": null
+      }
+    }
+  },
+  "discordant": {
+    "NOISE": {
+      "slow_only": 10,
+      "baseline_only": 0
+    },
+    "SIGNAL_band_limited_noise_burst_SNR18": {
+      "slow_only": 0,
+      "baseline_only": 0
+    },
+    "SIGNAL_band_limited_noise_burst_SNR8": {
+      "slow_only": 5,
+      "baseline_only": 0
+    },
+    "SIGNAL_linear_chirp_SNR18": {
+      "slow_only": 0,
+      "baseline_only": 0
+    },
+    "SIGNAL_linear_chirp_SNR8": {
+      "slow_only": 2,
+      "baseline_only": 0
+    }
+  },
+  "by_regime": {
+    "persistent_step": {
+      "arms": {
+        "baseline": {
+          "NOISE": {
+            "windows": 200,
+            "window_nominations": 1,
+            "associated_nominations": 0
+          },
+          "SIGNAL_band_limited_noise_burst_SNR18": {
+            "windows": 10,
+            "window_nominations": 10,
+            "associated_nominations": 10
+          },
+          "SIGNAL_band_limited_noise_burst_SNR8": {
+            "windows": 10,
+            "window_nominations": 1,
+            "associated_nominations": 1
+          },
+          "SIGNAL_linear_chirp_SNR18": {
+            "windows": 10,
+            "window_nominations": 10,
+            "associated_nominations": 10
+          },
+          "SIGNAL_linear_chirp_SNR8": {
+            "windows": 10,
+            "window_nominations": 7,
+            "associated_nominations": 7
+          }
+        },
+        "slow": {
+          "NOISE": {
+            "windows": 200,
+            "window_nominations": 5,
+            "associated_nominations": 0
+          },
+          "SIGNAL_band_limited_noise_burst_SNR18": {
+            "windows": 10,
+            "window_nominations": 10,
+            "associated_nominations": 10
+          },
+          "SIGNAL_band_limited_noise_burst_SNR8": {
+            "windows": 10,
+            "window_nominations": 3,
+            "associated_nominations": 3
+          },
+          "SIGNAL_linear_chirp_SNR18": {
+            "windows": 10,
+            "window_nominations": 10,
+            "associated_nominations": 10
+          },
+          "SIGNAL_linear_chirp_SNR8": {
+            "windows": 10,
+            "window_nominations": 8,
+            "associated_nominations": 8
+          }
+        }
+      },
+      "discordant": {
+        "NOISE": {
+          "slow_only": 4,
+          "baseline_only": 0
+        },
+        "SIGNAL_band_limited_noise_burst_SNR18": {
+          "slow_only": 0,
+          "baseline_only": 0
+        },
+        "SIGNAL_band_limited_noise_burst_SNR8": {
+          "slow_only": 2,
+          "baseline_only": 0
+        },
+        "SIGNAL_linear_chirp_SNR18": {
+          "slow_only": 0,
+          "baseline_only": 0
+        },
+        "SIGNAL_linear_chirp_SNR8": {
+          "slow_only": 1,
+          "baseline_only": 0
+        }
+      }
+    },
+    "smooth_drift": {
+      "arms": {
+        "baseline": {
+          "NOISE": {
+            "windows": 200,
+            "window_nominations": 1,
+            "associated_nominations": 0
+          },
+          "SIGNAL_band_limited_noise_burst_SNR18": {
+            "windows": 10,
+            "window_nominations": 10,
+            "associated_nominations": 10
+          },
+          "SIGNAL_band_limited_noise_burst_SNR8": {
+            "windows": 10,
+            "window_nominations": 0,
+            "associated_nominations": 0
+          },
+          "SIGNAL_linear_chirp_SNR18": {
+            "windows": 10,
+            "window_nominations": 10,
+            "associated_nominations": 10
+          },
+          "SIGNAL_linear_chirp_SNR8": {
+            "windows": 10,
+            "window_nominations": 5,
+            "associated_nominations": 5
+          }
+        },
+        "slow": {
+          "NOISE": {
+            "windows": 200,
+            "window_nominations": 4,
+            "associated_nominations": 0
+          },
+          "SIGNAL_band_limited_noise_burst_SNR18": {
+            "windows": 10,
+            "window_nominations": 10,
+            "associated_nominations": 10
+          },
+          "SIGNAL_band_limited_noise_burst_SNR8": {
+            "windows": 10,
+            "window_nominations": 3,
+            "associated_nominations": 3
+          },
+          "SIGNAL_linear_chirp_SNR18": {
+            "windows": 10,
+            "window_nominations": 10,
+            "associated_nominations": 10
+          },
+          "SIGNAL_linear_chirp_SNR8": {
+            "windows": 10,
+            "window_nominations": 5,
+            "associated_nominations": 5
+          }
+        }
+      },
+      "discordant": {
+        "NOISE": {
+          "slow_only": 3,
+          "baseline_only": 0
+        },
+        "SIGNAL_band_limited_noise_burst_SNR18": {
+          "slow_only": 0,
+          "baseline_only": 0
+        },
+        "SIGNAL_band_limited_noise_burst_SNR8": {
+          "slow_only": 3,
+          "baseline_only": 0
+        },
+        "SIGNAL_linear_chirp_SNR18": {
+          "slow_only": 0,
+          "baseline_only": 0
+        },
+        "SIGNAL_linear_chirp_SNR8": {
+          "slow_only": 0,
+          "baseline_only": 0
+        }
+      }
+    },
+    "stationary": {
+      "arms": {
+        "baseline": {
+          "NOISE": {
+            "windows": 200,
+            "window_nominations": 1,
+            "associated_nominations": 0
+          },
+          "SIGNAL_band_limited_noise_burst_SNR18": {
+            "windows": 10,
+            "window_nominations": 10,
+            "associated_nominations": 10
+          },
+          "SIGNAL_band_limited_noise_burst_SNR8": {
+            "windows": 10,
+            "window_nominations": 0,
+            "associated_nominations": 0
+          },
+          "SIGNAL_linear_chirp_SNR18": {
+            "windows": 10,
+            "window_nominations": 10,
+            "associated_nominations": 10
+          },
+          "SIGNAL_linear_chirp_SNR8": {
+            "windows": 10,
+            "window_nominations": 5,
+            "associated_nominations": 5
+          }
+        },
+        "slow": {
+          "NOISE": {
+            "windows": 200,
+            "window_nominations": 4,
+            "associated_nominations": 0
+          },
+          "SIGNAL_band_limited_noise_burst_SNR18": {
+            "windows": 10,
+            "window_nominations": 10,
+            "associated_nominations": 10
+          },
+          "SIGNAL_band_limited_noise_burst_SNR8": {
+            "windows": 10,
+            "window_nominations": 0,
+            "associated_nominations": 0
+          },
+          "SIGNAL_linear_chirp_SNR18": {
+            "windows": 10,
+            "window_nominations": 10,
+            "associated_nominations": 10
+          },
+          "SIGNAL_linear_chirp_SNR8": {
+            "windows": 10,
+            "window_nominations": 6,
+            "associated_nominations": 6
+          }
+        }
+      },
+      "discordant": {
+        "NOISE": {
+          "slow_only": 3,
+          "baseline_only": 0
+        },
+        "SIGNAL_band_limited_noise_burst_SNR18": {
+          "slow_only": 0,
+          "baseline_only": 0
+        },
+        "SIGNAL_band_limited_noise_burst_SNR8": {
+          "slow_only": 0,
+          "baseline_only": 0
+        },
+        "SIGNAL_linear_chirp_SNR18": {
+          "slow_only": 0,
+          "baseline_only": 0
+        },
+        "SIGNAL_linear_chirp_SNR8": {
+          "slow_only": 1,
+          "baseline_only": 0
+        }
+      }
+    }
+  }
+}
