@@ -1,0 +1,16 @@
+{
+  "stage": "post-measurement report/plot script preparation",
+  "measurement_affected": false,
+  "errors": [
+    {
+      "exception": "NameError",
+      "message": "name 'root' is not defined",
+      "cause": "Plot-script writer used root before assigning it after saving the report builder."
+    },
+    {
+      "exception": "FileNotFoundError",
+      "message": "plot_background_lifetime.py was not created; the following shell invocation could not open it."
+    }
+  ],
+  "action": "Define root and create plotting script; rerun plotting only, retain existing measurements and verification."
+}

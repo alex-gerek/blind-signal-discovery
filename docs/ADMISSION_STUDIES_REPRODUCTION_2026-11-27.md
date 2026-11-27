@@ -23,3 +23,11 @@ Archived runs:
 - `results/separate_background_control/20261127T154355Z_4f134945/`
 
 Do not overwrite these directories or normalize result line endings: artifact hashes refer to exact bytes. New runs must retain failures and all outcomes. Original detector, GUI, unrelated test cleanup and article drafts were excluded from the evidence commit.
+
+## Additional lifetime/reacquisition pilot
+
+This later study uses pinned source `e21a7cc48ce4122804f86e3397ee3894afa90639`, not d049e2b. Use a separate disposable checkout at e21a7cc and copy the new `background_lifetime_controller.py`, `run_background_lifetime.py`, `verify_background_lifetime.py`, `verify_lifetime_contamination_pair.py`, `report_background_lifetime.py`, and `plot_background_lifetime.py` into experiments/, plus `docs/background_lifetime_protocol_2026-11-27.md`. The preceding core-cache, source-control and synthetic guard dependencies already exist at this pin.
+
+Run the measurement driver with python -B, retain its fresh RUN_DIRECTORY, run both lifetime verifiers on that directory, and only then generate reports/plots. Do not overwrite the archived `results/background_lifetime/20261127T170612Z_189c239c/`. The archived final report includes the reviewed presentation-error disclosure and figure caption clarification beyond the generic report builder; keep it as the reviewed interpretation.
+
+The acquisition/expiry contract and example manifest are design documents, not enforcement in Workstation. The 2400s oldest-sample limit is an unvalidated experimental parameter. Preserve the saved plot-preparation error and negative outcomes alongside all successful arithmetic checks. This publication records a completed synthetic pilot, not a validated operational repair.

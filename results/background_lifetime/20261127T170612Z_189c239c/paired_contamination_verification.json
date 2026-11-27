@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "scope": "Prespecified replacement-contamination challenge; source differs at fourBwindows, later scores/availability unchanged; descriptive paired diagnostic only",
+  "records": [
+    {
+      "seed": 19101,
+      "policy": "frozen_naive",
+      "later_probes": 5,
+      "stable_associated": 5,
+      "intrusion_associated": 5,
+      "stable_replacement_threshold": 3.357758170494857,
+      "intrusion_replacement_threshold": 99.8970550684406
+    },
+    {
+      "seed": 19101,
+      "policy": "age_only",
+      "later_probes": 5,
+      "stable_associated": 5,
+      "intrusion_associated": 1,
+      "stable_replacement_threshold": 3.357758170494857,
+      "intrusion_replacement_threshold": 99.8970550684406
+    },
+    {
+      "seed": 19101,
+      "policy": "age_and_state",
+      "later_probes": 5,
+      "stable_associated": 5,
+      "intrusion_associated": 1,
+      "stable_replacement_threshold": 3.357758170494857,
+      "intrusion_replacement_threshold": 99.8970550684406
+    },
+    {
+      "seed": 19102,
+      "policy": "frozen_naive",
+      "later_probes": 5,
+      "stable_associated": 4,
+      "intrusion_associated": 4,
+      "stable_replacement_threshold": 2.6998956579972666,
+      "intrusion_replacement_threshold": 35.74165039016517
+    },
+    {
+      "seed": 19102,
+      "policy": "age_only",
+      "later_probes": 5,
+      "stable_associated": 5,
+      "intrusion_associated": 2,
+      "stable_replacement_threshold": 2.6998956579972666,
+      "intrusion_replacement_threshold": 35.74165039016517
+    },
+    {
+      "seed": 19102,
+      "policy": "age_and_state",
+      "later_probes": 5,
+      "stable_associated": 5,
+      "intrusion_associated": 2,
+      "stable_replacement_threshold": 2.6998956579972666,
+      "intrusion_replacement_threshold": 35.74165039016517
+    },
+    {
+      "seed": 19103,
+      "policy": "frozen_naive",
+      "later_probes": 5,
+      "stable_associated": 5,
+      "intrusion_associated": 5,
+      "stable_replacement_threshold": 2.568230346398704,
+      "intrusion_replacement_threshold": 84.12341763531974
+    },
+    {
+      "seed": 19103,
+      "policy": "age_only",
+      "later_probes": 5,
+      "stable_associated": 5,
+      "intrusion_associated": 0,
+      "stable_replacement_threshold": 2.568230346398704,
+      "intrusion_replacement_threshold": 84.12341763531974
+    },
+    {
+      "seed": 19103,
+      "policy": "age_and_state",
+      "later_probes": 5,
+      "stable_associated": 5,
+      "intrusion_associated": 0,
+      "stable_replacement_threshold": 2.568230346398704,
+      "intrusion_replacement_threshold": 84.12341763531974
+    }
+  ]
+}

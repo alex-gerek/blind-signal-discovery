@@ -1,0 +1,173 @@
+{
+  "frozen_naive": {
+    "target_windows": 516,
+    "available_windows": 516,
+    "unavailable_windows": 0,
+    "available_noise_windows": 488,
+    "unavailable_noise_windows": 0,
+    "available_noise_seconds": 1952.0,
+    "unavailable_noise_seconds": 0.0,
+    "noise_alarms": 1,
+    "conditional_noise_rate": 0.0020491803278688526,
+    "signals": {
+      "wanted": {
+        "total": 28,
+        "detected": 28,
+        "associated": 28,
+        "missed_available": 0,
+        "abstained": 0
+      },
+      "intrusion": {
+        "total": 0,
+        "detected": 0,
+        "associated": 0,
+        "missed_available": 0,
+        "abstained": 0
+      }
+    },
+    "availability_restored_index": null,
+    "first_late_associated_wanted_index": 688,
+    "diagnostic_candidates_during_abstention": 0,
+    "eras": {
+      "before_change": {
+        "noise_total": 67,
+        "available_noise": 67,
+        "noise_alarms": 0,
+        "signal_total": 9,
+        "signal_associated": 9,
+        "signal_abstained": 0
+      },
+      "change_to_replacement": {
+        "noise_total": 319,
+        "available_noise": 319,
+        "noise_alarms": 1,
+        "signal_total": 5,
+        "signal_associated": 5,
+        "signal_abstained": 0
+      },
+      "after_replacement": {
+        "noise_total": 102,
+        "available_noise": 102,
+        "noise_alarms": 0,
+        "signal_total": 14,
+        "signal_associated": 14,
+        "signal_abstained": 0
+      }
+    },
+    "validated_recovery_claim": false
+  },
+  "age_only": {
+    "target_windows": 516,
+    "available_windows": 432,
+    "unavailable_windows": 84,
+    "available_noise_windows": 404,
+    "unavailable_noise_windows": 84,
+    "available_noise_seconds": 1616.0,
+    "unavailable_noise_seconds": 336.0,
+    "noise_alarms": 1,
+    "conditional_noise_rate": 0.0024752475247524753,
+    "signals": {
+      "wanted": {
+        "total": 28,
+        "detected": 28,
+        "associated": 28,
+        "missed_available": 0,
+        "abstained": 0
+      },
+      "intrusion": {
+        "total": 0,
+        "detected": 0,
+        "associated": 0,
+        "missed_available": 0,
+        "abstained": 0
+      }
+    },
+    "availability_restored_index": 684,
+    "first_late_associated_wanted_index": 688,
+    "diagnostic_candidates_during_abstention": 0,
+    "eras": {
+      "before_change": {
+        "noise_total": 67,
+        "available_noise": 67,
+        "noise_alarms": 0,
+        "signal_total": 9,
+        "signal_associated": 9,
+        "signal_abstained": 0
+      },
+      "change_to_replacement": {
+        "noise_total": 319,
+        "available_noise": 235,
+        "noise_alarms": 1,
+        "signal_total": 5,
+        "signal_associated": 5,
+        "signal_abstained": 0
+      },
+      "after_replacement": {
+        "noise_total": 102,
+        "available_noise": 102,
+        "noise_alarms": 0,
+        "signal_total": 14,
+        "signal_associated": 14,
+        "signal_abstained": 0
+      }
+    },
+    "validated_recovery_claim": false
+  },
+  "age_and_state": {
+    "target_windows": 516,
+    "available_windows": 432,
+    "unavailable_windows": 84,
+    "available_noise_windows": 404,
+    "unavailable_noise_windows": 84,
+    "available_noise_seconds": 1616.0,
+    "unavailable_noise_seconds": 336.0,
+    "noise_alarms": 1,
+    "conditional_noise_rate": 0.0024752475247524753,
+    "signals": {
+      "wanted": {
+        "total": 28,
+        "detected": 28,
+        "associated": 28,
+        "missed_available": 0,
+        "abstained": 0
+      },
+      "intrusion": {
+        "total": 0,
+        "detected": 0,
+        "associated": 0,
+        "missed_available": 0,
+        "abstained": 0
+      }
+    },
+    "availability_restored_index": 684,
+    "first_late_associated_wanted_index": 688,
+    "diagnostic_candidates_during_abstention": 0,
+    "eras": {
+      "before_change": {
+        "noise_total": 67,
+        "available_noise": 67,
+        "noise_alarms": 0,
+        "signal_total": 9,
+        "signal_associated": 9,
+        "signal_abstained": 0
+      },
+      "change_to_replacement": {
+        "noise_total": 319,
+        "available_noise": 235,
+        "noise_alarms": 1,
+        "signal_total": 5,
+        "signal_associated": 5,
+        "signal_abstained": 0
+      },
+      "after_replacement": {
+        "noise_total": 102,
+        "available_noise": 102,
+        "noise_alarms": 0,
+        "signal_total": 14,
+        "signal_associated": 14,
+        "signal_abstained": 0
+      }
+    },
+    "validated_recovery_claim": false
+  }
+}

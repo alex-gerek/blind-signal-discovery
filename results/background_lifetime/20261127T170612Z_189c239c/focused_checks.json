@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "checks": [
+    "age_boundary_equal",
+    "age_nextafter_above",
+    "age_nextafter_below",
+    "state_changed",
+    "state_unknown",
+    "clock_unknown",
+    "clock_mismatch",
+    "time_unknown",
+    "nonfinite",
+    "empty_source",
+    "source_overlap",
+    "source_touches_target",
+    "not_ready",
+    "age_only_ignores_state",
+    "frozen_ignores_age_and_state",
+    "empty_exposure",
+    "zero_duplicate_overlap_gap",
+    "reversed",
+    "duplicate_conflict",
+    "fap005_199attainable",
+    "fap005_198insufficient",
+    "union005_199insufficient",
+    "strict_json_diagnostic_preservation"
+  ],
+  "count": 23,
+  "scope": "Experimental controller/ledger fixtures, not production UI tests"
+}
