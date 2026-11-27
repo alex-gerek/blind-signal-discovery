@@ -1,0 +1,9 @@
+case,warning_windows,eligible_monitor_windows,warning_episodes,sequences_with_warning,signal_windows,signal_associations,hypothetical_gate_losses,noise_alarms,noise_windows,available_search_windows
+stable,21,2525,9,4,0,0,0,25,2580,2580
+level_step,2200,2525,5,5,0,0,0,25,2580,2580
+spectral_line,2200,2525,5,5,0,0,0,2204,2580,2580
+sparse_transients,18,2525,8,3,65,65,2,24,2515,2580
+repeated_transients,26,2525,13,4,320,315,4,24,2260,2580
+persistent_signal,2200,2525,5,5,2200,2200,2200,4,380,2580
+step_with_probes,2200,2525,5,5,65,65,55,24,2515,2580
+line_with_probes,2200,2525,5,5,65,65,55,2149,2515,2580

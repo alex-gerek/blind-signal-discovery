@@ -1,0 +1,227 @@
+{
+  "status": "PASS",
+  "scope": "retrospective accepted-candidate accounting; no waveform rerun",
+  "counts": {
+    "A_plus_B_far": {
+      "short_31ms": {
+        "units": 100,
+        "any_accepted": 7,
+        "one_covers_both": 2,
+        "disjoint_pair": 0
+      },
+      "medium_125ms": {
+        "units": 100,
+        "any_accepted": 100,
+        "one_covers_both": 0,
+        "disjoint_pair": 100
+      },
+      "long_500ms": {
+        "units": 100,
+        "any_accepted": 100,
+        "one_covers_both": 0,
+        "disjoint_pair": 100
+      }
+    },
+    "A_plus_B_close": {
+      "short_31ms": {
+        "units": 100,
+        "any_accepted": 94,
+        "one_covers_both": 94,
+        "disjoint_pair": 0
+      },
+      "medium_125ms": {
+        "units": 100,
+        "any_accepted": 100,
+        "one_covers_both": 100,
+        "disjoint_pair": 0
+      },
+      "long_500ms": {
+        "units": 100,
+        "any_accepted": 100,
+        "one_covers_both": 100,
+        "disjoint_pair": 0
+      }
+    }
+  },
+  "thresholds": {
+    "22101": 5.869277578934621,
+    "22102": 2.3555458652016807,
+    "22103": 3.2866594274370193,
+    "22104": 3.84699375852354,
+    "22105": 2.255647129661104
+  },
+  "examples": {
+    "A_plus_B_far": {
+      "carriers": [
+        96,
+        192
+      ],
+      "candidates": [
+        {
+          "candidate_id": 3,
+          "scale_name": "long_500ms",
+          "t_start": 1.1875,
+          "t_end": 2.3125,
+          "f_min": 189.0,
+          "f_max": 197.0,
+          "peak_time": 1.875,
+          "peak_freq": 192.0,
+          "raw_anomaly_score": 1019.1602761759281,
+          "standardized_score": 64.99229813704501,
+          "peak_excess_power": 104.0528310870909,
+          "n_bins": 28,
+          "empirical_p_value": 0.005,
+          "p_value_is_upper_bound": true,
+          "diagnostics": {
+            "time_span_s": 1.125,
+            "bandwidth_hz": 8.0,
+            "mean_excess_power": 37.398581291997424,
+            "boundary_adjacent": false,
+            "input_kurtosis": 0.2986904208106913,
+            "input_crest_factor": 4.524247464335491
+          }
+        },
+        {
+          "candidate_id": 1,
+          "scale_name": "medium_125ms",
+          "t_start": 1.265625,
+          "t_end": 2.203125,
+          "f_min": 180.0,
+          "f_max": 204.0,
+          "peak_time": 1.4375,
+          "peak_freq": 192.0,
+          "raw_anomaly_score": 751.348255399133,
+          "standardized_score": 30.358547015448888,
+          "peak_excess_power": 31.230841377634732,
+          "n_bins": 69,
+          "empirical_p_value": 0.005,
+          "p_value_is_upper_bound": true,
+          "diagnostics": {
+            "time_span_s": 0.9375,
+            "bandwidth_hz": 24.0,
+            "mean_excess_power": 11.889105150712073,
+            "boundary_adjacent": false,
+            "input_kurtosis": 0.2986904208106913,
+            "input_crest_factor": 4.524247464335491
+          }
+        },
+        {
+          "candidate_id": 4,
+          "scale_name": "long_500ms",
+          "t_start": 1.1875,
+          "t_end": 2.1875,
+          "f_min": 93.0,
+          "f_max": 101.0,
+          "peak_time": 1.75,
+          "peak_freq": 96.0,
+          "raw_anomaly_score": 438.1994974697103,
+          "standardized_score": 26.787815491953193,
+          "peak_excess_power": 51.28188642167629,
+          "n_bins": 25,
+          "empirical_p_value": 0.005,
+          "p_value_is_upper_bound": true,
+          "diagnostics": {
+            "time_span_s": 1.0,
+            "bandwidth_hz": 8.0,
+            "mean_excess_power": 18.527979898788413,
+            "boundary_adjacent": false,
+            "input_kurtosis": 0.2986904208106913,
+            "input_crest_factor": 4.524247464335491
+          }
+        },
+        {
+          "candidate_id": 2,
+          "scale_name": "medium_125ms",
+          "t_start": 1.265625,
+          "t_end": 2.078125,
+          "f_min": 84.0,
+          "f_max": 116.0,
+          "peak_time": 1.34375,
+          "peak_freq": 96.0,
+          "raw_anomaly_score": 301.1452292662743,
+          "standardized_score": 11.378607477833848,
+          "peak_excess_power": 18.313349202326126,
+          "n_bins": 43,
+          "empirical_p_value": 0.005,
+          "p_value_is_upper_bound": true,
+          "diagnostics": {
+            "time_span_s": 0.8125,
+            "bandwidth_hz": 32.0,
+            "mean_excess_power": 8.003377424797078,
+            "boundary_adjacent": false,
+            "input_kurtosis": 0.2986904208106913,
+            "input_crest_factor": 4.524247464335491
+          }
+        }
+      ]
+    },
+    "A_plus_B_close": {
+      "carriers": [
+        96,
+        98
+      ],
+      "candidates": [
+        {
+          "candidate_id": 2,
+          "scale_name": "long_500ms",
+          "t_start": 1.1875,
+          "t_end": 2.3125,
+          "f_min": 93.0,
+          "f_max": 105.0,
+          "peak_time": 1.75,
+          "peak_freq": 96.0,
+          "raw_anomaly_score": 693.703031754036,
+          "standardized_score": 43.589948611960786,
+          "peak_excess_power": 85.5813724517199,
+          "n_bins": 39,
+          "empirical_p_value": 0.005,
+          "p_value_is_upper_bound": true,
+          "diagnostics": {
+            "time_span_s": 1.125,
+            "bandwidth_hz": 12.0,
+            "mean_excess_power": 18.78725722446246,
+            "boundary_adjacent": false,
+            "input_kurtosis": 0.2665165034529564,
+            "input_crest_factor": 4.508949981084416
+          }
+        },
+        {
+          "candidate_id": 1,
+          "scale_name": "medium_125ms",
+          "t_start": 1.515625,
+          "t_end": 1.921875,
+          "f_min": 84.0,
+          "f_max": 108.0,
+          "peak_time": 1.6875,
+          "peak_freq": 96.0,
+          "raw_anomaly_score": 411.368853255565,
+          "standardized_score": 16.025483659239555,
+          "peak_excess_power": 37.350311168195795,
+          "n_bins": 30,
+          "empirical_p_value": 0.005,
+          "p_value_is_upper_bound": true,
+          "diagnostics": {
+            "time_span_s": 0.40625,
+            "bandwidth_hz": 24.0,
+            "mean_excess_power": 14.712295108518834,
+            "boundary_adjacent": false,
+            "input_kurtosis": 0.2665165034529564,
+            "input_crest_factor": 4.508949981084416
+          }
+        }
+      ]
+    }
+  },
+  "input_sha256": {
+    "results/two_oscillation_anomaly/20261127T183750Z_cc70b1c7/22101/calibration.json": "bfb0a0d28e3f3b85ff95c909b4977e180234c5cb2af1cfb68247ca80c0a80c5d",
+    "results/two_oscillation_anomaly/20261127T183750Z_cc70b1c7/22101/measurements.json": "f4720d3842554b343dfa7883fd458316ffcb7522cb0bf5f614c803f02f2eaf0e",
+    "results/two_oscillation_anomaly/20261127T183750Z_cc70b1c7/22102/calibration.json": "d3b5b1639c7694e48e4fb0a5cc55eca39b0dfa8bd1656a212418b5a7a24a4097",
+    "results/two_oscillation_anomaly/20261127T183750Z_cc70b1c7/22102/measurements.json": "9f389cd740bcf31601fc7014ff53ea8ec174e06a6bbb8b7cc67646e1a9d52e98",
+    "results/two_oscillation_anomaly/20261127T183750Z_cc70b1c7/22103/calibration.json": "41678e0776a45fd84ac408ebdb4738e23b6b006557842018e6252dde962186ee",
+    "results/two_oscillation_anomaly/20261127T183750Z_cc70b1c7/22103/measurements.json": "9dd4b6193f76d8e7221a77634beaac28ec12263ec5a469f7ef9ecc96c5fe5081",
+    "results/two_oscillation_anomaly/20261127T183750Z_cc70b1c7/22104/calibration.json": "e7100416bb7e625d60c44d9f856af49cbf2ac5bfa67b85a5cc0240b81b083330",
+    "results/two_oscillation_anomaly/20261127T183750Z_cc70b1c7/22104/measurements.json": "7599139cd2330f047ca63044351af727f810bf8864fb768f615ebfd0532375ce",
+    "results/two_oscillation_anomaly/20261127T183750Z_cc70b1c7/22105/calibration.json": "9e6739ce171b04a2ed7d0c18fa471345c161ff152770c7367711862c90dc0cca",
+    "results/two_oscillation_anomaly/20261127T183750Z_cc70b1c7/22105/measurements.json": "7f5321a58b38b8371c16e64a13eae99a299edf866ec54928e7dd97f1c806b75f"
+  }
+}

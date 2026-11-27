@@ -1,0 +1,11 @@
+seed,baseline,changed,target_windows,max_absolute_score_difference,different_nomination_decisions,different_p_values,different_support_associations,baseline_warning_windows,changed_warning_windows
+21101,stable,level_step,516,0.0,0,0,0,5,440
+21101,sparse_transients,step_with_probes,516,0.0,0,0,0,0,440
+21102,stable,level_step,516,0.0,0,0,0,0,440
+21102,sparse_transients,step_with_probes,516,0.0,0,0,0,0,440
+21103,stable,level_step,516,0.0,0,0,0,4,440
+21103,sparse_transients,step_with_probes,516,0.0,0,0,0,5,440
+21104,stable,level_step,516,0.0,0,0,0,6,440
+21104,sparse_transients,step_with_probes,516,0.0,0,0,0,6,440
+21105,stable,level_step,516,0.0,0,0,0,6,440
+21105,sparse_transients,step_with_probes,516,0.0,0,0,0,7,440

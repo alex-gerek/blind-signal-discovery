@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "checks": [
+    "duplicate estimates",
+    "permutation matching",
+    "inclusive tolerance",
+    "ambiguous matches",
+    "strict score",
+    "no proposal",
+    "within-cluster double peak",
+    "D0 no pair"
+  ]
+}

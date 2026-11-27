@@ -44,3 +44,8 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Exact originals preserved in lossless .json.gz archives for GitHub size limits.
+/results/blind_two_tone_exploratory/20261127T192047Z_f279641e/evaluation.json
+/results/blind_two_tone_exploratory/20261127T192047Z_f279641e/pair_calibration_records.json
+/results/blind_two_tone_exploratory/20261127T192047Z_f279641e/anomaly_calibration_raw.json

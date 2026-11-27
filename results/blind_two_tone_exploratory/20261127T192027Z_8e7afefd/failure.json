@@ -1,0 +1,4 @@
+{
+  "status": "FAILED",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\blind-signal-discovery\\experiments\\run_blind_two_tone_exploratory.py\", line 167, in <module>\n    try:main()\n        ~~~~^^\n  File \"D:\\blind-signal-discovery\\experiments\\run_blind_two_tone_exploratory.py\", line 100, in main\n    save(OUT/'manifest.json',manifest);save(OUT/'fixtures.json',fixtures())\n                                                                ~~~~~~~~^^\n  File \"D:\\blind-signal-discovery\\experiments\\run_blind_two_tone_exploratory.py\", line 87, in fixtures\n    assert not match([94,98],[96,98],1)[0] and match([97,98],[96,98],1)[1]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

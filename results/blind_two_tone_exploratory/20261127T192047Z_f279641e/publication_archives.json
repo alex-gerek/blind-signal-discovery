@@ -1,0 +1,26 @@
+{
+  "reason": "GitHub file-size limits; original bytes retained locally",
+  "archives": [
+    {
+      "file": "evaluation.json",
+      "archive": "evaluation.json.gz",
+      "original_sha256": "9d24282b3f1959d430da3b930beed257f733a867193ac7bf831ca5030cd4fdb8",
+      "archive_sha256": "5c722a9332564ae9eb9613d6c60fb16b325c9affb8fff33af6f66d618786bb9f",
+      "archive_bytes": 20752944
+    },
+    {
+      "file": "pair_calibration_records.json",
+      "archive": "pair_calibration_records.json.gz",
+      "original_sha256": "01fe9fc07caeeca4554cf4bd3c7dd227f745a4db163227efdae7964377951cc7",
+      "archive_sha256": "4fcb59bc3a998588457de2c6838553c8c54a6023c8b12c4260716e831bf66588",
+      "archive_bytes": 9487245
+    },
+    {
+      "file": "anomaly_calibration_raw.json",
+      "archive": "anomaly_calibration_raw.json.gz",
+      "original_sha256": "4bc3070488a9d1fd95b797dab9de6379bc322a947aa9b7d67cc60641a90630c8",
+      "archive_sha256": "e4fb13221993bd6f9fa1a7bcdcd3b5c6f11b4ec98348a16bdc1aece26c9f78ed",
+      "archive_bytes": 5390695
+    }
+  ]
+}

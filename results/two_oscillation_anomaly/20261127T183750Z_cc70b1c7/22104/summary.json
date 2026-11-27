@@ -1,0 +1,67 @@
+{
+  "seed": 22104,
+  "heldout_noise_alarms": 0,
+  "heldout_noise_windows": 200,
+  "cases": {
+    "paired_noise": {
+      "units": 20,
+      "detected": 0,
+      "far_disjoint_pair": 0,
+      "close_disjoint_pair": 0
+    },
+    "A_alone": {
+      "units": 20,
+      "detected": 20,
+      "far_disjoint_pair": 0,
+      "close_disjoint_pair": 0
+    },
+    "B_far_alone": {
+      "units": 20,
+      "detected": 20,
+      "far_disjoint_pair": 0,
+      "close_disjoint_pair": 0
+    },
+    "B_close_alone": {
+      "units": 20,
+      "detected": 20,
+      "far_disjoint_pair": 0,
+      "close_disjoint_pair": 0
+    },
+    "A_plus_B_far": {
+      "units": 20,
+      "detected": 20,
+      "far_disjoint_pair": 20,
+      "close_disjoint_pair": 0
+    },
+    "A_plus_B_close": {
+      "units": 20,
+      "detected": 20,
+      "far_disjoint_pair": 0,
+      "close_disjoint_pair": 0
+    },
+    "A_plus_A": {
+      "units": 20,
+      "detected": 20,
+      "far_disjoint_pair": 0,
+      "close_disjoint_pair": 0
+    },
+    "exact_cancel": {
+      "units": 20,
+      "detected": 0,
+      "far_disjoint_pair": 0,
+      "close_disjoint_pair": 0
+    },
+    "near_cancel": {
+      "units": 20,
+      "detected": 0,
+      "far_disjoint_pair": 0,
+      "close_disjoint_pair": 0
+    },
+    "equivalent_single": {
+      "units": 20,
+      "detected": 20,
+      "far_disjoint_pair": 0,
+      "close_disjoint_pair": 0
+    }
+  }
+}
