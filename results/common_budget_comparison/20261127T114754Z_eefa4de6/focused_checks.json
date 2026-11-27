@@ -1,0 +1,21 @@
+{
+  "prototype": {
+    "status": "PASS",
+    "kernel_sizes": [
+      257,
+      33,
+      9
+    ],
+    "odd_frame_clipping": true,
+    "constant_and_positive_floor": true,
+    "ideal_step_preserved": true,
+    "short_spike_rejected": true,
+    "wide_spike_retained": true,
+    "invalid_inputs_rejected": 3,
+    "original_eight_neighbor_two_cell_topology": true,
+    "strict_seed_boundary": true,
+    "fixed_map_equation_checks": 3
+  },
+  "exact_paired_boundaries": "PASS",
+  "clopper_pearson_zero_boundary": "PASS"
+}

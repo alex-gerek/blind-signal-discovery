@@ -1,0 +1,12 @@
+{
+  "timestamp_utc": "2026-11-27T11:49:33.036035+00:00",
+  "files_sha256": {
+    "baseline_calibration.json": "da9d98002e9a397238a6844c52e15d87d60b31c5401ea156bf50b6f2f54fea7a",
+    "baseline_null_scores.json": "0ac533c7f9e63a889dfe79bf9ebbf236fc4249a1c71640c8f37bd3e6744568c9",
+    "slow_calibration.json": "de093ad10b7f4dbdb8d1439ec2a1dff59de987d52cde0358a500752ec698fad7",
+    "slow_null_scores.json": "8aa7aac00cfc4caf1f566ac0592e0d8fb716552e648f8f5dde2adffd9daa573d",
+    "budget_rule.json": "8637ea8fa1bf9904e12fbc3c8781bebd57656c7533266a048e3406a7c9bee890"
+  },
+  "heldout_records_generated": 0,
+  "thresholds_will_not_be_retuned": true
+}

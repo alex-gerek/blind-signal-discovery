@@ -1,0 +1,15 @@
+{
+  "status": "VERIFIED",
+  "calibrations_checked": 2,
+  "input_records_regenerated": 6800,
+  "manual_map_arm_checks": 126,
+  "arm_window_decisions_checked": 9600,
+  "accepted_candidates_checked": 5296,
+  "threshold_freeze_hashes_unchanged": true,
+  "noise_hash_split_intersections": 0,
+  "paired_signal_units_checked": 600,
+  "budget_rule_verified_by_beta_and_binomial": true,
+  "intervals_verified_by_binomial_tail_inversion": true,
+  "primary_test_verified_by_exact_combinatorial_sum": true,
+  "scope": "Independent saved-record/math/input checks; synthetic maps only; no detector/real waveform/O3/network use; no retuning"
+}

@@ -1,0 +1,10 @@
+{
+  "unique_hash_counts": {
+    "A": 200,
+    "B": 1800,
+    "noise": 3600,
+    "signal_noise_partners": 600
+  },
+  "cross_split_noise_hash_intersections": 0,
+  "signal_amplitudes_paired_by_unit": true
+}

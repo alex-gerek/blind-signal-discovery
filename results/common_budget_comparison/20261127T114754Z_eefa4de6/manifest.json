@@ -1,0 +1,53 @@
+{
+  "run_id": "20261127T114754Z_eefa4de6",
+  "source_commit": "81ca36e454256400dc2674967db268a9aaaf6c56",
+  "source_sha256": {
+    "src/bsd/adaptive_regime.py": "c5a64068b4216a04ed30da73c71e9fc396bdf8eb8a2ef89864de6a45bda5d1e8",
+    "src/bsd/adaptive_regime_v2b.py": "02bcd0f4da373e23ed4d2b2fe89b0878476d9234e4e583e172ae208aaa9c2702",
+    "src/bsd/calibration.py": "79dab28d60323192bb73f28f60e74d367c3bb17e4e75fb31acf5ef98df7706e7",
+    "src/bsd/coincidence.py": "9d0469d45d6adc26624037e1be0b4c9331dea390bc94133ddcff0f947492fd74",
+    "src/bsd/cross_coherence.py": "a306d298ea421ca26ac1111ffd313de3acc23e98263e20227d5e5d4037cfbaf1",
+    "src/bsd/detector.py": "56343accdc7e5b2b3a0a47a45e974065a9eb42d57df929138a29e09f2e94bed9",
+    "src/bsd/detector_v2.py": "a622ef294b225f1da22c55c5279dc9ccb32f27fa40ad4c9129855b1fa302274e",
+    "src/bsd/evaluation.py": "d0ae9285c2c1f80d0225f37ea6e5624506b8d270af980e5a1607c1b9f2ac62bb",
+    "src/bsd/generator.py": "70d0dbe8c31e3d4568d46909dbf795ae90f678643ac69f219fe2a431f08c4cc8",
+    "src/bsd/io_loader.py": "93f9134a0228d2856db17286264db22766393535193e6e5a01c9d4265b0727a4",
+    "src/bsd/ligo_adapter.py": "04763049dff217b3424b9095af4f391c440c96b8d29dde74b1e4a080436373be",
+    "src/bsd/noise.py": "e456400f2aae3fa6cb28716ba59b53e0f8be784a0dfbcbc107b3d87e0ee591e2",
+    "src/bsd/regime_monitor.py": "cee14eee23c457b19539a78b561ed47493a31d05111762f9cca7cbbfa28eea30",
+    "src/bsd/reporting.py": "c748efe7eadb40e43d0001e49b4162230d83bc55cd693f7ac1bf13190740b6ec",
+    "src/bsd/upload_storage.py": "5d0fa69f9bbfdd6f6f31e16a2916667e0b0d7087a0132032591894975ffd53c9",
+    "src/bsd/vetoes.py": "3ad14fba9f63eb0f34d804506b3cb98aa702c51e96ce8919341e768c97add219",
+    "src/bsd/visualization.py": "130e3447c74f547cb599ece46b133a33eaff32ee0a221b814e693c1b25701f27",
+    "src/bsd/workstation_runner.py": "50466d09d0e71b8592d0d980da593339eba56edf49af33ee901f541d6d9c1ca5",
+    "src/bsd/__init__.py": "9cc9beef45a4ee5c7662cf3c739188497d169c85721573d17838864b43d2faf0",
+    "experiments/run_gw170814_exploratory_search.py": "212055b702798dcc6819f93565ff796b22394c262268123b3d381507fec0f876"
+  },
+  "driver_sha256": "1a7cb6dc5fcc2f1be387c69fb82788ee0d70a71a085907175169f48cdbe8d7d7",
+  "helper_sha256": "33148dc94c9c90646b679af6d66814d26b4605bda2545b8852b927b606fad1b3",
+  "protocol_sha256": "ebaad9a579133bf6cfff6ceaa84200810e1bf5a19376cb44bd265f3eb631e769",
+  "dirty_paths": [
+    "M .gitattributes",
+    " M docs/RESEARCH_HISTORY.md",
+    " M tests/run_browser_wav_resampler.js",
+    " M tests/test_browser_input_validation.js",
+    " M tests/test_input_validation.py",
+    "?? docs/articles/",
+    "?? docs/common_budget_comparison_protocol_2026-11-27.md",
+    "?? experiments/run_common_budget_comparison.py",
+    "?? results/common_budget_comparison/",
+    "?? tests/helpers/",
+    "?? tests/test_workstation_script_source.js"
+  ],
+  "python": "3.14.3",
+  "numpy": "2.5.5",
+  "scipy": "1.18.1",
+  "status": "COMPLETE",
+  "stages": {
+    "calibration": "FROZEN",
+    "noise": "COMPLETE",
+    "signals": "COMPLETE"
+  },
+  "threshold_freeze_sha256": "a085e60028a768f9a7158aa1ea3a2999a854370e093d5e012083f2531e3564ee",
+  "frozen_files_and_sources_unchanged": true
+}

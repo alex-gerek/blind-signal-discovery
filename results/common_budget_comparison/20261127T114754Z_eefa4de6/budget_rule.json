@@ -1,0 +1,14 @@
+{
+  "budget_alpha": 0.01,
+  "budget_false_alarm_windows_per_hour_equivalent": 9.0,
+  "normalization_windows": 200,
+  "threshold_windows": 1800,
+  "failure_allowance_per_arm": 0.025,
+  "tail_rank_m": 10,
+  "order_k_1based": 1791,
+  "operating_alpha": 0.00555247084952804,
+  "tolerance_tail_mass_upper975": 0.009470248974080742,
+  "binomial_failure_probability_at_budget": 0.015008074366413538,
+  "next_rank_failure_probability": 0.029767988616076397,
+  "assumptions": "IID predefined mixture, independent A/B; strict crossing/ties conservative; joint method assurances by union bound"
+}

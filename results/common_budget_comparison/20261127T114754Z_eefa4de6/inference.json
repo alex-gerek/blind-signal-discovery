@@ -1,0 +1,369 @@
+{
+  "budget_alpha": 0.01,
+  "operating_alpha": 0.00555247084952804,
+  "noise_window_results": {
+    "baseline": {
+      "count": 21,
+      "n": 3600,
+      "rate": 0.005833333333333334,
+      "lower95": 0.003614443870457183,
+      "upper95": 0.00890311716026188,
+      "false_alarm_windows_per_hour_equivalent": 5.25
+    },
+    "slow": {
+      "count": 18,
+      "n": 3600,
+      "rate": 0.005,
+      "lower95": 0.0029659279218297733,
+      "upper95": 0.00789068664453489,
+      "false_alarm_windows_per_hour_equivalent": 4.5
+    }
+  },
+  "noise_by_regime": {
+    "baseline": {
+      "stationary": {
+        "count": 4,
+        "n": 1193,
+        "rate": 0.003352891869237217,
+        "lower95": 0.0009142825508588418,
+        "upper95": 0.00856230018325769
+      },
+      "smooth_drift": {
+        "count": 6,
+        "n": 1153,
+        "rate": 0.005203816131830009,
+        "lower95": 0.0019120310499203084,
+        "upper95": 0.01129187235537335
+      },
+      "within_window_step": {
+        "count": 11,
+        "n": 1254,
+        "rate": 0.008771929824561403,
+        "lower95": 0.00438681568056678,
+        "upper95": 0.015641087309019856
+      }
+    },
+    "slow": {
+      "stationary": {
+        "count": 3,
+        "n": 1193,
+        "rate": 0.002514668901927913,
+        "lower95": 0.0005188857101459793,
+        "upper95": 0.00733118505724707
+      },
+      "smooth_drift": {
+        "count": 8,
+        "n": 1153,
+        "rate": 0.006938421509106678,
+        "lower95": 0.0030001375178942548,
+        "upper95": 0.013625461397402434
+      },
+      "within_window_step": {
+        "count": 7,
+        "n": 1254,
+        "rate": 0.005582137161084529,
+        "lower95": 0.002247165908849976,
+        "upper95": 0.0114673205339808
+      }
+    }
+  },
+  "budget_supported_by_evaluation_upper_bounds": true,
+  "noise_discordance": {
+    "slow_only": 12,
+    "baseline_only": 15
+  },
+  "signal_groups": [
+    {
+      "family": "linear_chirp",
+      "snr": 8,
+      "n": 300,
+      "baseline": {
+        "count": 187,
+        "n": 300,
+        "rate": 0.6233333333333333,
+        "lower95": 0.5658336317243955,
+        "upper95": 0.6783709494414751
+      },
+      "slow": {
+        "count": 160,
+        "n": 300,
+        "rate": 0.5333333333333333,
+        "lower95": 0.4751235202342449,
+        "upper95": 0.5908784298388852
+      },
+      "slow_only": 3,
+      "baseline_only": 30,
+      "primary": false,
+      "by_regime": {
+        "stationary": {
+          "baseline": {
+            "count": 58,
+            "n": 98,
+            "rate": 0.5918367346938775,
+            "lower95": 0.4878925055384315,
+            "upper95": 0.6900774264736516
+          },
+          "slow": {
+            "count": 43,
+            "n": 98,
+            "rate": 0.4387755102040816,
+            "lower95": 0.3386677448462052,
+            "upper95": 0.5426834560409304
+          }
+        },
+        "smooth_drift": {
+          "baseline": {
+            "count": 64,
+            "n": 98,
+            "rate": 0.6530612244897959,
+            "lower95": 0.5501962644503724,
+            "upper95": 0.7464017871497293
+          },
+          "slow": {
+            "count": 55,
+            "n": 98,
+            "rate": 0.5612244897959183,
+            "lower95": 0.45731654395906957,
+            "upper95": 0.6613322551537948
+          }
+        },
+        "within_window_step": {
+          "baseline": {
+            "count": 65,
+            "n": 104,
+            "rate": 0.625,
+            "lower95": 0.5246596891713533,
+            "upper95": 0.7180251557221345
+          },
+          "slow": {
+            "count": 62,
+            "n": 104,
+            "rate": 0.5961538461538461,
+            "lower95": 0.4954323108290839,
+            "upper95": 0.6912527833117448
+          }
+        }
+      }
+    },
+    {
+      "family": "linear_chirp",
+      "snr": 18,
+      "n": 300,
+      "baseline": {
+        "count": 300,
+        "n": 300,
+        "rate": 1.0,
+        "lower95": 0.9877790253057065,
+        "upper95": 1.0
+      },
+      "slow": {
+        "count": 300,
+        "n": 300,
+        "rate": 1.0,
+        "lower95": 0.9877790253057065,
+        "upper95": 1.0
+      },
+      "slow_only": 0,
+      "baseline_only": 0,
+      "primary": false,
+      "by_regime": {
+        "stationary": {
+          "baseline": {
+            "count": 98,
+            "n": 98,
+            "rate": 1.0,
+            "lower95": 0.9630580129648071,
+            "upper95": 1.0
+          },
+          "slow": {
+            "count": 98,
+            "n": 98,
+            "rate": 1.0,
+            "lower95": 0.9630580129648071,
+            "upper95": 1.0
+          }
+        },
+        "smooth_drift": {
+          "baseline": {
+            "count": 98,
+            "n": 98,
+            "rate": 1.0,
+            "lower95": 0.9630580129648071,
+            "upper95": 1.0
+          },
+          "slow": {
+            "count": 98,
+            "n": 98,
+            "rate": 1.0,
+            "lower95": 0.9630580129648071,
+            "upper95": 1.0
+          }
+        },
+        "within_window_step": {
+          "baseline": {
+            "count": 104,
+            "n": 104,
+            "rate": 1.0,
+            "lower95": 0.965151693412326,
+            "upper95": 1.0
+          },
+          "slow": {
+            "count": 104,
+            "n": 104,
+            "rate": 1.0,
+            "lower95": 0.965151693412326,
+            "upper95": 1.0
+          }
+        }
+      }
+    },
+    {
+      "family": "band_limited_noise_burst",
+      "snr": 8,
+      "n": 300,
+      "baseline": {
+        "count": 33,
+        "n": 300,
+        "rate": 0.11,
+        "lower95": 0.0769389635276147,
+        "upper95": 0.15100322157472484
+      },
+      "slow": {
+        "count": 34,
+        "n": 300,
+        "rate": 0.11333333333333333,
+        "lower95": 0.07977583132468702,
+        "upper95": 0.15475953514267193
+      },
+      "slow_only": 6,
+      "baseline_only": 5,
+      "primary": true,
+      "exact_mcnemar_p_two_sided": 1.0,
+      "by_regime": {
+        "stationary": {
+          "baseline": {
+            "count": 2,
+            "n": 99,
+            "rate": 0.020202020202020204,
+            "lower95": 0.0024559907935277274,
+            "upper95": 0.07107612246187751
+          },
+          "slow": {
+            "count": 2,
+            "n": 99,
+            "rate": 0.020202020202020204,
+            "lower95": 0.0024559907935277274,
+            "upper95": 0.07107612246187751
+          }
+        },
+        "smooth_drift": {
+          "baseline": {
+            "count": 18,
+            "n": 109,
+            "rate": 0.1651376146788991,
+            "lower95": 0.10090843809723256,
+            "upper95": 0.2483749256121133
+          },
+          "slow": {
+            "count": 18,
+            "n": 109,
+            "rate": 0.1651376146788991,
+            "lower95": 0.10090843809723256,
+            "upper95": 0.2483749256121133
+          }
+        },
+        "within_window_step": {
+          "baseline": {
+            "count": 13,
+            "n": 92,
+            "rate": 0.14130434782608695,
+            "lower95": 0.07743917836503245,
+            "upper95": 0.2295073750909122
+          },
+          "slow": {
+            "count": 14,
+            "n": 92,
+            "rate": 0.15217391304347827,
+            "lower95": 0.08576753870138788,
+            "upper95": 0.24212308005386116
+          }
+        }
+      }
+    },
+    {
+      "family": "band_limited_noise_burst",
+      "snr": 18,
+      "n": 300,
+      "baseline": {
+        "count": 264,
+        "n": 300,
+        "rate": 0.88,
+        "lower95": 0.8377560576697571,
+        "upper95": 0.9145211977082804
+      },
+      "slow": {
+        "count": 289,
+        "n": 300,
+        "rate": 0.9633333333333334,
+        "lower95": 0.9353414818037018,
+        "upper95": 0.9815565391875403
+      },
+      "slow_only": 25,
+      "baseline_only": 0,
+      "primary": false,
+      "by_regime": {
+        "stationary": {
+          "baseline": {
+            "count": 94,
+            "n": 99,
+            "rate": 0.9494949494949495,
+            "lower95": 0.8860641822085105,
+            "upper95": 0.9834000886701565
+          },
+          "slow": {
+            "count": 99,
+            "n": 99,
+            "rate": 1.0,
+            "lower95": 0.9634242550165211,
+            "upper95": 1.0
+          }
+        },
+        "smooth_drift": {
+          "baseline": {
+            "count": 90,
+            "n": 109,
+            "rate": 0.8256880733944955,
+            "lower95": 0.7412508878230024,
+            "upper95": 0.8916662627072448
+          },
+          "slow": {
+            "count": 101,
+            "n": 109,
+            "rate": 0.926605504587156,
+            "lower95": 0.8604991114326577,
+            "upper95": 0.9677819875203987
+          }
+        },
+        "within_window_step": {
+          "baseline": {
+            "count": 80,
+            "n": 92,
+            "rate": 0.8695652173913043,
+            "lower95": 0.7832387511264561,
+            "upper95": 0.9307473145482565
+          },
+          "slow": {
+            "count": 89,
+            "n": 92,
+            "rate": 0.967391304347826,
+            "lower95": 0.9076501184474949,
+            "upper95": 0.9932241495288061
+          }
+        }
+      }
+    }
+  ],
+  "primary_improvement_evidence_for_this_generator": false,
+  "automatic_adoption": false,
+  "scope": "One fixed calibration realization; IID synthetic mixture; one predeclared primary association endpoint; secondary groups descriptive"
+}
