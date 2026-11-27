@@ -29,6 +29,12 @@ Once the mathematical foundations, calibration limits, and failure modes are tho
 
 ---
 
+## Public article
+
+[**WHISKER: From Sound to Spacetime-and Back**](https://x.com/LexGerek/status/2126312820253810895) by Lex Gerek connects the project to PHARMAKON and the Periodic Table of Sounds, explains the known-event controls and detector misses, and summarizes the independent common-budget comparison. This is a public-facing research narrative, not an additional experiment or a claim of a new astrophysical discovery. The underlying research snapshot is [`4a1f590`](https://github.com/alex-gerek/blind-signal-discovery/tree/4a1f590a424e81a125d593611a7f162cab54af42); see the [comparison findings](docs/COMMON_BUDGET_COMPARISON_FINDINGS_2026-11-27.md), [GW170814 diagnosis](docs/GW170814_MISS_DIAGNOSIS_2026-11-27.md), and [audit errata](docs/AUDIT_ERRATUM_47a5475.md) for evidence and limitations.
+
+---
+
 ## The idea in one table
 
 | Stage | Question asked of the signal | Method (`src/bsd/`) |
