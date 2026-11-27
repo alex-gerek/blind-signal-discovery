@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "named_topology_cases": 9,
+  "random_oracle_masks": 20,
+  "strict_seed_boundary": true,
+  "post_link_qualification": true,
+  "no_double_counting": true
+}

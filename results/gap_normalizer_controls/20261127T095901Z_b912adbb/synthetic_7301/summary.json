@@ -1,0 +1,67 @@
+{
+  "case": "synthetic_7301",
+  "n_calibration": 320,
+  "n_evaluation": 220,
+  "arms": {
+    "baseline": {
+      "NOISE": {
+        "windows": 200,
+        "window_nominations": 3,
+        "associated_nominations": 0,
+        "post_veto_window_nominations": null,
+        "associated_post_veto": null
+      },
+      "SIGNAL_SNR18": {
+        "windows": 10,
+        "window_nominations": 10,
+        "associated_nominations": 10,
+        "post_veto_window_nominations": null,
+        "associated_post_veto": null
+      },
+      "SIGNAL_SNR8": {
+        "windows": 10,
+        "window_nominations": 7,
+        "associated_nominations": 7,
+        "post_veto_window_nominations": null,
+        "associated_post_veto": null
+      }
+    },
+    "gap": {
+      "NOISE": {
+        "windows": 200,
+        "window_nominations": 4,
+        "associated_nominations": 0,
+        "post_veto_window_nominations": null,
+        "associated_post_veto": null
+      },
+      "SIGNAL_SNR18": {
+        "windows": 10,
+        "window_nominations": 10,
+        "associated_nominations": 10,
+        "post_veto_window_nominations": null,
+        "associated_post_veto": null
+      },
+      "SIGNAL_SNR8": {
+        "windows": 10,
+        "window_nominations": 7,
+        "associated_nominations": 7,
+        "post_veto_window_nominations": null,
+        "associated_post_veto": null
+      }
+    }
+  },
+  "discordant": {
+    "NOISE": {
+      "gap_only": 1,
+      "baseline_only": 0
+    },
+    "SIGNAL_SNR18": {
+      "gap_only": 0,
+      "baseline_only": 0
+    },
+    "SIGNAL_SNR8": {
+      "gap_only": 0,
+      "baseline_only": 0
+    }
+  }
+}

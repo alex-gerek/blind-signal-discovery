@@ -1,0 +1,4482 @@
+[
+  {
+    "sample_id": "synthetic_7302_cal_0",
+    "input_sha256": "c4bf4dbd6b1ba541d8ba61894ecb57e6912e315eb72981bd3e9c6d64a08a96b2",
+    "baseline": {
+      "short_31ms": 45.92446156309965,
+      "medium_125ms": 22.02281658839817,
+      "long_500ms": 23.0041570285858
+    },
+    "gap": {
+      "short_31ms": 45.92446156309965,
+      "medium_125ms": 25.662804890114806,
+      "long_500ms": 23.0041570285858
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_1",
+    "input_sha256": "3c0c7bc42c0ce011244a90e53f70a8e605a5b69428ac91397c4628f8734c1fcc",
+    "baseline": {
+      "short_31ms": 69.65455197640345,
+      "medium_125ms": 26.425026126507568,
+      "long_500ms": 32.56997305943616
+    },
+    "gap": {
+      "short_31ms": 69.65455197640345,
+      "medium_125ms": 26.425026126507568,
+      "long_500ms": 33.698049152116766
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_2",
+    "input_sha256": "21ac36087252cd4d48d636cf07afb3ef57615cf543df3ffe062992610248534a",
+    "baseline": {
+      "short_31ms": 178.9663889512306,
+      "medium_125ms": 31.01838704402961,
+      "long_500ms": 50.49609090932543
+    },
+    "gap": {
+      "short_31ms": 178.9663889512306,
+      "medium_125ms": 31.01838704402961,
+      "long_500ms": 50.49609090932543
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_3",
+    "input_sha256": "7c5785b11838142a168f890aa94323bd117d5244b7448d55cd04382672155879",
+    "baseline": {
+      "short_31ms": 51.547544314171674,
+      "medium_125ms": 21.30827516261057,
+      "long_500ms": 37.86111606877067
+    },
+    "gap": {
+      "short_31ms": 51.547544314171674,
+      "medium_125ms": 21.30827516261057,
+      "long_500ms": 37.86111606877067
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_4",
+    "input_sha256": "20f102e53842ce9799a4f0d630de0594bac68487c20d11f89157a88248dddc94",
+    "baseline": {
+      "short_31ms": 77.22272610841897,
+      "medium_125ms": 29.008905308412054,
+      "long_500ms": 39.85192895724893
+    },
+    "gap": {
+      "short_31ms": 77.22272610841897,
+      "medium_125ms": 29.008905308412054,
+      "long_500ms": 39.85192895724893
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_5",
+    "input_sha256": "7ee58423d518bfd502ff5e0286268bfe5811a2c1a727822e262cf28ac4286e7b",
+    "baseline": {
+      "short_31ms": 54.45602402310513,
+      "medium_125ms": 34.53067192918884,
+      "long_500ms": 28.414989900100462
+    },
+    "gap": {
+      "short_31ms": 57.064886521984455,
+      "medium_125ms": 34.53067192918884,
+      "long_500ms": 28.414989900100462
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_6",
+    "input_sha256": "0bc2e27514ddf40041f1095a4edfcca5afda8f9997bc6f8a2fa10f63d2f801ab",
+    "baseline": {
+      "short_31ms": 67.04904151501526,
+      "medium_125ms": 26.575796016197863,
+      "long_500ms": 31.630379000767775
+    },
+    "gap": {
+      "short_31ms": 67.04904151501526,
+      "medium_125ms": 26.575796016197863,
+      "long_500ms": 31.630379000767775
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_7",
+    "input_sha256": "b3f1e5b3907030072afbc0c3be3d1add1abc13310786f511b277bec427b8a198",
+    "baseline": {
+      "short_31ms": 48.51468405399625,
+      "medium_125ms": 37.50499561010761,
+      "long_500ms": 28.68903839941195
+    },
+    "gap": {
+      "short_31ms": 48.51468405399625,
+      "medium_125ms": 37.50499561010761,
+      "long_500ms": 28.68903839941195
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_8",
+    "input_sha256": "d47592eae27cf29b171dac41fe4757d49e2167f0db9f60cd42b021cdc7b52fe3",
+    "baseline": {
+      "short_31ms": 38.49625316566234,
+      "medium_125ms": 23.140012453553926,
+      "long_500ms": 19.370212661203798
+    },
+    "gap": {
+      "short_31ms": 38.49625316566234,
+      "medium_125ms": 23.140012453553926,
+      "long_500ms": 26.007225508920534
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_9",
+    "input_sha256": "3523bc362c56d4cca420be503bb39bffb0406644b51164cbea6587a5eec970e1",
+    "baseline": {
+      "short_31ms": 47.92805886844408,
+      "medium_125ms": 38.075557498465564,
+      "long_500ms": 25.505559287550803
+    },
+    "gap": {
+      "short_31ms": 47.92805886844408,
+      "medium_125ms": 38.075557498465564,
+      "long_500ms": 25.505559287550803
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_10",
+    "input_sha256": "d8c71b76e9221d67cfba7a6e007571149462965976626b34f80b857aadc22043",
+    "baseline": {
+      "short_31ms": 37.84158028179506,
+      "medium_125ms": 31.195243188447655,
+      "long_500ms": 42.671006013576715
+    },
+    "gap": {
+      "short_31ms": 37.84158028179506,
+      "medium_125ms": 31.195243188447655,
+      "long_500ms": 42.671006013576715
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_11",
+    "input_sha256": "c3ce5d91ed88966418365d588d9615c0adfae8e05e15972b13be60843c5f82d4",
+    "baseline": {
+      "short_31ms": 70.45734286676439,
+      "medium_125ms": 31.559445970798038,
+      "long_500ms": 22.72474753056297
+    },
+    "gap": {
+      "short_31ms": 70.45734286676439,
+      "medium_125ms": 31.559445970798038,
+      "long_500ms": 22.72474753056297
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_12",
+    "input_sha256": "5beea6a4317a74a1e5874766b6868c5998eb533d07c5d1b4e0f41cf225843f8b",
+    "baseline": {
+      "short_31ms": 56.098795544184505,
+      "medium_125ms": 42.547896740837125,
+      "long_500ms": 53.58491599433762
+    },
+    "gap": {
+      "short_31ms": 56.098795544184505,
+      "medium_125ms": 42.547896740837125,
+      "long_500ms": 53.58491599433762
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_13",
+    "input_sha256": "55446b667c8953f8ac7e301158fb21ad3e424085c4714398e36905ce36f43101",
+    "baseline": {
+      "short_31ms": 39.693925417467035,
+      "medium_125ms": 30.41780555882271,
+      "long_500ms": 43.598739415758345
+    },
+    "gap": {
+      "short_31ms": 39.693925417467035,
+      "medium_125ms": 30.41780555882271,
+      "long_500ms": 43.598739415758345
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_14",
+    "input_sha256": "d8415ab9bd9a79485a50454c210b777d8b2865d4be744416f41b90c5c55f0a3e",
+    "baseline": {
+      "short_31ms": 86.4315435051243,
+      "medium_125ms": 23.741261029826852,
+      "long_500ms": 36.18059319187469
+    },
+    "gap": {
+      "short_31ms": 86.4315435051243,
+      "medium_125ms": 23.741261029826852,
+      "long_500ms": 36.18059319187469
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_15",
+    "input_sha256": "c41be5b4180a6acc9fc45f420e829eef782ccd23872e78eedfb3dc3b5b0e6520",
+    "baseline": {
+      "short_31ms": 63.44764214833992,
+      "medium_125ms": 33.355706719892886,
+      "long_500ms": 24.44658752609737
+    },
+    "gap": {
+      "short_31ms": 63.44764214833992,
+      "medium_125ms": 33.355706719892886,
+      "long_500ms": 25.407190742100873
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_16",
+    "input_sha256": "4f930303bb3effca8d4ff2fd7238c254b39f01ff42fd15cb0dc3c6e9e36e55e9",
+    "baseline": {
+      "short_31ms": 55.934958056020704,
+      "medium_125ms": 31.389485365357235,
+      "long_500ms": 22.110520605097342
+    },
+    "gap": {
+      "short_31ms": 55.934958056020704,
+      "medium_125ms": 40.909129579975556,
+      "long_500ms": 22.110520605097342
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_17",
+    "input_sha256": "ff70512e16910ac15dcdb5a72f78d926e851bc492f093a9d3db2da6ec16a81dc",
+    "baseline": {
+      "short_31ms": 47.11818231315743,
+      "medium_125ms": 25.1237506428355,
+      "long_500ms": 28.443796138843865
+    },
+    "gap": {
+      "short_31ms": 57.084126344456095,
+      "medium_125ms": 25.1237506428355,
+      "long_500ms": 32.595388565234764
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_18",
+    "input_sha256": "a6b996a58e5e9417a4e4bcf0967c89927997b9032cfa099b76ce212aaf6404a5",
+    "baseline": {
+      "short_31ms": 130.775391001953,
+      "medium_125ms": 62.97301144656595,
+      "long_500ms": 36.06416492801887
+    },
+    "gap": {
+      "short_31ms": 130.775391001953,
+      "medium_125ms": 62.97301144656595,
+      "long_500ms": 36.06416492801887
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_19",
+    "input_sha256": "88bccde57d54ed1009ca220848163d2e143128816aded929b878b8d97f6f6915",
+    "baseline": {
+      "short_31ms": 69.14263957431871,
+      "medium_125ms": 24.8503370996106,
+      "long_500ms": 37.046709151619645
+    },
+    "gap": {
+      "short_31ms": 69.14263957431871,
+      "medium_125ms": 24.8503370996106,
+      "long_500ms": 37.046709151619645
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_20",
+    "input_sha256": "1ea2f2bdbb1fb9cbec584a479ae5fcc43dd07bd15740466b679a110dfbe7efd0",
+    "baseline": {
+      "short_31ms": 45.31502809441913,
+      "medium_125ms": 53.88909774175577,
+      "long_500ms": 52.324008741785704
+    },
+    "gap": {
+      "short_31ms": 45.31502809441913,
+      "medium_125ms": 53.88909774175577,
+      "long_500ms": 52.324008741785704
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_21",
+    "input_sha256": "63c6f9ddd626e33940da89b4272eae7418893406c689332c7ed08ef428853395",
+    "baseline": {
+      "short_31ms": 107.25863979067876,
+      "medium_125ms": 36.552836302941586,
+      "long_500ms": 40.483299965826006
+    },
+    "gap": {
+      "short_31ms": 113.73375302695254,
+      "medium_125ms": 42.584173503076784,
+      "long_500ms": 40.483299965826006
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_22",
+    "input_sha256": "72d9a4e7c60674c32fe748549a6f5a3d70791c9204b0606249b12138970a4dae",
+    "baseline": {
+      "short_31ms": 73.51117507687262,
+      "medium_125ms": 22.284350035581348,
+      "long_500ms": 21.344191562461344
+    },
+    "gap": {
+      "short_31ms": 73.51117507687262,
+      "medium_125ms": 22.284350035581348,
+      "long_500ms": 21.344191562461344
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_23",
+    "input_sha256": "66d6efd1b336a62da758efca0b808340a109c2891ec608c4042fdf62b77694ab",
+    "baseline": {
+      "short_31ms": 63.72946050543614,
+      "medium_125ms": 31.86775759965728,
+      "long_500ms": 35.00904208190265
+    },
+    "gap": {
+      "short_31ms": 63.72946050543614,
+      "medium_125ms": 31.86775759965728,
+      "long_500ms": 35.00904208190265
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_24",
+    "input_sha256": "c053335287a78ae2f8540767c6e6a44353ee947f170faebac94b7dc25fcd4b49",
+    "baseline": {
+      "short_31ms": 81.72398831716974,
+      "medium_125ms": 25.931129048994332,
+      "long_500ms": 28.548834807202127
+    },
+    "gap": {
+      "short_31ms": 81.72398831716974,
+      "medium_125ms": 25.931129048994332,
+      "long_500ms": 28.548834807202127
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_25",
+    "input_sha256": "e9e88e41345528dc4267efe89022b8a3e825974c0b977b2aa44335280a864827",
+    "baseline": {
+      "short_31ms": 71.92789543363665,
+      "medium_125ms": 22.870468705246402,
+      "long_500ms": 22.091302817767524
+    },
+    "gap": {
+      "short_31ms": 71.92789543363665,
+      "medium_125ms": 22.870468705246402,
+      "long_500ms": 22.091302817767524
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_26",
+    "input_sha256": "12796b7c2bd38b6e4ef7240032b77fab1e78c53bfdd42cb47b1bba2f59e1c487",
+    "baseline": {
+      "short_31ms": 39.143070972904496,
+      "medium_125ms": 32.79547970447607,
+      "long_500ms": 42.00924224913535
+    },
+    "gap": {
+      "short_31ms": 39.143070972904496,
+      "medium_125ms": 32.79547970447607,
+      "long_500ms": 42.00924224913535
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_27",
+    "input_sha256": "93bccf099d27d92b55a7721983691feeddcd0cb801e6e2757d4dc8641b561fd6",
+    "baseline": {
+      "short_31ms": 71.494764670606,
+      "medium_125ms": 27.26914019228915,
+      "long_500ms": 30.70111565404449
+    },
+    "gap": {
+      "short_31ms": 84.55070355302821,
+      "medium_125ms": 27.26914019228915,
+      "long_500ms": 30.70111565404449
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_28",
+    "input_sha256": "633d4c9ca4ba8e01aee0f0f17b64674db4e005f2d38025061057d824673f86e4",
+    "baseline": {
+      "short_31ms": 59.7873696329056,
+      "medium_125ms": 24.618395632192325,
+      "long_500ms": 29.13174868539226
+    },
+    "gap": {
+      "short_31ms": 59.7873696329056,
+      "medium_125ms": 24.618395632192325,
+      "long_500ms": 29.13174868539226
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_29",
+    "input_sha256": "5e53d3e03d780e321ee2ec4e3334b73be98c41a525c996b53a403959a1580e91",
+    "baseline": {
+      "short_31ms": 61.991371322635814,
+      "medium_125ms": 38.32364729681238,
+      "long_500ms": 28.655899994340068
+    },
+    "gap": {
+      "short_31ms": 61.991371322635814,
+      "medium_125ms": 38.32364729681238,
+      "long_500ms": 28.655899994340068
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_30",
+    "input_sha256": "e4a182402da96528010564d4a6f5f0425dcf7f7c6413407f45f67b8328d6b50f",
+    "baseline": {
+      "short_31ms": 47.25172278069749,
+      "medium_125ms": 28.474577095718637,
+      "long_500ms": 28.158276117124053
+    },
+    "gap": {
+      "short_31ms": 47.25172278069749,
+      "medium_125ms": 34.908160571930686,
+      "long_500ms": 39.358139333232046
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_31",
+    "input_sha256": "b0271e25a6381429270696e9777b341afaea6e9345702c67251bc4d029266022",
+    "baseline": {
+      "short_31ms": 69.96546259330225,
+      "medium_125ms": 23.63389342573675,
+      "long_500ms": 28.216982416119052
+    },
+    "gap": {
+      "short_31ms": 69.96546259330225,
+      "medium_125ms": 37.295495142767585,
+      "long_500ms": 28.216982416119052
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_32",
+    "input_sha256": "528187b6838dd4e700cbb067a0442b684de942cbb9e34e211a43237c67fb673c",
+    "baseline": {
+      "short_31ms": 47.50548884640674,
+      "medium_125ms": 29.83825329250015,
+      "long_500ms": 26.407468014913967
+    },
+    "gap": {
+      "short_31ms": 47.50548884640674,
+      "medium_125ms": 29.83825329250015,
+      "long_500ms": 26.407468014913967
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_33",
+    "input_sha256": "26b41f0a931937593cb137bd56eb1de591be05b6ece5096e36aff44e6a1093ac",
+    "baseline": {
+      "short_31ms": 60.24418284587833,
+      "medium_125ms": 30.26683520837811,
+      "long_500ms": 37.18629748740442
+    },
+    "gap": {
+      "short_31ms": 60.24418284587833,
+      "medium_125ms": 30.26683520837811,
+      "long_500ms": 40.413350818325505
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_34",
+    "input_sha256": "32772622c916470c199309552be5e7825478f5715979e544004f246458893f21",
+    "baseline": {
+      "short_31ms": 71.23771373955506,
+      "medium_125ms": 43.13628807683038,
+      "long_500ms": 31.158079745618235
+    },
+    "gap": {
+      "short_31ms": 71.23771373955506,
+      "medium_125ms": 43.13628807683038,
+      "long_500ms": 31.158079745618235
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_35",
+    "input_sha256": "d5473b79bab077f26895930020f8b05d41b409e47709b05c0012a8a021211016",
+    "baseline": {
+      "short_31ms": 58.40615453735573,
+      "medium_125ms": 35.232838625304964,
+      "long_500ms": 66.17755118621125
+    },
+    "gap": {
+      "short_31ms": 58.40615453735573,
+      "medium_125ms": 64.08755529016399,
+      "long_500ms": 98.25639268808462
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_36",
+    "input_sha256": "3fd7f77c16efb1390bf8dae87ebc96245092160a7c3b53cedcf2c22bd4f5e0cc",
+    "baseline": {
+      "short_31ms": 50.09798386016162,
+      "medium_125ms": 45.55497996460814,
+      "long_500ms": 20.435194294616927
+    },
+    "gap": {
+      "short_31ms": 50.09798386016162,
+      "medium_125ms": 45.55497996460814,
+      "long_500ms": 20.435194294616927
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_37",
+    "input_sha256": "61dfd7a6a602f4a952e579d12513032dbc9e3a8f62aed719c6dca96de18ab065",
+    "baseline": {
+      "short_31ms": 79.93827304776354,
+      "medium_125ms": 25.848320569677917,
+      "long_500ms": 27.234525498489496
+    },
+    "gap": {
+      "short_31ms": 79.93827304776354,
+      "medium_125ms": 38.107410270315626,
+      "long_500ms": 27.234525498489496
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_38",
+    "input_sha256": "39beecc23a7ebcec39a87524dfa903dbb4ad43fe55ffaf57c52076fce85258b5",
+    "baseline": {
+      "short_31ms": 78.19479867984208,
+      "medium_125ms": 34.471119046024796,
+      "long_500ms": 34.95355854138376
+    },
+    "gap": {
+      "short_31ms": 78.19479867984208,
+      "medium_125ms": 34.471119046024796,
+      "long_500ms": 34.95355854138376
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_39",
+    "input_sha256": "854056c483cee0dcafa8e5e36be61ec5712928d1590751f5e20bb4f4d4ab8c71",
+    "baseline": {
+      "short_31ms": 56.01203707513311,
+      "medium_125ms": 30.164033184083337,
+      "long_500ms": 33.64987881355092
+    },
+    "gap": {
+      "short_31ms": 56.01203707513311,
+      "medium_125ms": 30.164033184083337,
+      "long_500ms": 33.64987881355092
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_40",
+    "input_sha256": "7592db6078dc0296b3ba4093110c7b4fdaf21adac3509371660aec5114e49735",
+    "baseline": {
+      "short_31ms": 73.74602887944006,
+      "medium_125ms": 21.462708385980182,
+      "long_500ms": 31.3582626941125
+    },
+    "gap": {
+      "short_31ms": 73.74602887944006,
+      "medium_125ms": 32.686278871316425,
+      "long_500ms": 31.3582626941125
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_41",
+    "input_sha256": "c15f598a19b79e3a7eba2fba10f1d65091b64d2633d185ac1284757e06a9caa7",
+    "baseline": {
+      "short_31ms": 38.58497779486425,
+      "medium_125ms": 32.634974722209044,
+      "long_500ms": 40.049761539664544
+    },
+    "gap": {
+      "short_31ms": 38.58497779486425,
+      "medium_125ms": 32.634974722209044,
+      "long_500ms": 40.049761539664544
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_42",
+    "input_sha256": "b4ef3b6b2921f948159e950c63bb7a2aca510063af2354d9dc7e3059c5a06286",
+    "baseline": {
+      "short_31ms": 57.47922645374484,
+      "medium_125ms": 28.32811877466994,
+      "long_500ms": 27.77523616222667
+    },
+    "gap": {
+      "short_31ms": 57.47922645374484,
+      "medium_125ms": 31.70752983530931,
+      "long_500ms": 27.77523616222667
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_43",
+    "input_sha256": "efb01ee3603991d97eb94cac1c43d00bc31b7a79229fe1c67b6e6e8ada3d0143",
+    "baseline": {
+      "short_31ms": 66.65757354493805,
+      "medium_125ms": 25.87451954173197,
+      "long_500ms": 33.11059314508334
+    },
+    "gap": {
+      "short_31ms": 66.65757354493805,
+      "medium_125ms": 25.87451954173197,
+      "long_500ms": 33.11059314508334
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_44",
+    "input_sha256": "c257406c511d21a3f5b06d14c8f8e3413bec675a8b359bc06e3c3ced054b4391",
+    "baseline": {
+      "short_31ms": 66.84772672330843,
+      "medium_125ms": 56.56432492105486,
+      "long_500ms": 50.16515914391053
+    },
+    "gap": {
+      "short_31ms": 66.84772672330843,
+      "medium_125ms": 56.56432492105486,
+      "long_500ms": 103.50944804703524
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_45",
+    "input_sha256": "aee7f4a5e28ca23643615e3fc52fb5019712c586f35b540da5f71217417d8a4d",
+    "baseline": {
+      "short_31ms": 54.73389117765221,
+      "medium_125ms": 45.72575724002681,
+      "long_500ms": 37.57316421118992
+    },
+    "gap": {
+      "short_31ms": 54.73389117765221,
+      "medium_125ms": 45.72575724002681,
+      "long_500ms": 37.57316421118992
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_46",
+    "input_sha256": "0a503241d5141711e9632a3b1d925956338a7531324de87ea09c385cb15bb250",
+    "baseline": {
+      "short_31ms": 51.64078429699925,
+      "medium_125ms": 26.37175852000562,
+      "long_500ms": 26.325861114141954
+    },
+    "gap": {
+      "short_31ms": 51.64078429699925,
+      "medium_125ms": 26.37175852000562,
+      "long_500ms": 26.325861114141954
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_47",
+    "input_sha256": "ada093346b7a0e906c095c3b9bd3a3209b76f0ad183de5af9d222680f41e6ec8",
+    "baseline": {
+      "short_31ms": 50.44014584570695,
+      "medium_125ms": 32.96098161121657,
+      "long_500ms": 20.00397183607492
+    },
+    "gap": {
+      "short_31ms": 50.44014584570695,
+      "medium_125ms": 32.96098161121657,
+      "long_500ms": 20.00397183607492
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_48",
+    "input_sha256": "9236d0fc24f3ca5646c4d76e523de1ca7eeb4f0cc8e9fa2d1571f65bc0a61565",
+    "baseline": {
+      "short_31ms": 34.64770512665548,
+      "medium_125ms": 26.78942931331233,
+      "long_500ms": 20.659792183341978
+    },
+    "gap": {
+      "short_31ms": 34.64770512665548,
+      "medium_125ms": 26.78942931331233,
+      "long_500ms": 22.925531518240174
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_49",
+    "input_sha256": "e9c4a522bced4e6a49bdff27ce34037638ff81cce41d24e8ca34ac0960c59959",
+    "baseline": {
+      "short_31ms": 61.84149822846613,
+      "medium_125ms": 18.14042721707399,
+      "long_500ms": 22.370363528276265
+    },
+    "gap": {
+      "short_31ms": 61.84149822846613,
+      "medium_125ms": 18.14042721707399,
+      "long_500ms": 22.370363528276265
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_50",
+    "input_sha256": "cfd45f00ef9e556f621b4d56eb10817609102ba097b83987851f543f409f490e",
+    "baseline": {
+      "short_31ms": 64.40065516574943,
+      "medium_125ms": 39.56069938783594,
+      "long_500ms": 32.46966235310077
+    },
+    "gap": {
+      "short_31ms": 64.40065516574943,
+      "medium_125ms": 39.56069938783594,
+      "long_500ms": 35.92630280302313
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_51",
+    "input_sha256": "4a830779a7037cff0b8bbd5d2fbe9aca92389955c8946786750a1c7ad23fb1d5",
+    "baseline": {
+      "short_31ms": 41.73493264355682,
+      "medium_125ms": 26.475187667106802,
+      "long_500ms": 26.889240861411892
+    },
+    "gap": {
+      "short_31ms": 41.73493264355682,
+      "medium_125ms": 32.29925705504493,
+      "long_500ms": 40.432944696411276
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_52",
+    "input_sha256": "86d6c4b9064ebda8758237076e0af328508a43756b90828de171a9f77a99d737",
+    "baseline": {
+      "short_31ms": 67.5809613275948,
+      "medium_125ms": 38.55788198075359,
+      "long_500ms": 33.82121819678843
+    },
+    "gap": {
+      "short_31ms": 67.5809613275948,
+      "medium_125ms": 38.55788198075359,
+      "long_500ms": 33.82121819678843
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_53",
+    "input_sha256": "2e91ae04abde85bd1117f4344627166d5a9b36640a348484e8019486058fdf45",
+    "baseline": {
+      "short_31ms": 69.96033365182473,
+      "medium_125ms": 26.349244293417513,
+      "long_500ms": 28.429351178404644
+    },
+    "gap": {
+      "short_31ms": 69.96033365182473,
+      "medium_125ms": 26.349244293417513,
+      "long_500ms": 28.429351178404644
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_54",
+    "input_sha256": "c466f09b1ac694d0eb937c3fae8faf4479097d06cd6f33edbe4fa32bff9967a6",
+    "baseline": {
+      "short_31ms": 72.97623240374206,
+      "medium_125ms": 31.11393267445755,
+      "long_500ms": 61.34978104064122
+    },
+    "gap": {
+      "short_31ms": 102.7867486184271,
+      "medium_125ms": 31.11393267445755,
+      "long_500ms": 61.34978104064122
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_55",
+    "input_sha256": "07e02bef614b9db2da958abf789ca1ea893012e56016530dc5da7ab6b73e3166",
+    "baseline": {
+      "short_31ms": 80.27468267779477,
+      "medium_125ms": 28.481079579328725,
+      "long_500ms": 39.0833280236987
+    },
+    "gap": {
+      "short_31ms": 80.27468267779477,
+      "medium_125ms": 28.481079579328725,
+      "long_500ms": 39.0833280236987
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_56",
+    "input_sha256": "38dc3f488eaaa8c4ba9f8dda1303329ea546cdf024610f8b58034f374066f82d",
+    "baseline": {
+      "short_31ms": 91.82826673686253,
+      "medium_125ms": 37.630621033174734,
+      "long_500ms": 32.841193117631896
+    },
+    "gap": {
+      "short_31ms": 91.82826673686253,
+      "medium_125ms": 37.630621033174734,
+      "long_500ms": 36.081522019011615
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_57",
+    "input_sha256": "cf3d5c44d262f0a6665bb8b2ceaf19e00474f35fa24d129df4cb4b770411d745",
+    "baseline": {
+      "short_31ms": 50.19747716270858,
+      "medium_125ms": 29.038893777071227,
+      "long_500ms": 22.387716544548272
+    },
+    "gap": {
+      "short_31ms": 87.08065956962143,
+      "medium_125ms": 29.038893777071227,
+      "long_500ms": 22.387716544548272
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_58",
+    "input_sha256": "fd0e9c606ed50cafb235554526b5c9881a200fdac70c5a827344c6e26b3bcffb",
+    "baseline": {
+      "short_31ms": 48.32308761586562,
+      "medium_125ms": 30.135191899366298,
+      "long_500ms": 30.857281866303424
+    },
+    "gap": {
+      "short_31ms": 48.32308761586562,
+      "medium_125ms": 30.135191899366298,
+      "long_500ms": 37.96048471444209
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_59",
+    "input_sha256": "9ce2847f69b9969c05af861b0c5536c4fffb613f65eceee478bb4b72e724118c",
+    "baseline": {
+      "short_31ms": 80.13542847479637,
+      "medium_125ms": 44.042539534748485,
+      "long_500ms": 26.215788294625284
+    },
+    "gap": {
+      "short_31ms": 80.13542847479637,
+      "medium_125ms": 58.447053638034404,
+      "long_500ms": 35.12622253002982
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_60",
+    "input_sha256": "43208edf7c618805f6acb3a944bd0ec3d8ad071cfcccb4966083d273cd895502",
+    "baseline": {
+      "short_31ms": 97.94261347051221,
+      "medium_125ms": 38.29771162389036,
+      "long_500ms": 44.45293246433846
+    },
+    "gap": {
+      "short_31ms": 97.94261347051221,
+      "medium_125ms": 38.29771162389036,
+      "long_500ms": 61.62038911499658
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_61",
+    "input_sha256": "692114aa053f5833a7cb00e058ae2a6bc9f368200850bc3e03973f13d636234a",
+    "baseline": {
+      "short_31ms": 81.74045321324209,
+      "medium_125ms": 24.846798026751763,
+      "long_500ms": 32.17938871849612
+    },
+    "gap": {
+      "short_31ms": 81.74045321324209,
+      "medium_125ms": 24.846798026751763,
+      "long_500ms": 32.17938871849612
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_62",
+    "input_sha256": "242d633c2cfac1b1eabc1cdb075e6f65b423bc4a5c6a4829968bf31f82060d6f",
+    "baseline": {
+      "short_31ms": 53.17716067487611,
+      "medium_125ms": 41.988626988515534,
+      "long_500ms": 25.63537099623536
+    },
+    "gap": {
+      "short_31ms": 69.72000351863275,
+      "medium_125ms": 66.03052169755323,
+      "long_500ms": 25.63537099623536
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_63",
+    "input_sha256": "c5c5acbf5b931092f9e6d790a577f031f0c0766277f48f7e567c223892c8e868",
+    "baseline": {
+      "short_31ms": 46.743484503518495,
+      "medium_125ms": 34.99725169848473,
+      "long_500ms": 50.225402576879866
+    },
+    "gap": {
+      "short_31ms": 46.743484503518495,
+      "medium_125ms": 38.21918761705696,
+      "long_500ms": 50.225402576879866
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_64",
+    "input_sha256": "e31ed66d88a6d63925baa4bc1156b3288f48cd8c0d8891c116c2eb7b04158f6e",
+    "baseline": {
+      "short_31ms": 49.05944799438722,
+      "medium_125ms": 28.01687620990721,
+      "long_500ms": 23.654945543170925
+    },
+    "gap": {
+      "short_31ms": 49.05944799438722,
+      "medium_125ms": 28.01687620990721,
+      "long_500ms": 23.654945543170925
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_65",
+    "input_sha256": "2dac0396788b10155b90b349840edfe005a505c3ff41ff3b53393122f1ff1114",
+    "baseline": {
+      "short_31ms": 64.38187710992617,
+      "medium_125ms": 30.442748782290842,
+      "long_500ms": 22.597117686199887
+    },
+    "gap": {
+      "short_31ms": 64.38187710992617,
+      "medium_125ms": 30.442748782290842,
+      "long_500ms": 22.86866510862342
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_66",
+    "input_sha256": "ec9f98ab946c607ac22fa92a650031f99a025614433d5cb0676f8bca81011f87",
+    "baseline": {
+      "short_31ms": 47.06311233543395,
+      "medium_125ms": 19.5252668287958,
+      "long_500ms": 29.41391519343464
+    },
+    "gap": {
+      "short_31ms": 47.06311233543395,
+      "medium_125ms": 19.5252668287958,
+      "long_500ms": 32.79895077763623
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_67",
+    "input_sha256": "85514354b3c2b0f39645269d4b7fbf238261aae24f785c0c1bff5a133593ddac",
+    "baseline": {
+      "short_31ms": 49.529963160241735,
+      "medium_125ms": 24.760024919579664,
+      "long_500ms": 19.66001996104087
+    },
+    "gap": {
+      "short_31ms": 49.529963160241735,
+      "medium_125ms": 24.760024919579664,
+      "long_500ms": 19.66001996104087
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_68",
+    "input_sha256": "0a5140b2fb55eb62fc6366b8c301f65b34fac7653d98e51f83ca564f3933d94c",
+    "baseline": {
+      "short_31ms": 48.540624625376665,
+      "medium_125ms": 28.352602945786614,
+      "long_500ms": 19.583787107018583
+    },
+    "gap": {
+      "short_31ms": 48.540624625376665,
+      "medium_125ms": 28.352602945786614,
+      "long_500ms": 19.583787107018583
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_69",
+    "input_sha256": "5aea55950cae7347b1f90715f5f119ad28bc18a747e8f704e47692860bcf6a95",
+    "baseline": {
+      "short_31ms": 70.53497026310588,
+      "medium_125ms": 32.748606760864305,
+      "long_500ms": 43.16809783228058
+    },
+    "gap": {
+      "short_31ms": 70.53497026310588,
+      "medium_125ms": 32.748606760864305,
+      "long_500ms": 43.16809783228058
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_70",
+    "input_sha256": "129d19fda378ef4f78a90cb6ece4286545a6d332321c0de1958fa92ac16f3895",
+    "baseline": {
+      "short_31ms": 56.52837466913473,
+      "medium_125ms": 27.18770609979773,
+      "long_500ms": 20.849019801303072
+    },
+    "gap": {
+      "short_31ms": 56.52837466913473,
+      "medium_125ms": 27.18770609979773,
+      "long_500ms": 27.344182044128964
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_71",
+    "input_sha256": "5647901ed2d43cf3727041eceef920064133f6c190b5b76194555d6cc8742227",
+    "baseline": {
+      "short_31ms": 63.20701418253512,
+      "medium_125ms": 23.366535938864082,
+      "long_500ms": 24.316239432058836
+    },
+    "gap": {
+      "short_31ms": 63.20701418253512,
+      "medium_125ms": 23.366535938864082,
+      "long_500ms": 32.73761323561536
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_72",
+    "input_sha256": "2c8092ad50f684e74952a35de849d5c7b420c951c3b9f97471ff899674bcf0b9",
+    "baseline": {
+      "short_31ms": 71.91566370824334,
+      "medium_125ms": 27.086744507913462,
+      "long_500ms": 40.729829968952714
+    },
+    "gap": {
+      "short_31ms": 71.91566370824334,
+      "medium_125ms": 27.086744507913462,
+      "long_500ms": 40.729829968952714
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_73",
+    "input_sha256": "6ff2f9faca9f89528953b49c9af15d1aefb3f84122f03f8bdc7993ebdea824c6",
+    "baseline": {
+      "short_31ms": 68.73783804090904,
+      "medium_125ms": 40.613346903966544,
+      "long_500ms": 50.97878813543733
+    },
+    "gap": {
+      "short_31ms": 68.73783804090904,
+      "medium_125ms": 40.613346903966544,
+      "long_500ms": 50.97878813543733
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_74",
+    "input_sha256": "5f2ccf3057f4fa691a8b80f5569864101cd27742cbfc7d075cd0916a429472ea",
+    "baseline": {
+      "short_31ms": 49.77246746445121,
+      "medium_125ms": 27.554170761999885,
+      "long_500ms": 28.529024646674067
+    },
+    "gap": {
+      "short_31ms": 49.77246746445121,
+      "medium_125ms": 27.554170761999885,
+      "long_500ms": 28.529024646674067
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_75",
+    "input_sha256": "b485ca73835f04fc1653c666142726949d66e1b12b64d5ce917e4b1904824c63",
+    "baseline": {
+      "short_31ms": 63.771738410569334,
+      "medium_125ms": 28.598069115447597,
+      "long_500ms": 31.087345069014077
+    },
+    "gap": {
+      "short_31ms": 63.771738410569334,
+      "medium_125ms": 28.598069115447597,
+      "long_500ms": 31.087345069014077
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_76",
+    "input_sha256": "e4c85baae98f951f5c1e21a8729633674eb2dce7d1e8ef25bd7fa6d4cedfbafb",
+    "baseline": {
+      "short_31ms": 61.589268599290186,
+      "medium_125ms": 24.860752918409467,
+      "long_500ms": 30.785556358645774
+    },
+    "gap": {
+      "short_31ms": 85.80810988524809,
+      "medium_125ms": 30.58979056972165,
+      "long_500ms": 37.87142562318738
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_77",
+    "input_sha256": "42fd9097d932c2d76eae055650cb8b0b3aca47d57e40dbdfda8beba8c9c3715a",
+    "baseline": {
+      "short_31ms": 64.37123915269957,
+      "medium_125ms": 33.89271834094664,
+      "long_500ms": 27.763508775059876
+    },
+    "gap": {
+      "short_31ms": 64.37123915269957,
+      "medium_125ms": 33.89271834094664,
+      "long_500ms": 30.820735287713383
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_78",
+    "input_sha256": "cb1b01390f84bfd84e7bd6d092b4a366fab30b1566560dfa611feefd4e61c0fb",
+    "baseline": {
+      "short_31ms": 54.47456958714706,
+      "medium_125ms": 28.22517144224928,
+      "long_500ms": 23.439671294810097
+    },
+    "gap": {
+      "short_31ms": 54.47456958714706,
+      "medium_125ms": 32.2934802261955,
+      "long_500ms": 23.439671294810097
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_79",
+    "input_sha256": "927576162dab134e150323b005d52a46bff42e89b93d63d26ca4a561bcb7f3aa",
+    "baseline": {
+      "short_31ms": 39.4550457499919,
+      "medium_125ms": 31.737549717207386,
+      "long_500ms": 37.71711051975192
+    },
+    "gap": {
+      "short_31ms": 39.4550457499919,
+      "medium_125ms": 31.737549717207386,
+      "long_500ms": 37.71711051975192
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_80",
+    "input_sha256": "36696daffcca4bb5eb24f3d4eeb5e22460ed91148e42feef093e556f5530e897",
+    "baseline": {
+      "short_31ms": 44.72322047286977,
+      "medium_125ms": 32.800571060689684,
+      "long_500ms": 41.431371895867656
+    },
+    "gap": {
+      "short_31ms": 44.72322047286977,
+      "medium_125ms": 32.800571060689684,
+      "long_500ms": 41.431371895867656
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_81",
+    "input_sha256": "bfa9dd387b401064f49f9b4e26b57ddb92d953b756e23af0a91e0177c3f9e56b",
+    "baseline": {
+      "short_31ms": 56.00576721949784,
+      "medium_125ms": 31.594584444811233,
+      "long_500ms": 29.77914101961101
+    },
+    "gap": {
+      "short_31ms": 63.77180239968199,
+      "medium_125ms": 31.594584444811233,
+      "long_500ms": 34.427313435446415
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_82",
+    "input_sha256": "8776c13fd94c46616639abce989aa92c5a0c3a433bb5fe6997c69bd37e1251ae",
+    "baseline": {
+      "short_31ms": 63.48998278623905,
+      "medium_125ms": 28.80721031944031,
+      "long_500ms": 26.087329070368707
+    },
+    "gap": {
+      "short_31ms": 63.48998278623905,
+      "medium_125ms": 37.340440247310426,
+      "long_500ms": 26.087329070368707
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_83",
+    "input_sha256": "ebd8b5629f51f0927981abc16e477eda0f986a072366274fea4b724ab62403c8",
+    "baseline": {
+      "short_31ms": 72.21429794390173,
+      "medium_125ms": 38.13464152312489,
+      "long_500ms": 31.621678520325855
+    },
+    "gap": {
+      "short_31ms": 72.21429794390173,
+      "medium_125ms": 38.13464152312489,
+      "long_500ms": 31.621678520325855
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_84",
+    "input_sha256": "d1255d29e7903093e5c8de4a39e056c4d025d59b3faf13dd0c2507b3bae01c98",
+    "baseline": {
+      "short_31ms": 55.443159980998495,
+      "medium_125ms": 28.489403527665413,
+      "long_500ms": 23.08659597576981
+    },
+    "gap": {
+      "short_31ms": 55.443159980998495,
+      "medium_125ms": 35.0799905503189,
+      "long_500ms": 23.08659597576981
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_85",
+    "input_sha256": "ad1a24759b7322d7536982fa42d500c8332ced6a01e9022e9887df3762e395e8",
+    "baseline": {
+      "short_31ms": 71.28522731567533,
+      "medium_125ms": 30.474799676716444,
+      "long_500ms": 20.925340869226794
+    },
+    "gap": {
+      "short_31ms": 71.28522731567533,
+      "medium_125ms": 30.474799676716444,
+      "long_500ms": 20.925340869226794
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_86",
+    "input_sha256": "c06c270987bc857720c7bd1147126a31bcfbedb6434726c9f85abdd2f71a7c9c",
+    "baseline": {
+      "short_31ms": 82.26755476241479,
+      "medium_125ms": 42.556468563571286,
+      "long_500ms": 36.01085234815356
+    },
+    "gap": {
+      "short_31ms": 82.26755476241479,
+      "medium_125ms": 48.66659631786634,
+      "long_500ms": 36.01085234815356
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_87",
+    "input_sha256": "51475d0ca102667e4821a72064cd3f2dae2fc7f4fa9d5bd2a5f558e418fab9dd",
+    "baseline": {
+      "short_31ms": 84.84117045315838,
+      "medium_125ms": 31.57225310045143,
+      "long_500ms": 28.66603323408011
+    },
+    "gap": {
+      "short_31ms": 84.84117045315838,
+      "medium_125ms": 31.57225310045143,
+      "long_500ms": 28.66603323408011
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_88",
+    "input_sha256": "a47f1f49c518209dbe6d2aacaf9d917e341eb443f4fc3fa55da36d61ea2ff2a2",
+    "baseline": {
+      "short_31ms": 55.599452678842056,
+      "medium_125ms": 50.809449524218834,
+      "long_500ms": 36.31066599323138
+    },
+    "gap": {
+      "short_31ms": 55.599452678842056,
+      "medium_125ms": 50.809449524218834,
+      "long_500ms": 45.866174108011435
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_89",
+    "input_sha256": "4a386c2727c57c0edf87e782a6cf211d4de6310f75d76ba0bdfcabc111d3ac53",
+    "baseline": {
+      "short_31ms": 45.54601122422063,
+      "medium_125ms": 31.51311863659218,
+      "long_500ms": 40.684657019062165
+    },
+    "gap": {
+      "short_31ms": 46.164268773393886,
+      "medium_125ms": 43.72680095980489,
+      "long_500ms": 40.684657019062165
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_90",
+    "input_sha256": "77e04995a4ed038cbe3e5cee8a7438e8e7fa1771f32764c788306d8d1feb31d0",
+    "baseline": {
+      "short_31ms": 72.9207034084023,
+      "medium_125ms": 50.51763371361328,
+      "long_500ms": 30.854597581485216
+    },
+    "gap": {
+      "short_31ms": 82.35647236856127,
+      "medium_125ms": 50.51763371361328,
+      "long_500ms": 30.854597581485216
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_91",
+    "input_sha256": "167b89d16848f0a3cf88429aafe5ebad27308a99e296bca51186c98bd7afe0b2",
+    "baseline": {
+      "short_31ms": 54.553284627177234,
+      "medium_125ms": 40.90465286796905,
+      "long_500ms": 27.77570064883892
+    },
+    "gap": {
+      "short_31ms": 54.553284627177234,
+      "medium_125ms": 77.2282376201789,
+      "long_500ms": 27.77570064883892
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_92",
+    "input_sha256": "fcfe0fc0f016fc0625026adc68f713983609e5671c4e5321d32d7b074a87c231",
+    "baseline": {
+      "short_31ms": 54.93789855287324,
+      "medium_125ms": 29.34472634573946,
+      "long_500ms": 31.876275927419695
+    },
+    "gap": {
+      "short_31ms": 54.93789855287324,
+      "medium_125ms": 29.34472634573946,
+      "long_500ms": 31.876275927419695
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_93",
+    "input_sha256": "1cddde57a496973666094dc050ebfb4dc2355b8e33623b2dfac975584f0c8565",
+    "baseline": {
+      "short_31ms": 85.16153847036914,
+      "medium_125ms": 31.53319265648585,
+      "long_500ms": 48.43141244041234
+    },
+    "gap": {
+      "short_31ms": 85.16153847036914,
+      "medium_125ms": 31.53319265648585,
+      "long_500ms": 48.43141244041234
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_94",
+    "input_sha256": "23e44dfe9950a2ce382692c92661e22d6463da3e9b1ed6190a9e1bc5d00481b6",
+    "baseline": {
+      "short_31ms": 68.30998273757405,
+      "medium_125ms": 23.74676400340625,
+      "long_500ms": 36.7151581950856
+    },
+    "gap": {
+      "short_31ms": 68.30998273757405,
+      "medium_125ms": 23.74676400340625,
+      "long_500ms": 36.7151581950856
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_95",
+    "input_sha256": "989e936ac4ec239c77126921a48c6f734b4a622c4dd67912629b9caa1dc3507a",
+    "baseline": {
+      "short_31ms": 38.2596544636489,
+      "medium_125ms": 25.43561885917289,
+      "long_500ms": 55.47583730051783
+    },
+    "gap": {
+      "short_31ms": 63.37446381112048,
+      "medium_125ms": 25.52715273141002,
+      "long_500ms": 55.47583730051783
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_96",
+    "input_sha256": "c0e1548e406e8c3e8c4aecccf4de1224e802b66ab7d9c92c566c3e8f765f926b",
+    "baseline": {
+      "short_31ms": 98.37707146516831,
+      "medium_125ms": 43.71681154799552,
+      "long_500ms": 58.791713459002786
+    },
+    "gap": {
+      "short_31ms": 98.37707146516831,
+      "medium_125ms": 43.71681154799552,
+      "long_500ms": 58.791713459002786
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_97",
+    "input_sha256": "15fb5a487ad5a8410e9d0c4b4b2bc741a1a1f0193e3450213b3eb5e407dc4687",
+    "baseline": {
+      "short_31ms": 59.459593045963864,
+      "medium_125ms": 50.22069520057805,
+      "long_500ms": 36.46219984158532
+    },
+    "gap": {
+      "short_31ms": 73.88826059519599,
+      "medium_125ms": 50.22069520057805,
+      "long_500ms": 36.46219984158532
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_98",
+    "input_sha256": "4dd80e858ac23c4119be55dc0b44232467ae82acae0fbef98db3671e2421bb9b",
+    "baseline": {
+      "short_31ms": 62.30892967226569,
+      "medium_125ms": 32.520001975205645,
+      "long_500ms": 25.85354370921619
+    },
+    "gap": {
+      "short_31ms": 62.30892967226569,
+      "medium_125ms": 32.520001975205645,
+      "long_500ms": 25.85354370921619
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_99",
+    "input_sha256": "3c9e06ca1df1b130b6a983bf1d471c8250e5d6c91be9bf4a13e7752baa44f19a",
+    "baseline": {
+      "short_31ms": 37.39447237434638,
+      "medium_125ms": 18.6216243932479,
+      "long_500ms": 25.36731243814193
+    },
+    "gap": {
+      "short_31ms": 49.37006331480481,
+      "medium_125ms": 18.6216243932479,
+      "long_500ms": 25.36731243814193
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_100",
+    "input_sha256": "4389f7f417235c2620fe65dc0d53662781b39919e207668e7898750b128e7733",
+    "baseline": {
+      "short_31ms": 72.12436069345208,
+      "medium_125ms": 38.842357421834436,
+      "long_500ms": 31.85154017481908
+    },
+    "gap": {
+      "short_31ms": 72.12436069345208,
+      "medium_125ms": 38.842357421834436,
+      "long_500ms": 31.85154017481908
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_101",
+    "input_sha256": "541d46bc8b3baa8bd474016a95ca23658d054223c65f4b42c90664eb14569b69",
+    "baseline": {
+      "short_31ms": 43.813022852526274,
+      "medium_125ms": 34.523243001656894,
+      "long_500ms": 29.84423464767034
+    },
+    "gap": {
+      "short_31ms": 43.813022852526274,
+      "medium_125ms": 34.523243001656894,
+      "long_500ms": 29.84423464767034
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_102",
+    "input_sha256": "18eb9ec1c177a8e32040e15018f73e954d43ed0c4825b7538cf3820b4f3e21c4",
+    "baseline": {
+      "short_31ms": 42.903534405913746,
+      "medium_125ms": 23.777350032911713,
+      "long_500ms": 36.98671415995648
+    },
+    "gap": {
+      "short_31ms": 44.09332619128184,
+      "medium_125ms": 23.777350032911713,
+      "long_500ms": 36.98671415995648
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_103",
+    "input_sha256": "4e595acb0b9a0a1995282f4ab295e5c5e12949bb1c6ee528450b638e13ce5f94",
+    "baseline": {
+      "short_31ms": 55.94052066357787,
+      "medium_125ms": 39.15133323749714,
+      "long_500ms": 28.887951693853907
+    },
+    "gap": {
+      "short_31ms": 55.94052066357787,
+      "medium_125ms": 45.53633086651582,
+      "long_500ms": 28.887951693853907
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_104",
+    "input_sha256": "726ad39564ae7ed91c8a394fc22e746e93f86bc7a3a1b358c268672e7cf47b2b",
+    "baseline": {
+      "short_31ms": 57.19967985444167,
+      "medium_125ms": 36.58866264156024,
+      "long_500ms": 29.06538686534448
+    },
+    "gap": {
+      "short_31ms": 57.19967985444167,
+      "medium_125ms": 36.58866264156024,
+      "long_500ms": 29.06538686534448
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_105",
+    "input_sha256": "667745a5e966d8f93f4633c84a819f4d7f454252e016fd5094eacca9507d7a6e",
+    "baseline": {
+      "short_31ms": 70.62600850927699,
+      "medium_125ms": 32.37860184737534,
+      "long_500ms": 36.849922166449105
+    },
+    "gap": {
+      "short_31ms": 70.62600850927699,
+      "medium_125ms": 32.37860184737534,
+      "long_500ms": 36.849922166449105
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_106",
+    "input_sha256": "8bf0f9cf1c9fedb40d8d66a7d049a1c6aa0f4c1b723dd830ed7db52f42f0dc0f",
+    "baseline": {
+      "short_31ms": 81.37310937096117,
+      "medium_125ms": 37.79550435391937,
+      "long_500ms": 24.624397140902303
+    },
+    "gap": {
+      "short_31ms": 81.37310937096117,
+      "medium_125ms": 37.79550435391937,
+      "long_500ms": 24.624397140902303
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_107",
+    "input_sha256": "f25c55035161e9e34ad4c548b813c75b25b0872fccacc406e42fd5705516ee2d",
+    "baseline": {
+      "short_31ms": 50.21129978163951,
+      "medium_125ms": 25.44076618497244,
+      "long_500ms": 35.54901082742424
+    },
+    "gap": {
+      "short_31ms": 50.21129978163951,
+      "medium_125ms": 25.44076618497244,
+      "long_500ms": 35.54901082742424
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_108",
+    "input_sha256": "3db110f238a629ca5c8882677b274e2da79a6d62d548b5a2fb441a53a5e5517e",
+    "baseline": {
+      "short_31ms": 68.56762661488418,
+      "medium_125ms": 22.642525441244803,
+      "long_500ms": 15.051936314344223
+    },
+    "gap": {
+      "short_31ms": 68.56762661488418,
+      "medium_125ms": 22.642525441244803,
+      "long_500ms": 15.051936314344223
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_109",
+    "input_sha256": "69e22597561eec81649909d94708edbe058db2ac29364774ee4641d803fb4f8b",
+    "baseline": {
+      "short_31ms": 68.26337904950951,
+      "medium_125ms": 28.757060914891735,
+      "long_500ms": 28.14700098728759
+    },
+    "gap": {
+      "short_31ms": 68.26337904950951,
+      "medium_125ms": 28.757060914891735,
+      "long_500ms": 28.14700098728759
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_110",
+    "input_sha256": "c8cc5924769033102749d9f730e88c194750539fad3a2390e73f0ccee6176cb7",
+    "baseline": {
+      "short_31ms": 59.842806227563855,
+      "medium_125ms": 41.05406641635927,
+      "long_500ms": 17.911784596757165
+    },
+    "gap": {
+      "short_31ms": 59.842806227563855,
+      "medium_125ms": 41.05406641635927,
+      "long_500ms": 18.053463979506176
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_111",
+    "input_sha256": "fc382f95792c3c91fbd2edb966c2b08b21aadfe5e691a39031346565bff49740",
+    "baseline": {
+      "short_31ms": 82.48249443485862,
+      "medium_125ms": 24.21469756112315,
+      "long_500ms": 30.015141823637595
+    },
+    "gap": {
+      "short_31ms": 82.48249443485862,
+      "medium_125ms": 24.21469756112315,
+      "long_500ms": 30.015141823637595
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_112",
+    "input_sha256": "cf6c9feb98ee35b2977f2482ba81ed51b1666c88b419742809bac3fab2c4e413",
+    "baseline": {
+      "short_31ms": 41.897148194822535,
+      "medium_125ms": 40.88189568369797,
+      "long_500ms": 26.36433813706077
+    },
+    "gap": {
+      "short_31ms": 63.880419338291844,
+      "medium_125ms": 40.88189568369797,
+      "long_500ms": 26.36433813706077
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_113",
+    "input_sha256": "8ec59ba46c584288aaaee96a27d71f90226fb144524facc514c7fa560cf95a5d",
+    "baseline": {
+      "short_31ms": 39.06419686684398,
+      "medium_125ms": 21.467183163000136,
+      "long_500ms": 21.48535695867652
+    },
+    "gap": {
+      "short_31ms": 39.06419686684398,
+      "medium_125ms": 21.467183163000136,
+      "long_500ms": 21.48535695867652
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_114",
+    "input_sha256": "9db9e683671e23e3c89cbc2e53508475222a78953763b6ee5829c01a3cd7b47a",
+    "baseline": {
+      "short_31ms": 59.74359215267941,
+      "medium_125ms": 26.53880558663402,
+      "long_500ms": 35.18106361123762
+    },
+    "gap": {
+      "short_31ms": 59.74359215267941,
+      "medium_125ms": 26.53880558663402,
+      "long_500ms": 35.662908519204755
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_115",
+    "input_sha256": "da2b2214a60b4b3436670b5d7efe38670a9f771bee491b17e8540c38e1784824",
+    "baseline": {
+      "short_31ms": 120.91424891202377,
+      "medium_125ms": 34.89487266295607,
+      "long_500ms": 36.43040527073153
+    },
+    "gap": {
+      "short_31ms": 120.91424891202377,
+      "medium_125ms": 34.89487266295607,
+      "long_500ms": 42.42673672059301
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_116",
+    "input_sha256": "d0a5c6d3394d4fc0a7b58b692b7ca0ab5445b01cf57847f89dc3bd58b8e8c3c2",
+    "baseline": {
+      "short_31ms": 87.65857908504991,
+      "medium_125ms": 22.140862834654186,
+      "long_500ms": 28.559402832705516
+    },
+    "gap": {
+      "short_31ms": 87.65857908504991,
+      "medium_125ms": 22.140862834654186,
+      "long_500ms": 28.559402832705516
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_117",
+    "input_sha256": "83f8272547957d5e6f07952f563c1133a758441051abac203daca1bb6e49f281",
+    "baseline": {
+      "short_31ms": 48.02271921914419,
+      "medium_125ms": 24.553357930599446,
+      "long_500ms": 27.757214300662923
+    },
+    "gap": {
+      "short_31ms": 48.02271921914419,
+      "medium_125ms": 24.553357930599446,
+      "long_500ms": 27.757214300662923
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_118",
+    "input_sha256": "2f8503bdf420015b031c5cfb1773ae3a25d4d93d11c72aa6e9862d793aebd080",
+    "baseline": {
+      "short_31ms": 57.15914358308437,
+      "medium_125ms": 21.43870477762301,
+      "long_500ms": 52.40828044307257
+    },
+    "gap": {
+      "short_31ms": 57.15914358308437,
+      "medium_125ms": 21.43870477762301,
+      "long_500ms": 52.40828044307257
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_119",
+    "input_sha256": "9c799988b338965765a79423870548be0932f2b992af978687f0fb04f0bd01c3",
+    "baseline": {
+      "short_31ms": 60.26609264044188,
+      "medium_125ms": 28.36579207153923,
+      "long_500ms": 29.350932791036815
+    },
+    "gap": {
+      "short_31ms": 60.26609264044188,
+      "medium_125ms": 28.36579207153923,
+      "long_500ms": 29.350932791036815
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_120",
+    "input_sha256": "71ec5528f0001d830f32e99c14e8108ca06c0f0620f3c9f007afd0ceac08993a",
+    "baseline": {
+      "short_31ms": 112.73602726832236,
+      "medium_125ms": 35.83039546559213,
+      "long_500ms": 33.473461958432615
+    },
+    "gap": {
+      "short_31ms": 112.73602726832236,
+      "medium_125ms": 35.83039546559213,
+      "long_500ms": 37.396614788015945
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_121",
+    "input_sha256": "1ec3d02e1b728114c534e50fabbf838292b740652e303b565b0ec073fb9cb37a",
+    "baseline": {
+      "short_31ms": 49.75596550444683,
+      "medium_125ms": 31.550536543490562,
+      "long_500ms": 58.4753286382181
+    },
+    "gap": {
+      "short_31ms": 49.75596550444683,
+      "medium_125ms": 31.550536543490562,
+      "long_500ms": 78.07765241178303
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_122",
+    "input_sha256": "91ffea18669fd0ce5e688263a5b3b268ec582623453df8ecba47aaaa1f205d77",
+    "baseline": {
+      "short_31ms": 134.2176741185946,
+      "medium_125ms": 46.058325732747214,
+      "long_500ms": 30.234270429326255
+    },
+    "gap": {
+      "short_31ms": 134.2176741185946,
+      "medium_125ms": 46.058325732747214,
+      "long_500ms": 30.234270429326255
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_123",
+    "input_sha256": "da2b5fe7e45ec04b92ccffc3a8dd7a2565540c87e4f26526538453c1d75b4b48",
+    "baseline": {
+      "short_31ms": 56.14773962171017,
+      "medium_125ms": 17.788519869851754,
+      "long_500ms": 36.76494742428519
+    },
+    "gap": {
+      "short_31ms": 56.14773962171017,
+      "medium_125ms": 21.460162576531438,
+      "long_500ms": 36.76494742428519
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_124",
+    "input_sha256": "e767c5630dd34225e575fc7097311fb1f106a73a3cae222d848f83e544c3af10",
+    "baseline": {
+      "short_31ms": 77.33903110485974,
+      "medium_125ms": 34.26234230405677,
+      "long_500ms": 38.792963603783804
+    },
+    "gap": {
+      "short_31ms": 77.33903110485974,
+      "medium_125ms": 52.307477005167435,
+      "long_500ms": 38.792963603783804
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_125",
+    "input_sha256": "6162cbe3551fa7e074daeffa028823c7f72911bc0b1bedb9b047f15c7f1b61b5",
+    "baseline": {
+      "short_31ms": 49.5524018061174,
+      "medium_125ms": 39.10765409414685,
+      "long_500ms": 74.88921580936308
+    },
+    "gap": {
+      "short_31ms": 49.5524018061174,
+      "medium_125ms": 39.10765409414685,
+      "long_500ms": 74.88921580936308
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_126",
+    "input_sha256": "85e2edbc2316e283112637e32433b2bb940844534a24ed215449ef9ca225ae56",
+    "baseline": {
+      "short_31ms": 65.34220506494034,
+      "medium_125ms": 22.42737492736944,
+      "long_500ms": 31.147095716167257
+    },
+    "gap": {
+      "short_31ms": 65.34220506494034,
+      "medium_125ms": 22.42737492736944,
+      "long_500ms": 38.013050267820404
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_127",
+    "input_sha256": "10957a5d04afd0480606db0d634d7736e77ba41abf06939627cd32a8cd2fd0c8",
+    "baseline": {
+      "short_31ms": 57.4943765707746,
+      "medium_125ms": 44.21155758539541,
+      "long_500ms": 25.89904387910173
+    },
+    "gap": {
+      "short_31ms": 64.31882271808905,
+      "medium_125ms": 44.21155758539541,
+      "long_500ms": 25.89904387910173
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_128",
+    "input_sha256": "e32f96c70d88879e46613bf44b806b7e034bd856fabe6c5edb19ebda476ec39b",
+    "baseline": {
+      "short_31ms": 47.635496794580924,
+      "medium_125ms": 38.99459244620068,
+      "long_500ms": 45.89304578842629
+    },
+    "gap": {
+      "short_31ms": 47.635496794580924,
+      "medium_125ms": 38.99459244620068,
+      "long_500ms": 45.89304578842629
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_129",
+    "input_sha256": "2a809bd86b42ea59b7e8e1521bbc6fcbf901f578173104d5596982f8abdb1cec",
+    "baseline": {
+      "short_31ms": 51.93056024256334,
+      "medium_125ms": 29.516832526841128,
+      "long_500ms": 26.189251308645638
+    },
+    "gap": {
+      "short_31ms": 68.38030518416217,
+      "medium_125ms": 33.47070202715724,
+      "long_500ms": 36.34059228716639
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_130",
+    "input_sha256": "29a11a9320a16b62f29dabe40969294899347ff9b28358faac7ea9f3ac3952fd",
+    "baseline": {
+      "short_31ms": 75.36433775097716,
+      "medium_125ms": 37.113270259267026,
+      "long_500ms": 31.427616926199057
+    },
+    "gap": {
+      "short_31ms": 75.36433775097716,
+      "medium_125ms": 37.113270259267026,
+      "long_500ms": 31.427616926199057
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_131",
+    "input_sha256": "c5a29e785f590dbefb5e18561dce1fbfe2a6ace91845ddf5cbf4d7c3fcb59d56",
+    "baseline": {
+      "short_31ms": 61.626110016673856,
+      "medium_125ms": 25.16014811654236,
+      "long_500ms": 38.15410110677222
+    },
+    "gap": {
+      "short_31ms": 61.626110016673856,
+      "medium_125ms": 25.16014811654236,
+      "long_500ms": 38.15410110677222
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_132",
+    "input_sha256": "2438c049837562b208280ce08792e879c07f174c8b5ed0b166dcb8a4d2bb04fb",
+    "baseline": {
+      "short_31ms": 62.129486866469584,
+      "medium_125ms": 22.908629101776576,
+      "long_500ms": 41.24130169441666
+    },
+    "gap": {
+      "short_31ms": 62.129486866469584,
+      "medium_125ms": 22.908629101776576,
+      "long_500ms": 41.24130169441666
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_133",
+    "input_sha256": "768b10e3402d6b1140549598e5b6ccb06c99c2761fd4009d8e1c2b44cfb80198",
+    "baseline": {
+      "short_31ms": 60.189511024002606,
+      "medium_125ms": 38.26535142878206,
+      "long_500ms": 28.79888423246192
+    },
+    "gap": {
+      "short_31ms": 60.189511024002606,
+      "medium_125ms": 38.26535142878206,
+      "long_500ms": 28.79888423246192
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_134",
+    "input_sha256": "dbc838a9494e98dd4032964f4ed68dac4537890ba60e880d4d47a08f60fcda66",
+    "baseline": {
+      "short_31ms": 95.1532178872164,
+      "medium_125ms": 52.572095057024804,
+      "long_500ms": 25.416334848405057
+    },
+    "gap": {
+      "short_31ms": 95.1532178872164,
+      "medium_125ms": 52.572095057024804,
+      "long_500ms": 33.17568781245053
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_135",
+    "input_sha256": "f8e0c3b89e84f1487a3965320a5f616dafb747af69db8291700121cea81b2c5c",
+    "baseline": {
+      "short_31ms": 65.66102483086999,
+      "medium_125ms": 39.6130828846149,
+      "long_500ms": 26.367303404761454
+    },
+    "gap": {
+      "short_31ms": 65.66102483086999,
+      "medium_125ms": 39.6130828846149,
+      "long_500ms": 26.367303404761454
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_136",
+    "input_sha256": "c950ca40e879e923f1161e5bc8ba77a33426372507971efcec876f497d8c03cd",
+    "baseline": {
+      "short_31ms": 59.83707878562994,
+      "medium_125ms": 30.44843045205323,
+      "long_500ms": 21.725459905485916
+    },
+    "gap": {
+      "short_31ms": 59.83707878562994,
+      "medium_125ms": 36.53021592209368,
+      "long_500ms": 27.09778486375604
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_137",
+    "input_sha256": "c54c2b0db0eb4256b5473fb0fb9d0186a53378eb5438d9e46f2dc29d9ded7fe8",
+    "baseline": {
+      "short_31ms": 65.6703530959728,
+      "medium_125ms": 31.944509366350143,
+      "long_500ms": 29.461429382259585
+    },
+    "gap": {
+      "short_31ms": 65.6703530959728,
+      "medium_125ms": 31.944509366350143,
+      "long_500ms": 29.461429382259585
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_138",
+    "input_sha256": "c26615028d2f5e970fa2cc57783d8bd35e442a3aef6763c5ccfaf7d539c122d2",
+    "baseline": {
+      "short_31ms": 64.98328582518563,
+      "medium_125ms": 47.87690793496259,
+      "long_500ms": 35.93220797670802
+    },
+    "gap": {
+      "short_31ms": 64.98328582518563,
+      "medium_125ms": 47.87690793496259,
+      "long_500ms": 35.93220797670802
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_139",
+    "input_sha256": "6526b3351d8c270fa1381f37c767371c002f2bf083a7056337d40680639274da",
+    "baseline": {
+      "short_31ms": 37.15316011540869,
+      "medium_125ms": 32.45973842168102,
+      "long_500ms": 44.794083946182226
+    },
+    "gap": {
+      "short_31ms": 42.80518046762752,
+      "medium_125ms": 32.45973842168102,
+      "long_500ms": 44.794083946182226
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_140",
+    "input_sha256": "e1a4f68aeaebb45bc2d04fc677296e28be6b16c928473e39165497e01648fceb",
+    "baseline": {
+      "short_31ms": 83.06105569395326,
+      "medium_125ms": 23.144650975554534,
+      "long_500ms": 25.8216078760656
+    },
+    "gap": {
+      "short_31ms": 91.88898573432853,
+      "medium_125ms": 23.144650975554534,
+      "long_500ms": 25.8216078760656
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_141",
+    "input_sha256": "d77e75b14b2c3d10b23b03d3e968d027a9dba51ef03585a996666b0e6d5bd24c",
+    "baseline": {
+      "short_31ms": 42.0081520774028,
+      "medium_125ms": 26.52069489021874,
+      "long_500ms": 21.41584645731639
+    },
+    "gap": {
+      "short_31ms": 42.0081520774028,
+      "medium_125ms": 26.52069489021874,
+      "long_500ms": 21.41584645731639
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_142",
+    "input_sha256": "b0e8665aa12ef99b7c2f1bfc20edef46c399b6b0c6b21099c81d1896f50c068c",
+    "baseline": {
+      "short_31ms": 66.22874791447309,
+      "medium_125ms": 18.12894391059057,
+      "long_500ms": 27.25634107415769
+    },
+    "gap": {
+      "short_31ms": 66.22874791447309,
+      "medium_125ms": 20.691631937364846,
+      "long_500ms": 27.25634107415769
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_143",
+    "input_sha256": "12085db4bbce972e54045db2745eb44df8ff0646f53d1e9beb3c5def1eaba88a",
+    "baseline": {
+      "short_31ms": 91.64054649658817,
+      "medium_125ms": 26.26627611426591,
+      "long_500ms": 30.93109935652064
+    },
+    "gap": {
+      "short_31ms": 94.88275290649747,
+      "medium_125ms": 30.82778232575346,
+      "long_500ms": 30.93109935652064
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_144",
+    "input_sha256": "2b610109a1c16c42a9035f397b4573d2ba17003569a47ab6946982b88debdb9b",
+    "baseline": {
+      "short_31ms": 105.13364339169237,
+      "medium_125ms": 31.034042552861695,
+      "long_500ms": 52.905109730493024
+    },
+    "gap": {
+      "short_31ms": 105.13364339169237,
+      "medium_125ms": 31.034042552861695,
+      "long_500ms": 52.905109730493024
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_145",
+    "input_sha256": "d129d4482062872bd50e651935d7e6fe2aabb98852755a93d42fca76e9e48c89",
+    "baseline": {
+      "short_31ms": 56.432203895968435,
+      "medium_125ms": 33.80445364646034,
+      "long_500ms": 20.259145559831445
+    },
+    "gap": {
+      "short_31ms": 56.432203895968435,
+      "medium_125ms": 33.80445364646034,
+      "long_500ms": 36.09071624788132
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_146",
+    "input_sha256": "88742af9f5b19d4b9e71bc005c06be20de7eb1d058335675a10d0da9692b0ef2",
+    "baseline": {
+      "short_31ms": 75.65618819198575,
+      "medium_125ms": 22.817705297516365,
+      "long_500ms": 20.36362928730568
+    },
+    "gap": {
+      "short_31ms": 75.65618819198575,
+      "medium_125ms": 26.596990526517935,
+      "long_500ms": 20.36362928730568
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_147",
+    "input_sha256": "ec95feaf06bfabf79695e47cc93c96637ab3107801f2a04946496e3c04bf104b",
+    "baseline": {
+      "short_31ms": 115.76981961475481,
+      "medium_125ms": 35.23124856034049,
+      "long_500ms": 39.03134982596631
+    },
+    "gap": {
+      "short_31ms": 115.76981961475481,
+      "medium_125ms": 35.23124856034049,
+      "long_500ms": 39.03134982596631
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_148",
+    "input_sha256": "db3340d3be1452b401ff401993b1b336d6fc8fcaebdc010281906fa4a3e98a18",
+    "baseline": {
+      "short_31ms": 35.09029439229861,
+      "medium_125ms": 27.122968903129674,
+      "long_500ms": 42.394562547518014
+    },
+    "gap": {
+      "short_31ms": 35.09029439229861,
+      "medium_125ms": 54.618171550483304,
+      "long_500ms": 42.394562547518014
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_149",
+    "input_sha256": "648bc5fba975ec3e233bd991be4455cb5bafe7c70616b2a1bc2387bd329f5563",
+    "baseline": {
+      "short_31ms": 91.169054540305,
+      "medium_125ms": 34.219619036824525,
+      "long_500ms": 29.37796877175045
+    },
+    "gap": {
+      "short_31ms": 91.169054540305,
+      "medium_125ms": 34.219619036824525,
+      "long_500ms": 40.13361126103782
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_150",
+    "input_sha256": "3b9917d3fe3d51d31146937a81901a3c469443ce17869b7f9a1e8e98b4aa8e65",
+    "baseline": {
+      "short_31ms": 58.99960485281238,
+      "medium_125ms": 53.7125838477369,
+      "long_500ms": 20.242725076735155
+    },
+    "gap": {
+      "short_31ms": 58.99960485281238,
+      "medium_125ms": 53.7125838477369,
+      "long_500ms": 20.242725076735155
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_151",
+    "input_sha256": "b0bab67f7b11bd65be3929ff250255db06a31430e8331f6191c0cd0974f8a25b",
+    "baseline": {
+      "short_31ms": 71.51688234397382,
+      "medium_125ms": 30.928201037551055,
+      "long_500ms": 30.961274719809595
+    },
+    "gap": {
+      "short_31ms": 71.51688234397382,
+      "medium_125ms": 30.928201037551055,
+      "long_500ms": 30.961274719809595
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_152",
+    "input_sha256": "36f49bb29bad8bc4d0b534572c1751380f3a1bc729e5c178d6c46f1fb8fcd1c0",
+    "baseline": {
+      "short_31ms": 61.05115909381776,
+      "medium_125ms": 31.72563240055956,
+      "long_500ms": 48.579079821102034
+    },
+    "gap": {
+      "short_31ms": 61.05115909381776,
+      "medium_125ms": 31.72563240055956,
+      "long_500ms": 48.579079821102034
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_153",
+    "input_sha256": "f2d6f407b7da5edf89f2eaa4b3cfb07d0204a43492d61fae13f9a5f1422c9e6b",
+    "baseline": {
+      "short_31ms": 52.66686549441193,
+      "medium_125ms": 49.22469146831053,
+      "long_500ms": 45.360865879144924
+    },
+    "gap": {
+      "short_31ms": 52.66686549441193,
+      "medium_125ms": 49.22469146831053,
+      "long_500ms": 45.360865879144924
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_154",
+    "input_sha256": "075db76e437abafbbc4187dae3cb8f51089ecc47d9f5860f239a53b50b6cd32e",
+    "baseline": {
+      "short_31ms": 80.9201534915127,
+      "medium_125ms": 31.637586907630734,
+      "long_500ms": 37.441455604807565
+    },
+    "gap": {
+      "short_31ms": 80.9201534915127,
+      "medium_125ms": 31.637586907630734,
+      "long_500ms": 37.441455604807565
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_155",
+    "input_sha256": "8c483aabc4c280a36eaf11444cc563dbc28073cdbbe40c160bd8ff6c23f37bde",
+    "baseline": {
+      "short_31ms": 144.05786720521155,
+      "medium_125ms": 46.82093562824426,
+      "long_500ms": 47.2250460447638
+    },
+    "gap": {
+      "short_31ms": 144.05786720521155,
+      "medium_125ms": 46.82093562824426,
+      "long_500ms": 47.2250460447638
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_156",
+    "input_sha256": "eb42ef250b91c9370c4803fadfe08e127bff2d6c420507debd11ceef80f40562",
+    "baseline": {
+      "short_31ms": 42.42889567141455,
+      "medium_125ms": 20.232807512026874,
+      "long_500ms": 43.01892099261048
+    },
+    "gap": {
+      "short_31ms": 42.42889567141455,
+      "medium_125ms": 20.232807512026874,
+      "long_500ms": 46.36519302828284
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_157",
+    "input_sha256": "0331ee42cd69224a9bf5015ec153802e8e8602a78341758ede7fe50a8196e66d",
+    "baseline": {
+      "short_31ms": 76.40741350069106,
+      "medium_125ms": 32.18193886113651,
+      "long_500ms": 25.516361661111663
+    },
+    "gap": {
+      "short_31ms": 76.40741350069106,
+      "medium_125ms": 32.18193886113651,
+      "long_500ms": 25.516361661111663
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_158",
+    "input_sha256": "2028c5bd4d443140972e8eeb7e389aa542e1e1bd2c37dc44ace8466ecf7b6f3e",
+    "baseline": {
+      "short_31ms": 74.55481949907667,
+      "medium_125ms": 20.248911238580312,
+      "long_500ms": 27.574178092782205
+    },
+    "gap": {
+      "short_31ms": 74.55481949907667,
+      "medium_125ms": 20.248911238580312,
+      "long_500ms": 30.787208623232388
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_159",
+    "input_sha256": "8fa5fc8aa1c64818c206201de8660e6345db3a6803762ea5602826bf6060b19f",
+    "baseline": {
+      "short_31ms": 102.8638235193879,
+      "medium_125ms": 22.284464536365583,
+      "long_500ms": 40.981802343097655
+    },
+    "gap": {
+      "short_31ms": 102.8638235193879,
+      "medium_125ms": 26.384799696177765,
+      "long_500ms": 40.981802343097655
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_160",
+    "input_sha256": "8e52c4999008bc38c79d36aa26328475bb5bd19ac4f6fd0778b7c95fd1a554f1",
+    "baseline": {
+      "short_31ms": 61.56265120289076,
+      "medium_125ms": 25.800243091577236,
+      "long_500ms": 26.45382483967139
+    },
+    "gap": {
+      "short_31ms": 61.56265120289076,
+      "medium_125ms": 30.148776745624595,
+      "long_500ms": 26.45382483967139
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_161",
+    "input_sha256": "ec8becc1c957f8ecf7f8b2b2e82a0b199e179f7574176e51e589788b263c9131",
+    "baseline": {
+      "short_31ms": 56.93603787655581,
+      "medium_125ms": 46.198936673261976,
+      "long_500ms": 31.902069017660175
+    },
+    "gap": {
+      "short_31ms": 56.93603787655581,
+      "medium_125ms": 46.198936673261976,
+      "long_500ms": 31.902069017660175
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_162",
+    "input_sha256": "4cd30d634ba9fc71210c4916fcd8161cd6dce2e6e546fff285fbfc1d60ad86f8",
+    "baseline": {
+      "short_31ms": 65.44836594567626,
+      "medium_125ms": 24.81875787207222,
+      "long_500ms": 31.366873928511453
+    },
+    "gap": {
+      "short_31ms": 65.44836594567626,
+      "medium_125ms": 24.81875787207222,
+      "long_500ms": 31.366873928511453
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_163",
+    "input_sha256": "662ea446f24b2fe0184800c0363241b697ea71cf4d621443dbdfcda527de6a1d",
+    "baseline": {
+      "short_31ms": 51.06600928339377,
+      "medium_125ms": 28.34061113429908,
+      "long_500ms": 34.81959223519071
+    },
+    "gap": {
+      "short_31ms": 51.06600928339377,
+      "medium_125ms": 28.34061113429908,
+      "long_500ms": 34.81959223519071
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_164",
+    "input_sha256": "32a51334b5c8fb10c1612c2dec1d53a0d3ac7f53f35bf4d8151c93d3595ffcca",
+    "baseline": {
+      "short_31ms": 70.23812986323911,
+      "medium_125ms": 23.150115574523703,
+      "long_500ms": 25.657954179918583
+    },
+    "gap": {
+      "short_31ms": 70.23812986323911,
+      "medium_125ms": 23.150115574523703,
+      "long_500ms": 25.657954179918583
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_165",
+    "input_sha256": "1048f37334dc07093a879a2b18dc124116c3bdeca4768f7ac3ca94b5b042ac1f",
+    "baseline": {
+      "short_31ms": 51.953321913028105,
+      "medium_125ms": 22.12679943923601,
+      "long_500ms": 41.62979431950504
+    },
+    "gap": {
+      "short_31ms": 51.953321913028105,
+      "medium_125ms": 22.12679943923601,
+      "long_500ms": 44.77955026144511
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_166",
+    "input_sha256": "054438f2c41f56b511b6b6e59cb4fa23c4650af443e129b8a1c69330b0db66e1",
+    "baseline": {
+      "short_31ms": 75.56699431561081,
+      "medium_125ms": 24.255196228913768,
+      "long_500ms": 29.395836196473155
+    },
+    "gap": {
+      "short_31ms": 75.56699431561081,
+      "medium_125ms": 24.255196228913768,
+      "long_500ms": 43.49068417609679
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_167",
+    "input_sha256": "6da0a77c901660ba460f840a3e3a652e0862ece52582ddaf54c787dd533f49b0",
+    "baseline": {
+      "short_31ms": 41.9112987987738,
+      "medium_125ms": 26.16105474195475,
+      "long_500ms": 20.828523188450554
+    },
+    "gap": {
+      "short_31ms": 41.9112987987738,
+      "medium_125ms": 26.16105474195475,
+      "long_500ms": 20.828523188450554
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_168",
+    "input_sha256": "96eb83f168331b9b6f855bb00fb95118aedb6e20d19dea4c8233420fde46e784",
+    "baseline": {
+      "short_31ms": 56.95433772053463,
+      "medium_125ms": 34.189363664493484,
+      "long_500ms": 39.47193757012981
+    },
+    "gap": {
+      "short_31ms": 56.95433772053463,
+      "medium_125ms": 41.41648450411823,
+      "long_500ms": 39.47193757012981
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_169",
+    "input_sha256": "18c2078daae442c9b4a7dcf1f8db56657221f3f6ef0feec647d0b27225cd4032",
+    "baseline": {
+      "short_31ms": 61.53681128352761,
+      "medium_125ms": 28.68376912172204,
+      "long_500ms": 30.894531170726665
+    },
+    "gap": {
+      "short_31ms": 81.42513161227797,
+      "medium_125ms": 37.26620066858372,
+      "long_500ms": 30.894531170726665
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_170",
+    "input_sha256": "9b36a4bba81483147f87ff6197c7f2f9b8d9a991c8fcb24204b45db4ac06a8aa",
+    "baseline": {
+      "short_31ms": 92.10270703263079,
+      "medium_125ms": 24.521416298488944,
+      "long_500ms": 36.07422313060564
+    },
+    "gap": {
+      "short_31ms": 92.10270703263079,
+      "medium_125ms": 24.521416298488944,
+      "long_500ms": 36.07422313060564
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_171",
+    "input_sha256": "c68dd00e7c1c0969ebea2ffd1d1efacb2934561317c0ffc55610ff74cf96eb18",
+    "baseline": {
+      "short_31ms": 55.04409791971552,
+      "medium_125ms": 25.735102144260324,
+      "long_500ms": 26.818741697445688
+    },
+    "gap": {
+      "short_31ms": 55.04409791971552,
+      "medium_125ms": 25.735102144260324,
+      "long_500ms": 30.774417700551506
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_172",
+    "input_sha256": "6198c7ffe40bcb20b7de4b70ea0ddd3beddb77fbd467464e4bdb23f5ed8c010e",
+    "baseline": {
+      "short_31ms": 83.8759657950916,
+      "medium_125ms": 26.633861883145652,
+      "long_500ms": 37.21752404299038
+    },
+    "gap": {
+      "short_31ms": 83.8759657950916,
+      "medium_125ms": 26.633861883145652,
+      "long_500ms": 37.21752404299038
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_173",
+    "input_sha256": "68c5144669c81ff7d898790f9b684d3a5efb600d80f4d3f947a48b10cf106ba6",
+    "baseline": {
+      "short_31ms": 77.28953802160068,
+      "medium_125ms": 31.714902078790566,
+      "long_500ms": 24.560740501778568
+    },
+    "gap": {
+      "short_31ms": 77.28953802160068,
+      "medium_125ms": 31.714902078790566,
+      "long_500ms": 24.560740501778568
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_174",
+    "input_sha256": "0ff6cd881beb6948167fd9d33aabebd6459cdd9c8b675a42672cd8ab0335618c",
+    "baseline": {
+      "short_31ms": 117.03933132407317,
+      "medium_125ms": 36.06057479007924,
+      "long_500ms": 35.187441832379925
+    },
+    "gap": {
+      "short_31ms": 131.9799374935484,
+      "medium_125ms": 36.06057479007924,
+      "long_500ms": 38.28125808649359
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_175",
+    "input_sha256": "2d885cb1a592bb90d234b621b1b524010a07a3f015ae715dd74a1a21b0a79d52",
+    "baseline": {
+      "short_31ms": 93.57784571989997,
+      "medium_125ms": 46.515173324855574,
+      "long_500ms": 41.40865986760255
+    },
+    "gap": {
+      "short_31ms": 93.57784571989997,
+      "medium_125ms": 46.515173324855574,
+      "long_500ms": 52.36809201143088
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_176",
+    "input_sha256": "cb9006e135bf2636f41d4b6e66fae535b6acc87ea240e5541700b8ff51818bb3",
+    "baseline": {
+      "short_31ms": 53.00360262567729,
+      "medium_125ms": 33.28520929026186,
+      "long_500ms": 47.05746930154747
+    },
+    "gap": {
+      "short_31ms": 53.00360262567729,
+      "medium_125ms": 33.28520929026186,
+      "long_500ms": 47.05746930154747
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_177",
+    "input_sha256": "761a8b6169f65dd1678fa97e71dc87bda5daf3af9143089d67c0a629baf1fbfe",
+    "baseline": {
+      "short_31ms": 58.7362278026443,
+      "medium_125ms": 56.971348404803855,
+      "long_500ms": 38.516200051179204
+    },
+    "gap": {
+      "short_31ms": 58.7362278026443,
+      "medium_125ms": 56.971348404803855,
+      "long_500ms": 38.516200051179204
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_178",
+    "input_sha256": "dd64e4e9c2909ae8cc10c96f351a193fa252dc43e5b61409d59f1e20c0eddec1",
+    "baseline": {
+      "short_31ms": 42.17956702378412,
+      "medium_125ms": 37.06731944887624,
+      "long_500ms": 30.288462089207016
+    },
+    "gap": {
+      "short_31ms": 42.17956702378412,
+      "medium_125ms": 37.06731944887624,
+      "long_500ms": 30.288462089207016
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_179",
+    "input_sha256": "cd7c0f400cf783238d3854ebce5e8ddeb13b18315da25301439333083eb6f6f4",
+    "baseline": {
+      "short_31ms": 45.973129165106144,
+      "medium_125ms": 19.438407338944483,
+      "long_500ms": 23.422671620380058
+    },
+    "gap": {
+      "short_31ms": 45.973129165106144,
+      "medium_125ms": 19.438407338944483,
+      "long_500ms": 23.422671620380058
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_180",
+    "input_sha256": "a83704eeba3d16e99602b4a2059b9d130fbe4010583aaa171b41ad5b135e77de",
+    "baseline": {
+      "short_31ms": 53.97506110204883,
+      "medium_125ms": 30.346256446812443,
+      "long_500ms": 24.475177598468704
+    },
+    "gap": {
+      "short_31ms": 68.31542782039568,
+      "medium_125ms": 30.346256446812443,
+      "long_500ms": 24.475177598468704
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_181",
+    "input_sha256": "0f93ba7ad115c4983d0fbe24501d11f4abcc31a5c4a12fb056d3d9bdea4ade0e",
+    "baseline": {
+      "short_31ms": 51.71493268058714,
+      "medium_125ms": 32.59334753176101,
+      "long_500ms": 18.79286441367108
+    },
+    "gap": {
+      "short_31ms": 51.71493268058714,
+      "medium_125ms": 32.59334753176101,
+      "long_500ms": 18.79286441367108
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_182",
+    "input_sha256": "4d5d682da9b4c78cca92ed751b5d8fb0253fa59b3d0c817a29e32a42b3bfe958",
+    "baseline": {
+      "short_31ms": 46.62655632683797,
+      "medium_125ms": 28.802518007513765,
+      "long_500ms": 60.519614667532224
+    },
+    "gap": {
+      "short_31ms": 81.12941202613044,
+      "medium_125ms": 28.802518007513765,
+      "long_500ms": 60.519614667532224
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_183",
+    "input_sha256": "918ca881d6f89f83e999ffda9a368c401bd5a2a053733f9ad28193fbdf4409c5",
+    "baseline": {
+      "short_31ms": 65.15096482899277,
+      "medium_125ms": 33.11467699025843,
+      "long_500ms": 29.879290576391583
+    },
+    "gap": {
+      "short_31ms": 65.15096482899277,
+      "medium_125ms": 33.11467699025843,
+      "long_500ms": 31.506274100927847
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_184",
+    "input_sha256": "7302a6ba79169b85e047cd9eda8dfc5157e8eacbad95b0395cf772192ce9812a",
+    "baseline": {
+      "short_31ms": 37.62321214831724,
+      "medium_125ms": 20.385946988285202,
+      "long_500ms": 37.152597713920485
+    },
+    "gap": {
+      "short_31ms": 71.79133914400649,
+      "medium_125ms": 26.62536016349025,
+      "long_500ms": 37.152597713920485
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_185",
+    "input_sha256": "e61a9aead8d1a7baeffa9fd7e233bbf5650ac5d35f591d10453f158e7cc19c94",
+    "baseline": {
+      "short_31ms": 94.88897261039976,
+      "medium_125ms": 25.50217516389813,
+      "long_500ms": 25.161185566972826
+    },
+    "gap": {
+      "short_31ms": 105.9245594419205,
+      "medium_125ms": 25.50217516389813,
+      "long_500ms": 25.161185566972826
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_186",
+    "input_sha256": "c37ddaa5aaec0d80dd1ddea0734cdfcaae6eaa58beb97dc39368d3c248a728d1",
+    "baseline": {
+      "short_31ms": 88.79401180973325,
+      "medium_125ms": 25.370931276698332,
+      "long_500ms": 19.952696218097962
+    },
+    "gap": {
+      "short_31ms": 88.79401180973325,
+      "medium_125ms": 25.370931276698332,
+      "long_500ms": 19.952696218097962
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_187",
+    "input_sha256": "3adbb822fa3816df6fce4a5cf02a05b8c4bd55104854b80217d09fb44ee3d842",
+    "baseline": {
+      "short_31ms": 105.3237866615918,
+      "medium_125ms": 46.831619956860735,
+      "long_500ms": 31.900661296475246
+    },
+    "gap": {
+      "short_31ms": 105.3237866615918,
+      "medium_125ms": 50.11496759639254,
+      "long_500ms": 42.62461043161787
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_188",
+    "input_sha256": "e1e793c02bebcaea81d14645a7880640801e793422fcf36d0b36e3e29489c7d2",
+    "baseline": {
+      "short_31ms": 67.88470461509782,
+      "medium_125ms": 42.909581355045184,
+      "long_500ms": 32.7164832295403
+    },
+    "gap": {
+      "short_31ms": 71.11836823572794,
+      "medium_125ms": 42.909581355045184,
+      "long_500ms": 32.7164832295403
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_189",
+    "input_sha256": "11f20307a079577ad8dc4ef9d9097e216222c6a30a30bf197ac29efa9a616cd4",
+    "baseline": {
+      "short_31ms": 58.587378106810924,
+      "medium_125ms": 43.169331156984214,
+      "long_500ms": 25.08811025166956
+    },
+    "gap": {
+      "short_31ms": 58.587378106810924,
+      "medium_125ms": 43.169331156984214,
+      "long_500ms": 33.96733434112576
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_190",
+    "input_sha256": "78bfcc1c82a1ea0e2851384b94e7413231303e8d4a2b143d8891b0b9e77c6e59",
+    "baseline": {
+      "short_31ms": 45.99288373776722,
+      "medium_125ms": 19.623161575229044,
+      "long_500ms": 35.694144478820185
+    },
+    "gap": {
+      "short_31ms": 45.99288373776722,
+      "medium_125ms": 19.623161575229044,
+      "long_500ms": 35.694144478820185
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_191",
+    "input_sha256": "e597d1f94553c5debe49961d46d43bcdd80399f5d145d66e4074337bd8a80c77",
+    "baseline": {
+      "short_31ms": 71.093214761199,
+      "medium_125ms": 23.728259957541542,
+      "long_500ms": 25.56791211559855
+    },
+    "gap": {
+      "short_31ms": 71.093214761199,
+      "medium_125ms": 23.728259957541542,
+      "long_500ms": 25.56791211559855
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_192",
+    "input_sha256": "a3b0ff892f85143e8bd8736cc053eaed664a145e1bb844d846e1d620d5ebf306",
+    "baseline": {
+      "short_31ms": 81.572663798984,
+      "medium_125ms": 38.77896949228001,
+      "long_500ms": 30.710777738594924
+    },
+    "gap": {
+      "short_31ms": 81.572663798984,
+      "medium_125ms": 38.77896949228001,
+      "long_500ms": 30.710777738594924
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_193",
+    "input_sha256": "c82170397dfab82f79a1c12974ababcd15d917070e76f20e28c31973aa405128",
+    "baseline": {
+      "short_31ms": 46.4897439148497,
+      "medium_125ms": 23.36342871559372,
+      "long_500ms": 23.287879591486078
+    },
+    "gap": {
+      "short_31ms": 46.4897439148497,
+      "medium_125ms": 24.53837027302575,
+      "long_500ms": 23.287879591486078
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_194",
+    "input_sha256": "4c9f6a61337f1bf8e652d9b0432b3a81a5f6e38d52ca844c671434ae541a7ed1",
+    "baseline": {
+      "short_31ms": 83.5929471367669,
+      "medium_125ms": 21.927344080822813,
+      "long_500ms": 27.197677702985
+    },
+    "gap": {
+      "short_31ms": 83.5929471367669,
+      "medium_125ms": 29.146601753885342,
+      "long_500ms": 27.197677702985
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_195",
+    "input_sha256": "a2a8d6d908a296db76f993562f041e79274b1a9fd000fd7b16c19ecd6b78da5a",
+    "baseline": {
+      "short_31ms": 38.04065903555387,
+      "medium_125ms": 27.37619334339608,
+      "long_500ms": 20.807205469665135
+    },
+    "gap": {
+      "short_31ms": 38.04065903555387,
+      "medium_125ms": 27.37619334339608,
+      "long_500ms": 20.807205469665135
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_196",
+    "input_sha256": "cc832f20a5d05b38c9e4f5dc1437234f94304347e130f67624b16cdbf6be9bcd",
+    "baseline": {
+      "short_31ms": 68.29504473744888,
+      "medium_125ms": 31.210491988457886,
+      "long_500ms": 36.8369133952952
+    },
+    "gap": {
+      "short_31ms": 68.29504473744888,
+      "medium_125ms": 31.210491988457886,
+      "long_500ms": 36.8369133952952
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_197",
+    "input_sha256": "c417d258f8e877694ec01a0074858a646f78c340406dd436f2a808877b50c43d",
+    "baseline": {
+      "short_31ms": 48.91676711514502,
+      "medium_125ms": 78.41871111564991,
+      "long_500ms": 40.65150570655504
+    },
+    "gap": {
+      "short_31ms": 48.91676711514502,
+      "medium_125ms": 78.41871111564991,
+      "long_500ms": 40.65150570655504
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_198",
+    "input_sha256": "432b3f50ce7ce4b223ab4ce39278fea345255b15015f8a7772dd8c54d3bc78ff",
+    "baseline": {
+      "short_31ms": 66.95861166032903,
+      "medium_125ms": 31.50739046828507,
+      "long_500ms": 27.118859935893312
+    },
+    "gap": {
+      "short_31ms": 66.95861166032903,
+      "medium_125ms": 31.50739046828507,
+      "long_500ms": 27.118859935893312
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_199",
+    "input_sha256": "7a94322ed2ab9be6de75fd382c4a5f890a41065b764f95c3f9b82d8b49bb3577",
+    "baseline": {
+      "short_31ms": 93.85176514742537,
+      "medium_125ms": 53.73440040311485,
+      "long_500ms": 25.655376328921392
+    },
+    "gap": {
+      "short_31ms": 93.85176514742537,
+      "medium_125ms": 53.73440040311485,
+      "long_500ms": 25.655376328921392
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_200",
+    "input_sha256": "867c3ca7d188cb0f6de8e65eb179b3742d8d0c58ea00595e0a2f4ca6e9744ca8",
+    "baseline": {
+      "short_31ms": 49.03827131547657,
+      "medium_125ms": 30.906763270038674,
+      "long_500ms": 48.86589410228327
+    },
+    "gap": {
+      "short_31ms": 49.03827131547657,
+      "medium_125ms": 54.668822851366485,
+      "long_500ms": 48.86589410228327
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_201",
+    "input_sha256": "6aae0809233efd709474095a9d8c70595da3c31da32bd7269826b267b53f637a",
+    "baseline": {
+      "short_31ms": 60.440565002098175,
+      "medium_125ms": 33.1053616536427,
+      "long_500ms": 52.4751726224925
+    },
+    "gap": {
+      "short_31ms": 60.440565002098175,
+      "medium_125ms": 33.1053616536427,
+      "long_500ms": 52.4751726224925
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_202",
+    "input_sha256": "faf7fc841bb70a3620306dbc56325ba9c6444a15ba55ffe5b7094bc7bc489f87",
+    "baseline": {
+      "short_31ms": 48.30630980023821,
+      "medium_125ms": 30.123966181901146,
+      "long_500ms": 30.809729109683936
+    },
+    "gap": {
+      "short_31ms": 48.30630980023821,
+      "medium_125ms": 30.123966181901146,
+      "long_500ms": 30.809729109683936
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_203",
+    "input_sha256": "676cd3bdc0aff83a4ab546ad866ef2272a4dd248cd1ce85619877b7ef80f0168",
+    "baseline": {
+      "short_31ms": 46.7410543432498,
+      "medium_125ms": 22.733298206374673,
+      "long_500ms": 27.044161855594908
+    },
+    "gap": {
+      "short_31ms": 46.7410543432498,
+      "medium_125ms": 22.733298206374673,
+      "long_500ms": 27.044161855594908
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_204",
+    "input_sha256": "dfaa65e779cd2e2b543695db5d6deb390461f06635c254d7047f7717ee2487fc",
+    "baseline": {
+      "short_31ms": 49.4977081978414,
+      "medium_125ms": 27.433508697415583,
+      "long_500ms": 22.91157722701186
+    },
+    "gap": {
+      "short_31ms": 49.4977081978414,
+      "medium_125ms": 27.433508697415583,
+      "long_500ms": 22.91157722701186
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_205",
+    "input_sha256": "fee31eab34ca010736f329da58daabdeea3bd8d6ba0d56ec4d5bfcb53f3a5815",
+    "baseline": {
+      "short_31ms": 119.36214580694784,
+      "medium_125ms": 67.35871915107691,
+      "long_500ms": 34.21730134033831
+    },
+    "gap": {
+      "short_31ms": 119.36214580694784,
+      "medium_125ms": 67.35871915107691,
+      "long_500ms": 34.21730134033831
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_206",
+    "input_sha256": "3b183b9a336cf9656d175cea1724913b399bba51dd57dd8687274f8a97aa8ef9",
+    "baseline": {
+      "short_31ms": 95.2737766381459,
+      "medium_125ms": 31.580806988852295,
+      "long_500ms": 33.05951488010078
+    },
+    "gap": {
+      "short_31ms": 95.2737766381459,
+      "medium_125ms": 31.580806988852295,
+      "long_500ms": 33.05951488010078
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_207",
+    "input_sha256": "5cd4135769ba69fd78096523c86789690cec991d95fdb2f0247deb3dfd508163",
+    "baseline": {
+      "short_31ms": 43.89843279083328,
+      "medium_125ms": 38.485067982227534,
+      "long_500ms": 17.705953987805632
+    },
+    "gap": {
+      "short_31ms": 43.89843279083328,
+      "medium_125ms": 38.485067982227534,
+      "long_500ms": 24.07201159148822
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_208",
+    "input_sha256": "c4f007567fc6d9061f43e288edee5598fa88f85e670f6f24ac0e73a7929eb3d2",
+    "baseline": {
+      "short_31ms": 83.49269855806558,
+      "medium_125ms": 27.00386478666665,
+      "long_500ms": 29.00692549388318
+    },
+    "gap": {
+      "short_31ms": 83.49269855806558,
+      "medium_125ms": 27.00386478666665,
+      "long_500ms": 29.00692549388318
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_209",
+    "input_sha256": "2a560b6701d336f3885aa028e74d33b756bfa5e41d6cd0be134e7975104f0cea",
+    "baseline": {
+      "short_31ms": 49.635500758849076,
+      "medium_125ms": 28.458294790204164,
+      "long_500ms": 36.00215034762107
+    },
+    "gap": {
+      "short_31ms": 49.635500758849076,
+      "medium_125ms": 28.458294790204164,
+      "long_500ms": 36.00215034762107
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_210",
+    "input_sha256": "3b02c5e383d4740eadee497f13fd375fe96f13e1478d83beb2ed2570ebb2a7f2",
+    "baseline": {
+      "short_31ms": 53.83947873658226,
+      "medium_125ms": 41.92420512158789,
+      "long_500ms": 35.83377493390923
+    },
+    "gap": {
+      "short_31ms": 53.83947873658226,
+      "medium_125ms": 41.92420512158789,
+      "long_500ms": 35.83377493390923
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_211",
+    "input_sha256": "68e6f539bcb4916a15ed190cd8abded2be8402b0c169bf4284d41db35a5b6cef",
+    "baseline": {
+      "short_31ms": 55.61758870175176,
+      "medium_125ms": 37.40247502594115,
+      "long_500ms": 28.2939037365915
+    },
+    "gap": {
+      "short_31ms": 55.61758870175176,
+      "medium_125ms": 37.40247502594115,
+      "long_500ms": 28.2939037365915
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_212",
+    "input_sha256": "5e230f2caa200914e38e5fd211df3df010a76a6db11a1cee2a1a3264a4299cd0",
+    "baseline": {
+      "short_31ms": 86.42563896324776,
+      "medium_125ms": 25.8457626914594,
+      "long_500ms": 26.044619208553062
+    },
+    "gap": {
+      "short_31ms": 86.42563896324776,
+      "medium_125ms": 25.8457626914594,
+      "long_500ms": 26.044619208553062
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_213",
+    "input_sha256": "33283c6c39165b3f6240a80022d5ef8de2ccaec2005f7a5c0d6334c5ae5844bb",
+    "baseline": {
+      "short_31ms": 75.28937397874586,
+      "medium_125ms": 31.42361390851101,
+      "long_500ms": 41.59612189656752
+    },
+    "gap": {
+      "short_31ms": 75.28937397874586,
+      "medium_125ms": 31.42361390851101,
+      "long_500ms": 41.59612189656752
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_214",
+    "input_sha256": "0eeba37014a4bc8107e2abea4ba06c6c1ddde1139feb9e4d28162bb429a21a19",
+    "baseline": {
+      "short_31ms": 89.51373836964761,
+      "medium_125ms": 38.84370543833806,
+      "long_500ms": 51.14799957581459
+    },
+    "gap": {
+      "short_31ms": 89.51373836964761,
+      "medium_125ms": 38.84370543833806,
+      "long_500ms": 51.14799957581459
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_215",
+    "input_sha256": "c0d38efe7619d9f2a8ebf94eea436aa46ca882dd83c828a37bd4e25592a23c68",
+    "baseline": {
+      "short_31ms": 77.94447937363556,
+      "medium_125ms": 36.353126722134064,
+      "long_500ms": 34.594266602213445
+    },
+    "gap": {
+      "short_31ms": 84.9449940508417,
+      "medium_125ms": 36.353126722134064,
+      "long_500ms": 34.594266602213445
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_216",
+    "input_sha256": "c747300846f29c64cc05a9d0228ebc49f9da48f3cdd8392025f39749d50ca7f8",
+    "baseline": {
+      "short_31ms": 97.91463632057734,
+      "medium_125ms": 49.04111631273206,
+      "long_500ms": 20.17740965444259
+    },
+    "gap": {
+      "short_31ms": 97.91463632057734,
+      "medium_125ms": 49.04111631273206,
+      "long_500ms": 20.17740965444259
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_217",
+    "input_sha256": "346b4fbe67365f166360c17f7a5becca0a82d5ae9afc54932e7b67eae2de41a2",
+    "baseline": {
+      "short_31ms": 72.13474032914854,
+      "medium_125ms": 36.468582586732474,
+      "long_500ms": 33.76113615434646
+    },
+    "gap": {
+      "short_31ms": 72.13474032914854,
+      "medium_125ms": 36.468582586732474,
+      "long_500ms": 33.76113615434646
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_218",
+    "input_sha256": "ad285b5f15191d7aad7e1c9931779600806787edd1b5726c3e4512364a12de59",
+    "baseline": {
+      "short_31ms": 67.4760239379403,
+      "medium_125ms": 22.95324896681822,
+      "long_500ms": 24.109047541042067
+    },
+    "gap": {
+      "short_31ms": 67.4760239379403,
+      "medium_125ms": 22.95324896681822,
+      "long_500ms": 24.109047541042067
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_219",
+    "input_sha256": "432b703cd3252904971a4a81c638c14c630729bcba217e19e889c3ac1cc6edcc",
+    "baseline": {
+      "short_31ms": 54.92909064126927,
+      "medium_125ms": 32.88028545018522,
+      "long_500ms": 30.76404006504618
+    },
+    "gap": {
+      "short_31ms": 54.92909064126927,
+      "medium_125ms": 32.88028545018522,
+      "long_500ms": 30.76404006504618
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_220",
+    "input_sha256": "19929ca344647d4649a614108beb2b4a5890a394f1d9cd0fac9c9735f6a31131",
+    "baseline": {
+      "short_31ms": 57.740064953617015,
+      "medium_125ms": 27.175894833891434,
+      "long_500ms": 24.05099429450768
+    },
+    "gap": {
+      "short_31ms": 57.740064953617015,
+      "medium_125ms": 27.175894833891434,
+      "long_500ms": 24.05099429450768
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_221",
+    "input_sha256": "5e0702d761416f0091495db6a5b73cd73a574651a64acca9fed9df2168e17fec",
+    "baseline": {
+      "short_31ms": 92.56248250742172,
+      "medium_125ms": 30.505440722517896,
+      "long_500ms": 24.497154304691914
+    },
+    "gap": {
+      "short_31ms": 92.56248250742172,
+      "medium_125ms": 30.505440722517896,
+      "long_500ms": 24.497154304691914
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_222",
+    "input_sha256": "21b45e160a2beff669654f1f4083547b4872d61df5b6d7aa076f5305ba7bbb51",
+    "baseline": {
+      "short_31ms": 73.99873040729909,
+      "medium_125ms": 29.643112915554596,
+      "long_500ms": 23.344484951753735
+    },
+    "gap": {
+      "short_31ms": 73.99873040729909,
+      "medium_125ms": 32.919519528213755,
+      "long_500ms": 23.344484951753735
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_223",
+    "input_sha256": "df612b41b50ba8e9cfc73ce6a28727971321aa0245f2898ac954e15eb6f01c81",
+    "baseline": {
+      "short_31ms": 40.378128104640304,
+      "medium_125ms": 23.74823254556359,
+      "long_500ms": 19.041122040593805
+    },
+    "gap": {
+      "short_31ms": 40.378128104640304,
+      "medium_125ms": 29.706061839238743,
+      "long_500ms": 26.103412779814303
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_224",
+    "input_sha256": "85b602e5daba42f1de3686698a0c393516b1b497a9613ddd190e60d6fad641eb",
+    "baseline": {
+      "short_31ms": 45.19793438401529,
+      "medium_125ms": 46.9321302847097,
+      "long_500ms": 60.39636050921419
+    },
+    "gap": {
+      "short_31ms": 45.19793438401529,
+      "medium_125ms": 46.9321302847097,
+      "long_500ms": 60.39636050921419
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_225",
+    "input_sha256": "edc3d2f13f1d70dc4c99a8f899446404c3550f7481688c81b97bad838c41af94",
+    "baseline": {
+      "short_31ms": 63.562637717335186,
+      "medium_125ms": 35.68984002801719,
+      "long_500ms": 30.2645873143899
+    },
+    "gap": {
+      "short_31ms": 63.562637717335186,
+      "medium_125ms": 35.68984002801719,
+      "long_500ms": 37.46880493470005
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_226",
+    "input_sha256": "50faf5e2568b469b5a1ad603c8dd3468b4c7946c10253aafcc24315f41d21566",
+    "baseline": {
+      "short_31ms": 102.82693158958688,
+      "medium_125ms": 28.93042790792348,
+      "long_500ms": 34.02363492032086
+    },
+    "gap": {
+      "short_31ms": 102.82693158958688,
+      "medium_125ms": 28.93042790792348,
+      "long_500ms": 34.02363492032086
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_227",
+    "input_sha256": "ab8b694916e4750b8951cc521f4bf334169bed57a3079e65b595e97da17e9d3f",
+    "baseline": {
+      "short_31ms": 73.98000087290298,
+      "medium_125ms": 29.94095010684786,
+      "long_500ms": 44.89840041615439
+    },
+    "gap": {
+      "short_31ms": 73.98000087290298,
+      "medium_125ms": 69.65298512275066,
+      "long_500ms": 53.46001255841269
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_228",
+    "input_sha256": "47bde3cd6a6fec0d4e4f25d099da2897834ea47a69aaef50f5723581a2226783",
+    "baseline": {
+      "short_31ms": 60.09283096523161,
+      "medium_125ms": 24.067626484857687,
+      "long_500ms": 18.551627569532716
+    },
+    "gap": {
+      "short_31ms": 60.09283096523161,
+      "medium_125ms": 24.067626484857687,
+      "long_500ms": 18.551627569532716
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_229",
+    "input_sha256": "89d1a1240dfd816c819d7fca55679fb2b4e476c08d2436d98c692840dde19fd5",
+    "baseline": {
+      "short_31ms": 55.69160732736921,
+      "medium_125ms": 18.299199086789237,
+      "long_500ms": 22.538548483850178
+    },
+    "gap": {
+      "short_31ms": 55.69160732736921,
+      "medium_125ms": 18.299199086789237,
+      "long_500ms": 22.538548483850178
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_230",
+    "input_sha256": "6527b5fe1ef437dd835ef119058ac4517455569703e5d310d4e09866902d23c7",
+    "baseline": {
+      "short_31ms": 71.08483625001361,
+      "medium_125ms": 31.597725226817982,
+      "long_500ms": 25.975872652405418
+    },
+    "gap": {
+      "short_31ms": 71.08483625001361,
+      "medium_125ms": 31.597725226817982,
+      "long_500ms": 25.975872652405418
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_231",
+    "input_sha256": "cf465478151aa32ea1e8c4202a14330d1c7d081a47ebc66adfe8187f69a1f938",
+    "baseline": {
+      "short_31ms": 50.5576356760925,
+      "medium_125ms": 20.751810059433495,
+      "long_500ms": 24.750650209384897
+    },
+    "gap": {
+      "short_31ms": 50.5576356760925,
+      "medium_125ms": 27.685332626903712,
+      "long_500ms": 24.750650209384897
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_232",
+    "input_sha256": "7e3c1532fb9b46fde4b3ea7ffddde4a159d8a441a9acb3a0c14719025ea13f54",
+    "baseline": {
+      "short_31ms": 65.014090825514,
+      "medium_125ms": 23.98532702338227,
+      "long_500ms": 44.61426517734928
+    },
+    "gap": {
+      "short_31ms": 65.014090825514,
+      "medium_125ms": 23.98532702338227,
+      "long_500ms": 44.61426517734928
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_233",
+    "input_sha256": "a95d52a44ed16ce2ec57066bc8669987a803edf1bd9a5727ab96d34f14264588",
+    "baseline": {
+      "short_31ms": 40.53824449450429,
+      "medium_125ms": 32.91741112941028,
+      "long_500ms": 30.469191018437872
+    },
+    "gap": {
+      "short_31ms": 40.53824449450429,
+      "medium_125ms": 32.91741112941028,
+      "long_500ms": 36.26400722638108
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_234",
+    "input_sha256": "b8fa83756078a6d79986f14ecbc3eb25df2653450c1d396871eddd5f651feff7",
+    "baseline": {
+      "short_31ms": 32.487523506913064,
+      "medium_125ms": 25.63031523821828,
+      "long_500ms": 43.569359165289995
+    },
+    "gap": {
+      "short_31ms": 32.487523506913064,
+      "medium_125ms": 25.63031523821828,
+      "long_500ms": 43.569359165289995
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_235",
+    "input_sha256": "677b324f2fd273afc7c96f260ee0c47f26d53622008dc9fb7729523263af45e7",
+    "baseline": {
+      "short_31ms": 97.68780577853857,
+      "medium_125ms": 33.670067277678704,
+      "long_500ms": 30.931662431038546
+    },
+    "gap": {
+      "short_31ms": 97.68780577853857,
+      "medium_125ms": 33.670067277678704,
+      "long_500ms": 30.931662431038546
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_236",
+    "input_sha256": "d229200e5c5feb5513b230847b472c2cba06e3d63a892a1599fc6e938b5350b4",
+    "baseline": {
+      "short_31ms": 80.48134213458057,
+      "medium_125ms": 33.271912248956724,
+      "long_500ms": 15.313267247795519
+    },
+    "gap": {
+      "short_31ms": 80.48134213458057,
+      "medium_125ms": 33.271912248956724,
+      "long_500ms": 15.313267247795519
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_237",
+    "input_sha256": "870c2673ebcfabcd33d3246c9dc594cb5e0609f98cf1bcd2012d0c66e1ec05ce",
+    "baseline": {
+      "short_31ms": 35.22516306873963,
+      "medium_125ms": 31.958728344157784,
+      "long_500ms": 33.33981087116896
+    },
+    "gap": {
+      "short_31ms": 37.68415152743888,
+      "medium_125ms": 31.958728344157784,
+      "long_500ms": 33.33981087116896
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_238",
+    "input_sha256": "d25dae690b40c53e0fecfcd72ac8d9580f36f4bb27525b44725303ab1a100285",
+    "baseline": {
+      "short_31ms": 105.99483419272077,
+      "medium_125ms": 62.56897373439722,
+      "long_500ms": 52.59925717182792
+    },
+    "gap": {
+      "short_31ms": 105.99483419272077,
+      "medium_125ms": 62.56897373439722,
+      "long_500ms": 52.59925717182792
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_239",
+    "input_sha256": "d86dac2fba279d6f93c8574b7c3627b751407d69742fc02d675020ea3ec3f864",
+    "baseline": {
+      "short_31ms": 46.3334820009487,
+      "medium_125ms": 21.92016424044635,
+      "long_500ms": 34.33809073876829
+    },
+    "gap": {
+      "short_31ms": 46.3334820009487,
+      "medium_125ms": 21.92016424044635,
+      "long_500ms": 34.33809073876829
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_240",
+    "input_sha256": "5fe4f53d9e5f5b5b21d39d70dadab22f38ce3983a16aad9303cfc79dad5a7aa2",
+    "baseline": {
+      "short_31ms": 61.33278057928397,
+      "medium_125ms": 21.295549151227036,
+      "long_500ms": 46.30144858560286
+    },
+    "gap": {
+      "short_31ms": 61.33278057928397,
+      "medium_125ms": 23.734394290773913,
+      "long_500ms": 83.74290902976175
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_241",
+    "input_sha256": "050e334f2e9489519da5b05182caa09acde040a76fc2b334926abde63a3865c9",
+    "baseline": {
+      "short_31ms": 65.14567757463655,
+      "medium_125ms": 20.137903328097075,
+      "long_500ms": 29.691637680333386
+    },
+    "gap": {
+      "short_31ms": 65.14567757463655,
+      "medium_125ms": 20.137903328097075,
+      "long_500ms": 29.691637680333386
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_242",
+    "input_sha256": "cce0ac148c347626d0915e0528a878df1a6ed94e922ec38cee4109239e3bd2dc",
+    "baseline": {
+      "short_31ms": 85.8397050270794,
+      "medium_125ms": 44.268128797961396,
+      "long_500ms": 38.23079714751779
+    },
+    "gap": {
+      "short_31ms": 85.8397050270794,
+      "medium_125ms": 44.268128797961396,
+      "long_500ms": 38.23079714751779
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_243",
+    "input_sha256": "7c97457157e53da7ad4bdc64a2a0c06a65bea154d9bcb1aa748813fe5d9a7ce0",
+    "baseline": {
+      "short_31ms": 66.10928385669678,
+      "medium_125ms": 29.324007173134174,
+      "long_500ms": 51.95060610025006
+    },
+    "gap": {
+      "short_31ms": 66.10928385669678,
+      "medium_125ms": 29.324007173134174,
+      "long_500ms": 58.841037406316474
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_244",
+    "input_sha256": "2d04ba4182eab719a2cc9738661a264b56ede45fbd977429f24803a2051c0337",
+    "baseline": {
+      "short_31ms": 65.73335799535002,
+      "medium_125ms": 31.665162911131155,
+      "long_500ms": 26.46925518373841
+    },
+    "gap": {
+      "short_31ms": 65.73335799535002,
+      "medium_125ms": 31.665162911131155,
+      "long_500ms": 27.493591702264435
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_245",
+    "input_sha256": "7d471b33f15f41618cca0bccd923b5c16c4905f8a917fed5d51fe6f8e3dccba0",
+    "baseline": {
+      "short_31ms": 54.50113265231889,
+      "medium_125ms": 24.750209867030843,
+      "long_500ms": 37.823244129293315
+    },
+    "gap": {
+      "short_31ms": 54.50113265231889,
+      "medium_125ms": 26.16911686337461,
+      "long_500ms": 37.823244129293315
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_246",
+    "input_sha256": "b6b09b9f64281babeeb305e97e086d0d4174224a80b15f854ac87ae40259dac5",
+    "baseline": {
+      "short_31ms": 59.787819891865674,
+      "medium_125ms": 32.138297689782114,
+      "long_500ms": 31.888038563273007
+    },
+    "gap": {
+      "short_31ms": 59.787819891865674,
+      "medium_125ms": 32.138297689782114,
+      "long_500ms": 31.888038563273007
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_247",
+    "input_sha256": "10954e52f8079e6cc7592f13b3b902a5b9fe742f86b35e34eade394dc1a83439",
+    "baseline": {
+      "short_31ms": 67.22478984685455,
+      "medium_125ms": 27.941863058506282,
+      "long_500ms": 22.28783267804923
+    },
+    "gap": {
+      "short_31ms": 76.57764872089324,
+      "medium_125ms": 27.941863058506282,
+      "long_500ms": 22.28783267804923
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_248",
+    "input_sha256": "6ae55791480ed3bbdc510f95d48d395b0021b84f13e7923160cc737ddb10d501",
+    "baseline": {
+      "short_31ms": 45.38568510464754,
+      "medium_125ms": 28.773606026572704,
+      "long_500ms": 38.57226692783938
+    },
+    "gap": {
+      "short_31ms": 60.64588195167095,
+      "medium_125ms": 28.773606026572704,
+      "long_500ms": 38.57226692783938
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_249",
+    "input_sha256": "4b0926ffcc6154208cc0743e60ded92fff94af902a0d24365adc6037f59cdeee",
+    "baseline": {
+      "short_31ms": 49.912844580400275,
+      "medium_125ms": 31.826714572560554,
+      "long_500ms": 21.704302052148947
+    },
+    "gap": {
+      "short_31ms": 49.912844580400275,
+      "medium_125ms": 31.826714572560554,
+      "long_500ms": 21.704302052148947
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_250",
+    "input_sha256": "431279ad2859184ddb7bb6815c42a597cba799d68d9db0faf6944e996cdd028e",
+    "baseline": {
+      "short_31ms": 76.28097733446674,
+      "medium_125ms": 38.14701382396839,
+      "long_500ms": 36.02450208099482
+    },
+    "gap": {
+      "short_31ms": 76.28097733446674,
+      "medium_125ms": 38.14701382396839,
+      "long_500ms": 36.02450208099482
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_251",
+    "input_sha256": "a050517e7c92585f752a9ffc0331d5c048ed43f900814ce0ecab12f0cae19af2",
+    "baseline": {
+      "short_31ms": 71.45739917827379,
+      "medium_125ms": 20.318883081630396,
+      "long_500ms": 41.9740546700179
+    },
+    "gap": {
+      "short_31ms": 71.45739917827379,
+      "medium_125ms": 20.318883081630396,
+      "long_500ms": 41.9740546700179
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_252",
+    "input_sha256": "38b374856d9e1e9e778b88d5b9ef850b01160acaff9de7712e3989f894064b13",
+    "baseline": {
+      "short_31ms": 107.91609011466952,
+      "medium_125ms": 22.767150838555835,
+      "long_500ms": 50.850262928621845
+    },
+    "gap": {
+      "short_31ms": 107.91609011466952,
+      "medium_125ms": 22.767150838555835,
+      "long_500ms": 50.850262928621845
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_253",
+    "input_sha256": "79874f4a63d6ac89e2109a7d2464cd6b76d3e28c757a5202065f153930a66248",
+    "baseline": {
+      "short_31ms": 94.3466397948681,
+      "medium_125ms": 30.334091944983776,
+      "long_500ms": 27.041896904588423
+    },
+    "gap": {
+      "short_31ms": 94.3466397948681,
+      "medium_125ms": 30.334091944983776,
+      "long_500ms": 27.041896904588423
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_254",
+    "input_sha256": "e8849e7bc898ba5935e05e563d69b0b5712c6de9c87a4655604d744a599a72b2",
+    "baseline": {
+      "short_31ms": 63.54192370308608,
+      "medium_125ms": 32.63611816579664,
+      "long_500ms": 23.18986099784375
+    },
+    "gap": {
+      "short_31ms": 63.54192370308608,
+      "medium_125ms": 32.63611816579664,
+      "long_500ms": 23.18986099784375
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_255",
+    "input_sha256": "bbce9b7609584ad79f45b08cdfb562b4d082ba4213e35ce4ef30bdc3e4225143",
+    "baseline": {
+      "short_31ms": 72.27956421612623,
+      "medium_125ms": 25.983323524176292,
+      "long_500ms": 23.11205857955487
+    },
+    "gap": {
+      "short_31ms": 72.27956421612623,
+      "medium_125ms": 25.983323524176292,
+      "long_500ms": 23.11205857955487
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_256",
+    "input_sha256": "77e7fa60a55a997c62c9272bc6b1d12b9661444a9f8927ad3fed0ef9c79f02e0",
+    "baseline": {
+      "short_31ms": 52.02427056510582,
+      "medium_125ms": 30.992402331153848,
+      "long_500ms": 27.095506284963292
+    },
+    "gap": {
+      "short_31ms": 52.02427056510582,
+      "medium_125ms": 30.992402331153848,
+      "long_500ms": 27.095506284963292
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_257",
+    "input_sha256": "e4a5adc5a3f94bedcae0491671048f1fdff4e5e2f967a84761ea20b6db94f794",
+    "baseline": {
+      "short_31ms": 63.6222281169085,
+      "medium_125ms": 27.74397314133676,
+      "long_500ms": 28.6162935460936
+    },
+    "gap": {
+      "short_31ms": 63.6222281169085,
+      "medium_125ms": 27.74397314133676,
+      "long_500ms": 28.6162935460936
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_258",
+    "input_sha256": "458ea626638eafb8ad8c3265eb772dc479923b21addf83b4ca2ded0eb1be13fb",
+    "baseline": {
+      "short_31ms": 66.88202248128638,
+      "medium_125ms": 23.138585500044147,
+      "long_500ms": 30.636568400357287
+    },
+    "gap": {
+      "short_31ms": 66.88202248128638,
+      "medium_125ms": 23.138585500044147,
+      "long_500ms": 30.636568400357287
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_259",
+    "input_sha256": "0603883e8fff9d7904a8312b1e644c93abbd1536ee8c55f0cf852092757db8d6",
+    "baseline": {
+      "short_31ms": 62.469176891750294,
+      "medium_125ms": 27.60799711236651,
+      "long_500ms": 84.20932541393063
+    },
+    "gap": {
+      "short_31ms": 62.469176891750294,
+      "medium_125ms": 27.60799711236651,
+      "long_500ms": 84.20932541393063
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_260",
+    "input_sha256": "f07a7239f7d951e2a885399b50f6de7d703f8033c971de2d4bbfeab1ca0c03e6",
+    "baseline": {
+      "short_31ms": 67.36391568871878,
+      "medium_125ms": 35.17737062268933,
+      "long_500ms": 34.23768883040018
+    },
+    "gap": {
+      "short_31ms": 67.36391568871878,
+      "medium_125ms": 35.17737062268933,
+      "long_500ms": 34.23768883040018
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_261",
+    "input_sha256": "f4237531d54c0a96ce8120c0a0027b3b898b8ba70f0056ed43362eeb1998e443",
+    "baseline": {
+      "short_31ms": 61.04080335321066,
+      "medium_125ms": 32.280066239350504,
+      "long_500ms": 33.64920585639899
+    },
+    "gap": {
+      "short_31ms": 61.04080335321066,
+      "medium_125ms": 32.280066239350504,
+      "long_500ms": 33.64920585639899
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_262",
+    "input_sha256": "761a54c47aada4b458af9ace54c925b836d5be3cb0d7fb944f25ae36e5038e39",
+    "baseline": {
+      "short_31ms": 42.0549352388021,
+      "medium_125ms": 28.201379397909044,
+      "long_500ms": 20.564679769817232
+    },
+    "gap": {
+      "short_31ms": 42.0549352388021,
+      "medium_125ms": 28.201379397909044,
+      "long_500ms": 20.564679769817232
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_263",
+    "input_sha256": "4f9fc3df56dd3fbddc19fbe0e86b090a2000a4decb868ac0d3dcc455dd84099f",
+    "baseline": {
+      "short_31ms": 64.17297315918286,
+      "medium_125ms": 36.0644770216942,
+      "long_500ms": 34.05076597942121
+    },
+    "gap": {
+      "short_31ms": 64.17297315918286,
+      "medium_125ms": 36.0644770216942,
+      "long_500ms": 34.05076597942121
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_264",
+    "input_sha256": "5f943a2ec6688b0e94ecc40eafc3d46809c7ab2474fa35091ec4bd73d33b6069",
+    "baseline": {
+      "short_31ms": 36.06703926262441,
+      "medium_125ms": 25.316799084099944,
+      "long_500ms": 20.97745873664896
+    },
+    "gap": {
+      "short_31ms": 36.06703926262441,
+      "medium_125ms": 25.316799084099944,
+      "long_500ms": 45.584037820418395
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_265",
+    "input_sha256": "d4c51bb72c274f2e1ef8ae5b71e00381b7856a9885ae87f7a0f0052d6facb3b7",
+    "baseline": {
+      "short_31ms": 95.26788737530252,
+      "medium_125ms": 29.50203319354376,
+      "long_500ms": 40.21872102011537
+    },
+    "gap": {
+      "short_31ms": 95.26788737530252,
+      "medium_125ms": 29.50203319354376,
+      "long_500ms": 40.21872102011537
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_266",
+    "input_sha256": "17c3429c13aa88bb915467f422dca512399acabf446c680d1e4d9cab586766ac",
+    "baseline": {
+      "short_31ms": 51.20091709086661,
+      "medium_125ms": 61.919786529222876,
+      "long_500ms": 29.402433853803025
+    },
+    "gap": {
+      "short_31ms": 51.20091709086661,
+      "medium_125ms": 61.919786529222876,
+      "long_500ms": 41.3445897315644
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_267",
+    "input_sha256": "57576c0d8628658c91fdb81ef2e4557b5c0acb24cd08ad15d99aa1d67dd5eadb",
+    "baseline": {
+      "short_31ms": 66.23285658235491,
+      "medium_125ms": 33.13605105702041,
+      "long_500ms": 49.90122981339044
+    },
+    "gap": {
+      "short_31ms": 66.23285658235491,
+      "medium_125ms": 33.13605105702041,
+      "long_500ms": 49.90122981339044
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_268",
+    "input_sha256": "f17ebd17c7e68ccd646275e235d017769292138138f622841d80ab521e578360",
+    "baseline": {
+      "short_31ms": 47.92800449129546,
+      "medium_125ms": 28.9527297073019,
+      "long_500ms": 28.047619090863403
+    },
+    "gap": {
+      "short_31ms": 47.92800449129546,
+      "medium_125ms": 28.9527297073019,
+      "long_500ms": 28.047619090863403
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_269",
+    "input_sha256": "dc9233823c1d868e7e30a519d0e9d8a7c67410b7aa83b4642a22e52e7c9d6235",
+    "baseline": {
+      "short_31ms": 70.00919208568264,
+      "medium_125ms": 28.940423737304126,
+      "long_500ms": 28.41722731821623
+    },
+    "gap": {
+      "short_31ms": 70.00919208568264,
+      "medium_125ms": 28.940423737304126,
+      "long_500ms": 28.41722731821623
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_270",
+    "input_sha256": "3cb0e7a7ff4d25f161a27fa22021626003168aa7699b0ff3f6994b233a77e27e",
+    "baseline": {
+      "short_31ms": 99.81454739460449,
+      "medium_125ms": 28.218486945223518,
+      "long_500ms": 28.093119679909286
+    },
+    "gap": {
+      "short_31ms": 99.81454739460449,
+      "medium_125ms": 29.715244153147033,
+      "long_500ms": 28.093119679909286
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_271",
+    "input_sha256": "b7fbe37cbfaa396c09eaaee2104d590524c698fa065a2f97d8919e050e5b05cb",
+    "baseline": {
+      "short_31ms": 69.42333400455546,
+      "medium_125ms": 32.2280236687643,
+      "long_500ms": 25.560378788652134
+    },
+    "gap": {
+      "short_31ms": 69.42333400455546,
+      "medium_125ms": 32.2280236687643,
+      "long_500ms": 25.560378788652134
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_272",
+    "input_sha256": "e9050444439aa4bdb14464fdd50285f0d0b595badeb3c163c136897a6d8a0b56",
+    "baseline": {
+      "short_31ms": 113.8109731249654,
+      "medium_125ms": 42.571482357862564,
+      "long_500ms": 29.485938288945807
+    },
+    "gap": {
+      "short_31ms": 113.8109731249654,
+      "medium_125ms": 42.571482357862564,
+      "long_500ms": 29.485938288945807
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_273",
+    "input_sha256": "03156d66f064a287682a62a619df9844a35e598ec3c4a1c791ac9d24223eaadd",
+    "baseline": {
+      "short_31ms": 71.90392034231832,
+      "medium_125ms": 29.733168574011287,
+      "long_500ms": 65.83355831198179
+    },
+    "gap": {
+      "short_31ms": 71.90392034231832,
+      "medium_125ms": 29.733168574011287,
+      "long_500ms": 65.83355831198179
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_274",
+    "input_sha256": "17e2a886a83544143058cba141475fd5cb6e967bfd7fc36e84e88bd1ead78b06",
+    "baseline": {
+      "short_31ms": 162.8814296920989,
+      "medium_125ms": 26.340615848714606,
+      "long_500ms": 17.46030372664545
+    },
+    "gap": {
+      "short_31ms": 162.8814296920989,
+      "medium_125ms": 26.340615848714606,
+      "long_500ms": 17.46030372664545
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_275",
+    "input_sha256": "02a65ae1c5ca989e01951f964685bad729a69dac6d71531c46530216b7584c3b",
+    "baseline": {
+      "short_31ms": 31.71957612716615,
+      "medium_125ms": 27.80280208721851,
+      "long_500ms": 22.748403107169356
+    },
+    "gap": {
+      "short_31ms": 31.71957612716615,
+      "medium_125ms": 27.80280208721851,
+      "long_500ms": 25.365066975650212
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_276",
+    "input_sha256": "c75d38934fc0e9a0724f1f8d19c1576b911dd24a412169f4c9afe7c6a6565fea",
+    "baseline": {
+      "short_31ms": 65.93010647969052,
+      "medium_125ms": 39.17007536386529,
+      "long_500ms": 33.42987785561654
+    },
+    "gap": {
+      "short_31ms": 65.93010647969052,
+      "medium_125ms": 39.17007536386529,
+      "long_500ms": 33.42987785561654
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_277",
+    "input_sha256": "a97599597b6b26f6a31a241237b21adb4f738fef96110cd121986bc2bc61566c",
+    "baseline": {
+      "short_31ms": 29.297408295522267,
+      "medium_125ms": 36.34202714102516,
+      "long_500ms": 46.677294991390085
+    },
+    "gap": {
+      "short_31ms": 29.297408295522267,
+      "medium_125ms": 40.68066014790957,
+      "long_500ms": 46.677294991390085
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_278",
+    "input_sha256": "e197cada047441cd5c79c22687ae4131bfd0c4d5bd8af2521ff3aaa03dc19416",
+    "baseline": {
+      "short_31ms": 78.46428356547094,
+      "medium_125ms": 32.57219815691871,
+      "long_500ms": 34.63071609449422
+    },
+    "gap": {
+      "short_31ms": 78.46428356547094,
+      "medium_125ms": 32.57219815691871,
+      "long_500ms": 52.38874980319438
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_279",
+    "input_sha256": "5744e0185016009c0bb87d53b20c8828268ad7b8594fc3f241f77d6404150345",
+    "baseline": {
+      "short_31ms": 59.58057638639575,
+      "medium_125ms": 28.866723132365884,
+      "long_500ms": 33.25085788483187
+    },
+    "gap": {
+      "short_31ms": 65.9084692061233,
+      "medium_125ms": 28.866723132365884,
+      "long_500ms": 33.25085788483187
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_280",
+    "input_sha256": "ffa356184fea0d7ebade2c18232af58d37b556c87cfb16d8a9bec12e7d5489d8",
+    "baseline": {
+      "short_31ms": 64.8626857777601,
+      "medium_125ms": 28.734371081294334,
+      "long_500ms": 26.23218327530646
+    },
+    "gap": {
+      "short_31ms": 64.8626857777601,
+      "medium_125ms": 28.734371081294334,
+      "long_500ms": 26.23218327530646
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_281",
+    "input_sha256": "e09e103a31eb522db748ddbdf1a318c08ea11459c770d4dc9c48393ef28bd61d",
+    "baseline": {
+      "short_31ms": 43.80718734001863,
+      "medium_125ms": 31.577699002537923,
+      "long_500ms": 42.745354551297545
+    },
+    "gap": {
+      "short_31ms": 44.57176898740055,
+      "medium_125ms": 31.577699002537923,
+      "long_500ms": 42.745354551297545
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_282",
+    "input_sha256": "cfcbb00e14a21d3d285b64b35dbd6cc2b6439dc2ead1f246bebb199cc6ff4909",
+    "baseline": {
+      "short_31ms": 75.6057815279444,
+      "medium_125ms": 39.94967409304883,
+      "long_500ms": 33.626558535034405
+    },
+    "gap": {
+      "short_31ms": 75.6057815279444,
+      "medium_125ms": 39.94967409304883,
+      "long_500ms": 33.626558535034405
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_283",
+    "input_sha256": "cb855ebf63dbd1b65ff91e06ddf548e285dc3f33992578ca75fd6e8ef37247e8",
+    "baseline": {
+      "short_31ms": 128.72257161304339,
+      "medium_125ms": 39.89618818756249,
+      "long_500ms": 49.85582263698643
+    },
+    "gap": {
+      "short_31ms": 128.72257161304339,
+      "medium_125ms": 39.89618818756249,
+      "long_500ms": 49.85582263698643
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_284",
+    "input_sha256": "2decfd523986d2e4df23ed70f7e0d265832fb212518376deb2c6421d44f04257",
+    "baseline": {
+      "short_31ms": 96.07549350305882,
+      "medium_125ms": 32.9826210321129,
+      "long_500ms": 17.528877494666375
+    },
+    "gap": {
+      "short_31ms": 96.07549350305882,
+      "medium_125ms": 32.9826210321129,
+      "long_500ms": 23.280231671095507
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_285",
+    "input_sha256": "d5a9976f4ea1a6ca1a79a5b7735b1158af45613bb9d672e91bafbcf4f7dea485",
+    "baseline": {
+      "short_31ms": 72.42538460805474,
+      "medium_125ms": 41.74923598529593,
+      "long_500ms": 28.85068763842769
+    },
+    "gap": {
+      "short_31ms": 78.62547504780443,
+      "medium_125ms": 41.74923598529593,
+      "long_500ms": 28.85068763842769
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_286",
+    "input_sha256": "017f6a4f652c2471cde2b3d8c1708f619cd8ebe3531170391c63866d11cdf00d",
+    "baseline": {
+      "short_31ms": 78.94358722434094,
+      "medium_125ms": 20.96894796530389,
+      "long_500ms": 17.58126253808287
+    },
+    "gap": {
+      "short_31ms": 78.94358722434094,
+      "medium_125ms": 26.26465761144262,
+      "long_500ms": 17.58126253808287
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_287",
+    "input_sha256": "3da2176431bbc5626bb5466572228a4ae7dc24d19f7da74dff7164b5efbd8f24",
+    "baseline": {
+      "short_31ms": 64.72914864303078,
+      "medium_125ms": 35.49451682736483,
+      "long_500ms": 37.61483821273123
+    },
+    "gap": {
+      "short_31ms": 64.72914864303078,
+      "medium_125ms": 48.00518101776084,
+      "long_500ms": 37.61483821273123
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_288",
+    "input_sha256": "0d98eb15921f7338b9fbf24ec3c343bf307335ffab9e3b7e32caebb8c8bd98cc",
+    "baseline": {
+      "short_31ms": 47.97452562016332,
+      "medium_125ms": 50.35256127884115,
+      "long_500ms": 31.042045311940583
+    },
+    "gap": {
+      "short_31ms": 47.97452562016332,
+      "medium_125ms": 50.35256127884115,
+      "long_500ms": 31.042045311940583
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_289",
+    "input_sha256": "2e728f8994fa538a479f7feb9f32303164fcb3367347b58c7e574fcfe38ee23f",
+    "baseline": {
+      "short_31ms": 47.124202645348234,
+      "medium_125ms": 28.20418380176282,
+      "long_500ms": 34.24361171231124
+    },
+    "gap": {
+      "short_31ms": 47.124202645348234,
+      "medium_125ms": 28.20418380176282,
+      "long_500ms": 34.24361171231124
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_290",
+    "input_sha256": "2d1a4b540b1bb75634393f1e1caba8b05bfbdb8974e9dbf8709f3b94d4a4c1e9",
+    "baseline": {
+      "short_31ms": 50.4990065809378,
+      "medium_125ms": 34.95115978508675,
+      "long_500ms": 17.894565042145476
+    },
+    "gap": {
+      "short_31ms": 50.4990065809378,
+      "medium_125ms": 34.95115978508675,
+      "long_500ms": 25.06085059122215
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_291",
+    "input_sha256": "a9b5771fc345f0d2ae7aba89b3d8ae907ae44bd1f77a629f3935f41fca21dc5c",
+    "baseline": {
+      "short_31ms": 43.02766090462973,
+      "medium_125ms": 32.80101037683368,
+      "long_500ms": 37.97811519666784
+    },
+    "gap": {
+      "short_31ms": 43.02766090462973,
+      "medium_125ms": 32.80101037683368,
+      "long_500ms": 37.97811519666784
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_292",
+    "input_sha256": "80824401e8807d5590e2ceb6c5ffb3c3992fdb9fd5c8cb18ccd6c3ed591075c1",
+    "baseline": {
+      "short_31ms": 65.3670384130974,
+      "medium_125ms": 27.919882462619974,
+      "long_500ms": 30.35331889602074
+    },
+    "gap": {
+      "short_31ms": 65.3670384130974,
+      "medium_125ms": 27.919882462619974,
+      "long_500ms": 30.35331889602074
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_293",
+    "input_sha256": "d05a312aa1894d6b023f44792d0c6e6c4feed9f8ca64f21b7b47c9b4083c18b5",
+    "baseline": {
+      "short_31ms": 60.824507229579666,
+      "medium_125ms": 30.11812578911633,
+      "long_500ms": 40.68843906781455
+    },
+    "gap": {
+      "short_31ms": 60.824507229579666,
+      "medium_125ms": 31.69208331049996,
+      "long_500ms": 40.68843906781455
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_294",
+    "input_sha256": "17f3fcb6d2e28b5d567dbe5e26092b9f3faa015d5cfc29b0b0b6458650043091",
+    "baseline": {
+      "short_31ms": 80.19647869101755,
+      "medium_125ms": 35.089997461245915,
+      "long_500ms": 31.201280402334255
+    },
+    "gap": {
+      "short_31ms": 80.19647869101755,
+      "medium_125ms": 49.89215750587983,
+      "long_500ms": 31.201280402334255
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_295",
+    "input_sha256": "fd6ba709ab829c06a9a873dc4fbb52fec7d0342edc3e5090316ef3528c537f5c",
+    "baseline": {
+      "short_31ms": 66.64005776213956,
+      "medium_125ms": 26.723826854403473,
+      "long_500ms": 26.292663463776766
+    },
+    "gap": {
+      "short_31ms": 66.64005776213956,
+      "medium_125ms": 26.723826854403473,
+      "long_500ms": 26.292663463776766
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_296",
+    "input_sha256": "da7441e6230b0ea68937f1d238d3ff5e8da40eaf301581ebaf1a53f350ff01d0",
+    "baseline": {
+      "short_31ms": 45.530757107527506,
+      "medium_125ms": 37.766902703240014,
+      "long_500ms": 36.292692876036526
+    },
+    "gap": {
+      "short_31ms": 56.240793259480654,
+      "medium_125ms": 37.766902703240014,
+      "long_500ms": 36.292692876036526
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_297",
+    "input_sha256": "9ba81b265f663066326c654bef3a419287e68d2062283b39cbf87c60885b4f9d",
+    "baseline": {
+      "short_31ms": 56.88210770873373,
+      "medium_125ms": 32.49518797267775,
+      "long_500ms": 22.217557640839075
+    },
+    "gap": {
+      "short_31ms": 60.51679108515373,
+      "medium_125ms": 32.49518797267775,
+      "long_500ms": 26.750382838661366
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_298",
+    "input_sha256": "e284ee9df5553a8f414a326f73b0bb7a11e394e739fca37afc62f31d2b2ae81b",
+    "baseline": {
+      "short_31ms": 90.75780335116168,
+      "medium_125ms": 55.05786669805525,
+      "long_500ms": 38.470246299310446
+    },
+    "gap": {
+      "short_31ms": 90.75780335116168,
+      "medium_125ms": 55.05786669805525,
+      "long_500ms": 38.470246299310446
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_299",
+    "input_sha256": "71764224e0716b4e7f5b2d5a80c36e0b635029a4c6f64769e4255f2489d1d121",
+    "baseline": {
+      "short_31ms": 56.05282750209244,
+      "medium_125ms": 26.627842255276505,
+      "long_500ms": 29.330136512790073
+    },
+    "gap": {
+      "short_31ms": 56.05282750209244,
+      "medium_125ms": 35.18706771839405,
+      "long_500ms": 36.76906267026954
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_300",
+    "input_sha256": "b0b941e86aa5205b5a79fe52a1c25598a1259f56ef120fd5939d301134de1fb5",
+    "baseline": {
+      "short_31ms": 62.49946009335954,
+      "medium_125ms": 35.964761707299466,
+      "long_500ms": 41.89303249880311
+    },
+    "gap": {
+      "short_31ms": 62.49946009335954,
+      "medium_125ms": 35.964761707299466,
+      "long_500ms": 41.89303249880311
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_301",
+    "input_sha256": "c96b3338802ffdc5343623067dec2a169d415fe0c8691f7e3a1a4dc8eaca4514",
+    "baseline": {
+      "short_31ms": 55.12974301014181,
+      "medium_125ms": 20.112798531893716,
+      "long_500ms": 26.31591074087512
+    },
+    "gap": {
+      "short_31ms": 55.12974301014181,
+      "medium_125ms": 20.112798531893716,
+      "long_500ms": 26.31591074087512
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_302",
+    "input_sha256": "d4f182e57fdd78256502e0bf683de23768cfc4f6ed5a54ef34e5ed74ab1d0346",
+    "baseline": {
+      "short_31ms": 47.40858889666236,
+      "medium_125ms": 25.98063932116992,
+      "long_500ms": 22.237084190609956
+    },
+    "gap": {
+      "short_31ms": 47.40858889666236,
+      "medium_125ms": 25.98063932116992,
+      "long_500ms": 22.237084190609956
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_303",
+    "input_sha256": "4c9610fa10eca55dd2e9da62441dd56e780a05585350257f52554c6c20b10224",
+    "baseline": {
+      "short_31ms": 51.406564768325694,
+      "medium_125ms": 39.670657377891764,
+      "long_500ms": 26.52898639730452
+    },
+    "gap": {
+      "short_31ms": 51.406564768325694,
+      "medium_125ms": 39.670657377891764,
+      "long_500ms": 26.52898639730452
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_304",
+    "input_sha256": "f481028056d0b767a74155999db06e83f61955397e5e3fd167b07d2b9096a90d",
+    "baseline": {
+      "short_31ms": 47.11018467059396,
+      "medium_125ms": 25.58154808390149,
+      "long_500ms": 52.22184015925474
+    },
+    "gap": {
+      "short_31ms": 47.11018467059396,
+      "medium_125ms": 32.336015550450256,
+      "long_500ms": 52.22184015925474
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_305",
+    "input_sha256": "9b32f479daead5b9ca88e5a9253cea011da968e0e9d223a64c4f917d293c969f",
+    "baseline": {
+      "short_31ms": 53.171988652440376,
+      "medium_125ms": 46.03057201360637,
+      "long_500ms": 34.461044199141625
+    },
+    "gap": {
+      "short_31ms": 53.171988652440376,
+      "medium_125ms": 46.03057201360637,
+      "long_500ms": 34.461044199141625
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_306",
+    "input_sha256": "6b0557beed760dcaa4e6e4290c7314efaf733693c428ee902976de6b66f25b61",
+    "baseline": {
+      "short_31ms": 47.70696475233729,
+      "medium_125ms": 23.02582821766838,
+      "long_500ms": 28.075902421861343
+    },
+    "gap": {
+      "short_31ms": 47.70696475233729,
+      "medium_125ms": 26.09303689821635,
+      "long_500ms": 28.075902421861343
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_307",
+    "input_sha256": "27ac29ee7fa490044106ae056908c8e5768ff41368deb883eccbaf758d24487e",
+    "baseline": {
+      "short_31ms": 52.911160618588696,
+      "medium_125ms": 37.1567100425679,
+      "long_500ms": 53.67780054765182
+    },
+    "gap": {
+      "short_31ms": 52.911160618588696,
+      "medium_125ms": 37.1567100425679,
+      "long_500ms": 53.67780054765182
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_308",
+    "input_sha256": "65368413142a2ed7180473d51597b46dae55ccb6001fb9e0b0b04c8b76dc49ea",
+    "baseline": {
+      "short_31ms": 64.85177616053332,
+      "medium_125ms": 25.412359778741543,
+      "long_500ms": 22.568642438367146
+    },
+    "gap": {
+      "short_31ms": 64.85177616053332,
+      "medium_125ms": 28.085721268384674,
+      "long_500ms": 26.205085447129893
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_309",
+    "input_sha256": "e9cd60628d82e29e3422b196e938856f9a3b4ff9ae1d958889850be54cb9bc03",
+    "baseline": {
+      "short_31ms": 58.88029537819907,
+      "medium_125ms": 27.62264909821714,
+      "long_500ms": 19.594316026554772
+    },
+    "gap": {
+      "short_31ms": 58.88029537819907,
+      "medium_125ms": 27.62264909821714,
+      "long_500ms": 19.594316026554772
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_310",
+    "input_sha256": "1aa4f1212e44ca08a7c38161875ac365bf4255c24ab4eb63c3307e4af5744dca",
+    "baseline": {
+      "short_31ms": 78.3462693590191,
+      "medium_125ms": 22.6543297568656,
+      "long_500ms": 65.63098421875466
+    },
+    "gap": {
+      "short_31ms": 78.3462693590191,
+      "medium_125ms": 22.6543297568656,
+      "long_500ms": 65.63098421875466
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_311",
+    "input_sha256": "2fbeb2ac3fe743862291035e7afa89b3ab08c857eee7fc3b0290f07220272890",
+    "baseline": {
+      "short_31ms": 40.688942732779395,
+      "medium_125ms": 32.163474089972844,
+      "long_500ms": 46.72112486917941
+    },
+    "gap": {
+      "short_31ms": 40.688942732779395,
+      "medium_125ms": 35.60517793213084,
+      "long_500ms": 46.72112486917941
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_312",
+    "input_sha256": "6483b2447c82f7f84376f622b56b54d702a95e1300764952980b589e3c63d75f",
+    "baseline": {
+      "short_31ms": 56.97189966700075,
+      "medium_125ms": 27.553711389036188,
+      "long_500ms": 32.3755710084082
+    },
+    "gap": {
+      "short_31ms": 56.97189966700075,
+      "medium_125ms": 34.30492136858972,
+      "long_500ms": 32.3755710084082
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_313",
+    "input_sha256": "d55c16b7ae09553bd061f06fc6d40a642e47b1d96cfe68a72aab7dca961527c7",
+    "baseline": {
+      "short_31ms": 86.94025084002176,
+      "medium_125ms": 26.80478557502977,
+      "long_500ms": 34.84301490887374
+    },
+    "gap": {
+      "short_31ms": 86.94025084002176,
+      "medium_125ms": 26.80478557502977,
+      "long_500ms": 34.84301490887374
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_314",
+    "input_sha256": "0753bdabdded2f1d537af80b2ad86b356ce5aecc238e76eb744860cb108c1449",
+    "baseline": {
+      "short_31ms": 80.29417035594443,
+      "medium_125ms": 23.638087121152594,
+      "long_500ms": 37.93283362652815
+    },
+    "gap": {
+      "short_31ms": 80.29417035594443,
+      "medium_125ms": 26.656573368451383,
+      "long_500ms": 37.93283362652815
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_315",
+    "input_sha256": "c8b0bb690fe373bcacec8cd2131b0771d134e9eb1892cc2389b1771bf15d50e0",
+    "baseline": {
+      "short_31ms": 55.52212080311972,
+      "medium_125ms": 29.7744287260625,
+      "long_500ms": 26.20743068993662
+    },
+    "gap": {
+      "short_31ms": 55.52212080311972,
+      "medium_125ms": 41.01517225060405,
+      "long_500ms": 26.20743068993662
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_316",
+    "input_sha256": "3a9c69f6c32faca9dc9ff7e451b6d0aa80301a9c4310b0a609e0b58c25ed6846",
+    "baseline": {
+      "short_31ms": 55.49153696068035,
+      "medium_125ms": 41.445413359081286,
+      "long_500ms": 31.52059638012761
+    },
+    "gap": {
+      "short_31ms": 55.49153696068035,
+      "medium_125ms": 41.445413359081286,
+      "long_500ms": 31.52059638012761
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_317",
+    "input_sha256": "ba0dc526df5339c17465fd1515cfab77ee13cde7e636943290da47123c26fba9",
+    "baseline": {
+      "short_31ms": 61.007607329795825,
+      "medium_125ms": 34.01567336126128,
+      "long_500ms": 21.28217209083639
+    },
+    "gap": {
+      "short_31ms": 67.2564785778398,
+      "medium_125ms": 34.01567336126128,
+      "long_500ms": 37.34781030301181
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_318",
+    "input_sha256": "5c79c5d0b0725683d3bcedc799f781af758c8ed738a40be5b61e322745c42e4f",
+    "baseline": {
+      "short_31ms": 47.39858645162718,
+      "medium_125ms": 20.108715171326978,
+      "long_500ms": 28.440972093056867
+    },
+    "gap": {
+      "short_31ms": 47.39858645162718,
+      "medium_125ms": 20.108715171326978,
+      "long_500ms": 28.440972093056867
+    }
+  },
+  {
+    "sample_id": "synthetic_7302_cal_319",
+    "input_sha256": "0bb7cad0a95e9ccd4e6ee45964a281ea33e05e5e30462d310a6373ef6acd566a",
+    "baseline": {
+      "short_31ms": 53.134106630454944,
+      "medium_125ms": 61.22154626570613,
+      "long_500ms": 47.892105265950654
+    },
+    "gap": {
+      "short_31ms": 53.134106630454944,
+      "medium_125ms": 61.22154626570613,
+      "long_500ms": 47.892105265950654
+    }
+  }
+]

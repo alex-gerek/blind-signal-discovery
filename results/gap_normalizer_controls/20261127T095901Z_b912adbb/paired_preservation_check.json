@@ -1,0 +1,37 @@
+{
+  "status": "VERIFIED",
+  "checks": [
+    {
+      "case": "H1",
+      "paired_discordance_and_post_veto_counts": "PASS"
+    },
+    {
+      "case": "L1",
+      "paired_discordance_and_post_veto_counts": "PASS"
+    },
+    {
+      "case": "synthetic_7301",
+      "paired_discordance_and_post_veto_counts": "PASS"
+    },
+    {
+      "case": "synthetic_7302",
+      "paired_discordance_and_post_veto_counts": "PASS"
+    },
+    {
+      "case": "synthetic_7303",
+      "paired_discordance_and_post_veto_counts": "PASS"
+    }
+  ],
+  "original_O2_files": [
+    {
+      "site": "H1",
+      "sha256_after_run_matches_parent": true
+    },
+    {
+      "site": "L1",
+      "sha256_after_run_matches_parent": true
+    }
+  ],
+  "scope": "Saved paired decision and post-veto counts; post-run hashes of the two authorized O2 inputs; no detector run or O3 access",
+  "prior_write_failure": "An initial supplemental verification artifact write was denied by the workspace filesystem sandbox because D: write escalation was omitted. No experiment was rerun or original artifact overwritten; checks and new artifact write were repeated with the authorized filesystem permission."
+}

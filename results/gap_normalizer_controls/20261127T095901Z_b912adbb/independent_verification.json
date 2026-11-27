@@ -1,0 +1,12 @@
+{
+  "status": "VERIFIED",
+  "calibrations_checked": 10,
+  "arm_window_decisions_checked": 1960,
+  "accepted_candidates_checked": 362,
+  "synthetic_input_arrays_regenerated": 2100,
+  "normalizer_scale_records_checked": 1440,
+  "normalizer_aggregates_checked": 48,
+  "normalizer_maps_independently_recomputed": 48,
+  "normalizer_identity_scale_records": 360,
+  "scope": "Independent saved calibration/decision/summary checks and deterministic synthetic input regeneration; independent manual normalization equations on predefined 48-map subset; no real waveform/O3 reads"
+}
