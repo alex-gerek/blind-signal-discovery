@@ -16,7 +16,7 @@
   "npz_traces_remote": false,
   "file_sha256": {
     ".gitignore": "e1fee4916491c887d222752a31014f399f44d28e2cee4c80dc89e37796bf8474",
-    ".gitattributes": "5863352ac3c1eca702da5aa993edc3061afa4dea0454934b185e6191695e3860",
+    ".gitattributes": "690c674dabf3598dfd42ab1735f14bf66847db906846eae4023dd1ae8828ffc6",
     "docs/RESEARCH_HISTORY.md": "3382467b6f4ed67ac304f5336c633cb077c0e1b2edd0bc1c6f10af69d5b3de1b",
     "docs/BLIND_TWO_TONE_EXPLORATORY_FINDINGS_2026-11-27.md": "22c26263734e5957d27158efc0a56bdfd86c61e882eaff195e50259310f4335a",
     "docs/TWO_OSCILLATION_ANOMALY_FINDINGS_2026-11-27.md": "9bd67d7a1615d688f7e55609718baaaef9089df44ee315bf5540cd79f10f6ba1",
@@ -411,5 +411,6 @@
     "results/blind_two_tone_gap2_review/20261127T193434Z_bf2d62ac/group_counts.csv": "98fde9e620e7a07ece8fb5657eaaef4cd97e549cd4f3994094cf8794280b1ae3",
     "results/blind_two_tone_gap2_review/20261127T193434Z_bf2d62ac/report.md": "9be98cb19776ed40f4954595251e6423dfc4db8826a6128b4e0f911b54c95ad5"
   },
-  "whitespace_note": "Preserved one trailing blank line in the immutable archived blind-pilot report; check ignores blank-at-EOF only, not other whitespace errors."
+  "whitespace_note": "Preserved one trailing blank line in the immutable archived blind-pilot report; check ignores blank-at-EOF only, not other whitespace errors.",
+  "publication_check_correction": "First exact-index check stopped on checkpoint-document CRLF normalization; shell continued to the commit. Before push, protect checkpoint bytes with -text, verify all396index blobs, and preserve correction in a follow-up commit."
 }
