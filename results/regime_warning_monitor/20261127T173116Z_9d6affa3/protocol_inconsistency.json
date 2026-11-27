@@ -1,0 +1,250 @@
+{
+  "status": "PROTOCOL_INCONSISTENCY_CONFIRMED",
+  "issue": "The pre-run protocol requires both alternating families within each distinct schedule and identical injections at shared indices; these conditions conflict at344,704,784. The driver follows explicit per-case alternation and keyed per-family RNG.",
+  "measurement_action": "Keep original measurements and pre-run protocol unchanged; no retuning or rerun.",
+  "impact": "Each transient case remains a paired comparison against its stable noise base, but sparse-versus-repeated differences cannot be attributed solely to repetition cadence.",
+  "not_affected": [
+    "stable false-warning counts",
+    "level/line latency",
+    "persistent-line waveform identity",
+    "numeric verifier",
+    "search/candidate preservation"
+  ],
+  "records": [
+    {
+      "seed": 20101,
+      "shared_signal_windows": [
+        {
+          "index": 304,
+          "sparse_family": "chirp",
+          "repeated_family": "chirp",
+          "same_input": true,
+          "same_base_noise": true
+        },
+        {
+          "index": 344,
+          "sparse_family": "chirp",
+          "repeated_family": "burst",
+          "same_input": false,
+          "same_base_noise": true
+        },
+        {
+          "index": 384,
+          "sparse_family": "chirp",
+          "repeated_family": "chirp",
+          "same_input": true,
+          "same_base_noise": true
+        },
+        {
+          "index": 704,
+          "sparse_family": "burst",
+          "repeated_family": "chirp",
+          "same_input": false,
+          "same_base_noise": true
+        },
+        {
+          "index": 744,
+          "sparse_family": "burst",
+          "repeated_family": "burst",
+          "same_input": true,
+          "same_base_noise": true
+        },
+        {
+          "index": 784,
+          "sparse_family": "burst",
+          "repeated_family": "chirp",
+          "same_input": false,
+          "same_base_noise": true
+        }
+      ]
+    },
+    {
+      "seed": 20102,
+      "shared_signal_windows": [
+        {
+          "index": 304,
+          "sparse_family": "chirp",
+          "repeated_family": "chirp",
+          "same_input": true,
+          "same_base_noise": true
+        },
+        {
+          "index": 344,
+          "sparse_family": "chirp",
+          "repeated_family": "burst",
+          "same_input": false,
+          "same_base_noise": true
+        },
+        {
+          "index": 384,
+          "sparse_family": "chirp",
+          "repeated_family": "chirp",
+          "same_input": true,
+          "same_base_noise": true
+        },
+        {
+          "index": 704,
+          "sparse_family": "burst",
+          "repeated_family": "chirp",
+          "same_input": false,
+          "same_base_noise": true
+        },
+        {
+          "index": 744,
+          "sparse_family": "burst",
+          "repeated_family": "burst",
+          "same_input": true,
+          "same_base_noise": true
+        },
+        {
+          "index": 784,
+          "sparse_family": "burst",
+          "repeated_family": "chirp",
+          "same_input": false,
+          "same_base_noise": true
+        }
+      ]
+    },
+    {
+      "seed": 20103,
+      "shared_signal_windows": [
+        {
+          "index": 304,
+          "sparse_family": "chirp",
+          "repeated_family": "chirp",
+          "same_input": true,
+          "same_base_noise": true
+        },
+        {
+          "index": 344,
+          "sparse_family": "chirp",
+          "repeated_family": "burst",
+          "same_input": false,
+          "same_base_noise": true
+        },
+        {
+          "index": 384,
+          "sparse_family": "chirp",
+          "repeated_family": "chirp",
+          "same_input": true,
+          "same_base_noise": true
+        },
+        {
+          "index": 704,
+          "sparse_family": "burst",
+          "repeated_family": "chirp",
+          "same_input": false,
+          "same_base_noise": true
+        },
+        {
+          "index": 744,
+          "sparse_family": "burst",
+          "repeated_family": "burst",
+          "same_input": true,
+          "same_base_noise": true
+        },
+        {
+          "index": 784,
+          "sparse_family": "burst",
+          "repeated_family": "chirp",
+          "same_input": false,
+          "same_base_noise": true
+        }
+      ]
+    },
+    {
+      "seed": 20104,
+      "shared_signal_windows": [
+        {
+          "index": 304,
+          "sparse_family": "chirp",
+          "repeated_family": "chirp",
+          "same_input": true,
+          "same_base_noise": true
+        },
+        {
+          "index": 344,
+          "sparse_family": "chirp",
+          "repeated_family": "burst",
+          "same_input": false,
+          "same_base_noise": true
+        },
+        {
+          "index": 384,
+          "sparse_family": "chirp",
+          "repeated_family": "chirp",
+          "same_input": true,
+          "same_base_noise": true
+        },
+        {
+          "index": 704,
+          "sparse_family": "burst",
+          "repeated_family": "chirp",
+          "same_input": false,
+          "same_base_noise": true
+        },
+        {
+          "index": 744,
+          "sparse_family": "burst",
+          "repeated_family": "burst",
+          "same_input": true,
+          "same_base_noise": true
+        },
+        {
+          "index": 784,
+          "sparse_family": "burst",
+          "repeated_family": "chirp",
+          "same_input": false,
+          "same_base_noise": true
+        }
+      ]
+    },
+    {
+      "seed": 20105,
+      "shared_signal_windows": [
+        {
+          "index": 304,
+          "sparse_family": "chirp",
+          "repeated_family": "chirp",
+          "same_input": true,
+          "same_base_noise": true
+        },
+        {
+          "index": 344,
+          "sparse_family": "chirp",
+          "repeated_family": "burst",
+          "same_input": false,
+          "same_base_noise": true
+        },
+        {
+          "index": 384,
+          "sparse_family": "chirp",
+          "repeated_family": "chirp",
+          "same_input": true,
+          "same_base_noise": true
+        },
+        {
+          "index": 704,
+          "sparse_family": "burst",
+          "repeated_family": "chirp",
+          "same_input": false,
+          "same_base_noise": true
+        },
+        {
+          "index": 744,
+          "sparse_family": "burst",
+          "repeated_family": "burst",
+          "same_input": true,
+          "same_base_noise": true
+        },
+        {
+          "index": 784,
+          "sparse_family": "burst",
+          "repeated_family": "chirp",
+          "same_input": false,
+          "same_base_noise": true
+        }
+      ]
+    }
+  ]
+}

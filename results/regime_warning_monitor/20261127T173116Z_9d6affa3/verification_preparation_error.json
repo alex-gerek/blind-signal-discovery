@@ -1,0 +1,8 @@
+{
+  "stage": "verifier syntax check before execution",
+  "exception": "SyntaxError",
+  "message": "positional argument follows keyword argument",
+  "cause": "Quoted dictionary syntax was accidentally used in a keyword-only update call.",
+  "measurement_affected": false,
+  "action": "Correct keyword syntax, recheck syntax and run verifier; do not rerun measurements."
+}

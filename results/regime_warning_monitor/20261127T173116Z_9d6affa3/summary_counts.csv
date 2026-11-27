@@ -1,0 +1,7 @@
+case,sequences,eligible_windows,warning_windows,warning_episodes,sequences_with_warning,signal_windows,signal_warning_windows,signal_warmup_windows,extra_windows_vs_stable,suppressed_windows_vs_stable,associated_search_recoveries,hypothetical_warning_gate_losses,search_noise_alarms,search_noise_windows,detector_available_windows
+stable,5,2525,5,4,2,0,0,0,0,0,0,0,10,2580,2580
+level_step,5,2525,2203,7,5,0,0,0,2198,0,0,0,10,2580,2580
+spectral_line,5,2525,2203,7,5,0,0,0,2198,0,0,0,2200,2580,2580
+sparse_transients,5,2525,6,5,2,50,2,0,1,0,47,2,10,2530,2580
+repeated_transients,5,2525,7,6,3,320,2,5,4,2,304,2,10,2260,2580
+persistent_signal,5,2525,2203,7,5,2200,2200,0,2198,0,2200,2200,0,380,2580

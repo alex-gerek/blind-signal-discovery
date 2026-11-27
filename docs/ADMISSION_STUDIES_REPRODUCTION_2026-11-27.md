@@ -31,3 +31,13 @@ This later study uses pinned source `e21a7cc48ce4122804f86e3397ee3894afa90639`, 
 Run the measurement driver with python -B, retain its fresh RUN_DIRECTORY, run both lifetime verifiers on that directory, and only then generate reports/plots. Do not overwrite the archived `results/background_lifetime/20261127T170612Z_189c239c/`. The archived final report includes the reviewed presentation-error disclosure and figure caption clarification beyond the generic report builder; keep it as the reviewed interpretation.
 
 The acquisition/expiry contract and example manifest are design documents, not enforcement in Workstation. The 2400s oldest-sample limit is an unvalidated experimental parameter. Preserve the saved plot-preparation error and negative outcomes alongside all successful arithmetic checks. This publication records a completed synthetic pilot, not a validated operational repair.
+
+## Warning-only regime monitor pilot
+
+This study uses source `6f4ccfac7444fb01c2b19785e4236536559ce7dd`. Copy the seven new experimental scripts (`warning_monitor_metrics.py`, `run_regime_warning_monitor.py`, `verify_regime_warning_monitor.py`, `check_warning_ks_oracle.py`, `check_warning_gain_invariance.py`, `report_regime_warning_monitor.py`, `plot_regime_warning_monitor.py`) and `docs/regime_warning_monitor_protocol_2026-11-27.md` into a separate checkout at that pin. Earlier cache, waveform and synthetic-guard dependencies exist at the pin. Preserve their recorded hashes.
+
+Run the measurement driver to a fresh UTC/UUID directory, then the independent verifier and exact-KS enumeration checks; the supplemental gain comparison reads saved outputs only. Generate reports/figures after verification. The archived `results/regime_warning_monitor/20261127T173116Z_9d6affa3/` is immutable. The final reviewed report adds the protocol inconsistency and gain-impact qualification beyond the generic builder; do not overwrite it by rerunning the builder.
+
+The original pre-run text inconsistently requires both alternating families within each transient schedule and identical waveforms at shared positions. `protocol_inconsistency.json` records the mismatch at344/704/784. A strict reproduction keeps the original script and inconsistency; a corrected cadence experiment requires a new protocol, consistent waveform assignment and fresh independent seeds. Do not silently fix the old protocol or select a more favorable reproduction.
+
+The verifier-preparation syntax error, failed pilot desiderata and persistent-signal ambiguity are retained. Numerical checks do not certify long-horizon false-warning control, physical noise origin or a safe automatic gate/recalibration policy. Production detector/Workstation remain unchanged.

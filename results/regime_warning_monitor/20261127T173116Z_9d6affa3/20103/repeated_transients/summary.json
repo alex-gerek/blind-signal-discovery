@@ -1,0 +1,57 @@
+{
+  "target_windows": 516,
+  "monitor_eligible_windows": 505,
+  "warmup_windows": 11,
+  "warning_windows": 5,
+  "warning_episodes": [
+    {
+      "start_index": 304,
+      "end_index_exclusive": 306,
+      "windows": 2,
+      "duration_s": 8.0
+    },
+    {
+      "start_index": 310,
+      "end_index_exclusive": 311,
+      "windows": 1,
+      "duration_s": 4.0
+    },
+    {
+      "start_index": 610,
+      "end_index_exclusive": 611,
+      "windows": 1,
+      "duration_s": 4.0
+    },
+    {
+      "start_index": 744,
+      "end_index_exclusive": 745,
+      "windows": 1,
+      "duration_s": 4.0
+    }
+  ],
+  "any_warning": true,
+  "prechange_warning_windows": 3,
+  "warning_active_before_change": false,
+  "first_post_change_warning_index": 610,
+  "first_post_change_warning_delay_s": 1004.0,
+  "first_new_episode_after_change": 610,
+  "first_new_episode_delay_s": 1004.0,
+  "trigger_windows": {
+    "ks_triggered": 5,
+    "z_triggered": 0,
+    "cusum_triggered": 0
+  },
+  "signal_windows": 64,
+  "signal_warning_windows": 2,
+  "signal_warmup_windows": 1,
+  "associated_search_signal_windows": 63,
+  "associated_recoveries_that_warning_gate_would_remove": 2,
+  "search_noise_alarms": 2,
+  "search_noise_windows": 452,
+  "detector_available_windows": 516,
+  "background_updated": false,
+  "candidates_suppressed": false,
+  "extra_warning_windows_vs_stable": 2,
+  "suppressed_warning_windows_vs_stable": 1,
+  "extra_warning_windows_after_last_signal": 0
+}

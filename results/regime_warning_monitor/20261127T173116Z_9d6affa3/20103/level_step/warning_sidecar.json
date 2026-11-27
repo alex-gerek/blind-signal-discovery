@@ -1,0 +1,5162 @@
+[
+  {
+    "index": 284,
+    "sample_id": "s20103_level_step_0284",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": false,
+    "search_measurement_sha256": "0d837ba372f524f8d97a449d34d0848748a6773420cb4279753faabc9875948b",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 285,
+    "sample_id": "s20103_level_step_0285",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": false,
+    "search_measurement_sha256": "09670c6bea50afc0e058ca5b993954d7f50c5e51789b1c27e42ef0cb20edb01a",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 286,
+    "sample_id": "s20103_level_step_0286",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": false,
+    "search_measurement_sha256": "80be2544fc91c9364ccb143b8f6da4b5aac352989e46be6d43e205d5e16d47da",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 287,
+    "sample_id": "s20103_level_step_0287",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": false,
+    "search_measurement_sha256": "8a396dc3161f17ddd45522e4d7ed5c558f8f18a886ebb11dd4164a7eef88d5a4",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 288,
+    "sample_id": "s20103_level_step_0288",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": false,
+    "search_measurement_sha256": "734c7dde11f2af2ff60b54a3cc6e582c969ef59687b48d530748be24bbbfa162",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 289,
+    "sample_id": "s20103_level_step_0289",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": false,
+    "search_measurement_sha256": "7cda13dc0d0a045dfbe09a655aea3c844f34ecdf4d8475a6172db69e4fe6d6d0",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 290,
+    "sample_id": "s20103_level_step_0290",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": false,
+    "search_measurement_sha256": "1520dc9d29d249ebf7f24af6ff1c47fd8b843eb166c20a9227f1acb5f108f3ea",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 291,
+    "sample_id": "s20103_level_step_0291",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": false,
+    "search_measurement_sha256": "6aec8118f3166b023b7a1e3c0d60bb493fdfbcbfb9639cf59b1274ea981a2ea8",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 292,
+    "sample_id": "s20103_level_step_0292",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": false,
+    "search_measurement_sha256": "573ea9fc2ae0ebae14fbe424bdd076699ce70c80efcc206e1ddab75fe5d7aaca",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 293,
+    "sample_id": "s20103_level_step_0293",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": false,
+    "search_measurement_sha256": "a61f9a15548b24c772a5ad3baddb415d14b08ed59dff3f638fc4e75e481b1b2f",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 294,
+    "sample_id": "s20103_level_step_0294",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": false,
+    "search_measurement_sha256": "c60290c56b99c27cacf6bac78f74259402d0a416da4242dbb42483072b3d105c",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 295,
+    "sample_id": "s20103_level_step_0295",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "40e6d8843701f0c68ef928d2731c24914ccf1d88a69e9827ce3da583c2f429d5",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 296,
+    "sample_id": "s20103_level_step_0296",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "5fd587b9621f8103bce5f3d18920e2d880f293de74f9be1247f76df35696824e",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 297,
+    "sample_id": "s20103_level_step_0297",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "314f22ae18ef004127c975e4ba758653e0444cd28958b80e2ac9fc0fb9c6ddd1",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 298,
+    "sample_id": "s20103_level_step_0298",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "fcb6bba4a062312fc0bf6826185b492b40598f43845d735856cfe76d9f401dbe",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 299,
+    "sample_id": "s20103_level_step_0299",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "450f4f95e2f32b4e30e033418e57ccc29fa2e913bc8e7255edf64b4b627aa35f",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 300,
+    "sample_id": "s20103_level_step_0300",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "489d8b41954fe3eca97a7d4a856e1a1ec75b4bba55d1b8c1183a3a9604cecf65",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 301,
+    "sample_id": "s20103_level_step_0301",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "fb3309a0b7c541a2233a59085cf6cf7cba14afd894d834a2b82c807f4aabe222",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 302,
+    "sample_id": "s20103_level_step_0302",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "e0511a945f88ca11f090e15076938eab688ab84bdb6517bf69d2c7be5c500591",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 303,
+    "sample_id": "s20103_level_step_0303",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "bda0af52a40f09b721aa771ca356c49ad60c4ce09c17150510f24967bd3509df",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 304,
+    "sample_id": "s20103_level_step_0304",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "05c02146bdfd495a0241fa7df00e04367bac943af56faceda0e9d0af6c328190",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 305,
+    "sample_id": "s20103_level_step_0305",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "f26d42ebb33fdc8a729e243920f6b801f7c35cfa99132d5fb95fb9cdee24a1a1",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 306,
+    "sample_id": "s20103_level_step_0306",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "4dd80b9b3b4958d27d72c35c0186cb0bd30c5452bc8697b405656997deac0ec0",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 307,
+    "sample_id": "s20103_level_step_0307",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "f12e2fa4a5b68f1a3dabfd056dc49efc3a8701543293d13b5145451a7fc72aa2",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 308,
+    "sample_id": "s20103_level_step_0308",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "4defd93bc77413ccebe1e9941e13f290574007d650516e48fda32f500d92634e",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 309,
+    "sample_id": "s20103_level_step_0309",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "a40cc6840012fb5a9612543d98405fade85f13ba747f9de0b2b74c16b8aaf4a3",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 310,
+    "sample_id": "s20103_level_step_0310",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "794909fdf65b1e25dee7f437a9663efca2031caff1cd686165d880573f59a2e0",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 311,
+    "sample_id": "s20103_level_step_0311",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "74fc7276301e99118fbe44e78560e48c1807697e80118b724447a51f1033676c",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 312,
+    "sample_id": "s20103_level_step_0312",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "35eef469e38a12efeaac4c34b5547e212f30b246dba5d074ee780a02576421e0",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 313,
+    "sample_id": "s20103_level_step_0313",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "a124553eed915f6d104c98a60d77feeae1fb5dac1467a0232c372e1e8fa25687",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 314,
+    "sample_id": "s20103_level_step_0314",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "6d658cb9e8a8da7dd721757c8f203eb630754e9082e0ab7db0d8712e383f7681",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 315,
+    "sample_id": "s20103_level_step_0315",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "2351c1fc3ee646eba5f85340f3e42598db6b332fb851578073b57320e27181a3",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 316,
+    "sample_id": "s20103_level_step_0316",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "dccd2fd1281b73a320e72340e1cba98cdeb3372b4e165d81ce68614d8488096c",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 317,
+    "sample_id": "s20103_level_step_0317",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "030b6e0bda2245a69b5277737a1de47eacc6747969b477822e1df6b50a231ef8",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 318,
+    "sample_id": "s20103_level_step_0318",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "f56fc515c724e17b3a271fc2b7e6a90d4ee09326121e931ccc3f4e1f8fc24085",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 319,
+    "sample_id": "s20103_level_step_0319",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "06a1771894ed42ec652d5f3de91405711466fce821a4feae8ef63b9e3ed50123",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 320,
+    "sample_id": "s20103_level_step_0320",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "8172a2788e329e3c1c149ffaf214974295d172ece8dfe90f4371c756028c699a",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 321,
+    "sample_id": "s20103_level_step_0321",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "71fb788311e2c28382a5f66160ecf971efe86574f056fcad3eaa25265daf9260",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 322,
+    "sample_id": "s20103_level_step_0322",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "bd96d42ed5885a1a7d9ac98026eb251fcb466854dd808e5bc34d763793eb9d73",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 323,
+    "sample_id": "s20103_level_step_0323",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "8f316907371e24d8ee68694e7e55c5f0ecea81993aa8b7b25d683cd5eb54f304",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 324,
+    "sample_id": "s20103_level_step_0324",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "5fc88a5b7bd5aef1ec9d1e0fcc8a9999ae160a457d22edcaedbb13883f7d431d",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 325,
+    "sample_id": "s20103_level_step_0325",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "aee95163e9c47b85f7c1980cea59af333427fd3f437a41e863c5b62d25e1b0a0",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 326,
+    "sample_id": "s20103_level_step_0326",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "15dc74f555b8019074a1cb65a1902d5f0fcb45b7adc2d3db7ccc2d9d33836f39",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 327,
+    "sample_id": "s20103_level_step_0327",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "59ed263315982bd4b531060fd94266b4fa5c564301da2aa17a56f1f740acf000",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 328,
+    "sample_id": "s20103_level_step_0328",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "4871cd963e92ca8b4fa557f92e9f0d03f375cd1c173b16e9bf5c856e43b4efac",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 329,
+    "sample_id": "s20103_level_step_0329",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "99d0ad60ba040a32a2fe2d34312ff082827cdb6edf16a1d7f3b67083a6c8412c",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 330,
+    "sample_id": "s20103_level_step_0330",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "94ce9f51a28543661c0f8172afd17eb351a773a76cd734f5edc794c9d508bd2e",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 331,
+    "sample_id": "s20103_level_step_0331",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "a7f86e2f8a4f0b30626b2928c75a68a57f2ab0025825c5ee2da1f7ea7397ebcf",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 332,
+    "sample_id": "s20103_level_step_0332",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "6181fd91c73b6c3d63e833d173f87b97918d97dfa1a62f64f7fc1c9b063af227",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 333,
+    "sample_id": "s20103_level_step_0333",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "19f13d4b7950e0e0e2810a3934a6bb42907060c342a608f3bd5fb49a5c4dabc3",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 334,
+    "sample_id": "s20103_level_step_0334",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "b25de3cbfff81843d44c3b1e2102ab27bb115e1bac523255a5b2a6a75b4a8ea7",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 335,
+    "sample_id": "s20103_level_step_0335",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "42f87d16e88a51aac1beab5b5007c032dfdb6ca9839889a8d746c54134c5602a",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 336,
+    "sample_id": "s20103_level_step_0336",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "96ef7000abac2ba2678a7b63b09c88824dff27cb67a30686aca372950b10e06a",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 337,
+    "sample_id": "s20103_level_step_0337",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "866904bf824b90da09ae752431c316d1c82039501af00f27bde7b261b2458691",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 338,
+    "sample_id": "s20103_level_step_0338",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "fae0876267d84cc9ab7925a56040c1d25039266dcadc09ca2316b401bfeee948",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 339,
+    "sample_id": "s20103_level_step_0339",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "a1ca8e55616fe2fdb513c7ef05e1cf1e853fb14636e6473293188c95788b0936",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 340,
+    "sample_id": "s20103_level_step_0340",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "5f684b7d4fe8e42f58bd965261b724b20bea950c1cb3d28e91f57d0f3753d5ed",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 341,
+    "sample_id": "s20103_level_step_0341",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "aa4db8b934d09a1b5df0acdbf7d0d26e3b3e0e28aa2a08390eba2e0e25827b7b",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 342,
+    "sample_id": "s20103_level_step_0342",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "56e96f7bbb3eb6c562efc63963de7f2047c1c4e741f5143bcccbdd161847c55a",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 343,
+    "sample_id": "s20103_level_step_0343",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "d51aca62a0d8cee164a2674b079d4aa8acb7bdd477abfb5acb7fd05c2583e079",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 344,
+    "sample_id": "s20103_level_step_0344",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "95aaa86bac60997eb6dddbf704902ac45690db7173c1459214616c372524e7d6",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 345,
+    "sample_id": "s20103_level_step_0345",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "564f36ef4ab73d460727297967f1fe0e92bce2256931edb174ec85404c4dc086",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 346,
+    "sample_id": "s20103_level_step_0346",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "cad29762e64ca76c17abcca0e839035f5d74b56acd644e960d3e30484f2e1f00",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 347,
+    "sample_id": "s20103_level_step_0347",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "abaefe68f98cd5d954d6afc7f13c4adb1d895a67c1570bbad3eb672f4d1434b0",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 348,
+    "sample_id": "s20103_level_step_0348",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "f027b40e80f2d7e255cf7a577b7a78adbb5c2652dd8a46d83d9b5e84c7ec9990",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 349,
+    "sample_id": "s20103_level_step_0349",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "55207346d0e969efd24174bb09dfaf69080dcd46940a713508a38f0dee545810",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 350,
+    "sample_id": "s20103_level_step_0350",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "4a5360ed490a6e0e796d0fa3c380b8d4f76543dd7dd3d4ee25d464bd14cd73db",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 351,
+    "sample_id": "s20103_level_step_0351",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "dd01b49aa2e1bc3ac41a4a4018ef329a42695319a21ac746a56cba985116136e",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 352,
+    "sample_id": "s20103_level_step_0352",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "48d7ba8042a4eb54933c7dbb1accfe044da0d2e116e035ce9340d6e1efb9a455",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 353,
+    "sample_id": "s20103_level_step_0353",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "20502a5d629d69545b7fb0c3741a9942703bd672f7cb20619ace9b9129707ade",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 354,
+    "sample_id": "s20103_level_step_0354",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "fa42bf02ca2c6cd5bdb24a7a843c91cf88410672031c36c4a0cc03800db7378c",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 355,
+    "sample_id": "s20103_level_step_0355",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "d45a8a36ae156d6c9bd7694278208f33775e6c096a6499d36e089f9d349a234a",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 356,
+    "sample_id": "s20103_level_step_0356",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "2925755272f9904f2640f46e37dcad4e0a71ad562467be639fb6dc50b6cad3ae",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 357,
+    "sample_id": "s20103_level_step_0357",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "89c428cfac69f91eeba7b62260525faf10cd5ee03af27d84ddfdcdcac50a7ff9",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 358,
+    "sample_id": "s20103_level_step_0358",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "3383d908a85cf436a78207ccb506bcd13ebeea8f32001a9e4bc0fa30f6af16a7",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 359,
+    "sample_id": "s20103_level_step_0359",
+    "warning_only": true,
+    "warning": false,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "7d3c8b963edcac4f7aa8b80ee2873dfd2289ed790fe4560aee79879371cb2a2f",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 360,
+    "sample_id": "s20103_level_step_0360",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "f22085c6793263eef8af3ea019143834df7d4bbdecabd8d7ada13ae9e8fc495d",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 361,
+    "sample_id": "s20103_level_step_0361",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "8f9db3352b4070db47095ed59aa0e45d35310b98d6ac0a8958d1160779243fc1",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 362,
+    "sample_id": "s20103_level_step_0362",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "d298406bde5895f2d21d61943d3490631700a5162b75d9196d820f5807659de3",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 363,
+    "sample_id": "s20103_level_step_0363",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "be0ddca9ddd21c1067e374df0f17b7e48e0d155669d1a3f5141c9d666604e8fa",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 364,
+    "sample_id": "s20103_level_step_0364",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "fce6caa0daf95157891c86e174728c63ddfde9a867fcc66bca0afbc1e5f769d0",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 365,
+    "sample_id": "s20103_level_step_0365",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "401eef72e54db6698420d959a61a01d6d084b005b62682e1a9ff268357ae7c56",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 366,
+    "sample_id": "s20103_level_step_0366",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "2a100c62b2d705508aef8565bd3dfe894fa68ab47ad5d5b75feb35193cced0f6",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 367,
+    "sample_id": "s20103_level_step_0367",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "f6c5f5abeac589eae882b887c9b6ba2906087380b9f1ec127356d198dc09b1ed",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 368,
+    "sample_id": "s20103_level_step_0368",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "12d006b0bd9d4d293f0dcca127490cc7ad6e926ddbdc9b5cca02da7e18679831",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 369,
+    "sample_id": "s20103_level_step_0369",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "668bd36c75a8059d421729e9ff625ff45039af2a9fb04165db002118c982a822",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 370,
+    "sample_id": "s20103_level_step_0370",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "7771e5e03b7368f1fe0737480f0f75292f7a1090abb08ce320bdcda76f5d7680",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 371,
+    "sample_id": "s20103_level_step_0371",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "b71c877c3ffe63d40ef7760bd2050f77e8782d1b651666a51dc4256f91b4250b",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 372,
+    "sample_id": "s20103_level_step_0372",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "2158e29de2176ba59c85cc42efff564c272bfbced5f1099f9da5c98792d19c0f",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 373,
+    "sample_id": "s20103_level_step_0373",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "8e8da6a75e7a03c964d16aee0c52713d25e3f2a6cf6f34f148d807841a844de3",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 374,
+    "sample_id": "s20103_level_step_0374",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "d9eee1d73b73bfc17de7404cb578ea353d1d337e408ff94d3392a225b1362010",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 375,
+    "sample_id": "s20103_level_step_0375",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "3aeb16672d9a54c19f6a789fc5c99e8fa9b7b395366d158de57635a2f3b9568c",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 376,
+    "sample_id": "s20103_level_step_0376",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "b4860b33d68ccbd97e7cb5b8a68d11052401daa2c9fce33c53e8d95b8244c7f6",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 377,
+    "sample_id": "s20103_level_step_0377",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "bb1280f05c776ea58a8510f7b6857b28a327c612d3ea35a8d3b7d13118a531e3",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 378,
+    "sample_id": "s20103_level_step_0378",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "bafe703b5138608b487629cfbaa41b413586d5674073846725fd8526a9848b09",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 379,
+    "sample_id": "s20103_level_step_0379",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "fafca83d10ea1e1028cf385cbbb8d0397de9b2944354c95c0622c92d8de42c42",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 380,
+    "sample_id": "s20103_level_step_0380",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "be7caf9b8af295d3f2751a1c862441b278251ee08e4522b5d570ec3b7f41adbe",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 381,
+    "sample_id": "s20103_level_step_0381",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "6db7fac4dc2febd9b5eea21dd86ce1728b1a4496d3b86a4780416a5199795dd6",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 382,
+    "sample_id": "s20103_level_step_0382",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "fbc58d114795fa0f1f5c9805585999305f0e109247a077ad416c58a6b7fb8823",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 383,
+    "sample_id": "s20103_level_step_0383",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "f2c3a66926cf767585613472fb56be2d3f022fe141f09b7f65dc79d1a4bb4774",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 384,
+    "sample_id": "s20103_level_step_0384",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "74e7192e4b3426fc586980539a5c63db5308a97a0fb9de195af3b223d9d2569e",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 385,
+    "sample_id": "s20103_level_step_0385",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "f552f7580f77e57924f880be880f3f5ceccd4807c710613f5c3d0c93832ecd14",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 386,
+    "sample_id": "s20103_level_step_0386",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "c9ffdba6b5d56fe5da65955acd39efc928301d5acb04c0c0e75051a5975d9028",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 387,
+    "sample_id": "s20103_level_step_0387",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "e16d791c9cea7f7f9e485318d6f2b790db52d5a5bc278052e96174f13929433e",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 388,
+    "sample_id": "s20103_level_step_0388",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "939d9ad478278e5a6a69f405b193af3f2248d19b12a483e3044ed830a0cc5d9f",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 389,
+    "sample_id": "s20103_level_step_0389",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "f23cb4334a10d5ba868c5e27cff730165e8ab455f4f2c04a85c29ee7b9f33c5b",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 390,
+    "sample_id": "s20103_level_step_0390",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "864720e2f0eaa9a77e931faa26d491259581cd25795ec75e24bf924f9e86a20f",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 391,
+    "sample_id": "s20103_level_step_0391",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "cfd8347378e6cdbfb19172f019b9a9ae46a851765a4ca0570b7f1a2205a1c434",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 392,
+    "sample_id": "s20103_level_step_0392",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "22237aa7e66492426085e1b66e673761830816569ee176fbb6cb0d6515b1d69e",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 393,
+    "sample_id": "s20103_level_step_0393",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "1050d497c6da492a11853691fbdb9480ce993a561ae22bb08222c1e3519066fc",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 394,
+    "sample_id": "s20103_level_step_0394",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "8316fa4efafbad104bf4d0931bfc13f8d456a3f5168f4bd59e8a7ec3eba73c3d",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 395,
+    "sample_id": "s20103_level_step_0395",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "43d9635caa3135c89c72f8f394e9c2f1b566c37f6755c9fe262ac3976e444d61",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 396,
+    "sample_id": "s20103_level_step_0396",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "37237c175af77cfc1552c445c850012e936c2d6086acb7ad38d05e801786f876",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 397,
+    "sample_id": "s20103_level_step_0397",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "c43f74aad53d5a9278a0412e7bbfa4802d92fab5461b535ac39cb99310f3daa2",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 398,
+    "sample_id": "s20103_level_step_0398",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "1cdfebf9bf5e57970659106cb6833a537f06dd8ce973629db1cb54d0ded2547a",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 399,
+    "sample_id": "s20103_level_step_0399",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "c1f5133421b2c17dadc1e89e52bb27bbffbb2aa8b7b600a904e0348045bf71fd",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 400,
+    "sample_id": "s20103_level_step_0400",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "40882ea3a34a0f5e76aa81abd3432924200c509e79c99e84b5d8ff67b43f817e",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 401,
+    "sample_id": "s20103_level_step_0401",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "e7b700b749559b5238e64f34fc4516a86cc38c50e5a4e71572eb0a16026ed8ff",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 402,
+    "sample_id": "s20103_level_step_0402",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "b8ecb78035825830987013d6ce9a5ddf9c1c10caac4ad1f9a2c5207afc7af46d",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 403,
+    "sample_id": "s20103_level_step_0403",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "8cfef23177c6ed51c1fed8b9f489e6120c5d72dccca98280401fd0464512d4c6",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 404,
+    "sample_id": "s20103_level_step_0404",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "a737fb0ddb5776975d80a574368d273460e0796e2fff501cb216974bb61a238e",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 405,
+    "sample_id": "s20103_level_step_0405",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "535d9472c2d3430bc06bd56c58cf8c60e7b0e767fb52bc7dc330feaa97231aa4",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 406,
+    "sample_id": "s20103_level_step_0406",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "25dc8fd93823aff894e8ce428f8608f17098b43e810f79eca58cf22beafe9238",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 407,
+    "sample_id": "s20103_level_step_0407",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "0b5ffafeb2b95a30bde150573498fa2dd013a18489939f28082804a9d5fa26d9",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 408,
+    "sample_id": "s20103_level_step_0408",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "0e9a7b25810a213893f1c57724b58a83d241cf7284bf164e226bbbec07da2fae",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 409,
+    "sample_id": "s20103_level_step_0409",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "ef1679d4d33a28da56a0232dc448a61dda4c31e8b6a98a9cec3cc0824762096b",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 410,
+    "sample_id": "s20103_level_step_0410",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "649ad504551e1b0f0eff0f35d5e218ef11b32e549c55a377163d56dda894a148",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 411,
+    "sample_id": "s20103_level_step_0411",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "44ca731ab1456e1c01142650b2f2bb0c99f9734d8e44419250b4541c0ca5628d",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 412,
+    "sample_id": "s20103_level_step_0412",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "29dd159735c1a236f35daec9e75306106e86c4bbad3897ad50917d05ef03dce6",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 413,
+    "sample_id": "s20103_level_step_0413",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "023f13408917a857ec209a8436f8f00be2316ba75c8dcfcba20d5313cb3a878c",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 414,
+    "sample_id": "s20103_level_step_0414",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "4deb97abb862087b60a2eb97959efed39d1bdf78e57694ea33ad787f8f1e2c48",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 415,
+    "sample_id": "s20103_level_step_0415",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "c3ecfece57a6c8fa917fb5378a6d25fadb91049857e1412cf61b9345f86fadd8",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 416,
+    "sample_id": "s20103_level_step_0416",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "498d9099ca97d36c6437f3870c925eb738df0591f3284e277ca7d981e4b0502e",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 417,
+    "sample_id": "s20103_level_step_0417",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "0b1ae5260c9523bbead8bacac89534f68096c671a7031cda75210e59d784c4b7",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 418,
+    "sample_id": "s20103_level_step_0418",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "df0980649e0ed02e3a07f2d7d59e1afd6817031a4d0f5a6676c2ae3eca4cf11a",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 419,
+    "sample_id": "s20103_level_step_0419",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "16935dfe269431b07600040031a40ea8f9fb990e3750fd324bd404dba79af696",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 420,
+    "sample_id": "s20103_level_step_0420",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "57ab8870ef6f710a1fa13d94b9a366e01891fa5529e11b9fb268779a2a601aef",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 421,
+    "sample_id": "s20103_level_step_0421",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "321d3587dab9567b299ec42ebc5235ab544f5ee4fd00b2ed558d700343470b13",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 422,
+    "sample_id": "s20103_level_step_0422",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "1bc5b4aad74f777957af7a3a7110e2148ca5b8f485bd467f656070eb238b6926",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 423,
+    "sample_id": "s20103_level_step_0423",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "ef858d885e95f5d81140d1c93d25cebb2df597a53343cff1cc49ebe84ea4f16c",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 424,
+    "sample_id": "s20103_level_step_0424",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "633e3c91c91278031324172cdcca7e3def4ccea3e3b8e7b9fc0f7916988d8284",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 425,
+    "sample_id": "s20103_level_step_0425",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "68aeb430f3aeed5e668f28452cda66eff373dda0adde7bb3c868ce6582aa88e2",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 426,
+    "sample_id": "s20103_level_step_0426",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "0c195dd0d9e5713cfa5408b1f0894c655ba67cc425ade31174679ccaf0823365",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 427,
+    "sample_id": "s20103_level_step_0427",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "18a95c384035abf3650739a9baee8bd389950fd6b48823135ac4980aa5a496e8",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 428,
+    "sample_id": "s20103_level_step_0428",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "1950cdbf64e6ecac95e1cc483528fa35335e5107e38197f4dfe6a9a8bc02b247",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 429,
+    "sample_id": "s20103_level_step_0429",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "49dbf674eaa64f55e903b51bfba02db5cd09815903b5e66c1b3d74726b36d53c",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 430,
+    "sample_id": "s20103_level_step_0430",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "881532366892da2f521fde9b07303377b14dcf6c9c4ae017da5bf02f64c86bab",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 431,
+    "sample_id": "s20103_level_step_0431",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "2a60e362993bfd9d0be4ad44bbe6af854a3bf220fa6f35be0675d405b34b5722",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 432,
+    "sample_id": "s20103_level_step_0432",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "0a810e14f88c0df006142279e3d3cecc9e1ee828196e73a28534ece14c05ae82",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 433,
+    "sample_id": "s20103_level_step_0433",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "30c4de23871d78ec8a72d478b595064673c97d0fbe6270c093d6e1bd4119f21a",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 434,
+    "sample_id": "s20103_level_step_0434",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "b6fbe5b38f8379d7175fab5c10970c0235620f3fd115f01aeaf34c32d1fd55cf",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 435,
+    "sample_id": "s20103_level_step_0435",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "48f03f54c652f534c85b5a7944bd9e6026069b6066c38788fdaeedbaf4a1bc10",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 436,
+    "sample_id": "s20103_level_step_0436",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "f00a6b9261960c5029b6f704893f867b3e56fc024845d5f4c3f2e89a210b4f79",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 437,
+    "sample_id": "s20103_level_step_0437",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "7883e67a850bb39ac3802c32e30fe856cccda5f8142ad3b14be1120198a51910",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 438,
+    "sample_id": "s20103_level_step_0438",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "1dc0b94a3fff63dcbf700e498d4b70901a5843aadcf67cbfb78b42cce6f43e1b",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 439,
+    "sample_id": "s20103_level_step_0439",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "d491e996c823ba7bcf838c939f16bfac934dcaf7bf2eb4bafb26e8022608e460",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 440,
+    "sample_id": "s20103_level_step_0440",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "17f984af9b26a15d3cc8463ce0fa6cc0f38e682440eca992ae03b9559618d80e",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 441,
+    "sample_id": "s20103_level_step_0441",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "faef49e396323d2e4f24ce9dab64953cf2156e237fa6683aaf28f4f9755aea4a",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 442,
+    "sample_id": "s20103_level_step_0442",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "02f93f25dbe5e4a7ddc6369538f5ff332cccd36608c5d6353437a9308db63b9c",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 443,
+    "sample_id": "s20103_level_step_0443",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "8f8934f1549aed91e3840d66de70d7a99c6956ab08f59a76b0cd20b9cac9033b",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 444,
+    "sample_id": "s20103_level_step_0444",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "525127015b826fba04315b097571288190e7eecdd0dd96af4bff71ab3f6e106f",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 445,
+    "sample_id": "s20103_level_step_0445",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "b87d66c423592b66d80fb22959f4c4761fe8d3a46a80b288b8b0f793e3a9e7f9",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 446,
+    "sample_id": "s20103_level_step_0446",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "c5b3359a6eccfceda29be775c326ce9b52ccee366c1fa1b8e70136e1abb430c1",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 447,
+    "sample_id": "s20103_level_step_0447",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "738ffd6122def6325c2934dba2513a55c7a20b02c6f1e36ba9ac76dabbd1de22",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 448,
+    "sample_id": "s20103_level_step_0448",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "0a6262e6bf9d2747d7ece4a56db56bd0fdca671b1105d42621c53ad836808566",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 449,
+    "sample_id": "s20103_level_step_0449",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "51a6670dd9c0d178e9d7846c9cb0d8aed5f5fea181417bff58f11dc9afe5f4bb",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 450,
+    "sample_id": "s20103_level_step_0450",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "5d6dac782020535cecd3e775313dde1cb561a4ffcb120d96be14abf429d46fc6",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 451,
+    "sample_id": "s20103_level_step_0451",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "8f0b4682e4c66ceb1fa1bd4b3939612b8d3941fbe3c0ffa54e0f55b8276f9059",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 452,
+    "sample_id": "s20103_level_step_0452",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "e8518b9219ca4c033a937da7dded2db8bace5a30d4d1900e65337e9223afda97",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 453,
+    "sample_id": "s20103_level_step_0453",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "e4b5d4b522f887cc6e61a698f117c681dccceeac8aef48e7577b056aa53b3acf",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 454,
+    "sample_id": "s20103_level_step_0454",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "a1620fb4aa7383f3a858b61d8e29302dcc7f8eb6d4ee5b666dd478e55f84fb65",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 455,
+    "sample_id": "s20103_level_step_0455",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "53df36deddd0265b7569cf1cb1c60f8b4572dcbac8d3e3b20f74bb11950ad2f4",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 456,
+    "sample_id": "s20103_level_step_0456",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "418941dc755aaf55c7158ae4fa0156ad83424b0ebdcc7cd31d58ac446a8753d4",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 457,
+    "sample_id": "s20103_level_step_0457",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "9be077060c39d995b5273702c59877ff9808402d53f5abfc4e9d53772efdf365",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 458,
+    "sample_id": "s20103_level_step_0458",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "db3f6ec38d3f506e86a8c6e67f3184e72f47cac5c38316cc1f9b2f4bc103f1bb",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 459,
+    "sample_id": "s20103_level_step_0459",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "559c81a0fac26b556a64f32d6784ba3edcf8e32a78ecb7d6ea56df2ac959fb54",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 460,
+    "sample_id": "s20103_level_step_0460",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "c7ab9df42c45869335696fcf4ebf70581878f7e89872e854e1687aaa90af0af7",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 461,
+    "sample_id": "s20103_level_step_0461",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "ef4f39023356a827bd7082edcef0fd1bf806094177034984b5b315ea2bd02ca1",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 462,
+    "sample_id": "s20103_level_step_0462",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "1024a36b6f1179f36bca8f5955719ee2e307f3b6320e2951ca79d620274e44bb",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 463,
+    "sample_id": "s20103_level_step_0463",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "5015700a7060535b8d7ef226761d8b9f0ccde7e046c337cceaf29499079abf29",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 464,
+    "sample_id": "s20103_level_step_0464",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "742fe738c63fe9d36651095ff13b5ec91666dc218ab0b3b1d6d06b97dc4f355e",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 465,
+    "sample_id": "s20103_level_step_0465",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "a935c345b67be6520b06134d7106f16ad009b0637b2bb06dd142ee5935a15321",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 466,
+    "sample_id": "s20103_level_step_0466",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "e254ef52cb98564b3a0d0cf9d5c3f65542ceb2e9e713d94cad7e45f824cb40bb",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 467,
+    "sample_id": "s20103_level_step_0467",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "76f595c33120f60867276bf4b01bfc8f05d90e697b57a9dd5536eeaaa254c8e1",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 468,
+    "sample_id": "s20103_level_step_0468",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "d160e3fa559e61b2f49fb9c287a8ca44ded39dc677520376cef6f5d83c6263be",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 469,
+    "sample_id": "s20103_level_step_0469",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "b9e832834f46ec0ef44961ab70f9e49e3e5dff48059066f42c4dd459562cfc17",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 470,
+    "sample_id": "s20103_level_step_0470",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "6511047ecf0e92af68a9123525ec184a2115a42a2ee020797077470b2f088cd0",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 471,
+    "sample_id": "s20103_level_step_0471",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "dacd5383557404383b22ad118ad9f56b3cbaf144cc7a98126b5091eb61d3db0b",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 472,
+    "sample_id": "s20103_level_step_0472",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "22975446d9ecb70f8a7ae975a46d243f63a4a88a99cc5a43d41b44a23285cacb",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 473,
+    "sample_id": "s20103_level_step_0473",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "dd1e26dadb2fcc859908f34c4ee7d6523a09cd38e311620dc84ae0d753a5cf18",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 474,
+    "sample_id": "s20103_level_step_0474",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "53e26332a62011921afbf5f3bd55a4d22dc640f0070c326a62e3bb6c6cb84422",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 475,
+    "sample_id": "s20103_level_step_0475",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "f3458d9c61172dd9a43f13cc96759d7bc7e8ded713f4219063902f33703f3c74",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 476,
+    "sample_id": "s20103_level_step_0476",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "61fa10912cf03d4762d07d620bb381b7315ce8a729467f2460233865aa09bf90",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 477,
+    "sample_id": "s20103_level_step_0477",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "2dd5101871ee26cc7463b9158400cb8894771e0f22de41d8747d8cacc22789b7",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 478,
+    "sample_id": "s20103_level_step_0478",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "01af0218ac158f0c24a33fd6faed25edd1900afe9bc216c8f8a0cd96c62c4d53",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 479,
+    "sample_id": "s20103_level_step_0479",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "dfd8c60960701269b78b2baff4f01e625459d02dfe6a456363053d35d5c110df",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 480,
+    "sample_id": "s20103_level_step_0480",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "400d320c5b9addb07a373efd1c3a4e27d76d18418535dc7332768a9628614eea",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 481,
+    "sample_id": "s20103_level_step_0481",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "369897320f040d1d787411ebda6cbc1f1a32941259db3e138c6642a5f0b3606e",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 482,
+    "sample_id": "s20103_level_step_0482",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "7694a361e8b974b4891666e83e82cde3858bafb10ff912b2422a4b670d7fce60",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 483,
+    "sample_id": "s20103_level_step_0483",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "69c7ff54c2aff9d77640857e04c7be766fd10f750a6fe4c51075c734dd42a8ae",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 484,
+    "sample_id": "s20103_level_step_0484",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "1b945b9c0969efd25064abcd5cd789414a905b74495eb3f84ab84a6a6c3fdb28",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 485,
+    "sample_id": "s20103_level_step_0485",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "49d582bbc9f4a28beb2fc6cc2d8e93b512c6feecf6c706679f6209818b148fbd",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 486,
+    "sample_id": "s20103_level_step_0486",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "06d96769ebe0e9de8c35a14e9dce10fcfd0b0b112dd59c08880d27807c4ea49e",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 487,
+    "sample_id": "s20103_level_step_0487",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "1eaec63b76141a4b0fe5e2751e5d4653be1b2a8a8ca824f044d9e3d60c307aa5",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 488,
+    "sample_id": "s20103_level_step_0488",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "3fd2d06b0dfd01842460ccada8c015ea9017ce0a4083451a433c5d0a2a29d051",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 489,
+    "sample_id": "s20103_level_step_0489",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "01a55283c240e21907da1f95c0a5c49f80340006d86322b2dab35400353eb754",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 490,
+    "sample_id": "s20103_level_step_0490",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "ba398808a52ab6a2b75a35b4c80be5114e85fbafe8a5cd67fffbddc3af522903",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 491,
+    "sample_id": "s20103_level_step_0491",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "38e5c2f6674625dc739943fa395852eb1a728160921434c14abeaac916503f04",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 492,
+    "sample_id": "s20103_level_step_0492",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "f61b652ac745e4ea34810dac437398dbb48452f03b8a208594af475c82134a7f",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 493,
+    "sample_id": "s20103_level_step_0493",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "860975c0f4ebda73625faa44c5315827a41a38442e95d1cf7e9b8000278d8193",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 494,
+    "sample_id": "s20103_level_step_0494",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "bf956aaf682963026803103df45eaaba5d7814d7f04c57dfea31ceedff149886",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 495,
+    "sample_id": "s20103_level_step_0495",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "cbcf4442a03461b248e0a98c4ddf9ad255b7886cffda2b5b9d0441c48f4df0df",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 496,
+    "sample_id": "s20103_level_step_0496",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "2695b83abf3b331e1791cf4f8e4016e35e83125a17b9059ee93de10c84cab91b",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 497,
+    "sample_id": "s20103_level_step_0497",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "92973a3dd90d22203343149ef762b6f3970966cf39fc89f50f92a988355eda4c",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 498,
+    "sample_id": "s20103_level_step_0498",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "0f490249bdcf0e56229746a4b94f62e813c300556f0f9fc50582f2b68d3ae927",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 499,
+    "sample_id": "s20103_level_step_0499",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "2adc133e90feec084c590c87e2f9b9cc8c8fca6e39723e3bd8a8182080f2365c",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 500,
+    "sample_id": "s20103_level_step_0500",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "214b847e0a76f4adde88f4f49693a86cf356041da0131daff851200470f50daf",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 501,
+    "sample_id": "s20103_level_step_0501",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "355faa57a20e6a6c43ba899bf73f0d7012f9befdb7bd44cda26efb8431155a94",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 502,
+    "sample_id": "s20103_level_step_0502",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "2bb0e683dc21d340fd6019747bd4f07c690df1cd13e46ab60aee8df3a7af3024",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 503,
+    "sample_id": "s20103_level_step_0503",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "08949f1f11c85542accb2751010049739afc7e2bd5e44b30958dad267e381a1b",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 504,
+    "sample_id": "s20103_level_step_0504",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "4824c33d65dd3709035c4b4d2987f6faad146f502f474f5c837b2cc13d510ade",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 505,
+    "sample_id": "s20103_level_step_0505",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "152d617a35277c7c5407bca5c691655cd58138eede48866893336f8ceae08b34",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 506,
+    "sample_id": "s20103_level_step_0506",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "98c01ec42dfd564fa1def1d63bf0e123c52d6d1466f918bf6e1bb37d942a44ff",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 507,
+    "sample_id": "s20103_level_step_0507",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "b7deab7219c225df6c52f77f944142f8693ff684ff2a029520b952df9e3d2123",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 508,
+    "sample_id": "s20103_level_step_0508",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "28edc7df23bc608504a1203b1e883672ce9400385fcc98a8640ec5a17ff825d6",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 509,
+    "sample_id": "s20103_level_step_0509",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "3a0f8f47041c565f77df286d1ac5fc610c71fd31fcc168e8c466808f9c734197",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 510,
+    "sample_id": "s20103_level_step_0510",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "c0e8d02c5855933fe9b6ee7f68c25dce4fc770a336c935a0b53acf33891206f3",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 511,
+    "sample_id": "s20103_level_step_0511",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "8b1f5aef323c80e0ca0b2f724340456f5f9ad1959ab9e6292aa399700e6e679c",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 512,
+    "sample_id": "s20103_level_step_0512",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "8b0edb83cd58624faed39cc9c0ac89c4910c679fbdc2514ad38682c791491e73",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 513,
+    "sample_id": "s20103_level_step_0513",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "4625c6285c1b586ddf888dddca60c62d101bc494a2122072b5faf1ceec2dcdbd",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 514,
+    "sample_id": "s20103_level_step_0514",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "42ffd65e922b98da8ebf8e4c2c9e2ec1596700cf8225998fd4bd66e1ecfe4ebf",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 515,
+    "sample_id": "s20103_level_step_0515",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "adbe8b77f470ed58ba8f73a0119bab95947c38ed6b1668d8e2cab663ea1e609b",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 516,
+    "sample_id": "s20103_level_step_0516",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "b5b146e083775207141df5a60b95685441cce08cec432c419d9367ef7cfe35cb",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 517,
+    "sample_id": "s20103_level_step_0517",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "b4322ef57768da7fb6bfa470093d71114b010bea88404d63ee1e911e437b9e19",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 518,
+    "sample_id": "s20103_level_step_0518",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "bd7da848c362d3487799273c12c0218e7cf0b27da9a9036030447b24d1eabc38",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 519,
+    "sample_id": "s20103_level_step_0519",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "9d10186c00cabc2b33a7df08594dd473d0290683b75a114e7499efe3e06ab1d5",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 520,
+    "sample_id": "s20103_level_step_0520",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "f48faef869b56fe888d291f379a3efa57a58d8d7db6fc8e275fc0f5ed5b406a1",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 521,
+    "sample_id": "s20103_level_step_0521",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "602e309965c1d59b78a9def370c9faaad4f289a8da18e15cf0f18ec39bb239ae",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 522,
+    "sample_id": "s20103_level_step_0522",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "26315f318711b8d59304a1bd513e404453a6be85b67c0bb6ce119dbbacd872eb",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 523,
+    "sample_id": "s20103_level_step_0523",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "7d5abbc7c6260bcd572ae7a1bdad3260831c7c8fbc4df4deb4ab7115bb6b5ba8",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 524,
+    "sample_id": "s20103_level_step_0524",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "812b328500ae4d409358f076dc826271c94c64691bef576f0e1b190f91e3ba61",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 525,
+    "sample_id": "s20103_level_step_0525",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "389ad9d92eefe006bae66b32e3c5e4f498dec8045f9df0e9a4e8ac7a6fa55be2",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 526,
+    "sample_id": "s20103_level_step_0526",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "b1419726f3e162d593145e5596b40893e73f6f778f5e129a21ce3c37004d8b3e",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 527,
+    "sample_id": "s20103_level_step_0527",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "488e721ea8ae70ebe2edf663e4cc5a5f8b57f9aa71bb0d1210dc4c7c18e6da34",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 528,
+    "sample_id": "s20103_level_step_0528",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "394c7a81731de311ba177752d339f43b1a7b53918cca726b20184b916939a9eb",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 529,
+    "sample_id": "s20103_level_step_0529",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "0e9dfef2c4a978f0562d5605a1f5c017a435f92a0f1a1f782f84440717f10819",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 530,
+    "sample_id": "s20103_level_step_0530",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "3d7ec4f0df7e85b0d2e8c530832aa60668691363dd9b201f298dca28d5b22cce",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 531,
+    "sample_id": "s20103_level_step_0531",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "0a3da053fda341acf1e6bf99ccbc81bc712355dc6fcc8210b1bb783d80983cde",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 532,
+    "sample_id": "s20103_level_step_0532",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "5daa4941cb7adad56f5a665138152925bec1616f15ed72f59ff7ee00cc23addb",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 533,
+    "sample_id": "s20103_level_step_0533",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "9336472bf89c8dcfcb012ec5dafb7fc09ab7a49dfcbe249d317c700944152972",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 534,
+    "sample_id": "s20103_level_step_0534",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "dc3d81ef05755a36b6fd39fee440438d5e078b52a30271cf017a1f6e050470c0",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 535,
+    "sample_id": "s20103_level_step_0535",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "5f47d77904335e6a244353fce21e6d8c1da191b4a66b5d3b595abee9bcbf29ea",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 536,
+    "sample_id": "s20103_level_step_0536",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "6606e4a076ea31325cb242a9c3a8007caea6563006af6d11823f6c99763dc65f",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 537,
+    "sample_id": "s20103_level_step_0537",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "f7ed60c25a06e99829620a0448e92c064d62b0aaeccb501c2310992caa4b797f",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 538,
+    "sample_id": "s20103_level_step_0538",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "47ae92577f4296a063e2762bc769d844aab11000841e18fad3a9714b040ad42e",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 539,
+    "sample_id": "s20103_level_step_0539",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "e579ab0cd03383281ad69345e185d78a494a2f08db84b55bb5fff8102d49de60",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 540,
+    "sample_id": "s20103_level_step_0540",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "e3386dba54c5c40a7b371abec9c80e5800b40ff5baacb27f6b1fa0d367b05817",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 541,
+    "sample_id": "s20103_level_step_0541",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "1be317df6e0b94cd6629e4f80e5a35f9f20978e58ce243dfb48fa01d49049f96",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 542,
+    "sample_id": "s20103_level_step_0542",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "17f3b9ec642b05ccc7f2a8fb8723cfdaf39c9941390cf7c69db4aad1933817b1",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 543,
+    "sample_id": "s20103_level_step_0543",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "d694dba5c569f994608581c3376f74f67b372455f941e1804049f73b2d1fa8af",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 544,
+    "sample_id": "s20103_level_step_0544",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "f5af59c7564cd48801e1743bce4db5e23ddb956030a0396e277b48cbc98e228d",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 545,
+    "sample_id": "s20103_level_step_0545",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "7962074f2945193aa535079838d84d51723c95ce5c9ada5095d991a05a83be50",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 546,
+    "sample_id": "s20103_level_step_0546",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "1afb08f8817df3470305479c2b1590110883a19380c418f501f1982b79e50c81",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 547,
+    "sample_id": "s20103_level_step_0547",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "4ae61bd29fec1433647e03c8841ddef21b4a153536f8ab1b1fa4bc53b958a918",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 548,
+    "sample_id": "s20103_level_step_0548",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "4b7f452c2fa3366ab35f9fbd4efc66430d9e7885977a2cc8537a1c0ba5332901",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 549,
+    "sample_id": "s20103_level_step_0549",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "93839f41a358558466523842f537375786b563b7a7069c623173d69185bdd954",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 550,
+    "sample_id": "s20103_level_step_0550",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "6e8c161ffc911c7f4863a237a34d2b65da8482bf4838ceb689c4ef2a1217fca9",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 551,
+    "sample_id": "s20103_level_step_0551",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "0b29c2e2e3c21ae6970569e5891835504d90b1364bc829f72c1ec3be73e4654f",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 552,
+    "sample_id": "s20103_level_step_0552",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "103900f19252b561ab7527b96b75dd6a6f60b8e28c322505e45a49c00e1a104b",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 553,
+    "sample_id": "s20103_level_step_0553",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "51c03106d165010c7afba3214dc4632a5a19626c8bf8829d0d190fb0a8f11fe0",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 554,
+    "sample_id": "s20103_level_step_0554",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "aca249db7276f1337f05f493e6e29b8fa23ccf155de3d0aff9f09b56bb0d720e",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 555,
+    "sample_id": "s20103_level_step_0555",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "cb79b807fa38ac022ba395e2dc91ce7f2dd6a930984b316a558364ff9b69a263",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 556,
+    "sample_id": "s20103_level_step_0556",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "ab0c2c3eb1191c21b300e414b0aff3630bd1d5e4f2b9a352c49b60811af223b3",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 557,
+    "sample_id": "s20103_level_step_0557",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "c8cd9176c881a0d9e9a4ec3a65c30c0cdf8c00ab3a5fe4ab47eb6a3d564bf2b0",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 558,
+    "sample_id": "s20103_level_step_0558",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "c6d7fa508e69b6cda77e3aa370be7c89eb4be03604658b1d87687fc58b04ff36",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 559,
+    "sample_id": "s20103_level_step_0559",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "a1c703e4df17db85b02e11d121b6c5fd002e0449b5801e839aef11717f01f0c4",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 560,
+    "sample_id": "s20103_level_step_0560",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "df7ae781a45dd46efc87bf7103ed8fa949a12624235c7d8f34c3d4741ecd37fe",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 561,
+    "sample_id": "s20103_level_step_0561",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "cabc5462a9495de5f3b288458d75718f649b4747fa6c1579651ac89d15a364c8",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 562,
+    "sample_id": "s20103_level_step_0562",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "e29e210d40fe67b2fc96944105f44fd1c8477363aea65af5040a998fb88892d0",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 563,
+    "sample_id": "s20103_level_step_0563",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "ab55b894858df4dd2c1787cf0ac603da3588e7c4988f439d6850035912a4c890",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 564,
+    "sample_id": "s20103_level_step_0564",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "9c9f3cbf7fcd466b09e9129479739cf4c3e94931e04a80095927d38421ee56a7",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 565,
+    "sample_id": "s20103_level_step_0565",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "691ce2a17624aaf60daa26afbb9b1f7eb9c9914f1c5382821335765d7e886cce",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 566,
+    "sample_id": "s20103_level_step_0566",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "62fb52c248023fae2779bed55613d42de95cecc721df8652eb5122d95ccb3a35",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 567,
+    "sample_id": "s20103_level_step_0567",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "75977c5b5df0eaef6cd44cbd02f8b8d4dffe33ab144f4893d0a6aea844182828",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 568,
+    "sample_id": "s20103_level_step_0568",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "3cb40712390b87fa6a5c7ffdadd1192658e69c9b4a58ce7da5a971ce91537de2",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 569,
+    "sample_id": "s20103_level_step_0569",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "f4e3f7a6eccf6fb8517ae9381ff09fdc7d2400513e634ee8b3d20f245a535564",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 570,
+    "sample_id": "s20103_level_step_0570",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "96f3a8d5aad0885d0b4ec28affa5e2cb6106dc6d9e9f7f74bf14cd2d55402948",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 571,
+    "sample_id": "s20103_level_step_0571",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "877b9b7947ef19c7a5e3a544013bf1c03a90f8fc9fc35dce7bdce0741e1aff31",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 572,
+    "sample_id": "s20103_level_step_0572",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "c95c0b6d68d46b291265d0942e248d2817fd0a1adbf3415f883140db7d10ad1a",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 573,
+    "sample_id": "s20103_level_step_0573",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "dce6c34f49226ba16a9b2b3bd6d0b759d97b8ba45481cafedbbc0a0e7d3b66bd",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 574,
+    "sample_id": "s20103_level_step_0574",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "e3cc0b701e2394944b5ba56a6d210698b97b33b9d95fdc2df5df737c6fadaf28",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 575,
+    "sample_id": "s20103_level_step_0575",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "61cd7731f6d22a83cf2878d8585bbbf5221d0ae0f01b6afba3368a8fa8f291ff",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 576,
+    "sample_id": "s20103_level_step_0576",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "001597da48bf0c251a3026bb5bc747e3cb431dfddd0efcc589943570606874fd",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 577,
+    "sample_id": "s20103_level_step_0577",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "410bedd584d329a050286d79b5affba7b701dc6c264713512e0ce413e58a8760",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 578,
+    "sample_id": "s20103_level_step_0578",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "3b2b0d2ba0197253e50f200f25f18351bb9b6bcf815737fad649e60136a41346",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 579,
+    "sample_id": "s20103_level_step_0579",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "8d4c6d1eaa0daf3beef97408c32afe767cae2e35fbaa2e0ee8af3cc00a2fa414",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 580,
+    "sample_id": "s20103_level_step_0580",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "ff514e83d89fe733d51e29f9c36da4b5e1fe5d21bd1b6048412f5184c910fe7f",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 581,
+    "sample_id": "s20103_level_step_0581",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "4b13e1cbd3b7e2f93426ebd2020fd16280071d9a6e22e14f2cc202d2ad00a3ba",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 582,
+    "sample_id": "s20103_level_step_0582",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "4bf7e2bb5405eaf771d61275c031948d6b593b63f88d92e4ddca01d4ca89510e",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 583,
+    "sample_id": "s20103_level_step_0583",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "39b68c68c0672c7b057274d821239fe16562cb30058142bc1ba5e5a4e560b9ef",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 584,
+    "sample_id": "s20103_level_step_0584",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "069f49dab89e230aef8bc4d595985762dbba2c4fbdb97086ddfb58230062781d",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 585,
+    "sample_id": "s20103_level_step_0585",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "3116821a79bc5338b5d443d27c11522481ca2c7d8321412bb827285d9f9cf462",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 586,
+    "sample_id": "s20103_level_step_0586",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "545f916a82f765130490f654d97f229b56eae7357c9e2099e2ae3af3f40aa115",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 587,
+    "sample_id": "s20103_level_step_0587",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "7684600cb57cae94cdcf9e10251f1b2cd1aa6bc7eab79fe56bb6b801ad65d969",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 588,
+    "sample_id": "s20103_level_step_0588",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "cfd5a25e47c2cbd87434682e3fd0bb077dc076682e72f029ec3fdc3ef3ea870d",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 589,
+    "sample_id": "s20103_level_step_0589",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "29e79b91b6429b21062b5bed38a6b85c169407f4922115c6d143410ecc432cf3",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 590,
+    "sample_id": "s20103_level_step_0590",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "3d044269fc2e26e737aa8a5f83e3eb58b309b9bdbf464d5937cb8d2475a4e547",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 591,
+    "sample_id": "s20103_level_step_0591",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "44d47a09e7c282e795232513961e5154ee653726b9870a34bd66ffa0bf203edc",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 592,
+    "sample_id": "s20103_level_step_0592",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "6d17295195b1a68d303bbe2e127751d14c1360bec0483b9365df4fe0662c5a69",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 593,
+    "sample_id": "s20103_level_step_0593",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "24c9f7cb3d20353902160de9868db90f27913222d60c0ddfc5e46517a1317603",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 594,
+    "sample_id": "s20103_level_step_0594",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "cabb43445976b35d551a634bd7f78cad27e67f3216e29a3784621c019f28cc45",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 595,
+    "sample_id": "s20103_level_step_0595",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "00585522e2d5af17eaeb99a63b79fe66e01fd16e1f74413135ff1302fed3915f",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 596,
+    "sample_id": "s20103_level_step_0596",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "197dd811d2aa2718444d1f53cb979cefce28aef2bbf68faba108bb7d5a665fb9",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 597,
+    "sample_id": "s20103_level_step_0597",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "55559b0e8403d45f124f73d3ffccb466a046ed18354529935c5a4521e29e7658",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 598,
+    "sample_id": "s20103_level_step_0598",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "1d964c957b9d302d08ba9e3e8d33065be2cfc9c6affcb15dd7e1088aeb6a72b7",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 599,
+    "sample_id": "s20103_level_step_0599",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "74bf0764f2471bd10b0f3d1bee772fc23598a400210235e9c64b4fb60bc3b94b",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 600,
+    "sample_id": "s20103_level_step_0600",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "13343d51167102a852a973818069c302da6008273ab256d7fe704e8a4213fddf",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 601,
+    "sample_id": "s20103_level_step_0601",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "372f0272e9b038ec716ea14cfc30c1d0330675c8a23b966ba83ad715e7e14f1d",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 602,
+    "sample_id": "s20103_level_step_0602",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "c93374d445d0d1a88cfe7d63382c9eacfab8c7a8e3c2df75afa0982236ed8b73",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 603,
+    "sample_id": "s20103_level_step_0603",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "24c26a616c7f1b3b56df8ae9362607fe9d302ce5e1cc65f2947086f4da8a0caa",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 604,
+    "sample_id": "s20103_level_step_0604",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "bcd44036bde5e4eba70bd1d7b11594e2245474fffde441f684b476d7f2f35658",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 605,
+    "sample_id": "s20103_level_step_0605",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "e05cc87b4bafab61b75e08d4a1eacfc5e1175fa9f85ec9a9d64dbb92072a9356",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 606,
+    "sample_id": "s20103_level_step_0606",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "c63ba946245af77e37fc415e29d74413cf6486516c5d02f1d9275eacb715a295",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 607,
+    "sample_id": "s20103_level_step_0607",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "15bccfe4ef4f8e404465564418db30e1c953631e039ff5e7db1bb47b9433c9bc",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 608,
+    "sample_id": "s20103_level_step_0608",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "fe1973f190990f7dc2e6c8f1d2bee92ce37530038a84c160fcf08a43582ab352",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 609,
+    "sample_id": "s20103_level_step_0609",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "9c548e77ae603e9cd91cd016db7d740113a4cf0d50a400fcbf457686a792059c",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 610,
+    "sample_id": "s20103_level_step_0610",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "c9837102e5adc8f6423c292ff8b4520a055f3f392aca55f507541d7183a702fb",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 611,
+    "sample_id": "s20103_level_step_0611",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "ecc2203e9a4859bc836e7f5fd06953c929a95db37c9f06ba9e9837c237ff2d01",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 612,
+    "sample_id": "s20103_level_step_0612",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "77256fa43826444ee4b731efa6eb796fd16e3d4728172507101f51516e83bdba",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 613,
+    "sample_id": "s20103_level_step_0613",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "a4865fb69daa82dcc81c6eb871fd98c3f643d24467a26a25fb54f4b186acc11e",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 614,
+    "sample_id": "s20103_level_step_0614",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "e6dbebb68cdedb48eb499cf41c14966637dd155f78b0958c1027d351f44307b6",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 615,
+    "sample_id": "s20103_level_step_0615",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "1c2ea327d3c58a84b58bad84027f6b5d946108920f9442853b63e946fe41a40a",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 616,
+    "sample_id": "s20103_level_step_0616",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "5cd6bda83ba61a790e0d96de45458a5cb1c101da11851663086674c0d350a2dd",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 617,
+    "sample_id": "s20103_level_step_0617",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "2240a4599087c4348c91ea8b30be7b93fdc3ed0dba73b8af5f3407bb48e8fb3b",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 618,
+    "sample_id": "s20103_level_step_0618",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "4f1850ee6124b4f1acf769f4bf3c65a786a916b30197324e82d7da8fe38730ab",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 619,
+    "sample_id": "s20103_level_step_0619",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "94d854b3f5f606fdd532ca04f5a2cda069c829404d4392092864d3c886b92a66",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 620,
+    "sample_id": "s20103_level_step_0620",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "64d0932ab1aa0c7b45ae8d924edcb546092c36bd58aa0af66b4508e4f6e883be",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 621,
+    "sample_id": "s20103_level_step_0621",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "a21fbcab4d3c2ac3b21c87d23555d743e30d8267aa23c1523726be70919cbd45",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 622,
+    "sample_id": "s20103_level_step_0622",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "c8c5cf3c2b8ba7d505172720b521d507a37a4f95ee1ce3f70a7f77e29266aba8",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 623,
+    "sample_id": "s20103_level_step_0623",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "19047338fbe1894128f4498afe39d8b6a0e759188c8e0932807357e71e90f9e5",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 624,
+    "sample_id": "s20103_level_step_0624",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "bec4cf15bb6d2a41c11920b5bfa64caeccbd77ab6ca50781ea764f69c818ee27",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 625,
+    "sample_id": "s20103_level_step_0625",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "7ec8e0e64b8884dc3ccea781247907723e134592179d58769db1fcefdcad38ea",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 626,
+    "sample_id": "s20103_level_step_0626",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "d5460b1eebeab048fb98a4394d6096b24f73e94101effa2bbd3545382e44ef62",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 627,
+    "sample_id": "s20103_level_step_0627",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "b647d45d17d0a2d0d51b0744dda732cc28549bb155721654d9489fe3aae839b4",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 628,
+    "sample_id": "s20103_level_step_0628",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "1b855e73e4554324d057f379244ddc77cccb9f1d7ba830eea0af1334f5cc5db5",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 629,
+    "sample_id": "s20103_level_step_0629",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "63d1239cda4419ee38878afcbf22dada7755aad0aedfd0cd608cec5707374eec",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 630,
+    "sample_id": "s20103_level_step_0630",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "4bb3dbc47b00188100a056d917b2da47774a406b2fb812cfd189a10d9ce6d7f2",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 631,
+    "sample_id": "s20103_level_step_0631",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "a530ab6eba5c78c02681d7a114e2ce7a20c22c131b56648eabc9b17db68c415e",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 632,
+    "sample_id": "s20103_level_step_0632",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "7d242bf088bc7bc9bd3c6248dd1ce7153ac98fd1157080722b4886837de1fc8c",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 633,
+    "sample_id": "s20103_level_step_0633",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "2ec34523436bad7c9d77b7268f6930cf4c4b276901597f37220eb36e41e7fcfc",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 634,
+    "sample_id": "s20103_level_step_0634",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "7b7d6bf12d2fe72d3021ca35afa4a88019d98a71b6cd5345ebc3776837292aa1",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 635,
+    "sample_id": "s20103_level_step_0635",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "72dae5e3bc1bfe198fe9747f27ee695114c05f9f353131f908be71ca5fe6bf7e",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 636,
+    "sample_id": "s20103_level_step_0636",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "41decb531c7e62b201c653c4192cd1d3399932be40c9ba77787ee357b4d9597f",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 637,
+    "sample_id": "s20103_level_step_0637",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "825626d76baf850448300c8766ca02bce734c0f8eb693f38870510761b14e382",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 638,
+    "sample_id": "s20103_level_step_0638",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "38d25989cc057e2611baa8d25c48c283dfcf3a5316452036a88a7158265219da",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 639,
+    "sample_id": "s20103_level_step_0639",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "5232c580fedd7e3b1d3913c87fdfadfcff64243d85867b1b1fa5384264e24316",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 640,
+    "sample_id": "s20103_level_step_0640",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "b97881cee4386ad0f70a2c0e05904ba13165e979119188c6e0de24b1571bd991",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 641,
+    "sample_id": "s20103_level_step_0641",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "69337a8e41087f508bfc0098e6968e03116a1c90a3208a8876369ae88d91611d",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 642,
+    "sample_id": "s20103_level_step_0642",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "10cf6fd9bd38385962e1677e2b08bdd60aa696ab0bb82e86f2c44be129237d44",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 643,
+    "sample_id": "s20103_level_step_0643",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "bcaa92d037cb626c711d746a5c5f5f7cbae25079a217f4f04cdedb91f4b32817",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 644,
+    "sample_id": "s20103_level_step_0644",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "16456152481ee6b09a4b54c1ad6191a8e933cce028bd8cc69572aa4705ef214f",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 645,
+    "sample_id": "s20103_level_step_0645",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "03cd3de2bcd0c3ab58959e1421ba02b8af6a8c833eb3bee2269f8b1d635d1ab6",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 646,
+    "sample_id": "s20103_level_step_0646",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "283412de3ab547592f735a4bae5fa041294785ecbf1f6a57cdf55390fc53353b",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 647,
+    "sample_id": "s20103_level_step_0647",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "3462caee3e29aa300fb3b295ac5192f5f70c92281f06a650a3e07503653af215",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 648,
+    "sample_id": "s20103_level_step_0648",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "2cfe7ede2842b88025d71229890b31b44310915d5938bff89c4a4e2b986a82a1",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 649,
+    "sample_id": "s20103_level_step_0649",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "cead709ff946d73c9c31f444a3cece87d97668343e70f9a919c8890245ceb4b1",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 650,
+    "sample_id": "s20103_level_step_0650",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "0c647c796a8d27749a02040161d16e97f14a28f4b5714bbb09d7c0d6d5a7fcfc",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 651,
+    "sample_id": "s20103_level_step_0651",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "464a88a982a0f0ed772141126641b19e5a561cab83596e9aed6939d033d35a08",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 652,
+    "sample_id": "s20103_level_step_0652",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "597a021c850a9ec6ad3c923e8f919144a558d45551f6c156c27069801c55e209",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 653,
+    "sample_id": "s20103_level_step_0653",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "f136a4b94968b23e80b3dc2d10c6981673d48835c7049fd3064167b60840fdba",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 654,
+    "sample_id": "s20103_level_step_0654",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "f7b36fbac8e8634bc516b522aa0b0cd973ec06fa61136f6b9cc31004a13dd65c",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 655,
+    "sample_id": "s20103_level_step_0655",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "a960a8bdd596030948596b58e72c8bfd46b7f65f044ad2919078927424749e26",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 656,
+    "sample_id": "s20103_level_step_0656",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "4206069be494b1df2ca4916e5295555c93241229030438287f76997248f19a20",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 657,
+    "sample_id": "s20103_level_step_0657",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "8198a08b1fa2b298e150f934db85f8ca50a6ecc08b7a28b944749fd5dbb7173a",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 658,
+    "sample_id": "s20103_level_step_0658",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "b6037f485434aa10117c1b386d9f6b404b852c85728b2751fbe6e3530b281d51",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 659,
+    "sample_id": "s20103_level_step_0659",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "5406966dd521a15341958170208a8425d71b19a3e389f08b716c3af048e9d100",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 660,
+    "sample_id": "s20103_level_step_0660",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "0a48f20c6be5870181290362dca9aa3ae1c81550a0eb770269520e13e56c6c12",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 661,
+    "sample_id": "s20103_level_step_0661",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "42ad654094e9924cfb1692327c2702417bea40f427c707b362da9ad2cc4d09a3",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 662,
+    "sample_id": "s20103_level_step_0662",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "ebbc65e9946581791979721df0ed77b60395838ec3eab3758160e436636d1f55",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 663,
+    "sample_id": "s20103_level_step_0663",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "682618eee884d6b31848e0049cdff20c914e6eafd056a1abb4e38233bd82be66",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 664,
+    "sample_id": "s20103_level_step_0664",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "50dbbcd24a296b97d1de57e8b6d3ff0b00d85de5dddce310c11d1a993fcac345",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 665,
+    "sample_id": "s20103_level_step_0665",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "f7ddcc5997329d4b43eacee54e4155cd0fb526f36af29596a725afd485a253b4",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 666,
+    "sample_id": "s20103_level_step_0666",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "dfb6d57e94a0e2f99fba0c4db037b1ec475a697df44af126eff7f40f5f08be07",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 667,
+    "sample_id": "s20103_level_step_0667",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "c93b1f4b9e133cb8ad091d5b1a1aa84b7ddadb762dc0c4e4e2b0d00318944311",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 668,
+    "sample_id": "s20103_level_step_0668",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "68486c66202558b264e11f13f7a6533bf4e753c6db682f04d598c0409d960184",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 669,
+    "sample_id": "s20103_level_step_0669",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "19d3df0920bac6139769354c0f38cf945ee813518d26c705ea85ba01daf70ac9",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 670,
+    "sample_id": "s20103_level_step_0670",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "6eec776564ae443906a3ed54fd019aa97c1180e5e62db0a9f1fab80cf84efe50",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 671,
+    "sample_id": "s20103_level_step_0671",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "d088cd789befc6b434957e4c4fda412458346c9a24f7ec41d15366dc92978e07",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 672,
+    "sample_id": "s20103_level_step_0672",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "934b6d6d3c659f0e862b84eaa1f94af227e4f681ecab0bcf2661d5416546fefa",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 673,
+    "sample_id": "s20103_level_step_0673",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "a12f2cc7ae75accf7f2b85b6b1531352b7371754ebf2b31bb542c62652228789",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 674,
+    "sample_id": "s20103_level_step_0674",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "447c5e204ad26512803043eea3b0239cd920aaedb97168f0a7ce752e3f37f406",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 675,
+    "sample_id": "s20103_level_step_0675",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "6a69818f781a4e6747cc93662147734fcec9dcb55d1a2338ee4ddd1d631d1ca6",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 676,
+    "sample_id": "s20103_level_step_0676",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "e96f48cc5c388e876d74141eee399ec8dfbd5f34d0ab21db6e80683d8ddf2ec3",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 677,
+    "sample_id": "s20103_level_step_0677",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "2a35f9b4d94aaa3569e08ddc5cb882714074703a9404525f5020ae00b59bf9da",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 678,
+    "sample_id": "s20103_level_step_0678",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "09b72d20eee05184d222b746a1d4445a8a341a0cb010ed3bd63632ff528e15e6",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 679,
+    "sample_id": "s20103_level_step_0679",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "d2d667252dc0e53e6ecf8b4bb798d4cf6a4703ed0b897a596db2273efade79f4",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 680,
+    "sample_id": "s20103_level_step_0680",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "595744cf7300f82c99b489fd3e65ec1cd7a65edfabd8784f00471dd60d2f46f4",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 681,
+    "sample_id": "s20103_level_step_0681",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "53dd77910f5269a076c9d654f8250ba6c60ea5bd4036ef733ff3737deba95ece",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 682,
+    "sample_id": "s20103_level_step_0682",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "0ae544111bac8470419b5eb15ac1839215da1a556b07009d855edcce8a99e007",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 683,
+    "sample_id": "s20103_level_step_0683",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "5fd3cce81ba218bd1ad6f69bfe2a608b32de815075ff651cb447d3210be3b9df",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 684,
+    "sample_id": "s20103_level_step_0684",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "09e9435d46be86753874b1d611f4f2e03d712bf74cd0f30d8879ea3666ae7cd4",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 685,
+    "sample_id": "s20103_level_step_0685",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "0f642e856eff2baf49a721d1ca42838332d702d5d98ce1d69ef4116e63875ad5",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 686,
+    "sample_id": "s20103_level_step_0686",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "87523aebfa342a823f76a34367200f9c52d4f8cbd19a73f5f16ddb91d98382fb",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 687,
+    "sample_id": "s20103_level_step_0687",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "f4fb3a725a59cfc3c5516ba0d67fb90aba758d7895e957e0db35a87e09afe656",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 688,
+    "sample_id": "s20103_level_step_0688",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "f59cc54e7e57a26eecd57ac9a991d546e727722a70a16cb3d392bdf7cc580fa2",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 689,
+    "sample_id": "s20103_level_step_0689",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "7fe0b80d9cac8cd5717ce26dce001ddcd4f5ad7fffd3c0437f3fc465944a5579",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 690,
+    "sample_id": "s20103_level_step_0690",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "b8aba5ecc3cd329f2d9f4fdb6a0928a29c1da0543139b0094df67b37daf84314",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 691,
+    "sample_id": "s20103_level_step_0691",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "8cf77d53ed52895d166f1d94a881d019385cf61f51922395834e1582b4efdeed",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 692,
+    "sample_id": "s20103_level_step_0692",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "a63505d3788e3866a69259a2c15a9281c99850676986c6d4ec9df51c78b3cf89",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 693,
+    "sample_id": "s20103_level_step_0693",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "df6c385f14928655b126928b347d1953e439cd162055c92a3ed15af5d865bc5b",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 694,
+    "sample_id": "s20103_level_step_0694",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "634a2b61dd6a911243146ac0e45f4183d9156a61fbd76c3a2fc62b952d91e735",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 695,
+    "sample_id": "s20103_level_step_0695",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "d991281f06ebf9ab1bc3a7da46fa5814a753197548c97e6c413757caaf8ab264",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 696,
+    "sample_id": "s20103_level_step_0696",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "1aaed64e04fad169a16d789bd6c3a24b54e71b720768dc12e1a50050d6d3d73e",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 697,
+    "sample_id": "s20103_level_step_0697",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "7426fecbd1ec738a4334d61bdd45db6d549bb2b50a7e3fc731460851ccf6cfc0",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 698,
+    "sample_id": "s20103_level_step_0698",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "0199b781013f5eb31f458e2c45e11e8cd8fa73bbf8015f2b327a04bf1860cc6e",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 699,
+    "sample_id": "s20103_level_step_0699",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "88af80a4f465952a83fee67da8e57d9e707eab41f6da45b3ab58a3c8cb3c71c6",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 700,
+    "sample_id": "s20103_level_step_0700",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "ccabc805db16ad5ea86dc1d5bab6d0c928234ce8f64f31ff7ab61d81c2dfe3bd",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 701,
+    "sample_id": "s20103_level_step_0701",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "98689750e19561773aa6e4f3c8241f30ef3754abdbdb90579da88b73b7e51720",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 702,
+    "sample_id": "s20103_level_step_0702",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "22e0d4e814d9bfe7b2e6d20fdcaa22666af8fbabc2504538b81d1f0e36a64dce",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 703,
+    "sample_id": "s20103_level_step_0703",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "c996b8063b613c1123807bf790875aa93cee5cf9ef01b0f5d564371bf2528b2f",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 704,
+    "sample_id": "s20103_level_step_0704",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "123f30f7a9524880e448d0d6a8432c3f7e8458f824174a072d040758c1e411b3",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 705,
+    "sample_id": "s20103_level_step_0705",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "c7c8e096936045d608bcabf3f837f7e9e70d88a3b2a014ce6fbe47f9004a32d9",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 706,
+    "sample_id": "s20103_level_step_0706",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "003b4247b6550a7ddf142b9d95510090ce2c839ae66d9b9f0cdeb63fb8266a03",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 707,
+    "sample_id": "s20103_level_step_0707",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "3b50dc9dc89d1f7e710429c394de5ea1fcb04b0cd5999653ad20d7f897da65dc",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 708,
+    "sample_id": "s20103_level_step_0708",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "2a2da1ceef3492b6169436deea3de9f744a80a3836020d8a00291d470889228c",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 709,
+    "sample_id": "s20103_level_step_0709",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "957eb3c2021a5fad8ff7e51774e192f5867f07518a1ce6a23dbd5649ae9f1f3b",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 710,
+    "sample_id": "s20103_level_step_0710",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "9fddf3636fab24a16f48b7164db92d4a6dd5e06eaabfa25937353bd8cef2de4b",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 711,
+    "sample_id": "s20103_level_step_0711",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "093212eda0363cd19651bed938aa3efc1ccff02782a8b62ab7c838b750480556",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 712,
+    "sample_id": "s20103_level_step_0712",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "a2f35d9558ad1ac56300ac4ed15773434a9154d7098a884f8736f0f1f4a72573",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 713,
+    "sample_id": "s20103_level_step_0713",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "0d156cc82d2b42d1722df63e41d399caf8f85061d0a449a7f0cb10489cb9df4f",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 714,
+    "sample_id": "s20103_level_step_0714",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "3432d36d0d876a64fdf12b4eb00a38fec5607ebed595544093eb5f119d004055",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 715,
+    "sample_id": "s20103_level_step_0715",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "15dee4198318be4afdf98c007d91cb15a9f66583ba91e392b75badac9254ca5c",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 716,
+    "sample_id": "s20103_level_step_0716",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "2f0d6aa6530cd38fe56e642d5b7bec0b0e38a46d90338155201e44ecb3e55dff",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 717,
+    "sample_id": "s20103_level_step_0717",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "2b5ecdb52916f481c484c8f405d25978d6fb8db5064bc7bed79ee7763aeab6a8",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 718,
+    "sample_id": "s20103_level_step_0718",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "d2d76574035414f5f67d0eaaacd85d5162df2ec1bafbdf8c53757928d20b4e4f",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 719,
+    "sample_id": "s20103_level_step_0719",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "4af05a614f367b7e20af7c6461910f8aeeaf74ee1b111d39c6d614b4d0066cb4",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 720,
+    "sample_id": "s20103_level_step_0720",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "228731a24caa7064ada26ea19f4279d672a39d6284480c1bcc2a7a085bf5f79b",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 721,
+    "sample_id": "s20103_level_step_0721",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "aadb39a06f5b0ae426d0dd9857114e46bba61f25f42caa676e6b2e2173513468",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 722,
+    "sample_id": "s20103_level_step_0722",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "131ebdd86a42327a6e310f50c922cf61fd29e49643b2b09705c093c8ede93343",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 723,
+    "sample_id": "s20103_level_step_0723",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "d129f5b3281e2b574d09edbede1f8f707b777f0b1fd80f73c7f6dea498448785",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 724,
+    "sample_id": "s20103_level_step_0724",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "64be8e9bee22612214f9f2eeac51fd43dcfbe4f252863ed56aa37ea59443c539",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 725,
+    "sample_id": "s20103_level_step_0725",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "b25fed5c3f4bacd9eab57fe00c3d37831865fa387168604e26970a31a614e5fb",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 726,
+    "sample_id": "s20103_level_step_0726",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "20817d814030794c677bb90ee6972b2ccc3054a2b47122b12c40d9d7c799a32a",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 727,
+    "sample_id": "s20103_level_step_0727",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "10c3c2bb5901816ff234e48673bc073acb4c320d5ab9889a33ebdd1844c96f57",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 728,
+    "sample_id": "s20103_level_step_0728",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "e3532cb9e44c0c599c456088e58639ca8a288056cffd5bf2fc818fa5cd34d128",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 729,
+    "sample_id": "s20103_level_step_0729",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "2842daf1811975694ca1860eac1ba01992d2973974f95a1533f22566fab2bd6f",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 730,
+    "sample_id": "s20103_level_step_0730",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "aecda16eda337fdb001c379eb7d4522a4b0ba5df92a37af4f8682b5480ce67d5",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 731,
+    "sample_id": "s20103_level_step_0731",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "14c67fdb28bbbf655a73b4c59431ea81bd89b21f9096d8f7587cc104346b0944",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 732,
+    "sample_id": "s20103_level_step_0732",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "7a147fd0484ee9f6e3db9629d483dc72b58d0cbddae6bdd1bc59e8ffa2ccd833",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 733,
+    "sample_id": "s20103_level_step_0733",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "bf3dfdac677d9a274a8b4fc40530177ba954632579fe81ae4a4b4a48756f7c3c",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 734,
+    "sample_id": "s20103_level_step_0734",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "6e9e6ee69398108e13b6658b2afa453900ca4b045965e5c027c85685d8b93c63",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 735,
+    "sample_id": "s20103_level_step_0735",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "3b108591507a931104fee86f82c97291c9f9feac55191fcac2f2391d0165dc68",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 736,
+    "sample_id": "s20103_level_step_0736",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "6872ebfaf29a810721c226314320ad9d6bfc77aba39bccc95117a265c26bf98c",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 737,
+    "sample_id": "s20103_level_step_0737",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "41f8ffe441a0aa1b2c5a7dfd939531fae0722acbe73c489433de1d191b1a5bba",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 738,
+    "sample_id": "s20103_level_step_0738",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "f629fd9d3dc9fbdffdbd7b1b92591e45dc774fd3875090e63df3692ddfe3deb4",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 739,
+    "sample_id": "s20103_level_step_0739",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "ef4190fdfed478737afb7354100d347c8e8215396752c07f122ccecb0420845e",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 740,
+    "sample_id": "s20103_level_step_0740",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "422d5d40139c19e956fb73bbc85de86a55a9cfae0ca5ff3f15289df617a31c9f",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 741,
+    "sample_id": "s20103_level_step_0741",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "9357f4ac8b9e4e576735947a4c9b95c7c83c4b9358d56a32143c9a1568728b8c",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 742,
+    "sample_id": "s20103_level_step_0742",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "5aa2507da360344a8f9a4a41161dc0e884509acedf56d133e0b8129a6cc708b6",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 743,
+    "sample_id": "s20103_level_step_0743",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "930c16704456a980774214664ae1a0517550877ea20910597fe19a13032e81a7",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 744,
+    "sample_id": "s20103_level_step_0744",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "911f93eb82bd6848a977a3f3739ed42ef05891c866ba47e04d5c91b64ad346ca",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 745,
+    "sample_id": "s20103_level_step_0745",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "fd916c40cf502bf168ad2362b288e98c7dd5e020bb4788d856ad316273a134e6",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 746,
+    "sample_id": "s20103_level_step_0746",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "56334f9fa8631b9aaf66e4d1080b974d2c50c76bfc2226b39e0421d460d8ea18",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 747,
+    "sample_id": "s20103_level_step_0747",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "a6a29752db4c9f49f60431fa840dbbbbc8dec1387cec8fa578ec0c15fb7bc72c",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 748,
+    "sample_id": "s20103_level_step_0748",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "af491f242278ff272b6e4c47ef0a577a86820041251d1867fcf33429e7685b10",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 749,
+    "sample_id": "s20103_level_step_0749",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "9ff30417d4e0aa8e258eb93569ff4ff0d6ca9507409c6c57ba4e81eeae5fcec2",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 750,
+    "sample_id": "s20103_level_step_0750",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "3954447feb1604991e5706ba5eeb2deb0e00134ddfe99bd2d3a2e3f86e716637",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 751,
+    "sample_id": "s20103_level_step_0751",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "0facf08c8d5620d9446cbac28616515034150fd066ae60dcc2b686bb0ac1af55",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 752,
+    "sample_id": "s20103_level_step_0752",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "fe5c5270f62705a9f9b2ba1994a851e23d5af528de7658515804d1eef22af0f8",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 753,
+    "sample_id": "s20103_level_step_0753",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "edc239d0043155a89a15bc079ae5f6cd07e05e5a878f232263e46798821b4467",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 754,
+    "sample_id": "s20103_level_step_0754",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "a4e107737513c3b9932031132985f2d2871474c9bfbcf36aeee433a5321a8b28",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 755,
+    "sample_id": "s20103_level_step_0755",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "33e20ddd2642f9105964adc570a4179e3a1969c245fe17b3dc206c2f1255a3f6",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 756,
+    "sample_id": "s20103_level_step_0756",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "390bb6091f613e738cd17c1f5b9df23c8d48c9b7f2ef9eaa549d760718679299",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 757,
+    "sample_id": "s20103_level_step_0757",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "167d2989284c1f68c8e92183ddce672cf648fab48ea3b679e5d07704f8154096",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 758,
+    "sample_id": "s20103_level_step_0758",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "bc35d0dfeb79fcf7bc3f2b314b7b9412d7c9f3ad3a82503a97ccdc18aa045575",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 759,
+    "sample_id": "s20103_level_step_0759",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "9749ae7400bbafd301257e7ccb3626477f6bbd0a6af18a15dd9e7b478e0ba103",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 760,
+    "sample_id": "s20103_level_step_0760",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "e16da92939f0149c8418ef3f4df5fe83107d4c1f264dcf152f97a9e7e4fd1cf1",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 761,
+    "sample_id": "s20103_level_step_0761",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "ceca02f206512af7d09c4a76d6b03084325d0fbb4f308c0ce719e1437de1aa00",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 762,
+    "sample_id": "s20103_level_step_0762",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "9aacfa36a608fb35c23d8d1faad6ca01adc654530f62f9320a454a39040c6b83",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 763,
+    "sample_id": "s20103_level_step_0763",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "b38b838a09d054a250b14b1decab5313c472d84bbdf4db40fce9421f4b61b652",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 764,
+    "sample_id": "s20103_level_step_0764",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "681c4eb52ca977b98a88b1fb38e048e3134f95f9e57d104ca4f355db05fa92df",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 765,
+    "sample_id": "s20103_level_step_0765",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "d7b10678825fee8eab077e16e783fe1cfb97aa141536133c419c95815d0621d6",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 766,
+    "sample_id": "s20103_level_step_0766",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "044c5b275717006462e166129e241ab2bfd6e75249e9cffb046bf11da2da2ed7",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 767,
+    "sample_id": "s20103_level_step_0767",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "66077e2c7d041e87a8effe09eecf0ae7d928322e8b0691ab92d6ee2439b29538",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 768,
+    "sample_id": "s20103_level_step_0768",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "e929f45dd8479ad1300c83df1aff48e4833963f434d4f23ffd5497108e9fa549",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 769,
+    "sample_id": "s20103_level_step_0769",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "7b46da20dabab6590176d66ea451cca3d07078ef549e3c8122d7a182af01f973",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 770,
+    "sample_id": "s20103_level_step_0770",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "d672a6c93e538432aedf8f35a8f4723802eee733eb555cc25a630a598a96a818",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 771,
+    "sample_id": "s20103_level_step_0771",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "14421137a3d3731c43462f14ec72dafecefd7b7e6994a8ae7788ec4e5442cae5",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 772,
+    "sample_id": "s20103_level_step_0772",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "5acfa6c324b370895c383af71feeafc60a14226bce609dd4af0c6ee9ac93e9ed",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 773,
+    "sample_id": "s20103_level_step_0773",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "127ee998ad5490f66ecf95237153ec4af8e7703fefd2b1450151517ec91347bd",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 774,
+    "sample_id": "s20103_level_step_0774",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "305b795bf646154930c285ebd05d8a6784e825381a4bdd1352343e74b3875cf0",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 775,
+    "sample_id": "s20103_level_step_0775",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "6d4a7aabe103e7b73c8a0321d847f679f3423a44a52a1ed89d5ccce937813eff",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 776,
+    "sample_id": "s20103_level_step_0776",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "487a7207ab0bf44718223dcc48088a81b596dc15abd1e7eac131885d58ecb7c8",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 777,
+    "sample_id": "s20103_level_step_0777",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "8d7d0d60becd8b981fbeadede4f4246b9b20ec25163ef821a6358e652e24f9d2",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 778,
+    "sample_id": "s20103_level_step_0778",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "226d0c893b3b369541619a09e5b509395bdfac8ce88ed322b5fc8b1a41f7e39f",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 779,
+    "sample_id": "s20103_level_step_0779",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "6fca9cd6ae18dedcd04731aa024647af01816ebf756cf29e63e96fce29ed3e2a",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 780,
+    "sample_id": "s20103_level_step_0780",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "1d5bfe927f68d78c583bce47676645f5b36c62dd23668bcc386d1abda0f16602",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 781,
+    "sample_id": "s20103_level_step_0781",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "249f1d2b593a1aba35a2530a2759bba02b45a70ed95c8b20e28a4f015e4292f4",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 782,
+    "sample_id": "s20103_level_step_0782",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "8e77152b65dfecc41e53f531eb979db4a688078690202810c654ecb6cfb51c12",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 783,
+    "sample_id": "s20103_level_step_0783",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "ecd238c8967d80f1f8be1b6b9596cec917276addfb39331a689278136e6b889c",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 784,
+    "sample_id": "s20103_level_step_0784",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "42ddbebb1c614a40ca45ed76aede880c556f90a1699a30d29315ebafeebdfdac",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 785,
+    "sample_id": "s20103_level_step_0785",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "cab60293e7711c8838915454578961421ce3458fc061d411f3c2b27806c0a461",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 786,
+    "sample_id": "s20103_level_step_0786",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "ff0eac4d1b7a0e61aa3356e6185a2878f1d5b3c41fbb6dbd03f0d8eb35d8c32c",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 787,
+    "sample_id": "s20103_level_step_0787",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "f13f436dcfd68dc5f68229f2a5e79c27276898a06c2f63886a9516deccc1bd3f",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 788,
+    "sample_id": "s20103_level_step_0788",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "8211456aa0dccac12c0033244de276e0a82397af3a1fc904116b1aef6abd4d2f",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 789,
+    "sample_id": "s20103_level_step_0789",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "03f3af1936a54e3d5502d3b92ea58cfa1dfe9e4ae62ba7bd20ece4d3ee14be7b",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 790,
+    "sample_id": "s20103_level_step_0790",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "411d791d8e0d996741abb1af0e3916d57d882bb181d37c2cd418a1b50aef1c36",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 791,
+    "sample_id": "s20103_level_step_0791",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "2549368ba13c8b706a0e9cbf0ae398c226eb6edf8502c74d5c552c109246bae0",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 792,
+    "sample_id": "s20103_level_step_0792",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "59d17c21afc341a0cf6f15b10c92a1957a21fa03eb90896aff99d2e45d428d76",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 793,
+    "sample_id": "s20103_level_step_0793",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "2f184be226eeaaf74a11f7205bdf9c2c43f1499a75903e9e5290823d801bd16d",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 794,
+    "sample_id": "s20103_level_step_0794",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "4958c04a5e46ea524194fe61cb230db1dab365db0e35ad3f84cb4ac8abc01f79",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 795,
+    "sample_id": "s20103_level_step_0795",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "7f036f61fbe6e0ea95dd492945bb13f64364b73c311e2272c918b0062b0d9ac9",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 796,
+    "sample_id": "s20103_level_step_0796",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "70c5ce185c4736f5645c0bb0180bdb4221769c3a9daae033ed1e3f38cdd46299",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 797,
+    "sample_id": "s20103_level_step_0797",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "92ac8cf3f17c3090fd7a7b1cc9d30162ae0858ae39cba508c3e87cb90eeed892",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 798,
+    "sample_id": "s20103_level_step_0798",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "19b2a08cc80915aa24600f9f511ab6e276a482f0268eeb5d16ea352be4d600d9",
+    "background_updated": false,
+    "candidates_suppressed": false
+  },
+  {
+    "index": 799,
+    "sample_id": "s20103_level_step_0799",
+    "warning_only": true,
+    "warning": true,
+    "monitor_eligible": true,
+    "search_measurement_sha256": "05bdbca854ac4c2481e85a81029e13f54a0fe10b1db4fd2e4330799c4450f4f6",
+    "background_updated": false,
+    "candidates_suppressed": false
+  }
+]
