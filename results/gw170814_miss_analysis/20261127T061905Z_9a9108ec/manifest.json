@@ -1,0 +1,29 @@
+{
+  "run_id": "20261127T061905Z_9a9108ec",
+  "source_commit": "30849e8189c6c9b643492c085a3594fb1280cbf0",
+  "parent": "results/gw170814_current_control/20261126T174011Z_e21955d7",
+  "status": "COMPLETE",
+  "input_sha256": {
+    "results/gw170814_current_control/20261126T174011Z_e21955d7/independent_verification.json": "e80017d1c096819c91e9ff87958782921da49aa7257f4d4d9ebfc67dd48f9486",
+    "results/gw170814_current_control/20261126T174011Z_e21955d7/H1/event_diagnostics.json": "170bba1c092bcaa1f7bf6eb6cb4e08009eff1457ec05671f6574d995c0d873bb",
+    "results/gw170814_current_control/20261126T174011Z_e21955d7/H1/calibration.json": "cfd6a216859868250f7f123a416f015e1352590700a0234d2407fcc9a81858d0",
+    "results/gw170814_current_control/20261126T174011Z_e21955d7/H1/input_provenance.json": "a77ed21f7218d69a83ea87d2185b3f22082f9faf956b9f98e10d4d2772237523",
+    "results/gw170814_current_control/20261126T174011Z_e21955d7/H1/summary.json": "d1454898cb3b1f4eed730b3d4c8aac31516c4f6f200a2e464141afb344c94e66",
+    "results/gw170814_current_control/20261126T174011Z_e21955d7/H1/event_array_manifest.json": "fc2cdfa94f53a81d5674c60186b4ae3ffbfb35f5bc91d0c2eaf48219da2f60fe",
+    "results/gw170814_current_control/20261126T174011Z_e21955d7/L1/event_diagnostics.json": "ce3628da7f73ddfa19262525dff2ea0ad56031c2e7a0328942d35faead2befba",
+    "results/gw170814_current_control/20261126T174011Z_e21955d7/L1/calibration.json": "658afd2f8d201e8da9b9e3b1d9689af8908680ec6960059278a82d960cc44919",
+    "results/gw170814_current_control/20261126T174011Z_e21955d7/L1/input_provenance.json": "b3d5df48a0d7748d732b5c4b2ea99137427841935763c15855d69a34dc632f0b",
+    "results/gw170814_current_control/20261126T174011Z_e21955d7/L1/summary.json": "178ca8bb163f186d26120dd1a7543392e1eb9f757d1e7ae3163cc3f563bd990a",
+    "results/gw170814_current_control/20261126T174011Z_e21955d7/L1/event_array_manifest.json": "4af73e5295968a01eeb2f6f099f844d9515c5448a0979b406ede71668241a5ef",
+    "results/gw170814_current_control/20261126T174011Z_e21955d7/V1/event_diagnostics.json": "bef3418fa0b63e3860585e750ac7eb12726271b732ce64cc7a347539bb33f2b1",
+    "results/gw170814_current_control/20261126T174011Z_e21955d7/V1/calibration.json": "a815462f7883777c1d955deb0ff685eaa3f1543b5c4c17c6378af0c7e454c500",
+    "results/gw170814_current_control/20261126T174011Z_e21955d7/V1/input_provenance.json": "0524a7d0b139ae13671e5d15e5d62af4c04829f2e58bf7798acf48310b94af5d",
+    "results/gw170814_current_control/20261126T174011Z_e21955d7/V1/summary.json": "109d80b500bdc47bddbf02e05b059444a0a01eb21715287ed998e4a232164c03",
+    "results/gw170814_current_control/20261126T174011Z_e21955d7/V1/event_array_manifest.json": "3f8b5bc4c6cd569894bd83dea741f39fdba6c7b1cee58d3ab583dec7bb79f449"
+  },
+  "protocol_sha256": "fe598652f044842b1f8f67727eb86b47017fef6371e49b52b7f12e9d9340c394",
+  "driver_sha256": "2f1ac687d849686ef0e21ef1c9a3a2356ce46f4ea3a2c4fd619904e19c2ed87d",
+  "scope": "Saved-record diagnostic analysis only; no detector/calibration runs, no new detection criterion",
+  "input_hashes_unchanged": true,
+  "raw_clusters_checked": 472
+}

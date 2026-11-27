@@ -81,3 +81,8 @@ At3497211, two genuine O1 H1/L1 files were processed with an independently fitte
 ## GW170814 bounded current-source replay (2026-11-26)
 
 At8f78ca5, exact historical offline partition/vetoes onH1/L1/V1 reproducesL1-only recovery. All480target decisions checked;18 summary and22 candidate comparisons match old saved precision. No time-slide significance or adaptive run. [Known-event map](KNOWN_EVENT_CONTROL_MAP_2026-11-26.md) records both events, current subthreshold miss diagnostics and incomparable calibration-sample counts. This supersedes the unrerun label ONLY for this fixed detection/candidate scope, not historical FAR/significance.
+
+
+## GW170814 saved-data miss interpretation (2026-11-27)
+
+At30849e8,472 raw cluster normalizations and all global maxima were checked without a detector rerun. [Diagnosis](GW170814_MISS_DIAGNOSIS_2026-11-27.md) confirms that V1windowmax3.619 is a late374Hz cluster, whereas the near-reference maximum is.664. H1 fails after clustering; L1 passes allscales. This corrects interpretation, not primary decisions, physical cause or efficiency. [CodeQL record](CODEQL_TEST_REGEX_REVIEW_2026-11-27.md) documents approved dismissal of two test-only findings. Existing code/regression hashes remain unchanged.
