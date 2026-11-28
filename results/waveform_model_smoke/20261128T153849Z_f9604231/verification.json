@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "records": 8,
+  "background_hash_and_psd_checks": 284,
+  "model_reconstructions": 16,
+  "optimizer_returned_objectives": 143,
+  "max_relative_normal_equation_residual": 1.7394770292699103e-14,
+  "parent_artifacts_unchanged": 529,
+  "production_source_files_unchanged": 19,
+  "scope": "Numerical implementation checks only; no validation of tone-count selection, global optimization, unknown-envelope robustness or scientific correctness."
+}

@@ -1,0 +1,26 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "results/temporal_peak_persistence/20261128T135237Z_633a21cf/aggregate.json": "fbb4fce7979b28d3a4681a8ea6cbf47c1213e1e6bede974126955313d6db338f",
+    "results/temporal_peak_persistence/20261128T135237Z_633a21cf/case_metrics.csv": "7bcfd2cc3827b580652683ec275b1b4ba8988597cb47fccc0d058243bf9cce6e",
+    "results/temporal_peak_persistence/20261128T135237Z_633a21cf/driver.py": "be6c1c63747f711afe53ccef9b77ac1b17181feb54492d64532337591d4573e2",
+    "results/temporal_peak_persistence/20261128T135237Z_633a21cf/frame_counts.csv": "1aa8c484097293f362de3e304b9bcec4a59b698086953606f346f753bb8a2d63",
+    "results/temporal_peak_persistence/20261128T135237Z_633a21cf/independent_verification.json": "9e7379d1211ffae8f384e588d459730c7b7ca1333c3d1f22ac4d9cf02401cadf",
+    "results/temporal_peak_persistence/20261128T135237Z_633a21cf/manifest.json": "7cc76746203297317e89e6e1399617c712fc419b4b9523583421ada815da989d",
+    "results/temporal_peak_persistence/20261128T135237Z_633a21cf/near_carrier_annotations.json": "28f3930831d8d0b3d30009a176894994c3ec625aadf11ab31242add845eeac3c",
+    "results/temporal_peak_persistence/20261128T135237Z_633a21cf/pair_frequencies.csv": "481f1bdb2b98b6393c184ca3c8be2c31ada23540fd3d21b9e1dd9285d131b93d",
+    "results/temporal_peak_persistence/20261128T135237Z_633a21cf/protocol.md": "f2d6d85c60549924a0fe9e4f14dffb970851232f68b142d4a027d5769ed49aeb",
+    "results/temporal_peak_persistence/20261128T135237Z_633a21cf/records.json.gz": "165a76d738f2fb8a76f1887466a95faac57f2824a91dcd9ac4b6384d5a43286f",
+    "results/temporal_peak_persistence/20261128T135237Z_633a21cf/report.md": "5e97d86aa133c61dbefbda6e4420470baa39194a5d59e8f5b84100239e624506",
+    "results/temporal_peak_persistence/20261128T135237Z_633a21cf/report_temporal_peak_persistence.py": "89f144f776271536d4f82e5dde5fedab29c47ecdebed5faf1682e5726a459378",
+    "results/temporal_peak_persistence/20261128T135237Z_633a21cf/run_length_distributions.png": "d38988bffc5f9196d2c41db172b00c0d3b4edc02a02bb2a7542c83ba3a501b7d",
+    "results/temporal_peak_persistence/20261128T135237Z_633a21cf/temporal_examples.png": "2012608f1f9a8323c8b0700e7b0c0d1df4090bef18c1d369cbbebb56f04513d1",
+    "results/temporal_peak_persistence/20261128T135237Z_633a21cf/verify_temporal_peak_persistence.py": "55a36a422e92980e69408a7c37ddd993c2e920f79309f31e509c3b3a08881605",
+    "results/temporal_peak_persistence/20261128T135237Z_633a21cf/wrong_pair_control_persistence.json": "d7dd9e1a4394f8d31ebe289d18e6b37c517e694ef5be2f02ada287507a7b9553",
+    "docs/TEMPORAL_PEAK_PERSISTENCE_FINDINGS_2026-11-28.md": "d42240373f4db4e7903ab06483846fbddca22283fdf51992f71875301fc4523d",
+    "docs/temporal_peak_persistence_protocol_2026-11-28.md": "f2d6d85c60549924a0fe9e4f14dffb970851232f68b142d4a027d5769ed49aeb",
+    "experiments/analyze_temporal_peak_persistence.py": "be6c1c63747f711afe53ccef9b77ac1b17181feb54492d64532337591d4573e2",
+    "experiments/verify_temporal_peak_persistence.py": "55a36a422e92980e69408a7c37ddd993c2e920f79309f31e509c3b3a08881605",
+    "experiments/report_temporal_peak_persistence.py": "89f144f776271536d4f82e5dde5fedab29c47ecdebed5faf1682e5726a459378"
+  }
+}

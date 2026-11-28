@@ -1,0 +1,3425 @@
+[
+  {
+    "Q0": 2181.1973786843273,
+    "Q1": 2119.714831183737,
+    "Q2": 2063.123751987495,
+    "gain_Q1_minus_Q2": 56.591079196241935,
+    "M1_frequencies": [
+      90.17197118003405
+    ],
+    "M2_frequencies": [
+      87.95071758204644,
+      90.01314430906575
+    ],
+    "M1_coefficients_cos_sin": [
+      -0.2999068137049238,
+      0.5277552716362754
+    ],
+    "M2_coefficients_cos_sin": [
+      -0.5624778377940404,
+      0.23326989610344195,
+      0.5828666318173709,
+      0.22929986536059138
+    ],
+    "M1_offset": 5.9105999272029974e-08,
+    "M2_offset": 6.349416007550568e-08,
+    "M1_condition": 1.000001184585928,
+    "M2_condition": 1.07339875501209,
+    "unreliable_condition": false,
+    "nested_loss_check": true,
+    "selected_success": true,
+    "M1_candidates": [
+      {
+        "f": 20.0,
+        "origin": "grid",
+        "optimizer": null
+      },
+      {
+        "f": 90.0,
+        "origin": "grid",
+        "optimizer": null
+      },
+      {
+        "f": 450.0,
+        "origin": "grid",
+        "optimizer": null
+      },
+      {
+        "f": 90.17197118003405,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 9
+        }
+      },
+      {
+        "f": 87.7737903689535,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 8
+        }
+      },
+      {
+        "f": 91.66390197485033,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 9
+        }
+      },
+      {
+        "f": 51.64544614641375,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 9
+        }
+      },
+      {
+        "f": 386.13589765407966,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 9
+        }
+      }
+    ],
+    "starts": [
+      {
+        "initial": [
+          88.0,
+          90.17197118003405
+        ],
+        "frequencies": [
+          87.95071810390219,
+          90.01314432455175
+        ],
+        "Q": 2063.1237519875763,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 5,
+        "condition": 1.0733990103536724,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          51.5,
+          90.17197118003405
+        ],
+        "frequencies": [
+          51.644767545461555,
+          90.1720233178085
+        ],
+        "Q": 2111.7920861862476,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 9,
+        "condition": 1.318721424745026,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          90.17197118003405,
+          386.0
+        ],
+        "frequencies": [
+          90.17197105232461,
+          386.13516348384326
+        ],
+        "Q": 2113.0719971940925,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 22,
+        "condition": 2.044641629599685,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          69.0,
+          90.17197118003405
+        ],
+        "frequencies": [
+          69.04671635237165,
+          90.17272883562782
+        ],
+        "Q": 2113.507626626041,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 5,
+        "condition": 1.1462827647732123,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          90.17197118003405,
+          255.5
+        ],
+        "frequencies": [
+          90.17197160619763,
+          255.42566985085477
+        ],
+        "Q": 2113.5792149223307,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 8,
+        "condition": 1.649497859257255,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          90.17197118003405,
+          118.0
+        ],
+        "frequencies": [
+          90.17190887995648,
+          118.09411733713642
+        ],
+        "Q": 2114.1081117259237,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 8,
+        "condition": 1.1414398792070088,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          90.04697118003405,
+          90.29697118003405
+        ],
+        "frequencies": [
+          89.92954189740982,
+          89.9302730017097
+        ],
+        "Q": 2117.2469546038906,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 20,
+        "condition": 1665.5842182156387,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          89.92197118003405,
+          90.42197118003405
+        ],
+        "frequencies": [
+          89.92956735565022,
+          89.92990584097228
+        ],
+        "Q": 2117.2469542983117,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 15,
+        "condition": 3597.5450744718305,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          89.67197118003405,
+          90.67197118003405
+        ],
+        "frequencies": [
+          89.92971361358273,
+          89.93005807146244
+        ],
+        "Q": 2117.2469539052395,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 18,
+        "condition": 3535.1663232700507,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          89.17197118003405,
+          91.17197118003405
+        ],
+        "frequencies": [
+          90.16993715066019,
+          91.7208561673522
+        ],
+        "Q": 2116.1495062341055,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 11,
+        "condition": 1.2439686222540867,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          88.17197118003405,
+          92.17197118003405
+        ],
+        "frequencies": [
+          87.76841956309431,
+          91.69935447801363
+        ],
+        "Q": 2117.115200863213,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 14,
+        "condition": 1.0877399907399494,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          86.17197118003405,
+          94.17197118003405
+        ],
+        "frequencies": [
+          86.27118093898554,
+          93.81476850579448
+        ],
+        "Q": 2174.603903074382,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 16,
+        "condition": 1.0439921612727947,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          82.17197118003405,
+          98.17197118003405
+        ],
+        "frequencies": [
+          82.93709866654818,
+          98.33169402385421
+        ],
+        "Q": 2174.942558317062,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 17,
+        "condition": 1.0875497719317868,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          74.17197118003405,
+          106.17197118003405
+        ],
+        "frequencies": [
+          75.49596724540945,
+          105.52304412158139
+        ],
+        "Q": 2171.0715709372835,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 19,
+        "condition": 1.1724205005969586,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          58.17197118003405,
+          122.17197118003405
+        ],
+        "frequencies": [
+          58.160211332769904,
+          121.75234157553633
+        ],
+        "Q": 2176.5800621528233,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 11,
+        "condition": 1.4132395995035045,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          88.0,
+          90.0
+        ],
+        "frequencies": [
+          87.95071758204644,
+          90.01314430906575
+        ],
+        "Q": 2063.123751987495,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 5,
+        "condition": 1.07339875501209,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          90.0,
+          91.5
+        ],
+        "frequencies": [
+          90.16993139935398,
+          91.72093828281538
+        ],
+        "Q": 2116.1495058563196,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 9,
+        "condition": 1.2439736266594918,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          88.0,
+          91.5
+        ],
+        "frequencies": [
+          87.76841999636673,
+          91.69934887606644
+        ],
+        "Q": 2117.115200811384,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 14,
+        "condition": 1.0877404202185883,
+        "at_band_boundary": false
+      }
+    ],
+    "M1_seconds": 0.20104120000178227,
+    "M2_seconds": 1.0589580000014394,
+    "fit_calls": 747,
+    "tone_count_decision": null,
+    "id": "b00_two_0_0_1",
+    "kind": "two",
+    "truth_frequencies": [
+      88.0,
+      90.0
+    ],
+    "evaluation_errors_hz": [
+      0.04928241795356314,
+      0.013144309065751258
+    ],
+    "two_frequency_match_0_5_hz": true,
+    "input_hash": "9d46fd156394d35e8d985d02f46ceb12e89b3ce122b352103aee38ed5e0c2a1a",
+    "trace_sha256": "f7f7b3e800df7fa2dc14ca76bf114d38c1bb3f62039f0a20ff2a534b20adc2b2",
+    "truth_metadata": {
+      "part": "matched",
+      "kind": "two",
+      "base": 0,
+      "offset": 0.0,
+      "relative_phase": 0.0,
+      "ratio": 1.0,
+      "carrier": 88.0,
+      "global_phase": 4.542593114752669,
+      "f1": 88.0,
+      "f2": 90.0,
+      "gap": 2,
+      "snr": 18,
+      "observed_snr": 17.999999999999996,
+      "noise_hash": "247429b5e06cdfb6d73542f7623639f1a5da546e482f65a033160d7b8f876623",
+      "hash": "9d46fd156394d35e8d985d02f46ceb12e89b3ce122b352103aee38ed5e0c2a1a",
+      "e1": 179.42761062560413,
+      "e2": 179.42714932497142,
+      "cross": -34.85475995057561
+    }
+  },
+  {
+    "Q0": 2179.0133856099515,
+    "Q1": 2086.8923197140657,
+    "Q2": 2063.141821229462,
+    "gain_Q1_minus_Q2": 23.750498484603668,
+    "M1_frequencies": [
+      87.8694483091401
+    ],
+    "M2_frequencies": [
+      87.96110164526124,
+      90.01530884543921
+    ],
+    "M1_coefficients_cos_sin": [
+      -0.20314360061935988,
+      0.7178450457442946
+    ],
+    "M2_coefficients_cos_sin": [
+      -0.7376211872816765,
+      0.20672718992070535,
+      0.35793840214182904,
+      0.16569154950773457
+    ],
+    "M1_offset": 9.532629809717863e-07,
+    "M2_offset": 7.868534736971133e-08,
+    "M1_condition": 1.0000019817308083,
+    "M2_condition": 1.077543773826219,
+    "unreliable_condition": false,
+    "nested_loss_check": true,
+    "selected_success": true,
+    "M1_candidates": [
+      {
+        "f": 20.0,
+        "origin": "grid",
+        "optimizer": null
+      },
+      {
+        "f": 450.0,
+        "origin": "grid",
+        "optimizer": null
+      },
+      {
+        "f": 88.0,
+        "origin": "grid",
+        "optimizer": null
+      },
+      {
+        "f": 87.8694483091401,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 8
+        }
+      },
+      {
+        "f": 90.29500810899341,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 9
+        }
+      },
+      {
+        "f": 51.645680605161445,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 9
+        }
+      },
+      {
+        "f": 386.13589829826174,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 9
+        }
+      },
+      {
+        "f": 69.05449890430357,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 8
+        }
+      }
+    ],
+    "starts": [
+      {
+        "initial": [
+          87.8694483091401,
+          90.0
+        ],
+        "frequencies": [
+          87.96110146632289,
+          90.01530776796605
+        ],
+        "Q": 2063.1418212296394,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 5,
+        "condition": 1.0775442312979784,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          51.5,
+          87.8694483091401
+        ],
+        "frequencies": [
+          51.64440771428415,
+          87.86952892388776
+        ],
+        "Q": 2078.9761289596654,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 9,
+        "condition": 1.3134006027985632,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          87.8694483091401,
+          386.0
+        ],
+        "frequencies": [
+          87.86944776672816,
+          386.1351624096543
+        ],
+        "Q": 2080.249488739627,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 22,
+        "condition": 2.0529222589558906,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          69.0,
+          87.8694483091401
+        ],
+        "frequencies": [
+          69.03940251693619,
+          87.87062687231156
+        ],
+        "Q": 2080.739707417531,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 5,
+        "condition": 1.141706831479039,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          87.8694483091401,
+          255.5
+        ],
+        "frequencies": [
+          87.86944830415358,
+          255.42566920442195
+        ],
+        "Q": 2080.7567458918643,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 8,
+        "condition": 1.656178180654907,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          87.8694483091401,
+          118.0
+        ],
+        "frequencies": [
+          87.8694178269205,
+          118.09426739570965
+        ],
+        "Q": 2081.2879951902605,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 8,
+        "condition": 1.1460630706120432,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          87.7444483091401,
+          87.9944483091401
+        ],
+        "frequencies": [
+          87.96110164526124,
+          90.01530884543921
+        ],
+        "Q": 2063.141821229462,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 16,
+        "condition": 1.077543773826219,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          87.6194483091401,
+          88.1194483091401
+        ],
+        "frequencies": [
+          87.9611015869164,
+          90.01530750559999
+        ],
+        "Q": 2063.1418212296976,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 13,
+        "condition": 1.077544425711681,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          87.3694483091401,
+          88.3694483091401
+        ],
+        "frequencies": [
+          87.96110161576237,
+          90.01530831743563
+        ],
+        "Q": 2063.141821229529,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 12,
+        "condition": 1.077544027430822,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          86.8694483091401,
+          88.8694483091401
+        ],
+        "frequencies": [
+          87.96110152614432,
+          90.01530563016343
+        ],
+        "Q": 2063.1418212304125,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 18,
+        "condition": 1.0775453487542332,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          85.8694483091401,
+          89.8694483091401
+        ],
+        "frequencies": [
+          86.27490438335225,
+          90.2982000732795
+        ],
+        "Q": 2151.7285520654405,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 13,
+        "condition": 1.084005558488344,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          83.8694483091401,
+          91.8694483091401
+        ],
+        "frequencies": [
+          84.2554951264296,
+          91.72435059975518
+        ],
+        "Q": 2164.769486139151,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 13,
+        "condition": 1.0435810730832409,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          79.8694483091401,
+          95.8694483091401
+        ],
+        "frequencies": [
+          80.8377942980463,
+          95.74501653522601
+        ],
+        "Q": 2176.5824516527127,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 12,
+        "condition": 1.0808940527358784,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          71.8694483091401,
+          103.8694483091401
+        ],
+        "frequencies": [
+          72.25552864196854,
+          103.74966465631059
+        ],
+        "Q": 2175.2776743453214,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 16,
+        "condition": 1.2183401517284655,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          55.8694483091401,
+          119.8694483091401
+        ],
+        "frequencies": [
+          56.176423390080316,
+          119.44706085208728
+        ],
+        "Q": 2174.301254138867,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 15,
+        "condition": 1.4430741876220168,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          88.0,
+          90.5
+        ],
+        "frequencies": [
+          87.96110206082658,
+          90.01531293217617
+        ],
+        "Q": 2063.141821230174,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 6,
+        "condition": 1.0775419056229028,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          51.5,
+          88.0
+        ],
+        "frequencies": [
+          51.644407529450525,
+          87.86952892401759
+        ],
+        "Q": 2078.9761289603657,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 9,
+        "condition": 1.313400600642039,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          51.5,
+          90.5
+        ],
+        "frequencies": [
+          51.645052267681855,
+          90.29513177432328
+        ],
+        "Q": 2145.5288428396752,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 9,
+        "condition": 1.318207758544444,
+        "at_band_boundary": false
+      }
+    ],
+    "M1_seconds": 0.1482689999975264,
+    "M2_seconds": 1.1892395999966539,
+    "fit_calls": 732,
+    "tone_count_decision": null,
+    "id": "b00_two_0_0_0.5",
+    "kind": "two",
+    "truth_frequencies": [
+      88.0,
+      90.0
+    ],
+    "evaluation_errors_hz": [
+      0.038898354738762464,
+      0.01530884543920763
+    ],
+    "two_frequency_match_0_5_hz": true,
+    "input_hash": "5ce0d14b1cc9787b5e0b58e10b331d70e00797c1cc0e1f10701b96355b193f67",
+    "trace_sha256": "f08ee83f79632e2d287db929918588306aa09c1842895ef2442794a55dac16be",
+    "truth_metadata": {
+      "part": "matched",
+      "kind": "two",
+      "base": 0,
+      "offset": 0.0,
+      "relative_phase": 0.0,
+      "ratio": 0.5,
+      "carrier": 88.0,
+      "global_phase": 4.542593114752669,
+      "f1": 88.0,
+      "f2": 90.0,
+      "gap": 2,
+      "snr": 18,
+      "observed_snr": 18.0,
+      "noise_hash": "247429b5e06cdfb6d73542f7623639f1a5da546e482f65a033160d7b8f876623",
+      "hash": "5ce0d14b1cc9787b5e0b58e10b331d70e00797c1cc0e1f10701b96355b193f67",
+      "e1": 281.0373387857612,
+      "e2": 70.25915406272715,
+      "cross": -27.296492848488306
+    }
+  },
+  {
+    "Q0": 2171.76730548466,
+    "Q1": 2111.823081839617,
+    "Q2": 2061.777822313706,
+    "gain_Q1_minus_Q2": 50.04525952591075,
+    "M1_frequencies": [
+      90.66122157922335
+    ],
+    "M2_frequencies": [
+      88.4117226861155,
+      90.5301633757802
+    ],
+    "M1_coefficients_cos_sin": [
+      0.5500101920951063,
+      -0.2405529884138689
+    ],
+    "M2_coefficients_cos_sin": [
+      0.5648238391486878,
+      -0.048556868712602785,
+      -0.16246791934112279,
+      -0.584635422619686
+    ],
+    "M1_offset": 6.272065667632665e-07,
+    "M2_offset": 5.193687091162302e-08,
+    "M1_condition": 1.000000185269949,
+    "M2_condition": 1.0442064027577511,
+    "unreliable_condition": false,
+    "nested_loss_check": true,
+    "selected_success": true,
+    "M1_candidates": [
+      {
+        "f": 20.0,
+        "origin": "grid",
+        "optimizer": null
+      },
+      {
+        "f": 450.0,
+        "origin": "grid",
+        "optimizer": null
+      },
+      {
+        "f": 90.5,
+        "origin": "grid",
+        "optimizer": null
+      },
+      {
+        "f": 90.66122157922335,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 9
+        }
+      },
+      {
+        "f": 88.25114614693935,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 8
+        }
+      },
+      {
+        "f": 92.09443709306282,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 8
+        }
+      },
+      {
+        "f": 51.64451640078294,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 9
+        }
+      },
+      {
+        "f": 86.72379600956783,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 10
+        }
+      }
+    ],
+    "starts": [
+      {
+        "initial": [
+          88.5,
+          90.66122157922335
+        ],
+        "frequencies": [
+          88.4117226861155,
+          90.5301633757802
+        ],
+        "Q": 2061.777822313706,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 6,
+        "condition": 1.0442064027577511,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          51.5,
+          90.66122157922335
+        ],
+        "frequencies": [
+          51.64412838743438,
+          90.6612504682612
+        ],
+        "Q": 2103.912330973497,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 9,
+        "condition": 1.3166510909726032,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          90.66122157922335,
+          386.0
+        ],
+        "frequencies": [
+          90.66122159558155,
+          386.1351650364251
+        ],
+        "Q": 2105.18025859506,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 22,
+        "condition": 2.047843032632801,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          90.66122157922335,
+          92.0
+        ],
+        "frequencies": [
+          91.18368431698654,
+          91.18395898674656
+        ],
+        "Q": 2101.4779254250834,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 15,
+        "condition": 4416.762920306039,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          69.0,
+          90.66122157922335
+        ],
+        "frequencies": [
+          69.03481871702547,
+          90.66117536384309
+        ],
+        "Q": 2105.60555634692,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 5,
+        "condition": 1.1445589357328863,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          90.66122157922335,
+          255.5
+        ],
+        "frequencies": [
+          90.66122121468196,
+          255.42566198791647
+        ],
+        "Q": 2105.687557141507,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 8,
+        "condition": 1.652080559304077,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          90.53622157922335,
+          90.78622157922335
+        ],
+        "frequencies": [
+          91.18376461596527,
+          91.18389654460599
+        ],
+        "Q": 2101.4779253654137,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 21,
+        "condition": 9195.510640869632,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          90.41122157922335,
+          90.91122157922335
+        ],
+        "frequencies": [
+          91.18362948589042,
+          91.18403303485948
+        ],
+        "Q": 2101.477925541357,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 16,
+        "condition": 3006.2056617208427,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          90.16122157922335,
+          91.16122157922335
+        ],
+        "frequencies": [
+          91.18373922131168,
+          91.18386939758884
+        ],
+        "Q": 2101.47792537619,
+        "success": true,
+        "status": 3,
+        "message": "`xtol` termination condition is satisfied.",
+        "nfev": 25,
+        "condition": 9319.295728580937,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          89.66122157922335,
+          91.66122157922335
+        ],
+        "frequencies": [
+          91.18359155699497,
+          91.18404495930741
+        ],
+        "Q": 2101.4779255775184,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 16,
+        "condition": 2675.661674597841,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          88.66122157922335,
+          92.66122157922335
+        ],
+        "frequencies": [
+          88.24965132755328,
+          92.09768777915896
+        ],
+        "Q": 2108.1138007209825,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 18,
+        "condition": 1.0908306982564409,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          86.66122157922335,
+          94.66122157922335
+        ],
+        "frequencies": [
+          86.71529956600997,
+          94.55230767189339
+        ],
+        "Q": 2159.926775670458,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 13,
+        "condition": 1.0409417970460555,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          82.66122157922335,
+          98.66122157922335
+        ],
+        "frequencies": [
+          82.71481357135106,
+          99.19023306024238
+        ],
+        "Q": 2167.108633407347,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 10,
+        "condition": 1.097320116671098,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          74.66122157922335,
+          106.66122157922335
+        ],
+        "frequencies": [
+          75.48326414210446,
+          107.11969418961105
+        ],
+        "Q": 2166.3699549425423,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 15,
+        "condition": 1.1781989772762274,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          58.66122157922335,
+          122.66122157922335
+        ],
+        "frequencies": [
+          58.168210834077804,
+          122.9190964117173
+        ],
+        "Q": 2168.193740756669,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 16,
+        "condition": 1.442555657561824,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          88.5,
+          90.5
+        ],
+        "frequencies": [
+          88.41172337522737,
+          90.53015226465276
+        ],
+        "Q": 2061.7778223482746,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 4,
+        "condition": 1.0442122082308567,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          90.5,
+          92.0
+        ],
+        "frequencies": [
+          91.18359290977837,
+          91.18404675725283
+        ],
+        "Q": 2101.47792557663,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 17,
+        "condition": 2673.0372174486074,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          88.5,
+          92.0
+        ],
+        "frequencies": [
+          88.24965151772774,
+          92.0976859399414
+        ],
+        "Q": 2108.113800707132,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 16,
+        "condition": 1.0908307246046174,
+        "at_band_boundary": false
+      }
+    ],
+    "M1_seconds": 0.16396430000168039,
+    "M2_seconds": 1.1298007000004873,
+    "fit_calls": 767,
+    "tone_count_decision": null,
+    "id": "b00_two_0.5_0_1",
+    "kind": "two",
+    "truth_frequencies": [
+      88.5,
+      90.5
+    ],
+    "evaluation_errors_hz": [
+      0.08827731388450388,
+      0.030163375780205115
+    ],
+    "two_frequency_match_0_5_hz": true,
+    "input_hash": "6f7f68186152df5bbafa3c1fb613fb8d40e8369a34b9ab56e3235ed8e395081a",
+    "trace_sha256": "f3ce9190d841d5c77def5a62bee03d9148cbe55bf7bd34a4ace891b7cafb9e10",
+    "truth_metadata": {
+      "part": "matched",
+      "kind": "two",
+      "base": 0,
+      "offset": 0.5,
+      "relative_phase": 0.0,
+      "ratio": 1.0,
+      "carrier": 88.0,
+      "global_phase": 4.542593114752669,
+      "f1": 88.5,
+      "f2": 90.5,
+      "gap": 2,
+      "snr": 18,
+      "observed_snr": 18.0,
+      "noise_hash": "247429b5e06cdfb6d73542f7623639f1a5da546e482f65a033160d7b8f876623",
+      "hash": "6f7f68186152df5bbafa3c1fb613fb8d40e8369a34b9ab56e3235ed8e395081a",
+      "e1": 179.4278005525407,
+      "e2": 179.42729618123326,
+      "cross": -34.85509673377398
+    }
+  },
+  {
+    "Q0": 2190.1965700704513,
+    "Q1": 2070.0855587678134,
+    "Q2": 2063.5091120400175,
+    "gain_Q1_minus_Q2": 6.576446727795883,
+    "M1_frequencies": [
+      85.9301945856759
+    ],
+    "M2_frequencies": [
+      85.93019397299511,
+      406.3007741772125
+    ],
+    "M1_coefficients_cos_sin": [
+      0.7855839374856036,
+      0.38843560829427987
+    ],
+    "M2_coefficients_cos_sin": [
+      0.7855865262382336,
+      0.3884303805243709,
+      0.007608175896052435,
+      -0.09442740530013619
+    ],
+    "M1_offset": 6.658865814995751e-08,
+    "M2_offset": 6.527990533203298e-08,
+    "M1_condition": 1.0000005176568165,
+    "M2_condition": 2.1646574182519984,
+    "unreliable_condition": false,
+    "nested_loss_check": true,
+    "selected_success": true,
+    "M1_candidates": [
+      {
+        "f": 20.0,
+        "origin": "grid",
+        "optimizer": null
+      },
+      {
+        "f": 86.0,
+        "origin": "grid",
+        "optimizer": null
+      },
+      {
+        "f": 450.0,
+        "origin": "grid",
+        "optimizer": null
+      },
+      {
+        "f": 85.9301945856759,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 8
+        }
+      },
+      {
+        "f": 84.33220284449482,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 9
+        }
+      },
+      {
+        "f": 88.6952822076261,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 9
+        }
+      },
+      {
+        "f": 363.0242624445655,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 9
+        }
+      },
+      {
+        "f": 293.85481741843734,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 8
+        }
+      }
+    ],
+    "starts": [
+      {
+        "initial": [
+          85.9301945856759,
+          363.0
+        ],
+        "frequencies": [
+          85.93019393854557,
+          363.0241252239076
+        ],
+        "Q": 2063.7715352402147,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 7,
+        "condition": 2.042362941105837,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          85.9301945856759,
+          294.0
+        ],
+        "frequencies": [
+          85.93019392746716,
+          293.85481971679474
+        ],
+        "Q": 2063.770210063777,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 5,
+        "condition": 1.8456232201114262,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          85.9301945856759,
+          406.5
+        ],
+        "frequencies": [
+          85.93019397299511,
+          406.3007741772125
+        ],
+        "Q": 2063.5091120400175,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 4,
+        "condition": 2.1646574182519984,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          85.9301945856759,
+          320.0
+        ],
+        "frequencies": [
+          85.93019386578811,
+          319.85476688461586
+        ],
+        "Q": 2064.1918604916236,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 6,
+        "condition": 1.9197596124073513,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          85.9301945856759,
+          321.5
+        ],
+        "frequencies": [
+          85.93019370535775,
+          321.4173654686844
+        ],
+        "Q": 2064.9865560284607,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 7,
+        "condition": 1.9159729932356546,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          85.9301945856759,
+          89.0
+        ],
+        "frequencies": [
+          85.91780635430995,
+          88.86347304587068
+        ],
+        "Q": 2064.923702294685,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 6,
+        "condition": 1.1126518959421556,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          85.8051945856759,
+          86.0551945856759
+        ],
+        "frequencies": [
+          86.08274189294345,
+          86.08313437001993
+        ],
+        "Q": 2069.9377667118624,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 15,
+        "condition": 3090.197204707869,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          85.6801945856759,
+          86.1801945856759
+        ],
+        "frequencies": [
+          86.08281733458115,
+          86.08305582575251
+        ],
+        "Q": 2069.937766674283,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 13,
+        "condition": 5085.4359508427,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          85.4301945856759,
+          86.4301945856759
+        ],
+        "frequencies": [
+          86.08289489047795,
+          86.08311714639619
+        ],
+        "Q": 2069.93776678122,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 19,
+        "condition": 5456.915424940271,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          84.9301945856759,
+          86.9301945856759
+        ],
+        "frequencies": [
+          84.04536102717658,
+          85.94579551753908
+        ],
+        "Q": 2067.599293864347,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 16,
+        "condition": 1.1499533955181866,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          83.9301945856759,
+          87.9301945856759
+        ],
+        "frequencies": [
+          84.30207827081966,
+          87.49289654157566
+        ],
+        "Q": 2173.2423439325494,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 16,
+        "condition": 1.0426041447834122,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          81.9301945856759,
+          89.9301945856759
+        ],
+        "frequencies": [
+          82.1110701984466,
+          88.69758418897105
+        ],
+        "Q": 2177.871147313936,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 17,
+        "condition": 1.0382029235287316,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          77.9301945856759,
+          93.9301945856759
+        ],
+        "frequencies": [
+          77.65671832077413,
+          93.53575065258694
+        ],
+        "Q": 2187.780963780623,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 16,
+        "condition": 1.0885694637152912,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          69.9301945856759,
+          101.9301945856759
+        ],
+        "frequencies": [
+          70.18153512407507,
+          101.40124350607425
+        ],
+        "Q": 2186.095792245901,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 15,
+        "condition": 1.227232460611975,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          53.930194585675906,
+          117.9301945856759
+        ],
+        "frequencies": [
+          54.24292290354726,
+          118.14177754012181
+        ],
+        "Q": 2187.187141197859,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 7,
+        "condition": 1.4749393380040197,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          84.5,
+          86.0
+        ],
+        "frequencies": [
+          84.04543687472369,
+          85.94579498519947
+        ],
+        "Q": 2067.599293931746,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 8,
+        "condition": 1.149990127857467,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          86.0,
+          88.5
+        ],
+        "frequencies": [
+          85.91780887583367,
+          88.86338533538986
+        ],
+        "Q": 2064.923702258094,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 8,
+        "condition": 1.1126709114259297,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          84.5,
+          88.5
+        ],
+        "frequencies": [
+          84.29611179169797,
+          88.75015940721843
+        ],
+        "Q": 2165.515022298923,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 13,
+        "condition": 1.0361441781032559,
+        "at_band_boundary": false
+      }
+    ],
+    "M1_seconds": 0.16210439999849768,
+    "M2_seconds": 0.961909799996647,
+    "fit_calls": 645,
+    "tone_count_decision": null,
+    "id": "b05_two_0_0_0.25",
+    "kind": "two",
+    "truth_frequencies": [
+      86.0,
+      88.0
+    ],
+    "evaluation_errors_hz": [
+      0.06980602700488703,
+      318.3007741772125
+    ],
+    "two_frequency_match_0_5_hz": false,
+    "input_hash": "7ce581e6e9e77be59485de69f625643a05765bf5f74d80e23356215f7850b316",
+    "trace_sha256": "2035e0f25df2bd8999d9509694535ad9724995bec72e9b3fc0c6b0f0cf5e9b62",
+    "truth_metadata": {
+      "part": "matched",
+      "kind": "two",
+      "base": 5,
+      "offset": 0.0,
+      "relative_phase": 0.0,
+      "ratio": 0.25,
+      "carrier": 86.0,
+      "global_phase": 3.414110760186778,
+      "f1": 86.0,
+      "f2": 88.0,
+      "gap": 2,
+      "snr": 18,
+      "observed_snr": 18.000000000000004,
+      "noise_hash": "568323876ea45bec1f99de86dd14c23ac61fbd63bda561dfcaef97c14415afb7",
+      "hash": "7ce581e6e9e77be59485de69f625643a05765bf5f74d80e23356215f7850b316",
+      "e1": 319.54727875768833,
+      "e2": 19.97163612345675,
+      "cross": -15.518914881144989
+    }
+  },
+  {
+    "Q0": 2083.620802263126,
+    "Q1": 1925.792641895396,
+    "Q2": 1898.8353583579087,
+    "gain_Q1_minus_Q2": 26.95728353748723,
+    "M1_frequencies": [
+      134.38247950077408
+    ],
+    "M2_frequencies": [
+      134.45247424351362,
+      136.5525790413059
+    ],
+    "M1_coefficients_cos_sin": [
+      0.10586751663985965,
+      0.7943415444230356
+    ],
+    "M2_coefficients_cos_sin": [
+      -0.4759566610655954,
+      0.6585211067741521,
+      0.3404167954343824,
+      0.03422145666186771
+    ],
+    "M1_offset": -3.142033001913083e-07,
+    "M2_offset": -2.6295997690960193e-08,
+    "M1_condition": 1.000000565082226,
+    "M2_condition": 1.0521995976000342,
+    "unreliable_condition": false,
+    "nested_loss_check": true,
+    "selected_success": true,
+    "M1_candidates": [
+      {
+        "f": 20.0,
+        "origin": "grid",
+        "optimizer": null
+      },
+      {
+        "f": 450.0,
+        "origin": "grid",
+        "optimizer": null
+      },
+      {
+        "f": 134.5,
+        "origin": "grid",
+        "optimizer": null
+      },
+      {
+        "f": 134.38247950077408,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 8
+        }
+      },
+      {
+        "f": 136.82597042503025,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 8
+        }
+      },
+      {
+        "f": 139.343338550378,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 9
+        }
+      },
+      {
+        "f": 31.49037577518841,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 9
+        }
+      },
+      {
+        "f": 132.89255095836714,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 8
+        }
+      }
+    ],
+    "starts": [
+      {
+        "initial": [
+          134.38247950077408,
+          136.5
+        ],
+        "frequencies": [
+          134.4524743602037,
+          136.55256558955833
+        ],
+        "Q": 1898.8353583934,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 5,
+        "condition": 1.0522062278432576,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          134.38247950077408,
+          139.5
+        ],
+        "frequencies": [
+          134.38074129205552,
+          139.35554766547338
+        ],
+        "Q": 1914.254047151568,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 7,
+        "condition": 1.067382091847757,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          31.5,
+          134.38247950077408
+        ],
+        "frequencies": [
+          31.490469066722525,
+          134.38248110206874
+        ],
+        "Q": 1916.7446681093102,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 7,
+        "condition": 1.9333951429431342,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          134.38247950077408,
+          245.5
+        ],
+        "frequencies": [
+          134.38247946213343,
+          245.64697648702102
+        ],
+        "Q": 1917.8040267048618,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 7,
+        "condition": 1.3275420694573585,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          134.38247950077408,
+          264.5
+        ],
+        "frequencies": [
+          134.3824790696923,
+          264.4076221746423
+        ],
+        "Q": 1919.9858144671653,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 5,
+        "condition": 1.4100041443486975,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          134.38247950077408,
+          222.5
+        ],
+        "frequencies": [
+          134.38247789607138,
+          222.3824069581276
+        ],
+        "Q": 1920.4998691161327,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 6,
+        "condition": 1.2922298826105276,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          134.25747950077408,
+          134.50747950077408
+        ],
+        "frequencies": [
+          134.58231660975585,
+          134.582355545721
+        ],
+        "Q": 1923.8748694834374,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 14,
+        "condition": 31284.531463526106,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          134.13247950077408,
+          134.63247950077408
+        ],
+        "frequencies": [
+          134.58217069072194,
+          134.58252342567076
+        ],
+        "Q": 1923.8748697747576,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 18,
+        "condition": 3453.282605708638,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          133.88247950077408,
+          134.88247950077408
+        ],
+        "frequencies": [
+          134.5823598580043,
+          134.5823904261018
+        ],
+        "Q": 1923.874869498855,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 15,
+        "condition": 39848.526047095525,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          133.38247950077408,
+          135.38247950077408
+        ],
+        "frequencies": [
+          134.0969546606283,
+          134.09699797971655
+        ],
+        "Q": 1922.9532168599246,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 25,
+        "condition": 28071.674186673787,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          132.38247950077408,
+          136.38247950077408
+        ],
+        "frequencies": [
+          132.87393139852526,
+          136.83436917451758
+        ],
+        "Q": 2045.406037106124,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 15,
+        "condition": 1.0872392510578164,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          130.38247950077408,
+          138.38247950077408
+        ],
+        "frequencies": [
+          130.5011444919515,
+          138.10245738890356
+        ],
+        "Q": 2073.0275824744303,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 16,
+        "condition": 1.035837150156796,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          126.38247950077408,
+          142.38247950077408
+        ],
+        "frequencies": [
+          125.74376795835029,
+          142.7379459614159
+        ],
+        "Q": 2078.489195898642,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 14,
+        "condition": 1.064573371935984,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          118.38247950077408,
+          150.38247950077408
+        ],
+        "frequencies": [
+          119.02641859889101,
+          149.80230107087849
+        ],
+        "Q": 2080.965269874978,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 12,
+        "condition": 1.1336511287355462,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          102.38247950077408,
+          166.38247950077408
+        ],
+        "frequencies": [
+          101.64282770945259,
+          166.61480929304415
+        ],
+        "Q": 2083.2236494039744,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 13,
+        "condition": 1.2428800880959516,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          134.5,
+          137.0
+        ],
+        "frequencies": [
+          134.45247424351362,
+          136.5525790413059
+        ],
+        "Q": 1898.8353583579087,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 7,
+        "condition": 1.0521995976000342,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          134.5,
+          139.5
+        ],
+        "frequencies": [
+          134.38074449674775,
+          139.35548657430044
+        ],
+        "Q": 1914.2540471517368,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 6,
+        "condition": 1.0673831819958728,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          137.0,
+          139.5
+        ],
+        "frequencies": [
+          136.86905247572835,
+          139.25922270452918
+        ],
+        "Q": 2038.5530616114875,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 16,
+        "condition": 1.0738448612440654,
+        "at_band_boundary": false
+      }
+    ],
+    "M1_seconds": 0.2158242000004975,
+    "M2_seconds": 1.0037410000004456,
+    "fit_calls": 663,
+    "tone_count_decision": null,
+    "id": "b04_two_0.5_0_0.5",
+    "kind": "two",
+    "truth_frequencies": [
+      134.5,
+      136.5
+    ],
+    "evaluation_errors_hz": [
+      0.04752575648637958,
+      0.052579041305904184
+    ],
+    "two_frequency_match_0_5_hz": true,
+    "input_hash": "7186f3fb6774fd78eb6d7d534e38284cc234805925a629b9c010fd08d2fbab7e",
+    "trace_sha256": "8447ae97736f3c873628347ba5e37a30fe5d488a3986e53b82b2753b427c51cd",
+    "truth_metadata": {
+      "part": "matched",
+      "kind": "two",
+      "base": 4,
+      "offset": 0.5,
+      "relative_phase": 0.0,
+      "ratio": 0.5,
+      "carrier": 134.0,
+      "global_phase": 5.927801490611075,
+      "f1": 134.5,
+      "f2": 136.5,
+      "gap": 2,
+      "snr": 18,
+      "observed_snr": 18.0,
+      "noise_hash": "e262adc3e2201c51855d8d14b378b278b0bdeda7bde2bb9c5d78cd34ec8d076b",
+      "hash": "7186f3fb6774fd78eb6d7d534e38284cc234805925a629b9c010fd08d2fbab7e",
+      "e1": 281.03742808477307,
+      "e2": 70.25935956186571,
+      "cross": -27.296787646638904
+    }
+  },
+  {
+    "Q0": 2097.8562970853563,
+    "Q1": 1993.3059468877113,
+    "Q2": 1986.9812722514362,
+    "gain_Q1_minus_Q2": 6.3246746362751765,
+    "M1_frequencies": [
+      102.0563164870586
+    ],
+    "M2_frequencies": [
+      102.0563158016723,
+      404.97832671054306
+    ],
+    "M1_coefficients_cos_sin": [
+      -0.6981441343383544,
+      0.22906418987404684
+    ],
+    "M2_coefficients_cos_sin": [
+      -0.69814243355348,
+      0.2290693777661687,
+      0.0655685334570844,
+      0.06526846095065005
+    ],
+    "M1_offset": 8.502754442196725e-08,
+    "M2_offset": 8.38097714214725e-08,
+    "M1_condition": 1.0000015871112136,
+    "M2_condition": 1.953382271812056,
+    "unreliable_condition": false,
+    "nested_loss_check": true,
+    "selected_success": true,
+    "M1_candidates": [
+      {
+        "f": 20.0,
+        "origin": "grid",
+        "optimizer": null
+      },
+      {
+        "f": 102.0,
+        "origin": "grid",
+        "optimizer": null
+      },
+      {
+        "f": 450.0,
+        "origin": "grid",
+        "optimizer": null
+      },
+      {
+        "f": 102.0563164870586,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 8
+        }
+      },
+      {
+        "f": 104.80852948260122,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 9
+        }
+      },
+      {
+        "f": 404.9782743033141,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 9
+        }
+      },
+      {
+        "f": 411.4793391973629,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 9
+        }
+      },
+      {
+        "f": 449.9514251807033,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 8
+        }
+      }
+    ],
+    "starts": [
+      {
+        "initial": [
+          102.0563164870586,
+          405.0
+        ],
+        "frequencies": [
+          102.0563158016723,
+          404.97832671054306
+        ],
+        "Q": 1986.9812722514362,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 5,
+        "condition": 1.953382271812056,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          102.0563164870586,
+          411.5
+        ],
+        "frequencies": [
+          102.05631589702062,
+          411.4794557697634
+        ],
+        "Q": 1987.2720631168804,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 7,
+        "condition": 1.958977265231278,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          102.0563164870586,
+          450.0
+        ],
+        "frequencies": [
+          102.05631581896463,
+          449.95159118414733
+        ],
+        "Q": 1987.4243220809908,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 9,
+        "condition": 2.0387216699308754,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          102.0563164870586,
+          122.0
+        ],
+        "frequencies": [
+          102.05684939197731,
+          121.79523215576289
+        ],
+        "Q": 1987.3898879272097,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 4,
+        "condition": 1.0653537808175546,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          102.0563164870586,
+          389.0
+        ],
+        "frequencies": [
+          102.0563158452809,
+          389.1639144119358
+        ],
+        "Q": 1987.9043569725527,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 9,
+        "condition": 1.907261630197551,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          102.0563164870586,
+          306.5
+        ],
+        "frequencies": [
+          102.05631564218778,
+          306.487094302466
+        ],
+        "Q": 1988.7672623179292,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 4,
+        "condition": 1.7030177815546836,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          101.9313164870586,
+          102.1813164870586
+        ],
+        "frequencies": [
+          102.14492604136886,
+          102.52047345009726
+        ],
+        "Q": 1992.8916945677693,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 19,
+        "condition": 3.1965248326063307,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          101.8063164870586,
+          102.3063164870586
+        ],
+        "frequencies": [
+          102.14477140987788,
+          102.5211677969666
+        ],
+        "Q": 1992.8916945539936,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 17,
+        "condition": 3.189058696431869,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          101.5563164870586,
+          102.5563164870586
+        ],
+        "frequencies": [
+          101.88523682979161,
+          101.88537519181497
+        ],
+        "Q": 1993.1259755272242,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 26,
+        "condition": 8830.604776572702,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          101.0563164870586,
+          103.0563164870586
+        ],
+        "frequencies": [
+          102.14472901167088,
+          102.52121113929938
+        ],
+        "Q": 1992.8916945108936,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 24,
+        "condition": 3.188306598808667,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          100.0563164870586,
+          104.0563164870586
+        ],
+        "frequencies": [
+          99.42425527664294,
+          103.59483569996242
+        ],
+        "Q": 2088.110229928512,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 15,
+        "condition": 1.0560100804164028,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          98.0563164870586,
+          106.0563164870586
+        ],
+        "frequencies": [
+          98.15193640156998,
+          104.81920220121991
+        ],
+        "Q": 2088.609930447221,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 37,
+        "condition": 1.0242543676791047,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          94.0563164870586,
+          110.0563164870586
+        ],
+        "frequencies": [
+          93.65233234434729,
+          109.83462302622138
+        ],
+        "Q": 2094.8101019886085,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 9,
+        "condition": 1.0775825759279285,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          86.0563164870586,
+          118.0563164870586
+        ],
+        "frequencies": [
+          85.41885808596237,
+          117.81389901306493
+        ],
+        "Q": 2093.5234099147788,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 10,
+        "condition": 1.1831063118874852,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          70.0563164870586,
+          134.0563164870586
+        ],
+        "frequencies": [
+          69.54262828138766,
+          133.90259057479517
+        ],
+        "Q": 2095.0857464383353,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 12,
+        "condition": 1.386180791300273,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          102.0,
+          105.0
+        ],
+        "frequencies": [
+          102.05082891643451,
+          105.04967187290623
+        ],
+        "Q": 1989.3063057928482,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 6,
+        "condition": 1.0938543664625568,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          102.0,
+          405.0
+        ],
+        "frequencies": [
+          102.05631562622355,
+          404.97832671878956
+        ],
+        "Q": 1986.9812722514607,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 5,
+        "condition": 1.9533822747666585,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          105.0,
+          405.0
+        ],
+        "frequencies": [
+          104.80857093784057,
+          404.97828877000927
+        ],
+        "Q": 2084.1498234470855,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 6,
+        "condition": 1.9669136891921517,
+        "at_band_boundary": false
+      }
+    ],
+    "M1_seconds": 0.17265929999848595,
+    "M2_seconds": 1.0141824000020279,
+    "fit_calls": 727,
+    "tone_count_decision": null,
+    "id": "b09_one_0_0_1",
+    "kind": "one",
+    "truth_frequencies": [
+      102.0
+    ],
+    "evaluation_errors_hz": null,
+    "two_frequency_match_0_5_hz": null,
+    "input_hash": "b45cd9d82782a6840adc755a679e3d8d3de952f5a05d2b7f578afa9046a04170",
+    "trace_sha256": "a6770296d8ba706406782773f66853dd86eb4e4de5730e220f6ebac310880a9f",
+    "truth_metadata": {
+      "part": "matched",
+      "kind": "one",
+      "base": 9,
+      "offset": 0.0,
+      "relative_phase": null,
+      "ratio": null,
+      "carrier": 102.0,
+      "global_phase": 2.623512313138685,
+      "f1": 102.0,
+      "f2": null,
+      "gap": null,
+      "snr": 18,
+      "observed_snr": 17.999999999999996,
+      "noise_hash": "821c92c947cfd0431ee4bab484a74572b29baa518af8361a475937599a5d1f0f",
+      "hash": "b45cd9d82782a6840adc755a679e3d8d3de952f5a05d2b7f578afa9046a04170",
+      "e1": 323.9999999999999,
+      "e2": 0.0,
+      "cross": 0.0
+    }
+  },
+  {
+    "Q0": 2063.882923796333,
+    "Q1": 2055.9687055754866,
+    "Q2": 2049.325875781692,
+    "gain_Q1_minus_Q2": 6.64282979379459,
+    "M1_frequencies": [
+      51.64409345663343
+    ],
+    "M2_frequencies": [
+      51.644094036169136,
+      386.13515688260594
+    ],
+    "M1_coefficients_cos_sin": [
+      -0.17208042116014344,
+      0.2299312842588335
+    ],
+    "M2_coefficients_cos_sin": [
+      -0.17208180954125374,
+      0.22993023766420354,
+      0.09151189075400926,
+      -0.03388934760168955
+    ],
+    "M1_offset": -5.251682482877024e-06,
+    "M2_offset": -5.250098952448712e-06,
+    "M1_condition": 1.0000112058240012,
+    "M2_condition": 2.6962935153352157,
+    "unreliable_condition": false,
+    "nested_loss_check": true,
+    "selected_success": true,
+    "M1_candidates": [
+      {
+        "f": 20.0,
+        "origin": "grid",
+        "optimizer": null
+      },
+      {
+        "f": 450.0,
+        "origin": "grid",
+        "optimizer": null
+      },
+      {
+        "f": 51.5,
+        "origin": "grid",
+        "optimizer": null
+      },
+      {
+        "f": 51.64409345663343,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 9
+        }
+      },
+      {
+        "f": 386.13588890979133,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 9
+        }
+      },
+      {
+        "f": 69.03548351574739,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 8
+        }
+      },
+      {
+        "f": 255.42555321006014,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 8
+        }
+      },
+      {
+        "f": 118.09436025707541,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 8
+        }
+      }
+    ],
+    "starts": [
+      {
+        "initial": [
+          51.64409345663343,
+          386.0
+        ],
+        "frequencies": [
+          51.64409402216237,
+          386.13515687878584
+        ],
+        "Q": 2049.325875781723,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 22,
+        "condition": 2.6962935149728935,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          51.64409345663343,
+          69.0
+        ],
+        "frequencies": [
+          51.64137022735584,
+          69.03836310209957
+        ],
+        "Q": 2049.8371792255844,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 5,
+        "condition": 1.1504881560894589,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          51.64409345663343,
+          255.5
+        ],
+        "frequencies": [
+          51.64409586301989,
+          255.42565958460403
+        ],
+        "Q": 2049.83318306428,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 8,
+        "condition": 2.1752127495439857,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          51.64409345663343,
+          118.0
+        ],
+        "frequencies": [
+          51.644089156181,
+          118.09435189426142
+        ],
+        "Q": 2050.3701006264646,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 8,
+        "condition": 1.5052286316566075,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          51.64409345663343,
+          105.5
+        ],
+        "frequencies": [
+          51.64409741911314,
+          105.45980972051316
+        ],
+        "Q": 2050.757036297622,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 9,
+        "condition": 1.415500177627705,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          51.64409345663343,
+          102.0
+        ],
+        "frequencies": [
+          51.64417837269028,
+          102.10805314162485
+        ],
+        "Q": 2050.8020906200945,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 4,
+        "condition": 1.4212598874814755,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          51.51909345663343,
+          51.76909345663343
+        ],
+        "frequencies": [
+          51.629753889496456,
+          51.98770068923673
+        ],
+        "Q": 2053.7648273992013,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 9,
+        "condition": 3.332734402742256,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          51.39409345663343,
+          51.89409345663343
+        ],
+        "frequencies": [
+          51.629772748404974,
+          51.98772035751671
+        ],
+        "Q": 2053.7648273823966,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 7,
+        "condition": 3.332726072863366,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          51.14409345663343,
+          52.14409345663343
+        ],
+        "frequencies": [
+          51.629866556794845,
+          51.987823118296326
+        ],
+        "Q": 2053.764827383826,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 7,
+        "condition": 3.332637205855134,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          50.64409345663343,
+          52.64409345663343
+        ],
+        "frequencies": [
+          51.62970946235335,
+          51.98765446521181
+        ],
+        "Q": 2053.7648274609173,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 9,
+        "condition": 3.332752968898932,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          49.64409345663343,
+          53.64409345663343
+        ],
+        "frequencies": [
+          49.732727764264446,
+          53.363996969075195
+        ],
+        "Q": 2061.9077723385426,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 7,
+        "condition": 1.0761963260679883,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          47.64409345663343,
+          55.64409345663343
+        ],
+        "frequencies": [
+          48.070182277218606,
+          54.844403733967034
+        ],
+        "Q": 2058.7839272925576,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 10,
+        "condition": 1.0600912907247044,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          43.64409345663343,
+          59.64409345663343
+        ],
+        "frequencies": [
+          44.053933373809514,
+          60.25824403040154
+        ],
+        "Q": 2061.515696983553,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 11,
+        "condition": 1.134886371645561,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          35.64409345663343,
+          67.64409345663343
+        ],
+        "frequencies": [
+          35.35421907276606,
+          67.70451542606018
+        ],
+        "Q": 2063.2503840297923,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 13,
+        "condition": 1.320647608205938,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          51.5,
+          386.0
+        ],
+        "frequencies": [
+          51.644094036169136,
+          386.13515688260594
+        ],
+        "Q": 2049.325875781692,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 22,
+        "condition": 2.6962935153352157,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          51.5,
+          69.0
+        ],
+        "frequencies": [
+          51.64112984251423,
+          69.03841385388222
+        ],
+        "Q": 2049.837179360946,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 9,
+        "condition": 1.1504857482112913,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          69.0,
+          386.0
+        ],
+        "frequencies": [
+          69.03548386206226,
+          386.1351581097546
+        ],
+        "Q": 2051.046693607138,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 22,
+        "condition": 2.3438239033295702,
+        "at_band_boundary": false
+      }
+    ],
+    "M1_seconds": 0.1597713000010117,
+    "M2_seconds": 1.0721671999999671,
+    "fit_calls": 646,
+    "tone_count_decision": null,
+    "id": "b00_noise_0_0_1",
+    "kind": "noise",
+    "truth_frequencies": [],
+    "evaluation_errors_hz": null,
+    "two_frequency_match_0_5_hz": null,
+    "input_hash": "247429b5e06cdfb6d73542f7623639f1a5da546e482f65a033160d7b8f876623",
+    "trace_sha256": "fd5b8578813b285ef6fbe48d87eaa8c6b4f9ff2cf11867ff15c747adc6991dfd",
+    "truth_metadata": {
+      "part": "matched",
+      "kind": "noise",
+      "base": 0,
+      "offset": 0.0,
+      "relative_phase": null,
+      "ratio": null,
+      "carrier": 88.0,
+      "global_phase": 4.542593114752669,
+      "f1": null,
+      "f2": null,
+      "gap": null,
+      "snr": 0,
+      "observed_snr": 0.0,
+      "noise_hash": "247429b5e06cdfb6d73542f7623639f1a5da546e482f65a033160d7b8f876623",
+      "hash": "247429b5e06cdfb6d73542f7623639f1a5da546e482f65a033160d7b8f876623",
+      "e1": 0.0,
+      "e2": 0.0,
+      "cross": 0.0
+    }
+  },
+  {
+    "Q0": 1997.9002494156155,
+    "Q1": 1991.5755790839953,
+    "Q2": 1985.6453152541135,
+    "gain_Q1_minus_Q2": 5.930263829881824,
+    "M1_frequencies": [
+      404.9782750516998
+    ],
+    "M2_frequencies": [
+      404.9272941881799,
+      411.5292343921869
+    ],
+    "M1_coefficients_cos_sin": [
+      0.06560668873625308,
+      0.0652300721790689
+    ],
+    "M2_coefficients_cos_sin": [
+      0.09005396981153693,
+      0.018897358455395946,
+      0.08952840147118676,
+      -0.0022441311187752777
+    ],
+    "M1_offset": -1.2164067322850691e-09,
+    "M2_offset": -4.055644400174918e-09,
+    "M1_condition": 1.00000107201592,
+    "M2_condition": 1.0046953307759625,
+    "unreliable_condition": false,
+    "nested_loss_check": true,
+    "selected_success": true,
+    "M1_candidates": [
+      {
+        "f": 20.0,
+        "origin": "grid",
+        "optimizer": null
+      },
+      {
+        "f": 405.0,
+        "origin": "grid",
+        "optimizer": null
+      },
+      {
+        "f": 450.0,
+        "origin": "grid",
+        "optimizer": null
+      },
+      {
+        "f": 404.9782750516998,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 9
+        }
+      },
+      {
+        "f": 411.4793384295394,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 9
+        }
+      },
+      {
+        "f": 449.95142613117184,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 8
+        }
+      },
+      {
+        "f": 121.79218838095879,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 9
+        }
+      },
+      {
+        "f": 389.16414223518814,
+        "origin": "refined",
+        "optimizer": {
+          "success": true,
+          "nfev": 9
+        }
+      }
+    ],
+    "starts": [
+      {
+        "initial": [
+          404.9782750516998,
+          411.5
+        ],
+        "frequencies": [
+          404.9272941881799,
+          411.5292343921869
+        ],
+        "Q": 1985.6453152541135,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 7,
+        "condition": 1.0046953307759625,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          404.9782750516998,
+          450.0
+        ],
+        "frequencies": [
+          404.97815040977525,
+          449.95179490129175
+        ],
+        "Q": 1985.6931449712101,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 9,
+        "condition": 1.0436887810513418,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          122.0,
+          404.9782750516998
+        ],
+        "frequencies": [
+          121.79220166315795,
+          404.97827789831746
+        ],
+        "Q": 1985.6587719740892,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 4,
+        "condition": 1.8336624412152174,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          389.0,
+          404.9782750516998
+        ],
+        "frequencies": [
+          389.17444377172654,
+          404.97163804567697
+        ],
+        "Q": 1986.2468095684403,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 10,
+        "condition": 1.0250076818882787,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          306.5,
+          404.9782750516998
+        ],
+        "frequencies": [
+          306.48710418882166,
+          404.97827070623435
+        ],
+        "Q": 1987.0367518640442,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 4,
+        "condition": 1.1470122048745863,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          89.0,
+          404.9782750516998
+        ],
+        "frequencies": [
+          89.08515845330588,
+          404.97827735744545
+        ],
+        "Q": 1987.0515716646755,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 10,
+        "condition": 2.1019556543756512,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          404.8532750516998,
+          405.1032750516998
+        ],
+        "frequencies": [
+          403.6042204552714,
+          405.043779966081
+        ],
+        "Q": 1989.0759141902536,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 9,
+        "condition": 1.2216267570257249,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          404.7282750516998,
+          405.2282750516998
+        ],
+        "frequencies": [
+          403.6045572870986,
+          405.0438595099385
+        ],
+        "Q": 1989.0759141260392,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 11,
+        "condition": 1.2215406953212586,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          404.4782750516998,
+          405.4782750516998
+        ],
+        "frequencies": [
+          403.6045122426977,
+          405.0438918510904
+        ],
+        "Q": 1989.075914053673,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 11,
+        "condition": 1.2215665162646472,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          403.9782750516998,
+          405.9782750516998
+        ],
+        "frequencies": [
+          404.91766815525574,
+          406.7448087393067
+        ],
+        "Q": 1989.6854354449026,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 16,
+        "condition": 1.185945008358404,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          402.9782750516998,
+          406.9782750516998
+        ],
+        "frequencies": [
+          404.91705258261476,
+          406.74509122170366
+        ],
+        "Q": 1989.6854352476269,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 23,
+        "condition": 1.1855676617138313,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          400.9782750516998,
+          408.9782750516998
+        ],
+        "frequencies": [
+          400.6481322613604,
+          409.3320715322896
+        ],
+        "Q": 1992.8496500011793,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 18,
+        "condition": 1.0178166562507611,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          396.9782750516998,
+          412.9782750516998
+        ],
+        "frequencies": [
+          396.7919309638516,
+          413.0840292835795
+        ],
+        "Q": 1994.5733628091766,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 10,
+        "condition": 1.007677541683189,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          388.9782750516998,
+          420.9782750516998
+        ],
+        "frequencies": [
+          389.1639775687374,
+          420.44361455244723
+        ],
+        "Q": 1990.3937584921177,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 10,
+        "condition": 1.0361372458061413,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          372.9782750516998,
+          436.9782750516998
+        ],
+        "frequencies": [
+          373.184925030794,
+          437.63633291388174
+        ],
+        "Q": 1994.9619549417412,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 21,
+        "condition": 1.062664182144938,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          405.0,
+          411.5
+        ],
+        "frequencies": [
+          404.92730842987595,
+          411.5292394976272
+        ],
+        "Q": 1985.6453152639851,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 7,
+        "condition": 1.0046961744409502,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          405.0,
+          450.0
+        ],
+        "frequencies": [
+          404.9781505365459,
+          449.9517948886315
+        ],
+        "Q": 1985.6931449711806,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 9,
+        "condition": 1.0436887809207678,
+        "at_band_boundary": false
+      },
+      {
+        "initial": [
+          411.5,
+          450.0
+        ],
+        "frequencies": [
+          411.4791404655561,
+          449.9518492987271
+        ],
+        "Q": 1985.9874056974563,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 9,
+        "condition": 1.0407111288056974,
+        "at_band_boundary": false
+      }
+    ],
+    "M1_seconds": 0.2049336999989464,
+    "M2_seconds": 1.1139149999944493,
+    "fit_calls": 699,
+    "tone_count_decision": null,
+    "id": "b09_noise_0_0_1",
+    "kind": "noise",
+    "truth_frequencies": [],
+    "evaluation_errors_hz": null,
+    "two_frequency_match_0_5_hz": null,
+    "input_hash": "821c92c947cfd0431ee4bab484a74572b29baa518af8361a475937599a5d1f0f",
+    "trace_sha256": "eb4e065468ece9dea7fe230e00dfd713e44009cf31da92f50b3b8e97b030d9e7",
+    "truth_metadata": {
+      "part": "matched",
+      "kind": "noise",
+      "base": 9,
+      "offset": 0.0,
+      "relative_phase": null,
+      "ratio": null,
+      "carrier": 102.0,
+      "global_phase": 2.623512313138685,
+      "f1": null,
+      "f2": null,
+      "gap": null,
+      "snr": 0,
+      "observed_snr": 0.0,
+      "noise_hash": "821c92c947cfd0431ee4bab484a74572b29baa518af8361a475937599a5d1f0f",
+      "hash": "821c92c947cfd0431ee4bab484a74572b29baa518af8361a475937599a5d1f0f",
+      "e1": 0.0,
+      "e2": 0.0,
+      "cross": 0.0
+    }
+  }
+]

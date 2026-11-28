@@ -1,0 +1,20 @@
+{
+  "scientific_fits": "No interrupted or replaced case;all eight completed once with frozen method.",
+  "reporting_errors": [
+    {
+      "attempt": 1,
+      "error": "SyntaxError:unterminated string literal in plotting title;before any plots or report.",
+      "cause": "Embedded newline escaping in writer.",
+      "saved_source": "reporter_initial_syntax_error.py.txt"
+    },
+    {
+      "attempt": 2,
+      "error": "ValueError:relative results path is not in absolute repository subpath.",
+      "cause": "Report writer did not resolve its CLI path.",
+      "saved_source": "reporter_before_path_fix.py.txt",
+      "outputs_before_error": "Both plots and run report were created;final rerender uses identical fit data and display settings."
+    }
+  ],
+  "correction": "Escape title newlines and resolve CLI output path. No fit rerun,threshold change or data replacement.",
+  "visual_QA": "Both final figures inspected;labels legible and no clipping observed."
+}

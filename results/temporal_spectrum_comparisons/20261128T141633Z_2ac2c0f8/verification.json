@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "cases": 4,
+  "central_frames_per_case": 9,
+  "all_frame_geometry_checked": 25,
+  "local_spectral_samples": 486,
+  "reference_pair_gate_checks": 36,
+  "tone_touching_full_windows": 15,
+  "central_union_s": [
+    0.75,
+    2.75
+  ],
+  "parent_artifact_hashes_unchanged": 529,
+  "temporal_artifact_hashes_unchanged": 21,
+  "new_waveforms": 0
+}

@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "checks": [
+    "fixed_design_reconstruction_1",
+    "fixed_design_reconstruction_2",
+    "permutation_invariance",
+    "nested_fixed_design_loss"
+  ]
+}

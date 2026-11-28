@@ -1,0 +1,92 @@
+"""Render descriptive waveform smoke results; no model-selection threshold."""
+import os
+os.environ.update(OMP_NUM_THREADS="1",OPENBLAS_NUM_THREADS="1",MKL_NUM_THREADS="1")
+import sys,json,hashlib
+from pathlib import Path
+import numpy as np
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+ROOT=Path(__file__).resolve().parents[1]
+def main(out):
+    rows=json.loads((out/"results.json").read_text(encoding="utf-8"));manifest=json.loads((out/"manifest.json").read_text(encoding="utf-8"));verification=json.loads((out/"verification.json").read_text(encoding="utf-8"))
+    labels=["88/90 equal","88/90 ratio 0.5","88.5/90.5 equal","86/88 ratio 0.25","134.5/136.5 ratio 0.5","one tone:102","noise base00","noise base09"]
+    colors=["#0072b2" if r["two_frequency_match_0_5_hz"] else "#d55e00" if r["kind"]=="two" else "#888888" for r in rows]
+    fig,axes=plt.subplots(1,2,figsize=(12,5.5),layout="constrained")
+    y=np.arange(8)
+    axes[0].barh(y,[r["gain_Q1_minus_Q2"] for r in rows],color=colors)
+    axes[0].set_yticks(y,labels);axes[0].invert_yaxis();axes[0].set_xlabel("Extra weighted fit gain Q1-Q2 (not significance)");axes[0].set_title("Two-tone models improve fits even on controls")
+    for i,r in enumerate(rows):axes[0].text(r["gain_Q1_minus_Q2"]+.35,i,f'{r["gain_Q1_minus_Q2"]:.2f}',va="center",fontsize=8)
+    axes[0].set_xlim(0,65)
+    for i,r in enumerate(rows):
+        axes[1].scatter(r["M2_frequencies"],[i]*2,c=colors[i],s=35,label="Fitted frequencies" if i==0 else None)
+        axes[1].scatter(r["truth_frequencies"],[i]*len(r["truth_frequencies"]),facecolors="none",edgecolors="black",s=95,marker="s",label="True frequencies (evaluation only)" if i==0 else None)
+    axes[1].set_xlim(20,450);axes[1].set_yticks(y,labels);axes[1].invert_yaxis();axes[1].set_xlabel("Frequency (Hz)");axes[1].set_title("Conditional M2 estimates, no tone-count decision");axes[1].legend(fontsize=8)
+    fig.suptitle("Eight previously inspected development records; known envelope/onset
+Blue:both frequencies within0.5Hz; orange:wrong second frequency; gray:negative controls",fontsize=11)
+    fig.savefig(out/"waveform_smoke_summary.png",dpi=160);plt.close(fig)
+    chosen=[0,4,3,5]
+    fig,axes=plt.subplots(4,2,figsize=(12,9),layout="constrained");t=np.arange(4096)/1024
+    with np.load(out/"background_weights.npz") as z:weights=z["weights"].copy()
+    for j,i in enumerate(chosen):
+        r=rows[i]
+        with np.load(out/(r["id"]+".npz")) as z:
+            x=z["waveform"];p1=z["M1_prediction"];p2=z["M2_prediction"];sel=(t>=1.70)&(t<1.80)
+            axes[j,0].plot(t[sel],x[sel],color="gray",alpha=.55,lw=.8,label="Observed")
+            axes[j,0].plot(t[sel],p1[sel],lw=1,label="M1 combined fit")
+            axes[j,0].plot(t[sel],p2[sel],lw=1,label="M2 combined fit")
+            axes[j,0].set_title(labels[i]+"; fixed illustrative100ms zoom",fontsize=9);axes[j,0].set_xlabel("Time (s)");axes[j,0].set_ylabel("Raw amplitude")
+            for pred,label in [(p1,"M1 residual"),(p2,"M2 residual")]:
+                residual=x-pred;fft=np.fft.rfft(residual-residual.mean())*weights;f=np.fft.rfftfreq(4096,1/1024)
+                axes[j,1].plot(f,np.maximum(abs(fft)**2/4096,1e-12),lw=.7,label=label)
+            for f0 in r["truth_frequencies"]:axes[j,1].axvline(f0,color="black",ls=":",lw=.9)
+            axes[j,1].set_xlim(20,450);axes[j,1].set_yscale("log");axes[j,1].set_ylim(1e-4,100);axes[j,1].set_xlabel("Frequency (Hz)");axes[j,1].set_ylabel("Weighted residual FFT power")
+            axes[j,1].set_title("Full4s residual; dotted:true frequencies for evaluation",fontsize=9)
+    axes[0,0].legend(fontsize=7);axes[0,1].legend(fontsize=7)
+    fig.suptitle("Combined waveform fits and residuals: illustrative development examples
+Neither individual-source recovery nor a calibrated decision about tone count",fontsize=11)
+    fig.savefig(out/"waveform_fit_and_residual_comparisons.png",dpi=155);plt.close(fig)
+    header="| Known input | M1 frequency (Hz) | M2 frequencies (Hz) | M2 errors (Hz) | Q1-Q2 | Both within0.5Hz? |\n|---|---:|---|---|---:|---|\n"
+    table=header
+    for label,r in zip(labels,rows):
+        errors=" / ".join(f"{v:.4f}" for v in r["evaluation_errors_hz"]) if r["evaluation_errors_hz"] is not None else "not applicable"
+        matched=str(r["two_frequency_match_0_5_hz"]) if r["kind"]=="two" else "no tone-count decision"
+        table+=f"| {label} | {r['M1_frequencies'][0]:.4f} | {r['M2_frequencies'][0]:.4f} / {r['M2_frequencies'][1]:.4f} | {errors} | {r['gain_Q1_minus_Q2']:.4f} | {matched} |\n"
+    report="""# Known-envelope waveform-model smoke study —28 November2026
+
+## What was tested
+
+Eight already inspected development records from matched_gap2/20261128T115035Z_bf957291 were fitted as noise (M0),one sinusoid (M1),or two sinusoids (M2),plus a shared constant. Each record is4s at1024Hz. All models know the experimental one-second Tukey envelope and onset1.25s;frequencies20..450Hz,amplitudes and phases are unknown. No true carrier frequency enters the fitting routine. Labels were attached afterward. This is a conditional implementation probe,not a blind transient search,independent performance estimate or source-separation experiment.
+
+A common stationary-noise weighting was estimated from284 separately generated historical calibration records,each verified against its original hash. Target and model columns use identical weights. Fixed-frequency coefficients are fitted jointly;continuous frequencies use multiple local starts. The frozen protocol and full driver are archived here. The objective is circulant weighted residual energy,not an exact likelihood or calibrated significance.
+
+## Observations
+
+"""+table+"""
+Four of five two-tone examples have both fitted frequencies within0.1Hz of truth (the predeclared success tolerance is0.5Hz). In particular,the earlier erroneous134/139Hz claim becomes134.4525/136.5526Hz,near134.5/136.5Hz. Separate visible spectral maxima are therefore not necessary for frequency estimation in these known-envelope examples. This does not establish independent improvement or a universal resolution limit.
+
+The86/88Hz weak-component example still fails:85.9302/406.3008Hz. The optimizer selected a distant nuisance component,not the88Hz tone. Numerical convergence does not establish that this is the global optimum,or distinguish a noise-driven optimum from missed initialization basins. We did not add truth-guided starts or retune after observing it.
+
+M2 also improves the one-tone fit by6.3247 and the two noise fits by6.6428/5.9303. The failed two-tone example has gain6.5764,within that tiny control range. These three controls cannot define a threshold or false-positive rate. No number-of-tones decision was made,and no false-two-tone claim rate can yet be measured. M2 nuisance estimates on controls are retained explicitly,not presented as discoveries. Do not choose an apparent gap in these eight gains as a new decision rule.
+
+## Numerical checks and runtime
+
+"""+f"All{verification['optimizer_returned_objectives']}local-start optimizations report convergence. Selected design condition numbers are1.00..2.70,below the declared1e8warning level. There were no interrupted fits or replaced examples. Independent reconstruction checked16model predictions/residual energies/normal equations,all143returned-start objectives,284background hashes and the PSD/weight calculation. Maximum relative normal-equation residual:{verification['max_relative_normal_equation_residual']:.3g}. All529parent artifacts and19production source files retain their hashes. Four fixed-design fixture assertions also pass. These are numerical checks,not scientific validation.\n\nBackground generation/PSD:{manifest['background_seconds']:.3f}s;grid precomputation:{manifest['precompute_seconds']:.3f}s;complete driver:{manifest['total_seconds']:.3f}s. Per-record M1+M2:{min(r['M1_seconds']+r['M2_seconds'] for r in rows):.3f}..{max(r['M1_seconds']+r['M2_seconds'] for r in rows):.3f}s,single-thread numerical environment. Host/library versions and per-model timings are in manifest/results. This is no benchmark against BSD.\n\n"+"""## Limits and next decision
+
+The known envelope/onset gives this method substantial information. Timing error and unknown boundary localization are not estimated:the model support is fixed by design. Stationary tones with that exact envelope are much easier than arbitrary transients,audio mixtures or changing real-sensor noise. The five two-tone cases include shared-noise examples,so4/5 is only a descriptive count,not independent binomial performance. The single/noise set is especially small.
+
+The next useful stage is independently calibrated model selection,then untouched evaluation noise/single/two-tone inputs across amplitude,phase,spacing and envelope/onset mismatch. Keep tone-count accuracy and frequency accuracy separate. Multi-start convergence needs further stress controls. No production adoption is justified here. No BSD detector mathematics,app,historical results,O3,commit,push,release or Zenodo operation was performed.
+
+## Files
+
+- results.json:all model costs,coefficients,frequencies,truth evaluation,starts,statuses,timing.
+- Eight NPZ files:original waveform,combined predictions and raw residuals (local artifacts;not individual source waveforms).
+- background_weights.npz / background_hashes.json:independent weighting evidence.
+- fixtures.json / verification.json:numerical checks and scope.
+- waveform_smoke_summary.png and waveform_fit_and_residual_comparisons.png:descriptive plots.
+"""
+    (out/"report.md").write_text(report,encoding="utf-8")
+    doc=ROOT/"docs/WAVEFORM_MODEL_SMOKE_FINDINGS_2026-11-28.md"
+    doc.write_text(report+"\n\nRun: `"+out.relative_to(ROOT).as_posix()+"`.\n\n![Summary](../"+out.relative_to(ROOT).as_posix()+"/waveform_smoke_summary.png)\n\n![Combined fits and residuals](../"+out.relative_to(ROOT).as_posix()+"/waveform_fit_and_residual_comparisons.png)\n",encoding="utf-8")
+    print(doc)
+if __name__=="__main__":main(Path(sys.argv[1]))

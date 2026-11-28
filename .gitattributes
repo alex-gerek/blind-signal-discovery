@@ -54,3 +54,20 @@ experiments/run_matched_gap2.py -text
 experiments/verify_matched_gap2.py -text
 experiments/report_matched_gap2.py -text
 experiments/diagnose_matched_gap2.py -text
+
+results/temporal_peak_persistence/** -text
+results/temporal_spectrum_comparisons/** -text
+results/waveform_model_smoke/** -text
+docs/TEMPORAL_PEAK_PERSISTENCE_FINDINGS_2026-11-28.md -text
+docs/TEMPORAL_SPECTRUM_COMPARISONS_2026-11-28.md -text
+docs/WAVEFORM_MODEL_SMOKE_FINDINGS_2026-11-28.md -text
+docs/temporal_peak_persistence_protocol_2026-11-28.md -text
+docs/temporal_spectrum_comparisons_protocol_2026-11-28.md -text
+docs/waveform_model_smoke_protocol_2026-11-28.md -text
+experiments/analyze_temporal_peak_persistence.py -text
+experiments/report_temporal_peak_persistence.py -text
+experiments/verify_temporal_peak_persistence.py -text
+experiments/visualize_temporal_spectrum_comparisons.py -text
+experiments/run_waveform_model_smoke.py -text
+experiments/verify_waveform_model_smoke.py -text
+experiments/report_waveform_model_smoke.py -text

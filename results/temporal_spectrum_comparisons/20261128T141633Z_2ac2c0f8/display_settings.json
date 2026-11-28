@@ -1,0 +1,32 @@
+{
+  "raw_10log10_power_limits": [
+    -41.095009418726875,
+    -7.997193029185017
+  ],
+  "raw_limits_rule": "pooled2nd/99.8thpercentiles across four local displays; display-only clipping",
+  "normalized_log10_limits": [
+    -1.0,
+    2.0
+  ],
+  "raw_power_reference": "arbitrary numerical reference1,not PSD/dBFS",
+  "spectral_profiles": "linear exact1Hzbins; common y-axis within each case across nineframes; per-case axes differ",
+  "full_spectrogram": "all25frames; frequency crop only",
+  "reference_pairs": {
+    "stable_true": [
+      88,
+      90
+    ],
+    "brief_true": [
+      88,
+      90
+    ],
+    "stable_wrong": [
+      86,
+      89
+    ],
+    "single_companion": [
+      102,
+      105
+    ]
+  }
+}

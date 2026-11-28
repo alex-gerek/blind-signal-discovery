@@ -1,0 +1,27 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "results/temporal_spectrum_comparisons/20261128T141633Z_2ac2c0f8/brief_true_normalized_nine_spectra.png": "258a3bf5d18b3fab974edec2cf5bc465abc32701d00a92d8a2e69720a4dbaaa6",
+    "results/temporal_spectrum_comparisons/20261128T141633Z_2ac2c0f8/brief_true_raw_nine_spectra.png": "d968ee9edc921bdf3e9df2aaeacd6df4caeaa6d93b1499c1277a230a5d2dffc4",
+    "results/temporal_spectrum_comparisons/20261128T141633Z_2ac2c0f8/case_summary.json": "dd639db6e98efb177e2973d3fc9b741fe0b55c507a9458d6c9190d9f2a9db6b9",
+    "results/temporal_spectrum_comparisons/20261128T141633Z_2ac2c0f8/display_settings.json": "0e868b017b53287c9d682d1d1066366f63c606dca97f3a9e35d8526f5df78efd",
+    "results/temporal_spectrum_comparisons/20261128T141633Z_2ac2c0f8/driver.py": "ed28f4e5dbd674160d801867f89fa9e9d8e3b8e5bf6e6bfd125b150249c92e34",
+    "results/temporal_spectrum_comparisons/20261128T141633Z_2ac2c0f8/four_cases_spectral_evolution.png": "fc9750c1ac91935184f2de5b133bc357cd0a62577790ed009da03bd45da9977f",
+    "results/temporal_spectrum_comparisons/20261128T141633Z_2ac2c0f8/frame_metrics.csv": "f5095d64363f492f0bb8eb3ee10bf2119e8c14f670223c4e2520e104b35813dc",
+    "results/temporal_spectrum_comparisons/20261128T141633Z_2ac2c0f8/local_spectral_samples.csv": "bd885daebb716c741062ea5788b05661f950fabf50b6621198ed29d78effb760",
+    "results/temporal_spectrum_comparisons/20261128T141633Z_2ac2c0f8/protocol.md": "232becc7a4e5ac6e2af3100c321dc99aa64aebe65abcecfd3dd534ebc53337d0",
+    "results/temporal_spectrum_comparisons/20261128T141633Z_2ac2c0f8/report.md": "5aece40631706ad89cffdb344fb01259e799b2708938d0ad9b7055660d3d87da",
+    "results/temporal_spectrum_comparisons/20261128T141633Z_2ac2c0f8/single_companion_normalized_nine_spectra.png": "ea06944713a742e8ccdd0fd1f4cc65c9f3d38e7521c8323b34c9c2de43cb4691",
+    "results/temporal_spectrum_comparisons/20261128T141633Z_2ac2c0f8/single_companion_raw_nine_spectra.png": "5e8b6688dc90b1b75df04e19a8869848aca74f65fc318ab1c67ae2421d7b6e98",
+    "results/temporal_spectrum_comparisons/20261128T141633Z_2ac2c0f8/stable_true_normalized_nine_spectra.png": "0ef694f960183c9cceed1b3cc4c2d9e3dbb23cc03b0c38b27d5166a14c37592b",
+    "results/temporal_spectrum_comparisons/20261128T141633Z_2ac2c0f8/stable_true_raw_nine_spectra.png": "856a290c5ce0d2c446bcf82c975b4437da5fd3f5332c78b5c0dd8ee40256bb21",
+    "results/temporal_spectrum_comparisons/20261128T141633Z_2ac2c0f8/stable_wrong_normalized_nine_spectra.png": "e98bcf0a3ec2c73425cf0114bc68fc52c137587ebe5bae7c40d3cb0a445f92ab",
+    "results/temporal_spectrum_comparisons/20261128T141633Z_2ac2c0f8/stable_wrong_raw_nine_spectra.png": "b024d14d8ffb413d8ab937526439289d1dadc7eac2bf36fcecf4cf37b7c0dabb",
+    "results/temporal_spectrum_comparisons/20261128T141633Z_2ac2c0f8/verification.json": "1170e410fabb676f5efb4b2f0c5a248f876087201b5e819cf15e21ec52701230",
+    "results/temporal_spectrum_comparisons/20261128T141633Z_2ac2c0f8/window_geometry.csv": "3b0d91ab7be9d8326b34dc2ca0eb7f588ce227d1adc5966f2d8a88db2aa1af10",
+    "results/temporal_spectrum_comparisons/20261128T141633Z_2ac2c0f8/window_geometry.png": "4451372254f9f0ea16cfcf4f39a04af702f9c3aa0ae8526c23c8c6bc90b1b922",
+    "docs/TEMPORAL_SPECTRUM_COMPARISONS_2026-11-28.md": "c635c98f0ea9cf862af46f79d2c697fcd5f70e2d54166e20df3c5c12ec5fec74",
+    "docs/temporal_spectrum_comparisons_protocol_2026-11-28.md": "232becc7a4e5ac6e2af3100c321dc99aa64aebe65abcecfd3dd534ebc53337d0",
+    "experiments/visualize_temporal_spectrum_comparisons.py": "ed28f4e5dbd674160d801867f89fa9e9d8e3b8e5bf6e6bfd125b150249c92e34"
+  }
+}

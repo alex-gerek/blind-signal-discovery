@@ -1,0 +1,185 @@
+[
+  {
+    "id": "b04_two_0.5_0_0.5",
+    "frequencies": [
+      134.0,
+      139.0
+    ],
+    "groups": {
+      "two": {
+        "pair_frames": 5,
+        "pair_exact_run": 3,
+        "second_peak_above4_frames": [
+          6,
+          7,
+          8,
+          11,
+          12
+        ]
+      },
+      "noise": {
+        "pair_frames": 0,
+        "pair_exact_run": 0,
+        "second_peak_above4_frames": [
+          8,
+          12
+        ]
+      },
+      "one": {
+        "pair_frames": 4,
+        "pair_exact_run": 2,
+        "second_peak_above4_frames": [
+          7,
+          8,
+          12,
+          13
+        ]
+      }
+    }
+  },
+  {
+    "id": "b04_two_0.5_0_0.25",
+    "frequencies": [
+      134.0,
+      139.0
+    ],
+    "groups": {
+      "two": {
+        "pair_frames": 5,
+        "pair_exact_run": 3,
+        "second_peak_above4_frames": [
+          7,
+          8,
+          11,
+          12,
+          13,
+          14
+        ]
+      },
+      "noise": {
+        "pair_frames": 0,
+        "pair_exact_run": 0,
+        "second_peak_above4_frames": [
+          8,
+          12
+        ]
+      },
+      "one": {
+        "pair_frames": 4,
+        "pair_exact_run": 2,
+        "second_peak_above4_frames": [
+          7,
+          8,
+          12,
+          13
+        ]
+      }
+    }
+  },
+  {
+    "id": "b04_two_0.5_1.5707963_0.5",
+    "frequencies": [
+      134.0,
+      139.0
+    ],
+    "groups": {
+      "two": {
+        "pair_frames": 2,
+        "pair_exact_run": 1,
+        "second_peak_above4_frames": [
+          7,
+          8,
+          9,
+          12,
+          13
+        ]
+      },
+      "noise": {
+        "pair_frames": 0,
+        "pair_exact_run": 0,
+        "second_peak_above4_frames": [
+          8,
+          12
+        ]
+      },
+      "one": {
+        "pair_frames": 4,
+        "pair_exact_run": 2,
+        "second_peak_above4_frames": [
+          7,
+          8,
+          12,
+          13
+        ]
+      }
+    }
+  },
+  {
+    "id": "b04_two_0.5_1.5707963_0.25",
+    "frequencies": [
+      134.0,
+      139.0
+    ],
+    "groups": {
+      "two": {
+        "pair_frames": 3,
+        "pair_exact_run": 2,
+        "second_peak_above4_frames": [
+          7,
+          8,
+          9,
+          12,
+          13
+        ]
+      },
+      "noise": {
+        "pair_frames": 0,
+        "pair_exact_run": 0,
+        "second_peak_above4_frames": [
+          8,
+          12
+        ]
+      },
+      "one": {
+        "pair_frames": 4,
+        "pair_exact_run": 2,
+        "second_peak_above4_frames": [
+          7,
+          8,
+          12,
+          13
+        ]
+      }
+    }
+  },
+  {
+    "id": "b05_two_0_0_0.25",
+    "frequencies": [
+      86.0,
+      89.0
+    ],
+    "groups": {
+      "two": {
+        "pair_frames": 5,
+        "pair_exact_run": 5,
+        "second_peak_above4_frames": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "noise": {
+        "pair_frames": 0,
+        "pair_exact_run": 0,
+        "second_peak_above4_frames": []
+      },
+      "one": {
+        "pair_frames": 0,
+        "pair_exact_run": 0,
+        "second_peak_above4_frames": []
+      }
+    }
+  }
+]

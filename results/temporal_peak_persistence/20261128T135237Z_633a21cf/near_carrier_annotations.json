@@ -1,0 +1,1878 @@
+{
+  "b00_noise_0_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b00_one_0_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b00_one_0.5_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b00_two_0_0_1": {
+    "frames_with_carrier_pairs": 5,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[88, 90]": 5
+    }
+  },
+  "b00_two_0_0_0.5": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[88, 90]": 2
+    }
+  },
+  "b00_two_0_0_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b00_two_0_1.5707963_1": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[88, 90]": 3
+    }
+  },
+  "b00_two_0_1.5707963_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[88, 90]": 1
+    }
+  },
+  "b00_two_0_1.5707963_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b00_two_0_3.1415927_1": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[88, 90]": 3
+    }
+  },
+  "b00_two_0_3.1415927_0.5": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[88, 90]": 2
+    }
+  },
+  "b00_two_0_3.1415927_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b00_two_0.5_0_1": {
+    "frames_with_carrier_pairs": 4,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[88, 91]": 4
+    }
+  },
+  "b00_two_0.5_0_0.5": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[88, 91]": 3
+    }
+  },
+  "b00_two_0.5_0_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b00_two_0.5_1.5707963_1": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[89, 91]": 1,
+      "[88, 91]": 2
+    }
+  },
+  "b00_two_0.5_1.5707963_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[88, 91]": 1
+    }
+  },
+  "b00_two_0.5_1.5707963_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b00_two_0.5_3.1415927_1": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[88, 91]": 1,
+      "[88, 90]": 1
+    }
+  },
+  "b00_two_0.5_3.1415927_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[88, 91]": 1
+    }
+  },
+  "b00_two_0.5_3.1415927_0.25": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[88, 91]": 1
+    }
+  },
+  "b01_noise_0_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b01_one_0_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b01_one_0.5_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b01_two_0_0_1": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[90, 92]": 2
+    }
+  },
+  "b01_two_0_0_0.5": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b01_two_0_0_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b01_two_0_1.5707963_1": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[90, 92]": 3
+    }
+  },
+  "b01_two_0_1.5707963_0.5": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b01_two_0_1.5707963_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b01_two_0_3.1415927_1": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[90, 92]": 3
+    }
+  },
+  "b01_two_0_3.1415927_0.5": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[90, 92]": 2
+    }
+  },
+  "b01_two_0_3.1415927_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b01_two_0.5_0_1": {
+    "frames_with_carrier_pairs": 5,
+    "exact_max": 2,
+    "jitter_max": 3,
+    "frequencies": {
+      "[90, 93]": 4,
+      "[90, 92]": 1
+    }
+  },
+  "b01_two_0.5_0_0.5": {
+    "frames_with_carrier_pairs": 4,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[90, 93]": 4
+    }
+  },
+  "b01_two_0.5_0_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b01_two_0.5_1.5707963_1": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[91, 93]": 1,
+      "[90, 93]": 2
+    }
+  },
+  "b01_two_0.5_1.5707963_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[90, 93]": 1
+    }
+  },
+  "b01_two_0.5_1.5707963_0.25": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[90, 93]": 1
+    }
+  },
+  "b01_two_0.5_3.1415927_1": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[90, 93]": 2
+    }
+  },
+  "b01_two_0.5_3.1415927_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[90, 93]": 1
+    }
+  },
+  "b01_two_0.5_3.1415927_0.25": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[90, 93]": 2
+    }
+  },
+  "b02_noise_0_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b02_one_0_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b02_one_0.5_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b02_two_0_0_1": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[106, 108]": 2
+    }
+  },
+  "b02_two_0_0_0.5": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b02_two_0_0_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b02_two_0_1.5707963_1": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[106, 108]": 3
+    }
+  },
+  "b02_two_0_1.5707963_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[106, 108]": 1
+    }
+  },
+  "b02_two_0_1.5707963_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b02_two_0_3.1415927_1": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[106, 108]": 3
+    }
+  },
+  "b02_two_0_3.1415927_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[106, 108]": 1
+    }
+  },
+  "b02_two_0_3.1415927_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b02_two_0.5_0_1": {
+    "frames_with_carrier_pairs": 4,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[106, 109]": 4
+    }
+  },
+  "b02_two_0.5_0_0.5": {
+    "frames_with_carrier_pairs": 4,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[106, 109]": 4
+    }
+  },
+  "b02_two_0.5_0_0.25": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[106, 109]": 1
+    }
+  },
+  "b02_two_0.5_1.5707963_1": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[106, 109]": 1
+    }
+  },
+  "b02_two_0.5_1.5707963_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[106, 109]": 1
+    }
+  },
+  "b02_two_0.5_1.5707963_0.25": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[106, 109]": 1
+    }
+  },
+  "b02_two_0.5_3.1415927_1": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[106, 109]": 1
+    }
+  },
+  "b02_two_0.5_3.1415927_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[106, 109]": 1
+    }
+  },
+  "b02_two_0.5_3.1415927_0.25": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[106, 109]": 1
+    }
+  },
+  "b03_noise_0_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b03_one_0_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b03_one_0.5_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b03_two_0_0_1": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[168, 170]": 3
+    }
+  },
+  "b03_two_0_0_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[168, 170]": 1
+    }
+  },
+  "b03_two_0_0_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b03_two_0_1.5707963_1": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[168, 170]": 3
+    }
+  },
+  "b03_two_0_1.5707963_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[168, 170]": 1
+    }
+  },
+  "b03_two_0_1.5707963_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b03_two_0_3.1415927_1": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[168, 170]": 3
+    }
+  },
+  "b03_two_0_3.1415927_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[168, 170]": 1
+    }
+  },
+  "b03_two_0_3.1415927_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b03_two_0.5_0_1": {
+    "frames_with_carrier_pairs": 6,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[168, 171]": 6
+    }
+  },
+  "b03_two_0.5_0_0.5": {
+    "frames_with_carrier_pairs": 6,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[168, 171]": 5,
+      "[169, 171]": 1
+    }
+  },
+  "b03_two_0.5_0_0.25": {
+    "frames_with_carrier_pairs": 5,
+    "exact_max": 2,
+    "jitter_max": 3,
+    "frequencies": {
+      "[168, 171]": 4,
+      "[169, 171]": 1
+    }
+  },
+  "b03_two_0.5_1.5707963_1": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[168, 171]": 2
+    }
+  },
+  "b03_two_0.5_1.5707963_0.5": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[168, 171]": 2
+    }
+  },
+  "b03_two_0.5_1.5707963_0.25": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[168, 171]": 1
+    }
+  },
+  "b03_two_0.5_3.1415927_1": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[168, 171]": 1
+    }
+  },
+  "b03_two_0.5_3.1415927_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[168, 171]": 1
+    }
+  },
+  "b03_two_0.5_3.1415927_0.25": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[168, 171]": 1
+    }
+  },
+  "b04_noise_0_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b04_one_0_0_1": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[131, 134]": 1
+    }
+  },
+  "b04_one_0.5_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b04_two_0_0_1": {
+    "frames_with_carrier_pairs": 4,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[134, 136]": 4
+    }
+  },
+  "b04_two_0_0_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[134, 136]": 1
+    }
+  },
+  "b04_two_0_0_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b04_two_0_1.5707963_1": {
+    "frames_with_carrier_pairs": 4,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[134, 136]": 4
+    }
+  },
+  "b04_two_0_1.5707963_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[134, 136]": 1
+    }
+  },
+  "b04_two_0_1.5707963_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b04_two_0_3.1415927_1": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[134, 136]": 3
+    }
+  },
+  "b04_two_0_3.1415927_0.5": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[134, 136]": 2
+    }
+  },
+  "b04_two_0_3.1415927_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b04_two_0.5_0_1": {
+    "frames_with_carrier_pairs": 5,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[134, 137]": 5
+    }
+  },
+  "b04_two_0.5_0_0.5": {
+    "frames_with_carrier_pairs": 4,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[134, 137]": 4
+    }
+  },
+  "b04_two_0.5_0_0.25": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[134, 137]": 1
+    }
+  },
+  "b04_two_0.5_1.5707963_1": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[134, 137]": 2
+    }
+  },
+  "b04_two_0.5_1.5707963_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[134, 137]": 1
+    }
+  },
+  "b04_two_0.5_1.5707963_0.25": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[134, 137]": 1
+    }
+  },
+  "b04_two_0.5_3.1415927_1": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 1,
+    "jitter_max": 2,
+    "frequencies": {
+      "[134, 137]": 1,
+      "[134, 136]": 1
+    }
+  },
+  "b04_two_0.5_3.1415927_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[134, 137]": 1
+    }
+  },
+  "b04_two_0.5_3.1415927_0.25": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[134, 137]": 1
+    }
+  },
+  "b05_noise_0_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b05_one_0_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b05_one_0.5_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b05_two_0_0_1": {
+    "frames_with_carrier_pairs": 4,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[86, 88]": 4
+    }
+  },
+  "b05_two_0_0_0.5": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b05_two_0_0_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b05_two_0_1.5707963_1": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[86, 88]": 3
+    }
+  },
+  "b05_two_0_1.5707963_0.5": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[86, 88]": 2
+    }
+  },
+  "b05_two_0_1.5707963_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b05_two_0_3.1415927_1": {
+    "frames_with_carrier_pairs": 4,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[86, 88]": 4
+    }
+  },
+  "b05_two_0_3.1415927_0.5": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[86, 88]": 2
+    }
+  },
+  "b05_two_0_3.1415927_0.25": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[86, 88]": 1
+    }
+  },
+  "b05_two_0.5_0_1": {
+    "frames_with_carrier_pairs": 5,
+    "exact_max": 2,
+    "jitter_max": 3,
+    "frequencies": {
+      "[86, 89]": 4,
+      "[87, 89]": 1
+    }
+  },
+  "b05_two_0.5_0_0.5": {
+    "frames_with_carrier_pairs": 6,
+    "exact_max": 3,
+    "jitter_max": 4,
+    "frequencies": {
+      "[86, 89]": 5,
+      "[87, 89]": 1
+    }
+  },
+  "b05_two_0.5_0_0.25": {
+    "frames_with_carrier_pairs": 4,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[86, 89]": 4
+    }
+  },
+  "b05_two_0.5_1.5707963_1": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[86, 89]": 2
+    }
+  },
+  "b05_two_0.5_1.5707963_0.5": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[86, 89]": 2
+    }
+  },
+  "b05_two_0.5_1.5707963_0.25": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[86, 89]": 2
+    }
+  },
+  "b05_two_0.5_3.1415927_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b05_two_0.5_3.1415927_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[86, 89]": 1
+    }
+  },
+  "b05_two_0.5_3.1415927_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b06_noise_0_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b06_one_0_0_1": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[169, 172]": 1
+    }
+  },
+  "b06_one_0.5_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b06_two_0_0_1": {
+    "frames_with_carrier_pairs": 5,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[172, 174]": 5
+    }
+  },
+  "b06_two_0_0_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[172, 174]": 1
+    }
+  },
+  "b06_two_0_0_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b06_two_0_1.5707963_1": {
+    "frames_with_carrier_pairs": 4,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[172, 174]": 4
+    }
+  },
+  "b06_two_0_1.5707963_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[172, 174]": 1
+    }
+  },
+  "b06_two_0_1.5707963_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b06_two_0_3.1415927_1": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[172, 174]": 3
+    }
+  },
+  "b06_two_0_3.1415927_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[172, 174]": 1
+    }
+  },
+  "b06_two_0_3.1415927_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b06_two_0.5_0_1": {
+    "frames_with_carrier_pairs": 4,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[172, 175]": 4
+    }
+  },
+  "b06_two_0.5_0_0.5": {
+    "frames_with_carrier_pairs": 4,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[172, 175]": 4
+    }
+  },
+  "b06_two_0.5_0_0.25": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[172, 175]": 3
+    }
+  },
+  "b06_two_0.5_1.5707963_1": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[172, 175]": 2
+    }
+  },
+  "b06_two_0.5_1.5707963_0.5": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 2,
+    "jitter_max": 3,
+    "frequencies": {
+      "[173, 175]": 1,
+      "[172, 175]": 2
+    }
+  },
+  "b06_two_0.5_1.5707963_0.25": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 1,
+    "jitter_max": 2,
+    "frequencies": {
+      "[173, 175]": 1,
+      "[172, 175]": 1
+    }
+  },
+  "b06_two_0.5_3.1415927_1": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[172, 175]": 1
+    }
+  },
+  "b06_two_0.5_3.1415927_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[172, 175]": 1
+    }
+  },
+  "b06_two_0.5_3.1415927_0.25": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[173, 175]": 1
+    }
+  },
+  "b07_noise_0_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b07_one_0_0_1": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[107, 110]": 1
+    }
+  },
+  "b07_one_0.5_0_1": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[108, 111]": 1
+    }
+  },
+  "b07_two_0_0_1": {
+    "frames_with_carrier_pairs": 5,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[110, 112]": 5
+    }
+  },
+  "b07_two_0_0_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[110, 112]": 1
+    }
+  },
+  "b07_two_0_0_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b07_two_0_1.5707963_1": {
+    "frames_with_carrier_pairs": 5,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[110, 112]": 5
+    }
+  },
+  "b07_two_0_1.5707963_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[110, 112]": 1
+    }
+  },
+  "b07_two_0_1.5707963_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b07_two_0_3.1415927_1": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[110, 112]": 3
+    }
+  },
+  "b07_two_0_3.1415927_0.5": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[110, 112]": 3
+    }
+  },
+  "b07_two_0_3.1415927_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b07_two_0.5_0_1": {
+    "frames_with_carrier_pairs": 4,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[110, 113]": 4
+    }
+  },
+  "b07_two_0.5_0_0.5": {
+    "frames_with_carrier_pairs": 4,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[110, 113]": 4
+    }
+  },
+  "b07_two_0.5_0_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b07_two_0.5_1.5707963_1": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[110, 113]": 1
+    }
+  },
+  "b07_two_0.5_1.5707963_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[110, 113]": 1
+    }
+  },
+  "b07_two_0.5_1.5707963_0.25": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[110, 113]": 1
+    }
+  },
+  "b07_two_0.5_3.1415927_1": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[110, 113]": 1
+    }
+  },
+  "b07_two_0.5_3.1415927_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[110, 113]": 1
+    }
+  },
+  "b07_two_0.5_3.1415927_0.25": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[110, 113]": 1
+    }
+  },
+  "b08_noise_0_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b08_one_0_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b08_one_0.5_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b08_two_0_0_1": {
+    "frames_with_carrier_pairs": 4,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[90, 92]": 4
+    }
+  },
+  "b08_two_0_0_0.5": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b08_two_0_0_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b08_two_0_1.5707963_1": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[90, 92]": 3
+    }
+  },
+  "b08_two_0_1.5707963_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[90, 92]": 1
+    }
+  },
+  "b08_two_0_1.5707963_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b08_two_0_3.1415927_1": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[90, 92]": 3
+    }
+  },
+  "b08_two_0_3.1415927_0.5": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[90, 92]": 2
+    }
+  },
+  "b08_two_0_3.1415927_0.25": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[90, 92]": 1
+    }
+  },
+  "b08_two_0.5_0_1": {
+    "frames_with_carrier_pairs": 5,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[90, 93]": 5
+    }
+  },
+  "b08_two_0.5_0_0.5": {
+    "frames_with_carrier_pairs": 5,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[90, 93]": 5
+    }
+  },
+  "b08_two_0.5_0_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b08_two_0.5_1.5707963_1": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[90, 93]": 2
+    }
+  },
+  "b08_two_0.5_1.5707963_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[90, 93]": 1
+    }
+  },
+  "b08_two_0.5_1.5707963_0.25": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[90, 93]": 1
+    }
+  },
+  "b08_two_0.5_3.1415927_1": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[90, 93]": 1
+    }
+  },
+  "b08_two_0.5_3.1415927_0.5": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[90, 93]": 2
+    }
+  },
+  "b08_two_0.5_3.1415927_0.25": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[90, 93]": 2
+    }
+  },
+  "b09_noise_0_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b09_one_0_0_1": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[102, 105]": 3
+    }
+  },
+  "b09_one_0.5_0_1": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[103, 105]": 1
+    }
+  },
+  "b09_two_0_0_1": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[102, 104]": 3
+    }
+  },
+  "b09_two_0_0_0.5": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[102, 104]": 2
+    }
+  },
+  "b09_two_0_0_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b09_two_0_1.5707963_1": {
+    "frames_with_carrier_pairs": 4,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[102, 104]": 4
+    }
+  },
+  "b09_two_0_1.5707963_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[102, 104]": 1
+    }
+  },
+  "b09_two_0_1.5707963_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b09_two_0_3.1415927_1": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[102, 104]": 2
+    }
+  },
+  "b09_two_0_3.1415927_0.5": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[102, 104]": 2
+    }
+  },
+  "b09_two_0_3.1415927_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b09_two_0.5_0_1": {
+    "frames_with_carrier_pairs": 6,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[102, 105]": 6
+    }
+  },
+  "b09_two_0.5_0_0.5": {
+    "frames_with_carrier_pairs": 4,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[102, 105]": 4
+    }
+  },
+  "b09_two_0.5_0_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b09_two_0.5_1.5707963_1": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[102, 105]": 2
+    }
+  },
+  "b09_two_0.5_1.5707963_0.5": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 1,
+    "jitter_max": 2,
+    "frequencies": {
+      "[103, 105]": 1,
+      "[102, 105]": 1
+    }
+  },
+  "b09_two_0.5_1.5707963_0.25": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 1,
+    "jitter_max": 2,
+    "frequencies": {
+      "[103, 105]": 1,
+      "[102, 105]": 1
+    }
+  },
+  "b09_two_0.5_3.1415927_1": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[102, 105]": 1
+    }
+  },
+  "b09_two_0.5_3.1415927_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[102, 105]": 1
+    }
+  },
+  "b09_two_0.5_3.1415927_0.25": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 1,
+    "jitter_max": 2,
+    "frequencies": {
+      "[103, 105]": 1,
+      "[102, 105]": 1
+    }
+  },
+  "b10_noise_0_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b10_one_0_0_1": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[148, 151]": 1
+    }
+  },
+  "b10_one_0.5_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b10_two_0_0_1": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[148, 150]": 2
+    }
+  },
+  "b10_two_0_0_0.5": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[148, 150]": 2
+    }
+  },
+  "b10_two_0_0_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b10_two_0_1.5707963_1": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[148, 150]": 3
+    }
+  },
+  "b10_two_0_1.5707963_0.5": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[148, 150]": 2
+    }
+  },
+  "b10_two_0_1.5707963_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b10_two_0_3.1415927_1": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[148, 150]": 3
+    }
+  },
+  "b10_two_0_3.1415927_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[148, 150]": 1
+    }
+  },
+  "b10_two_0_3.1415927_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b10_two_0.5_0_1": {
+    "frames_with_carrier_pairs": 6,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[148, 151]": 6
+    }
+  },
+  "b10_two_0.5_0_0.5": {
+    "frames_with_carrier_pairs": 4,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[148, 151]": 4
+    }
+  },
+  "b10_two_0.5_0_0.25": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[148, 151]": 2
+    }
+  },
+  "b10_two_0.5_1.5707963_1": {
+    "frames_with_carrier_pairs": 4,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[148, 151]": 4
+    }
+  },
+  "b10_two_0.5_1.5707963_0.5": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[148, 151]": 2
+    }
+  },
+  "b10_two_0.5_1.5707963_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b10_two_0.5_3.1415927_1": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[148, 151]": 2
+    }
+  },
+  "b10_two_0.5_3.1415927_0.5": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[148, 151]": 2
+    }
+  },
+  "b10_two_0.5_3.1415927_0.25": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[148, 151]": 1
+    }
+  },
+  "b11_noise_0_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b11_one_0_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b11_one_0.5_0_1": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b11_two_0_0_1": {
+    "frames_with_carrier_pairs": 4,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[98, 100]": 4
+    }
+  },
+  "b11_two_0_0_0.5": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[98, 100]": 2
+    }
+  },
+  "b11_two_0_0_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b11_two_0_1.5707963_1": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[98, 100]": 3
+    }
+  },
+  "b11_two_0_1.5707963_0.5": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[98, 100]": 3
+    }
+  },
+  "b11_two_0_1.5707963_0.25": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[98, 100]": 1
+    }
+  },
+  "b11_two_0_3.1415927_1": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 3,
+    "jitter_max": 3,
+    "frequencies": {
+      "[98, 100]": 3
+    }
+  },
+  "b11_two_0_3.1415927_0.5": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[98, 100]": 2
+    }
+  },
+  "b11_two_0_3.1415927_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  },
+  "b11_two_0.5_0_1": {
+    "frames_with_carrier_pairs": 4,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[98, 101]": 4
+    }
+  },
+  "b11_two_0.5_0_0.5": {
+    "frames_with_carrier_pairs": 4,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[98, 101]": 4
+    }
+  },
+  "b11_two_0.5_0_0.25": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[98, 101]": 3
+    }
+  },
+  "b11_two_0.5_1.5707963_1": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[98, 101]": 2
+    }
+  },
+  "b11_two_0.5_1.5707963_0.5": {
+    "frames_with_carrier_pairs": 3,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[98, 101]": 3
+    }
+  },
+  "b11_two_0.5_1.5707963_0.25": {
+    "frames_with_carrier_pairs": 2,
+    "exact_max": 2,
+    "jitter_max": 2,
+    "frequencies": {
+      "[98, 101]": 2
+    }
+  },
+  "b11_two_0.5_3.1415927_1": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[98, 101]": 1
+    }
+  },
+  "b11_two_0.5_3.1415927_0.5": {
+    "frames_with_carrier_pairs": 1,
+    "exact_max": 1,
+    "jitter_max": 1,
+    "frequencies": {
+      "[98, 101]": 1
+    }
+  },
+  "b11_two_0.5_3.1415927_0.25": {
+    "frames_with_carrier_pairs": 0,
+    "exact_max": 0,
+    "jitter_max": 0,
+    "frequencies": {}
+  }
+}
