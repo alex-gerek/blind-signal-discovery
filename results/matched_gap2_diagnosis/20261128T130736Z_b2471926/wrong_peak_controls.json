@@ -1,0 +1,217 @@
+[
+  {
+    "id": "b04_two_0.5_0_0.5",
+    "controls": {
+      "noise": {
+        "normalized_values_at_selected_frequencies": [
+          0.8642777834056403,
+          3.654289148795566
+        ],
+        "is_local_peak_at_selected_frequencies": [
+          false,
+          true
+        ],
+        "control_anomaly": false,
+        "control_pair_claim": false,
+        "raw_power_decomposition_at_selected_frequencies": [
+          {
+            "raw_noise_power": 0.001015460096406894,
+            "raw_added_signal_power": 0.061968808173536366,
+            "raw_cross_term": 0.008622030369708262,
+            "raw_total_power": 0.07160629863965151
+          },
+          {
+            "raw_noise_power": 0.0038524035926351032,
+            "raw_added_signal_power": 0.0013433204859299756,
+            "raw_cross_term": 0.0021251388879753165,
+            "raw_total_power": 0.007320862966540395
+          }
+        ]
+      },
+      "one": {
+        "normalized_values_at_selected_frequencies": [
+          49.64217078079944,
+          4.206221428736778
+        ],
+        "is_local_peak_at_selected_frequencies": [
+          true,
+          true
+        ],
+        "control_anomaly": true,
+        "control_pair_claim": false
+      }
+    }
+  },
+  {
+    "id": "b04_two_0.5_0_0.25",
+    "controls": {
+      "noise": {
+        "normalized_values_at_selected_frequencies": [
+          0.858782326576617,
+          3.3890969967555837
+        ],
+        "is_local_peak_at_selected_frequencies": [
+          false,
+          true
+        ],
+        "control_anomaly": false,
+        "control_pair_claim": false,
+        "raw_power_decomposition_at_selected_frequencies": [
+          {
+            "raw_noise_power": 0.0010052074668153816,
+            "raw_added_signal_power": 0.06458884728187203,
+            "raw_cross_term": 0.007954915294555664,
+            "raw_total_power": 0.07354897004324308
+          },
+          {
+            "raw_noise_power": 0.0035709440552668657,
+            "raw_added_signal_power": 0.0007946212689310108,
+            "raw_cross_term": 0.0016026104339233313,
+            "raw_total_power": 0.0059681757581212065
+          }
+        ]
+      },
+      "one": {
+        "normalized_values_at_selected_frequencies": [
+          45.50785349942046,
+          3.922245516201812
+        ],
+        "is_local_peak_at_selected_frequencies": [
+          true,
+          true
+        ],
+        "control_anomaly": true,
+        "control_pair_claim": false
+      }
+    }
+  },
+  {
+    "id": "b04_two_0.5_1.5707963_0.5",
+    "controls": {
+      "noise": {
+        "normalized_values_at_selected_frequencies": [
+          0.858782326576617,
+          3.3890969967555837
+        ],
+        "is_local_peak_at_selected_frequencies": [
+          false,
+          true
+        ],
+        "control_anomaly": false,
+        "control_pair_claim": false,
+        "raw_power_decomposition_at_selected_frequencies": [
+          {
+            "raw_noise_power": 0.0010052074668153816,
+            "raw_added_signal_power": 0.052816131743160015,
+            "raw_cross_term": 0.006432091498597729,
+            "raw_total_power": 0.06025343070857312
+          },
+          {
+            "raw_noise_power": 0.0035709440552668657,
+            "raw_added_signal_power": 0.0006103582743552733,
+            "raw_cross_term": 0.001787013922182538,
+            "raw_total_power": 0.005968316251804676
+          }
+        ]
+      },
+      "one": {
+        "normalized_values_at_selected_frequencies": [
+          45.50785349942046,
+          3.922245516201812
+        ],
+        "is_local_peak_at_selected_frequencies": [
+          true,
+          true
+        ],
+        "control_anomaly": true,
+        "control_pair_claim": false
+      }
+    }
+  },
+  {
+    "id": "b04_two_0.5_1.5707963_0.25",
+    "controls": {
+      "noise": {
+        "normalized_values_at_selected_frequencies": [
+          0.858782326576617,
+          3.3890969967555837
+        ],
+        "is_local_peak_at_selected_frequencies": [
+          false,
+          true
+        ],
+        "control_anomaly": false,
+        "control_pair_claim": false,
+        "raw_power_decomposition_at_selected_frequencies": [
+          {
+            "raw_noise_power": 0.0010052074668153816,
+            "raw_added_signal_power": 0.061854181643739466,
+            "raw_cross_term": 0.007208644765595678,
+            "raw_total_power": 0.07006803387615053
+          },
+          {
+            "raw_noise_power": 0.0035709440552668657,
+            "raw_added_signal_power": 0.0004352139004113109,
+            "raw_cross_term": 0.001507768644052435,
+            "raw_total_power": 0.00551392659973061
+          }
+        ]
+      },
+      "one": {
+        "normalized_values_at_selected_frequencies": [
+          45.50785349942046,
+          3.922245516201812
+        ],
+        "is_local_peak_at_selected_frequencies": [
+          true,
+          true
+        ],
+        "control_anomaly": true,
+        "control_pair_claim": false
+      }
+    }
+  },
+  {
+    "id": "b05_two_0_0_0.25",
+    "controls": {
+      "noise": {
+        "normalized_values_at_selected_frequencies": [
+          0.699825659832261,
+          1.8235341685069377
+        ],
+        "is_local_peak_at_selected_frequencies": [
+          false,
+          true
+        ],
+        "control_anomaly": false,
+        "control_pair_claim": false,
+        "raw_power_decomposition_at_selected_frequencies": [
+          {
+            "raw_noise_power": 0.0015189778736189549,
+            "raw_added_signal_power": 0.08646650749068435,
+            "raw_cross_term": 0.01208084564455044,
+            "raw_total_power": 0.10006633100885375
+          },
+          {
+            "raw_noise_power": 0.0038656905655214957,
+            "raw_added_signal_power": 0.004448209052550772,
+            "raw_cross_term": 0.0011006664372600048,
+            "raw_total_power": 0.009414566055332273
+          }
+        ]
+      },
+      "one": {
+        "normalized_values_at_selected_frequencies": [
+          44.431014912249495,
+          2.9628642773248672
+        ],
+        "is_local_peak_at_selected_frequencies": [
+          true,
+          false
+        ],
+        "control_anomaly": true,
+        "control_pair_claim": false
+      }
+    }
+  }
+]

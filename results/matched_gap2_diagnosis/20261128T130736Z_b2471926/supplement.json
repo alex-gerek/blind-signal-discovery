@@ -1,0 +1,16 @@
+{
+  "frame_plot_selection": "first no-pair/<2meanpeak case with a qualifying saved frame, first such frame",
+  "frame_plot_case": "b00_two_0_0_0.5",
+  "frame_time_s": 1.375,
+  "base04_control_boxes_hz": {
+    "single": [
+      128.5,
+      136.5
+    ],
+    "two_phase0_ratio0.5": [
+      128.5,
+      140.5
+    ]
+  },
+  "no_new_method_calibration": true
+}

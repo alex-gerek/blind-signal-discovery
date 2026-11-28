@@ -1,0 +1,314 @@
+{
+  "summary": {
+    "W0D0": {
+      "matched_two": {
+        "n": 216,
+        "anomaly": 216,
+        "claims": 0,
+        "strict": 0,
+        "loose": 0,
+        "wrong_strict": 0,
+        "wrong_loose": 0,
+        "false_pairs": 0,
+        "stages": {
+          "no_pair_proposal": 216
+        }
+      },
+      "matched_one": {
+        "n": 24,
+        "anomaly": 24,
+        "claims": 0,
+        "strict": 0,
+        "loose": 0,
+        "wrong_strict": 0,
+        "wrong_loose": 0,
+        "false_pairs": 0,
+        "stages": {
+          "no_pair_proposal": 24
+        }
+      },
+      "matched_noise": {
+        "n": 12,
+        "anomaly": 0,
+        "claims": 0,
+        "strict": 0,
+        "loose": 0,
+        "wrong_strict": 0,
+        "wrong_loose": 0,
+        "false_pairs": 0,
+        "stages": {
+          "no_anomaly": 12
+        }
+      },
+      "independent_one": {
+        "n": 160,
+        "anomaly": 121,
+        "claims": 0,
+        "strict": 0,
+        "loose": 0,
+        "wrong_strict": 0,
+        "wrong_loose": 0,
+        "false_pairs": 0,
+        "stages": {
+          "no_pair_proposal": 121,
+          "no_anomaly": 39
+        }
+      },
+      "independent_noise": {
+        "n": 160,
+        "anomaly": 0,
+        "claims": 0,
+        "strict": 0,
+        "loose": 0,
+        "wrong_strict": 0,
+        "wrong_loose": 0,
+        "false_pairs": 0,
+        "stages": {
+          "no_anomaly": 160
+        }
+      }
+    },
+    "W0D1": {
+      "matched_two": {
+        "n": 216,
+        "anomaly": 216,
+        "claims": 0,
+        "strict": 0,
+        "loose": 0,
+        "wrong_strict": 0,
+        "wrong_loose": 0,
+        "false_pairs": 0,
+        "stages": {
+          "no_pair_proposal": 216
+        }
+      },
+      "matched_one": {
+        "n": 24,
+        "anomaly": 24,
+        "claims": 0,
+        "strict": 0,
+        "loose": 0,
+        "wrong_strict": 0,
+        "wrong_loose": 0,
+        "false_pairs": 0,
+        "stages": {
+          "no_pair_proposal": 24
+        }
+      },
+      "matched_noise": {
+        "n": 12,
+        "anomaly": 0,
+        "claims": 0,
+        "strict": 0,
+        "loose": 0,
+        "wrong_strict": 0,
+        "wrong_loose": 0,
+        "false_pairs": 0,
+        "stages": {
+          "no_anomaly": 12
+        }
+      },
+      "independent_one": {
+        "n": 160,
+        "anomaly": 121,
+        "claims": 0,
+        "strict": 0,
+        "loose": 0,
+        "wrong_strict": 0,
+        "wrong_loose": 0,
+        "false_pairs": 0,
+        "stages": {
+          "no_pair_proposal": 121,
+          "no_anomaly": 39
+        }
+      },
+      "independent_noise": {
+        "n": 160,
+        "anomaly": 0,
+        "claims": 0,
+        "strict": 0,
+        "loose": 0,
+        "wrong_strict": 0,
+        "wrong_loose": 0,
+        "false_pairs": 0,
+        "stages": {
+          "no_anomaly": 160
+        }
+      }
+    },
+    "W1D0": {
+      "matched_two": {
+        "n": 216,
+        "anomaly": 216,
+        "claims": 0,
+        "strict": 0,
+        "loose": 0,
+        "wrong_strict": 0,
+        "wrong_loose": 0,
+        "false_pairs": 0,
+        "stages": {
+          "no_pair_proposal": 216
+        }
+      },
+      "matched_one": {
+        "n": 24,
+        "anomaly": 24,
+        "claims": 0,
+        "strict": 0,
+        "loose": 0,
+        "wrong_strict": 0,
+        "wrong_loose": 0,
+        "false_pairs": 0,
+        "stages": {
+          "no_pair_proposal": 24
+        }
+      },
+      "matched_noise": {
+        "n": 12,
+        "anomaly": 0,
+        "claims": 0,
+        "strict": 0,
+        "loose": 0,
+        "wrong_strict": 0,
+        "wrong_loose": 0,
+        "false_pairs": 0,
+        "stages": {
+          "no_anomaly": 12
+        }
+      },
+      "independent_one": {
+        "n": 160,
+        "anomaly": 141,
+        "claims": 0,
+        "strict": 0,
+        "loose": 0,
+        "wrong_strict": 0,
+        "wrong_loose": 0,
+        "false_pairs": 0,
+        "stages": {
+          "no_pair_proposal": 141,
+          "no_anomaly": 19
+        }
+      },
+      "independent_noise": {
+        "n": 160,
+        "anomaly": 2,
+        "claims": 0,
+        "strict": 0,
+        "loose": 0,
+        "wrong_strict": 0,
+        "wrong_loose": 0,
+        "false_pairs": 0,
+        "stages": {
+          "no_anomaly": 158,
+          "no_pair_proposal": 2
+        }
+      }
+    },
+    "W1D1": {
+      "matched_two": {
+        "n": 216,
+        "anomaly": 216,
+        "claims": 29,
+        "strict": 24,
+        "loose": 25,
+        "wrong_strict": 5,
+        "wrong_loose": 4,
+        "false_pairs": 0,
+        "stages": {
+          "claim": 29,
+          "no_pair_proposal": 187
+        }
+      },
+      "matched_one": {
+        "n": 24,
+        "anomaly": 24,
+        "claims": 0,
+        "strict": 0,
+        "loose": 0,
+        "wrong_strict": 0,
+        "wrong_loose": 0,
+        "false_pairs": 0,
+        "stages": {
+          "no_pair_proposal": 24
+        }
+      },
+      "matched_noise": {
+        "n": 12,
+        "anomaly": 0,
+        "claims": 0,
+        "strict": 0,
+        "loose": 0,
+        "wrong_strict": 0,
+        "wrong_loose": 0,
+        "false_pairs": 0,
+        "stages": {
+          "no_anomaly": 12
+        }
+      },
+      "independent_one": {
+        "n": 160,
+        "anomaly": 141,
+        "claims": 0,
+        "strict": 0,
+        "loose": 0,
+        "wrong_strict": 0,
+        "wrong_loose": 0,
+        "false_pairs": 0,
+        "stages": {
+          "no_pair_proposal": 141,
+          "no_anomaly": 19
+        }
+      },
+      "independent_noise": {
+        "n": 160,
+        "anomaly": 2,
+        "claims": 0,
+        "strict": 0,
+        "loose": 0,
+        "wrong_strict": 0,
+        "wrong_loose": 0,
+        "false_pairs": 0,
+        "stages": {
+          "no_anomaly": 158,
+          "no_pair_proposal": 2
+        }
+      }
+    }
+  },
+  "timing_conditional_on_strict_success": {
+    "W0D0": {
+      "n": 0,
+      "median_abs": {
+        "onset": null,
+        "end": null,
+        "midpoint": null
+      }
+    },
+    "W0D1": {
+      "n": 0,
+      "median_abs": {
+        "onset": null,
+        "end": null,
+        "midpoint": null
+      }
+    },
+    "W1D0": {
+      "n": 0,
+      "median_abs": {
+        "onset": null,
+        "end": null,
+        "midpoint": null
+      }
+    },
+    "W1D1": {
+      "n": 24,
+      "median_abs": {
+        "onset": 0.1875,
+        "end": 0.1875,
+        "midpoint": 0.0
+      }
+    }
+  },
+  "note": "216variants share12base noise/carrier/global-phase draws; variant counts are not independent sample sizes"
+}

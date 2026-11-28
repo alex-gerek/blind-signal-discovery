@@ -44,3 +44,13 @@ docs/two_oscillation_anomaly_protocol_2026-11-27.md -text
 docs/warning_impact_control_protocol_2026-11-27.md -text
 results/research_checkpoint/** -text
 docs/RESEARCH_CHECKPOINT_2026-11-27.md -text
+results/matched_gap2/** -text
+results/matched_gap2_diagnosis/** -text
+docs/MATCHED_GAP2_FINDINGS_2026-11-28.md -text
+docs/MATCHED_GAP2_DIAGNOSIS_2026-11-28.md -text
+docs/matched_gap2_protocol_2026-11-28.md -text
+docs/MATCHED_GAP2_PUBLICATION_2026-11-28.md -text
+experiments/run_matched_gap2.py -text
+experiments/verify_matched_gap2.py -text
+experiments/report_matched_gap2.py -text
+experiments/diagnose_matched_gap2.py -text
