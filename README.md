@@ -9,7 +9,7 @@
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-1f8fd0.svg)](pyproject.toml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24557479.svg)](https://doi.org/10.5281/zenodo.24557479)
 
-**[Open the workstation](https://alex-gerek.github.io/blind-signal-discovery/workstation/)** · [Website](https://alex-gerek.github.io/blind-signal-discovery/) · [How it is measured](#what-has-been-measured) · [Mathematical guide](docs/whisker_mathematical_measurement_guide.md) · [Audit erratum](docs/AUDIT_ERRATUM_47a5475.md) · [Research history](docs/RESEARCH_HISTORY.md)
+**[Open the workstation](https://alex-gerek.github.io/blind-signal-discovery/workstation/)** · [Website](https://alex-gerek.github.io/blind-signal-discovery/) · [How it is measured](#what-has-been-measured) · [Mathematical guide](docs/whisker_mathematical_measurement_guide.md) · [Audit erratum](docs/AUDIT_ERRATUM_47a5475.md) · [What is known](docs/what_is_known.md) · [Research history](docs/RESEARCH_HISTORY.md)
 
 </div>
 

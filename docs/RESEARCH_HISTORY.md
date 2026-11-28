@@ -462,3 +462,20 @@ The saved correction sequence is `99fce40` (documentation/version), `8053741` (i
 - Earlier mixture findings document acquired a recorded follow-up link after its initial hash index; document supersession disclosed, old index retained. No measurement artifacts changed. Exact research bytes protected through scoped .gitattributes.
 
 - Publication verification correction: first exact-index check stopped on CRLF normalization of the newly written checkpoint document; the shell nevertheless continued to create6feb88c. No push occurred. Added exact-byte attribute for that document and repeated all396blob checks before a follow-up commit. Measurement artifacts unchanged; this is publication bookkeeping, not a scientific rerun.
+
+
+## 2026-11-28 — Public knowledge map and approved cross-project result summaries
+
+- Before: owner requested a reusable table of prior findings so experiments are not repeated across projects. Owner explicitly approved aggregate result transfer from the wider programme. This is documentation reconciliation, not a waveform experiment. Review existing BSD reports and distinguish estimates from source reconstruction, historical calibration from current verification, and failed prototypes from universally closed questions.
+- Change: docs/what_is_known.md adds22stable BSD topic IDs with evidence pinned to9b9aa44,33owner-approved aggregate topic rows, status definitions, repeat-work checks and open tasks. The README links it. Private implementations, method recipes, audio and dataset registers are excluded. Imported sister-project figures are labelled reported aggregates, not independently re-audited here.
+- Outcome pending documentation verification and owner-authorized push to development/v0.3; no detector, application, test, historical result, O3, main, release or Zenodo change. Unrelated test/article drafts preserved.
+
+
+## 2026-11-28 — Public knowledge map and approved cross-project result summaries
+
+- Before: owner requested a reusable table of prior findings to avoid repeating experiments across projects, then explicitly approved publishing aggregate sister-project outcomes. Documentation reconciliation only; existing BSD reports reviewed at9b9aa44. Distinguish frequency estimates from source reconstruction, historical calibration from current verification, and rejected prototypes from universally closed questions.
+- Change: docs/what_is_known.md adds22BSD topic IDs with public evidence links and33owner-approved aggregate result topics, status definitions, repeat-work checks and open tasks. README links it. Private implementations, method recipes, audio and dataset inventory excluded. Imported figures are labelled reported aggregates, not independently re-audited here.
+- Preparation correction: the writer stopped when the system-default Windows encoding could not decode the UTF-8 README. Explicit UTF-8 is now used; the companion prior-work document was restored from its unchanged committed source before applying only the intended paragraph correction. No scientific data/run affected.
+- Outcome pending documentation validation and owner-authorized publication to development/v0.3. No experiment, detector/application/test/historical-artifact changes, O3 access, main merge, release or Zenodo. Unrelated test/article work retained.
+
+- Documentation validation PASS:55unique IDs (22BSD,33approved aggregate topics),27resolved evidence links; no private paths, credentials, implementation recipes or dataset inventories exported. Imported private results are labelled not independently re-audited. No experiments/historical-artifact changes. Windows UTF-8 preparation and path-scan false-match corrections retained in the companion documentation step. Owner-authorized development/v0.3 publication follows; main/release/Zenodo unchanged.
